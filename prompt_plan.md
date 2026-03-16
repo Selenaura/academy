@@ -22,7 +22,7 @@
 - [x] Certificate: on exam pass, generate unique code (SEL-YYYY-XXXX) and insert into certificates table
 - [x] Certificate verification: create /verificar/[code] public page that checks certificates table
 - [x] Video player: create YouTube embed component for unlisted videos
-- [ ] Stripe checkout: wire "Comprar" button to /api/checkout and redirect to Stripe
+- [x] Stripe checkout: wire "Comprar" button to /api/checkout and redirect to Stripe
 - [ ] Auto-navigate to next lesson after completing current one
 
 ## Phase 4 — Polish
