@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@200;300;400;500;600;700&display=swap');
+
+/* ── Base ── */
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8D5A0;
+  --bg: #0A0A0F;
+  --card: #12121A;
+  --elevated: #1A1A25;
+  --border: #2A2A35;
+  --white: #F0EDE4;
+  --white-dim: #A8A4A0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--white);
+  font-family: 'Outfit', 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(201, 168, 76, 0.3);
+  color: #F0EDE4;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* ── Focus states ── */
+input:focus,
+button:focus-visible {
+  outline: 2px solid rgba(201, 168, 76, 0.4);
+  outline-offset: 2px;
+}
+
+/* ── Transitions ── */
+a, button {
+  transition: all 0.2s ease;
+}
+
+/* ── Utilities ── */
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(180deg, #F0EDE4 0%, #A8A4A0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gold-subtle {
+    border-color: rgba(201, 168, 76, 0.2);
+  }
+
+  .bg-gold-glow {
+    box-shadow: 0 0 60px rgba(201, 168, 76, 0.08);
+  }
+
+  .star-pattern {
+    background-image: radial-gradient(rgba(201, 168, 76, 0.6) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.04;
+  }
+}
