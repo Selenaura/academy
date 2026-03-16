@@ -11,9 +11,9 @@
 - [x] Onboarding: save birth_date, birth_city, interests, experience_level to profiles table on completion
 - [x] Dashboard: fetch user enrollments from Supabase, replace hardcoded mock data
 - [x] Dashboard: load XP and streak from profiles table
-- [ ] Course enrollment: clicking "Inscribirse gratis" inserts row into enrollments table
-- [ ] Lesson progress: mark lesson as completed in lesson_progress table when user finishes video/quiz
-- [ ] Quiz: save attempt to quiz_attempts table with score and answers
+- [x] Course enrollment: clicking "Inscribirse gratis" inserts row into enrollments table
+- [x] Lesson progress: mark lesson as completed in lesson_progress table when user finishes video/quiz
+- [x] Quiz: save attempt to quiz_attempts table with score and answers
 - [ ] Profile: load real name, birth data, XP from profiles table
 
 ## Phase 3 — Complete features
