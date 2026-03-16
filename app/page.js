@@ -18,7 +18,7 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-selene-bg">
+    <div className="min-h-screen bg-selene-bg animate-fade-in-up">
       <Navbar />
 
       {/* ── Hero ── */}

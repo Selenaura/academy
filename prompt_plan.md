@@ -27,7 +27,7 @@
 
 ## Phase 4 — Polish
 - [x] Add hover effects on all cards and buttons
-- [ ] Add page load animations (fade-in on mount)
+- [x] Add page load animations (fade-in on mount)
 - [ ] SEO: add og:image meta, JSON-LD Course schema on landing and course pages
 - [ ] Add sitemap.xml and robots.txt
 - [ ] Accessibility: add aria-labels to icon buttons and nav elements

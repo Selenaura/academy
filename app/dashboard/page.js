@@ -64,7 +64,7 @@ export default function DashboardPage() {
   const explore = COURSES.filter(c => !enrollments[c.id]?.enrolled);
 
   return (
-    <div className="min-h-screen bg-selene-bg">
+    <div className="min-h-screen bg-selene-bg animate-fade-in-up">
       <Navbar showAuth={false} showDashboardNav />
 
       <div className="max-w-[800px] mx-auto px-5 py-6">

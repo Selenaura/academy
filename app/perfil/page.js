@@ -53,7 +53,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="min-h-screen bg-selene-bg">
+    <div className="min-h-screen bg-selene-bg animate-fade-in-up">
       <nav className="px-6 py-3.5 flex items-center gap-3 border-b border-selene-border">
         <button onClick={() => router.push('/dashboard')} className="text-selene-white-dim hover:text-selene-white">
           <BackIcon />
