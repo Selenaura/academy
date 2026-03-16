@@ -14,7 +14,7 @@
 - [x] Course enrollment: clicking "Inscribirse gratis" inserts row into enrollments table
 - [x] Lesson progress: mark lesson as completed in lesson_progress table when user finishes video/quiz
 - [x] Quiz: save attempt to quiz_attempts table with score and answers
-- [ ] Profile: load real name, birth data, XP from profiles table
+- [x] Profile: load real name, birth data, XP from profiles table
 
 ## Phase 3 — Complete features
 - [ ] Move quiz questions to lib/constants.js (at least 3 questions per quiz lesson in course 1)
