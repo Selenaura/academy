@@ -5,7 +5,7 @@
 - [x] Add loading states: show Spinner while checking auth on protected pages
 - [x] Create app/not-found.js with Quantum Ethereal styling and link back to home
 - [x] Fix mobile responsiveness: test all pages at 375px, fix overflow/spacing issues
-- [ ] Run npm run build and fix any warnings or errors
+- [x] Run npm run build and fix any warnings or errors
 
 ## Phase 2 — Wire real data
 - [ ] Onboarding: save birth_date, birth_city, interests, experience_level to profiles table on completion
