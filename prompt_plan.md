@@ -3,7 +3,7 @@
 ## Phase 1 — Stability
 - [x] Add error boundaries to dashboard, curso/[id], perfil, onboarding (wrap in try/catch or ErrorBoundary component)
 - [x] Add loading states: show Spinner while checking auth on protected pages
-- [ ] Create app/not-found.js with Quantum Ethereal styling and link back to home
+- [x] Create app/not-found.js with Quantum Ethereal styling and link back to home
 - [ ] Fix mobile responsiveness: test all pages at 375px, fix overflow/spacing issues
 - [ ] Run npm run build and fix any warnings or errors
 
