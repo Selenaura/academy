@@ -4,11 +4,13 @@ Project: lerfefvqfwdsubchzqyk.supabase.co
 All tables in `public` schema. All have RLS enabled. All FK to auth.users(id) ON DELETE CASCADE.
 
 ## profiles
-id (uuid PK → auth.users), name, birth_date, birth_time, birth_city,
+id (uuid PK → auth.users), name, surname (text), document_type ('dni'|'nie'|'pasaporte'),
+document_number (text), birth_date, birth_time, birth_city,
 sun_sign, moon_sign, rising_sign, interests (text[]), experience_level,
 xp (int default 0), streak_days (int default 0), last_active_at, onboarding_complete (bool),
 created_at, updated_at (auto-trigger)
 Auto-created by trigger handle_new_user on auth.users INSERT.
+New fields (surname, document_type, document_number) are required for certificate issuance.
 
 ## enrollments
 id (uuid PK), user_id, course_id (text matches COURSES[].id in constants.js),

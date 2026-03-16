@@ -175,7 +175,8 @@ export default function CoursePage({ params }) {
         // Generate certificate on exam pass
         if (activeLesson.type === 'exam') {
           const year = new Date().getFullYear();
-          const rand = Math.random().toString(36).substring(2, 6).toUpperCase();
+          const rand = Array.from(crypto.getRandomValues(new Uint8Array(5)))
+            .map(b => b.toString(36).toUpperCase().slice(-1)).join('');
           const certCode = `SEL-${year}-${rand}`;
           await supabase.from('certificates').upsert({
             user_id: user.id,
