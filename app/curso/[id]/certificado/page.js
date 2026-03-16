@@ -60,8 +60,8 @@ export default function CertificatePage({ params }) {
 
   return (
     <div className="min-h-screen bg-selene-bg">
-      <nav className="px-6 py-3.5 flex items-center gap-3 border-b border-selene-border">
-        <button onClick={() => router.push('/dashboard')} className="text-selene-white-dim hover:text-selene-white">
+      <nav aria-label="Navegación del curso" className="px-6 py-3.5 flex items-center gap-3 border-b border-selene-border">
+        <button onClick={() => router.push('/dashboard')} className="text-selene-white-dim hover:text-selene-white" aria-label="Volver">
           <BackIcon />
         </button>
         <span className="text-sm font-medium text-selene-white">Certificado</span>

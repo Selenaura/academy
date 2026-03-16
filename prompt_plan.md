@@ -30,4 +30,4 @@
 - [x] Add page load animations (fade-in on mount)
 - [x] SEO: add og:image meta, JSON-LD Course schema on landing and course pages
 - [x] Add sitemap.xml and robots.txt
-- [ ] Accessibility: add aria-labels to icon buttons and nav elements
+- [x] Accessibility: add aria-labels to icon buttons and nav elements

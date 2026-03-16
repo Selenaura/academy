@@ -200,8 +200,8 @@ export default function CoursePage({ params }) {
   if (activeLesson && (activeLesson.type === 'quiz' || activeLesson.type === 'exam')) {
     return (
       <div className="min-h-screen bg-selene-bg">
-        <nav className="px-6 py-3.5 flex items-center gap-3 border-b border-selene-border">
-          <button onClick={() => { setActiveLesson(null); setQuizAnswers({}); setQuizSubmitted(false); }} className="text-selene-white-dim hover:text-selene-white">
+        <nav aria-label="Navegación del curso" className="px-6 py-3.5 flex items-center gap-3 border-b border-selene-border">
+          <button onClick={() => { setActiveLesson(null); setQuizAnswers({}); setQuizSubmitted(false); }} className="text-selene-white-dim hover:text-selene-white" aria-label="Volver">
             <BackIcon />
           </button>
           <span className="text-sm font-medium text-selene-white">{activeLesson.title}</span>
@@ -297,8 +297,8 @@ export default function CoursePage({ params }) {
     const isLessonComplete = completedLessons.has(activeLesson.id);
     return (
       <div className="min-h-screen bg-selene-bg">
-        <nav className="px-6 py-3.5 flex items-center gap-3 border-b border-selene-border">
-          <button onClick={() => setActiveLesson(null)} className="text-selene-white-dim hover:text-selene-white">
+        <nav aria-label="Navegación del curso" className="px-6 py-3.5 flex items-center gap-3 border-b border-selene-border">
+          <button onClick={() => setActiveLesson(null)} className="text-selene-white-dim hover:text-selene-white" aria-label="Volver">
             <BackIcon />
           </button>
           <div>
@@ -399,8 +399,8 @@ export default function CoursePage({ params }) {
   return (
     <div className="min-h-screen bg-selene-bg">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }} />
-      <nav className="sticky top-0 z-50 px-6 py-3.5 flex items-center gap-3 border-b border-selene-border bg-selene-bg/90 backdrop-blur-xl">
-        <button onClick={() => router.push('/dashboard')} className="text-selene-white-dim hover:text-selene-white">
+      <nav aria-label="Navegación del curso" className="sticky top-0 z-50 px-6 py-3.5 flex items-center gap-3 border-b border-selene-border bg-selene-bg/90 backdrop-blur-xl">
+        <button onClick={() => router.push('/dashboard')} className="text-selene-white-dim hover:text-selene-white" aria-label="Volver">
           <BackIcon />
         </button>
         <span className="text-sm font-medium text-selene-white">Detalle del curso</span>

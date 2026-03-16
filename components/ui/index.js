@@ -58,7 +58,7 @@ export function StarIcon({ size = 16, className = 'text-selene-gold' }) {
 // ── Navbar ──
 export function Navbar({ showAuth = true, showDashboardNav = false }) {
   return (
-    <nav className="sticky top-0 z-50 px-6 py-4 flex justify-between items-center bg-selene-bg/90 backdrop-blur-xl border-b border-selene-border">
+    <nav aria-label="Navegación principal" className="sticky top-0 z-50 px-6 py-4 flex justify-between items-center bg-selene-bg/90 backdrop-blur-xl border-b border-selene-border">
       <Link href="/" className="flex items-center gap-2.5 no-underline">
         <MoonIcon size={24} />
         <span className="font-display text-[22px] font-semibold text-selene-gold tracking-wider">
@@ -71,8 +71,8 @@ export function Navbar({ showAuth = true, showDashboardNav = false }) {
 
       {showDashboardNav && (
         <div className="flex gap-5 items-center">
-          <Link href="/dashboard" className="text-selene-gold"><GridIcon size={20} className="text-selene-gold" /></Link>
-          <Link href="/perfil"><UserIcon size={20} /></Link>
+          <Link href="/dashboard" className="text-selene-gold" aria-label="Dashboard"><GridIcon size={20} className="text-selene-gold" /></Link>
+          <Link href="/perfil" aria-label="Mi perfil"><UserIcon size={20} /></Link>
         </div>
       )}
 
