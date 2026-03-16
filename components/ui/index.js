@@ -118,7 +118,7 @@ export function Badge({ children, color = '#C9A84C', className = '' }) {
 export function Card({ children, className = '', hover = false, onClick, ...props }) {
   return (
     <div
-      className={`bg-selene-card rounded-2xl border border-selene-border overflow-hidden ${hover ? 'hover:border-selene-gold/30 transition-colors cursor-pointer' : ''} ${className}`}
+      className={`bg-selene-card rounded-2xl border border-selene-border overflow-hidden transition-all duration-300 ${hover ? 'hover:border-selene-gold/30 hover:shadow-[0_0_20px_rgba(201,168,76,0.06)] hover:-translate-y-0.5 cursor-pointer' : ''} ${className}`}
       onClick={onClick}
       {...props}
     >

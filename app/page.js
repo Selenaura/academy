@@ -45,7 +45,7 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
             <Link
               href="/auth?mode=register"
-              className="inline-flex items-center justify-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-8 sm:px-10 py-4 rounded-xl hover:brightness-110 transition no-underline w-full sm:w-auto"
+              className="inline-flex items-center justify-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-8 sm:px-10 py-4 rounded-xl btn-gold-hover no-underline w-full sm:w-auto"
             >
               Empieza gratis
             </Link>
@@ -154,7 +154,7 @@ export default function LandingPage() {
         </p>
         <Link
           href="/auth?mode=register"
-          className="inline-flex items-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-10 py-4 rounded-xl hover:brightness-110 transition no-underline"
+          className="inline-flex items-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-10 py-4 rounded-xl btn-gold-hover no-underline"
         >
           Crear mi cuenta gratis
         </Link>

@@ -26,7 +26,7 @@
 - [x] Auto-navigate to next lesson after completing current one
 
 ## Phase 4 — Polish
-- [ ] Add hover effects on all cards and buttons
+- [x] Add hover effects on all cards and buttons
 - [ ] Add page load animations (fade-in on mount)
 - [ ] SEO: add og:image meta, JSON-LD Course schema on landing and course pages
 - [ ] Add sitemap.xml and robots.txt

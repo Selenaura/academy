@@ -123,7 +123,7 @@ export default function CertificatePage({ params }) {
 
         {/* Actions */}
         <div className="flex flex-col sm:flex-row gap-3 mt-6 justify-center">
-          <button className="bg-selene-gold text-selene-bg font-semibold px-8 py-3 rounded-xl hover:brightness-110 transition text-sm">
+          <button className="bg-selene-gold text-selene-bg font-semibold px-8 py-3 rounded-xl btn-gold-hover text-sm">
             📄 Descargar PDF
           </button>
           <button className="text-selene-gold font-semibold px-8 py-3 rounded-xl border border-selene-gold/30 hover:bg-selene-gold/5 transition text-sm">

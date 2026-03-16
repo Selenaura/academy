@@ -171,7 +171,7 @@ function AuthForm() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-selene-gold text-selene-bg font-semibold text-[15px] py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-50"
+            className="w-full bg-selene-gold text-selene-bg font-semibold text-[15px] py-3.5 rounded-xl btn-gold-hover disabled:opacity-50"
           >
             {loading ? 'Procesando...' : tab === 'register' ? 'Crear mi cuenta' : 'Entrar'}
           </button>

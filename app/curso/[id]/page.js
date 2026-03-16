@@ -250,7 +250,7 @@ export default function CoursePage({ params }) {
             <button
               onClick={handleQuizSubmit}
               disabled={Object.keys(quizAnswers).length !== quizQuestions.length}
-              className="w-full mt-2 bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-40"
+              className="w-full mt-2 bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl btn-gold-hover disabled:opacity-40"
             >
               Enviar respuestas
             </button>
@@ -270,7 +270,7 @@ export default function CoursePage({ params }) {
                     {activeLesson.type === 'exam' && (
                       <button
                         onClick={() => router.push(`/curso/${course.id}/certificado`)}
-                        className="mt-4 bg-selene-gold text-selene-bg font-semibold px-8 py-3 rounded-xl hover:brightness-110 transition"
+                        className="mt-4 bg-selene-gold text-selene-bg font-semibold px-8 py-3 rounded-xl btn-gold-hover"
                       >
                         Ver mi certificado
                       </button>
@@ -341,7 +341,7 @@ export default function CoursePage({ params }) {
               <button
                 onClick={() => handleMarkLessonComplete(activeLesson)}
                 disabled={markingComplete}
-                className="w-full mb-5 bg-selene-gold text-selene-bg font-semibold py-3 rounded-xl hover:brightness-110 transition disabled:opacity-50"
+                className="w-full mb-5 bg-selene-gold text-selene-bg font-semibold py-3 rounded-xl btn-gold-hover disabled:opacity-50"
               >
                 {markingComplete ? 'Guardando...' : 'Marcar como completada'}
               </button>
@@ -450,7 +450,7 @@ export default function CoursePage({ params }) {
             <button
               onClick={handleEnroll}
               disabled={enrolling}
-              className="w-full bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-50"
+              className="w-full bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl btn-gold-hover disabled:opacity-50"
             >
               {enrolling ? 'Inscribiendo...' : course.price === 0 ? 'Inscribirse gratis' : `Comprar por ${course.price_label}`}
             </button>

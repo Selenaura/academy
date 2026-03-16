@@ -15,7 +15,7 @@ export default function CourseError({ error, reset }) {
         <div className="flex gap-3 justify-center">
           <button
             onClick={reset}
-            className="bg-selene-gold text-selene-bg font-semibold px-6 py-3 rounded-xl hover:brightness-110 transition"
+            className="bg-selene-gold text-selene-bg font-semibold px-6 py-3 rounded-xl btn-gold-hover"
           >
             Reintentar
           </button>
