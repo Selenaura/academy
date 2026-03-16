@@ -20,7 +20,7 @@
 - [x] Move quiz questions to lib/constants.js (at least 3 questions per quiz lesson in course 1)
 - [x] Group lessons by module number in course detail view
 - [x] Certificate: on exam pass, generate unique code (SEL-YYYY-XXXX) and insert into certificates table
-- [ ] Certificate verification: create /verificar/[code] public page that checks certificates table
+- [x] Certificate verification: create /verificar/[code] public page that checks certificates table
 - [ ] Video player: create YouTube embed component for unlisted videos
 - [ ] Stripe checkout: wire "Comprar" button to /api/checkout and redirect to Stripe
 - [ ] Auto-navigate to next lesson after completing current one
