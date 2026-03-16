@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase-browser';
 import { COURSES, getLevel } from '@/lib/constants';
-import { Navbar, Card, ProgressBar, SectionTitle, BookIcon, CertIcon, StarIcon, ArrowIcon } from '@/components/ui';
+import { Navbar, Card, ProgressBar, SectionTitle, Spinner, BookIcon, CertIcon, StarIcon, ArrowIcon } from '@/components/ui';
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -45,11 +45,7 @@ export default function DashboardPage() {
   }, []);
 
   if (loading) {
-    return (
-      <div className="min-h-screen bg-selene-bg flex items-center justify-center">
-        <div className="w-12 h-12 border-2 border-selene-border border-t-selene-gold rounded-full animate-spin" />
-      </div>
-    );
+    return <Spinner text="Cargando tu espacio..." />;
   }
 
   return (

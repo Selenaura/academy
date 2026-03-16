@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase-browser';
 import { getLevel } from '@/lib/constants';
-import { Card, BackIcon, ArrowIcon } from '@/components/ui';
+import { Card, Spinner, BackIcon, ArrowIcon } from '@/components/ui';
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -21,7 +21,7 @@ export default function ProfilePage() {
     load();
   }, []);
 
-  if (!user) return null;
+  if (!user) return <Spinner text="Cargando tu perfil..." />;
 
   const meta = user.user_metadata || {};
   const profile = {
