@@ -64,7 +64,7 @@ export default function DashboardPage() {
   const explore = COURSES.filter(c => !enrollments[c.id]?.enrolled);
 
   return (
-    <div className="min-h-screen bg-selene-bg">
+    <div className="min-h-screen bg-selene-bg animate-fade-in-up">
       <Navbar showAuth={false} showDashboardNav />
 
       <div className="max-w-[800px] mx-auto px-5 py-6">
@@ -94,7 +94,7 @@ export default function DashboardPage() {
             { icon: <CertIcon size={18} />, label: 'Certificados', value: certCount },
             { icon: <StarIcon size={18} />, label: 'Racha', value: streak > 0 ? `${streak}d` : '0d' },
           ].map((s, i) => (
-            <Card key={i} className="p-4 text-center">
+            <Card key={i} className="p-4 text-center card-hover-lift">
               <div className="flex justify-center mb-2">{s.icon}</div>
               <div className="text-xl font-semibold text-selene-white font-display">{s.value}</div>
               <div className="text-[11px] text-selene-white-dim mt-0.5">{s.label}</div>

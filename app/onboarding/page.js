@@ -108,7 +108,7 @@ export default function OnboardingPage() {
           <input className={inputClass} placeholder="Ej: Sevilla, España" value={birthCity} onChange={e => setBirthCity(e.target.value)} />
         </div>
       </div>
-      <button onClick={() => setStep(1)} className="w-full mt-6 bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition">
+      <button onClick={() => setStep(1)} className="w-full mt-6 bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl btn-gold-hover">
         Continuar
       </button>
     </>,
@@ -138,7 +138,7 @@ export default function OnboardingPage() {
           </button>
         ))}
       </div>
-      <button onClick={() => setStep(2)} className="w-full mt-6 bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition">
+      <button onClick={() => setStep(2)} className="w-full mt-6 bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl btn-gold-hover">
         Continuar
       </button>
     </>,
@@ -168,7 +168,7 @@ export default function OnboardingPage() {
       <button
         onClick={handleAnalyze}
         disabled={!experience}
-        className="w-full mt-6 bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-40"
+        className="w-full mt-6 bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl btn-gold-hover disabled:opacity-40"
       >
         Generar mi ruta formativa
       </button>
@@ -207,7 +207,7 @@ export default function OnboardingPage() {
 
       <button
         onClick={() => router.push('/dashboard')}
-        className="w-full bg-selene-gold text-selene-bg font-semibold text-[15px] py-3.5 rounded-xl hover:brightness-110 transition"
+        className="w-full bg-selene-gold text-selene-bg font-semibold text-[15px] py-3.5 rounded-xl btn-gold-hover"
       >
         Empezar mi formación
       </button>

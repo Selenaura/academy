@@ -10,6 +10,7 @@ export const metadata = {
     siteName: 'Selene Academia',
     locale: 'es_ES',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Selene Academia' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -26,7 +27,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="theme-color" content="#0A0A0F" />
       </head>
       <body className="bg-selene-bg text-selene-white antialiased">

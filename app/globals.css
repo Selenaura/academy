@@ -60,8 +60,18 @@ a, button {
   transition: all 0.2s ease;
 }
 
+/* ── Page animations ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* ── Utilities ── */
 @layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.5s ease-out both;
+  }
+
   .text-gradient-gold {
     background: linear-gradient(180deg, #F0EDE4 0%, #A8A4A0 100%);
     -webkit-background-clip: text;
@@ -81,5 +91,22 @@ a, button {
     background-image: radial-gradient(rgba(201, 168, 76, 0.6) 1px, transparent 1px);
     background-size: 30px 30px;
     opacity: 0.04;
+  }
+
+  .btn-gold-hover {
+    transition: all 0.3s ease;
+  }
+  .btn-gold-hover:hover {
+    box-shadow: 0 0 24px rgba(201, 168, 76, 0.2);
+    transform: translateY(-1px);
+  }
+
+  .card-hover-lift {
+    transition: all 0.3s ease;
+  }
+  .card-hover-lift:hover {
+    border-color: rgba(201, 168, 76, 0.25);
+    box-shadow: 0 0 20px rgba(201, 168, 76, 0.06);
+    transform: translateY(-2px);
   }
 }

@@ -17,17 +17,17 @@
 - [x] Profile: load real name, birth data, XP from profiles table
 
 ## Phase 3 — Complete features
-- [ ] Move quiz questions to lib/constants.js (at least 3 questions per quiz lesson in course 1)
-- [ ] Group lessons by module number in course detail view
-- [ ] Certificate: on exam pass, generate unique code (SEL-YYYY-XXXX) and insert into certificates table
-- [ ] Certificate verification: create /verificar/[code] public page that checks certificates table
-- [ ] Video player: create YouTube embed component for unlisted videos
-- [ ] Stripe checkout: wire "Comprar" button to /api/checkout and redirect to Stripe
-- [ ] Auto-navigate to next lesson after completing current one
+- [x] Move quiz questions to lib/constants.js (at least 3 questions per quiz lesson in course 1)
+- [x] Group lessons by module number in course detail view
+- [x] Certificate: on exam pass, generate unique code (SEL-YYYY-XXXX) and insert into certificates table
+- [x] Certificate verification: create /verificar/[code] public page that checks certificates table
+- [x] Video player: create YouTube embed component for unlisted videos
+- [x] Stripe checkout: wire "Comprar" button to /api/checkout and redirect to Stripe
+- [x] Auto-navigate to next lesson after completing current one
 
 ## Phase 4 — Polish
-- [ ] Add hover effects on all cards and buttons
-- [ ] Add page load animations (fade-in on mount)
-- [ ] SEO: add og:image meta, JSON-LD Course schema on landing and course pages
-- [ ] Add sitemap.xml and robots.txt
-- [ ] Accessibility: add aria-labels to icon buttons and nav elements
+- [x] Add hover effects on all cards and buttons
+- [x] Add page load animations (fade-in on mount)
+- [x] SEO: add og:image meta, JSON-LD Course schema on landing and course pages
+- [x] Add sitemap.xml and robots.txt
+- [x] Accessibility: add aria-labels to icon buttons and nav elements

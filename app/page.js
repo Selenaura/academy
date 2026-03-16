@@ -2,6 +2,15 @@ import Link from 'next/link';
 import { COURSES } from '@/lib/constants';
 import { Navbar, Footer, GoldDivider, Card } from '@/components/ui';
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Selene Academia',
+  url: 'https://academia.selenaura.com',
+  description: 'Cursos de astrología, tarot, meditación y autoconocimiento respaldados por estudios peer-reviewed.',
+  publisher: { '@type': 'Organization', name: 'SelenaUra' },
+};
+
 export default function LandingPage() {
   const stats = [
     { value: '10', label: 'Cursos' },
@@ -18,7 +27,8 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-selene-bg">
+    <div className="min-h-screen bg-selene-bg animate-fade-in-up">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
 
       {/* ── Hero ── */}
@@ -45,7 +55,7 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
             <Link
               href="/auth?mode=register"
-              className="inline-flex items-center justify-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-8 sm:px-10 py-4 rounded-xl hover:brightness-110 transition no-underline w-full sm:w-auto"
+              className="inline-flex items-center justify-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-8 sm:px-10 py-4 rounded-xl btn-gold-hover no-underline w-full sm:w-auto"
             >
               Empieza gratis
             </Link>
@@ -154,7 +164,7 @@ export default function LandingPage() {
         </p>
         <Link
           href="/auth?mode=register"
-          className="inline-flex items-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-10 py-4 rounded-xl hover:brightness-110 transition no-underline"
+          className="inline-flex items-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-10 py-4 rounded-xl btn-gold-hover no-underline"
         >
           Crear mi cuenta gratis
         </Link>
