@@ -57,13 +57,21 @@ function AuthForm() {
   const [magicLinkEmail, setMagicLinkEmail] = useState('');
 
   async function handleOAuthLogin(provider) {
+    setError('');
     const { error } = await supabase.auth.signInWithOAuth({
       provider,
       options: {
         redirectTo: `${window.location.origin}/auth/callback`,
       },
     });
-    if (error) setError(error.message);
+    if (error) {
+      if (error.message?.includes('provider is not enabled') || error.message?.includes('Unsupported provider')) {
+        const names = { google: 'Google', apple: 'Apple', github: 'GitHub' };
+        setError(`El acceso con ${names[provider] || provider} no está disponible todavía. Usa email y contraseña o Magic Link.`);
+      } else {
+        setError(error.message);
+      }
+    }
   }
 
   async function handleMagicLink() {

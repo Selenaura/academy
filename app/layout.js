@@ -26,7 +26,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="theme-color" content="#0A0A0F" />
       </head>
       <body className="bg-selene-bg text-selene-white antialiased">
