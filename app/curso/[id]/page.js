@@ -140,6 +140,13 @@ export default function CoursePage({ params }) {
     });
 
     setMarkingComplete(false);
+
+    // Auto-navigate to next lesson
+    const currentIndex = course.lessons.findIndex(l => l.id === lesson.id);
+    if (currentIndex >= 0 && currentIndex < course.lessons.length - 1) {
+      const nextLesson = course.lessons[currentIndex + 1];
+      setTimeout(() => setActiveLesson(nextLesson), 800);
+    }
   }
 
   // ── Submit quiz ──

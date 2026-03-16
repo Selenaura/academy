@@ -23,7 +23,7 @@
 - [x] Certificate verification: create /verificar/[code] public page that checks certificates table
 - [x] Video player: create YouTube embed component for unlisted videos
 - [x] Stripe checkout: wire "Comprar" button to /api/checkout and redirect to Stripe
-- [ ] Auto-navigate to next lesson after completing current one
+- [x] Auto-navigate to next lesson after completing current one
 
 ## Phase 4 — Polish
 - [ ] Add hover effects on all cards and buttons
