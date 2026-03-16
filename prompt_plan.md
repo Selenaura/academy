@@ -17,7 +17,7 @@
 - [x] Profile: load real name, birth data, XP from profiles table
 
 ## Phase 3 — Complete features
-- [ ] Move quiz questions to lib/constants.js (at least 3 questions per quiz lesson in course 1)
+- [x] Move quiz questions to lib/constants.js (at least 3 questions per quiz lesson in course 1)
 - [ ] Group lessons by module number in course detail view
 - [ ] Certificate: on exam pass, generate unique code (SEL-YYYY-XXXX) and insert into certificates table
 - [ ] Certificate verification: create /verificar/[code] public page that checks certificates table

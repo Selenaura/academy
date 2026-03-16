@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase-browser';
-import { COURSES, XP_REWARDS } from '@/lib/constants';
+import { COURSES, XP_REWARDS, QUIZ_QUESTIONS } from '@/lib/constants';
 import { Card, ProgressBar, Badge, Spinner, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
 
 export default function CoursePage({ params }) {
@@ -168,23 +168,9 @@ export default function CoursePage({ params }) {
     }
   }
 
-  // Quiz questions (kept inline for now, will move to constants in Phase 3)
-  const quizQuestions = [
-    {
-      q: '¿Qué estructura cerebral se modifica con la práctica meditativa según los estudios de neuroplasticidad?',
-      options: ['El hipocampo', 'La corteza prefrontal', 'La amígdala', 'Todas las anteriores'],
-      correct: 3,
-    },
-    {
-      q: '¿Qué protocolo tiene la mayor base de evidencia peer-reviewed para meditación?',
-      options: ['Visualización creativa', 'MBSR (Mindfulness-Based Stress Reduction)', 'Meditación trascendental', 'Yoga nidra'],
-      correct: 1,
-    },
-    {
-      q: 'La cronobiología estudia:',
-      options: ['Los horóscopos diarios', 'Los ritmos biológicos y su sincronización', 'La astrología natal', 'Las fases lunares exclusivamente'],
-      correct: 1,
-    },
+  // Quiz questions from constants, with fallback
+  const quizQuestions = (activeLesson && QUIZ_QUESTIONS[activeLesson.id]) || [
+    { q: 'Pregunta de ejemplo', options: ['A', 'B', 'C', 'D'], correct: 0 },
   ];
 
   const quizScore = quizSubmitted ? quizQuestions.filter((q, i) => quizAnswers[i] === q.correct).length : 0;
