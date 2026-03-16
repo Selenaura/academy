@@ -3,10 +3,7 @@ import { withAdmin } from '@/lib/admin';
 
 export async function GET() {
   return withAdmin(async (admin) => {
-    const [
-      { data: lessonProgress, error: lpErr },
-      { data: quizAttempts, error: qaErr },
-    ] = await Promise.all([
+    const [lpRes, qaRes] = await Promise.all([
       admin.from('lesson_progress')
         .select('id, user_id, course_id, lesson_id, status, completed_at, time_spent_seconds'),
       admin.from('quiz_attempts')
@@ -14,12 +11,15 @@ export async function GET() {
         .order('attempted_at', { ascending: false }),
     ]);
 
-    if (lpErr) return NextResponse.json({ error: lpErr.message }, { status: 500 });
-    if (qaErr) return NextResponse.json({ error: qaErr.message }, { status: 500 });
+    if (lpRes.error) return NextResponse.json({ error: lpRes.error.message }, { status: 500 });
+    if (qaRes.error) return NextResponse.json({ error: qaRes.error.message }, { status: 500 });
+
+    const lessonProgress = lpRes.data || [];
+    const quizAttempts = qaRes.data || [];
 
     // Lesson stats by course
     const lessonsByCourse = {};
-    (lessonProgress || []).forEach(lp => {
+    lessonProgress.forEach(lp => {
       if (!lessonsByCourse[lp.course_id]) lessonsByCourse[lp.course_id] = { completed: 0, inProgress: 0, totalTime: 0 };
       if (lp.status === 'completed') lessonsByCourse[lp.course_id].completed++;
       if (lp.status === 'in_progress') lessonsByCourse[lp.course_id].inProgress++;
@@ -28,38 +28,35 @@ export async function GET() {
 
     // Quiz stats by course
     const quizzesByCourse = {};
-    (quizAttempts || []).forEach(qa => {
+    quizAttempts.forEach(qa => {
       if (!quizzesByCourse[qa.course_id]) quizzesByCourse[qa.course_id] = { attempts: 0, passed: 0, totalScore: 0 };
       quizzesByCourse[qa.course_id].attempts++;
       if (qa.passed) quizzesByCourse[qa.course_id].passed++;
       quizzesByCourse[qa.course_id].totalScore += qa.score || 0;
     });
 
-    // Average scores
-    Object.keys(quizzesByCourse).forEach(k => {
-      const q = quizzesByCourse[k];
+    Object.values(quizzesByCourse).forEach(q => {
       q.avgScore = q.attempts > 0 ? q.totalScore / q.attempts : 0;
       q.passRate = q.attempts > 0 ? q.passed / q.attempts : 0;
     });
 
-    // Quiz stats by lesson (for detailed view)
+    // Quiz stats by lesson
     const quizzesByLesson = {};
-    (quizAttempts || []).forEach(qa => {
+    quizAttempts.forEach(qa => {
       if (!quizzesByLesson[qa.lesson_id]) quizzesByLesson[qa.lesson_id] = { attempts: 0, passed: 0, totalScore: 0 };
       quizzesByLesson[qa.lesson_id].attempts++;
       if (qa.passed) quizzesByLesson[qa.lesson_id].passed++;
       quizzesByLesson[qa.lesson_id].totalScore += qa.score || 0;
     });
 
-    Object.keys(quizzesByLesson).forEach(k => {
-      const q = quizzesByLesson[k];
+    Object.values(quizzesByLesson).forEach(q => {
       q.avgScore = q.attempts > 0 ? q.totalScore / q.attempts : 0;
       q.passRate = q.attempts > 0 ? q.passed / q.attempts : 0;
     });
 
     return NextResponse.json({
-      lessons: { byCourse: lessonsByCourse, total: lessonProgress?.length || 0 },
-      quizzes: { byCourse: quizzesByCourse, byLesson: quizzesByLesson, totalAttempts: quizAttempts?.length || 0 },
+      lessons: { byCourse: lessonsByCourse, total: lessonProgress.length },
+      quizzes: { byCourse: quizzesByCourse, byLesson: quizzesByLesson, totalAttempts: quizAttempts.length },
     });
   });
 }

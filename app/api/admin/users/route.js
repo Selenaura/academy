@@ -3,11 +3,7 @@ import { withAdmin } from '@/lib/admin';
 
 export async function GET() {
   return withAdmin(async (admin) => {
-    const [
-      { data: profiles, error: profilesErr },
-      { data: { users: authUsers }, error: authErr },
-      { data: enrollments },
-    ] = await Promise.all([
+    const [profilesRes, authRes, enrollmentsRes] = await Promise.all([
       admin.from('profiles')
         .select('id, name, sun_sign, moon_sign, rising_sign, experience_level, xp, streak_days, onboarding_complete, last_active_at, created_at')
         .order('created_at', { ascending: false }),
@@ -15,22 +11,26 @@ export async function GET() {
       admin.from('enrollments').select('user_id, course_id, status, progress, enrolled_at'),
     ]);
 
-    if (profilesErr) {
-      return NextResponse.json({ error: profilesErr.message }, { status: 500 });
+    if (profilesRes.error) {
+      return NextResponse.json({ error: profilesRes.error.message }, { status: 500 });
+    }
+
+    const profiles = profilesRes.data || [];
+    const authUsers = authRes.data?.users || [];
+    const enrollments = enrollmentsRes.data || [];
+
+    if (authRes.error) {
+      console.error('[Admin Users] Error fetching auth users:', authRes.error.message);
     }
 
     const emailMap = {};
-    if (!authErr && authUsers) {
-      authUsers.forEach(u => { emailMap[u.id] = u.email; });
-    }
+    authUsers.forEach(u => { emailMap[u.id] = u.email; });
 
     const enrollmentMap = {};
-    if (enrollments) {
-      enrollments.forEach(e => {
-        if (!enrollmentMap[e.user_id]) enrollmentMap[e.user_id] = [];
-        enrollmentMap[e.user_id].push(e);
-      });
-    }
+    enrollments.forEach(e => {
+      if (!enrollmentMap[e.user_id]) enrollmentMap[e.user_id] = [];
+      enrollmentMap[e.user_id].push(e);
+    });
 
     const users = profiles.map(p => ({
       ...p,
