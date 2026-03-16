@@ -2,6 +2,15 @@ import Link from 'next/link';
 import { COURSES } from '@/lib/constants';
 import { Navbar, Footer, GoldDivider, Card } from '@/components/ui';
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Selene Academia',
+  url: 'https://academia.selenaura.com',
+  description: 'Cursos de astrología, tarot, meditación y autoconocimiento respaldados por estudios peer-reviewed.',
+  publisher: { '@type': 'Organization', name: 'SelenaUra' },
+};
+
 export default function LandingPage() {
   const stats = [
     { value: '10', label: 'Cursos' },
@@ -19,6 +28,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-selene-bg animate-fade-in-up">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
 
       {/* ── Hero ── */}

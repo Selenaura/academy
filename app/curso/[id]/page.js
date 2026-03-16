@@ -387,8 +387,18 @@ export default function CoursePage({ params }) {
   }
 
   // ── Course Overview ──
+  const courseJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: course.title,
+    description: course.subtitle,
+    provider: { '@type': 'Organization', name: 'Selene Academia', url: 'https://academia.selenaura.com' },
+    hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'online', inLanguage: 'es' },
+  };
+
   return (
     <div className="min-h-screen bg-selene-bg">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }} />
       <nav className="sticky top-0 z-50 px-6 py-3.5 flex items-center gap-3 border-b border-selene-border bg-selene-bg/90 backdrop-blur-xl">
         <button onClick={() => router.push('/dashboard')} className="text-selene-white-dim hover:text-selene-white">
           <BackIcon />
