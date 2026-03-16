@@ -31,7 +31,7 @@ export default function CertificatePage({ params }) {
       <div className="max-w-[600px] mx-auto px-5 py-10">
         {/* Certificate Card */}
         <div
-          className="relative overflow-hidden rounded-[20px] p-12 text-center border-2 border-selene-gold/25"
+          className="relative overflow-hidden rounded-[20px] p-6 sm:p-12 text-center border-2 border-selene-gold/25"
           style={{
             background: 'linear-gradient(145deg, #0F0F18 0%, #151520 50%, rgba(201,168,76,0.03) 100%)',
             boxShadow: '0 0 60px rgba(201,168,76,0.08)',
@@ -83,7 +83,7 @@ export default function CertificatePage({ params }) {
         </div>
 
         {/* Actions */}
-        <div className="flex gap-3 mt-6 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 mt-6 justify-center">
           <button className="bg-selene-gold text-selene-bg font-semibold px-8 py-3 rounded-xl hover:brightness-110 transition text-sm">
             📄 Descargar PDF
           </button>

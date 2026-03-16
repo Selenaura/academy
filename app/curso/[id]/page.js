@@ -1,17 +1,55 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { COURSES } from '@/lib/constants';
-import { Card, ProgressBar, Badge, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
+import { createClient } from '@/lib/supabase-browser';
+import { COURSES, XP_REWARDS } from '@/lib/constants';
+import { Card, ProgressBar, Badge, Spinner, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
 
 export default function CoursePage({ params }) {
   const router = useRouter();
+  const supabase = createClient();
   const course = COURSES.find(c => c.id === params.id);
+
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [isEnrolled, setIsEnrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [completedLessons, setCompletedLessons] = useState(new Set());
+  const [enrolling, setEnrolling] = useState(false);
+
   const [activeLesson, setActiveLesson] = useState(null);
   const [quizAnswers, setQuizAnswers] = useState({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
+  const [markingComplete, setMarkingComplete] = useState(false);
+
+  useEffect(() => {
+    async function loadCourseData() {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) { router.push('/auth?mode=login'); return; }
+      setUser(user);
+
+      if (course) {
+        const [enrollmentRes, progressRes] = await Promise.all([
+          supabase.from('enrollments').select('progress, status').eq('user_id', user.id).eq('course_id', course.id).single(),
+          supabase.from('lesson_progress').select('lesson_id').eq('user_id', user.id).eq('course_id', course.id).eq('status', 'completed'),
+        ]);
+
+        if (enrollmentRes.data && enrollmentRes.data.status !== 'cancelled') {
+          setIsEnrolled(true);
+          setProgress(enrollmentRes.data.progress || 0);
+        }
+
+        if (progressRes.data) {
+          setCompletedLessons(new Set(progressRes.data.map(lp => lp.lesson_id)));
+        }
+      }
+
+      setLoading(false);
+    }
+    loadCourseData();
+  }, []);
 
   if (!course) {
     return (
@@ -24,16 +62,113 @@ export default function CoursePage({ params }) {
     );
   }
 
-  // Mock enrollment (in production, fetch from Supabase)
-  const isEnrolled = course.id === 'brujula-interior' || course.id === 'magnetismo-consciente';
-  const progress = course.id === 'brujula-interior' ? 0.35 : course.id === 'magnetismo-consciente' ? 0.12 : 0;
+  if (loading) {
+    return <Spinner text="Cargando curso..." />;
+  }
 
-  // Mock completed lessons
-  const completedLessons = course.lessons.length > 0
-    ? new Set(course.lessons.slice(0, Math.floor(course.lessons.length * progress)).map(l => l.id))
-    : new Set();
+  // ── Enroll ──
+  async function handleEnroll() {
+    if (!user) return;
+    if (course.price > 0) {
+      // Paid course → redirect to checkout
+      try {
+        const res = await fetch('/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ courseId: course.id }),
+        });
+        const data = await res.json();
+        if (data.url) {
+          window.location.href = data.url;
+          return;
+        }
+      } catch (err) {
+        console.error('Checkout error:', err);
+      }
+      return;
+    }
 
-  // Mock quiz questions
+    // Free course → insert enrollment directly
+    setEnrolling(true);
+    const { error } = await supabase.from('enrollments').insert({
+      user_id: user.id,
+      course_id: course.id,
+      status: 'active',
+      progress: 0,
+    });
+    if (!error) {
+      setIsEnrolled(true);
+      setProgress(0);
+    }
+    setEnrolling(false);
+  }
+
+  // ── Mark lesson complete ──
+  async function handleMarkLessonComplete(lesson) {
+    if (!user || completedLessons.has(lesson.id)) return;
+    setMarkingComplete(true);
+
+    await supabase.from('lesson_progress').upsert({
+      user_id: user.id,
+      course_id: course.id,
+      lesson_id: lesson.id,
+      status: 'completed',
+      completed_at: new Date().toISOString(),
+    }, { onConflict: 'user_id,lesson_id' });
+
+    const newCompleted = new Set(completedLessons);
+    newCompleted.add(lesson.id);
+    setCompletedLessons(newCompleted);
+
+    // Recalculate progress
+    if (course.lessons.length > 0) {
+      const newProgress = newCompleted.size / course.lessons.length;
+      setProgress(newProgress);
+      await supabase.from('enrollments').update({
+        progress: newProgress,
+        ...(newProgress >= 1 ? { status: 'completed', completed_at: new Date().toISOString() } : {}),
+      }).eq('user_id', user.id).eq('course_id', course.id);
+    }
+
+    // Award XP
+    const xpAmount = lesson.type === 'exam' ? XP_REWARDS.exam_pass : lesson.type === 'quiz' ? XP_REWARDS.quiz_pass : XP_REWARDS.lesson_complete;
+    await supabase.rpc('increment_xp', { user_id_input: user.id, amount: xpAmount }).catch(() => {
+      // Fallback if RPC doesn't exist: direct update
+      supabase.from('profiles').select('xp').eq('id', user.id).single().then(({ data }) => {
+        if (data) supabase.from('profiles').update({ xp: (data.xp || 0) + xpAmount }).eq('id', user.id);
+      });
+    });
+
+    setMarkingComplete(false);
+  }
+
+  // ── Submit quiz ──
+  async function handleQuizSubmit() {
+    if (Object.keys(quizAnswers).length !== quizQuestions.length) return;
+    setQuizSubmitted(true);
+
+    const score = quizQuestions.filter((q, i) => quizAnswers[i] === q.correct).length / quizQuestions.length;
+    const passed = score >= 0.7;
+
+    if (user) {
+      // Save quiz attempt
+      await supabase.from('quiz_attempts').insert({
+        user_id: user.id,
+        course_id: course.id,
+        lesson_id: activeLesson.id,
+        score,
+        answers: quizAnswers,
+        passed,
+      });
+
+      // Mark lesson as completed if passed
+      if (passed) {
+        await handleMarkLessonComplete(activeLesson);
+      }
+    }
+  }
+
+  // Quiz questions (kept inline for now, will move to constants in Phase 3)
   const quizQuestions = [
     {
       q: '¿Qué estructura cerebral se modifica con la práctica meditativa según los estudios de neuroplasticidad?',
@@ -51,6 +186,9 @@ export default function CoursePage({ params }) {
       correct: 1,
     },
   ];
+
+  const quizScore = quizSubmitted ? quizQuestions.filter((q, i) => quizAnswers[i] === q.correct).length : 0;
+  const quizPassed = quizSubmitted && (quizScore / quizQuestions.length) >= 0.7;
 
   // ── Quiz/Exam View ──
   if (activeLesson && (activeLesson.type === 'quiz' || activeLesson.type === 'exam')) {
@@ -104,7 +242,7 @@ export default function CoursePage({ params }) {
 
           {!quizSubmitted ? (
             <button
-              onClick={() => Object.keys(quizAnswers).length === quizQuestions.length && setQuizSubmitted(true)}
+              onClick={handleQuizSubmit}
               disabled={Object.keys(quizAnswers).length !== quizQuestions.length}
               className="w-full mt-2 bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-40"
             >
@@ -112,19 +250,34 @@ export default function CoursePage({ params }) {
             </button>
           ) : (
             <div className="text-center mt-6">
-              <Card className="p-6 border-selene-gold/25 bg-gradient-to-b from-selene-card to-selene-gold/5">
-                <div className="text-4xl mb-3">🎓</div>
-                <h3 className="font-display text-xl text-selene-gold mb-2">¡Evaluación completada!</h3>
+              <Card className={`p-6 ${quizPassed ? 'border-selene-gold/25 bg-gradient-to-b from-selene-card to-selene-gold/5' : 'border-selene-rose/25'}`}>
+                <div className="text-4xl mb-3">{quizPassed ? '🎓' : '📝'}</div>
+                <h3 className={`font-display text-xl mb-2 ${quizPassed ? 'text-selene-gold' : 'text-selene-rose'}`}>
+                  {quizPassed ? '¡Evaluación superada!' : 'No has alcanzado el 70%'}
+                </h3>
                 <p className="text-sm text-selene-white-dim mb-1">
-                  Resultado: {quizQuestions.filter((q, i) => quizAnswers[i] === q.correct).length}/{quizQuestions.length} correctas
+                  Resultado: {quizScore}/{quizQuestions.length} correctas
                 </p>
-                <p className="text-[13px] text-selene-success">Has desbloqueado el certificado</p>
-                <button
-                  onClick={() => router.push(`/curso/${course.id}/certificado`)}
-                  className="mt-4 bg-selene-gold text-selene-bg font-semibold px-8 py-3 rounded-xl hover:brightness-110 transition"
-                >
-                  Ver mi certificado
-                </button>
+                {quizPassed ? (
+                  <>
+                    <p className="text-[13px] text-selene-success">Has desbloqueado el certificado</p>
+                    {activeLesson.type === 'exam' && (
+                      <button
+                        onClick={() => router.push(`/curso/${course.id}/certificado`)}
+                        className="mt-4 bg-selene-gold text-selene-bg font-semibold px-8 py-3 rounded-xl hover:brightness-110 transition"
+                      >
+                        Ver mi certificado
+                      </button>
+                    )}
+                  </>
+                ) : (
+                  <button
+                    onClick={() => { setQuizAnswers({}); setQuizSubmitted(false); }}
+                    className="mt-4 bg-selene-elevated text-selene-white font-semibold px-8 py-3 rounded-xl border border-selene-border hover:border-selene-gold/30 transition"
+                  >
+                    Intentar de nuevo
+                  </button>
+                )}
               </Card>
             </div>
           )}
@@ -135,6 +288,7 @@ export default function CoursePage({ params }) {
 
   // ── Video Player View ──
   if (activeLesson && activeLesson.type === 'video') {
+    const isLessonComplete = completedLessons.has(activeLesson.id);
     return (
       <div className="min-h-screen bg-selene-bg">
         <nav className="px-6 py-3.5 flex items-center gap-3 border-b border-selene-border">
@@ -171,6 +325,22 @@ export default function CoursePage({ params }) {
               <span>·</span>
               <span>{course.title}</span>
             </div>
+
+            {/* Mark complete button */}
+            {!isLessonComplete ? (
+              <button
+                onClick={() => handleMarkLessonComplete(activeLesson)}
+                disabled={markingComplete}
+                className="w-full mb-5 bg-selene-gold text-selene-bg font-semibold py-3 rounded-xl hover:brightness-110 transition disabled:opacity-50"
+              >
+                {markingComplete ? 'Guardando...' : 'Marcar como completada'}
+              </button>
+            ) : (
+              <div className="flex items-center gap-2 mb-5 text-selene-success text-sm">
+                <CheckIcon size={16} />
+                <span>Lección completada</span>
+              </div>
+            )}
 
             <div className="bg-selene-blue/5 rounded-xl p-4 border border-selene-blue/10 mb-5">
               <div className="text-xs font-semibold text-selene-blue-light mb-1.5">📚 Base científica</div>
@@ -223,7 +393,7 @@ export default function CoursePage({ params }) {
           <Badge color={course.color} className="relative z-10">{course.tag}</Badge>
           <h1 className="font-display text-[26px] font-normal mt-4 mb-1.5 relative z-10">{course.title}</h1>
           <p className="text-sm text-selene-white-dim leading-relaxed mb-4 relative z-10">{course.subtitle}</p>
-          <div className="flex gap-4 text-xs text-selene-white-dim flex-wrap relative z-10">
+          <div className="flex gap-2 sm:gap-4 text-xs text-selene-white-dim flex-wrap relative z-10">
             <span>{course.level}</span><span>·</span>
             <span>{course.hours}</span><span>·</span>
             <span>{course.modules} módulos</span><span>·</span>
@@ -264,6 +434,19 @@ export default function CoursePage({ params }) {
           </Card>
         </div>
 
+        {/* Enroll CTA (when not enrolled) */}
+        {!isEnrolled && (
+          <div className="mb-6">
+            <button
+              onClick={handleEnroll}
+              disabled={enrolling}
+              className="w-full bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-50"
+            >
+              {enrolling ? 'Inscribiendo...' : course.price === 0 ? 'Inscribirse gratis' : `Comprar por ${course.price_label}`}
+            </button>
+          </div>
+        )}
+
         {/* Lessons */}
         {course.lessons.length > 0 ? (
           <div>
@@ -293,13 +476,14 @@ export default function CoursePage({ params }) {
               </button>
             ))}
           </div>
-        ) : (
+        ) : !isEnrolled ? (
           <div className="text-center py-10">
             <LockIcon size={32} className="text-selene-white-dim mx-auto" />
             <p className="text-sm text-selene-white-dim mt-3 mb-4">Inscríbete para ver el contenido completo</p>
-            <button className="bg-selene-gold text-selene-bg font-semibold px-8 py-3.5 rounded-xl hover:brightness-110 transition">
-              {course.price === 0 ? 'Inscribirse gratis' : `Comprar por ${course.price_label}`}
-            </button>
+          </div>
+        ) : (
+          <div className="text-center py-10">
+            <p className="text-sm text-selene-white-dim">El contenido de este curso estará disponible pronto</p>
           </div>
         )}
       </div>

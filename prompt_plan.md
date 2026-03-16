@@ -2,19 +2,19 @@
 
 ## Phase 1 — Stability
 - [x] Add error boundaries to dashboard, curso/[id], perfil, onboarding (wrap in try/catch or ErrorBoundary component)
-- [ ] Add loading states: show Spinner while checking auth on protected pages
-- [ ] Create app/not-found.js with Quantum Ethereal styling and link back to home
-- [ ] Fix mobile responsiveness: test all pages at 375px, fix overflow/spacing issues
-- [ ] Run npm run build and fix any warnings or errors
+- [x] Add loading states: show Spinner while checking auth on protected pages
+- [x] Create app/not-found.js with Quantum Ethereal styling and link back to home
+- [x] Fix mobile responsiveness: test all pages at 375px, fix overflow/spacing issues
+- [x] Run npm run build and fix any warnings or errors
 
 ## Phase 2 — Wire real data
-- [ ] Onboarding: save birth_date, birth_city, interests, experience_level to profiles table on completion
-- [ ] Dashboard: fetch user enrollments from Supabase, replace hardcoded mock data
-- [ ] Dashboard: load XP and streak from profiles table
-- [ ] Course enrollment: clicking "Inscribirse gratis" inserts row into enrollments table
-- [ ] Lesson progress: mark lesson as completed in lesson_progress table when user finishes video/quiz
-- [ ] Quiz: save attempt to quiz_attempts table with score and answers
-- [ ] Profile: load real name, birth data, XP from profiles table
+- [x] Onboarding: save birth_date, birth_city, interests, experience_level to profiles table on completion
+- [x] Dashboard: fetch user enrollments from Supabase, replace hardcoded mock data
+- [x] Dashboard: load XP and streak from profiles table
+- [x] Course enrollment: clicking "Inscribirse gratis" inserts row into enrollments table
+- [x] Lesson progress: mark lesson as completed in lesson_progress table when user finishes video/quiz
+- [x] Quiz: save attempt to quiz_attempts table with score and answers
+- [x] Profile: load real name, birth data, XP from profiles table
 
 ## Phase 3 — Complete features
 - [ ] Move quiz questions to lib/constants.js (at least 3 questions per quiz lesson in course 1)
