@@ -39,18 +39,28 @@ export default function OnboardingPage() {
   async function handleAnalyze() {
     setAnalyzing(true);
 
-    // Save onboarding data to user metadata
     try {
-      await supabase.auth.updateUser({
-        data: {
-          birth_date: birthDate,
-          birth_time: birthTime,
-          birth_city: birthCity,
-          interests,
-          experience,
-          onboarding_complete: true,
-        },
-      });
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        // Save to profiles table
+        await supabase
+          .from('profiles')
+          .update({
+            birth_date: birthDate || null,
+            birth_time: birthTime || null,
+            birth_city: birthCity || null,
+            interests,
+            experience_level: experience,
+            onboarding_complete: true,
+            updated_at: new Date().toISOString(),
+          })
+          .eq('id', user.id);
+
+        // Also update user metadata for quick access
+        await supabase.auth.updateUser({
+          data: { onboarding_complete: true },
+        });
+      }
     } catch (err) {
       console.error('Error saving onboarding data:', err);
     }

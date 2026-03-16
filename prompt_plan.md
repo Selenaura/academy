@@ -8,7 +8,7 @@
 - [x] Run npm run build and fix any warnings or errors
 
 ## Phase 2 — Wire real data
-- [ ] Onboarding: save birth_date, birth_city, interests, experience_level to profiles table on completion
+- [x] Onboarding: save birth_date, birth_city, interests, experience_level to profiles table on completion
 - [ ] Dashboard: fetch user enrollments from Supabase, replace hardcoded mock data
 - [ ] Dashboard: load XP and streak from profiles table
 - [ ] Course enrollment: clicking "Inscribirse gratis" inserts row into enrollments table
