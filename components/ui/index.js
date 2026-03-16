@@ -152,6 +152,22 @@ export function Spinner({ text = 'Cargando...' }) {
   );
 }
 
+// ── YouTube Embed ──
+export function YouTubeEmbed({ videoId, title = '' }) {
+  if (!videoId) return null;
+  return (
+    <div className="aspect-video w-full bg-selene-card rounded-xl overflow-hidden border border-selene-border">
+      <iframe
+        src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`}
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full"
+      />
+    </div>
+  );
+}
+
 // ── Footer ──
 export function Footer() {
   return (

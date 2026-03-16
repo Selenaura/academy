@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase-browser';
 import { COURSES, XP_REWARDS, QUIZ_QUESTIONS } from '@/lib/constants';
-import { Card, ProgressBar, Badge, Spinner, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
+import { Card, ProgressBar, Badge, Spinner, YouTubeEmbed, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
 
 export default function CoursePage({ params }) {
   const router = useRouter();
@@ -302,19 +302,23 @@ export default function CoursePage({ params }) {
 
         <div className="max-w-[720px] mx-auto">
           {/* Video area */}
-          <div className="aspect-video bg-gradient-to-br from-selene-card to-selene-elevated flex items-center justify-center relative border-b border-selene-border">
-            <div className="absolute inset-0 star-pattern" />
-            <div className="w-[72px] h-[72px] rounded-full bg-selene-gold/15 flex items-center justify-center cursor-pointer border-2 border-selene-gold/40 hover:bg-selene-gold/25 transition z-10">
-              <PlayIcon size={28} className="text-selene-gold" />
-            </div>
-            <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
-              <span className="text-[11px] text-selene-white-dim">0:00</span>
-              <div className="flex-1 h-[3px] bg-selene-white/20 rounded-full">
-                <div className="w-0 h-full bg-selene-gold rounded-full" />
+          {activeLesson.videoId ? (
+            <YouTubeEmbed videoId={activeLesson.videoId} title={activeLesson.title} />
+          ) : (
+            <div className="aspect-video bg-gradient-to-br from-selene-card to-selene-elevated flex items-center justify-center relative border-b border-selene-border">
+              <div className="absolute inset-0 star-pattern" />
+              <div className="w-[72px] h-[72px] rounded-full bg-selene-gold/15 flex items-center justify-center cursor-pointer border-2 border-selene-gold/40 hover:bg-selene-gold/25 transition z-10">
+                <PlayIcon size={28} className="text-selene-gold" />
               </div>
-              <span className="text-[11px] text-selene-white-dim">{activeLesson.duration}</span>
+              <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
+                <span className="text-[11px] text-selene-white-dim">0:00</span>
+                <div className="flex-1 h-[3px] bg-selene-white/20 rounded-full">
+                  <div className="w-0 h-full bg-selene-gold rounded-full" />
+                </div>
+                <span className="text-[11px] text-selene-white-dim">{activeLesson.duration}</span>
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Lesson info */}
           <div className="px-5 py-6">
