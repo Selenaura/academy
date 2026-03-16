@@ -11,42 +11,57 @@ export default function DashboardPage() {
   const router = useRouter();
   const supabase = createClient();
   const [user, setUser] = useState(null);
+  const [profile, setProfile] = useState(null);
+  const [enrollments, setEnrollments] = useState({});
+  const [certCount, setCertCount] = useState(0);
   const [loading, setLoading] = useState(true);
 
-  // Mock enrollment data (will come from Supabase in production)
-  const [enrollments] = useState({
-    'brujula-interior': { enrolled: true, progress: 0.35 },
-    'magnetismo-consciente': { enrolled: true, progress: 0.12 },
-  });
-
-  const userProfile = {
-    name: user?.user_metadata?.name || 'Exploradora',
-    xp: 1240,
-    xpNext: 2000,
-    certificates: 0,
-    streak: 7,
-  };
-
-  const level = getLevel(userProfile.xp);
-  const enrolled = COURSES.filter(c => enrollments[c.id]?.enrolled);
-  const explore = COURSES.filter(c => !enrollments[c.id]?.enrolled);
-
   useEffect(() => {
-    async function getUser() {
+    async function loadDashboard() {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) {
         router.push('/auth?mode=login');
         return;
       }
       setUser(user);
+
+      // Fetch profile, enrollments, and certificates in parallel
+      const [profileRes, enrollmentsRes, certsRes] = await Promise.all([
+        supabase.from('profiles').select('name, xp, streak_days').eq('id', user.id).single(),
+        supabase.from('enrollments').select('course_id, progress, status').eq('user_id', user.id).neq('status', 'cancelled'),
+        supabase.from('certificates').select('id').eq('user_id', user.id),
+      ]);
+
+      if (profileRes.data) {
+        setProfile(profileRes.data);
+      }
+
+      if (enrollmentsRes.data) {
+        const map = {};
+        enrollmentsRes.data.forEach(e => {
+          map[e.course_id] = { enrolled: true, progress: e.progress || 0, status: e.status };
+        });
+        setEnrollments(map);
+      }
+
+      setCertCount(certsRes.data?.length || 0);
       setLoading(false);
     }
-    getUser();
+    loadDashboard();
   }, []);
 
   if (loading) {
     return <Spinner text="Cargando tu espacio..." />;
   }
+
+  const userName = profile?.name || user?.user_metadata?.name || 'Exploradora';
+  const xp = profile?.xp || 0;
+  const streak = profile?.streak_days || 0;
+  const level = getLevel(xp);
+  const xpNext = level.maxXp === Infinity ? xp + 1000 : level.maxXp;
+
+  const enrolled = COURSES.filter(c => enrollments[c.id]?.enrolled);
+  const explore = COURSES.filter(c => !enrollments[c.id]?.enrolled);
 
   return (
     <div className="min-h-screen bg-selene-bg">
@@ -56,10 +71,10 @@ export default function DashboardPage() {
         {/* Welcome */}
         <div className="mb-8">
           <h1 className="font-display text-[26px] font-normal mb-1.5">
-            Hola, {userProfile.name} <span className="text-xl">✦</span>
+            Hola, {userName} <span className="text-xl">✦</span>
           </h1>
           <p className="text-[13px] text-selene-white-dim">
-            Racha de {userProfile.streak} días · {level.name}
+            {streak > 0 ? `Racha de ${streak} días · ` : ''}{level.name}
           </p>
         </div>
 
@@ -67,17 +82,17 @@ export default function DashboardPage() {
         <Card className="p-4 mb-6">
           <div className="flex justify-between mb-2">
             <span className="text-xs text-selene-white-dim">{level.name}</span>
-            <span className="text-xs text-selene-gold">{userProfile.xp} / {userProfile.xpNext} XP</span>
+            <span className="text-xs text-selene-gold">{xp} / {xpNext} XP</span>
           </div>
-          <ProgressBar value={userProfile.xp / userProfile.xpNext} height={6} />
+          <ProgressBar value={xp / xpNext} height={6} />
         </Card>
 
         {/* Quick Stats */}
         <div className="grid grid-cols-3 gap-3 mb-8">
           {[
             { icon: <BookIcon size={18} />, label: 'Cursos activos', value: enrolled.length },
-            { icon: <CertIcon size={18} />, label: 'Certificados', value: userProfile.certificates },
-            { icon: <StarIcon size={18} />, label: 'Racha', value: `${userProfile.streak}d` },
+            { icon: <CertIcon size={18} />, label: 'Certificados', value: certCount },
+            { icon: <StarIcon size={18} />, label: 'Racha', value: streak > 0 ? `${streak}d` : '0d' },
           ].map((s, i) => (
             <Card key={i} className="p-4 text-center">
               <div className="flex justify-center mb-2">{s.icon}</div>

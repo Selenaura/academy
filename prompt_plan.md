@@ -9,8 +9,8 @@
 
 ## Phase 2 — Wire real data
 - [x] Onboarding: save birth_date, birth_city, interests, experience_level to profiles table on completion
-- [ ] Dashboard: fetch user enrollments from Supabase, replace hardcoded mock data
-- [ ] Dashboard: load XP and streak from profiles table
+- [x] Dashboard: fetch user enrollments from Supabase, replace hardcoded mock data
+- [x] Dashboard: load XP and streak from profiles table
 - [ ] Course enrollment: clicking "Inscribirse gratis" inserts row into enrollments table
 - [ ] Lesson progress: mark lesson as completed in lesson_progress table when user finishes video/quiz
 - [ ] Quiz: save attempt to quiz_attempts table with score and answers
