@@ -19,7 +19,7 @@
 ## Phase 3 — Complete features
 - [x] Move quiz questions to lib/constants.js (at least 3 questions per quiz lesson in course 1)
 - [x] Group lessons by module number in course detail view
-- [ ] Certificate: on exam pass, generate unique code (SEL-YYYY-XXXX) and insert into certificates table
+- [x] Certificate: on exam pass, generate unique code (SEL-YYYY-XXXX) and insert into certificates table
 - [ ] Certificate verification: create /verificar/[code] public page that checks certificates table
 - [ ] Video player: create YouTube embed component for unlisted videos
 - [ ] Stripe checkout: wire "Comprar" button to /api/checkout and redirect to Stripe

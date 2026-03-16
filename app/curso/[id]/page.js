@@ -164,6 +164,19 @@ export default function CoursePage({ params }) {
       // Mark lesson as completed if passed
       if (passed) {
         await handleMarkLessonComplete(activeLesson);
+
+        // Generate certificate on exam pass
+        if (activeLesson.type === 'exam') {
+          const year = new Date().getFullYear();
+          const rand = Math.random().toString(36).substring(2, 6).toUpperCase();
+          const certCode = `SEL-${year}-${rand}`;
+          await supabase.from('certificates').upsert({
+            user_id: user.id,
+            course_id: course.id,
+            certificate_code: certCode,
+            issued_at: new Date().toISOString(),
+          }, { onConflict: 'user_id,course_id' });
+        }
       }
     }
   }

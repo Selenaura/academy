@@ -1,12 +1,36 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { createClient } from '@/lib/supabase-browser';
 import { COURSES } from '@/lib/constants';
-import { BackIcon, MoonIcon } from '@/components/ui';
+import { Spinner, BackIcon, MoonIcon } from '@/components/ui';
 
 export default function CertificatePage({ params }) {
   const router = useRouter();
+  const supabase = createClient();
   const course = COURSES.find(c => c.id === params.id);
+
+  const [loading, setLoading] = useState(true);
+  const [certificate, setCertificate] = useState(null);
+  const [userName, setUserName] = useState('');
+
+  useEffect(() => {
+    async function loadCertificate() {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) { router.push('/auth?mode=login'); return; }
+
+      const [certRes, profileRes] = await Promise.all([
+        supabase.from('certificates').select('certificate_code, issued_at').eq('user_id', user.id).eq('course_id', params.id).single(),
+        supabase.from('profiles').select('name').eq('id', user.id).single(),
+      ]);
+
+      if (certRes.data) setCertificate(certRes.data);
+      setUserName(profileRes.data?.name || user.user_metadata?.name || user.email?.split('@')[0] || 'Estudiante');
+      setLoading(false);
+    }
+    loadCertificate();
+  }, []);
 
   if (!course) {
     return (
@@ -16,8 +40,23 @@ export default function CertificatePage({ params }) {
     );
   }
 
-  const certCode = `SEL-2026-${course.id.slice(0, 4).toUpperCase()}-${Math.random().toString(36).substr(2, 6).toUpperCase()}`;
-  const today = new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+  if (loading) return <Spinner text="Cargando certificado..." />;
+
+  if (!certificate) {
+    return (
+      <div className="min-h-screen bg-selene-bg flex items-center justify-center px-6">
+        <div className="text-center">
+          <div className="text-4xl mb-4">🔒</div>
+          <p className="text-selene-white-dim mb-4">Aún no tienes certificado para este curso</p>
+          <button onClick={() => router.push(`/curso/${course.id}`)} className="text-selene-gold text-sm">
+            ← Volver al curso
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  const issuedDate = new Date(certificate.issued_at).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
 
   return (
     <div className="min-h-screen bg-selene-bg">
@@ -60,7 +99,7 @@ export default function CertificatePage({ params }) {
             <div className="w-16 h-px bg-selene-gold/30 mx-auto mb-6" />
 
             <div className="font-display text-[32px] text-selene-white font-normal italic mb-2">
-              María
+              {userName}
             </div>
 
             <p className="text-sm text-selene-white-dim leading-relaxed mb-6">
@@ -77,8 +116,8 @@ export default function CertificatePage({ params }) {
 
             <div className="w-16 h-px bg-selene-gold/30 mx-auto mb-6" />
 
-            <div className="text-xs text-selene-white-dim mb-1">{today}</div>
-            <div className="text-[11px] text-selene-gold-dim font-mono">Código: {certCode}</div>
+            <div className="text-xs text-selene-white-dim mb-1">{issuedDate}</div>
+            <div className="text-[11px] text-selene-gold-dim font-mono">Código: {certificate.certificate_code}</div>
           </div>
         </div>
 
