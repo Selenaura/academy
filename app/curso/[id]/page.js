@@ -433,33 +433,47 @@ export default function CoursePage({ params }) {
           </div>
         )}
 
-        {/* Lessons */}
+        {/* Lessons grouped by module */}
         {course.lessons.length > 0 ? (
           <div>
             <h3 className="font-display text-lg font-medium mb-4">Contenido del curso</h3>
-            {course.lessons.map((lesson, i) => (
-              <button
-                key={lesson.id}
-                onClick={() => isEnrolled ? setActiveLesson(lesson) : null}
-                disabled={!isEnrolled}
-                className="flex items-center gap-3.5 p-4 w-full bg-selene-card border border-selene-border rounded-xl text-left mb-2 hover:border-selene-gold/20 transition disabled:opacity-60 disabled:cursor-not-allowed"
-              >
-                <div className={`w-9 h-9 rounded-[10px] shrink-0 flex items-center justify-center border ${
-                  completedLessons.has(lesson.id) ? 'bg-selene-success/10 border-selene-success/20' : 'bg-selene-elevated border-selene-border'
-                }`}>
-                  {completedLessons.has(lesson.id) ? <CheckIcon size={16} /> :
-                   lesson.type === 'quiz' ? <span className="text-sm">📝</span> :
-                   lesson.type === 'exam' ? <span className="text-sm">🎓</span> :
-                   <PlayIcon size={14} className="text-selene-white-dim" />}
+            {Object.entries(
+              course.lessons.reduce((acc, lesson) => {
+                const mod = lesson.module || 1;
+                if (!acc[mod]) acc[mod] = [];
+                acc[mod].push(lesson);
+                return acc;
+              }, {})
+            ).map(([moduleNum, lessons]) => (
+              <div key={moduleNum} className="mb-5">
+                <div className="text-xs font-semibold text-selene-white-dim uppercase tracking-wider mb-2 px-1">
+                  Módulo {moduleNum}
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-sm text-selene-white font-medium mb-0.5 truncate">{lesson.title}</div>
-                  <div className="text-[11px] text-selene-white-dim">
-                    {lesson.type === 'quiz' ? 'Quiz' : lesson.type === 'exam' ? 'Evaluación' : 'Vídeo'} · {lesson.duration}
-                  </div>
-                </div>
-                <ArrowIcon size={14} className="text-selene-white-dim shrink-0" />
-              </button>
+                {lessons.map((lesson) => (
+                  <button
+                    key={lesson.id}
+                    onClick={() => isEnrolled ? setActiveLesson(lesson) : null}
+                    disabled={!isEnrolled}
+                    className="flex items-center gap-3.5 p-4 w-full bg-selene-card border border-selene-border rounded-xl text-left mb-2 hover:border-selene-gold/20 transition disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    <div className={`w-9 h-9 rounded-[10px] shrink-0 flex items-center justify-center border ${
+                      completedLessons.has(lesson.id) ? 'bg-selene-success/10 border-selene-success/20' : 'bg-selene-elevated border-selene-border'
+                    }`}>
+                      {completedLessons.has(lesson.id) ? <CheckIcon size={16} /> :
+                       lesson.type === 'quiz' ? <span className="text-sm">📝</span> :
+                       lesson.type === 'exam' ? <span className="text-sm">🎓</span> :
+                       <PlayIcon size={14} className="text-selene-white-dim" />}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-sm text-selene-white font-medium mb-0.5 truncate">{lesson.title}</div>
+                      <div className="text-[11px] text-selene-white-dim">
+                        {lesson.type === 'quiz' ? 'Quiz' : lesson.type === 'exam' ? 'Evaluación' : 'Vídeo'} · {lesson.duration}
+                      </div>
+                    </div>
+                    <ArrowIcon size={14} className="text-selene-white-dim shrink-0" />
+                  </button>
+                ))}
+              </div>
             ))}
           </div>
         ) : !isEnrolled ? (
