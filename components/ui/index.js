@@ -77,11 +77,11 @@ export function Navbar({ showAuth = true, showDashboardNav = false }) {
       )}
 
       {showAuth && !showDashboardNav && (
-        <div className="flex gap-3 items-center">
-          <Link href="/auth?mode=login" className="text-sm text-selene-white-dim hover:text-selene-white px-4 py-2 no-underline">
+        <div className="flex gap-2 sm:gap-3 items-center">
+          <Link href="/auth?mode=login" className="text-xs sm:text-sm text-selene-white-dim hover:text-selene-white px-2 sm:px-4 py-2 no-underline">
             Iniciar sesión
           </Link>
-          <Link href="/auth?mode=register" className="text-sm font-semibold bg-selene-gold text-selene-bg px-5 py-2.5 rounded-lg hover:brightness-110 no-underline">
+          <Link href="/auth?mode=register" className="text-xs sm:text-sm font-semibold bg-selene-gold text-selene-bg px-3 sm:px-5 py-2.5 rounded-lg hover:brightness-110 no-underline whitespace-nowrap">
             Empezar gratis
           </Link>
         </div>

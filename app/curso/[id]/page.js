@@ -223,7 +223,7 @@ export default function CoursePage({ params }) {
           <Badge color={course.color} className="relative z-10">{course.tag}</Badge>
           <h1 className="font-display text-[26px] font-normal mt-4 mb-1.5 relative z-10">{course.title}</h1>
           <p className="text-sm text-selene-white-dim leading-relaxed mb-4 relative z-10">{course.subtitle}</p>
-          <div className="flex gap-4 text-xs text-selene-white-dim flex-wrap relative z-10">
+          <div className="flex gap-2 sm:gap-4 text-xs text-selene-white-dim flex-wrap relative z-10">
             <span>{course.level}</span><span>·</span>
             <span>{course.hours}</span><span>·</span>
             <span>{course.modules} módulos</span><span>·</span>

@@ -42,23 +42,23 @@ export default function LandingPage() {
             Tu carta natal guía tu camino. Estudios citados en cada lección.
           </p>
 
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
             <Link
               href="/auth?mode=register"
-              className="inline-flex items-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-10 py-4 rounded-xl hover:brightness-110 transition no-underline"
+              className="inline-flex items-center justify-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-8 sm:px-10 py-4 rounded-xl hover:brightness-110 transition no-underline w-full sm:w-auto"
             >
-              Empieza gratis — Curso introductorio
+              Empieza gratis
             </Link>
             <Link
               href="/auth?mode=login"
-              className="inline-flex items-center text-[15px] font-semibold text-selene-gold px-10 py-4 rounded-xl border border-selene-gold/30 hover:bg-selene-gold/5 transition no-underline"
+              className="inline-flex items-center justify-center text-[15px] font-semibold text-selene-gold px-8 sm:px-10 py-4 rounded-xl border border-selene-gold/30 hover:bg-selene-gold/5 transition no-underline w-full sm:w-auto"
             >
               Ver catálogo
             </Link>
           </div>
 
           {/* Stats */}
-          <div className="flex justify-center gap-10 mt-16 flex-wrap">
+          <div className="flex justify-center gap-6 sm:gap-10 mt-16 flex-wrap">
             {stats.map((s, i) => (
               <div key={i} className="text-center">
                 <div className="font-display text-[32px] text-selene-gold font-semibold">{s.value}</div>
