@@ -2,15 +2,13 @@ import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
 import { NextResponse } from 'next/server';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-
-// Use service role for webhook (no user context)
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
-);
-
 export async function POST(request) {
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY
+  );
+
   const body = await request.text();
   const sig = request.headers.get('stripe-signature');
 
@@ -27,7 +25,6 @@ export async function POST(request) {
     const { user_id, course_id } = session.metadata;
 
     if (user_id && course_id) {
-      // Create enrollment
       const { error: enrollError } = await supabase
         .from('enrollments')
         .upsert({
@@ -43,7 +40,6 @@ export async function POST(request) {
         console.error('Enrollment error:', enrollError);
       }
 
-      // Record payment
       const { error: paymentError } = await supabase
         .from('payments')
         .insert({
@@ -59,7 +55,7 @@ export async function POST(request) {
         console.error('Payment record error:', paymentError);
       }
 
-      console.log(`✅ Enrolled user ${user_id} in course ${course_id}`);
+      console.log(`Enrolled user ${user_id} in course ${course_id}`);
     }
   }
 
