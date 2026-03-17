@@ -39,7 +39,7 @@ export default function ProfilePage() {
   if (loading) return <Spinner text="Cargando tu perfil..." />;
 
   const meta = user?.user_metadata || {};
-  const name = profile?.name || meta.name || user?.email?.split('@')[0] || 'Exploradora';
+  const name = profile?.name || meta.name || user?.email?.split('@')[0] || 'Viajere Cósmique';
   const xp = profile?.xp || 0;
   const streak = profile?.streak_days || 0;
   const sunSign = profile?.sun_sign || '—';

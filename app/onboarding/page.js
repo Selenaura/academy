@@ -15,7 +15,7 @@ const INTERESTS = [
 ];
 
 const EXP_LEVELS = [
-  { id: 'none', label: 'Soy nueva en esto' },
+  { id: 'none', label: 'No tengo experiencia' },
   { id: 'basic', label: 'Conozco lo básico' },
   { id: 'inter', label: 'Nivel intermedio' },
   { id: 'adv', label: 'Tengo experiencia' },

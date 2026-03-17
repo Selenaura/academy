@@ -149,7 +149,7 @@ export default function LandingPage() {
           <p className="font-display text-lg text-selene-white italic leading-relaxed mb-4">
             &ldquo;No es otra escuela de astrología. Es la primera que te explica POR QUÉ funciona lo que funciona, con papers de verdad.&rdquo;
           </p>
-          <div className="text-sm text-selene-white-dim">— Lo que queremos que digan nuestros alumnos</div>
+          <div className="text-sm text-selene-white-dim">— Lo que queremos que diga nuestra comunidad</div>
         </div>
       </section>
 

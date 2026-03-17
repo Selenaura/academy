@@ -54,7 +54,7 @@ export default function DashboardPage() {
     return <Spinner text="Cargando tu espacio..." />;
   }
 
-  const userName = profile?.name || user?.user_metadata?.name || 'Exploradora';
+  const userName = profile?.name || user?.user_metadata?.name || 'Viajere Cósmique';
   const xp = profile?.xp || 0;
   const streak = profile?.streak_days || 0;
   const level = getLevel(xp);
