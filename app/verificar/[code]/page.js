@@ -15,7 +15,7 @@ export default function VerifyCertificatePage({ params }) {
     async function verify() {
       const { data } = await supabase
         .from('certificates')
-        .select('certificate_code, course_id, issued_at, profiles(name)')
+        .select('certificate_code, course_id, issued_at, profiles(name, surname, document_type, document_number)')
         .eq('certificate_code', params.code)
         .single();
 
@@ -36,7 +36,13 @@ export default function VerifyCertificatePage({ params }) {
 
   const course = certificate ? COURSES.find(c => c.id === certificate.course_id) : null;
   const issuedDate = certificate ? new Date(certificate.issued_at).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
-  const holderName = certificate?.profiles?.name || 'Estudiante';
+  const fullName = [certificate?.profiles?.name, certificate?.profiles?.surname].filter(Boolean).join(' ') || 'Estudiante';
+  const docType = { dni: 'DNI', nie: 'NIE', pasaporte: 'Pasaporte' }[certificate?.profiles?.document_type];
+  const docNumber = certificate?.profiles?.document_number;
+  // Mask document number: show first 3 and last 1, rest as *
+  const maskedDoc = docNumber && docNumber.length > 4
+    ? docNumber.slice(0, 3) + '·'.repeat(docNumber.length - 4) + docNumber.slice(-1)
+    : docNumber;
 
   return (
     <div className="min-h-screen bg-selene-bg flex items-center justify-center px-6 py-12">
@@ -57,11 +63,20 @@ export default function VerifyCertificatePage({ params }) {
             <div className="space-y-3 text-left bg-selene-elevated rounded-xl p-5 mb-6">
               <div>
                 <div className="text-[11px] text-selene-white-dim uppercase tracking-wider">Titular</div>
-                <div className="text-sm text-selene-white font-medium">{holderName}</div>
+                <div className="text-sm text-selene-white font-medium">{fullName}</div>
               </div>
+              {docType && maskedDoc && (
+                <div>
+                  <div className="text-[11px] text-selene-white-dim uppercase tracking-wider">{docType}</div>
+                  <div className="text-sm text-selene-white font-mono">{maskedDoc}</div>
+                </div>
+              )}
               <div>
                 <div className="text-[11px] text-selene-white-dim uppercase tracking-wider">Curso</div>
                 <div className="text-sm text-selene-white font-medium">{course?.title || certificate.course_id}</div>
+                {course && (
+                  <div className="text-[11px] text-selene-white-dim">{course.hours} de formación · {course.modules} módulos</div>
+                )}
               </div>
               <div>
                 <div className="text-[11px] text-selene-white-dim uppercase tracking-wider">Fecha de emisión</div>

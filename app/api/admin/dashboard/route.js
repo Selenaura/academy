@@ -3,13 +3,7 @@ import { withAdmin } from '@/lib/admin';
 
 export async function GET() {
   return withAdmin(async (admin) => {
-    const [
-      { data: profiles },
-      { data: enrollments },
-      { data: payments },
-      { data: certificates },
-      { data: lessonProgress },
-    ] = await Promise.all([
+    const [profilesRes, enrollmentsRes, paymentsRes, certificatesRes, lessonProgressRes] = await Promise.all([
       admin.from('profiles').select('id, xp, onboarding_complete, created_at, last_active_at'),
       admin.from('enrollments').select('id, user_id, course_id, status, progress, enrolled_at, completed_at, amount_paid'),
       admin.from('payments').select('id, amount, currency, status, created_at, course_id'),
@@ -17,35 +11,46 @@ export async function GET() {
       admin.from('lesson_progress').select('id, status, completed_at'),
     ]);
 
+    if (profilesRes.error) return NextResponse.json({ error: profilesRes.error.message }, { status: 500 });
+
+    const profiles = profilesRes.data || [];
+    const enrollments = enrollmentsRes.data || [];
+    const payments = paymentsRes.data || [];
+    const certificates = certificatesRes.data || [];
+    const lessonProgress = lessonProgressRes.data || [];
+
     const now = new Date();
-    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    const thisMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-    const lastMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
-    const last7d = new Date(now.getTime() - 7 * 86400000);
-    const last30d = new Date(now.getTime() - 30 * 86400000);
+    const todayStr = now.toISOString().slice(0, 10);
+    const thisMonthStr = todayStr.slice(0, 7);
+    const lastMonthDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - 1, 1));
+    const lastMonthStr = lastMonthDate.toISOString().slice(0, 7);
+    const last7dStr = new Date(now.getTime() - 7 * 86400000).toISOString();
 
-    const totalUsers = profiles?.length || 0;
-    const onboarded = profiles?.filter(p => p.onboarding_complete).length || 0;
-    const registeredToday = profiles?.filter(p => new Date(p.created_at) >= today).length || 0;
-    const registeredThisMonth = profiles?.filter(p => new Date(p.created_at) >= thisMonth).length || 0;
-    const activeLastWeek = profiles?.filter(p => p.last_active_at && new Date(p.last_active_at) >= last7d).length || 0;
+    const totalUsers = profiles.length;
+    const onboarded = profiles.filter(p => p.onboarding_complete).length;
+    const registeredToday = profiles.filter(p => p.created_at?.slice(0, 10) === todayStr).length;
+    const registeredThisMonth = profiles.filter(p => p.created_at?.slice(0, 7) === thisMonthStr).length;
+    const activeLastWeek = profiles.filter(p => p.last_active_at && p.last_active_at >= last7dStr).length;
 
-    const completedPayments = (payments || []).filter(p => p.status === 'completed' || p.status === 'succeeded');
+    // Users with at least one enrollment
+    const usersWithCourses = new Set(enrollments.map(e => e.user_id)).size;
+
+    const completedPayments = payments.filter(p => p.status === 'completed' || p.status === 'succeeded');
     const totalRevenue = completedPayments.reduce((sum, p) => sum + (p.amount || 0), 0);
     const revenueThisMonth = completedPayments
-      .filter(p => new Date(p.created_at) >= thisMonth)
+      .filter(p => p.created_at?.slice(0, 7) === thisMonthStr)
       .reduce((sum, p) => sum + (p.amount || 0), 0);
     const revenueLastMonth = completedPayments
-      .filter(p => new Date(p.created_at) >= lastMonth && new Date(p.created_at) < thisMonth)
+      .filter(p => p.created_at?.slice(0, 7) === lastMonthStr)
       .reduce((sum, p) => sum + (p.amount || 0), 0);
 
-    const totalEnrollments = enrollments?.length || 0;
-    const activeEnrollments = enrollments?.filter(e => e.status === 'active').length || 0;
-    const completedEnrollments = enrollments?.filter(e => e.status === 'completed').length || 0;
-    const enrollmentsThisMonth = enrollments?.filter(e => new Date(e.enrolled_at) >= thisMonth).length || 0;
+    const totalEnrollments = enrollments.length;
+    const activeEnrollments = enrollments.filter(e => e.status === 'active').length;
+    const completedEnrollments = enrollments.filter(e => e.status === 'completed').length;
+    const enrollmentsThisMonth = enrollments.filter(e => e.enrolled_at?.slice(0, 7) === thisMonthStr).length;
 
-    const totalCertificates = certificates?.length || 0;
-    const completedLessons = lessonProgress?.filter(l => l.status === 'completed').length || 0;
+    const totalCertificates = certificates.length;
+    const completedLessons = lessonProgress.filter(l => l.status === 'completed').length;
 
     // Revenue by course
     const revenueByCourse = {};
@@ -56,24 +61,28 @@ export async function GET() {
 
     // Enrollments by course
     const enrollmentsByCourse = {};
-    (enrollments || []).forEach(e => {
+    enrollments.forEach(e => {
       if (!enrollmentsByCourse[e.course_id]) enrollmentsByCourse[e.course_id] = { total: 0, active: 0, completed: 0 };
       enrollmentsByCourse[e.course_id].total++;
       if (e.status === 'active') enrollmentsByCourse[e.course_id].active++;
       if (e.status === 'completed') enrollmentsByCourse[e.course_id].completed++;
     });
 
-    // Registration trend (last 30 days)
+    // Registration trend (last 30 days) — single pass O(n)
+    const dayCountMap = {};
+    profiles.forEach(p => {
+      const day = p.created_at?.slice(0, 10);
+      if (day) dayCountMap[day] = (dayCountMap[day] || 0) + 1;
+    });
     const registrationTrend = [];
     for (let i = 29; i >= 0; i--) {
-      const day = new Date(now.getTime() - i * 86400000);
-      const dayStr = day.toISOString().slice(0, 10);
-      const count = (profiles || []).filter(p => p.created_at?.slice(0, 10) === dayStr).length;
-      registrationTrend.push({ date: dayStr, count });
+      const d = new Date(now.getTime() - i * 86400000);
+      const dayStr = d.toISOString().slice(0, 10);
+      registrationTrend.push({ date: dayStr, count: dayCountMap[dayStr] || 0 });
     }
 
     return NextResponse.json({
-      users: { total: totalUsers, onboarded, registeredToday, registeredThisMonth, activeLastWeek },
+      users: { total: totalUsers, onboarded, registeredToday, registeredThisMonth, activeLastWeek, withCourses: usersWithCourses },
       revenue: { total: totalRevenue, thisMonth: revenueThisMonth, lastMonth: revenueLastMonth, byCourse: revenueByCourse },
       enrollments: { total: totalEnrollments, active: activeEnrollments, completed: completedEnrollments, thisMonth: enrollmentsThisMonth, byCourse: enrollmentsByCourse },
       certificates: { total: totalCertificates },

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { MoonIcon, Card, ProgressBar, Badge } from '@/components/ui';
@@ -22,7 +22,6 @@ export default function AdminPage() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState('dashboard');
   const [loading, setLoading] = useState(true);
-  const [forbidden, setForbidden] = useState(false);
 
   // Data stores
   const [dashboardData, setDashboardData] = useState(null);
@@ -30,38 +29,41 @@ export default function AdminPage() {
   const [paymentsData, setPaymentsData] = useState(null);
   const [certificatesData, setCertificatesData] = useState(null);
   const [progressData, setProgressData] = useState(null);
+  const [errors, setErrors] = useState({});
+  const fetchedTabs = useRef(new Set());
 
-  const fetchData = useCallback(async (endpoint, setter) => {
-    const res = await fetch(endpoint);
-    if (res.status === 403) { setForbidden(true); return; }
-    if (res.ok) {
-      const data = await res.json();
-      setter(data);
-    }
-  }, []);
-
-  useEffect(() => {
-    async function init() {
-      const res = await fetch('/api/admin/dashboard');
+  const fetchData = useCallback(async (key, endpoint, setter) => {
+    if (fetchedTabs.current.has(key)) return;
+    fetchedTabs.current.add(key);
+    try {
+      const res = await fetch(endpoint);
       if (res.status === 403) {
         router.push('/dashboard');
         return;
       }
-      if (res.ok) {
-        setDashboardData(await res.json());
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        setErrors(prev => ({ ...prev, [key]: body.error || `Error ${res.status}` }));
+        return;
       }
-      setLoading(false);
+      setter(await res.json());
+    } catch (err) {
+      setErrors(prev => ({ ...prev, [key]: 'Error de conexión' }));
     }
-    init();
   }, [router]);
 
+  // Initial load
   useEffect(() => {
-    if (forbidden) { router.push('/dashboard'); return; }
-    if (activeTab === 'users' && !usersData) fetchData('/api/admin/users', setUsersData);
-    if (activeTab === 'payments' && !paymentsData) fetchData('/api/admin/payments', setPaymentsData);
-    if (activeTab === 'certificates' && !certificatesData) fetchData('/api/admin/certificates', setCertificatesData);
-    if (activeTab === 'progress' && !progressData) fetchData('/api/admin/progress', setProgressData);
-  }, [activeTab, forbidden, router, fetchData, usersData, paymentsData, certificatesData, progressData]);
+    fetchData('dashboard', '/api/admin/dashboard', setDashboardData).then(() => setLoading(false));
+  }, [fetchData]);
+
+  // Lazy load tabs
+  useEffect(() => {
+    if (activeTab === 'users') fetchData('users', '/api/admin/users', setUsersData);
+    if (activeTab === 'payments') fetchData('payments', '/api/admin/payments', setPaymentsData);
+    if (activeTab === 'certificates') fetchData('certificates', '/api/admin/certificates', setCertificatesData);
+    if (activeTab === 'progress' || activeTab === 'courses') fetchData('progress', '/api/admin/progress', setProgressData);
+  }, [activeTab, fetchData]);
 
   if (loading) {
     return (
@@ -89,10 +91,13 @@ export default function AdminPage() {
       {/* Tab Navigation */}
       <div className="border-b border-selene-border bg-selene-bg/50 backdrop-blur-sm sticky top-[65px] z-40">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex gap-1 overflow-x-auto scrollbar-hide">
+          <div role="tablist" aria-label="Secciones de administración" className="flex gap-1 overflow-x-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}>
             {TABS.map(tab => (
               <button
                 key={tab.id}
+                role="tab"
+                aria-selected={activeTab === tab.id}
+                aria-controls={`panel-${tab.id}`}
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-4 py-3 text-sm font-body whitespace-nowrap transition-all border-b-2 ${
                   activeTab === tab.id
@@ -100,7 +105,7 @@ export default function AdminPage() {
                     : 'text-selene-white-dim border-transparent hover:text-selene-white hover:border-selene-border'
                 }`}
               >
-                <span className="mr-1.5">{tab.icon}</span>
+                <span className="mr-1.5" aria-hidden="true">{tab.icon}</span>
                 {tab.label}
               </button>
             ))}
@@ -109,13 +114,13 @@ export default function AdminPage() {
       </div>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-6 py-8">
-        {activeTab === 'dashboard' && <DashboardTab data={dashboardData} />}
-        {activeTab === 'users' && <UsersTab data={usersData} />}
-        {activeTab === 'courses' && <CoursesTab dashboardData={dashboardData} progressData={progressData} onLoadProgress={() => { if (!progressData) fetchData('/api/admin/progress', setProgressData); }} />}
-        {activeTab === 'payments' && <PaymentsTab data={paymentsData} />}
-        {activeTab === 'certificates' && <CertificatesTab data={certificatesData} />}
-        {activeTab === 'progress' && <ProgressTab data={progressData} />}
+      <div className="max-w-7xl mx-auto px-6 py-8" role="tabpanel" id={`panel-${activeTab}`} aria-labelledby={activeTab}>
+        {activeTab === 'dashboard' && <DashboardTab data={dashboardData} error={errors.dashboard} />}
+        {activeTab === 'users' && <UsersTab data={usersData} error={errors.users} />}
+        {activeTab === 'courses' && <CoursesTab dashboardData={dashboardData} progressData={progressData} error={errors.progress} />}
+        {activeTab === 'payments' && <PaymentsTab data={paymentsData} error={errors.payments} />}
+        {activeTab === 'certificates' && <CertificatesTab data={certificatesData} error={errors.certificates} />}
+        {activeTab === 'progress' && <ProgressTab data={progressData} error={errors.progress} />}
       </div>
     </div>
   );
@@ -124,11 +129,12 @@ export default function AdminPage() {
 // ═══════════════════════════════════════
 // DASHBOARD TAB
 // ═══════════════════════════════════════
-function DashboardTab({ data }) {
+function DashboardTab({ data, error }) {
+  if (error) return <TabError message={error} />;
   if (!data) return <TabLoader />;
 
   const { users, revenue, enrollments, certificates, lessons, registrationTrend } = data;
-  const maxTrend = Math.max(...registrationTrend.map(d => d.count), 1);
+  const maxTrend = Math.max(...(registrationTrend || []).map(d => d.count || 0), 1);
 
   return (
     <div className="space-y-8">
@@ -168,33 +174,35 @@ function DashboardTab({ data }) {
           <h3 className="font-display text-lg text-selene-white mb-4">Estado de usuarios</h3>
           <div className="space-y-3">
             <StatBar label="Onboarding completado" value={users.onboarded} total={users.total} color={COLORS.teal} />
-            <StatBar label="Con cursos inscritos" value={enrollments.total > 0 ? Object.keys(groupBy([], 'user_id')).length || enrollments.active : 0} total={users.total} color={COLORS.blue} />
+            <StatBar label="Con cursos inscritos" value={users.withCourses || 0} total={users.total} color={COLORS.blue} />
             <StatBar label="Registros este mes" value={users.registeredThisMonth} total={users.total} color={COLORS.purple} />
           </div>
         </Card>
       </div>
 
       {/* Registration trend */}
-      <Card className="p-6">
-        <h3 className="font-display text-lg text-selene-white mb-4">Nuevos registros (últimos 30 días)</h3>
-        <div className="flex items-end gap-[3px] h-24">
-          {registrationTrend.map((d, i) => (
-            <div key={d.date} className="flex-1 flex flex-col items-center group relative">
-              <div
-                className="w-full bg-selene-gold/70 rounded-t hover:bg-selene-gold transition-colors min-h-[2px]"
-                style={{ height: `${Math.max((d.count / maxTrend) * 100, 2)}%` }}
-              />
-              <div className="absolute bottom-full mb-2 hidden group-hover:block bg-selene-elevated border border-selene-border rounded px-2 py-1 text-[10px] text-selene-white whitespace-nowrap z-10">
-                {d.date}: {d.count} registros
+      {registrationTrend && registrationTrend.length > 0 && (
+        <Card className="p-6">
+          <h3 className="font-display text-lg text-selene-white mb-4">Nuevos registros (últimos 30 días)</h3>
+          <div className="flex items-end gap-[3px] h-24">
+            {registrationTrend.map(d => (
+              <div key={d.date} className="flex-1 flex flex-col items-center group relative">
+                <div
+                  className="w-full bg-selene-gold/70 rounded-t hover:bg-selene-gold transition-colors min-h-[2px]"
+                  style={{ height: `${Math.max((d.count / maxTrend) * 100, 2)}%` }}
+                />
+                <div className="absolute bottom-full mb-2 hidden group-hover:block bg-selene-elevated border border-selene-border rounded px-2 py-1 text-[10px] text-selene-white whitespace-nowrap z-10">
+                  {d.date}: {d.count} {d.count === 1 ? 'registro' : 'registros'}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-        <div className="flex justify-between text-[10px] text-selene-white-dim mt-2">
-          <span>{registrationTrend[0]?.date?.slice(5)}</span>
-          <span>{registrationTrend[registrationTrend.length - 1]?.date?.slice(5)}</span>
-        </div>
-      </Card>
+            ))}
+          </div>
+          <div className="flex justify-between text-[10px] text-selene-white-dim mt-2">
+            <span>{registrationTrend[0].date.slice(5)}</span>
+            <span>{registrationTrend[registrationTrend.length - 1].date.slice(5)}</span>
+          </div>
+        </Card>
+      )}
 
       {/* Revenue by course */}
       <Card className="p-6">
@@ -205,13 +213,13 @@ function DashboardTab({ data }) {
             const enr = enrollments.byCourse[course.id]?.total || 0;
             return (
               <div key={course.id} className="flex items-center gap-4">
-                <span className="text-xl w-8">{course.icon}</span>
+                <span className="text-xl w-8" aria-hidden="true">{course.icon}</span>
                 <div className="flex-1 min-w-0">
                   <div className="flex justify-between items-baseline">
                     <p className="text-sm text-selene-white truncate">{course.title}</p>
-                    <p className="text-sm font-display text-selene-gold ml-2">{formatCents(rev)}</p>
+                    <p className="text-sm font-display text-selene-gold ml-2 shrink-0">{formatCents(rev)}</p>
                   </div>
-                  <p className="text-[11px] text-selene-white-dim">{enr} inscripciones</p>
+                  <p className="text-[11px] text-selene-white-dim">{enr} {enr === 1 ? 'inscripción' : 'inscripciones'}</p>
                 </div>
               </div>
             );
@@ -225,10 +233,11 @@ function DashboardTab({ data }) {
 // ═══════════════════════════════════════
 // USERS TAB
 // ═══════════════════════════════════════
-function UsersTab({ data }) {
+function UsersTab({ data, error }) {
   const [search, setSearch] = useState('');
   const [selectedUser, setSelectedUser] = useState(null);
 
+  if (error) return <TabError message={error} />;
   if (!data) return <TabLoader />;
 
   const users = data.users || [];
@@ -252,18 +261,21 @@ function UsersTab({ data }) {
       </div>
 
       {/* Search */}
-      <input
-        type="text"
-        placeholder="Buscar por nombre, email o signo..."
-        value={search}
-        onChange={e => setSearch(e.target.value)}
-        className="w-full max-w-md px-4 py-3 bg-selene-elevated border border-selene-border rounded-xl text-selene-white font-body text-sm outline-none focus:border-selene-gold/40 transition placeholder:text-selene-white-dim/50"
-      />
+      <label className="block">
+        <span className="sr-only">Buscar usuarios</span>
+        <input
+          type="search"
+          placeholder="Buscar por nombre, email o signo..."
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          className="w-full max-w-md px-4 py-3 bg-selene-elevated border border-selene-border rounded-xl text-selene-white font-body text-sm outline-none focus:border-selene-gold/40 transition placeholder:text-selene-white-dim/50"
+        />
+      </label>
 
       {/* Table */}
       <Card>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm">
+          <table className="w-full text-sm" aria-label="Lista de usuarios">
             <thead>
               <tr className="border-b border-selene-border text-selene-white-dim text-left">
                 <th className="px-5 py-3.5 font-medium">Usuario</th>
@@ -281,6 +293,10 @@ function UsersTab({ data }) {
                   key={u.id}
                   className="border-b border-selene-border/50 hover:bg-selene-elevated/30 transition cursor-pointer"
                   onClick={() => setSelectedUser(u)}
+                  tabIndex={0}
+                  role="button"
+                  aria-label={`Ver detalle de ${u.name || u.email}`}
+                  onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedUser(u); } }}
                 >
                   <td className="px-5 py-3.5">
                     <div className="flex items-center gap-2.5">
@@ -374,7 +390,7 @@ function UserDetail({ user, onBack }) {
                   <div key={e.course_id} className="bg-selene-elevated rounded-xl p-4">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <span className="text-lg">{course?.icon || '📚'}</span>
+                        <span className="text-lg" aria-hidden="true">{course?.icon || '📚'}</span>
                         <p className="text-sm text-selene-white font-medium">{course?.title || e.course_id}</p>
                       </div>
                       <Badge color={e.status === 'completed' ? COLORS.success : e.status === 'active' ? COLORS.teal : COLORS.rose}>
@@ -400,9 +416,8 @@ function UserDetail({ user, onBack }) {
 // ═══════════════════════════════════════
 // COURSES TAB
 // ═══════════════════════════════════════
-function CoursesTab({ dashboardData, progressData, onLoadProgress }) {
-  useEffect(() => { onLoadProgress(); }, [onLoadProgress]);
-
+function CoursesTab({ dashboardData, progressData, error }) {
+  if (error) return <TabError message={error} />;
   if (!dashboardData) return <TabLoader />;
 
   const { enrollments, revenue } = dashboardData;
@@ -420,7 +435,7 @@ function CoursesTab({ dashboardData, progressData, onLoadProgress }) {
           <Card key={course.id} className="p-6">
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-center gap-3">
-                <span className="text-3xl">{course.icon}</span>
+                <span className="text-3xl" aria-hidden="true">{course.icon}</span>
                 <div>
                   <h3 className="font-display text-lg text-selene-white">{course.title}</h3>
                   <p className="text-xs text-selene-white-dim">{course.level} · {course.hours} · {course.lessons_count} lecciones</p>
@@ -436,12 +451,14 @@ function CoursesTab({ dashboardData, progressData, onLoadProgress }) {
               <MiniStat label="Ingresos" value={formatCents(rev)} />
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
-              <MiniStat label="Lecciones completadas" value={lessonStats.completed} />
-              <MiniStat label="Lecciones en progreso" value={lessonStats.inProgress} />
-              <MiniStat label="Intentos quiz" value={quizStats.attempts} />
-              <MiniStat label="Tasa aprobación" value={`${Math.round(quizStats.passRate * 100)}%`} />
-            </div>
+            {progressData && (
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
+                <MiniStat label="Lecciones completadas" value={lessonStats.completed} />
+                <MiniStat label="Lecciones en progreso" value={lessonStats.inProgress} />
+                <MiniStat label="Intentos quiz" value={quizStats.attempts} />
+                <MiniStat label="Tasa aprobación" value={`${Math.round(quizStats.passRate * 100)}%`} />
+              </div>
+            )}
 
             {/* Completion rate bar */}
             <div>
@@ -467,36 +484,44 @@ function CoursesTab({ dashboardData, progressData, onLoadProgress }) {
 // ═══════════════════════════════════════
 // PAYMENTS TAB
 // ═══════════════════════════════════════
-function PaymentsTab({ data }) {
+function PaymentsTab({ data, error }) {
   const [filter, setFilter] = useState('all');
 
+  if (error) return <TabError message={error} />;
   if (!data) return <TabLoader />;
 
   const payments = data.payments || [];
-  const filtered = filter === 'all' ? payments : payments.filter(p => p.status === filter);
+  const filtered = filter === 'all' ? payments : payments.filter(p => p.status === filter || (filter === 'completed' && p.status === 'succeeded'));
 
-  const totalRevenue = payments.filter(p => p.status === 'completed' || p.status === 'succeeded').reduce((s, p) => s + (p.amount || 0), 0);
-  const totalTransactions = payments.length;
+  const completedPayments = payments.filter(p => p.status === 'completed' || p.status === 'succeeded');
+  const totalRevenue = completedPayments.reduce((s, p) => s + (p.amount || 0), 0);
+  const totalTransactions = completedPayments.length;
 
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <StatCard label="Ingresos totales" value={formatCents(totalRevenue)} />
-        <StatCard label="Transacciones" value={totalTransactions} />
+        <StatCard label="Transacciones completadas" value={totalTransactions} />
         <StatCard label="Ticket medio" value={totalTransactions > 0 ? formatCents(Math.round(totalRevenue / totalTransactions)) : '—'} />
       </div>
 
       {/* Filter */}
-      <div className="flex gap-2">
-        {['all', 'completed', 'succeeded', 'pending', 'failed'].map(f => (
+      <div className="flex gap-2 flex-wrap" role="group" aria-label="Filtrar pagos por estado">
+        {[
+          { key: 'all', label: 'Todos' },
+          { key: 'completed', label: 'Completados' },
+          { key: 'pending', label: 'Pendientes' },
+          { key: 'failed', label: 'Fallidos' },
+        ].map(f => (
           <button
-            key={f}
-            onClick={() => setFilter(f)}
+            key={f.key}
+            onClick={() => setFilter(f.key)}
+            aria-pressed={filter === f.key}
             className={`px-3 py-1.5 text-xs rounded-lg transition ${
-              filter === f ? 'bg-selene-gold text-selene-bg' : 'bg-selene-elevated text-selene-white-dim hover:text-selene-white'
+              filter === f.key ? 'bg-selene-gold text-selene-bg' : 'bg-selene-elevated text-selene-white-dim hover:text-selene-white'
             }`}
           >
-            {f === 'all' ? 'Todos' : f === 'completed' || f === 'succeeded' ? 'Completado' : f === 'pending' ? 'Pendiente' : 'Fallido'}
+            {f.label}
           </button>
         ))}
       </div>
@@ -504,7 +529,7 @@ function PaymentsTab({ data }) {
       {/* Table */}
       <Card>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm">
+          <table className="w-full text-sm" aria-label="Historial de pagos">
             <thead>
               <tr className="border-b border-selene-border text-selene-white-dim text-left">
                 <th className="px-5 py-3.5 font-medium">Fecha</th>
@@ -531,7 +556,7 @@ function PaymentsTab({ data }) {
               {filtered.length === 0 && (
                 <tr>
                   <td colSpan={5} className="px-5 py-10 text-center text-selene-white-dim">
-                    No hay pagos registrados
+                    {filter === 'all' ? 'No hay pagos registrados' : 'No hay pagos con este estado'}
                   </td>
                 </tr>
               )}
@@ -539,6 +564,7 @@ function PaymentsTab({ data }) {
           </table>
         </div>
       </Card>
+      <p className="text-xs text-selene-white-dim">Mostrando {filtered.length} de {payments.length} pagos</p>
     </div>
   );
 }
@@ -546,7 +572,8 @@ function PaymentsTab({ data }) {
 // ═══════════════════════════════════════
 // CERTIFICATES TAB
 // ═══════════════════════════════════════
-function CertificatesTab({ data }) {
+function CertificatesTab({ data, error }) {
+  if (error) return <TabError message={error} />;
   if (!data) return <TabLoader />;
 
   const certs = data.certificates || [];
@@ -572,9 +599,9 @@ function CertificatesTab({ data }) {
         return (
           <Card key={courseId} className="p-5">
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-lg">{course?.icon || '📚'}</span>
+              <span className="text-lg" aria-hidden="true">{course?.icon || '📚'}</span>
               <h3 className="font-display text-base text-selene-white">{course?.title || courseId}</h3>
-              <span className="text-xs text-selene-white-dim ml-auto">{courseCerts.length} certificados</span>
+              <span className="text-xs text-selene-white-dim ml-auto">{courseCerts.length} {courseCerts.length === 1 ? 'certificado' : 'certificados'}</span>
             </div>
             <div className="space-y-2">
               {courseCerts.map(c => (
@@ -606,10 +633,16 @@ function CertificatesTab({ data }) {
 // ═══════════════════════════════════════
 // PROGRESS TAB
 // ═══════════════════════════════════════
-function ProgressTab({ data }) {
+function ProgressTab({ data, error }) {
+  if (error) return <TabError message={error} />;
   if (!data) return <TabLoader />;
 
   const { lessons, quizzes } = data;
+  const totalPassed = Object.values(quizzes.byCourse).reduce((s, q) => s + q.passed, 0);
+  const totalScore = Object.values(quizzes.byCourse).reduce((s, q) => s + q.totalScore, 0);
+  const globalAvg = quizzes.totalAttempts > 0 ? Math.round((totalScore / quizzes.totalAttempts) * 100) : 0;
+
+  const coursesWithData = COURSES.filter(c => lessons.byCourse[c.id] || quizzes.byCourse[c.id]);
 
   return (
     <div className="space-y-8">
@@ -617,32 +650,27 @@ function ProgressTab({ data }) {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         <StatCard label="Progreso registrado" value={lessons.total} />
         <StatCard label="Intentos de quiz" value={quizzes.totalAttempts} />
-        <StatCard label="Quizzes aprobados" value={Object.values(quizzes.byCourse).reduce((s, q) => s + q.passed, 0)} />
-        <StatCard label="Nota media global" value={
-          quizzes.totalAttempts > 0
-            ? `${Math.round(Object.values(quizzes.byCourse).reduce((s, q) => s + q.totalScore, 0) / quizzes.totalAttempts * 100)}%`
-            : '—'
-        } />
+        <StatCard label="Quizzes aprobados" value={totalPassed} />
+        <StatCard label="Nota media global" value={quizzes.totalAttempts > 0 ? `${globalAvg}%` : '—'} />
       </div>
 
       {/* Per course breakdown */}
-      {COURSES.map(course => {
-        const ls = lessons.byCourse[course.id];
+      {coursesWithData.map(course => {
+        const ls = lessons.byCourse[course.id] || { completed: 0, inProgress: 0, totalTime: 0 };
         const qs = quizzes.byCourse[course.id];
-        if (!ls && !qs) return null;
 
         return (
           <Card key={course.id} className="p-6">
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-xl">{course.icon}</span>
+              <span className="text-xl" aria-hidden="true">{course.icon}</span>
               <h3 className="font-display text-base text-selene-white">{course.title}</h3>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
-              <MiniStat label="Lecciones completadas" value={ls?.completed || 0} />
-              <MiniStat label="En progreso" value={ls?.inProgress || 0} />
-              <MiniStat label="Tiempo total" value={formatTime(ls?.totalTime || 0)} />
-              <MiniStat label="Tiempo medio/lección" value={ls?.completed > 0 ? formatTime(Math.round((ls.totalTime || 0) / ls.completed)) : '—'} />
+              <MiniStat label="Lecciones completadas" value={ls.completed} />
+              <MiniStat label="En progreso" value={ls.inProgress} />
+              <MiniStat label="Tiempo total" value={formatTime(ls.totalTime)} />
+              <MiniStat label="Tiempo medio/lección" value={ls.completed > 0 ? formatTime(Math.round(ls.totalTime / ls.completed)) : '—'} />
             </div>
 
             {qs && (
@@ -654,18 +682,18 @@ function ProgressTab({ data }) {
               </div>
             )}
 
-            {/* Per-quiz breakdown for this course */}
-            {course.lessons?.filter(l => l.type === 'quiz' || l.type === 'exam').map(lesson => {
+            {/* Per-quiz breakdown */}
+            {(course.lessons || []).filter(l => l.type === 'quiz' || l.type === 'exam').map(lesson => {
               const lq = quizzes.byLesson[lesson.id];
               if (!lq) return null;
               return (
-                <div key={lesson.id} className="mt-3 bg-selene-elevated rounded-lg px-4 py-2.5 flex items-center justify-between text-sm">
+                <div key={lesson.id} className="mt-3 bg-selene-elevated rounded-lg px-4 py-2.5 flex flex-col sm:flex-row sm:items-center justify-between text-sm gap-2">
                   <div>
                     <p className="text-selene-white">{lesson.title}</p>
                     <p className="text-[10px] text-selene-white-dim">{lesson.type === 'exam' ? 'Examen final' : 'Quiz'}</p>
                   </div>
                   <div className="flex gap-4 text-xs text-selene-white-dim">
-                    <span>{lq.attempts} intentos</span>
+                    <span>{lq.attempts} {lq.attempts === 1 ? 'intento' : 'intentos'}</span>
                     <span>{Math.round(lq.passRate * 100)}% aprobados</span>
                     <span className="text-selene-gold">{Math.round(lq.avgScore * 100)}% nota media</span>
                   </div>
@@ -676,7 +704,7 @@ function ProgressTab({ data }) {
         );
       })}
 
-      {Object.keys(lessons.byCourse).length === 0 && Object.keys(quizzes.byCourse).length === 0 && (
+      {coursesWithData.length === 0 && (
         <Card className="p-10 text-center">
           <p className="text-selene-white-dim">Aún no hay datos de progreso registrados.</p>
         </Card>
@@ -739,30 +767,33 @@ function DetailRow({ label, value, highlight }) {
 }
 
 function PaymentStatus({ status }) {
-  const styles = {
-    completed: 'bg-selene-success/10 text-selene-success',
-    succeeded: 'bg-selene-success/10 text-selene-success',
-    pending: 'bg-selene-gold/10 text-selene-gold',
-    failed: 'bg-selene-rose/10 text-selene-rose',
+  const config = {
+    completed: { cls: 'bg-selene-success/10 text-selene-success', label: 'Completado' },
+    succeeded: { cls: 'bg-selene-success/10 text-selene-success', label: 'Completado' },
+    pending: { cls: 'bg-selene-gold/10 text-selene-gold', label: 'Pendiente' },
+    failed: { cls: 'bg-selene-rose/10 text-selene-rose', label: 'Fallido' },
   };
-  const labels = {
-    completed: 'Completado',
-    succeeded: 'Completado',
-    pending: 'Pendiente',
-    failed: 'Fallido',
-  };
-  return (
-    <span className={`text-[11px] px-2 py-0.5 rounded ${styles[status] || 'bg-selene-elevated text-selene-white-dim'}`}>
-      {labels[status] || status}
-    </span>
-  );
+  const c = config[status] || { cls: 'bg-selene-elevated text-selene-white-dim', label: status || 'Desconocido' };
+  return <span className={`text-[11px] px-2 py-0.5 rounded ${c.cls}`}>{c.label}</span>;
 }
 
 function TabLoader() {
   return (
-    <div className="flex flex-col items-center justify-center py-20">
+    <div className="flex flex-col items-center justify-center py-20" role="status" aria-label="Cargando">
       <div className="w-10 h-10 border-2 border-selene-border border-t-selene-gold rounded-full animate-spin" />
       <p className="text-sm text-selene-white-dim mt-4">Cargando datos...</p>
+    </div>
+  );
+}
+
+function TabError({ message }) {
+  return (
+    <div className="flex flex-col items-center justify-center py-20" role="alert">
+      <div className="w-12 h-12 rounded-full bg-selene-rose/10 flex items-center justify-center mb-4">
+        <span className="text-selene-rose text-xl">!</span>
+      </div>
+      <p className="text-selene-rose font-medium mb-1">Error al cargar datos</p>
+      <p className="text-sm text-selene-white-dim">{message}</p>
     </div>
   );
 }
@@ -776,12 +807,12 @@ function formatDate(iso) {
 }
 
 function formatCents(cents) {
-  if (typeof cents !== 'number') return '—';
+  if (typeof cents !== 'number' || isNaN(cents)) return '—';
   return new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(cents / 100);
 }
 
 function formatTime(seconds) {
-  if (!seconds || seconds === 0) return '0m';
+  if (!seconds || seconds <= 0) return '0m';
   const h = Math.floor(seconds / 3600);
   const m = Math.floor((seconds % 3600) / 60);
   if (h > 0) return `${h}h ${m}m`;
@@ -790,16 +821,5 @@ function formatTime(seconds) {
 
 function isToday(iso) {
   if (!iso) return false;
-  const d = new Date(iso);
-  const now = new Date();
-  return d.getFullYear() === now.getFullYear() && d.getMonth() === now.getMonth() && d.getDate() === now.getDate();
-}
-
-function groupBy(arr, key) {
-  return (arr || []).reduce((acc, item) => {
-    const k = item[key];
-    if (!acc[k]) acc[k] = [];
-    acc[k].push(item);
-    return acc;
-  }, {});
+  return iso.slice(0, 10) === new Date().toISOString().slice(0, 10);
 }

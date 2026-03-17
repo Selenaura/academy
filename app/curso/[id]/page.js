@@ -175,7 +175,8 @@ export default function CoursePage({ params }) {
         // Generate certificate on exam pass
         if (activeLesson.type === 'exam') {
           const year = new Date().getFullYear();
-          const rand = Math.random().toString(36).substring(2, 6).toUpperCase();
+          const rand = Array.from(crypto.getRandomValues(new Uint8Array(5)))
+            .map(b => b.toString(36).toUpperCase().slice(-1)).join('');
           const certCode = `SEL-${year}-${rand}`;
           await supabase.from('certificates').upsert({
             user_id: user.id,
@@ -259,14 +260,14 @@ export default function CoursePage({ params }) {
               <Card className={`p-6 ${quizPassed ? 'border-selene-gold/25 bg-gradient-to-b from-selene-card to-selene-gold/5' : 'border-selene-rose/25'}`}>
                 <div className="text-4xl mb-3">{quizPassed ? '🎓' : '📝'}</div>
                 <h3 className={`font-display text-xl mb-2 ${quizPassed ? 'text-selene-gold' : 'text-selene-rose'}`}>
-                  {quizPassed ? '¡Evaluación superada!' : 'No has alcanzado el 70%'}
+                  {quizPassed ? '¡Evaluación superada!' : 'No se alcanzó el 70% necesario'}
                 </h3>
                 <p className="text-sm text-selene-white-dim mb-1">
                   Resultado: {quizScore}/{quizQuestions.length} correctas
                 </p>
                 {quizPassed ? (
                   <>
-                    <p className="text-[13px] text-selene-success">Has desbloqueado el certificado</p>
+                    <p className="text-[13px] text-selene-success">Certificado desbloqueado</p>
                     {activeLesson.type === 'exam' && (
                       <button
                         onClick={() => router.push(`/curso/${course.id}/certificado`)}
@@ -343,7 +344,7 @@ export default function CoursePage({ params }) {
                 disabled={markingComplete}
                 className="w-full mb-5 bg-selene-gold text-selene-bg font-semibold py-3 rounded-xl btn-gold-hover disabled:opacity-50"
               >
-                {markingComplete ? 'Guardando...' : 'Marcar como completada'}
+                {markingComplete ? 'Guardando...' : 'Completar lección'}
               </button>
             ) : (
               <div className="flex items-center gap-2 mb-5 text-selene-success text-sm">
