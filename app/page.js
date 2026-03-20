@@ -4,10 +4,10 @@ import { Navbar, Footer, GoldDivider, Card } from '@/components/ui';
 
 export default function LandingPage() {
   const stats = [
-    { value: '10', label: 'Cursos' },
+    { value: String(COURSES.length), label: 'Cursos' },
     { value: '200+', label: 'Lecciones' },
     { value: '30+', label: 'Estudios citados' },
-    { value: '6', label: 'Certificaciones' },
+    { value: '7', label: 'Certificaciones' },
   ];
 
   const features = [
@@ -95,7 +95,7 @@ export default function LandingPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {COURSES.slice(0, 4).map(course => (
+          {COURSES.slice(0, 6).map(course => (
             <Card key={course.id} hover className="p-5">
               <div className="flex justify-between items-start mb-3">
                 <span className="text-[28px]">{course.icon}</span>
@@ -127,7 +127,7 @@ export default function LandingPage() {
             href="/auth?mode=register"
             className="inline-flex items-center gap-2 text-sm font-semibold text-selene-gold px-8 py-3.5 rounded-xl border border-selene-gold/30 hover:bg-selene-gold/5 transition no-underline"
           >
-            Ver los 10 cursos completos →
+            Ver los {COURSES.length} cursos completos →
           </Link>
         </div>
       </section>
