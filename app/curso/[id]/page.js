@@ -311,7 +311,17 @@ export default function CoursePage({ params }) {
         <div className="max-w-[720px] mx-auto">
           {/* Video area */}
           {activeLesson.videoId ? (
-            <YouTubeEmbed videoId={activeLesson.videoId} title={activeLesson.title} />
+            <div className="aspect-video">
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${activeLesson.videoId}`}
+                title={activeLesson.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="border-0"
+              />
+            </div>
           ) : (
             <div className="aspect-video bg-gradient-to-br from-selene-card to-selene-elevated flex items-center justify-center relative border-b border-selene-border">
               <div className="absolute inset-0 star-pattern" />
