@@ -2,15 +2,6 @@ import Link from 'next/link';
 import { COURSES } from '@/lib/constants';
 import { Navbar, Footer, GoldDivider, Card } from '@/components/ui';
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Selene Academia',
-  url: 'https://academia.selenaura.com',
-  description: 'Cursos de astrología, tarot, meditación y autoconocimiento respaldados por estudios peer-reviewed.',
-  publisher: { '@type': 'Organization', name: 'SelenaUra' },
-};
-
 export default function LandingPage() {
   const stats = [
     { value: '10', label: 'Cursos' },
@@ -27,8 +18,7 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-selene-bg animate-fade-in-up">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+    <div className="min-h-screen bg-selene-bg">
       <Navbar />
 
       {/* ── Hero ── */}
@@ -52,23 +42,23 @@ export default function LandingPage() {
             Tu carta natal guía tu camino. Estudios citados en cada lección.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+          <div className="flex gap-4 justify-center flex-wrap">
             <Link
               href="/auth?mode=register"
-              className="inline-flex items-center justify-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-8 sm:px-10 py-4 rounded-xl btn-gold-hover no-underline w-full sm:w-auto"
+              className="inline-flex items-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-10 py-4 rounded-xl hover:brightness-110 transition no-underline"
             >
-              Empieza gratis
+              Empieza gratis — Curso introductorio
             </Link>
             <Link
               href="/auth?mode=login"
-              className="inline-flex items-center justify-center text-[15px] font-semibold text-selene-gold px-8 sm:px-10 py-4 rounded-xl border border-selene-gold/30 hover:bg-selene-gold/5 transition no-underline w-full sm:w-auto"
+              className="inline-flex items-center text-[15px] font-semibold text-selene-gold px-10 py-4 rounded-xl border border-selene-gold/30 hover:bg-selene-gold/5 transition no-underline"
             >
               Ver catálogo
             </Link>
           </div>
 
           {/* Stats */}
-          <div className="flex justify-center gap-6 sm:gap-10 mt-16 flex-wrap">
+          <div className="flex justify-center gap-10 mt-16 flex-wrap">
             {stats.map((s, i) => (
               <div key={i} className="text-center">
                 <div className="font-display text-[32px] text-selene-gold font-semibold">{s.value}</div>
@@ -149,7 +139,7 @@ export default function LandingPage() {
           <p className="font-display text-lg text-selene-white italic leading-relaxed mb-4">
             &ldquo;No es otra escuela de astrología. Es la primera que te explica POR QUÉ funciona lo que funciona, con papers de verdad.&rdquo;
           </p>
-          <div className="text-sm text-selene-white-dim">— Lo que queremos que diga nuestra comunidad</div>
+          <div className="text-sm text-selene-white-dim">— Lo que queremos que digan nuestros alumnos</div>
         </div>
       </section>
 
@@ -164,7 +154,7 @@ export default function LandingPage() {
         </p>
         <Link
           href="/auth?mode=register"
-          className="inline-flex items-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-10 py-4 rounded-xl btn-gold-hover no-underline"
+          className="inline-flex items-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-10 py-4 rounded-xl hover:brightness-110 transition no-underline"
         >
           Crear mi cuenta gratis
         </Link>

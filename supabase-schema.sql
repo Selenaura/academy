@@ -8,9 +8,6 @@
 CREATE TABLE IF NOT EXISTS profiles (
   id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
   name TEXT,
-  surname TEXT,
-  document_type TEXT CHECK (document_type IN ('dni', 'nie', 'pasaporte')),
-  document_number TEXT,
   birth_date DATE,
   birth_time TIME,
   birth_city TEXT,

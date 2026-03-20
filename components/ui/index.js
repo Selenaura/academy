@@ -58,7 +58,7 @@ export function StarIcon({ size = 16, className = 'text-selene-gold' }) {
 // ── Navbar ──
 export function Navbar({ showAuth = true, showDashboardNav = false }) {
   return (
-    <nav aria-label="Navegación principal" className="sticky top-0 z-50 px-6 py-4 flex justify-between items-center bg-selene-bg/90 backdrop-blur-xl border-b border-selene-border">
+    <nav className="sticky top-0 z-50 px-6 py-4 flex justify-between items-center bg-selene-bg/90 backdrop-blur-xl border-b border-selene-border">
       <Link href="/" className="flex items-center gap-2.5 no-underline">
         <MoonIcon size={24} />
         <span className="font-display text-[22px] font-semibold text-selene-gold tracking-wider">
@@ -71,17 +71,17 @@ export function Navbar({ showAuth = true, showDashboardNav = false }) {
 
       {showDashboardNav && (
         <div className="flex gap-5 items-center">
-          <Link href="/dashboard" className="text-selene-gold" aria-label="Dashboard"><GridIcon size={20} className="text-selene-gold" /></Link>
-          <Link href="/perfil" aria-label="Mi perfil"><UserIcon size={20} /></Link>
+          <Link href="/dashboard" className="text-selene-gold"><GridIcon size={20} className="text-selene-gold" /></Link>
+          <Link href="/perfil"><UserIcon size={20} /></Link>
         </div>
       )}
 
       {showAuth && !showDashboardNav && (
-        <div className="flex gap-2 sm:gap-3 items-center">
-          <Link href="/auth?mode=login" className="text-xs sm:text-sm text-selene-white-dim hover:text-selene-white px-2 sm:px-4 py-2 no-underline">
+        <div className="flex gap-3 items-center">
+          <Link href="/auth?mode=login" className="text-sm text-selene-white-dim hover:text-selene-white px-4 py-2 no-underline">
             Iniciar sesión
           </Link>
-          <Link href="/auth?mode=register" className="text-xs sm:text-sm font-semibold bg-selene-gold text-selene-bg px-3 sm:px-5 py-2.5 rounded-lg hover:brightness-110 no-underline whitespace-nowrap">
+          <Link href="/auth?mode=register" className="text-sm font-semibold bg-selene-gold text-selene-bg px-5 py-2.5 rounded-lg hover:brightness-110 no-underline">
             Empezar gratis
           </Link>
         </div>
@@ -118,7 +118,7 @@ export function Badge({ children, color = '#C9A84C', className = '' }) {
 export function Card({ children, className = '', hover = false, onClick, ...props }) {
   return (
     <div
-      className={`bg-selene-card rounded-2xl border border-selene-border overflow-hidden transition-all duration-300 ${hover ? 'hover:border-selene-gold/30 hover:shadow-[0_0_20px_rgba(201,168,76,0.06)] hover:-translate-y-0.5 cursor-pointer' : ''} ${className}`}
+      className={`bg-selene-card rounded-2xl border border-selene-border overflow-hidden ${hover ? 'hover:border-selene-gold/30 transition-colors cursor-pointer' : ''} ${className}`}
       onClick={onClick}
       {...props}
     >
@@ -148,22 +148,6 @@ export function Spinner({ text = 'Cargando...' }) {
     <div className="min-h-screen bg-selene-bg flex flex-col items-center justify-center">
       <div className="w-14 h-14 border-2 border-selene-border border-t-selene-gold rounded-full animate-spin" />
       <p className="font-display text-lg text-selene-gold mt-6">{text}</p>
-    </div>
-  );
-}
-
-// ── YouTube Embed ──
-export function YouTubeEmbed({ videoId, title = '' }) {
-  if (!videoId) return null;
-  return (
-    <div className="aspect-video w-full bg-selene-card rounded-xl overflow-hidden border border-selene-border">
-      <iframe
-        src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`}
-        title={title}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className="w-full h-full"
-      />
     </div>
   );
 }

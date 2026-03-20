@@ -3,9 +3,10 @@ import { createClient } from '@/lib/supabase-server';
 import { NextResponse } from 'next/server';
 import { COURSES } from '@/lib/constants';
 
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
 export async function POST(request) {
   try {
-    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
     const supabase = createClient();
     const { data: { user } } = await supabase.auth.getUser();
 
