@@ -1,12 +1,24 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase-browser';
 import { MoonIcon } from '@/components/ui';
 
 export default function AuthPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-selene-bg flex items-center justify-center">
+        <div className="text-selene-gold text-lg">Cargando...</div>
+      </div>
+    }>
+      <AuthContent />
+    </Suspense>
+  );
+}
+
+function AuthContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [tab, setTab] = useState(searchParams.get('mode') || 'register');
