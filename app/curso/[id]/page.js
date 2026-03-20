@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase-browser';
 import { COURSES, XP_REWARDS, QUIZ_QUESTIONS } from '@/lib/constants';
-import { Card, ProgressBar, Badge, Spinner, YouTubeEmbed, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
+import { Card, ProgressBar, Badge, Spinner, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
 
 export default function CoursePage({ params }) {
   const router = useRouter();
