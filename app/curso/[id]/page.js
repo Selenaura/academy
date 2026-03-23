@@ -293,8 +293,8 @@ export default function CoursePage({ params }) {
     );
   }
 
-  // ── Video Player View ──
-  if (activeLesson && activeLesson.type === 'video') {
+  // ── Lesson View ──
+  if (activeLesson && (activeLesson.type === 'lesson' || activeLesson.type === 'video')) {
     const isLessonComplete = completedLessons.has(activeLesson.id);
     return (
       <div className="min-h-screen bg-selene-bg">
@@ -512,7 +512,7 @@ export default function CoursePage({ params }) {
                     <div className="flex-1 min-w-0">
                       <div className="text-sm text-selene-white font-medium mb-0.5 truncate">{lesson.title}</div>
                       <div className="text-[11px] text-selene-white-dim">
-                        {lesson.type === 'quiz' ? 'Quiz' : lesson.type === 'exam' ? 'Evaluación' : 'Vídeo'} · {lesson.duration}
+                        {lesson.type === 'quiz' ? 'Quiz' : lesson.type === 'exam' ? 'Evaluación' : 'Lección'} · {lesson.duration}
                       </div>
                     </div>
                     <ArrowIcon size={14} className="text-selene-white-dim shrink-0" />

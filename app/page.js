@@ -14,7 +14,7 @@ export default function LandingPage() {
     { icon: '🔬', title: 'Base científica', desc: 'Cada curso cita estudios peer-reviewed. HeartMath, cronobiología, neuroplasticidad.' },
     { icon: '🎓', title: 'Certificaciones', desc: 'Completa cursos, supera evaluaciones y descarga tu certificado verificable.' },
     { icon: '🌙', title: 'Personalizado', desc: 'Tu carta natal guía tu ruta formativa. No hay dos caminos iguales.' },
-    { icon: '📱', title: 'A tu ritmo', desc: 'Vídeos cortos, quizzes interactivos, acceso 24/7 desde cualquier dispositivo.' },
+    { icon: '📱', title: 'A tu ritmo', desc: 'Lecciones interactivas, quizzes, PDFs descargables, acceso 24/7 desde cualquier dispositivo.' },
   ];
 
   return (
