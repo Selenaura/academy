@@ -50,7 +50,7 @@ export default function LandingPage() {
               Empieza gratis — Curso introductorio
             </Link>
             <Link
-              href="/auth?mode=login"
+              href="/catalogo"
               className="inline-flex items-center text-[15px] font-semibold text-selene-gold px-10 py-4 rounded-xl border border-selene-gold/30 hover:bg-selene-gold/5 transition no-underline"
             >
               Ver catálogo
@@ -96,35 +96,37 @@ export default function LandingPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {COURSES.slice(0, 6).map(course => (
-            <Card key={course.id} hover className="p-5">
-              <div className="flex justify-between items-start mb-3">
-                <span className="text-[28px]">{course.icon}</span>
-                <span
-                  className="text-[11px] font-bold px-2.5 py-0.5 rounded-md"
-                  style={{
-                    color: course.price === 0 ? '#5BB88F' : '#C9A84C',
-                    background: course.price === 0 ? 'rgba(91,184,143,0.1)' : 'rgba(201,168,76,0.1)',
-                  }}
-                >
-                  {course.price_label}
-                </span>
-              </div>
-              <div className="text-[15px] font-semibold text-selene-white mb-1 leading-tight">{course.title}</div>
-              <div className="text-xs text-selene-white-dim mb-3 leading-relaxed">{course.subtitle}</div>
-              <div className="flex gap-3 text-[11px] text-selene-white-dim">
-                <span>{course.level}</span>
-                <span>·</span>
-                <span>{course.hours}</span>
-                <span>·</span>
-                <span>{course.modules} módulos</span>
-              </div>
-            </Card>
+            <Link key={course.id} href={`/catalogo/${course.id}`} className="no-underline">
+              <Card hover className="p-5 h-full">
+                <div className="flex justify-between items-start mb-3">
+                  <span className="text-[28px]">{course.icon}</span>
+                  <span
+                    className="text-[11px] font-bold px-2.5 py-0.5 rounded-md"
+                    style={{
+                      color: course.price === 0 ? '#5BB88F' : '#C9A84C',
+                      background: course.price === 0 ? 'rgba(91,184,143,0.1)' : 'rgba(201,168,76,0.1)',
+                    }}
+                  >
+                    {course.price_label}
+                  </span>
+                </div>
+                <div className="text-[15px] font-semibold text-selene-white mb-1 leading-tight">{course.title}</div>
+                <div className="text-xs text-selene-white-dim mb-3 leading-relaxed">{course.subtitle}</div>
+                <div className="flex gap-3 text-[11px] text-selene-white-dim">
+                  <span>{course.level}</span>
+                  <span>·</span>
+                  <span>{course.hours}</span>
+                  <span>·</span>
+                  <span>{course.modules} módulos</span>
+                </div>
+              </Card>
+            </Link>
           ))}
         </div>
 
         <div className="text-center mt-8">
           <Link
-            href="/auth?mode=register"
+            href="/catalogo"
             className="inline-flex items-center gap-2 text-sm font-semibold text-selene-gold px-8 py-3.5 rounded-xl border border-selene-gold/30 hover:bg-selene-gold/5 transition no-underline"
           >
             Ver los {COURSES.length} cursos completos →
