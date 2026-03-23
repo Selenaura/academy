@@ -1,55 +1,216 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { createClient } from '@/lib/supabase-browser';
-import { COURSES, XP_REWARDS, QUIZ_QUESTIONS } from '@/lib/constants';
-import { Card, ProgressBar, Badge, Spinner, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
+import { COURSES } from '@/lib/constants';
+import { Card, ProgressBar, Badge, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
+
+// ── Chevron Icons for slide navigation ──
+function ChevronLeftIcon({ size = 20, className = '' }) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="15,18 9,12 15,6"/></svg>;
+}
+function ChevronRightIcon({ size = 20, className = '' }) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="9,6 15,12 9,18"/></svg>;
+}
+function BookOpenIcon({ size = 16, className = '' }) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>;
+}
+
+// ── Slide Renderer ──
+function SlideViewer({ slides }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  if (!slides || slides.length === 0) return null;
+
+  const slide = slides[currentSlide];
+  const total = slides.length;
+
+  function goTo(idx) {
+    if (idx >= 0 && idx < total) setCurrentSlide(idx);
+  }
+
+  function renderSlide(s) {
+    switch (s.type) {
+      case 'title':
+        return (
+          <div className="flex flex-col items-center justify-center text-center min-h-[260px] px-6">
+            <h3 className="font-display text-2xl md:text-[28px] font-normal text-selene-white leading-tight mb-3">{s.title}</h3>
+            {s.subtitle && <p className="text-sm text-selene-white-dim">{s.subtitle}</p>}
+          </div>
+        );
+
+      case 'content':
+        return (
+          <div className="flex flex-col justify-center min-h-[260px] px-6 py-5">
+            <h4 className="font-display text-lg text-selene-gold mb-4">{s.title}</h4>
+            <p className="text-[14px] text-selene-white-dim leading-relaxed whitespace-pre-line">{s.body}</p>
+          </div>
+        );
+
+      case 'quote':
+        return (
+          <div className="flex flex-col items-center justify-center text-center min-h-[260px] px-8 py-5">
+            <div className="text-3xl text-selene-gold/40 mb-3">"</div>
+            <p className="text-[15px] text-selene-white italic leading-relaxed mb-4 max-w-[520px]">{s.text}</p>
+            {s.source && <p className="text-[11px] text-selene-white-dim">{s.source}</p>}
+          </div>
+        );
+
+      case 'reflection':
+        return (
+          <div className="flex flex-col items-center justify-center text-center min-h-[260px] px-8 py-5">
+            <div className="w-12 h-12 rounded-full bg-selene-gold/10 border border-selene-gold/20 flex items-center justify-center mb-4">
+              <span className="text-xl">~</span>
+            </div>
+            <p className="text-xs font-semibold text-selene-gold tracking-wide uppercase mb-3">Pausa y reflexiona</p>
+            <p className="text-[15px] text-selene-white leading-relaxed max-w-[520px]">{s.question}</p>
+          </div>
+        );
+
+      case 'summary':
+        return (
+          <div className="flex flex-col justify-center min-h-[260px] px-6 py-5">
+            <h4 className="font-display text-lg text-selene-gold mb-4">Resumen</h4>
+            <ul className="space-y-2.5">
+              {(s.points || []).map((pt, i) => (
+                <li key={i} className="flex gap-2.5 text-[14px] text-selene-white-dim leading-relaxed">
+                  <span className="text-selene-gold shrink-0 mt-0.5">*</span>
+                  <span>{pt}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+
+      case 'next':
+        return (
+          <div className="flex flex-col items-center justify-center text-center min-h-[260px] px-8 py-5">
+            <div className="text-2xl mb-3">--{'>'}</div>
+            <p className="text-xs font-semibold text-selene-white-dim tracking-wide uppercase mb-3">Siguiente leccion</p>
+            <p className="text-[14px] text-selene-white leading-relaxed max-w-[520px]">{s.text}</p>
+          </div>
+        );
+
+      default:
+        return (
+          <div className="flex items-center justify-center min-h-[260px] px-6">
+            <p className="text-[14px] text-selene-white-dim">{JSON.stringify(s)}</p>
+          </div>
+        );
+    }
+  }
+
+  return (
+    <Card className="overflow-hidden">
+      {/* Slide content */}
+      <div className="bg-gradient-to-br from-selene-card to-selene-elevated relative">
+        {renderSlide(slide)}
+      </div>
+
+      {/* Controls */}
+      <div className="flex items-center justify-between px-4 py-3 border-t border-selene-border bg-selene-card">
+        <button
+          onClick={() => goTo(currentSlide - 1)}
+          disabled={currentSlide === 0}
+          className="w-9 h-9 rounded-full flex items-center justify-center hover:bg-selene-elevated transition disabled:opacity-20"
+        >
+          <ChevronLeftIcon size={18} className="text-selene-white-dim" />
+        </button>
+
+        <span className="text-[12px] text-selene-white-dim tabular-nums">
+          {currentSlide + 1} / {total}
+        </span>
+
+        <button
+          onClick={() => goTo(currentSlide + 1)}
+          disabled={currentSlide === total - 1}
+          className="w-9 h-9 rounded-full flex items-center justify-center hover:bg-selene-elevated transition disabled:opacity-20"
+        >
+          <ChevronRightIcon size={18} className="text-selene-white-dim" />
+        </button>
+      </div>
+
+      {/* Dots */}
+      <div className="flex justify-center gap-1 pb-3 bg-selene-card">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrentSlide(i)}
+            className={`w-1.5 h-1.5 rounded-full transition ${i === currentSlide ? 'bg-selene-gold' : 'bg-selene-white/15 hover:bg-selene-white/30'}`}
+          />
+        ))}
+      </div>
+    </Card>
+  );
+}
 
 export default function CoursePage({ params }) {
   const router = useRouter();
-  const supabase = createClient();
   const course = COURSES.find(c => c.id === params.id);
-
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [isEnrolled, setIsEnrolled] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [completedLessons, setCompletedLessons] = useState(new Set());
-  const [enrolling, setEnrolling] = useState(false);
-
   const [activeLesson, setActiveLesson] = useState(null);
+  const [lessonData, setLessonData] = useState(null);
+  const [lessonLoading, setLessonLoading] = useState(false);
   const [quizAnswers, setQuizAnswers] = useState({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
-  const [markingComplete, setMarkingComplete] = useState(false);
+  const [enrolling, setEnrolling] = useState(false);
 
+  // Fetch lesson JSON when a lesson is selected
   useEffect(() => {
-    async function loadCourseData() {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) { router.push('/auth?mode=login'); return; }
-      setUser(user);
-
-      if (course) {
-        const [enrollmentRes, progressRes] = await Promise.all([
-          supabase.from('enrollments').select('progress, status').eq('user_id', user.id).eq('course_id', course.id).single(),
-          supabase.from('lesson_progress').select('lesson_id').eq('user_id', user.id).eq('course_id', course.id).eq('status', 'completed'),
-        ]);
-
-        if (enrollmentRes.data && enrollmentRes.data.status !== 'cancelled') {
-          setIsEnrolled(true);
-          setProgress(enrollmentRes.data.progress || 0);
-        }
-
-        if (progressRes.data) {
-          setCompletedLessons(new Set(progressRes.data.map(lp => lp.lesson_id)));
-        }
-      }
-
-      setLoading(false);
+    if (!activeLesson || activeLesson.type !== 'lesson' || !course) {
+      setLessonData(null);
+      return;
     }
-    loadCourseData();
-  }, []);
+    let cancelled = false;
+    setLessonLoading(true);
+    setLessonData(null);
+
+    fetch(`/courses/${course.id}/${activeLesson.id}.json`)
+      .then(r => {
+        if (!r.ok) throw new Error('Not found');
+        return r.json();
+      })
+      .then(data => { if (!cancelled) setLessonData(data); })
+      .catch(() => { if (!cancelled) setLessonData(null); })
+      .finally(() => { if (!cancelled) setLessonLoading(false); });
+
+    return () => { cancelled = true; };
+  }, [activeLesson, course]);
+
+  // Navigate to adjacent lesson
+  const navigateLesson = useCallback((direction) => {
+    if (!course || !activeLesson) return;
+    const lessons = course.lessons;
+    const idx = lessons.findIndex(l => l.id === activeLesson.id);
+    const nextIdx = idx + direction;
+    if (nextIdx >= 0 && nextIdx < lessons.length) {
+      setActiveLesson(lessons[nextIdx]);
+    }
+  }, [course, activeLesson]);
+
+  async function handleEnroll() {
+    if (enrolling) return;
+    setEnrolling(true);
+    try {
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ courseId: course.id }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else if (data.enrolled) {
+        router.refresh();
+      } else {
+        alert(data.error || 'Error al procesar. Intentalo de nuevo.');
+      }
+    } catch (err) {
+      alert('Error de conexion. Intentalo de nuevo.');
+    } finally {
+      setEnrolling(false);
+    }
+  }
 
   if (!course) {
     return (
@@ -62,147 +223,45 @@ export default function CoursePage({ params }) {
     );
   }
 
-  if (loading) {
-    return <Spinner text="Cargando curso..." />;
-  }
+  // Mock enrollment (in production, fetch from Supabase)
+  const isEnrolled = course.id === 'brujula-interior' || course.id === 'magnetismo-consciente';
+  const progress = course.id === 'brujula-interior' ? 0.35 : course.id === 'magnetismo-consciente' ? 0.12 : 0;
 
-  // ── Enroll ──
-  async function handleEnroll() {
-    if (!user) return;
-    if (course.price > 0) {
-      // Paid course → redirect to checkout
-      try {
-        const res = await fetch('/api/checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ courseId: course.id }),
-        });
-        const data = await res.json();
-        if (data.url) {
-          window.location.href = data.url;
-          return;
-        }
-      } catch (err) {
-        console.error('Checkout error:', err);
-      }
-      return;
-    }
+  // Mock completed lessons
+  const completedLessons = course.lessons.length > 0
+    ? new Set(course.lessons.slice(0, Math.floor(course.lessons.length * progress)).map(l => l.id))
+    : new Set();
 
-    // Free course → insert enrollment directly
-    setEnrolling(true);
-    const { error } = await supabase.from('enrollments').insert({
-      user_id: user.id,
-      course_id: course.id,
-      status: 'active',
-      progress: 0,
-    });
-    if (!error) {
-      setIsEnrolled(true);
-      setProgress(0);
-    }
-    setEnrolling(false);
-  }
-
-  // ── Mark lesson complete ──
-  async function handleMarkLessonComplete(lesson) {
-    if (!user || completedLessons.has(lesson.id)) return;
-    setMarkingComplete(true);
-
-    await supabase.from('lesson_progress').upsert({
-      user_id: user.id,
-      course_id: course.id,
-      lesson_id: lesson.id,
-      status: 'completed',
-      completed_at: new Date().toISOString(),
-    }, { onConflict: 'user_id,lesson_id' });
-
-    const newCompleted = new Set(completedLessons);
-    newCompleted.add(lesson.id);
-    setCompletedLessons(newCompleted);
-
-    // Recalculate progress
-    if (course.lessons.length > 0) {
-      const newProgress = newCompleted.size / course.lessons.length;
-      setProgress(newProgress);
-      await supabase.from('enrollments').update({
-        progress: newProgress,
-        ...(newProgress >= 1 ? { status: 'completed', completed_at: new Date().toISOString() } : {}),
-      }).eq('user_id', user.id).eq('course_id', course.id);
-    }
-
-    // Award XP
-    const xpAmount = lesson.type === 'exam' ? XP_REWARDS.exam_pass : lesson.type === 'quiz' ? XP_REWARDS.quiz_pass : XP_REWARDS.lesson_complete;
-    await supabase.rpc('increment_xp', { user_id_input: user.id, amount: xpAmount }).catch(() => {
-      // Fallback if RPC doesn't exist: direct update
-      supabase.from('profiles').select('xp').eq('id', user.id).single().then(({ data }) => {
-        if (data) supabase.from('profiles').update({ xp: (data.xp || 0) + xpAmount }).eq('id', user.id);
-      });
-    });
-
-    setMarkingComplete(false);
-
-    // Auto-navigate to next lesson
-    const currentIndex = course.lessons.findIndex(l => l.id === lesson.id);
-    if (currentIndex >= 0 && currentIndex < course.lessons.length - 1) {
-      const nextLesson = course.lessons[currentIndex + 1];
-      setTimeout(() => setActiveLesson(nextLesson), 800);
-    }
-  }
-
-  // ── Submit quiz ──
-  async function handleQuizSubmit() {
-    if (Object.keys(quizAnswers).length !== quizQuestions.length) return;
-    setQuizSubmitted(true);
-
-    const score = quizQuestions.filter((q, i) => quizAnswers[i] === q.correct).length / quizQuestions.length;
-    const passed = score >= 0.7;
-
-    if (user) {
-      // Save quiz attempt
-      await supabase.from('quiz_attempts').insert({
-        user_id: user.id,
-        course_id: course.id,
-        lesson_id: activeLesson.id,
-        score,
-        answers: quizAnswers,
-        passed,
-      });
-
-      // Mark lesson as completed if passed
-      if (passed) {
-        await handleMarkLessonComplete(activeLesson);
-
-        // Generate certificate on exam pass
-        if (activeLesson.type === 'exam') {
-          const year = new Date().getFullYear();
-          const rand = Array.from(crypto.getRandomValues(new Uint8Array(5)))
-            .map(b => b.toString(36).toUpperCase().slice(-1)).join('');
-          const certCode = `SEL-${year}-${rand}`;
-          await supabase.from('certificates').upsert({
-            user_id: user.id,
-            course_id: course.id,
-            certificate_code: certCode,
-            issued_at: new Date().toISOString(),
-          }, { onConflict: 'user_id,course_id' });
-        }
-      }
-    }
-  }
-
-  // Quiz questions from constants, with fallback
-  const quizQuestions = (activeLesson && QUIZ_QUESTIONS[activeLesson.id]) || [
-    { q: 'Pregunta de ejemplo', options: ['A', 'B', 'C', 'D'], correct: 0 },
+  // Mock quiz questions
+  const quizQuestions = [
+    {
+      q: '¿Qué estructura cerebral se modifica con la práctica meditativa según los estudios de neuroplasticidad?',
+      options: ['El hipocampo', 'La corteza prefrontal', 'La amígdala', 'Todas las anteriores'],
+      correct: 3,
+    },
+    {
+      q: '¿Qué protocolo tiene la mayor base de evidencia peer-reviewed para meditación?',
+      options: ['Visualización creativa', 'MBSR (Mindfulness-Based Stress Reduction)', 'Meditación trascendental', 'Yoga nidra'],
+      correct: 1,
+    },
+    {
+      q: 'La cronobiología estudia:',
+      options: ['Los horóscopos diarios', 'Los ritmos biológicos y su sincronización', 'La astrología natal', 'Las fases lunares exclusivamente'],
+      correct: 1,
+    },
   ];
 
-  const quizScore = quizSubmitted ? quizQuestions.filter((q, i) => quizAnswers[i] === q.correct).length : 0;
-  const quizPassed = quizSubmitted && (quizScore / quizQuestions.length) >= 0.7;
+  // Helper: find lesson index
+  const activeLessonIdx = activeLesson ? course.lessons.findIndex(l => l.id === activeLesson.id) : -1;
+  const hasPrev = activeLessonIdx > 0;
+  const hasNext = activeLessonIdx >= 0 && activeLessonIdx < course.lessons.length - 1;
 
   // ── Quiz/Exam View ──
   if (activeLesson && (activeLesson.type === 'quiz' || activeLesson.type === 'exam')) {
     return (
       <div className="min-h-screen bg-selene-bg">
-        <nav aria-label="Navegación del curso" className="px-6 py-3.5 flex items-center gap-3 border-b border-selene-border">
-          <button onClick={() => { setActiveLesson(null); setQuizAnswers({}); setQuizSubmitted(false); }} className="text-selene-white-dim hover:text-selene-white" aria-label="Volver">
+        <nav className="px-6 py-3.5 flex items-center gap-3 border-b border-selene-border">
+          <button onClick={() => { setActiveLesson(null); setQuizAnswers({}); setQuizSubmitted(false); }} className="text-selene-white-dim hover:text-selene-white">
             <BackIcon />
           </button>
           <span className="text-sm font-medium text-selene-white">{activeLesson.title}</span>
@@ -249,42 +308,27 @@ export default function CoursePage({ params }) {
 
           {!quizSubmitted ? (
             <button
-              onClick={handleQuizSubmit}
+              onClick={() => Object.keys(quizAnswers).length === quizQuestions.length && setQuizSubmitted(true)}
               disabled={Object.keys(quizAnswers).length !== quizQuestions.length}
-              className="w-full mt-2 bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl btn-gold-hover disabled:opacity-40"
+              className="w-full mt-2 bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-40"
             >
               Enviar respuestas
             </button>
           ) : (
             <div className="text-center mt-6">
-              <Card className={`p-6 ${quizPassed ? 'border-selene-gold/25 bg-gradient-to-b from-selene-card to-selene-gold/5' : 'border-selene-rose/25'}`}>
-                <div className="text-4xl mb-3">{quizPassed ? '🎓' : '📝'}</div>
-                <h3 className={`font-display text-xl mb-2 ${quizPassed ? 'text-selene-gold' : 'text-selene-rose'}`}>
-                  {quizPassed ? '¡Evaluación superada!' : 'No se alcanzó el 70% necesario'}
-                </h3>
+              <Card className="p-6 border-selene-gold/25 bg-gradient-to-b from-selene-card to-selene-gold/5">
+                <div className="text-4xl mb-3">🎓</div>
+                <h3 className="font-display text-xl text-selene-gold mb-2">¡Evaluación completada!</h3>
                 <p className="text-sm text-selene-white-dim mb-1">
-                  Resultado: {quizScore}/{quizQuestions.length} correctas
+                  Resultado: {quizQuestions.filter((q, i) => quizAnswers[i] === q.correct).length}/{quizQuestions.length} correctas
                 </p>
-                {quizPassed ? (
-                  <>
-                    <p className="text-[13px] text-selene-success">Certificado desbloqueado</p>
-                    {activeLesson.type === 'exam' && (
-                      <button
-                        onClick={() => router.push(`/curso/${course.id}/certificado`)}
-                        className="mt-4 bg-selene-gold text-selene-bg font-semibold px-8 py-3 rounded-xl btn-gold-hover"
-                      >
-                        Ver mi certificado
-                      </button>
-                    )}
-                  </>
-                ) : (
-                  <button
-                    onClick={() => { setQuizAnswers({}); setQuizSubmitted(false); }}
-                    className="mt-4 bg-selene-elevated text-selene-white font-semibold px-8 py-3 rounded-xl border border-selene-border hover:border-selene-gold/30 transition"
-                  >
-                    Intentar de nuevo
-                  </button>
-                )}
+                <p className="text-[13px] text-selene-success">Has desbloqueado el certificado</p>
+                <button
+                  onClick={() => router.push(`/curso/${course.id}/certificado`)}
+                  className="mt-4 bg-selene-gold text-selene-bg font-semibold px-8 py-3 rounded-xl hover:brightness-110 transition"
+                >
+                  Ver mi certificado
+                </button>
               </Card>
             </div>
           )}
@@ -293,125 +337,165 @@ export default function CoursePage({ params }) {
     );
   }
 
-  // ── Lesson View ──
-  if (activeLesson && (activeLesson.type === 'lesson' || activeLesson.type === 'video')) {
-    const isLessonComplete = completedLessons.has(activeLesson.id);
+  // ── Lesson Content View ──
+  if (activeLesson && activeLesson.type === 'lesson') {
     return (
       <div className="min-h-screen bg-selene-bg">
-        <nav aria-label="Navegación del curso" className="px-6 py-3.5 flex items-center gap-3 border-b border-selene-border">
-          <button onClick={() => setActiveLesson(null)} className="text-selene-white-dim hover:text-selene-white" aria-label="Volver">
+        {/* Top nav */}
+        <nav className="sticky top-0 z-50 px-6 py-3.5 flex items-center gap-3 border-b border-selene-border bg-selene-bg/90 backdrop-blur-xl">
+          <button onClick={() => setActiveLesson(null)} className="text-selene-white-dim hover:text-selene-white">
             <BackIcon />
           </button>
-          <div>
-            <div className="text-sm font-medium text-selene-white">{activeLesson.title}</div>
-            <div className="text-[11px] text-selene-white-dim">{course.title}</div>
+          <div className="flex-1 min-w-0">
+            <div className="text-sm font-medium text-selene-white truncate">{activeLesson.title}</div>
+            <div className="text-[11px] text-selene-white-dim">
+              Modulo {activeLesson.module} · {course.title}
+            </div>
+          </div>
+          <div className="text-[11px] text-selene-white-dim shrink-0">
+            {activeLessonIdx + 1} / {course.lessons.length}
           </div>
         </nav>
 
-        <div className="max-w-[720px] mx-auto">
-          {/* Video area */}
-          {activeLesson.videoId ? (
-            <div className="aspect-video">
-              <iframe
-                width="100%"
-                height="100%"
-                src={`https://www.youtube.com/embed/${activeLesson.videoId}`}
-                title={activeLesson.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="border-0"
-              />
-            </div>
-          ) : (
-            <div className="aspect-video bg-gradient-to-br from-selene-card to-selene-elevated flex items-center justify-center relative border-b border-selene-border">
-              <div className="absolute inset-0 star-pattern" />
-              <div className="w-[72px] h-[72px] rounded-full bg-selene-gold/15 flex items-center justify-center cursor-pointer border-2 border-selene-gold/40 hover:bg-selene-gold/25 transition z-10">
-                <PlayIcon size={28} className="text-selene-gold" />
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
-                <span className="text-[11px] text-selene-white-dim">0:00</span>
-                <div className="flex-1 h-[3px] bg-selene-white/20 rounded-full">
-                  <div className="w-0 h-full bg-selene-gold rounded-full" />
-                </div>
-                <span className="text-[11px] text-selene-white-dim">{activeLesson.duration}</span>
-              </div>
+        <div className="max-w-[720px] mx-auto px-5 py-6">
+          {/* Loading state */}
+          {lessonLoading && (
+            <div className="flex flex-col items-center justify-center py-20">
+              <div className="w-10 h-10 border-2 border-selene-border border-t-selene-gold rounded-full animate-spin" />
+              <p className="text-sm text-selene-white-dim mt-4">Cargando leccion...</p>
             </div>
           )}
 
-          {/* Lesson info */}
-          <div className="px-5 py-6">
-            <h2 className="font-display text-[22px] font-normal mb-2">{activeLesson.title}</h2>
-            <div className="flex gap-4 text-xs text-selene-white-dim mb-5">
-              <span>{activeLesson.duration}</span>
-              <span>·</span>
-              <span>{course.title}</span>
-            </div>
-
-            {/* Mark complete button */}
-            {!isLessonComplete ? (
-              <button
-                onClick={() => handleMarkLessonComplete(activeLesson)}
-                disabled={markingComplete}
-                className="w-full mb-5 bg-selene-gold text-selene-bg font-semibold py-3 rounded-xl btn-gold-hover disabled:opacity-50"
-              >
-                {markingComplete ? 'Guardando...' : 'Completar lección'}
-              </button>
-            ) : (
-              <div className="flex items-center gap-2 mb-5 text-selene-success text-sm">
-                <CheckIcon size={16} />
-                <span>Lección completada</span>
+          {/* Lesson content */}
+          {!lessonLoading && lessonData && (
+            <>
+              {/* Title */}
+              <div className="mb-8">
+                <div className="flex items-center gap-2 mb-3">
+                  <BookOpenIcon size={14} className="text-selene-gold" />
+                  <span className="text-[11px] text-selene-gold font-semibold tracking-wide uppercase">
+                    Leccion {lessonData.lesson_number}
+                  </span>
+                </div>
+                <h1 className="font-display text-[24px] md:text-[28px] font-normal text-selene-white leading-tight">
+                  {lessonData.title}
+                </h1>
               </div>
-            )}
 
-            <div className="bg-selene-blue/5 rounded-xl p-4 border border-selene-blue/10 mb-5">
-              <div className="text-xs font-semibold text-selene-blue-light mb-1.5">📚 Base científica</div>
-              <div className="text-[13px] text-selene-white-dim leading-relaxed">{course.science}</div>
-            </div>
+              {/* Text content */}
+              <Card className="p-6 md:p-8 mb-6">
+                <div className="prose-selene">
+                  {lessonData.text_content.split('\n\n').map((paragraph, i) => (
+                    <p key={i} className="text-[14px] md:text-[15px] text-selene-white-dim leading-[1.8] mb-5 last:mb-0">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </Card>
 
-            {/* Lesson list */}
-            <h3 className="text-sm font-semibold mb-3 text-selene-white-dim">Todas las lecciones</h3>
-            {course.lessons.map((lesson, i) => (
-              <button
-                key={lesson.id}
-                onClick={() => setActiveLesson(lesson)}
-                className={`flex items-center gap-3 py-3 w-full text-left ${i > 0 ? 'border-t border-selene-border' : ''}`}
-              >
-                <div className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center ${
-                  completedLessons.has(lesson.id) ? 'bg-selene-success/15' :
-                  lesson.id === activeLesson.id ? 'bg-selene-gold/15 border border-selene-gold/30' :
-                  'bg-selene-elevated'
-                }`}>
-                  {completedLessons.has(lesson.id) ? <CheckIcon size={14} /> :
-                   lesson.type === 'quiz' || lesson.type === 'exam' ? <span className="text-xs">{lesson.type === 'exam' ? '🎓' : '📝'}</span> :
-                   <span className="text-[10px] text-selene-white-dim">{i + 1}</span>}
+              {/* Slides */}
+              {lessonData.slides && lessonData.slides.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-sm font-semibold text-selene-white-dim mb-3 flex items-center gap-2">
+                    <span>Diapositivas</span>
+                    <span className="text-[11px] text-selene-white-dim font-normal">({lessonData.slides.length})</span>
+                  </h3>
+                  <SlideViewer slides={lessonData.slides} />
                 </div>
-                <div className="flex-1">
-                  <div className={`text-[13px] ${lesson.id === activeLesson.id ? 'text-selene-gold' : 'text-selene-white'}`}>{lesson.title}</div>
-                  <div className="text-[11px] text-selene-white-dim">{lesson.duration}</div>
+              )}
+
+              {/* Citation */}
+              {lessonData.citation && (
+                <div className="bg-selene-blue/5 rounded-xl p-4 border border-selene-blue/10 mb-6">
+                  <div className="text-xs font-semibold text-selene-blue-light mb-1.5">Referencia cientifica</div>
+                  <div className="text-[13px] text-selene-white-dim leading-relaxed">
+                    <span className="text-selene-white font-medium">{lessonData.citation.researcher} ({lessonData.citation.year})</span>
+                    {' — '}
+                    {lessonData.citation.finding}
+                  </div>
                 </div>
+              )}
+
+              {/* Complete lesson button */}
+              <button className="w-full bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition mb-4">
+                Completar leccion
               </button>
-            ))}
-          </div>
+
+              {/* Prev / Next navigation */}
+              <div className="flex gap-3 mb-8">
+                <button
+                  onClick={() => navigateLesson(-1)}
+                  disabled={!hasPrev}
+                  className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl border border-selene-border text-sm text-selene-white-dim hover:border-selene-gold/30 hover:text-selene-white transition disabled:opacity-30 disabled:pointer-events-none"
+                >
+                  <ChevronLeftIcon size={16} /> Anterior
+                </button>
+                <button
+                  onClick={() => navigateLesson(1)}
+                  disabled={!hasNext}
+                  className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl border border-selene-border text-sm text-selene-white-dim hover:border-selene-gold/30 hover:text-selene-white transition disabled:opacity-30 disabled:pointer-events-none"
+                >
+                  Siguiente <ChevronRightIcon size={16} />
+                </button>
+              </div>
+
+              {/* Lesson list (collapsible) */}
+              <details className="group">
+                <summary className="text-sm font-semibold text-selene-white-dim mb-3 cursor-pointer list-none flex items-center gap-2">
+                  <ChevronRightIcon size={14} className="text-selene-white-dim group-open:rotate-90 transition-transform" />
+                  Todas las lecciones
+                </summary>
+                <div className="mt-2">
+                  {course.lessons.map((lesson, i) => (
+                    <button
+                      key={lesson.id}
+                      onClick={() => setActiveLesson(lesson)}
+                      className={`flex items-center gap-3 py-3 w-full text-left ${i > 0 ? 'border-t border-selene-border' : ''}`}
+                    >
+                      <div className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center ${
+                        completedLessons.has(lesson.id) ? 'bg-selene-success/15' :
+                        lesson.id === activeLesson.id ? 'bg-selene-gold/15 border border-selene-gold/30' :
+                        'bg-selene-elevated'
+                      }`}>
+                        {completedLessons.has(lesson.id) ? <CheckIcon size={14} /> :
+                         lesson.type === 'quiz' || lesson.type === 'exam' ? <span className="text-xs">{lesson.type === 'exam' ? '🎓' : '📝'}</span> :
+                         <span className="text-[10px] text-selene-white-dim">{i + 1}</span>}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className={`text-[13px] truncate ${lesson.id === activeLesson.id ? 'text-selene-gold' : 'text-selene-white'}`}>{lesson.title}</div>
+                        <div className="text-[11px] text-selene-white-dim">
+                          {lesson.type === 'quiz' ? 'Quiz' : lesson.type === 'exam' ? 'Evaluacion' : 'Leccion'} · {lesson.duration}
+                        </div>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </details>
+            </>
+          )}
+
+          {/* Error / no data */}
+          {!lessonLoading && !lessonData && (
+            <div className="flex flex-col items-center justify-center py-20">
+              <p className="text-sm text-selene-white-dim mb-4">No se pudo cargar el contenido de esta leccion.</p>
+              <button
+                onClick={() => setActiveLesson(null)}
+                className="text-sm text-selene-gold hover:underline"
+              >
+                Volver al curso
+              </button>
+            </div>
+          )}
         </div>
       </div>
     );
   }
 
   // ── Course Overview ──
-  const courseJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Course',
-    name: course.title,
-    description: course.subtitle,
-    provider: { '@type': 'Organization', name: 'Selene Academia', url: 'https://academia.selenaura.com' },
-    hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'online', inLanguage: 'es' },
-  };
-
   return (
     <div className="min-h-screen bg-selene-bg">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }} />
-      <nav aria-label="Navegación del curso" className="sticky top-0 z-50 px-6 py-3.5 flex items-center gap-3 border-b border-selene-border bg-selene-bg/90 backdrop-blur-xl">
-        <button onClick={() => router.push('/dashboard')} className="text-selene-white-dim hover:text-selene-white" aria-label="Volver">
+      <nav className="sticky top-0 z-50 px-6 py-3.5 flex items-center gap-3 border-b border-selene-border bg-selene-bg/90 backdrop-blur-xl">
+        <button onClick={() => router.push('/dashboard')} className="text-selene-white-dim hover:text-selene-white">
           <BackIcon />
         </button>
         <span className="text-sm font-medium text-selene-white">Detalle del curso</span>
@@ -424,7 +508,7 @@ export default function CoursePage({ params }) {
           <Badge color={course.color} className="relative z-10">{course.tag}</Badge>
           <h1 className="font-display text-[26px] font-normal mt-4 mb-1.5 relative z-10">{course.title}</h1>
           <p className="text-sm text-selene-white-dim leading-relaxed mb-4 relative z-10">{course.subtitle}</p>
-          <div className="flex gap-2 sm:gap-4 text-xs text-selene-white-dim flex-wrap relative z-10">
+          <div className="flex gap-4 text-xs text-selene-white-dim flex-wrap relative z-10">
             <span>{course.level}</span><span>·</span>
             <span>{course.hours}</span><span>·</span>
             <span>{course.modules} módulos</span><span>·</span>
@@ -449,7 +533,7 @@ export default function CoursePage({ params }) {
 
         {/* Science basis */}
         <div className="bg-selene-blue/5 rounded-2xl p-[18px] border border-selene-blue/10 mb-4">
-          <div className="text-xs font-semibold text-selene-blue-light mb-1.5">🔬 Base científica</div>
+          <div className="text-xs font-semibold text-selene-blue-light mb-1.5">Base científica</div>
           <div className="text-[13px] text-selene-white-dim leading-relaxed">{course.science}</div>
         </div>
 
@@ -465,70 +549,46 @@ export default function CoursePage({ params }) {
           </Card>
         </div>
 
-        {/* Enroll CTA (when not enrolled) */}
-        {!isEnrolled && (
-          <div className="mb-6">
-            <button
-              onClick={handleEnroll}
-              disabled={enrolling}
-              className="w-full bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl btn-gold-hover disabled:opacity-50"
-            >
-              {enrolling ? 'Inscribiendo...' : course.price === 0 ? 'Inscribirse gratis' : `Comprar por ${course.price_label}`}
-            </button>
-          </div>
-        )}
-
-        {/* Lessons grouped by module */}
+        {/* Lessons */}
         {course.lessons.length > 0 ? (
           <div>
             <h3 className="font-display text-lg font-medium mb-4">Contenido del curso</h3>
-            {Object.entries(
-              course.lessons.reduce((acc, lesson) => {
-                const mod = lesson.module || 1;
-                if (!acc[mod]) acc[mod] = [];
-                acc[mod].push(lesson);
-                return acc;
-              }, {})
-            ).map(([moduleNum, lessons]) => (
-              <div key={moduleNum} className="mb-5">
-                <div className="text-xs font-semibold text-selene-white-dim uppercase tracking-wider mb-2 px-1">
-                  Módulo {moduleNum}
+            {course.lessons.map((lesson, i) => (
+              <button
+                key={lesson.id}
+                onClick={() => isEnrolled ? setActiveLesson(lesson) : null}
+                disabled={!isEnrolled}
+                className="flex items-center gap-3.5 p-4 w-full bg-selene-card border border-selene-border rounded-xl text-left mb-2 hover:border-selene-gold/20 transition disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                <div className={`w-9 h-9 rounded-[10px] shrink-0 flex items-center justify-center border ${
+                  completedLessons.has(lesson.id) ? 'bg-selene-success/10 border-selene-success/20' : 'bg-selene-elevated border-selene-border'
+                }`}>
+                  {completedLessons.has(lesson.id) ? <CheckIcon size={16} /> :
+                   lesson.type === 'quiz' ? <span className="text-sm">📝</span> :
+                   lesson.type === 'exam' ? <span className="text-sm">🎓</span> :
+                   <BookOpenIcon size={14} className="text-selene-white-dim" />}
                 </div>
-                {lessons.map((lesson) => (
-                  <button
-                    key={lesson.id}
-                    onClick={() => isEnrolled ? setActiveLesson(lesson) : null}
-                    disabled={!isEnrolled}
-                    className="flex items-center gap-3.5 p-4 w-full bg-selene-card border border-selene-border rounded-xl text-left mb-2 hover:border-selene-gold/20 transition disabled:opacity-60 disabled:cursor-not-allowed"
-                  >
-                    <div className={`w-9 h-9 rounded-[10px] shrink-0 flex items-center justify-center border ${
-                      completedLessons.has(lesson.id) ? 'bg-selene-success/10 border-selene-success/20' : 'bg-selene-elevated border-selene-border'
-                    }`}>
-                      {completedLessons.has(lesson.id) ? <CheckIcon size={16} /> :
-                       lesson.type === 'quiz' ? <span className="text-sm">📝</span> :
-                       lesson.type === 'exam' ? <span className="text-sm">🎓</span> :
-                       <PlayIcon size={14} className="text-selene-white-dim" />}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-sm text-selene-white font-medium mb-0.5 truncate">{lesson.title}</div>
-                      <div className="text-[11px] text-selene-white-dim">
-                        {lesson.type === 'quiz' ? 'Quiz' : lesson.type === 'exam' ? 'Evaluación' : 'Lección'} · {lesson.duration}
-                      </div>
-                    </div>
-                    <ArrowIcon size={14} className="text-selene-white-dim shrink-0" />
-                  </button>
-                ))}
-              </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm text-selene-white font-medium mb-0.5 truncate">{lesson.title}</div>
+                  <div className="text-[11px] text-selene-white-dim">
+                    {lesson.type === 'quiz' ? 'Quiz' : lesson.type === 'exam' ? 'Evaluación' : 'Lección'} · {lesson.duration}
+                  </div>
+                </div>
+                <ArrowIcon size={14} className="text-selene-white-dim shrink-0" />
+              </button>
             ))}
-          </div>
-        ) : !isEnrolled ? (
-          <div className="text-center py-10">
-            <LockIcon size={32} className="text-selene-white-dim mx-auto" />
-            <p className="text-sm text-selene-white-dim mt-3 mb-4">Inscríbete para ver el contenido completo</p>
           </div>
         ) : (
           <div className="text-center py-10">
-            <p className="text-sm text-selene-white-dim">El contenido de este curso estará disponible pronto</p>
+            <LockIcon size={32} className="text-selene-white-dim mx-auto" />
+            <p className="text-sm text-selene-white-dim mt-3 mb-4">Inscríbete para ver el contenido completo</p>
+            <button
+              onClick={handleEnroll}
+              disabled={enrolling}
+              className="bg-selene-gold text-selene-bg font-semibold px-8 py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-60"
+            >
+              {enrolling ? 'Procesando...' : course.price === 0 ? 'Inscribirse gratis' : `Comprar por ${course.price_label}`}
+            </button>
           </div>
         )}
       </div>
