@@ -51,7 +51,7 @@ function SlideViewer({ slides }) {
       case 'quote':
         return (
           <div className="flex flex-col items-center justify-center text-center min-h-[260px] px-8 py-5">
-            <div className="text-3xl text-selene-gold/40 mb-3">"</div>
+            <div className="text-3xl text-selene-gold/40 mb-3">&ldquo;</div>
             <p className="text-[15px] text-selene-white italic leading-relaxed mb-4 max-w-[520px]">{s.text}</p>
             {s.source && <p className="text-[11px] text-selene-white-dim">{s.source}</p>}
           </div>
