@@ -1,0 +1,55 @@
+{
+  "lesson_number": 3,
+  "module": 1,
+  "title": "Anatomía de la mano",
+  "text_content": "Para leer una mano, primero hay que saber nombrar cada parte de ella. Esta lección es tu atlas anatómico: después de completarla, serás capaz de identificar cada zona de la palma con su nombre quirológico y entender por qué la forma, las proporciones y la estructura de la mano son tan reveladoras como las líneas que la surcan.\n\nComencemos por la estructura ósea. La mano humana contiene 27 huesos, organizados en tres grupos: los 8 huesos del carpo (muñeca), los 5 metacarpianos (palma) y los 14 falanges (dedos). Cada dedo tiene tres falanges (proximal, media y distal), excepto el pulgar, que tiene solo dos. Esta arquitectura le da a la mano una versatilidad de movimiento que no tiene igual en el reino animal.\n\nDesde la perspectiva quirológica, la mano se divide en varias zonas de lectura. Las más importantes son los montes, las líneas y las falanges de los dedos.\n\nLos montes son las elevaciones carnosas de la palma. Hay siete montes principales, cada uno asociado con un planeta en la tradición quirológica: Júpiter (bajo el índice), Saturno (bajo el medio), Apolo o Sol (bajo el anular), Mercurio (bajo el meñique), Venus (la base del pulgar), Luna (el borde opuesto a Venus, bajo el meñique) y Marte (que se divide en Marte positivo, Marte negativo y la llanura de Marte en el centro de la palma).\n\nEl desarrollo de cada monte refleja la prominencia de ciertas cualidades en la persona. Un monte de Júpiter bien desarrollado sugiere ambición y capacidad de liderazgo. Un monte de Luna pronunciado indica imaginación y receptividad. Pero es esencial no leer los montes de forma aislada: la lectura quirológica siempre es integrativa.\n\nNapier y Napier publicaron en 1980 su obra Hands, un estudio exhaustivo de la anatomía funcional de la mano humana. En este trabajo demostraron que la proporción entre la longitud de los dedos y la palma varía significativamente entre individuos y que estas proporciones están correlacionadas con aspectos del desarrollo hormonal prenatal. En particular, la ratio entre el dedo índice y el anular (conocida como ratio 2D:4D) ha sido objeto de cientos de estudios científicos.\n\nLa ratio 2D:4D fue popularizada por la investigación de John Manning a partir de 1998. Manning demostró que la proporción relativa entre el segundo dedo (índice) y el cuarto dedo (anular) está influida por la exposición a andrógenos y estrógenos durante el desarrollo fetal. Una ratio baja (anular más largo que el índice) se asocia con mayor exposición prenatal a testosterona, mientras que una ratio alta (índice y anular similares o índice más largo) se asocia con mayor exposición a estrógenos.\n\nEsta ratio no determina la personalidad, pero la investigación ha mostrado correlaciones estadísticas con tendencias comportamentales, capacidades espaciales y patrones de toma de riesgos. Es un ejemplo perfecto de cómo la forma de la mano contiene información biológica real.\n\nPasemos ahora a las líneas. Las tres líneas principales de la mano son la línea de la vida, la línea de la cabeza y la línea del corazón. Las estudiaremos en profundidad en el próximo módulo, pero por ahora es importante que las ubiques: la línea de la vida rodea el monte de Venus formando un arco desde el borde de la palma entre pulgar e índice. La línea de la cabeza cruza horizontalmente la palma desde el mismo punto o cerca. La línea del corazón recorre la parte superior de la palma, bajo los montes de los dedos.\n\nAdemás de las tres líneas principales, existen líneas secundarias (destino, sol, Mercurio) y líneas menores que iremos explorando módulo a módulo.\n\nFinalmente, observa la forma general de tu mano. Las manos se clasifican en cuatro tipos elementales: tierra (palma cuadrada, dedos cortos), aire (palma cuadrada, dedos largos), fuego (palma rectangular, dedos cortos) y agua (palma rectangular, dedos largos). Esta clasificación no es rígida, y la mayoría de las manos combinan elementos, pero ofrece un punto de partida para la lectura global.\n\nEn la próxima lección comenzaremos el estudio detallado de la primera línea principal: la línea de la vida.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Anatomía de la mano",
+      "subtitle": "Módulo 1 · Lección 3 — Certificación en Quirología"
+    },
+    {
+      "type": "content",
+      "title": "27 huesos, un mapa completo",
+      "body": "8 huesos del carpo, 5 metacarpianos,\n14 falanges. Cada dedo tiene 3 falanges\nexcepto el pulgar, que tiene 2."
+    },
+    {
+      "type": "content",
+      "title": "Los siete montes de la palma",
+      "body": "Júpiter, Saturno, Apolo, Mercurio,\nVenus, Luna y Marte. Cada monte refleja\nla prominencia de cualidades específicas."
+    },
+    {
+      "type": "quote",
+      "text": "La ratio 2D:4D entre el dedo índice y el anular está influida por la exposición a andrógenos y estrógenos durante el desarrollo fetal.",
+      "source": "Manning, 1998 — Investigación sobre ratio digital 2D:4D"
+    },
+    {
+      "type": "content",
+      "title": "Tres líneas principales",
+      "body": "Línea de la vida: rodea el monte de Venus.\nLínea de la cabeza: cruza la palma horizontal.\nLínea del corazón: recorre la parte superior."
+    },
+    {
+      "type": "content",
+      "title": "Cuatro tipos de mano",
+      "body": "Tierra: palma cuadrada, dedos cortos.\nAire: palma cuadrada, dedos largos.\nFuego: palma rectangular, dedos cortos.\nAgua: palma rectangular, dedos largos."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La mano tiene 27 huesos organizados en carpo, metacarpo y falanges",
+        "Los siete montes de la palma representan cualidades específicas en la lectura quirológica",
+        "La ratio 2D:4D es un marcador biológico validado por la ciencia del desarrollo prenatal"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la próxima lección comenzaremos el estudio detallado de la primera línea principal: la línea de la vida."
+    }
+  ],
+  "citation": {
+    "researcher": "Manning",
+    "year": "1998",
+    "finding": "La ratio entre la longitud del dedo índice y el anular (2D:4D) refleja la exposición prenatal a hormonas sexuales y muestra correlaciones estadísticas con tendencias comportamentales y capacidades cognitivas"
+  }
+}

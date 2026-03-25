@@ -1,0 +1,55 @@
+{
+  "lesson_number": 2,
+  "module": 1,
+  "title": "Dermatoglifos: base científica",
+  "text_content": "En la lección anterior mencionamos un término que va a acompañarte durante toda esta certificación: dermatoglifos. Hoy vamos a entrar de lleno en la ciencia que hay detrás de esta palabra y vas a entender por qué la quirología moderna se apoya en un fundamento biológico sólido.\n\nDermatoglifos viene del griego derma (piel) y glyphe (grabado). Son los patrones de crestas y surcos que cubren la superficie de las palmas de las manos, las plantas de los pies y las yemas de los dedos. Esos patrones que ves cuando miras de cerca tus huellas dactilares no son decoración. Son estructuras biológicas con una historia que contar.\n\nLa formación de los dermatoglifos ocurre durante un período muy específico del desarrollo embrionario. Entre la semana 12 y la semana 24 de gestación, las crestas dérmicas se desarrollan en las almohadillas volares (los abultamientos de las palmas y los dedos del feto). Este proceso está gobernado por una combinación de factores genéticos, presión mecánica en el útero, flujo sanguíneo y exposición hormonal.\n\nLo que hace extraordinarios a los dermatoglifos es que, una vez formados, no cambian. Ni con la edad, ni con lesiones superficiales, ni con el trabajo manual. La piel puede quemarse o cortarse, pero al regenerarse, reproduce exactamente el mismo patrón. Este hecho fue documentado exhaustivamente por Harold Cummins y Charles Midlo en su obra de 1961, y ha sido confirmado por décadas de investigación posterior.\n\nPero los dermatoglifos no son solo una herramienta forense. La investigación médica ha revelado que los patrones de las crestas dérmicas están correlacionados con aspectos del desarrollo prenatal que afectan la salud y la constitución de la persona. En 1991, Sarah Holt publicó The Genetics of Dermal Ridges, donde documentó cómo los patrones de crestas están influidos por la expresión genética durante el primer y segundo trimestre de gestación.\n\nMás recientemente, la investigación de Schaumann y Alter (1976) demostró que ciertas configuraciones de dermatoglifos aparecen con mayor frecuencia en personas con condiciones cromosómicas específicas, como el síndrome de Down (trisomía 21), donde el pliegue palmar transversal único es un marcador diagnóstico reconocido. Esto no significa que los dermatoglifos diagnostiquen enfermedades, sino que confirma algo fundamental: los patrones de la mano no son aleatorios. Reflejan procesos biológicos reales.\n\nEn 1999, Kimura publicó un estudio influyente sobre la asimetría de los patrones de crestas entre la mano derecha y la izquierda. Encontró que las diferencias entre ambas manos están asociadas con la lateralización cerebral y con la exposición a testosterona prenatal. Esto abrió una línea de investigación fascinante: las manos no solo registran el desarrollo físico, sino también aspectos del desarrollo neurológico.\n\nExisten tres patrones básicos de dermatoglifos que aprenderás a identificar: arcos (arch), bucles (loop) y torbellinos (whorl). Cada dedo puede mostrar cualquiera de estos patrones, y la combinación de los diez dedos crea un perfil único. Galton calculó que la probabilidad de que dos personas tengan exactamente los mismos dermatoglifos en todos sus dedos es de aproximadamente 1 entre 64.000 millones.\n\nEl arco es el patrón más simple: las crestas entran por un lado y salen por el otro sin formar ningún bucle. Representa aproximadamente el 5% de todos los patrones dactilares. El bucle es el más común (alrededor del 60-65%): las crestas entran por un lado, forman una curva y salen por el mismo lado. El torbellino forma círculos concéntricos o espirales y aparece en aproximadamente el 30-35% de los dedos.\n\nEstas proporciones varían significativamente entre poblaciones y entre individuos, y es precisamente esa variación lo que convierte a los dermatoglifos en una herramienta de lectura tan rica. No hay dos manos iguales en todo el planeta.\n\nEn la próxima lección exploraremos la anatomía completa de la mano: montes, líneas, falanges y proporciones. Cada estructura tiene un nombre y una función en la lectura quirológica.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Dermatoglifos: base científica",
+      "subtitle": "Módulo 1 · Lección 2 — Certificación en Quirología"
+    },
+    {
+      "type": "content",
+      "title": "Qué son los dermatoglifos",
+      "body": "Del griego derma (piel) + glyphe (grabado).\nPatrones de crestas en palmas, plantas y yemas.\nSe forman entre las semanas 12 y 24 de gestación."
+    },
+    {
+      "type": "content",
+      "title": "Inmutables de por vida",
+      "body": "Una vez formados, no cambian nunca.\nNi con la edad, ni con lesiones, ni con trabajo.\nLa piel regenerada reproduce el mismo patrón."
+    },
+    {
+      "type": "quote",
+      "text": "La asimetría de los patrones de crestas entre ambas manos está asociada con la lateralización cerebral y la exposición a testosterona prenatal.",
+      "source": "Kimura, 1999 — Estudio sobre asimetría de dermatoglifos"
+    },
+    {
+      "type": "content",
+      "title": "Tres patrones fundamentales",
+      "body": "Arco: crestas simples, sin bucle (~5%).\nBucle: curva que entra y sale (~60-65%).\nTorbellino: espirales concéntricas (~30-35%)."
+    },
+    {
+      "type": "content",
+      "title": "Cada mano es única",
+      "body": "Probabilidad de dos personas con mismos\ndermatoglifos: 1 entre 64.000 millones.\nNo hay dos manos iguales en el planeta."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Los dermatoglifos se forman en el útero y permanecen inmutables toda la vida",
+        "Reflejan procesos genéticos, hormonales y del desarrollo prenatal",
+        "Los tres patrones básicos (arco, bucle, torbellino) crean un perfil único en cada persona"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la próxima lección exploraremos la anatomía completa de la mano: montes, líneas, falanges y proporciones."
+    }
+  ],
+  "citation": {
+    "researcher": "Kimura",
+    "year": "1999",
+    "finding": "La asimetría en los patrones de crestas dérmicas entre mano derecha e izquierda está correlacionada con la lateralización cerebral y con niveles de exposición a testosterona durante el desarrollo prenatal"
+  }
+}

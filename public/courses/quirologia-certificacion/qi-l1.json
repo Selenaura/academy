@@ -1,0 +1,55 @@
+{
+  "lesson_number": 1,
+  "module": 1,
+  "title": "Historia de la quirología",
+  "text_content": "Existe una disciplina que ha acompañado a la humanidad desde sus primeros registros escritos: el estudio de la mano como reflejo de la persona. Antes de que existieran los tests psicológicos, antes de que se inventara el escáner cerebral, los seres humanos ya miraban sus palmas buscando entenderse. Y lo hacían en todas las culturas, en todos los continentes, en todas las épocas.\n\nEsta disciplina tiene un nombre preciso: quirología. Del griego cheir (mano) y logos (estudio, conocimiento). No se trata de adivinación. No se trata de predicciones sobre el futuro. Se trata de leer en las manos lo que la biología, la genética y el desarrollo embrionario han escrito en ellas.\n\nLa historia de la quirología comienza mucho antes de lo que la mayoría imagina. En las cuevas de Altamira y Lascaux, hace más de 30.000 años, los seres humanos ya dejaban impresiones de sus manos en las paredes de roca. No sabemos exactamente qué significaban para ellos, pero sabemos que la mano era un símbolo central en su experiencia del mundo.\n\nEn la antigua India, los Vedas (textos que datan de al menos 3.000 años antes de nuestra era) ya contenían referencias al estudio de las líneas de la mano como parte de la tradición del samudrika shastra, un sistema integral de lectura corporal. En China, textos de la dinastía Han documentan prácticas similares. En Grecia, Aristóteles dedicó un tratado completo a la mano, y Anaxágoras argumentaba que la inteligencia humana estaba directamente relacionada con la complejidad de nuestras manos.\n\nPero el verdadero salto científico ocurrió mucho más tarde. En 1823, el anatomista checo Jan Evangelista Purkinje publicó la primera clasificación sistemática de los patrones de las huellas dactilares. Esta obra, titulada Commentatio de examine physiologico organi visus et systematis cutanei, sentó las bases para lo que después se convertiría en dermatoglifos: el estudio científico de los patrones de crestas en la piel de manos y pies.\n\nEn 1892, Sir Francis Galton publicó Finger Prints, un trabajo estadístico riguroso que demostró que las huellas dactilares son únicas e inmutables a lo largo de la vida. Este hallazgo no solo revolucionó la criminología, sino que abrió la puerta a una pregunta fascinante: si cada mano es única, ¿qué puede revelarnos esa unicidad sobre la persona?\n\nEl avance más significativo para la quirología moderna llegó en 1926, cuando Harold Cummins acuñó el término dermatoglyphics (dermatoglifos) y comenzó a estudiar los patrones de las crestas dérmicas con rigor científico. En 1961, junto con Charles Midlo, publicó Finger Prints, Palms and Soles, una obra monumental que documentó las correlaciones entre los patrones palmares y diversos aspectos del desarrollo embrionario. Este libro sigue siendo una referencia fundamental en el campo.\n\nLo que Cummins y Midlo demostraron fue extraordinario: los patrones de las crestas de la piel se forman entre las semanas 12 y 24 de gestación, y una vez formados, no cambian nunca. Esto significa que tus huellas dactilares y tus patrones palmares son un registro permanente de las condiciones de tu desarrollo prenatal. No son aleatorios. Están influidos por factores genéticos, hormonales y del entorno uterino.\n\nEsta certificación en quirología que comienzas hoy es la primera y la única disponible en lengua castellana. Nace de la convicción de que esta disciplina milenaria merece ser estudiada con seriedad, con rigor y con respeto tanto por la tradición que la sostiene como por la ciencia que la valida.\n\nA lo largo de este programa, aprenderás a leer las manos integrando el conocimiento ancestral con la evidencia científica contemporánea. No aprenderás a predecir el futuro, porque eso no es lo que la mano cuenta. Aprenderás a leer la historia biológica y psicológica que cada persona lleva inscrita en sus palmas.\n\nEn la próxima lección profundizaremos en la ciencia de los dermatoglifos: qué son exactamente, cómo se forman y qué nos dice la investigación científica sobre lo que revelan.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Historia de la quirología",
+      "subtitle": "Módulo 1 · Lección 1 — Certificación en Quirología"
+    },
+    {
+      "type": "content",
+      "title": "Del griego cheir + logos",
+      "body": "Quirología: el estudio de la mano como\nreflejo de la persona. No adivinación.\nLectura biológica, genética y embrionaria."
+    },
+    {
+      "type": "content",
+      "title": "30.000 años de historia",
+      "body": "Altamira y Lascaux: manos en las cuevas.\nVedas de la India: samudrika shastra.\nAristóteles: la mano y la inteligencia."
+    },
+    {
+      "type": "quote",
+      "text": "Los patrones de las crestas dérmicas se forman entre las semanas 12 y 24 de gestación y no cambian nunca.",
+      "source": "Cummins & Midlo, 1961 — Finger Prints, Palms and Soles"
+    },
+    {
+      "type": "content",
+      "title": "El salto científico moderno",
+      "body": "1823: Purkinje clasifica huellas dactilares.\n1892: Galton demuestra su unicidad.\n1926: Cummins acuña el término dermatoglifos."
+    },
+    {
+      "type": "content",
+      "title": "La primera certificación en español",
+      "body": "Esta es la única certificación en quirología\nen lengua castellana. Tradición milenaria\ncon validación científica contemporánea."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La quirología estudia la mano como registro biológico y psicológico de la persona",
+        "Tiene más de 30.000 años de historia en todas las culturas del mundo",
+        "Cummins y Midlo (1961) establecieron la base científica moderna con los dermatoglifos"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la próxima lección profundizaremos en la ciencia de los dermatoglifos: qué son, cómo se forman y qué revelan."
+    }
+  ],
+  "citation": {
+    "researcher": "Cummins & Midlo",
+    "year": "1961",
+    "finding": "Los patrones de crestas dérmicas se forman entre las semanas 12 y 24 de gestación, son únicos para cada individuo y permanecen inmutables durante toda la vida, constituyendo un registro permanente del desarrollo prenatal"
+  }
+}

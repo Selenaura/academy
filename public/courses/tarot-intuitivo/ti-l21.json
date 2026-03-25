@@ -1,0 +1,21 @@
+{
+  "lesson_number": 21,
+  "module": 7,
+  "title": "Tiradas para transformación: el proceso de cambio",
+  "text_content": "El cambio no es un evento. Es un proceso. Y la mayoría de personas que consultan tarot están en algún punto de ese proceso sin saber exactamente dónde.\n\nJames Prochaska y Carlo DiClemente desarrollaron en 1983 el Modelo Transteórico del Cambio, que identifica seis etapas por las que pasa toda persona en un proceso de transformación: precontemplación (no soy consciente del problema), contemplación (lo veo pero no actúo), preparación (estoy listo para cambiar), acción (estoy cambiando), mantenimiento (sostengo el cambio), y recaída (vuelvo al patrón anterior, que es parte normal del proceso).\n\nLa tirada del proceso de cambio usa 6 cartas en línea horizontal, una por cada etapa. No necesitas saber de antemano en qué etapa está la persona — las cartas te lo mostrarán.\n\nCarta 1 (Precontemplación): lo que la persona no ve todavía sobre sí misma. Carta 2 (Contemplación): lo que ya sabe pero no se atreve a enfrentar. Carta 3 (Preparación): los recursos disponibles para el cambio. Carta 4 (Acción): el primer paso concreto que pide ser dado. Carta 5 (Mantenimiento): qué necesitará para sostener el cambio a largo plazo. Carta 6 (Recaída): el patrón que intentará volver, la trampa a vigilar.\n\nLa carta más reveladora suele ser la 6. No porque la recaída sea inevitable, sino porque nombrar la trampa reduce enormemente su poder. Es como encender la luz en una habitación oscura: lo que veías como monstruo resulta ser una silla.\n\nProtocolo para lectura de proceso:\n\nIdentifica primero en qué etapa parece estar la persona basándote en cómo describe su situación. Después lee las cartas en orden. Las cartas de las etapas que ya pasó suelen resonar inmediatamente. Las de etapas futuras generan curiosidad o resistencia — ambas son señales útiles.\n\nEsta tirada es especialmente potente para: duelos y pérdidas, cambios de carrera, fin de relaciones, procesos terapéuticos en curso, y adicciones o hábitos que la persona quiere cambiar.\n\nImportante: si la persona está en terapia, el tarot complementa pero no sustituye el proceso terapéutico. Nunca lo posiciones como alternativa a la ayuda profesional.\n\nEn la próxima lección cerramos el módulo con la práctica más importante: tu primera sesión completa supervisada.",
+  "slides": [
+    {"type": "title", "title": "Tiradas para transformación: el proceso de cambio", "subtitle": "Módulo 7 · Lección 21 — Certificación en Tarot Intuitivo"},
+    {"type": "content", "title": "El cambio tiene etapas", "body": "Precontemplación → Contemplación → Preparación\n→ Acción → Mantenimiento → Recaída.\nLa recaída es parte normal del proceso."},
+    {"type": "content", "title": "Tirada del proceso (6 cartas)", "body": "Una carta por cada etapa de Prochaska.\nNo necesitas saber dónde está la persona:\nlas cartas te lo mostrarán."},
+    {"type": "quote", "text": "Nombrar el patrón que intentará volver reduce enormemente su poder sobre nosotros.", "source": "Prochaska & DiClemente, 1983 — Modelo Transteórico del Cambio"},
+    {"type": "content", "title": "La carta más reveladora: la recaída", "body": "Carta 6 nombra la trampa a vigilar.\nComo encender la luz en una habitación oscura:\nel monstruo resulta ser una silla."},
+    {"type": "content", "title": "Cuándo usar esta tirada", "body": "Duelos y pérdidas, cambios de carrera,\nfin de relaciones, procesos terapéuticos,\nhábitos que la persona quiere cambiar."},
+    {"type": "summary", "points": ["La tirada del proceso usa 6 cartas alineadas con las etapas de cambio de Prochaska", "Nombrar la carta de recaída reduce su poder — lo que se hace consciente deja de operar en automático", "El tarot complementa la terapia pero nunca la sustituye"]},
+    {"type": "next", "text": "En la siguiente lección: tu primera sesión completa supervisada — el paso a la práctica real."}
+  ],
+  "citation": {
+    "researcher": "Prochaska & DiClemente",
+    "year": "1983",
+    "finding": "El Modelo Transteórico identifica 6 etapas del cambio conductual, demostrando que la recaída es parte normal del proceso y no un fracaso."
+  }
+}

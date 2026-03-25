@@ -1,0 +1,55 @@
+{
+  "lesson_number": 13,
+  "module": 5,
+  "title": "Fotografía de manos",
+  "text_content": "En la quirología tradicional, la lectura siempre se realizaba en persona. Las manos se observaban y se palpaban directamente. Pero la realidad profesional contemporánea exige que puedas trabajar también con imágenes. Cada vez es más frecuente que las personas soliciten lecturas a distancia, y la calidad de la fotografía determina la calidad de la lectura.\n\nEn esta lección aprenderás el protocolo de captura fotográfica que utilizarás en tus lecturas profesionales. Este protocolo fue desarrollado específicamente para esta certificación y es parte de lo que la hace única en su campo.\n\nLo primero que necesitas entender es que una fotografía de la mano no sustituye a la observación presencial. La palpación de los montes, la textura de la piel, la temperatura y la flexibilidad de la mano son dimensiones que la cámara no captura. Sin embargo, una buena fotografía puede revelar las líneas principales y secundarias, las marcas especiales, la forma general y las proporciones de la mano con suficiente detalle para una lectura significativa.\n\nEl equipo necesario es mínimo: un teléfono con cámara de al menos 12 megapíxeles (cualquier smartphone moderno) y una fuente de luz natural o una lámpara de luz blanca. No necesitas equipo profesional. Lo que necesitas es técnica.\n\nProtocolo de captura:\n\nToma 1: Palma abierta completa. La mano debe estar relajada, con los dedos ligeramente separados. La cámara se sitúa directamente sobre la palma, perpendicular a ella, a unos 20-25 centímetros de distancia. La luz debe incidir lateralmente (desde un lado, no desde arriba) para crear sombras sutiles que revelen la profundidad de las líneas y la elevación de los montes. Esta toma es la más importante.\n\nToma 2: Dorso de la mano. Con la misma posición de la cámara, fotografía el dorso. Las venas, los nudillos y la proporción entre dedos y metacarpo aportan información complementaria.\n\nToma 3: Perfil del pulgar. La mano se gira para que el pulgar quede frente a la cámara. Esta toma revela el ángulo de apertura del pulgar (relacionado con la generosidad y la adaptabilidad) y la proporción entre sus dos falanges.\n\nToma 4: Detalle de las yemas. Acerca la cámara a las yemas de los dedos para capturar los dermatoglifos. Necesitarás buena resolución para distinguir arcos, bucles y torbellinos.\n\nToma 5: Mano cerrada suavemente. La persona cierra la mano sin apretar. Esta posición revela cómo se comportan las líneas cuando la palma se flexiona y muestra la prominencia natural de los montes.\n\nEl fondo debe ser neutro y uniforme (una hoja blanca o una superficie oscura sin texturas). Evita fondos con patrones que puedan confundirse con las líneas de la mano.\n\nDesde la perspectiva técnica, la documentación fotográfica de dermatoglifos tiene una larga tradición en la investigación científica. Cummins y Midlo (1961) establecieron protocolos de impresión con tinta como método estándar para la captura de patrones dérmicos. Babler (1991) actualizó estos protocolos incorporando técnicas fotográficas y documentó que la iluminación lateral oblicua es la que mejor revela la topografía de las crestas dérmicas, confirmando lo que la práctica quirológica ya sabía.\n\nUn error común es fotografiar la mano con flash directo. El flash frontal aplana las líneas, elimina las sombras que revelan la profundidad y crea reflejos que pueden oscurecer marcas importantes. Siempre iluminación lateral, nunca frontal.\n\nOtro error frecuente es pedir a la persona que estire la mano al máximo. Una mano tensa modifica la apariencia de las líneas. La posición ideal es relajada, con la palma naturalmente abierta.\n\nPara practicar, fotografía ambas manos siguiendo el protocolo completo (cinco tomas por mano). Revisa las fotografías en pantalla ampliada. ¿Puedes identificar las tres líneas principales? ¿Distingues los montes? ¿Ves marcas especiales? Si alguna toma no tiene la claridad necesaria, ajusta la iluminación y vuelve a capturar.\n\nEn la próxima lección usarás estas fotografías para realizar tu primera lectura integrada formal.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Fotografía de manos",
+      "subtitle": "Módulo 5 · Lección 13 — Certificación en Quirología"
+    },
+    {
+      "type": "content",
+      "title": "Cinco tomas esenciales",
+      "body": "1. Palma abierta completa (la principal).\n2. Dorso de la mano.\n3. Perfil del pulgar.\n4. Detalle de yemas (dermatoglifos).\n5. Mano cerrada suavemente."
+    },
+    {
+      "type": "content",
+      "title": "Iluminación lateral, nunca frontal",
+      "body": "Luz desde un lado crea sombras sutiles.\nRevela profundidad de líneas y montes.\nEl flash directo aplana y oculta detalles."
+    },
+    {
+      "type": "quote",
+      "text": "La iluminación lateral oblicua es la que mejor revela la topografía de las crestas dérmicas en la documentación fotográfica.",
+      "source": "Babler, 1991 — Protocolos de captura de dermatoglifos"
+    },
+    {
+      "type": "content",
+      "title": "Posición relajada, fondo neutro",
+      "body": "Mano relajada, dedos ligeramente separados.\nFondo blanco o neutro sin texturas.\nCámara perpendicular a 20-25 cm."
+    },
+    {
+      "type": "content",
+      "title": "La foto no sustituye la presencia",
+      "body": "Palpación, textura, temperatura, flexibilidad:\ndimensiones que la cámara no captura.\nPero una buena foto permite lectura significativa."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "El protocolo de cinco tomas cubre palma, dorso, pulgar, yemas y mano cerrada",
+        "La iluminación lateral oblicua es clave para revelar la topografía de la palma",
+        "La fotografía amplía el alcance profesional pero no sustituye la lectura presencial"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la próxima lección usarás estas fotografías para realizar tu primera lectura integrada formal."
+    }
+  ],
+  "citation": {
+    "researcher": "Babler",
+    "year": "1991",
+    "finding": "La iluminación lateral oblicua produce los mejores resultados en la captura fotográfica de patrones dérmicos, revelando la topografía de las crestas con mayor fidelidad que cualquier otra técnica de iluminación"
+  }
+}

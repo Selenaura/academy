@@ -1,0 +1,55 @@
+{
+  "lesson_number": 10,
+  "module": 4,
+  "title": "Los 7 montes",
+  "text_content": "Los montes de la palma son las elevaciones carnosas que dan relieve a la superficie de la mano. Si las líneas cuentan la historia de la persona, los montes revelan su constitución: las fuerzas que la habitan, los recursos con los que cuenta y las áreas donde su energía se concentra de forma natural.\n\nHay siete montes principales en la palma, y cada uno recibe el nombre de un cuerpo celeste de la tradición astrológica. Pero no necesitas creer en la influencia de los planetas para trabajar con los montes. Piensa en ellos como zonas topográficas de la palma, cada una asociada con un conjunto de cualidades psicológicas y constitucionales.\n\nEl monte de Júpiter se encuentra debajo del dedo índice. Cuando está bien desarrollado (elevado, firme, con buen color), indica ambición saludable, capacidad de liderazgo, confianza en uno mismo y deseo de expansión. Cuando está excesivamente desarrollado, puede señalar tendencia a la dominación o al ego inflado. Cuando está plano o deprimido, sugiere inseguridad o dificultad para afirmar la propia voluntad.\n\nEl monte de Saturno está debajo del dedo medio. Es el monte de la responsabilidad, la estructura, la disciplina y la introspección. Un desarrollo equilibrado indica madurez, capacidad de compromiso y sentido del deber. Es poco común encontrar un monte de Saturno muy pronunciado; cuando aparece, señala una tendencia a la soledad voluntaria o a la melancolía productiva.\n\nEl monte de Apolo (o del Sol) se encuentra debajo del dedo anular. Es el monte de la expresión, la creatividad, la belleza y la satisfacción vital. Un monte de Apolo bien desarrollado indica una persona con sentido estético, capacidad de irradiar calidez y necesidad de expresar su individualidad.\n\nEl monte de Mercurio está debajo del dedo meñique. Gobierna la comunicación, la astucia, la capacidad comercial y la habilidad para las relaciones interpersonales. Un monte de Mercurio firme indica elocuencia, versatilidad mental y capacidad para conectar con personas muy diferentes.\n\nEl monte de Venus ocupa la base del pulgar y es, con mucho, el más extenso de la palma. Representa la vitalidad, la capacidad de amar, la sensualidad y el amor por la vida. Un monte de Venus bien desarrollado indica una persona apasionada, con energía abundante y una relación saludable con el placer y el cuerpo.\n\nEl monte de la Luna se encuentra en el lado opuesto de la palma, debajo del meñique y en el borde exterior. Representa la imaginación, la receptividad, la intuición y el mundo interior. Un monte lunar bien desarrollado indica una vida interior rica, capacidad creativa y sensibilidad perceptiva.\n\nMarte se divide en tres zonas: Marte positivo (entre Júpiter y Venus, en el borde interior de la palma), asociado con la iniciativa y el coraje; Marte negativo (entre Mercurio y la Luna, en el borde exterior), asociado con la resistencia y la perseverancia; y la llanura de Marte (el centro de la palma), cuya profundidad o elevación indica el nivel general de energía vital.\n\nDesde la perspectiva anatómica, los montes corresponden a los músculos y tejidos subcutáneos de la palma. Napier (1980) documentó en Hands que el desarrollo muscular de la palma está directamente relacionado con la actividad neuromotora y con la constitución hormonal de la persona. Los montes no son meras acumulaciones de grasa: son estructuras funcionales cuyo desarrollo refleja tanto la genética como la historia de uso de la mano.\n\nLa lectura de los montes requiere tanto la observación visual como la palpación. Un monte puede parecer plano a la vista pero resultar firme al tacto, lo que cambia significativamente su interpretación. Esta dimensión táctil de la quirología es una de las razones por las que la lectura en persona tiene una riqueza que ninguna fotografía puede capturar completamente.\n\nEn la próxima lección exploraremos la forma general de la mano y los dedos: otro nivel de lectura que te dará un marco completo para la interpretación.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Los 7 montes",
+      "subtitle": "Módulo 4 · Lección 10 — Certificación en Quirología"
+    },
+    {
+      "type": "content",
+      "title": "Júpiter, Saturno, Apolo, Mercurio",
+      "body": "Júpiter: liderazgo y ambición saludable.\nSaturno: responsabilidad e introspección.\nApolo: creatividad y expresión.\nMercurio: comunicación y versatilidad."
+    },
+    {
+      "type": "content",
+      "title": "Venus, Luna y Marte",
+      "body": "Venus: vitalidad y capacidad de amar.\nLuna: imaginación y mundo interior.\nMarte: iniciativa, resistencia, energía vital."
+    },
+    {
+      "type": "quote",
+      "text": "El desarrollo muscular de la palma está directamente relacionado con la actividad neuromotora y la constitución hormonal de la persona.",
+      "source": "Napier, 1980 — Hands"
+    },
+    {
+      "type": "content",
+      "title": "Tres niveles de desarrollo",
+      "body": "Bien desarrollado: la cualidad fluye con fuerza.\nExcesivo: la cualidad domina en desequilibrio.\nPlano: la cualidad requiere cultivo consciente."
+    },
+    {
+      "type": "content",
+      "title": "Vista y tacto",
+      "body": "La lectura de montes requiere observación\ny palpación. Un monte plano a la vista\npuede ser firme al tacto: otra lectura."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Los siete montes representan fuerzas constitucionales: recursos, fortalezas y áreas de concentración energética",
+        "Su desarrollo revela tanto la genética como la historia de vida de la persona",
+        "La palpación añade una dimensión que la observación visual por sí sola no captura"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la próxima lección exploraremos la forma de la mano y los dedos como marco global de lectura."
+    }
+  ],
+  "citation": {
+    "researcher": "Napier",
+    "year": "1980",
+    "finding": "El desarrollo de los tejidos musculares y subcutáneos de la palma está determinado por la actividad neuromotora y la constitución hormonal, haciendo de los montes estructuras funcionales y no meras acumulaciones de tejido"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "lesson_number": 20,
+  "module": 7,
+  "title": "Tiradas para decisiones: la encrucijada",
+  "text_content": "Hay un momento en la vida de toda persona que consulta tarot donde la pregunta no es sobre amor, ni sobre trabajo, ni sobre salud. Es más simple y más difícil a la vez: necesito elegir y no sé cómo.\n\nLas decisiones nos paralizan porque el cerebro humano no está diseñado para manejar la incertidumbre con comodidad. Daniel Kahneman demostró en 2011 que nuestra mente opera con dos sistemas: el Sistema 1 (rápido, intuitivo, emocional) y el Sistema 2 (lento, analítico, deliberado). Cuando una decisión es compleja, ambos sistemas entran en conflicto. El tarot intuitivo actúa como mediador entre ambos.\n\nLa tirada de la encrucijada usa 5 cartas en forma de Y invertida:\n\nCarta 1 (base): la situación actual, el punto de partida real. Carta 2 (brazo izquierdo): opción A y sus consecuencias energéticas. Carta 3 (brazo derecho): opción B y sus consecuencias energéticas. Carta 4 (tronco): lo que la persona no está viendo, el punto ciego. Carta 5 (raíz): la motivación profunda detrás de la necesidad de decidir.\n\nLa carta más importante no es la 2 ni la 3. Es la 5. Porque muchas veces la verdadera pregunta no es cuál opción elegir, sino por qué sientes que necesitas elegir ahora. A veces la respuesta es: no necesitas decidir todavía. Y eso también es válido.\n\nProtocolo para lectura de decisiones:\n\nNunca digas cuál opción es mejor. Tu rol es iluminar, no decidir por nadie. Presenta las cartas como energías, no como instrucciones. Señala el punto ciego (carta 4) con delicadeza — suele ser lo que más incomoda y más transforma. Cierra siempre preguntando: al ver estas cartas, ¿hacia dónde sientes que se inclina tu cuerpo? La respuesta somática suele ser más honesta que la racional.\n\nVariante avanzada: cuando hay más de dos opciones, añade brazos a la Y. Con tres opciones, usa 7 cartas (tres brazos + base + punto ciego + motivación profunda + carta de integración). No recomiendo más de tres opciones — la complejidad reduce la claridad.\n\nOtra situación frecuente: la persona ya ha decidido pero busca validación. Lo sabrás porque describe una opción con energía y la otra con resignación. En ese caso, la lectura más honesta es reflejar lo que observas: parece que tu cuerpo ya eligió.\n\nEn la próxima lección exploraremos tiradas para procesos de cambio y transformación personal.",
+  "slides": [
+    {"type": "title", "title": "Tiradas para decisiones: la encrucijada", "subtitle": "Módulo 7 · Lección 20 — Certificación en Tarot Intuitivo"},
+    {"type": "content", "title": "Por qué las decisiones paralizan", "body": "Sistema 1: rápido, intuitivo, emocional.\nSistema 2: lento, analítico, deliberado.\nCuando entran en conflicto, nos bloqueamos."},
+    {"type": "content", "title": "Tirada de la encrucijada (5 cartas)", "body": "Base: situación actual.\nBrazo izquierdo: opción A.\nBrazo derecho: opción B.\nTronco: punto ciego.\nRaíz: motivación profunda."},
+    {"type": "quote", "text": "La mente opera con dos sistemas que frecuentemente entran en conflicto ante decisiones complejas.", "source": "Daniel Kahneman, 2011 — Thinking, Fast and Slow"},
+    {"type": "content", "title": "La carta más importante", "body": "No es la opción A ni la B.\nEs la carta 5 (raíz): por qué sientes\nque necesitas decidir ahora."},
+    {"type": "content", "title": "Protocolo", "body": "Nunca digas cuál opción es mejor.\nSeñala el punto ciego con delicadeza.\nCierra preguntando: ¿hacia dónde se inclina tu cuerpo?"},
+    {"type": "summary", "points": ["La tirada de la encrucijada usa 5 cartas en Y invertida para iluminar opciones y puntos ciegos", "Kahneman mostró que la intuición (Sistema 1) y la razón (Sistema 2) compiten en decisiones complejas", "La carta de motivación profunda revela por qué necesitas decidir, que a veces es más importante que la decisión misma"]},
+    {"type": "next", "text": "En la siguiente lección: tiradas para procesos de cambio y transformación personal."}
+  ],
+  "citation": {
+    "researcher": "Daniel Kahneman",
+    "year": "2011",
+    "finding": "El modelo de procesamiento dual demuestra que las decisiones complejas generan conflicto entre el sistema intuitivo y el analítico, lo que explica la parálisis decisional."
+  }
+}
