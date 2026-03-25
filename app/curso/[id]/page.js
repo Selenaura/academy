@@ -358,13 +358,28 @@ export default function CoursePage({ params }) {
         </nav>
 
         <div className="max-w-[720px] mx-auto px-5 py-6">
+          {/* Video player */}
+          {activeLesson.videoUrl && (
+            <div className="aspect-video bg-black rounded-xl overflow-hidden mb-6">
+              <video
+                controls
+                controlsList="nodownload"
+                className="w-full h-full"
+                preload="metadata"
+              >
+                <source src={activeLesson.videoUrl} type="video/mp4" />
+                Tu navegador no soporta el reproductor de vídeo.
+              </video>
+            </div>
+          )}
+
           {/* Loading state */}
           {lessonLoading && (
             <div className="flex flex-col items-center justify-center py-20">
               <div className="w-10 h-10 border-2 border-selene-border border-t-selene-gold rounded-full animate-spin" />
               <p className="text-sm text-selene-white-dim mt-4">Cargando leccion...</p>
             </div>
-          )}
+          )
 
           {/* Lesson content */}
           {!lessonLoading && lessonData && (
