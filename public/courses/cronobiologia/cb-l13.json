@@ -1,0 +1,64 @@
+{
+  "lesson_number": 13,
+  "module": 5,
+  "title": "Jet lag social: vivir contra tu reloj interno",
+  "text_content": "Imagina que cada lunes vuelas a una zona horaria diferente y cada viernes vuelves. Sin moverte de tu ciudad, sin subir a un avión. Eso es exactamente lo que le ocurre a millones de personas cada semana. Till Wittmann y Marc Wittmann, junto con Till Roenneberg, le dieron nombre en 2006: jet lag social.\n\nEl concepto es elegante y perturbador a partes iguales. El jet lag social es la discrepancia crónica entre tu reloj biológico (cuándo tu cuerpo quiere dormir y despertar) y tu reloj social (cuándo la sociedad te obliga a dormir y despertar). Se mide como la diferencia entre el punto medio de sueño en días laborables y en días libres.\n\nSi entre semana duermes de medianoche a las seis (punto medio: tres de la mañana) y el fin de semana duermes de las dos a las diez (punto medio: seis de la mañana), tienes tres horas de jet lag social. Es como si cada lunes viajases tres husos horarios hacia el este y cada viernes tres hacia el oeste.\n\nWittmann y colegas demostraron que este fenómeno no es inocuo. En su estudio con más de quinientos participantes, encontraron que el jet lag social se asocia con mayor índice de masa corporal, mayor consumo de tabaco, mayor uso de cafeína y alcohol, y peor calidad general de sueño. Los efectos eran proporcionales: cuanto mayor la discrepancia, peor el resultado de salud.\n\nRoenneberg profundizó esta línea de investigación y encontró que el jet lag social correlaciona con marcadores de síndrome metabólico, inflamación crónica de bajo grado y peor rendimiento cognitivo. No estamos hablando de sentirse un poco cansado el lunes. Estamos hablando de un factor de riesgo para enfermedades crónicas.\n\nEl mecanismo es comprensible a la luz de lo que hemos aprendido. Cuando tu hora social de despertar no coincide con tu hora biológica, el pico de cortisol no está sincronizado con tu inicio de actividad. La melatonina se suprime antes de tiempo. Los relojes periféricos de tu hígado, intestino y tejido adiposo reciben señales contradictorias: la luz dice una cosa, la comida dice otra, el sueño dice otra.\n\nEsta desincronización interna es lo que los cronobiólogos llaman desalineamiento circadiano, y es distinta de simplemente dormir poco. Puedes dormir siete horas y seguir en desalineamiento si esas siete horas están en el momento equivocado para tu biología.\n\nEl jet lag social afecta desproporcionadamente a los cronotipos vespertinos, que son los más perjudicados por los horarios laborales y escolares convencionales. Un búho obligado a funcionar como alondra cinco días a la semana acumula una deuda temporal que el fin de semana no alcanza a saldar. De hecho, el intento de compensar durmiendo más el fin de semana amplía la discrepancia y empeora el jet lag social.\n\nHay implicaciones educativas importantes. Los estudios muestran que los adolescentes —cuyo cronotipo es naturalmente vespertino— sufren el mayor jet lag social de cualquier grupo de edad. Retrasar el inicio de las clases en secundaria ha demostrado mejorar el rendimiento académico, la salud mental y reducir accidentes de tráfico entre jóvenes conductores.\n\nLa solución al jet lag social no es simple porque involucra factores estructurales: horarios laborales rígidos, horarios escolares tempranos, expectativas culturales que valoran madrugar como virtud. Pero a nivel individual, hay margen de acción.\n\nReducir la diferencia entre horarios de semana y fin de semana es el primer paso. Mantener un horario de sueño lo más constante posible, incluyendo fines de semana, reduce la magnitud del jet lag social. No se trata de no descansar el fin de semana, sino de que el descanso no implique un cambio radical de zona horaria interna.\n\nLa exposición a luz natural por la mañana ayuda a desplazar gradualmente tu reloj biológico hacia horarios más tempranos si tu vida social lo requiere. Y la limitación de luz artificial nocturna facilita que la melatonina aparezca a su hora.\n\nEl jet lag social es quizá el problema cronobiológico más extendido del mundo moderno. Reconocerlo es el primer paso para dejar de culparte por un cansancio que tiene raíces biológicas, no morales.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Jet lag social: vivir contra tu reloj interno",
+      "subtitle": "Módulo 5 · Lección 13 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "¿Qué es el jet lag social?",
+      "body": "Discrepancia crónica entre reloj biológico y reloj social.\nSe mide como diferencia entre punto medio de sueño\nen días laborales vs. días libres.\n3 horas de diferencia = 3 husos horarios cada lunes."
+    },
+    {
+      "type": "content",
+      "title": "Consecuencias documentadas",
+      "body": "Mayor índice de masa corporal.\nMayor consumo de tabaco, cafeína y alcohol.\nMarcadores de síndrome metabólico.\nInflamación crónica y peor rendimiento cognitivo."
+    },
+    {
+      "type": "quote",
+      "text": "El jet lag social se asocia con mayor IMC, mayor consumo de estimulantes y peor salud general, de forma proporcional a la discrepancia.",
+      "source": "Wittmann et al., 2006 — Social jetlag: misalignment of biological and social time"
+    },
+    {
+      "type": "content",
+      "title": "Desalineamiento circadiano",
+      "body": "No es solo dormir poco: es dormir en el momento\nequivocado para tu biología.\nCortisol, melatonina y relojes periféricos\nreciben señales contradictorias."
+    },
+    {
+      "type": "content",
+      "title": "Búhos y adolescentes: los más afectados",
+      "body": "Cronotipos vespertinos sufren más jet lag social.\nAdolescentes: mayor jet lag de cualquier grupo de edad.\nRetrasar el inicio escolar mejora rendimiento,\nsalud mental y reduce accidentes de tráfico."
+    },
+    {
+      "type": "content",
+      "title": "Margen de acción individual",
+      "body": "Reducir diferencia entre horarios semana/fin de semana.\nLuz natural matutina para adelantar el reloj biológico.\nLimitar luz artificial nocturna.\nNo compensar el lunes con domingos de 12h de sueño."
+    },
+    {
+      "type": "reflection",
+      "question": "Calcula tu jet lag social: ¿cuántas horas de diferencia hay entre tu punto medio de sueño en días laborales y en días libres?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "El jet lag social es la discrepancia crónica entre reloj biológico y reloj social",
+        "Se asocia con obesidad, síndrome metabólico, inflamación y peor rendimiento cognitivo",
+        "Afecta especialmente a cronotipos vespertinos y adolescentes"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección exploraremos otro disruptor moderno: la luz artificial y su impacto en tus ritmos circadianos."
+    }
+  ],
+  "citation": {
+    "researcher": "Wittmann et al.",
+    "year": "2006",
+    "finding": "Demostraron que el jet lag social (discrepancia entre reloj biológico y social) se asocia con mayor IMC, mayor consumo de estimulantes y peor salud, de forma proporcional a la magnitud de la discrepancia"
+  }
+}

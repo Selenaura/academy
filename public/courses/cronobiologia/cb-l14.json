@@ -1,0 +1,64 @@
+{
+  "lesson_number": 14,
+  "module": 5,
+  "title": "Luz artificial y disrupción circadiana",
+  "text_content": "Durante cientos de miles de años, los seres humanos vivieron sincronizados con un ciclo de luz predecible: sol durante el día, oscuridad durante la noche, con la única excepción del fuego. Hace apenas ciento cincuenta años, la bombilla eléctrica cambió esa ecuación de forma radical. Y hace veinte años, las pantallas LED con emisión de luz azul la transformaron aún más.\n\nDesde la perspectiva de tu NSQ, la luz artificial nocturna es una mentira ambiental. Tu reloj maestro recibe una señal que dice es de día cuando biológicamente debería ser de noche. Y el NSQ, fiel a su programación evolutiva, responde en consecuencia: suprime melatonina, mantiene la alerta y desplaza el inicio de la noche biológica.\n\nLas células ganglionares intrínsecamente fotosensibles de tu retina —las que informan al NSQ— son especialmente sensibles a la luz de longitud de onda corta, es decir, la luz azul. Y resulta que las pantallas de teléfonos, tabletas, ordenadores y televisores LED emiten precisamente en ese rango. No es casualidad que la epidemia de problemas de sueño coincida con la adopción masiva de dispositivos con pantalla.\n\nLos estudios son contundentes. La exposición a luz azul de pantallas durante las dos horas previas a dormir suprime la melatonina entre un treinta y un cincuenta por ciento. Retrasa el inicio de la melatonina endógena en más de una hora. Reduce la duración del sueño REM. Y al día siguiente, la somnolencia matutina aumenta y el rendimiento cognitivo desciende.\n\nPero el problema no se limita a las pantallas. La iluminación doméstica estándar, aunque menos intensa que la luz solar, es suficiente para afectar al sistema circadiano si se mantiene durante la noche. Vivir en un hogar bien iluminado a las once de la noche y esperar que tu cuerpo produzca melatonina como si fuera medianoche en una cueva es pedirle algo fisiológicamente imposible.\n\nFoster y Kreitzman documentan extensamente cómo la revolución lumínica del siglo XX ha creado lo que algunos investigadores llaman contaminación lumínica circadiana. No se trata solo de la contaminación lumínica que impide ver las estrellas. Se trata de una contaminación que penetra en tu biología y desincroniza tus relojes internos.\n\nLas consecuencias van más allá del insomnio. La disrupción circadiana crónica por exposición a luz artificial se ha asociado con mayor riesgo de obesidad, diabetes tipo 2, enfermedades cardiovasculares y ciertos tipos de cáncer. La Organización Mundial de la Salud clasificó el trabajo por turnos con disrupción circadiana como probablemente carcinógeno en 2007.\n\nRoenneberg ha documentado cómo la exposición insuficiente a luz natural diurna agrava el problema. No es solo que recibas demasiada luz de noche. Es que recibes poca luz de día. La mayoría de personas que trabajan en interiores reciben menos de quinientos lux durante el día, cuando la luz solar exterior supera los diez mil lux incluso en días nublados. Esta falta de contraste lumínico debilita la señal que mantiene sincronizado tu reloj.\n\nLa solución tiene dos componentes. Primero, aumentar la exposición a luz natural durante el día, especialmente en las primeras horas tras despertar. Segundo, reducir la exposición a luz artificial después del atardecer. Las gafas con filtro de luz azul, los modos nocturnos de las pantallas y la iluminación cálida vespertina son estrategias que ayudan, aunque ninguna sustituye a la oscuridad real.\n\nHay algo paradójico en nuestra situación. Tenemos más conocimiento que nunca sobre cómo funciona el reloj circadiano y al mismo tiempo vivimos en un entorno lumínico más incompatible que nunca con ese reloj. La brecha entre lo que sabemos y lo que hacemos es enorme.\n\nLa cronobiología no te pide que vuelvas a vivir a la luz de las velas. Te pide que seas consciente de que la luz es una señal biológica potente, no solo una comodidad. Que cada fotón que llega a tu retina después del atardecer tiene un coste circadiano. Y que ese coste se paga en calidad de sueño, salud metabólica y bienestar emocional.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Luz artificial y disrupción circadiana",
+      "subtitle": "Módulo 5 · Lección 14 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "150 años de mentira lumínica",
+      "body": "La bombilla eléctrica rompió el ciclo natural.\nLas pantallas LED amplifican el problema:\nemiten luz azul, la longitud de onda\nque más suprime la melatonina."
+    },
+    {
+      "type": "content",
+      "title": "Pantallas antes de dormir",
+      "body": "Suprimen melatonina un 30-50%.\nRetrasan su inicio >1 hora.\nReducen sueño REM.\nAumentan somnolencia matutina al día siguiente."
+    },
+    {
+      "type": "content",
+      "title": "El problema dual",
+      "body": "No solo recibes demasiada luz de noche.\nRecibes poca luz de día: <500 lux en interiores\nvs. >10.000 lux en exterior nublado.\nFalta de contraste debilita la señal circadiana."
+    },
+    {
+      "type": "quote",
+      "text": "La exposición insuficiente a luz diurna, combinada con exceso de luz nocturna, debilita la señal que mantiene sincronizado el reloj circadiano.",
+      "source": "Roenneberg, 2012 — Internal Time: Chronotypes, Social Jet Lag and Why You're So Tired"
+    },
+    {
+      "type": "content",
+      "title": "Consecuencias crónicas",
+      "body": "Mayor riesgo de obesidad y diabetes tipo 2.\nEnfermedades cardiovasculares.\nLa OMS clasificó la disrupción circadiana\npor turnos como probablemente carcinógena (2007)."
+    },
+    {
+      "type": "content",
+      "title": "Estrategias concretas",
+      "body": "Más luz natural matutina (mínimo 30 min exteriores).\nReducir luz artificial después del atardecer.\nFiltros de luz azul, iluminación cálida vespertina.\nNinguna sustituye a la oscuridad real del dormitorio."
+    },
+    {
+      "type": "reflection",
+      "question": "Hoy, mide: ¿cuántos minutos pasas al aire libre con luz natural antes del mediodía? ¿A qué hora apagas las pantallas antes de dormir?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La luz artificial nocturna suprime melatonina y desplaza la noche biológica",
+        "El déficit de luz natural diurna agrava la desincronización circadiana",
+        "La disrupción crónica se asocia con obesidad, diabetes, riesgo cardiovascular y cáncer"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección descubriremos la cronomedicina: tratar enfermedades según la hora del día para máxima eficacia."
+    }
+  ],
+  "citation": {
+    "researcher": "Roenneberg",
+    "year": "2012",
+    "finding": "Documentó cómo la exposición insuficiente a luz natural diurna combinada con exceso de luz artificial nocturna debilita la señal circadiana y contribuye al jet lag social y problemas metabólicos"
+  }
+}

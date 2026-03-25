@@ -1,0 +1,64 @@
+{
+  "lesson_number": 16,
+  "module": 6,
+  "title": "Tu cronotipo personalizado: test y análisis",
+  "text_content": "Has llegado al módulo final de este curso y es hora de aplicar todo lo aprendido a tu propia biología. Esta lección es práctica: vas a determinar tu cronotipo personal y a analizar qué significa para tu día a día.\n\nExisten varios métodos para evaluar tu cronotipo, desde el estándar clínico hasta la autoobservación estructurada. Vamos a usar una combinación que te dará un mapa fiable de tu reloj interno.\n\nEl primer método es el punto medio de sueño en días libres, desarrollado por Roenneberg como parte del Munich Chronotype Questionnaire. La idea es simple: en días donde no tienes alarma ni compromisos matutinos, ¿a qué hora te duermes y a qué hora despiertas espontáneamente? El punto medio entre ambas horas es tu marcador de cronotipo.\n\nPor ejemplo, si en un fin de semana libre te duermes a la una y despiertas a las nueve, tu punto medio es las cinco de la mañana. Si te duermes a las once y despiertas a las siete, tu punto medio es las tres. Según la escala de Roenneberg, un punto medio antes de las tres indica un cronotipo marcadamente matutino. Entre las tres y las cinco, intermedio. Después de las cinco, marcadamente vespertino.\n\nPero hay un ajuste necesario. Si durante la semana acumulas deuda de sueño, los fines de semana dormirás más para compensar, lo que desplaza tu punto medio hacia más tarde. Roenneberg propone una corrección: restar del punto medio libre la mitad de la diferencia entre la duración de sueño en días libres y días laborales. Esta corrección te da el punto medio de sueño corregido, una estimación más precisa de tu cronotipo real.\n\nEl segundo método es la observación directa de tus ritmos. Durante dos semanas, registra diariamente tres datos: hora de máxima alerta mental, hora de máxima energía física y hora en que sientes sueño natural por la noche. Si estos tres marcadores convergen, tienes una imagen clara de tu fase circadiana.\n\nEl tercer método es tu temperatura corporal. La temperatura tiene un ritmo circadiano robusto: mínima alrededor de las cuatro-cinco de la mañana y máxima alrededor de las cuatro-cinco de la tarde para un cronotipo intermedio. Si puedes medir tu temperatura al despertar durante diez días consecutivos (antes de levantarte, en las mismas condiciones), la hora del mínimo térmico te indica el fondo de tu ciclo circadiano.\n\nUna vez que tengas tu cronotipo, analízalo en tres dimensiones.\n\nPrimero, la dimensión cognitiva. Tu pico de rendimiento analítico ocurre típicamente dos a cuatro horas después de tu despertar natural. Tu creatividad, curiosamente, puede beneficiarse de las horas de menor alerta (cuando el filtro analítico se relaja y las asociaciones libres fluyen más). Saber cuándo piensas mejor y cuándo creas mejor es valioso.\n\nSegundo, la dimensión física. Tu coordinación, fuerza y rendimiento cardiovascular alcanzan su máximo típicamente seis a ocho horas después del despertar natural. Entrenar en ese momento produce mejores resultados y menor riesgo de lesión.\n\nTercero, la dimensión social y emocional. Tu tolerancia al estrés, tu paciencia y tu capacidad de empatía también oscilan. Programar conversaciones difíciles o decisiones importantes en tu ventana de mayor resiliencia emocional es inteligencia cronobiológica aplicada.\n\nWittmann y Roenneberg señalan que conocer tu cronotipo no es un ejercicio académico. Es información práctica que afecta a la calidad de tu trabajo, la profundidad de tu descanso, la eficacia de tu ejercicio y la estabilidad de tus relaciones. Vivir alineada con tu cronotipo reduce el jet lag social, mejora marcadores metabólicos y aumenta la satisfacción vital.\n\nTu tarea para esta lección es completar el cálculo de tu punto medio de sueño corregido y el registro de dos semanas de picos de alerta, energía y sueño natural. Cuando tengas ambos datos, tendrás un perfil cronobiológico personal más preciso que cualquier horóscopo.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Tu cronotipo personalizado: test y análisis",
+      "subtitle": "Módulo 6 · Lección 16 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "Método 1: punto medio de sueño",
+      "body": "En días libres sin alarma: ¿a qué hora duermes y despiertas?\nPunto medio = (hora dormir + hora despertar) / 2.\nAntes de las 3h = matutino marcado.\n3-5h = intermedio. Después de las 5h = vespertino."
+    },
+    {
+      "type": "content",
+      "title": "Corrección por deuda de sueño",
+      "body": "Si acumulas deuda de sueño, los fines de semana\ncompensan y desplazan el punto medio.\nCorrector: restar la mitad de la diferencia\nentre sueño libre y sueño laboral."
+    },
+    {
+      "type": "content",
+      "title": "Método 2: observación directa",
+      "body": "Durante 2 semanas registra diariamente:\n- Hora de máxima alerta mental\n- Hora de máxima energía física\n- Hora de sueño natural nocturno\nBusca convergencia de los tres marcadores."
+    },
+    {
+      "type": "quote",
+      "text": "Conocer tu cronotipo es información práctica que afecta la calidad de trabajo, descanso, ejercicio y relaciones.",
+      "source": "Roenneberg, 2012 — Internal Time: Chronotypes, Social Jet Lag and Why You're So Tired"
+    },
+    {
+      "type": "content",
+      "title": "Análisis: dimensión cognitiva",
+      "body": "Pico analítico: 2-4h tras despertar natural.\nCreatividad: puede beneficiarse de horas de menor alerta\n(el filtro analítico se relaja).\nSaber cuándo piensas vs. cuándo creas."
+    },
+    {
+      "type": "content",
+      "title": "Análisis: dimensiones física y emocional",
+      "body": "Pico físico: 6-8h tras despertar natural.\nTolerancia al estrés y empatía también oscilan.\nProgramar decisiones difíciles en ventana\nde mayor resiliencia emocional."
+    },
+    {
+      "type": "reflection",
+      "question": "Calcula tu punto medio de sueño corregido. Inicia el registro de 2 semanas de picos de alerta, energía y sueño natural. ¿Qué cronotipo emerge?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "El punto medio de sueño en días libres (corregido) es el marcador más accesible de cronotipo",
+        "La observación directa de picos de alerta, energía y sueño complementa el dato",
+        "Tu cronotipo afecta cuándo piensas mejor, rindes físicamente y toleras mejor el estrés"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección usarás tu cronotipo para diseñar un calendario vital sincronizado con tus ritmos."
+    }
+  ],
+  "citation": {
+    "researcher": "Roenneberg",
+    "year": "2012",
+    "finding": "Desarrolló el punto medio de sueño en días libres corregido como medida accesible y fiable del cronotipo individual, demostrando su correlación con marcadores fisiológicos circadianos"
+  }
+}

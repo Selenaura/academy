@@ -1,0 +1,64 @@
+{
+  "lesson_number": 17,
+  "module": 6,
+  "title": "Diseña tu calendario vital sincronizado",
+  "text_content": "Ya conoces tu cronotipo. Sabes cómo funcionan los ritmos circadianos, ultradianos y estacionales. Has aprendido sobre las hormonas rítmicas y el impacto de la luz. Ahora toca integrar todo eso en algo práctico: un calendario vital diseñado a medida de tu biología temporal.\n\nUn calendario vital sincronizado no es un horario rígido. Es un marco flexible que organiza tus actividades principales en las ventanas temporales donde tu cuerpo las realiza con mayor eficacia y menor coste fisiológico.\n\nVamos a construirlo paso a paso.\n\nPaso uno: ancla tu despertar. Tu hora de despertar natural (sin alarma) es el punto de referencia desde el que se calcula todo lo demás. Si tu despertar natural es a las siete, trabaja con esa hora. Si es a las nueve, trabaja con esa. No diseñes tu calendario desde un ideal de productividad matutina que no coincide con tu biología.\n\nPaso dos: ubica tu ventana cognitiva. El pico de rendimiento analítico ocurre entre dos y cuatro horas después de tu despertar natural. Si despiertas a las siete, tu ventana va de nueve a once. Si despiertas a las nueve, va de once a una. Programa en esa franja tus tareas más exigentes intelectualmente: decisiones complejas, redacción importante, estudio profundo, resolución de problemas.\n\nPaso tres: programa tu ventana creativa. La creatividad se beneficia de un estado de alerta ligeramente reducido, donde las asociaciones no convencionales fluyen con mayor facilidad. Para muchas personas, esto ocurre a media mañana para los vespertinos o a media tarde para los matutinos. Es la franja para brainstorming, escritura libre, diseño conceptual.\n\nPaso cuatro: respeta el bajón postprandial. Tanto si comes como si no, tu cuerpo experimentará un descenso de alerta entre seis y ocho horas después de despertar. No luches contra él. Si puedes, toma un descanso breve. Si no puedes descansar, programa en esa franja tareas administrativas o mecánicas que no requieran concentración profunda.\n\nPaso cinco: aprovecha tu ventana física. El rendimiento muscular, cardiovascular y de coordinación alcanza su máximo entre seis y nueve horas después del despertar. Es el momento óptimo para ejercicio intenso. Entrenar en esta ventana produce mejores resultados adaptativos y menor riesgo de lesión.\n\nPaso seis: prepara la noche biológica. Dos horas antes de tu hora deseada de sueño, inicia la transición. Reduce la intensidad lumínica. Apaga o filtra pantallas. Baja la temperatura del dormitorio. Evita comidas copiosas. Esta preparación permite que la melatonina aparezca a su hora natural.\n\nPaso siete: integra los ciclos ultradianos. Dentro de cada bloque de actividad, respeta los ciclos de noventa minutos. Trabaja en bloques concentrados de ochenta a cien minutos con pausas de quince a veinte entre ellos. No el descanso de mirar el teléfono, sino una pausa que permita a tu sistema nervioso genuinamente desacelerar.\n\nPaso ocho: considera los ritmos semanales y estacionales. Los fines de semana, mantén tu hora de despertar lo más cercana posible a la de entre semana para minimizar el jet lag social. Observa si tu energía, motivación y necesidad de sueño cambian con las estaciones y ajusta tu calendario estacionalmente.\n\nRoenneberg enfatiza que vivir alineada con tu tiempo interno no es un lujo. Es una necesidad de salud. Los datos muestran que las personas que organizan su vida respetando su cronotipo tienen mejores indicadores metabólicos, mejor calidad de sueño, mayor rendimiento y menor estrés percibido.\n\nTu calendario vital es un documento vivo. Ajústalo según lo que observes. Si una actividad no funciona en la ventana que le asignaste, muévela. El objetivo no es la rigidez sino la sincronía. Un cuerpo que trabaja en sincronía con sus ritmos no necesita fuerza de voluntad para funcionar bien. Simplemente fluye.\n\nEn la última lección del curso, daremos el paso más ambicioso: integrar la cronobiología con la carta natal para crear un mapa temporal completo.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Diseña tu calendario vital sincronizado",
+      "subtitle": "Módulo 6 · Lección 17 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "Paso 1-2: ancla y ventana cognitiva",
+      "body": "Ancla: tu hora de despertar natural (sin alarma).\nVentana cognitiva: 2-4h después del despertar.\nAquí van decisiones complejas,\nredacción importante y estudio profundo."
+    },
+    {
+      "type": "content",
+      "title": "Paso 3-4: creatividad y bajón natural",
+      "body": "Ventana creativa: alerta ligeramente reducida\n(brainstorming, escritura libre, diseño).\nBajón postprandial: 6-8h tras despertar.\nProgramar tareas mecánicas o descanso breve."
+    },
+    {
+      "type": "content",
+      "title": "Paso 5-6: pico físico y preparación nocturna",
+      "body": "Ventana física: 6-9h tras despertar.\nEjercicio intenso aquí: mejores resultados.\n2h antes de dormir: reducir luz, filtrar pantallas,\nbajar temperatura, evitar comidas copiosas."
+    },
+    {
+      "type": "content",
+      "title": "Paso 7-8: ultradianos y estacionalidad",
+      "body": "Bloques de 80-100 min + pausas de 15-20 min.\nFines de semana: mantener hora de despertar similar.\nAjustar el calendario estacionalmente\nsegún cambios observados en energía y sueño."
+    },
+    {
+      "type": "quote",
+      "text": "Las personas que organizan su vida respetando su cronotipo tienen mejores indicadores metabólicos, mejor sueño y menor estrés.",
+      "source": "Roenneberg, 2012 — Internal Time: Chronotypes, Social Jet Lag and Why You're So Tired"
+    },
+    {
+      "type": "content",
+      "title": "Un documento vivo",
+      "body": "Tu calendario vital no es rígido: es un marco flexible.\nAjústalo según lo que observes semana a semana.\nEl objetivo no es disciplina sino sincronía.\nUn cuerpo sincronizado no necesita fuerza de voluntad."
+    },
+    {
+      "type": "reflection",
+      "question": "Usando tu cronotipo y tu hora de despertar natural, diseña tu calendario vital ideal para un día entre semana. ¿Qué actividad cambiarías de horario primero?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Un calendario vital sincronizado organiza actividades en las ventanas óptimas de tu biología",
+        "Las claves son: despertar natural, ventana cognitiva, ventana física y preparación nocturna",
+        "Minimizar el jet lag social y respetar ciclos ultradianos completa el diseño"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la lección final integraremos cronobiología y carta natal: dos mapas temporales que, juntos, ofrecen una visión única de tu ritmo vital."
+    }
+  ],
+  "citation": {
+    "researcher": "Roenneberg",
+    "year": "2012",
+    "finding": "Demostró que vivir alineada con el tiempo interno mejora indicadores metabólicos, calidad de sueño, rendimiento cognitivo y reduce el estrés percibido, respaldando el diseño de calendarios vitales cronobiológicos"
+  }
+}
