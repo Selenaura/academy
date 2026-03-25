@@ -379,7 +379,7 @@ export default function CoursePage({ params }) {
               <div className="w-10 h-10 border-2 border-selene-border border-t-selene-gold rounded-full animate-spin" />
               <p className="text-sm text-selene-white-dim mt-4">Cargando leccion...</p>
             </div>
-          )
+          )}
 
           {/* Lesson content */}
           {!lessonLoading && lessonData && (
