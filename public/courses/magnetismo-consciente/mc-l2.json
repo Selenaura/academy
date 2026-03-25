@@ -1,0 +1,45 @@
+{
+  "lesson_number": 2,
+  "module": 1,
+  "title": "Qué dice la ciencia sobre la intención",
+  "text_content": "La intención, definida como la dirección deliberada de la atención hacia un resultado concreto, ha sido objeto de estudio en campos tan diversos como la neurociencia cognitiva, la psicología experimental y la medicina deportiva. Lejos de ser un concepto etéreo, la intención tiene correlatos neuronales precisos y efectos conductuales documentados.\n\nUno de los hallazgos más reveladores proviene de la investigación sobre imaginería motora. Cuando una persona visualiza un movimiento con detalle suficiente, las áreas motoras del cerebro se activan de forma similar a cuando ejecuta ese movimiento físicamente. Estudios con resonancia magnética funcional han demostrado que la corteza premotora y el área motora suplementaria responden tanto a la acción real como a la acción imaginada. Esto significa que la intención enfocada no es un acto pasivo: genera actividad neuronal que prepara al organismo para la acción.\n\nDesde la psicología social, los trabajos sobre implementación de intenciones de Peter Gollwitzer muestran que las personas que formulan sus objetivos en formato si-entonces tienen entre dos y tres veces más probabilidades de cumplirlos que quienes simplemente se proponen una meta genérica. Cuando dices internamente si ocurre X, haré Y, estás creando un enlace neuronal entre una señal ambiental y una respuesta concreta. El cerebro automatiza la decisión antes de que la situación se presente, reduciendo la fricción entre intención y acción.\n\nLa investigación sobre atención selectiva confirma algo que experimentamos cada día sin darnos cuenta: lo que buscamos determina lo que encontramos. El clásico experimento del gorila invisible, donde participantes concentrados en contar pases de balón no perciben a una persona disfrazada de gorila cruzando la escena, ilustra que la atención es un recurso finito y direccional. Cuando programas tu intención, estás asignando recursos atencionales a cierta categoría de estímulos, y eso cambia literalmente lo que percibes del mundo.\n\nEn el campo de la psiconeuroinmunología, investigaciones han mostrado que estados mentales sostenidos influyen en marcadores biológicos. La expectativa positiva, un componente central de la intención, se ha asociado con menor producción de cortisol, mayor actividad de células NK del sistema inmune y mejor recuperación posquirúrgica.\n\nSin embargo, conviene señalar lo que la ciencia no avala: la idea de que basta con pensar en algo para que se materialice sin acción. Los estudios sobre visualización en deportistas muestran que la imaginería funciona como complemento del entrenamiento físico, no como sustituto. La intención prepara el terreno biológico y psicológico, pero la acción sigue siendo indispensable.\n\nEntonces, la intención es una herramienta de configuración interna. Define qué filtros activa tu cerebro, qué patrones de acción prepara tu sistema nervioso y qué señales químicas envía tu cuerpo. Cuando la usas con precisión y la acompañas de acción coherente, los resultados cambian. No por magia, sino por diseño biológico.\n\nEl magnetismo consciente empieza aquí: en comprender que tu intención no es un deseo lanzado al vacío, sino una instrucción operativa que tu organismo traduce en cambios reales de percepción, fisiología y conducta.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Qué dice la ciencia sobre la intención",
+      "subtitle": "Módulo 1 · Lección 2 — Magnetismo Consciente"
+    },
+    {
+      "type": "content",
+      "title": "Intención como activación neuronal",
+      "body": "La visualización detallada de un movimiento activa la corteza premotora y el área motora suplementaria de forma similar a la ejecución real. La intención enfocada genera actividad neuronal que prepara al organismo para la acción."
+    },
+    {
+      "type": "quote",
+      "text": "Las personas que formulan implementaciones de intención en formato si-entonces duplican o triplican la probabilidad de alcanzar sus objetivos.",
+      "source": "Peter Gollwitzer, estudios de implementación de intenciones"
+    },
+    {
+      "type": "content",
+      "title": "La atención como recurso direccional",
+      "body": "El cerebro filtra la realidad según tus prioridades. Al programar una intención, asignas recursos atencionales a categorías específicas de estímulos. El resultado: percibes oportunidades que antes eran invisibles para tu sistema nervioso."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La intención tiene correlatos neuronales medibles y activa áreas motoras del cerebro.",
+        "Las intenciones tipo si-entonces automatizan decisiones y multiplican la eficacia.",
+        "La intención prepara el terreno biológico, pero requiere acción coherente para generar resultados."
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección descubrirás el sistema de activación reticular, el filtro interno que decide qué llega a tu conciencia y qué se descarta."
+    }
+  ],
+  "citation": {
+    "researcher": "Peter Gollwitzer",
+    "year": "1999",
+    "finding": "Las implementaciones de intención en formato si-entonces aumentan significativamente la probabilidad de alcanzar objetivos al automatizar la respuesta conductual ante señales ambientales."
+  }
+}

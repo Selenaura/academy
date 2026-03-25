@@ -1,0 +1,64 @@
+{
+  "lesson_number": 4,
+  "module": 2,
+  "title": "Ritmos circadianos: las 24 horas de tu cuerpo",
+  "text_content": "Tu cuerpo no funciona igual a las seis de la mañana que a las tres de la tarde. Ni a las diez de la noche que a medianoche. Cada hora del día trae consigo un estado fisiológico distinto, orquestado por los ritmos circadianos que exploramos en el módulo anterior. Ahora vamos a recorrer esas veinticuatro horas para que entiendas qué hace tu cuerpo en cada momento y por qué.\n\nEntre las cuatro y las seis de la mañana, tu temperatura corporal alcanza su punto más bajo del día. Es el momento de sueño más profundo para la mayoría de las personas. El cortisol comienza a elevarse gradualmente, preparando el despertar. La hormona de crecimiento, liberada durante las primeras horas de sueño, sigue activa en la reparación de tejidos.\n\nEntre las seis y las nueve, el cortisol alcanza su pico máximo. Este ascenso se llama respuesta de cortisol al despertar y es uno de los marcadores circadianos más estudiados. La presión arterial sube. La testosterona alcanza su nivel más alto del día. Tu cuerpo está en modo de activación máxima. Es también la franja horaria donde estadísticamente ocurren más infartos de miocardio, precisamente porque el sistema cardiovascular está en su punto de mayor exigencia.\n\nEntre las nueve y las doce, la mayoría de personas experimenta su pico de alerta cognitiva. La memoria de trabajo funciona con máxima eficiencia. La capacidad de concentración sostenida es óptima. Si necesitas resolver problemas analíticos, esta ventana suele ser la más productiva.\n\nEntre las doce y las catorce horas se produce lo que la cronobiología llama el bajón postprandial, aunque curiosamente ocurre incluso si no comes. Es una caída natural en la alerta que forma parte del ritmo circadiano, no solo una respuesta a la digestión. En culturas mediterráneas, la siesta se alinea con este valle biológico.\n\nEntre las catorce y las diecisiete, la temperatura corporal alcanza su máximo. La coordinación muscular es óptima. Los tiempos de reacción son los más rápidos del día. Es la ventana donde el rendimiento físico tiende a ser máximo. Los récords deportivos se baten con mayor frecuencia en horario de tarde.\n\nEntre las diecisiete y las veintiuna, el metabolismo empieza a desacelerar. La presión arterial comienza su descenso vespertino. La temperatura corporal inicia su caída. El sistema digestivo reduce su eficiencia, lo que significa que las comidas tardías se metabolizan peor que las tempranas.\n\nEntre las veintiuna y las veintitrés, la glándula pineal comienza a liberar melatonina en respuesta a la disminución de luz. Este es el inicio de lo que se llama la dimensión de la noche biológica. La temperatura corporal sigue bajando. Los procesos de reparación celular se activan. El sistema inmunológico intensifica ciertas funciones de vigilancia nocturna.\n\nEntre las veintitrés y las cuatro, el sueño profundo domina las primeras horas (ondas lentas), mientras que el sueño REM se concentra en las últimas horas de la noche. La hormona de crecimiento se libera en pulsos durante el sueño profundo. La consolidación de la memoria ocurre durante ambas fases.\n\nFoster y Kreitzman dedicaron investigación extensa a documentar estos ritmos y sus implicaciones. Su trabajo subraya que estos patrones no son rígidos: se desplazan según el cronotipo individual, la edad y la exposición lumínica. Una persona con cronotipo tardío experimentará todo este ciclo desplazado dos o tres horas hacia adelante.\n\nLo importante no es memorizar un horario exacto, sino internalizar un principio: tu cuerpo tiene una arquitectura temporal. No es plano. Tiene picos y valles, ventanas de oportunidad y momentos de vulnerabilidad. Cuando organizas tu vida respetando esa arquitectura, todo funciona mejor. Cuando la ignoras, pagas un precio en rendimiento, salud y bienestar.\n\nEl primer paso es observar. Durante los próximos tres días, registra cada dos horas tu nivel de energía, tu claridad mental y tu estado emocional. No cambies nada. Solo observa. Ese mapa personal es más valioso que cualquier tabla genérica, porque es tu ritmo, no el promedio.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Ritmos circadianos: las 24 horas de tu cuerpo",
+      "subtitle": "Módulo 2 · Lección 4 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "4h-9h: el despertar fisiológico",
+      "body": "Temperatura corporal en su punto más bajo (4-6h).\nPico de cortisol al despertar (6-9h).\nTestosterona en máximo diario.\nMayor riesgo cardiovascular por la exigencia."
+    },
+    {
+      "type": "content",
+      "title": "9h-14h: pico cognitivo y bajón natural",
+      "body": "9-12h: máxima alerta, concentración y memoria de trabajo.\n12-14h: bajón postprandial (ocurre incluso sin comer).\nEs un valle circadiano natural,\nno solo respuesta a la digestión."
+    },
+    {
+      "type": "content",
+      "title": "14h-17h: pico físico",
+      "body": "Temperatura corporal en su máximo.\nCoordinación muscular óptima.\nTiempos de reacción más rápidos del día.\nLos récords deportivos se baten más en horario de tarde."
+    },
+    {
+      "type": "content",
+      "title": "17h-23h: la desaceleración",
+      "body": "Metabolismo desacelera gradualmente.\nLa melatonina comienza a liberarse (~21h).\nLa eficiencia digestiva baja:\ncomidas tardías se metabolizan peor."
+    },
+    {
+      "type": "quote",
+      "text": "Estos patrones circadianos no son rígidos: se desplazan según el cronotipo, la edad y la exposición a la luz.",
+      "source": "Foster & Kreitzman, 2017 — Circadian Rhythms: A Very Short Introduction"
+    },
+    {
+      "type": "content",
+      "title": "23h-4h: reparación y consolidación",
+      "body": "Sueño profundo (ondas lentas) al inicio.\nSueño REM concentrado al final de la noche.\nHormona de crecimiento en pulsos nocturnos.\nConsolidación de memoria durante ambas fases."
+    },
+    {
+      "type": "reflection",
+      "question": "Durante tres días, registra cada dos horas tu nivel de energía (1-10), claridad mental y estado emocional. No cambies nada. Solo observa tu ritmo personal."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Tu cuerpo tiene una arquitectura temporal con picos y valles predecibles a lo largo del día",
+        "El rendimiento cognitivo, físico y metabólico fluctúa según la hora",
+        "Respetar esta arquitectura mejora rendimiento, salud y bienestar"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección descubriremos los cronotipos: ¿eres alondra, búho o colibrí? Tu genética tiene la respuesta."
+    }
+  ],
+  "citation": {
+    "researcher": "Foster & Kreitzman",
+    "year": "2017",
+    "finding": "Documentaron cómo los ritmos circadianos crean una arquitectura temporal completa del organismo con picos de rendimiento cognitivo matutino, rendimiento físico vespertino y reparación nocturna"
+  }
+}

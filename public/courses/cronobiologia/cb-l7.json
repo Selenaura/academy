@@ -1,0 +1,64 @@
+{
+  "lesson_number": 7,
+  "module": 3,
+  "title": "Ritmos ultradianos: los ciclos de 90 minutos",
+  "text_content": "Dentro del gran ciclo de veinticuatro horas que has aprendido a reconocer, existen ritmos más rápidos que pulsan a lo largo del día como olas dentro de una marea. Se llaman ritmos ultradianos y el más estudiado dura aproximadamente noventa minutos.\n\nEl término ultradiano significa literalmente más frecuente que un día. Cualquier ritmo biológico con un periodo menor a veinticuatro horas entra en esta categoría. Los hay de segundos (como los latidos del corazón), de minutos (como las oscilaciones hormonales pulsátiles) y de horas. Pero el ciclo de noventa minutos es especial porque afecta directamente a tu capacidad de concentración, tu creatividad y tu necesidad de descanso.\n\nEste ritmo se descubrió primero en el sueño. Nathaniel Kleitman, considerado el padre de la investigación moderna del sueño, observó en la década de 1950 que el sueño se organiza en ciclos de aproximadamente noventa minutos. Cada ciclo progresa desde sueño ligero hasta sueño profundo y termina con una fase de sueño REM. A lo largo de la noche, la proporción de sueño profundo disminuye mientras que la de REM aumenta, pero la duración del ciclo se mantiene notablemente constante.\n\nLo que Kleitman propuso después fue revolucionario: este ciclo de noventa minutos no se detiene al despertar. Continúa durante la vigilia como un ritmo de actividad y descanso que llamó ciclo básico de reposo-actividad. Durante aproximadamente noventa minutos, tu sistema nervioso opera en un estado de alerta y eficiencia creciente. Después, necesita un periodo de recuperación de quince a veinte minutos antes de iniciar otro ciclo.\n\nEsto explica experiencias que probablemente reconoces. Esa sensación de estar en flujo durante una hora o más, totalmente concentrada, y luego notar que tu mente empieza a dispersarse, que los ojos se cansan, que bostezas. No es debilidad. Es tu ritmo ultradiano pidiendo su pausa.\n\nLos estudios de rendimiento cognitivo confirman este patrón. La atención sostenida decae de forma predecible después de noventa minutos de tarea continuada. Forzar la concentración más allá de ese punto no solo es menos productivo sino que deteriora la calidad del trabajo y aumenta los errores.\n\nHay otros ritmos ultradianos relevantes. Las hormonas se liberan en pulsos, no en flujo continuo. La hormona de crecimiento se secreta en pulsos durante el sueño profundo. La insulina responde en oscilaciones rápidas a la ingesta. El cortisol, aunque tiene un ritmo circadiano global, también presenta pulsos ultradianos cada sesenta a noventa minutos.\n\nLa frecuencia cardíaca muestra variabilidad ultradiana. La temperatura corporal oscila en rangos pequeños dentro del gran ciclo diario. Incluso la actividad gástrica sigue patrones ultradianos que influyen en cuándo sientes hambre real versus hambre por costumbre.\n\nFoster y Kreitzman señalan que estos ritmos ultradianos representan un nivel de organización temporal tan fundamental como el circadiano, pero mucho menos reconocido culturalmente. Nuestra sociedad organiza el tiempo en bloques arbitrarios —horas laborales de ocho horas continuas, clases de cincuenta minutos, reuniones de una hora— sin considerar la arquitectura ultradiana del cerebro.\n\nLa aplicación práctica más directa es organizar tu trabajo en bloques de noventa minutos con pausas reales entre ellos. No pausas de pantalla a pantalla, donde cambias del documento de trabajo al teléfono. Pausas donde tu sistema nervioso realmente se desacelera: movimiento físico, aire fresco, unos minutos con los ojos cerrados.\n\nAlgunas personas descubren que su ciclo ultradiano no es exactamente de noventa minutos. Puede ser de ochenta o de cien. El número exacto importa menos que el principio: tu capacidad de concentración tiene un ritmo propio que oscila, y trabajar con ese ritmo en lugar de contra él transforma la calidad de lo que produces.\n\nEn la siguiente lección exploraremos un ritmo ultradiano de mayor escala que afecta profundamente a una parte significativa de la población: el ciclo menstrual.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Ritmos ultradianos: los ciclos de 90 minutos",
+      "subtitle": "Módulo 3 · Lección 7 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "Ultradianos: más rápidos que un día",
+      "body": "Ritmos biológicos con periodo menor a 24h.\nDesde latidos del corazón (segundos)\nhasta ciclos de concentración (~90 minutos).\nOlas dentro de la marea circadiana."
+    },
+    {
+      "type": "content",
+      "title": "El descubrimiento en el sueño",
+      "body": "Kleitman observó ciclos de ~90 min durante el sueño:\nligero → profundo → REM.\nPropuso que el mismo ciclo continúa\ndurante la vigilia como reposo-actividad."
+    },
+    {
+      "type": "content",
+      "title": "Tu concentración tiene ritmo",
+      "body": "~90 min de alerta y eficiencia creciente.\nDespués, 15-20 min de necesidad de recuperación.\nForzar la concentración más allá\naumenta errores y deteriora la calidad."
+    },
+    {
+      "type": "quote",
+      "text": "Los ritmos ultradianos representan un nivel de organización temporal tan fundamental como el circadiano, pero mucho menos reconocido.",
+      "source": "Foster & Kreitzman, 2017 — Circadian Rhythms: A Very Short Introduction"
+    },
+    {
+      "type": "content",
+      "title": "Pulsos hormonales",
+      "body": "Las hormonas no fluyen en continuo: pulsan.\nHormona de crecimiento: pulsos en sueño profundo.\nCortisol: pulsos cada 60-90 min.\nInsulina: oscilaciones rápidas tras la ingesta."
+    },
+    {
+      "type": "content",
+      "title": "Aplicación: bloques de trabajo",
+      "body": "Organiza tu trabajo en bloques de ~90 min.\nPausas reales entre bloques (no pantalla a pantalla).\nMovimiento físico, aire fresco, ojos cerrados.\nTu ciclo personal puede ser 80-100 min."
+    },
+    {
+      "type": "reflection",
+      "question": "Mañana, cronometra cuánto tiempo puedes mantener concentración profunda antes de notar dispersión. Repite tres veces. ¿Cuál es tu ciclo personal?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Los ritmos ultradianos de ~90 min organizan tu concentración, sueño y pulsos hormonales",
+        "Tu capacidad de atención sostenida decae predeciblemente después de cada ciclo",
+        "Trabajar en bloques de 90 min con pausas reales mejora rendimiento y reduce errores"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección exploraremos el ciclo menstrual como reloj biológico: un ritmo que integra hormonas, temperatura y cognición."
+    }
+  ],
+  "citation": {
+    "researcher": "Foster & Kreitzman",
+    "year": "2017",
+    "finding": "Documentaron cómo los ritmos ultradianos de aproximadamente 90 minutos organizan tanto los ciclos de sueño como los patrones de reposo-actividad durante la vigilia"
+  }
+}

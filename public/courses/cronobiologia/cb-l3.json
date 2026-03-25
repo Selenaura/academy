@@ -1,0 +1,64 @@
+{
+  "lesson_number": 3,
+  "module": 1,
+  "title": "Genes reloj: PER, CLOCK, CRY y tu ADN temporal",
+  "text_content": "Dentro del núcleo de tus células hay un reloj construido con genes. No es una metáfora. Es un mecanismo molecular preciso que oscila cada veinticuatro horas, produciendo proteínas que se acumulan, interactúan y se degradan en un ciclo que se ha repetido sin interrupción desde antes de que existieran los mamíferos.\n\nLos protagonistas de este mecanismo tienen nombres que ya suenan a ciencia fundamental: CLOCK, BMAL1, PER y CRY. Juntos forman lo que se conoce como el bucle de retroalimentación transcripción-traducción, el motor molecular del ritmo circadiano.\n\nEl ciclo funciona así. Durante el día, las proteínas CLOCK y BMAL1 se unen y activan la producción de los genes Period (PER1, PER2, PER3) y Cryptochrome (CRY1, CRY2). Estas instrucciones genéticas se traducen en proteínas PER y CRY que empiezan a acumularse en el citoplasma de la célula. Cuando alcanzan una concentración suficiente, las proteínas PER y CRY entran juntas en el núcleo celular y bloquean la actividad de CLOCK y BMAL1. Al silenciar a sus propios activadores, la producción de PER y CRY se detiene. Las proteínas existentes se degradan gradualmente. Cuando su nivel baja lo suficiente, CLOCK y BMAL1 quedan libres para activar de nuevo el ciclo. Todo el proceso tarda aproximadamente veinticuatro horas.\n\nEs un mecanismo de una elegancia impresionante. Un gen que produce una proteína que apaga al gen que la produjo. Un bucle que se autorregula con la precisión suficiente para marcar el paso del día con un error de minutos.\n\nPero lo que hace especialmente relevante este descubrimiento de Hall, Rosbash y Young es que no se trata de un reloj único. Cada célula de tu cuerpo contiene esta maquinaria. Las células de tu hígado oscilan. Las de tu intestino oscilan. Las de tu piel oscilan. Y las variantes genéticas en estos genes reloj difieren entre personas, lo que explica en parte por qué tu ritmo natural no es idéntico al de cualquier otra persona.\n\nPor ejemplo, variaciones en el gen PER3 se han asociado con diferencias en cronotipos. Quienes portan ciertas variantes de PER3 tienden a ser madrugadores naturales, mientras que otras variantes se asocian con preferencia por horarios nocturnos. No es cuestión de voluntad ni de hábito. Es arquitectura genética.\n\nEl gen CRY1, por su parte, tiene una variante que produce una proteína con mayor estabilidad, lo que alarga el ciclo circadiano interno. Las personas con esta variante tienden a tener ciclos ligeramente más largos de veinticuatro horas, lo que se traduce en una tendencia natural a irse a dormir cada vez más tarde, un rasgo que la cronobiología clínica ha vinculado con el trastorno de fase retrasada del sueño.\n\nRoenneberg y sus colegas han demostrado que estas diferencias genéticas no son excepciones marginales. En estudios con miles de participantes, encontraron que la variación genética en los genes reloj contribuye significativamente a las diferencias individuales en cronotipos, junto con factores como la edad y la exposición a la luz.\n\nHay otro gen que merece atención: BMAL1. Además de su papel en el reloj central, BMAL1 participa en la regulación del metabolismo. Alteraciones en este gen se han vinculado con mayor riesgo de síndrome metabólico y resistencia a la insulina. Tu reloj molecular no solo mide el tiempo: organiza tu metabolismo.\n\nLo que esto significa en términos prácticos es profundo. Tu tendencia natural a rendir más por la mañana o por la noche no es pereza ni disciplina. Es genética expresándose a nivel celular. Tu facilidad o dificultad para adaptarte a cambios de horario tiene una base molecular. Tu vulnerabilidad a ciertos problemas de salud cuando vives en desincronía con tus ritmos tiene raíces en estos mismos genes.\n\nConocer tus genes reloj no cambia tu ADN. Pero cambia tu relación con tus ritmos. Porque pasar de culparte por no funcionar bien a las seis de la mañana a entender que tu gen PER3 te diseñó para rendir a las diez es un cambio de perspectiva que transforma cómo organizas tu día, tu trabajo y tu descanso.\n\nEn las próximas lecciones veremos cómo estos genes se expresan en ritmos concretos que puedes observar y medir en tu vida cotidiana.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Genes reloj: PER, CLOCK, CRY y tu ADN temporal",
+      "subtitle": "Módulo 1 · Lección 3 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "El bucle molecular del tiempo",
+      "body": "CLOCK + BMAL1 activan la producción de PER y CRY.\nPER y CRY se acumulan y bloquean a CLOCK/BMAL1.\nAl degradarse, el ciclo se reinicia.\nDuración total: aproximadamente 24 horas."
+    },
+    {
+      "type": "content",
+      "title": "Un reloj en cada célula",
+      "body": "Hígado, intestino, piel, cerebro:\ncada célula contiene esta maquinaria.\nLas variantes genéticas entre personas\nexplican ritmos naturales distintos."
+    },
+    {
+      "type": "content",
+      "title": "PER3: el gen del cronotipo",
+      "body": "Variantes de PER3 se asocian con\npreferencia por horarios matutinos o nocturnos.\nNo es voluntad ni hábito:\nes arquitectura genética."
+    },
+    {
+      "type": "quote",
+      "text": "La variación genética en los genes reloj contribuye significativamente a las diferencias individuales en cronotipos.",
+      "source": "Roenneberg et al., 2012 — Social jetlag and obesity, Current Biology"
+    },
+    {
+      "type": "content",
+      "title": "CRY1: cuando el ciclo se alarga",
+      "body": "Una variante de CRY1 produce proteína más estable\nque alarga el ciclo interno más allá de 24h.\nResultado: tendencia natural a dormir cada vez más tarde.\nBase del trastorno de fase retrasada del sueño."
+    },
+    {
+      "type": "content",
+      "title": "BMAL1: reloj y metabolismo",
+      "body": "BMAL1 no solo mide el tiempo:\nparticipa en la regulación metabólica.\nSus alteraciones se vinculan con\nsíndrome metabólico y resistencia a insulina."
+    },
+    {
+      "type": "reflection",
+      "question": "¿A qué hora sientes tu pico natural de energía y claridad? ¿Y a qué hora notas que tu cuerpo pide descanso? Compara con las personas de tu entorno cercano."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Los genes CLOCK, BMAL1, PER y CRY forman un bucle molecular de ~24h en cada célula",
+        "Variantes de PER3 y CRY1 explican diferencias individuales en cronotipos",
+        "Los genes reloj también regulan el metabolismo, no solo el ciclo sueño-vigilia"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el Módulo 2 veremos cómo estos genes producen ritmos concretos: las 24 horas de tu cuerpo, los cronotipos y tus hormonas rítmicas."
+    }
+  ],
+  "citation": {
+    "researcher": "Roenneberg et al.",
+    "year": "2012",
+    "finding": "Demostraron que la variación genética en genes reloj contribuye significativamente a las diferencias individuales en cronotipos, junto con factores como la edad y la exposición lumínica"
+  }
+}

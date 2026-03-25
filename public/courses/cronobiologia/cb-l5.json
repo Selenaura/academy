@@ -1,0 +1,64 @@
+{
+  "lesson_number": 5,
+  "module": 2,
+  "title": "Cronotipos: alondra, búho y colibrí",
+  "text_content": "Si alguna vez has sentido que el mundo está diseñado para gente que funciona bien a las siete de la mañana y eso no te incluye, la cronobiología tiene una explicación: tu cronotipo.\n\nEl cronotipo es tu perfil temporal biológico. Describe en qué franja del día tu cuerpo alcanza naturalmente sus picos de alerta, energía y rendimiento. No es una preferencia ni un capricho. Es una expresión de tus genes reloj, modulada por tu edad y tu exposición a la luz.\n\nTill Roenneberg, investigador de la Universidad de Múnich, es probablemente quien más ha avanzado en la comprensión científica de los cronotipos. Su trabajo con el Munich Chronotype Questionnaire, aplicado a decenas de miles de personas en múltiples países, ha revelado que los cronotipos se distribuyen en una campana gaussiana. La mayoría de la población cae en un rango intermedio, pero los extremos son significativos: aproximadamente un veinticinco por ciento de la población tiene un cronotipo marcadamente matutino y otro veinticinco por ciento un cronotipo marcadamente vespertino.\n\nLa metáfora clásica usa tres aves. Las alondras despiertan temprano sin esfuerzo, alcanzan su pico cognitivo en las primeras horas de la mañana y sienten sueño al caer la noche. Los búhos tienen un inicio lento por la mañana, se activan progresivamente a lo largo del día y alcanzan su máximo rendimiento en las horas nocturnas. Los colibríes, la mayoría, caen en un rango intermedio con cierta flexibilidad.\n\nRoenneberg ha demostrado que el cronotipo cambia a lo largo de la vida de forma predecible. Los niños tienden a ser matutinos. Durante la adolescencia, el cronotipo se desplaza hacia lo vespertino, alcanzando el máximo de vespertinidad alrededor de los veinte años. A partir de ahí, se produce un retorno gradual hacia la matutinidad con la edad. Las personas mayores suelen ser más matutinas que cuando eran jóvenes.\n\nEste desplazamiento adolescente no es rebeldía. Es biología. El cerebro adolescente retrasa la liberación de melatonina y desplaza todo el ciclo circadiano hacia horarios más tardíos. Obligar a adolescentes a rendir académicamente a las ocho de la mañana es pedirles que funcionen en su equivalente biológico de las cinco de la madrugada. Los datos de rendimiento escolar respaldan esto de forma contundente.\n\nWittmann y colegas introdujeron un concepto fundamental relacionado con los cronotipos: el jet lag social. Es la discrepancia entre tu reloj biológico y tu reloj social. Si tu cuerpo quiere dormir de una a nueve pero tu trabajo te obliga a levantarte a las seis, vives en un estado crónico de desincronía temporal. Wittmann demostró que el jet lag social se asocia con mayor consumo de estimulantes, peor salud metabólica y mayor índice de masa corporal.\n\nLo fascinante es que el cronotipo tiene marcadores biológicos medibles. La hora de inicio de la secreción de melatonina en condiciones de luz tenue (llamada DLMO por sus siglas en inglés) es el estándar de oro para determinar el cronotipo fisiológico. También se puede estimar mediante cuestionarios validados o simplemente observando a qué hora despiertas espontáneamente en días libres cuando no usas alarma.\n\nRoenneberg propone una medida elegante: el punto medio de sueño en días libres corregido. Si en un fin de semana sin compromisos te duermes a la una y despiertas a las nueve, tu punto medio de sueño es las cinco de la mañana. Ese dato solo ya sitúa tu cronotipo en el mapa con notable precisión.\n\nHay implicaciones prácticas directas. Una persona con cronotipo matutino que intenta estudiar a medianoche está luchando contra su biología. Una persona con cronotipo vespertino que intenta meditar a las seis de la mañana está forzando un estado que su cerebro no puede sostener a esa hora. No se trata de falta de voluntad. Se trata de incompatibilidad temporal.\n\nConocer tu cronotipo es el primer paso para diseñar un horario que respete tu naturaleza temporal. No para excusar la pereza ni para rigidizar tu vida, sino para dejar de gastar energía luchando contra un reloj que no vas a cambiar con disciplina.\n\nEn la próxima lección veremos las hormonas que ejecutan estos ritmos: melatonina, cortisol y serotonina. Las mensajeras químicas de tu tiempo interior.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Cronotipos: alondra, búho y colibrí",
+      "subtitle": "Módulo 2 · Lección 5 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "¿Qué es un cronotipo?",
+      "body": "Tu perfil temporal biológico.\nDescribe cuándo alcanzas picos de alerta y rendimiento.\nNo es preferencia ni hábito:\nes expresión de tus genes reloj."
+    },
+    {
+      "type": "content",
+      "title": "Las tres aves del tiempo",
+      "body": "Alondra: pico temprano, sueño al anochecer.\nBúho: inicio lento, máximo rendimiento nocturno.\nColibrí: rango intermedio con flexibilidad.\n~25% marcadamente matutino, ~25% vespertino."
+    },
+    {
+      "type": "content",
+      "title": "El cronotipo cambia con la edad",
+      "body": "Infancia: matutino. Adolescencia: vespertino máximo (~20 años).\nLuego retorno gradual a la matutinidad.\nEl retraso adolescente no es rebeldía: es biología\n(retraso en la liberación de melatonina)."
+    },
+    {
+      "type": "quote",
+      "text": "El jet lag social es la discrepancia entre el reloj biológico y el reloj social, y se asocia con peor salud metabólica.",
+      "source": "Wittmann et al., 2006 — Social jetlag: misalignment of biological and social time"
+    },
+    {
+      "type": "content",
+      "title": "Cómo medir tu cronotipo",
+      "body": "Estándar de oro: hora de inicio de melatonina en luz tenue.\nMétodo práctico: punto medio de sueño en días libres.\nSi duermes 1h-9h sin alarma,\ntu punto medio es las 5h."
+    },
+    {
+      "type": "content",
+      "title": "Incompatibilidad temporal",
+      "body": "Cronotipo matutino estudiando a medianoche: lucha biológica.\nCronotipo vespertino meditando a las 6h: fuerza insostenible.\nNo es falta de voluntad.\nEs desincronía con tu reloj molecular."
+    },
+    {
+      "type": "reflection",
+      "question": "¿A qué hora despiertas espontáneamente cuando no tienes alarma ni compromisos? Calcula tu punto medio de sueño en días libres."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "El cronotipo es tu perfil temporal biológico determinado por genes reloj, edad y luz",
+        "Se distribuye en campana gaussiana: la mayoría es intermedia, con extremos matutinos y vespertinos",
+        "El jet lag social (vivir contra tu cronotipo) se asocia con peor salud metabólica"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección conoceremos a las tres hormonas que ejecutan tus ritmos: melatonina, cortisol y serotonina."
+    }
+  ],
+  "citation": {
+    "researcher": "Roenneberg",
+    "year": "2012",
+    "finding": "Demostró mediante el Munich Chronotype Questionnaire que los cronotipos se distribuyen en campana gaussiana, cambian con la edad y están determinados por variantes genéticas en genes reloj"
+  }
+}

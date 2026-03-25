@@ -1,0 +1,64 @@
+{
+  "lesson_number": 11,
+  "module": 4,
+  "title": "Sueño, ciclo lunar y ritmos cerebrales",
+  "text_content": "El sueño es mucho más que un periodo de inactividad. Es un estado activo donde el cerebro realiza funciones esenciales: consolida memorias, limpia desechos metabólicos, reorganiza conexiones neuronales y regula emociones. Y este proceso no es uniforme. Está organizado en ciclos, ondas y fases que la cronobiología estudia con creciente detalle.\n\nCada noche, tu cerebro atraviesa entre cuatro y seis ciclos de sueño de aproximadamente noventa minutos. Cada ciclo incluye fases de sueño ligero (N1 y N2), sueño profundo de ondas lentas (N3) y sueño REM (movimiento ocular rápido). La proporción cambia a lo largo de la noche: más sueño profundo al inicio, más REM hacia el amanecer.\n\nEl sueño profundo de ondas lentas es donde ocurre la mayor actividad de restauración física. La hormona de crecimiento se libera en pulsos durante esta fase. El sistema glinfático —un sistema de limpieza cerebral descubierto recientemente— se activa para eliminar proteínas residuales como la beta-amiloide, asociada con la enfermedad de Alzheimer. La reducción crónica del sueño profundo compromete literalmente la limpieza de tu cerebro.\n\nEl sueño REM, por su parte, está asociado con la consolidación de la memoria emocional y el procesamiento creativo. Durante el REM, el cerebro muestra una actividad eléctrica similar a la vigilia, pero el cuerpo permanece en parálisis muscular voluntaria. Es la fase donde ocurren los sueños más vívidos.\n\nVolvamos al estudio de Cajochen y sus implicaciones. Lo que su equipo observó no fue solo que la gente dormía menos alrededor de la luna llena. Fue que la arquitectura del sueño cambiaba: específicamente, se reducía la proporción de sueño profundo. Esto es significativo porque el sueño profundo es la fase más dependiente de la melatonina y la más sensible a perturbaciones lumínicas.\n\nSi los niveles de melatonina bajan —como Cajochen encontró durante la luna llena— el sueño profundo se resiente primero. Y con menos sueño profundo, la función restauradora del sueño se compromete. No te sientes igual después de una noche con poco sueño profundo que después de una noche completa, aunque hayas dormido el mismo número de horas.\n\nFoster y Kreitzman dedican atención especial a los ritmos cerebrales y su relación con la luz. Señalan que el sistema circadiano no solo determina cuándo dormimos sino cómo dormimos. La presión de sueño homeostática (acumulada durante la vigilia) interactúa con la señal circadiana del NSQ para determinar la estructura de cada noche. Cuando estos dos sistemas están desalineados —como ocurre en el jet lag o el trabajo por turnos— la arquitectura del sueño se distorsiona incluso si la duración total se mantiene.\n\nHay otro fenómeno relevante: la sensibilidad a la luz nocturna varía entre personas. Algunas personas son exquisitamente sensibles a niveles bajos de luz durante la noche, con supresión de melatonina ante estímulos que otras personas no notan. Esta variabilidad individual podría explicar por qué algunas personas reportan consistentemente efectos de la luna llena en su sueño mientras otras no perciben ningún cambio.\n\nLas ondas cerebrales durante el sueño también muestran ritmos ultradianos. Los husos del sueño —ráfagas de actividad eléctrica durante la fase N2— ocurren con frecuencias específicas que se han asociado con la capacidad de aprendizaje y la inteligencia fluida. La densidad de estos husos varía con la edad, el estrés y posiblemente con factores circadianos aún en investigación.\n\nLa implicación práctica de todo esto es que la calidad del sueño importa tanto como la cantidad. Ocho horas con arquitectura distorsionada no equivalen a siete horas con ciclos completos bien organizados. Proteger la oscuridad de tu dormitorio, mantener horarios consistentes y respetar la señal circadiana de tu NSQ son intervenciones que mejoran la arquitectura del sueño, no solo su duración.\n\nSi quieres experimentar con la observación lunar, hazlo como ejercicio de atención plena cronobiológica. Registra no solo si dormiste bien o mal, sino qué recuerdas de tus sueños, si despertaste durante la noche, si te costó dormirte. La riqueza está en los detalles.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Sueño, ciclo lunar y ritmos cerebrales",
+      "subtitle": "Módulo 4 · Lección 11 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "Arquitectura del sueño",
+      "body": "4-6 ciclos de ~90 min por noche.\nCada ciclo: N1 → N2 → N3 (profundo) → REM.\nMás sueño profundo al inicio de la noche.\nMás REM hacia el amanecer."
+    },
+    {
+      "type": "content",
+      "title": "Sueño profundo: limpieza cerebral",
+      "body": "Hormona de crecimiento se libera en pulsos.\nEl sistema glinfático elimina beta-amiloide.\nReducción crónica del sueño profundo\ncompromete la limpieza del cerebro."
+    },
+    {
+      "type": "content",
+      "title": "Sueño REM: memoria y creatividad",
+      "body": "Consolida memoria emocional.\nProcesamiento creativo activo.\nActividad cerebral similar a la vigilia.\nParálisis muscular voluntaria: fase de sueños vívidos."
+    },
+    {
+      "type": "quote",
+      "text": "El sistema circadiano no solo determina cuándo dormimos sino cómo dormimos: la estructura interna de cada noche.",
+      "source": "Foster & Kreitzman, 2017 — Circadian Rhythms: A Very Short Introduction"
+    },
+    {
+      "type": "content",
+      "title": "Luna llena y sueño profundo",
+      "body": "Cajochen encontró que la reducción de melatonina\nen luna llena afecta primero al sueño profundo.\nMenos sueño profundo = menos restauración,\nincluso con las mismas horas totales de sueño."
+    },
+    {
+      "type": "content",
+      "title": "Sensibilidad individual a la luz nocturna",
+      "body": "Varía enormemente entre personas.\nAlgunas suprimen melatonina con niveles bajos de luz.\nEsto podría explicar por qué unas personas\nnotan efectos lunares y otras no."
+    },
+    {
+      "type": "reflection",
+      "question": "Esta semana, registra cada mañana: hora de dormirte, despertares nocturnos, recuerdo de sueños y nivel de descanso. ¿Varía con algún patrón?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La arquitectura del sueño (profundo/REM) importa tanto como la cantidad total de horas",
+        "El sueño profundo es la fase más sensible a perturbaciones lumínicas y cambios de melatonina",
+        "La sensibilidad individual a la luz nocturna varía y puede explicar diferencias en efectos lunares"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección examinaremos los datos sobre estaciones de nacimiento y temperamento: qué ha encontrado la ciencia."
+    }
+  ],
+  "citation": {
+    "researcher": "Cajochen et al.",
+    "year": "2013",
+    "finding": "Observaron que la reducción de melatonina durante luna llena afecta específicamente la proporción de sueño profundo, comprometiendo la función restauradora del sueño incluso sin cambiar la duración total"
+  }
+}

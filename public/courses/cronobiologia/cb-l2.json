@@ -1,0 +1,64 @@
+{
+  "lesson_number": 2,
+  "module": 1,
+  "title": "El reloj maestro: núcleo supraquiasmático",
+  "text_content": "Dentro de tu cerebro, justo encima del punto donde los nervios ópticos se cruzan, hay un grupo de unas veinte mil neuronas que dirigen toda tu orquesta temporal. Se llama núcleo supraquiasmático, abreviado NSQ, y es el reloj maestro de tu cuerpo.\n\nSu ubicación no es casualidad. Al estar encima del quiasma óptico —el cruce de los nervios que llevan información desde tus ojos al cerebro— el NSQ recibe señales directas de luz. No las señales que usas para ver colores o formas, sino una señal especial de luminosidad ambiental que viaja por un camino neural llamado tracto retinohipotalámico. Células especializadas en tu retina, las células ganglionares intrínsecamente fotosensibles, detectan la intensidad lumínica del entorno y envían esa información directamente al NSQ.\n\nEsto significa que tu reloj maestro se sincroniza con la luz del sol. Cada mañana, cuando la luz natural entra por tus ojos, esas señales le dicen al NSQ que es de día. El NSQ ajusta su ritmo y envía señales al resto del cuerpo: suprime la melatonina, activa el cortisol, sube la temperatura corporal, acelera el metabolismo.\n\nCuando cae la noche y la luz disminuye, el NSQ cambia el mensaje: libera melatonina desde la glándula pineal, baja la temperatura, ralentiza funciones digestivas, prepara el cuerpo para el sueño y la reparación nocturna.\n\nPero el NSQ no es solo un interruptor de día y noche. Es un coordinador central que sincroniza miles de relojes periféricos distribuidos por todo tu organismo. Tu hígado tiene su propio reloj, optimizado para procesar nutrientes en ciertos momentos. Tu corazón tiene ritmos de contracción que varían según la hora. Tus riñones filtran con distinta eficiencia a lo largo del día. El NSQ mantiene todos estos relojes locales en fase, como un director de orquesta que marca el tempo.\n\nLos experimentos que demostraron el papel del NSQ son elegantes y contundentes. En la década de 1970, investigaciones con roedores mostraron que al destruir el NSQ, los animales perdían toda organización rítmica: dormían y comían a horas aleatorias, su temperatura corporal dejaba de oscilar de forma predecible. Pero cuando se trasplantaba tejido del NSQ de un animal con ritmo normal a uno sin NSQ, el receptor recuperaba los ritmos circadianos. Y lo más revelador: adoptaba el ritmo del donante, no el suyo original.\n\nFoster y Kreitzman documentaron extensamente cómo el NSQ coordina la fisiología temporal del organismo completo. Su trabajo muestra que este pequeño núcleo de neuronas no solo marca las horas sino que ajusta estacionalmente la duración del día y la noche internos, respondiendo a los cambios en la duración de la luz solar a lo largo del año.\n\nEsto tiene consecuencias profundas para la salud. Cuando tu NSQ recibe señales lumínicas contradictorias —por ejemplo, luz intensa de pantallas a medianoche— se desincroniza. Y cuando el reloj maestro pierde el compás, los relojes periféricos empiezan a ir cada uno por su cuenta. El resultado es lo que se conoce como disrupción circadiana: problemas de sueño, alteraciones metabólicas, cambios de humor, mayor vulnerabilidad a enfermedades.\n\nLa buena noticia es que el NSQ responde con rapidez a las señales correctas. La exposición a luz natural por la mañana es el sincronizador más potente que existe. No necesitas equipos especiales ni suplementos. Necesitas sol temprano y oscuridad nocturna. Es así de simple y así de difícil en la vida moderna.\n\nHay algo poético en esta arquitectura biológica. El reloj que gobierna tu cuerpo depende de la luz del sol. Tu fisiología interna está literalmente conectada a la estrella más cercana a través de un puente de veinte mil neuronas. No metafóricamente. Físicamente. Tu cuerpo es un instrumento diseñado para vibrar en sintonía con los ciclos de luz y oscuridad de la Tierra.\n\nEntender el NSQ es entender por qué el horario importa. No como disciplina impuesta, sino como respeto a la arquitectura temporal de tu organismo. Las siguientes lecciones te mostrarán cómo esa arquitectura está codificada en tus genes.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "El reloj maestro: núcleo supraquiasmático",
+      "subtitle": "Módulo 1 · Lección 2 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "20.000 neuronas que dirigen tu orquesta",
+      "body": "El núcleo supraquiasmático (NSQ) está\nencima del quiasma óptico, recibiendo\nseñales directas de luz ambiental\na través del tracto retinohipotalámico."
+    },
+    {
+      "type": "content",
+      "title": "Sincronización con la luz solar",
+      "body": "Células retinianas fotosensibles detectan\nla intensidad lumínica del entorno.\nLuz matutina: suprime melatonina, activa cortisol.\nOscuridad nocturna: libera melatonina, baja temperatura."
+    },
+    {
+      "type": "content",
+      "title": "Director de relojes periféricos",
+      "body": "Tu hígado, corazón, riñones y piel\ntienen sus propios relojes locales.\nEl NSQ los mantiene sincronizados\ncomo un director de orquesta marca el tempo."
+    },
+    {
+      "type": "quote",
+      "text": "El NSQ coordina la fisiología temporal del organismo completo, ajustando estacionalmente la duración del día y la noche internos.",
+      "source": "Foster & Kreitzman, 2017 — Circadian Rhythms: A Very Short Introduction"
+    },
+    {
+      "type": "content",
+      "title": "Los experimentos clave",
+      "body": "Sin NSQ: los animales pierden toda organización rítmica.\nCon trasplante de NSQ: recuperan ritmos circadianos.\nDato revelador: adoptan el ritmo del donante,\nno el propio original."
+    },
+    {
+      "type": "content",
+      "title": "Disrupción circadiana",
+      "body": "Luz de pantallas a medianoche desincroniza el NSQ.\nLos relojes periféricos van cada uno por su cuenta.\nResultado: problemas de sueño, metabolismo\nalterado, mayor vulnerabilidad a enfermedades."
+    },
+    {
+      "type": "reflection",
+      "question": "¿Cuánta luz natural recibes en la primera hora tras despertar? ¿Cuánta luz artificial recibes después del atardecer? Registra ambos datos durante tres días."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "El NSQ es un grupo de ~20.000 neuronas que funciona como reloj maestro cerebral",
+        "Se sincroniza con la luz solar a través de células retinianas especializadas",
+        "Coordina los relojes periféricos de cada órgano y responde a cambios estacionales"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección descubriremos los genes que construyen tu reloj: PER, CLOCK, CRY y lo que revelan sobre tu ADN temporal."
+    }
+  ],
+  "citation": {
+    "researcher": "Foster & Kreitzman",
+    "year": "2017",
+    "finding": "Documentaron extensamente cómo el núcleo supraquiasmático coordina la fisiología temporal del organismo completo, incluyendo ajustes estacionales de los ritmos internos de día y noche"
+  }
+}

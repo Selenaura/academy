@@ -1,0 +1,64 @@
+{
+  "lesson_number": 1,
+  "module": 1,
+  "title": "Qué es la cronobiología (y por qué ganó el Nobel)",
+  "text_content": "En 2017, tres investigadores recibieron una llamada que cambió la historia de la biología. Jeffrey Hall, Michael Rosbash y Michael Young ganaron el Premio Nobel de Fisiología o Medicina por descubrir los mecanismos moleculares que controlan los ritmos circadianos. En otras palabras: demostraron que dentro de cada célula de tu cuerpo hay un reloj.\n\nNo un reloj metafórico. Un mecanismo real, construido con proteínas que se acumulan y degradan en ciclos de aproximadamente veinticuatro horas. Cada célula de tu hígado, de tu piel, de tu cerebro, lleva su propio cronómetro molecular. Y todos esos relojes se coordinan entre sí para que tu organismo funcione como una orquesta sincronizada.\n\nLa cronobiología es la ciencia que estudia estos ritmos temporales en los seres vivos. Su nombre viene del griego: chronos (tiempo), bios (vida) y logos (estudio). Pero no es una disciplina nueva. Desde el siglo XVIII, el astrónomo Jean-Jacques d'Ortous de Mairan observó que una planta de mimosa abría y cerraba sus hojas siguiendo un ciclo diario incluso en oscuridad total. La planta no respondía a la luz externa. Llevaba el ritmo dentro.\n\nEse experimento seminal reveló algo profundo: los organismos vivos no solo reaccionan al entorno. Anticipan los cambios del entorno porque tienen relojes internos que evolucionaron durante miles de millones de años bajo la rotación constante de la Tierra.\n\nPiensa en lo que esto significa para tu vida cotidiana. Cada mañana, antes de que abras los ojos, tu cuerpo ya está subiendo los niveles de cortisol para prepararte para la vigilia. Tu temperatura corporal empieza a elevarse. Tu presión arterial aumenta gradualmente. Todo esto sucede antes del despertador, antes del café, antes de cualquier decisión consciente. Tu cuerpo sabe qué hora es.\n\nEl trabajo de Hall, Rosbash y Young consistió en aislar los genes responsables de este mecanismo en la mosca de la fruta Drosophila. Descubrieron que un gen llamado period produce una proteína que se acumula durante la noche y se degrada durante el día, creando un bucle de retroalimentación que dura aproximadamente veinticuatro horas. Después identificaron otros genes —timeless, doubletime, clock, cycle— que forman una maquinaria molecular extraordinariamente precisa.\n\nLo más relevante: estos genes están conservados a lo largo de la evolución. Los mismos mecanismos básicos que hacen funcionar el reloj de una mosca operan en ratones, en peces, en seres humanos. Cuando duermes mal durante semanas, cuando trabajas en turnos nocturnos, cuando viajas a través de múltiples zonas horarias, no solo sientes cansancio. Estás alterando una maquinaria molecular que lleva funcionando en los seres vivos desde hace cientos de millones de años.\n\nLa cronobiología tiene implicaciones en la medicina, en la psicología, en la nutrición, en el rendimiento deportivo. Se ha demostrado que la eficacia de ciertos medicamentos varía según la hora del día en que se administran. Que la capacidad de aprendizaje fluctúa con los ciclos de atención. Que el momento del ejercicio físico influye en los resultados metabólicos.\n\nPero quizá lo más transformador de esta ciencia es la invitación que contiene: observar tu propio cuerpo como un sistema temporal. No eres la misma persona a las siete de la mañana que a las tres de la tarde. Tu capacidad cognitiva, tu estado emocional, tu tolerancia al dolor, tu creatividad: todo oscila.\n\nY aquí es donde la cronobiología se convierte en algo más que una disciplina académica. Se convierte en una herramienta de autoconocimiento. Porque si entiendes tus ritmos, puedes dejar de luchar contra tu biología y empezar a colaborar con ella.\n\nEn este curso vas a aprender a leer los relojes de tu cuerpo. Vas a descubrir tu cronotipo, entender cómo la luz y las estaciones moldean tu fisiología, y explorar los puentes fascinantes entre los ciclos biológicos y los ritmos que la humanidad observó en el cielo durante milenios.\n\nNo se trata de creer ni de descreer. Se trata de observar, medir y comprender. Tu cuerpo ya tiene las respuestas. Solo necesitas aprender a escuchar su tempo.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Qué es la cronobiología (y por qué ganó el Nobel)",
+      "subtitle": "Módulo 1 · Lección 1 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "Nobel 2017: el reloj dentro de cada célula",
+      "body": "Hall, Rosbash y Young demostraron que\ncada célula lleva un cronómetro molecular.\nProteínas que se acumulan y degradan\nen ciclos de aproximadamente 24 horas."
+    },
+    {
+      "type": "content",
+      "title": "El primer experimento: la mimosa de De Mairan",
+      "body": "En el siglo XVIII, una planta abría y cerraba\nsus hojas en ciclos diarios incluso en oscuridad total.\nLos organismos no solo reaccionan al entorno:\nanticipan sus cambios con relojes internos."
+    },
+    {
+      "type": "content",
+      "title": "Tu cuerpo sabe qué hora es",
+      "body": "Antes de abrir los ojos, el cortisol sube.\nLa temperatura corporal se eleva.\nLa presión arterial aumenta.\nTodo esto sin despertador ni decisión consciente."
+    },
+    {
+      "type": "quote",
+      "text": "Los mecanismos moleculares del reloj circadiano están conservados desde las moscas hasta los seres humanos.",
+      "source": "Hall, Rosbash & Young — Nobel de Fisiología o Medicina 2017"
+    },
+    {
+      "type": "content",
+      "title": "El bucle molecular: gen period",
+      "body": "La proteína PER se acumula de noche\ny se degrada de día, creando un ciclo\nde retroalimentación de ~24 horas.\nOtros genes (timeless, clock, cycle) lo regulan."
+    },
+    {
+      "type": "content",
+      "title": "Implicaciones reales",
+      "body": "Medicamentos más eficaces según la hora.\nAprendizaje que fluctúa con ciclos de atención.\nEjercicio con resultados distintos según el momento.\nTu rendimiento oscila: no eres igual a las 7h que a las 15h."
+    },
+    {
+      "type": "reflection",
+      "question": "¿En qué momento del día sientes mayor claridad mental? ¿Y cuándo notas que tu energía baja de forma natural? Observa sin juzgar."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La cronobiología estudia los relojes biológicos internos de los seres vivos",
+        "El Nobel 2017 premió el descubrimiento de los genes reloj en cada célula",
+        "Tus ritmos diarios de energía, cognición y emoción son medibles y predecibles"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección conoceremos al director de orquesta: el núcleo supraquiasmático, el reloj maestro de tu cerebro."
+    }
+  ],
+  "citation": {
+    "researcher": "Hall, Rosbash & Young",
+    "year": "2017",
+    "finding": "Descubrimiento de los mecanismos moleculares que controlan los ritmos circadianos, demostrando que genes como period, timeless y clock forman bucles de retroalimentación de ~24h conservados evolutivamente"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "lesson_number": 8,
+  "module": 3,
+  "title": "El ciclo menstrual como reloj biológico",
+  "text_content": "El ciclo menstrual es mucho más que un evento reproductivo. Es un reloj biológico completo que oscila con un periodo de aproximadamente veintiocho días y que afecta a la temperatura corporal, el estado de ánimo, la cognición, el metabolismo, el sueño y la respuesta inmunológica. Es, de hecho, el ritmo infradiano más evidente y mejor documentado en la biología humana.\n\nDesde la perspectiva de la cronobiología, el ciclo menstrual se divide en cuatro fases, cada una con un perfil hormonal y funcional distinto.\n\nLa fase menstrual (días uno a cinco aproximadamente) marca el inicio del ciclo. Los niveles de estrógeno y progesterona están en su punto más bajo. La temperatura corporal basal desciende. Muchas personas reportan mayor sensibilidad al dolor y menor tolerancia al estrés en estos días. Es un momento que el cuerpo dedica a la limpieza y el reinicio.\n\nLa fase folicular (días seis a trece) se caracteriza por un ascenso progresivo del estrógeno. La temperatura corporal se mantiene relativamente baja. Los estudios cognitivos muestran que durante esta fase aumenta la fluidez verbal, la memoria de trabajo y la capacidad de procesamiento rápido. El estado de ánimo tiende a mejorar progresivamente. Es una fase de expansión y preparación.\n\nLa ovulación (día catorce aproximadamente) trae el pico de estrógeno y un pulso de hormona luteinizante. La temperatura corporal sube entre tres y cinco décimas de grado y permanece elevada hasta la menstruación. Este cambio térmico es tan consistente que se usa como marcador de ovulación en los métodos de fertilidad natural.\n\nLa fase lútea (días quince a veintiocho) está dominada por la progesterona, con estrógeno en niveles moderados. La progesterona tiene efectos sedantes y ansiolíticos, pero cuando cae abruptamente hacia el final de la fase, puede generar los síntomas que conocemos como síndrome premenstrual: irritabilidad, fatiga, cambios de humor, antojos. No es un fallo del sistema. Es una caída brusca en una hormona que estaba sosteniendo el estado de ánimo.\n\nLo fascinante desde la cronobiología es que este ciclo de veintiocho días interactúa con los ritmos circadianos. Durante la fase lútea, la arquitectura del sueño cambia: se reduce el porcentaje de sueño profundo y aumentan los despertares nocturnos. La temperatura corporal nocturna se eleva medio grado, lo que dificulta el inicio del sueño. Muchas personas que duermen bien durante tres semanas y mal durante una no están experimentando insomnio aleatorio. Están experimentando la fase lútea.\n\nEl metabolismo basal también oscila con el ciclo. Durante la fase lútea, el gasto calórico en reposo aumenta entre cien y trescientas calorías diarias. El cuerpo literalmente necesita más energía en esa fase. Los antojos de carbohidratos no son falta de disciplina: son una señal metabólica legítima.\n\nFoster y Kreitzman incluyen el ciclo menstrual dentro de su mapa de ritmos biológicos humanos, señalando que es un ejemplo de cómo los relojes biológicos operan en múltiples escalas temporales simultáneamente. El ritmo circadiano de veinticuatro horas está modulado por el ritmo infradiano de veintiocho días, y ambos son influidos por los ritmos estacionales de luz y temperatura.\n\nHay investigaciones que sugieren que el ciclo menstrual tiene cierta sensibilidad a los ritmos lunares, dado que ambos comparten una periodicidad cercana a los veintinueve días. Cajochen y otros investigadores han señalado la posibilidad de interacciones entre los ciclos lunares y los ritmos reproductivos, aunque la evidencia es preliminar y requiere más estudios controlados.\n\nLa implicación práctica más importante es esta: si menstrúas, tu cuerpo no funciona igual todas las semanas del mes. Exigirte el mismo rendimiento, la misma disponibilidad emocional y la misma rutina de ejercicio en la fase folicular y en la fase lútea tardía es ignorar un reloj biológico de enorme potencia. Rastrear tu ciclo y adaptar expectativas y actividades a cada fase no es debilidad. Es inteligencia cronobiológica.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "El ciclo menstrual como reloj biológico",
+      "subtitle": "Módulo 3 · Lección 8 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "Un reloj de ~28 días",
+      "body": "El ciclo menstrual afecta temperatura, cognición,\nmetabolismo, sueño e inmunidad.\nEs el ritmo infradiano más evidente\ny mejor documentado en humanos."
+    },
+    {
+      "type": "content",
+      "title": "Las cuatro fases",
+      "body": "Menstrual (1-5): limpieza, reinicio, estrógeno bajo.\nFolicular (6-13): estrógeno sube, cognición aguda.\nOvulación (~14): pico estrógeno, sube temperatura.\nLútea (15-28): progesterona domina, sueño cambia."
+    },
+    {
+      "type": "content",
+      "title": "Fase folicular: expansión cognitiva",
+      "body": "Aumenta la fluidez verbal.\nMejora la memoria de trabajo.\nEl procesamiento rápido se optimiza.\nEstado de ánimo en ascenso progresivo."
+    },
+    {
+      "type": "content",
+      "title": "Fase lútea: cambios reales",
+      "body": "Sueño profundo se reduce, despertares aumentan.\nTemperatura nocturna sube ~0.5°C.\nGasto calórico basal sube 100-300 kcal/día.\nAntojos de carbohidratos: señal metabólica legítima."
+    },
+    {
+      "type": "quote",
+      "text": "Los relojes biológicos operan en múltiples escalas temporales simultáneamente: circadiano, infradiano y estacional se modulan mutuamente.",
+      "source": "Foster & Kreitzman, 2017 — Circadian Rhythms: A Very Short Introduction"
+    },
+    {
+      "type": "content",
+      "title": "Inteligencia cronobiológica",
+      "body": "Exigir el mismo rendimiento en todas las fases\nes ignorar un reloj biológico potente.\nRastrear tu ciclo y adaptar actividades\na cada fase es autoconocimiento aplicado."
+    },
+    {
+      "type": "reflection",
+      "question": "Si menstrúas, registra durante dos ciclos tu energía, calidad de sueño y estado emocional diario. ¿Aparecen patrones que se repiten en la misma fase?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "El ciclo menstrual es un reloj biológico de ~28 días que afecta cognición, sueño y metabolismo",
+        "Cada fase tiene un perfil hormonal y funcional distinto con implicaciones prácticas",
+        "Adaptar rutinas a las fases del ciclo es inteligencia cronobiológica, no debilidad"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección ampliaremos la escala temporal: los ritmos infradianos estacionales y su relación con el nacimiento."
+    }
+  ],
+  "citation": {
+    "researcher": "Foster & Kreitzman",
+    "year": "2017",
+    "finding": "Incluyeron el ciclo menstrual como ejemplo central de cómo los relojes biológicos operan en múltiples escalas temporales simultáneamente, modulándose entre el circadiano y el estacional"
+  }
+}

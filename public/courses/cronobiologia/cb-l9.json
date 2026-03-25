@@ -1,0 +1,64 @@
+{
+  "lesson_number": 9,
+  "module": 3,
+  "title": "Ritmos infradianos: estaciones y nacimiento",
+  "text_content": "Los ritmos infradianos son aquellos que oscilan con periodos mayores a veinticuatro horas. El ciclo menstrual que vimos en la lección anterior es uno de ellos. Pero hay otros más lentos, más vastos y quizá más influyentes de lo que solemos reconocer: los ritmos estacionales.\n\nLos seres humanos somos animales estacionales. No tanto como un oso que hiberna o un ciervo que solo se reproduce en otoño, pero mucho más de lo que la vida moderna nos permite notar. La duración del día varía a lo largo del año entre aproximadamente ocho horas de luz en invierno y dieciséis en verano en latitudes medias. Esta variación no es trivial para un organismo cuyo reloj maestro se sincroniza con la luz.\n\nLos cambios estacionales afectan a la producción de melatonina, serotonina y vitamina D. En invierno, con menos horas de luz, la melatonina se secreta durante más tiempo y la serotonina se reduce. Este es el mecanismo detrás del trastorno afectivo estacional, un patrón de depresión invernal que afecta a entre un dos y un diez por ciento de la población en latitudes altas, con una forma subclínica que alcanza hasta al veinte por ciento.\n\nPero más allá de los efectos estacionales en el presente, hay una línea de investigación que conecta la estación de nacimiento con rasgos de temperamento y vulnerabilidad a ciertas condiciones. Aquí es donde la cronobiología se cruza con preguntas antiguas sobre la influencia del momento de nacer.\n\nXenia Gonda y colegas de la Universidad Semmelweis de Budapest publicaron en 2014 un estudio sobre la relación entre la estación de nacimiento y el temperamento afectivo. Trabajando con más de cuatrocientos participantes, encontraron patrones consistentes: quienes nacieron en primavera y verano mostraban mayor tendencia hacia temperamentos hipertímicos (optimistas, energéticos), mientras que quienes nacieron en otoño mostraban mayor tendencia a temperamentos depresivos. Los nacidos en invierno presentaban menos oscilaciones ciclotímicas.\n\nEstos hallazgos no implican que tu mes de nacimiento determine tu personalidad. Lo que sugieren es que las condiciones ambientales durante los últimos meses de gestación y los primeros meses de vida —duración de la luz, temperatura, disponibilidad de nutrientes estacionales, niveles maternos de vitamina D y melatonina— dejan una huella en el desarrollo del sistema nervioso que se manifiesta como tendencias temperamentales.\n\nEs una hipótesis cronobiológica, no astrológica. No invoca fuerzas planetarias sino mecanismos conocidos: la exposición a luz durante periodos críticos del desarrollo cerebral fetal y neonatal programa parcialmente la sensibilidad de los circuitos de regulación emocional. Un cerebro que se desarrolla durante meses de luz larga recibe diferentes señales que uno que se forma durante meses de oscuridad prolongada.\n\nFoster y Kreitzman revisan esta evidencia y señalan que la estacionalidad en humanos es un campo activo donde la cronobiología, la epidemiología y la neurociencia del desarrollo convergen. La estación de nacimiento se ha asociado no solo con temperamento sino con riesgo de ciertas condiciones como esquizofrenia, trastorno bipolar y esclerosis múltiple, siempre con tamaños de efecto pequeños pero estadísticamente consistentes.\n\nHay un detalle importante. Estos efectos estacionales del nacimiento se documentan con mayor claridad en latitudes donde la variación estacional de luz es pronunciada. En regiones ecuatoriales, donde la duración del día varía poco, los efectos se reducen. Esto refuerza la hipótesis de que el mecanismo es la luz, no una influencia misteriosa del calendario.\n\nLa vida moderna atenúa estos ritmos estacionales pero no los elimina. Vivimos con luz artificial que aplana las diferencias entre verano e invierno. Sin embargo, los marcadores biológicos estacionales persisten: los niveles de vitamina D oscilan, la duración del sueño varía, el estado de ánimo fluctúa con las estaciones en personas sensibles.\n\nReconocer que eres un organismo estacional es recuperar una dimensión temporal que la cultura moderna tiende a borrar. No rindes igual en enero que en julio. No necesitas la misma cantidad de sueño en diciembre que en junio. Tu apetito, tu energía y tu motivación tienen componentes estacionales legítimos que merecen ser observados y respetados.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Ritmos infradianos: estaciones y nacimiento",
+      "subtitle": "Módulo 3 · Lección 9 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "Somos animales estacionales",
+      "body": "La luz varía de ~8h (invierno) a ~16h (verano).\nEsto afecta melatonina, serotonina y vitamina D.\nEl trastorno afectivo estacional afecta al 2-10%\nen latitudes altas, con forma leve hasta el 20%."
+    },
+    {
+      "type": "content",
+      "title": "Estación de nacimiento y temperamento",
+      "body": "Nacidos en primavera/verano: más tendencia hipertímica.\nNacidos en otoño: más tendencia depresiva.\nNacidos en invierno: menos oscilaciones ciclotímicas.\nPatrones consistentes en más de 400 participantes."
+    },
+    {
+      "type": "quote",
+      "text": "La estación de nacimiento muestra asociaciones significativas con tipos de temperamento afectivo.",
+      "source": "Gonda et al., 2014 — Season of birth and affective temperaments"
+    },
+    {
+      "type": "content",
+      "title": "Hipótesis cronobiológica (no astrológica)",
+      "body": "No invoca fuerzas planetarias.\nMecanismo: la luz durante el desarrollo fetal\ny neonatal programa la sensibilidad\nde los circuitos de regulación emocional."
+    },
+    {
+      "type": "content",
+      "title": "Latitud como variable clave",
+      "body": "Los efectos se documentan mejor en latitudes\ncon variación estacional pronunciada de luz.\nEn regiones ecuatoriales, los efectos se reducen.\nEl mecanismo es la luz, no el calendario."
+    },
+    {
+      "type": "content",
+      "title": "Tu estacionalidad moderna",
+      "body": "La vida moderna atenúa los ritmos estacionales\npero no los elimina. Vitamina D oscila,\nla duración del sueño varía, el ánimo fluctúa.\nNo rindes igual en enero que en julio."
+    },
+    {
+      "type": "reflection",
+      "question": "¿Notas diferencias en tu energía, sueño o estado de ánimo entre invierno y verano? ¿Y en qué estación naciste tú?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Los ritmos estacionales afectan melatonina, serotonina, vitamina D, sueño y estado de ánimo",
+        "La estación de nacimiento se asocia con tendencias temperamentales por vía cronobiológica",
+        "El mecanismo es la exposición a luz durante periodos críticos del desarrollo nervioso"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el Módulo 4 exploraremos la relación entre la Luna y la biología: qué dicen realmente los estudios científicos."
+    }
+  ],
+  "citation": {
+    "researcher": "Gonda et al.",
+    "year": "2014",
+    "finding": "Encontraron asociaciones significativas entre la estación de nacimiento y tipos de temperamento afectivo: primavera/verano con tendencia hipertímica, otoño con tendencia depresiva, en una muestra de más de 400 personas"
+  }
+}

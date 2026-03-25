@@ -1,0 +1,45 @@
+{
+  "lesson_number": 1,
+  "module": 1,
+  "title": "La ley de atracción bajo el microscopio",
+  "text_content": "Durante siglos, la idea de que nuestros pensamientos moldean la realidad ha recorrido tradiciones filosóficas, espirituales y, más recientemente, estanterías de autoayuda. Pero cuando separamos la mística del mecanismo, aparece algo fascinante: varias disciplinas científicas ofrecen pistas concretas sobre por qué centrar la atención en un objetivo parece acercarnos a él.\n\nComencemos por lo básico. La llamada ley de atracción propone que estados mentales sostenidos generan resultados coherentes con esos estados. La versión popular suele recurrir a metáforas energéticas difusas. La versión que exploraremos aquí prescinde de la magia y se apoya en tres pilares verificables: neurociencia de la atención, psicología de la motivación y fisiología del estrés.\n\nDesde la neurociencia, sabemos que el cerebro filtra aproximadamente once millones de bits de información sensorial por segundo y solo permite que unos cincuenta lleguen a la conciencia. El sistema encargado de ese filtrado se llama sistema de activación reticular (SAR), y responde a las prioridades que tú estableces. Cuando defines una intención con claridad, el SAR ajusta sus parámetros y empiezas a percibir oportunidades que antes pasaban desapercibidas. No es que el universo te envíe señales nuevas; es que tu propio hardware neuronal deja de descartarlas.\n\nDesde la psicología, las investigaciones de Robert Merton sobre la profecía autocumplida, publicadas en 1948, demostraron que las expectativas modifican el comportamiento de manera inconsciente, lo que a su vez altera los resultados. Si esperas colaboración, tu lenguaje corporal y tus decisiones invitan colaboración. Si esperas rechazo, generas microseñales defensivas que provocan justo lo que temías.\n\nDesde la fisiología, el estado emocional sostenido influye en la química corporal. Investigaciones del Instituto HeartMath han mostrado que estados de coherencia cardíaca, donde el ritmo del corazón se vuelve ordenado y estable, correlacionan con mejor toma de decisiones, mayor creatividad y relaciones interpersonales más fluidas. Cuando alguien se entrena para mantener estados emocionales elevados de forma deliberada, no está haciendo magia: está optimizando su biología para la acción eficaz.\n\nEntonces, la atracción no funciona porque emitas una frecuencia mística que el cosmos interpreta. Funciona porque un estado interno coherente recalibra tu percepción, tu conducta y tu fisiología, y esos tres cambios combinados alteran tus resultados de maneras medibles.\n\nEste curso se propone desmontar el pensamiento mágico sin descartar el fenómeno que lo origina. Vamos a sustituir las explicaciones vagas por mecanismos concretos: el SAR, la coherencia cardíaca, la neuroplasticidad, la epigenética y el efecto placebo. Cada módulo ofrece ciencia publicada, ejercicios prácticos y reflexiones para que construyas tu propio protocolo de magnetismo consciente, uno que se sostenga no en la fe ciega sino en la comprensión de cómo funciona tu organismo.\n\nPorque cuando entiendes el mecanismo, dejas de depender de la creencia y empiezas a operar desde el conocimiento. Y eso, en sí mismo, ya cambia las reglas del juego.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "La ley de atracción bajo el microscopio",
+      "subtitle": "Módulo 1 · Lección 1 — Magnetismo Consciente"
+    },
+    {
+      "type": "content",
+      "title": "Más allá del pensamiento mágico",
+      "body": "La ley de atracción no necesita metáforas energéticas para funcionar. Tres disciplinas científicas explican por qué centrar la atención en un objetivo modifica los resultados: neurociencia de la atención, psicología de la motivación y fisiología del estrés."
+    },
+    {
+      "type": "quote",
+      "text": "La profecía autocumplida es, en el origen, una definición falsa de la situación que evoca un nuevo comportamiento que hace que la concepción originalmente falsa se vuelva verdadera.",
+      "source": "Robert K. Merton, 1948"
+    },
+    {
+      "type": "content",
+      "title": "Los tres pilares verificables",
+      "body": "1) El sistema de activación reticular filtra millones de bits y prioriza lo que tú defines como importante. 2) Las expectativas modifican la conducta inconsciente y alteran resultados reales. 3) La coherencia cardíaca optimiza la toma de decisiones y la creatividad, según investigaciones del Instituto HeartMath."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La atracción opera mediante percepción selectiva, conducta coherente y fisiología optimizada, no mediante frecuencias místicas.",
+        "El SAR ajusta tu filtro atencional cuando defines una intención clara.",
+        "Este curso sustituye explicaciones vagas por mecanismos concretos y verificables."
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la próxima lección exploraremos qué dice la investigación científica sobre el poder de la intención y cómo se ha medido en laboratorio."
+    }
+  ],
+  "citation": {
+    "researcher": "Robert K. Merton",
+    "year": "1948",
+    "finding": "Las profecías autocumplidas demuestran que las expectativas modifican el comportamiento, provocando que las creencias iniciales se confirmen en la realidad."
+  }
+}

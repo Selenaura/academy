@@ -1,0 +1,64 @@
+{
+  "lesson_number": 6,
+  "module": 2,
+  "title": "Melatonina, cortisol, serotonina: tus hormonas rítmicas",
+  "text_content": "Si los genes reloj son el mecanismo y el NSQ es el director de orquesta, las hormonas son las mensajeras que llevan las instrucciones a cada rincón de tu cuerpo. Tres de ellas merecen atención especial porque su ritmo diario define en gran medida cómo te sientes, piensas y funcionas a lo largo del día.\n\nLa melatonina es la hormona de la oscuridad. Producida por la glándula pineal, comienza a secretarse cuando la luz ambiental disminuye, típicamente unas dos horas antes de tu hora natural de sueño. Su función principal no es inducir el sueño directamente, sino señalizar la noche biológica: le dice a tu organismo que ha llegado el momento de prepararse para el descanso. Baja la temperatura corporal, reduce la alerta y facilita la transición al sueño.\n\nLo que muchas personas no saben es que la melatonina no solo regula el sueño. Actúa como potente antioxidante, participa en la modulación del sistema inmunológico y tiene propiedades antiinflamatorias. Su supresión por luz artificial nocturna no solo altera el sueño: compromete funciones de reparación y defensa que dependen de la señal de oscuridad.\n\nCajochen y su equipo han documentado cómo factores sutiles como las fases lunares pueden modular la secreción de melatonina. En su estudio controlado, observaron que alrededor de la luna llena, la latencia del sueño aumentaba, la duración del sueño se reducía y los niveles de melatonina disminuían. Aunque el mecanismo exacto sigue en investigación, este hallazgo sugiere que la sensibilidad lumínica humana es más fina de lo que se suponía.\n\nEl cortisol ocupa el polo opuesto. Es la hormona del despertar, de la alerta y de la movilización de recursos. Su ritmo circadiano produce un pico pronunciado en las primeras horas de la mañana, conocido como respuesta de cortisol al despertar, que prepara al cuerpo para la actividad del día. A lo largo de la jornada, el cortisol desciende progresivamente hasta alcanzar su mínimo durante las primeras horas de sueño.\n\nEste ritmo es tan robusto que se usa como marcador de salud circadiana. Cuando el pico matutino se aplana o cuando los niveles nocturnos permanecen elevados, es señal de disrupción. El estrés crónico tiene precisamente ese efecto: aplana la curva de cortisol, dejándote en un estado de activación tónica que no es alerta ni descanso. Ni arriba ni abajo. Un limbo hormonal que erosiona la salud.\n\nLa serotonina completa el triángulo. Es un neurotransmisor con funciones amplias, pero en el contexto circadiano tiene un papel específico: es la precursora de la melatonina. Durante el día, la serotonina se produce en el sistema nervioso central, contribuyendo al estado de ánimo, la cognición y la regulación del apetito. Cuando llega la noche, una enzima activada por la oscuridad convierte la serotonina en melatonina en la glándula pineal.\n\nEsto crea una relación de balancín: serotonina de día, melatonina de noche. Si la producción diurna de serotonina es insuficiente —por falta de luz natural, por déficit de triptófano en la dieta, por estrés crónico— la materia prima para la melatonina nocturna se reduce. Es un recordatorio de que el sueño de la noche se prepara durante el día.\n\nLa exposición a luz natural intensa por la mañana activa la producción de serotonina, suprime la melatonina residual y sincroniza el pico de cortisol. Un solo hábito —salir al exterior en la primera hora tras despertar— impacta las tres hormonas simultáneamente.\n\nHay personas que intentan resolver sus problemas de sueño con melatonina exógena sin abordar la causa: una vida con exceso de luz nocturna y déficit de luz diurna. La melatonina en comprimido puede facilitar el sueño puntualmente, pero no restaura el ritmo. Lo que restaura el ritmo es la señal de luz en el momento correcto.\n\nEstas tres hormonas no operan en aislamiento. Se modulan mutuamente y están influidas por la alimentación, el ejercicio, el estrés y la exposición lumínica. Comprender su danza diaria te da herramientas concretas para influir en tu estado de ánimo, tu energía y tu descanso.\n\nEn el siguiente módulo expandiremos la escala temporal: de las veinticuatro horas pasaremos a los ciclos de noventa minutos, el ciclo menstrual y los ritmos estacionales.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Melatonina, cortisol, serotonina: tus hormonas rítmicas",
+      "subtitle": "Módulo 2 · Lección 6 — Cronobiología y Ritmos Vitales"
+    },
+    {
+      "type": "content",
+      "title": "Melatonina: la hormona de la oscuridad",
+      "body": "Se secreta ~2h antes de tu hora natural de sueño.\nSeñaliza la noche biológica, no induce sueño directamente.\nTambién actúa como antioxidante\ny modulador del sistema inmunológico."
+    },
+    {
+      "type": "content",
+      "title": "Cortisol: la hormona del despertar",
+      "body": "Pico matutino pronunciado al despertar.\nDescenso progresivo durante el día.\nMínimo durante el sueño profundo.\nSu curva aplanada indica estrés crónico."
+    },
+    {
+      "type": "content",
+      "title": "Serotonina: el precursor diurno",
+      "body": "De día: regula ánimo, cognición y apetito.\nDe noche: se convierte en melatonina.\nSi la serotonina diurna es insuficiente,\nla melatonina nocturna se reduce."
+    },
+    {
+      "type": "quote",
+      "text": "Alrededor de la luna llena, la latencia del sueño aumentó, la duración se redujo y los niveles de melatonina disminuyeron.",
+      "source": "Cajochen et al., 2013 — Evidence that the lunar cycle influences human sleep"
+    },
+    {
+      "type": "content",
+      "title": "El balancín día-noche",
+      "body": "Serotonina de día ↔ Melatonina de noche.\nLuz matutina: activa serotonina, suprime melatonina,\nsincroniza cortisol. Un solo hábito\nimpacta las tres hormonas simultáneamente."
+    },
+    {
+      "type": "content",
+      "title": "Por qué la pastilla no basta",
+      "body": "Melatonina exógena facilita el sueño puntualmente\npero no restaura el ritmo circadiano.\nLo que restaura el ritmo es la señal\nde luz en el momento correcto."
+    },
+    {
+      "type": "reflection",
+      "question": "¿Cuántos minutos de luz natural intensa recibes antes de las 10 de la mañana? ¿Cuánta luz artificial recibes después de las 21h? Anota ambos datos esta semana."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Melatonina (noche), cortisol (mañana) y serotonina (día) forman el triángulo hormonal circadiano",
+        "La serotonina diurna es precursora de la melatonina nocturna: el sueño se prepara de día",
+        "La exposición a luz natural matutina impacta las tres hormonas simultáneamente"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el Módulo 3 exploraremos ritmos más allá de las 24 horas: los ciclos de 90 minutos, el ciclo menstrual y los ritmos estacionales."
+    }
+  ],
+  "citation": {
+    "researcher": "Cajochen et al.",
+    "year": "2013",
+    "finding": "En un estudio controlado, encontraron que alrededor de la luna llena la latencia del sueño aumentó, la duración del sueño se redujo y los niveles de melatonina disminuyeron significativamente"
+  }
+}
