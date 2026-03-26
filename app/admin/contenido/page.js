@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { COURSES } from '@/lib/constants';
 import { Card, BackIcon } from '@/components/ui';
+import { FlipCards, MatchExercise, HotspotImage, FillBlanks, SortExercise, KeyConcept, ProgressCheck } from '@/components/InteractiveElements';
 
 // Slide viewer component
 function SlideViewer({ slides }) {
@@ -118,14 +119,78 @@ function LessonView({ courseId, lessonId, onClose }) {
         </div>
       )}
 
-      {/* Citation */}
+      {/* Interactive exercises */}
+      {data.interactive?.length > 0 && (
+        <div className="mb-6 space-y-2">
+          <h3 className="text-sm font-semibold text-selene-white mb-3">Ejercicios interactivos</h3>
+          {data.interactive.map((el, i) => {
+            switch (el.type) {
+              case 'flip_cards': return <FlipCards key={i} cards={el.cards} />;
+              case 'match': return <MatchExercise key={i} title={el.title} pairs={el.pairs} instruction={el.instruction} />;
+              case 'hotspot': return <HotspotImage key={i} imageUrl={el.imageUrl} altText={el.altText} hotspots={el.hotspots} title={el.title} />;
+              case 'fill_blanks': return <FillBlanks key={i} text={el.text} blanks={el.blanks} title={el.title} />;
+              case 'sort': return <SortExercise key={i} title={el.title} items={el.items} instruction={el.instruction} />;
+              case 'key_concept': return <KeyConcept key={i} term={el.term} definition={el.definition} icon={el.icon} source={el.source} />;
+              case 'progress_check': return <ProgressCheck key={i} questions={el.questions} />;
+              default: return null;
+            }
+          })}
+        </div>
+      )}
+
+      {/* Citations */}
       {data.citation && (
-        <div className="bg-selene-blue/5 rounded-xl p-4 border border-selene-blue/10">
-          <div className="text-xs font-semibold text-selene-blue-light mb-1">Referencia científica</div>
-          <div className="text-[13px] text-selene-white-dim">
-            <span className="text-selene-white font-medium">{data.citation.researcher} ({data.citation.year})</span>
-            {' — '}{data.citation.finding}
+        <div className="bg-selene-blue/5 rounded-xl p-4 border border-selene-blue/10 mb-4">
+          <div className="text-xs font-semibold text-selene-blue-light mb-2">Referencias científicas</div>
+          {Array.isArray(data.citation) ? data.citation.map((c, i) => (
+            <div key={i} className="text-[13px] text-selene-white-dim mb-1.5 last:mb-0">
+              <span className="text-selene-white font-medium">{c.researcher} ({c.year})</span>
+              {' — '}{c.finding}
+            </div>
+          )) : (
+            <div className="text-[13px] text-selene-white-dim">
+              <span className="text-selene-white font-medium">{data.citation.researcher} ({data.citation.year})</span>
+              {' — '}{data.citation.finding}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Bibliography */}
+      {data.bibliography?.length > 0 && (
+        <div className="bg-selene-elevated/50 rounded-xl p-4 border border-selene-border mb-4">
+          <div className="text-xs font-semibold text-selene-white-dim mb-2">Bibliografía</div>
+          {data.bibliography.map((b, i) => (
+            <div key={i} className="text-[12px] text-selene-white-dim mb-1 last:mb-0">
+              {b.author} ({b.year}). <em>{b.title}</em>. {b.type === 'paper' ? '📄' : '📖'}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Homework */}
+      {data.homework && (
+        <div className="bg-selene-gold/5 rounded-xl p-4 border border-selene-gold/20 mb-4">
+          <div className="text-xs font-semibold text-selene-gold mb-2">📋 Tarea para casa</div>
+          <p className="text-[13px] text-selene-white-dim leading-relaxed mb-2">{data.homework.task}</p>
+          <div className="flex gap-4 text-[11px] text-selene-white-dim">
+            {data.homework.duration && <span>⏱ {data.homework.duration}</span>}
+            {data.homework.materials && <span>📦 {data.homework.materials}</span>}
           </div>
+        </div>
+      )}
+
+      {/* Quiz points */}
+      {data.quiz_points?.length > 0 && (
+        <div className="bg-selene-elevated/50 rounded-xl p-4 border border-selene-border">
+          <div className="text-xs font-semibold text-selene-white-dim mb-2">Puntos clave para el quiz</div>
+          <ul className="space-y-1">
+            {data.quiz_points.map((p, i) => (
+              <li key={i} className="text-[12px] text-selene-white-dim flex gap-2">
+                <span className="text-selene-gold shrink-0">✓</span><span>{p}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>
