@@ -105,7 +105,7 @@ function LessonView({ courseId, lessonId, onClose }) {
       {/* Text content */}
       <Card className="p-6 mb-6">
         <div className="text-[14px] text-selene-white-dim leading-[1.8]">
-          {data.text_content.split('\n\n').map((paragraph, i) => {
+          {(data.text_content || '').split('\n\n').map((paragraph, i) => {
             if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
               return (
                 <h3 key={i} className="text-[16px] font-display font-semibold text-selene-gold mt-8 mb-3 first:mt-0">

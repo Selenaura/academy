@@ -401,7 +401,7 @@ export default function CoursePage({ params }) {
               {/* Text content */}
               <Card className="p-6 md:p-8 mb-6">
                 <div className="prose-selene">
-                  {lessonData.text_content.split('\n\n').map((paragraph, i) => {
+                  {(lessonData.text_content || '').split('\n\n').map((paragraph, i) => {
                     // Detect section headers with **bold** markdown
                     if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
                       return (
