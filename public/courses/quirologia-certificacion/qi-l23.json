@@ -67,17 +67,34 @@
       "type": "flip_cards",
       "prompt": "Distingue entre una foto buena y una foto mala para lectura remota.",
       "cards": [
-        {"front": "Foto con flash directo del movil", "back": "MALA. El flash frontal aplana las lineas, elimina las sombras que revelan profundidad y crea reflejos que oscurecen marcas. Siempre luz lateral."},
-        {"front": "Foto con fondo blanco, luz desde una ventana lateral", "back": "BUENA. El fondo limpio no interfiere con las lineas. La luz lateral crea sombras sutiles que revelan la topografia de la palma y la elevacion de los montes."},
-        {"front": "Foto con la mano muy tensa y dedos estirados al maximo", "back": "MALA. La tension modifica la apariencia de las lineas y los montes. La posicion ideal es relajada, con los dedos ligeramente separados de forma natural."},
-        {"front": "Dos fotos generales + dos fotos con zoom de cada palma", "back": "BUENA. Las fotos generales dan contexto de forma y proporcion. El zoom permite ver lineas finas, marcas y potencialmente dermatoglifos. Cuatro fotos es el minimo profesional."}
+        {
+          "front": "Foto con flash directo del movil",
+          "back": "MALA. El flash frontal aplana las lineas, elimina las sombras que revelan profundidad y crea reflejos que oscurecen marcas. Siempre luz lateral."
+        },
+        {
+          "front": "Foto con fondo blanco, luz desde una ventana lateral",
+          "back": "BUENA. El fondo limpio no interfiere con las lineas. La luz lateral crea sombras sutiles que revelan la topografia de la palma y la elevacion de los montes."
+        },
+        {
+          "front": "Foto con la mano muy tensa y dedos estirados al maximo",
+          "back": "MALA. La tension modifica la apariencia de las lineas y los montes. La posicion ideal es relajada, con los dedos ligeramente separados de forma natural."
+        },
+        {
+          "front": "Dos fotos generales + dos fotos con zoom de cada palma",
+          "back": "BUENA. Las fotos generales dan contexto de forma y proporcion. El zoom permite ver lineas finas, marcas y potencialmente dermatoglifos. Cuatro fotos es el minimo profesional."
+        }
       ]
     },
     {
       "type": "fill_blanks",
       "instruction": "Completa las afirmaciones sobre lectura remota por foto.",
       "template": "En foto se puede leer la forma de la mano pero NO la ___0___ de los montes. El precio remoto se fija entre el ___1___ y el 80% del precio presencial. La iluminacion debe ser ___2___ (desde un lado), nunca flash directo. El numero minimo de fotos para una lectura remota es ___3___.",
-      "answers": ["firmeza", "70", "lateral", "4"]
+      "answers": [
+        "firmeza",
+        "70",
+        "lateral",
+        "4"
+      ]
     },
     {
       "type": "progress_check",
@@ -103,6 +120,25 @@
           "explanation": "El Paso 3 requiere palpacion para evaluar firmeza, temperatura y flexibilidad. En foto, solo puedes observar la elevacion aparente de los montes, perdiendo la confirmacion tactil que aporta informacion sobre la calidad de la energia."
         }
       ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "Lectura remota por foto",
+      "steps": [
+        "Recibir 4 fotos (palma, dorso, dedos, perfil)",
+        "Evaluar calidad",
+        "Análisis visual (sin palpación)",
+        "Informe escrito detallado",
+        "Videollamada de entrega (opcional)"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La lectura remota permite leer forma, dedos, líneas y dermatoglifos",
+        "La calidad de la lectura depende directamente de la calidad de las fotos",
+        "El precio remoto se fija al 70-80% del presencial comunicando las limitaciones"
+      ]
     }
   ],
   "citation": [
@@ -123,10 +159,30 @@
     }
   ],
   "bibliography": [
-    {"author": "Cummins, H. & Midlo, C.", "year": "1961", "title": "Fingerprints, Palms and Soles", "type": "Libro"},
-    {"author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro"},
-    {"author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro"},
-    {"author": "Altman, N.", "year": "1999", "title": "Palmistry: The Universal Guide", "type": "Libro"}
+    {
+      "author": "Cummins, H. & Midlo, C.",
+      "year": "1961",
+      "title": "Fingerprints, Palms and Soles",
+      "type": "Libro"
+    },
+    {
+      "author": "Goldberg, E.",
+      "year": "2016",
+      "title": "The Art and Science of Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Altman, N.",
+      "year": "1999",
+      "title": "Palmistry: The Universal Guide",
+      "type": "Libro"
+    }
   ],
   "homework": {
     "task": "Pide a una persona de confianza que te envie fotos de ambas manos siguiendo tus instrucciones escritas (sin ayuda directa). Evalua la calidad de las fotos recibidas. Si son suficientes, realiza una lectura escrita parcial (forma de mano + lineas principales). Si no, redacta un mensaje profesional pidiendo nuevas fotos. Guarda fotos y lectura en tu portfolio.",

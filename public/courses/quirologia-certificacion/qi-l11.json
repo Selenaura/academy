@@ -75,7 +75,12 @@
       "type": "fill_blanks",
       "prompt": "Completa la escala de firmeza de los montes.",
       "template": "Un monte ___0___ indica exceso de energia concentrada. Un monte ___1___ indica una cualidad activa y equilibrada. Un monte ___2___ indica una tendencia latente. Un monte ___3___ indica un area poco desarrollada.",
-      "answers": ["muy firme", "firme", "suave", "plano"]
+      "answers": [
+        "muy firme",
+        "firme",
+        "suave",
+        "plano"
+      ]
     },
     {
       "type": "progress_check",
@@ -84,6 +89,25 @@
         "Puedo palpar los 9 puntos siguiendo el recorrido sistematico sin olvidar ninguno.",
         "Distingo al menos 3 niveles de firmeza diferentes al tacto.",
         "He creado una ficha de palpacion completa de ambas manos."
+      ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "Palpación de montes",
+      "steps": [
+        "Observar elevación visual",
+        "Tocar con pulgar",
+        "Evaluar firmeza",
+        "Comparar bilateral",
+        "Registrar predominantes"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La palpación usa la yema del pulgar con presión suave pero firme",
+        "La escala de firmeza va de muy firme a plano sin juicios de valor",
+        "Las diferencias entre ambas manos revelan evolución personal"
       ]
     }
   ],

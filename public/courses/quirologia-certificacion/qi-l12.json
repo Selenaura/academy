@@ -63,22 +63,52 @@
       "type": "match",
       "prompt": "Conecta cada combinacion de dos montes con el perfil que producen.",
       "pairs": [
-        {"left": "Jupiter fuerte + Mercurio fuerte", "right": "Lider comunicador: dirige y sabe articular su vision"},
-        {"left": "Venus fuerte + Apolo fuerte", "right": "Artista apasionado: vive a traves de los sentidos y crea belleza"},
-        {"left": "Saturno fuerte + Luna fuerte", "right": "Pensador profundo: necesita soledad para crear ideas originales"},
-        {"left": "Venus excesivo + Saturno plano", "right": "Desequilibrio: busqueda de placer sin estructura ni disciplina"},
-        {"left": "Marte excesivo + Venus plano", "right": "Desequilibrio: intensidad y eficacia pero intimidante y poco calido"}
+        {
+          "left": "Jupiter fuerte + Mercurio fuerte",
+          "right": "Lider comunicador: dirige y sabe articular su vision"
+        },
+        {
+          "left": "Venus fuerte + Apolo fuerte",
+          "right": "Artista apasionado: vive a traves de los sentidos y crea belleza"
+        },
+        {
+          "left": "Saturno fuerte + Luna fuerte",
+          "right": "Pensador profundo: necesita soledad para crear ideas originales"
+        },
+        {
+          "left": "Venus excesivo + Saturno plano",
+          "right": "Desequilibrio: busqueda de placer sin estructura ni disciplina"
+        },
+        {
+          "left": "Marte excesivo + Venus plano",
+          "right": "Desequilibrio: intensidad y eficacia pero intimidante y poco calido"
+        }
       ]
     },
     {
       "type": "flip_cards",
       "prompt": "Dado el perfil descrito, identifica que montes predominan.",
       "cards": [
-        {"front": "Persona carismatica, vital, con don de gentes y liderazgo natural", "back": "Venus fuerte + Jupiter fuerte: calidez humana combinada con ambicion y autoridad."},
-        {"front": "Persona analitica, solitaria, con ideas profundas y trabajo de calidad", "back": "Saturno fuerte + Luna fuerte: disciplina introvertida con imaginacion creativa."},
-        {"front": "Persona elocuente que capta matices emocionales en cada conversacion", "back": "Mercurio fuerte + Luna fuerte: habilidad verbal potenciada por sensibilidad intuitiva."},
-        {"front": "Persona ambiciosa pero que no logra transmitir su vision a los demas", "back": "Jupiter excesivo + Mercurio plano: grandes aspiraciones sin habilidad comunicativa."},
-        {"front": "Persona creativa, expresiva, con gusto estetico refinado y necesidad de belleza", "back": "Apolo fuerte + Venus fuerte: creatividad artistica enraizada en la pasion sensorial."}
+        {
+          "front": "Persona carismatica, vital, con don de gentes y liderazgo natural",
+          "back": "Venus fuerte + Jupiter fuerte: calidez humana combinada con ambicion y autoridad."
+        },
+        {
+          "front": "Persona analitica, solitaria, con ideas profundas y trabajo de calidad",
+          "back": "Saturno fuerte + Luna fuerte: disciplina introvertida con imaginacion creativa."
+        },
+        {
+          "front": "Persona elocuente que capta matices emocionales en cada conversacion",
+          "back": "Mercurio fuerte + Luna fuerte: habilidad verbal potenciada por sensibilidad intuitiva."
+        },
+        {
+          "front": "Persona ambiciosa pero que no logra transmitir su vision a los demas",
+          "back": "Jupiter excesivo + Mercurio plano: grandes aspiraciones sin habilidad comunicativa."
+        },
+        {
+          "front": "Persona creativa, expresiva, con gusto estetico refinado y necesidad de belleza",
+          "back": "Apolo fuerte + Venus fuerte: creatividad artistica enraizada en la pasion sensorial."
+        }
       ]
     },
     {
@@ -88,6 +118,44 @@
         "Puedo identificar al menos 3 combinaciones armonicas de montes y describir el perfil que producen.",
         "Reconozco al menos 2 desequilibrios comunes y explico como se manifiestan en la vida cotidiana.",
         "Entiendo que la lectura de montes siempre requiere contexto (forma de mano, lineas principales)."
+      ]
+    },
+    {
+      "type": "comparison",
+      "headers": [
+        "Combinación",
+        "Indica",
+        "Profesiones afines"
+      ],
+      "rows": [
+        [
+          "Júpiter + Apolo",
+          "Liderazgo creativo",
+          "Dirección artística, emprendimiento"
+        ],
+        [
+          "Saturno + Mercurio",
+          "Análisis metódico",
+          "Investigación, ingeniería"
+        ],
+        [
+          "Venus + Luna",
+          "Sensibilidad profunda",
+          "Terapia, arte, música"
+        ],
+        [
+          "Marte + Júpiter",
+          "Acción + ambición",
+          "Deportes, gestión, ventas"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "Los montes se leen en combinación para formar perfiles más precisos",
+        "Los desequilibrios entre montes señalan áreas de tensión",
+        "La lectura de montes siempre se contextualiza con forma de mano y líneas"
       ]
     }
   ],

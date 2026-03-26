@@ -67,25 +67,88 @@
       "type": "fill_blanks",
       "instruction": "Completa las afirmaciones sobre la lectura bilateral.",
       "template": "La mano ___0___ muestra el potencial innato y la herencia. La diferencia entre ambas manos revela lo ___1___. Si la linea del corazon es mas profunda en la mano dominante, indica que la persona ha ___2___ su vida emocional mas alla de su predisposicion natural.",
-      "answers": ["no dominante", "adquirido", "desarrollado"]
+      "answers": [
+        "no dominante",
+        "adquirido",
+        "desarrollado"
+      ]
     },
     {
       "type": "match",
       "instruction": "Conecta cada situacion bilateral con lo que indica.",
       "pairs": [
-        {"left": "Linea de cabeza recta en no dominante, curva en dominante", "right": "Giro de pensamiento analitico hacia creativo"},
-        {"left": "Cadenas en corazon no dominante, corazon claro en dominante", "right": "Infancia emocional dificil superada con trabajo personal"},
-        {"left": "Linea de destino ausente en no dominante, presente en dominante", "right": "Proposito vital construido por voluntad propia"},
-        {"left": "Monte de Venus plano en no dominante, desarrollado en dominante", "right": "Capacidad de amor cultivada activamente"}
+        {
+          "left": "Linea de cabeza recta en no dominante, curva en dominante",
+          "right": "Giro de pensamiento analitico hacia creativo"
+        },
+        {
+          "left": "Cadenas en corazon no dominante, corazon claro en dominante",
+          "right": "Infancia emocional dificil superada con trabajo personal"
+        },
+        {
+          "left": "Linea de destino ausente en no dominante, presente en dominante",
+          "right": "Proposito vital construido por voluntad propia"
+        },
+        {
+          "left": "Monte de Venus plano en no dominante, desarrollado en dominante",
+          "right": "Capacidad de amor cultivada activamente"
+        }
       ]
     },
     {
       "type": "flip_cards",
       "prompt": "Caso real: que indica la diferencia entre ambas manos?",
       "cards": [
-        {"front": "Isla en linea de vida dominante entre 25-30, pero vida fuerte en no dominante", "back": "Crisis temporal (enfermedad, agotamiento, depresion) en esa franja de edad. La persona nacio con buena vitalidad pero atraveso un periodo dificil que luego supero."},
-        {"front": "Corazon con cadenas en no dominante pero limpio y profundo en dominante", "back": "Herencia emocional compleja (infancia turbulenta o vinculos tempranos inestables) que la persona ha sanado y transformado a traves de trabajo consciente."},
-        {"front": "Jupiter prominente en ambas manos pero Venus solo desarrollado en la dominante", "back": "Ambicion natural desde el nacimiento, pero la capacidad de amor, intimidad y conexion emocional ha sido un desarrollo posterior, cultivado con la experiencia."}
+        {
+          "front": "Isla en linea de vida dominante entre 25-30, pero vida fuerte en no dominante",
+          "back": "Crisis temporal (enfermedad, agotamiento, depresion) en esa franja de edad. La persona nacio con buena vitalidad pero atraveso un periodo dificil que luego supero."
+        },
+        {
+          "front": "Corazon con cadenas en no dominante pero limpio y profundo en dominante",
+          "back": "Herencia emocional compleja (infancia turbulenta o vinculos tempranos inestables) que la persona ha sanado y transformado a traves de trabajo consciente."
+        },
+        {
+          "front": "Jupiter prominente en ambas manos pero Venus solo desarrollado en la dominante",
+          "back": "Ambicion natural desde el nacimiento, pero la capacidad de amor, intimidad y conexion emocional ha sido un desarrollo posterior, cultivado con la experiencia."
+        }
+      ]
+    },
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Mano no dominante",
+        "Mano dominante"
+      ],
+      "rows": [
+        [
+          "Representa",
+          "Potencial innato",
+          "Desarrollo adquirido"
+        ],
+        [
+          "Cambia",
+          "Muy poco",
+          "Con el tiempo"
+        ],
+        [
+          "Prioridad",
+          "Punto de partida",
+          "Estado actual"
+        ],
+        [
+          "Lectura",
+          "Lo que traes",
+          "Lo que has hecho con ello"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La mano no dominante muestra el potencial innato y la dominante el desarrollo actual",
+        "La datación temporal usa puntos anatómicos de referencia como aproximación",
+        "La lectura bilateral transforma observaciones aisladas en narrativa coherente"
       ]
     }
   ],
@@ -107,11 +170,36 @@
     }
   ],
   "bibliography": [
-    {"author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro"},
-    {"author": "Altman, N.", "year": "1999", "title": "Palmistry: The Universal Guide", "type": "Libro"},
-    {"author": "Rogers, C.", "year": "1961", "title": "On Becoming a Person", "type": "Libro"},
-    {"author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro"},
-    {"author": "Fitzherbert, A.", "year": "1986", "title": "Hand Psychology: The Meaning of Shapes and Lines", "type": "Libro"}
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Altman, N.",
+      "year": "1999",
+      "title": "Palmistry: The Universal Guide",
+      "type": "Libro"
+    },
+    {
+      "author": "Rogers, C.",
+      "year": "1961",
+      "title": "On Becoming a Person",
+      "type": "Libro"
+    },
+    {
+      "author": "Goldberg, E.",
+      "year": "2016",
+      "title": "The Art and Science of Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Fitzherbert, A.",
+      "year": "1986",
+      "title": "Hand Psychology: The Meaning of Shapes and Lines",
+      "type": "Libro"
+    }
   ],
   "homework": {
     "task": "Pide a una persona de confianza que te muestre ambas manos. Sin conocer su historia, realiza una lectura bilateral escrita: compara las cuatro lineas mayores entre ambas manos, identifica las diferencias mas notables e intenta una datacion temporal. Despues, comparte tus hallazgos y pide feedback. Guarda esta lectura bilateral en tu portfolio.",

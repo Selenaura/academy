@@ -67,17 +67,34 @@
       "type": "match",
       "instruction": "Conecta cada nivel de experiencia con su rango de precios orientativo.",
       "pairs": [
-        {"left": "Principiante (0-50 lecturas)", "right": "20-35 euros por sesion"},
-        {"left": "Intermedio (50-200 lecturas)", "right": "40-60 euros por sesion"},
-        {"left": "Experimentado (200+ lecturas)", "right": "60-100+ euros por sesion"},
-        {"left": "Paquete de 3 sesiones", "right": "Descuento del 20% sobre el precio individual"}
+        {
+          "left": "Principiante (0-50 lecturas)",
+          "right": "20-35 euros por sesion"
+        },
+        {
+          "left": "Intermedio (50-200 lecturas)",
+          "right": "40-60 euros por sesion"
+        },
+        {
+          "left": "Experimentado (200+ lecturas)",
+          "right": "60-100+ euros por sesion"
+        },
+        {
+          "left": "Paquete de 3 sesiones",
+          "right": "Descuento del 20% sobre el precio individual"
+        }
       ]
     },
     {
       "type": "fill_blanks",
       "instruction": "Completa los datos de pricing y estrategia de negocio.",
       "template": "La lectura remota se cobra entre el ___0___ y el 80% del precio presencial. El reto consiste en leer ___1___ manos gratis antes de subir precios. Un taller grupal de 10 personas a 20 euros genera ___2___ euros en dos horas. La combinacion quirologia + astrologia permite sesiones premium de ___3___ minutos.",
-      "answers": ["70", "50", "200", "90"]
+      "answers": [
+        "70",
+        "50",
+        "200",
+        "90"
+      ]
     },
     {
       "type": "progress_check",
@@ -103,6 +120,49 @@
           "explanation": "La combinacion quirologia + astrologia en sesion de 90 minutos tiene un precio de 80-120 euros, el mayor valor por sesion. Combina dos perspectivas complementarias (mano + carta natal) creando una experiencia premium que justifica el precio."
         }
       ]
+    },
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Presencial",
+        "Online video",
+        "Remota foto"
+      ],
+      "rows": [
+        [
+          "Precio",
+          "40-80€",
+          "30-60€",
+          "25-50€"
+        ],
+        [
+          "Palpación",
+          "Completa",
+          "No",
+          "No"
+        ],
+        [
+          "Interacción",
+          "Máxima",
+          "Alta",
+          "Baja"
+        ],
+        [
+          "Escalabilidad",
+          "Baja",
+          "Media",
+          "Alta"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "El pricing se estructura por nivel de experiencia con paquetes de descuento",
+        "El reto de las 50 manos gratuitas es la estrategia más eficaz para comenzar",
+        "Las combinaciones con otras disciplinas multiplican el valor profesional"
+      ]
     }
   ],
   "citation": [
@@ -123,11 +183,36 @@
     }
   ],
   "bibliography": [
-    {"author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro"},
-    {"author": "Rogers, C.", "year": "1961", "title": "On Becoming a Person", "type": "Libro"},
-    {"author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro"},
-    {"author": "Altman, N.", "year": "1999", "title": "Palmistry: The Universal Guide", "type": "Libro"},
-    {"author": "Fitzherbert, A.", "year": "1986", "title": "Hand Psychology: The Meaning of Shapes and Lines", "type": "Libro"}
+    {
+      "author": "Goldberg, E.",
+      "year": "2016",
+      "title": "The Art and Science of Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Rogers, C.",
+      "year": "1961",
+      "title": "On Becoming a Person",
+      "type": "Libro"
+    },
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Altman, N.",
+      "year": "1999",
+      "title": "Palmistry: The Universal Guide",
+      "type": "Libro"
+    },
+    {
+      "author": "Fitzherbert, A.",
+      "year": "1986",
+      "title": "Hand Psychology: The Meaning of Shapes and Lines",
+      "type": "Libro"
+    }
   ],
   "homework": {
     "task": "Escribe tu plan de 3 meses con metas numericas (manos leidas, precio, canal principal). Crea un borrador de tu perfil profesional (nombre, descripcion de servicio, precios, contacto). Identifica 10 personas concretas para tus primeras lecturas gratuitas. Lee al menos 2 manos esta semana — el reto de las 50 empieza ahora.",

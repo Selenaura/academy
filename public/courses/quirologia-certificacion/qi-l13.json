@@ -64,30 +64,92 @@
       "prompt": "Localiza las 6 lineas secundarias en el diagrama de la palma.",
       "imageUrl": "/images/quiro/mano-lineas-marcas.svg",
       "hotspots": [
-        {"id": "marte", "label": "Linea de Marte", "description": "Paralela a la linea de la vida, dentro del monte de Venus: proteccion y energia de reserva."},
-        {"id": "intuicion", "label": "Linea de intuicion", "description": "Arco en el monte de Luna: sensibilidad perceptiva no ordinaria."},
-        {"id": "union", "label": "Lineas de union", "description": "Horizontales entre menique y linea del corazon: relaciones afectivas significativas."},
-        {"id": "viaje", "label": "Lineas de viaje", "description": "Horizontales en el monte de Luna: desplazamientos importantes y transformadores."},
-        {"id": "salud", "label": "Linea de salud", "description": "Diagonal desde Mercurio hacia abajo: mejor si esta AUSENTE."},
-        {"id": "venus_marte", "label": "Zona Venus-Marte", "description": "Area donde la linea de Marte refuerza la linea de la vida."}
+        {
+          "id": "marte",
+          "label": "Linea de Marte",
+          "description": "Paralela a la linea de la vida, dentro del monte de Venus: proteccion y energia de reserva."
+        },
+        {
+          "id": "intuicion",
+          "label": "Linea de intuicion",
+          "description": "Arco en el monte de Luna: sensibilidad perceptiva no ordinaria."
+        },
+        {
+          "id": "union",
+          "label": "Lineas de union",
+          "description": "Horizontales entre menique y linea del corazon: relaciones afectivas significativas."
+        },
+        {
+          "id": "viaje",
+          "label": "Lineas de viaje",
+          "description": "Horizontales en el monte de Luna: desplazamientos importantes y transformadores."
+        },
+        {
+          "id": "salud",
+          "label": "Linea de salud",
+          "description": "Diagonal desde Mercurio hacia abajo: mejor si esta AUSENTE."
+        },
+        {
+          "id": "venus_marte",
+          "label": "Zona Venus-Marte",
+          "description": "Area donde la linea de Marte refuerza la linea de la vida."
+        }
       ]
     },
     {
       "type": "flip_cards",
       "prompt": "Repasa cada linea secundaria con su significado y matiz clave.",
       "cards": [
-        {"front": "Linea de Marte", "back": "Proteccion extra y energia de reserva. Rara. Compensa debilidades de la linea de la vida."},
-        {"front": "Linea de intuicion", "back": "Sensibilidad perceptiva no ordinaria. No es clarividencia. Frecuente en terapeutas."},
-        {"front": "Lineas de union/matrimonio", "back": "Intensidad de conexiones emocionales. NO predicen numero de matrimonios. Leer con cautela."},
-        {"front": "Lineas de viaje", "back": "Desplazamientos que marcaron la vida. Longitud = importancia del viaje. En monte de Luna."},
-        {"front": "Linea de salud", "back": "Paradoja: mejor si AUSENTE. Nunca diagnosticar enfermedades. Solo tendencias de vitalidad."}
+        {
+          "front": "Linea de Marte",
+          "back": "Proteccion extra y energia de reserva. Rara. Compensa debilidades de la linea de la vida."
+        },
+        {
+          "front": "Linea de intuicion",
+          "back": "Sensibilidad perceptiva no ordinaria. No es clarividencia. Frecuente en terapeutas."
+        },
+        {
+          "front": "Lineas de union/matrimonio",
+          "back": "Intensidad de conexiones emocionales. NO predicen numero de matrimonios. Leer con cautela."
+        },
+        {
+          "front": "Lineas de viaje",
+          "back": "Desplazamientos que marcaron la vida. Longitud = importancia del viaje. En monte de Luna."
+        },
+        {
+          "front": "Linea de salud",
+          "back": "Paradoja: mejor si AUSENTE. Nunca diagnosticar enfermedades. Solo tendencias de vitalidad."
+        }
       ]
     },
     {
       "type": "fill_blanks",
       "prompt": "Completa las afirmaciones sobre lineas secundarias.",
       "template": "La linea de ___0___ corre paralela a la linea de la vida y significa proteccion extra. La linea de ___1___ es mejor cuando esta ausente. Las lineas de union indican la ___2___ de las conexiones emocionales, no el numero de matrimonios.",
-      "answers": ["Marte", "salud", "intensidad"]
+      "answers": [
+        "Marte",
+        "salud",
+        "intensidad"
+      ]
+    },
+    {
+      "type": "concept_map",
+      "center": "Líneas menores",
+      "nodes": [
+        "Marte (resistencia)",
+        "Intuición (percepción)",
+        "Matrimonio (uniones)",
+        "Viaje (desplazamientos)",
+        "Salud (vitalidad)"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "Las líneas secundarias añaden matices específicos a la lectura",
+        "La línea de salud es mejor cuando está ausente",
+        "Las líneas de unión indican intensidad de vínculos, no número de matrimonios"
+      ]
     }
   ],
   "citation": {

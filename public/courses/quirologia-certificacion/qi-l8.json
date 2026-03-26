@@ -64,29 +64,101 @@
       "instruction": "Identifica las variantes de terminación de la línea del corazón en el diagrama.",
       "imageUrl": "/images/quiro/mano-lineas-mayores.svg",
       "points": [
-        { "x": 30, "y": 28, "label": "Termina en Júpiter", "description": "Estilo idealista: expectativas altas, conexiones profundas, generosa en el afecto. Vulnerable a la decepción." },
-        { "x": 45, "y": 25, "label": "Termina en Saturno", "description": "Estilo pragmático: emociones profundas pero expresadas con reserva. Prioriza estabilidad sobre pasión." },
-        { "x": 37, "y": 26, "label": "Entre Júpiter y Saturno", "description": "Equilibrio: combina idealismo con pragmatismo, pasión con sensatez. El punto de mayor versatilidad." }
+        {
+          "x": 30,
+          "y": 28,
+          "label": "Termina en Júpiter",
+          "description": "Estilo idealista: expectativas altas, conexiones profundas, generosa en el afecto. Vulnerable a la decepción."
+        },
+        {
+          "x": 45,
+          "y": 25,
+          "label": "Termina en Saturno",
+          "description": "Estilo pragmático: emociones profundas pero expresadas con reserva. Prioriza estabilidad sobre pasión."
+        },
+        {
+          "x": 37,
+          "y": 26,
+          "label": "Entre Júpiter y Saturno",
+          "description": "Equilibrio: combina idealismo con pragmatismo, pasión con sensatez. El punto de mayor versatilidad."
+        }
       ]
     },
     {
       "type": "match",
       "instruction": "Conecta cada terminación de la línea del corazón con su estilo afectivo.",
       "pairs": [
-        { "left": "Termina bajo el dedo índice (Júpiter)", "right": "Idealista, romántica, altas expectativas" },
-        { "left": "Termina bajo el dedo medio (Saturno)", "right": "Pragmática, reservada, prioriza estabilidad" },
-        { "left": "Curva ascendente hacia los dedos", "right": "Expresiva, cálida, contacto espontáneo" },
-        { "left": "Recta horizontal", "right": "Racional en emociones, estable y fiable" }
+        {
+          "left": "Termina bajo el dedo índice (Júpiter)",
+          "right": "Idealista, romántica, altas expectativas"
+        },
+        {
+          "left": "Termina bajo el dedo medio (Saturno)",
+          "right": "Pragmática, reservada, prioriza estabilidad"
+        },
+        {
+          "left": "Curva ascendente hacia los dedos",
+          "right": "Expresiva, cálida, contacto espontáneo"
+        },
+        {
+          "left": "Recta horizontal",
+          "right": "Racional en emociones, estable y fiable"
+        }
       ]
     },
     {
       "type": "flip_cards",
       "instruction": "Lee el escenario emocional y descubre qué mostraría la línea del corazón.",
       "cards": [
-        { "front": "Persona que se enamora intensamente y necesita gestos románticos constantes", "back": "Línea del corazón larga, curva ascendente, terminando en Júpiter. Profunda. Estilo idealista y expresivo." },
-        { "front": "Persona que muestra su amor a través de actos prácticos pero raramente dice 'te quiero'", "back": "Línea del corazón más corta, recta, terminando en Saturno. Clara pero no excesivamente profunda. Estilo pragmático." },
-        { "front": "Persona que absorbe las emociones de quienes la rodean y sufre por empatía", "back": "Línea del corazón en cadena o con múltiples islotes. Indica sensibilidad elevada y dificultad para separar emociones propias de ajenas." },
-        { "front": "Persona que cambia de registros emocionales según la situación: a veces romántica, a veces práctica", "back": "Línea del corazón bifurcada al final, con una rama hacia Júpiter y otra hacia Saturno. Versatilidad emocional." }
+        {
+          "front": "Persona que se enamora intensamente y necesita gestos románticos constantes",
+          "back": "Línea del corazón larga, curva ascendente, terminando en Júpiter. Profunda. Estilo idealista y expresivo."
+        },
+        {
+          "front": "Persona que muestra su amor a través de actos prácticos pero raramente dice 'te quiero'",
+          "back": "Línea del corazón más corta, recta, terminando en Saturno. Clara pero no excesivamente profunda. Estilo pragmático."
+        },
+        {
+          "front": "Persona que absorbe las emociones de quienes la rodean y sufre por empatía",
+          "back": "Línea del corazón en cadena o con múltiples islotes. Indica sensibilidad elevada y dificultad para separar emociones propias de ajenas."
+        },
+        {
+          "front": "Persona que cambia de registros emocionales según la situación: a veces romántica, a veces práctica",
+          "back": "Línea del corazón bifurcada al final, con una rama hacia Júpiter y otra hacia Saturno. Versatilidad emocional."
+        }
+      ]
+    },
+    {
+      "type": "comparison",
+      "headers": [
+        "Terminación línea corazón",
+        "Indica"
+      ],
+      "rows": [
+        [
+          "Bajo Júpiter (índice)",
+          "Idealismo emocional, altas expectativas"
+        ],
+        [
+          "Entre Júpiter y Saturno",
+          "Equilibrio entre idealismo y realismo"
+        ],
+        [
+          "Bajo Saturno (corazón)",
+          "Enfoque práctico, menos demostrativo"
+        ],
+        [
+          "Curva pronunciada",
+          "Expresividad emocional intensa"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La terminación de la línea del corazón define el estilo afectivo",
+        "La curvatura indica el grado de expresividad emocional",
+        "La distancia corazón-cabeza revela la integración entre emoción y cognición"
       ]
     }
   ],
@@ -108,10 +180,30 @@
     }
   ],
   "bibliography": [
-    { "author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro" },
-    { "author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro" },
-    { "author": "Wolff, C.", "year": "1951", "title": "The Hand in Psychological Diagnosis", "type": "Libro" },
-    { "author": "Altman, N.", "year": "1999", "title": "Practical Palmistry", "type": "Libro" }
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Goldberg, E.",
+      "year": "2016",
+      "title": "The Art and Science of Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Wolff, C.",
+      "year": "1951",
+      "title": "The Hand in Psychological Diagnosis",
+      "type": "Libro"
+    },
+    {
+      "author": "Altman, N.",
+      "year": "1999",
+      "title": "Practical Palmistry",
+      "type": "Libro"
+    }
   ],
   "homework": {
     "task": "Analiza la línea del corazón de dos personas de tu entorno: identifica terminación, curvatura, calidad y distancia corazón-cabeza. Escribe un párrafo describiendo el estilo afectivo de cada persona sin juzgar. Compara ambos estilos.",

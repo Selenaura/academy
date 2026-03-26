@@ -59,28 +59,89 @@
       "instruction": "Identifica cada dedo con su nombre planetario y su cualidad en el diagrama.",
       "imageUrl": "/images/quiro/mano-dedos.svg",
       "points": [
-        { "x": 18, "y": 65, "label": "Pulgar", "description": "Voluntad (falange superior) y lógica (falange inferior). El dedo más importante de la mano." },
-        { "x": 30, "y": 20, "label": "Índice — Júpiter", "description": "Ambición, liderazgo, autoconfianza. Largo = seguridad. Corto = necesita tiempo para desarrollar autoridad." },
-        { "x": 48, "y": 12, "label": "Medio — Saturno", "description": "Responsabilidad, estructura, normas. Dedo de referencia para medir los demás." },
-        { "x": 65, "y": 18, "label": "Anular — Apolo", "description": "Creatividad, expresión artística, sentido estético. Se compara con el índice (ratio 2D:4D)." },
-        { "x": 78, "y": 35, "label": "Meñique — Mercurio", "description": "Comunicación, elocuencia, habilidad para negocios. Largo = facilidad comunicativa." }
+        {
+          "x": 18,
+          "y": 65,
+          "label": "Pulgar",
+          "description": "Voluntad (falange superior) y lógica (falange inferior). El dedo más importante de la mano."
+        },
+        {
+          "x": 30,
+          "y": 20,
+          "label": "Índice — Júpiter",
+          "description": "Ambición, liderazgo, autoconfianza. Largo = seguridad. Corto = necesita tiempo para desarrollar autoridad."
+        },
+        {
+          "x": 48,
+          "y": 12,
+          "label": "Medio — Saturno",
+          "description": "Responsabilidad, estructura, normas. Dedo de referencia para medir los demás."
+        },
+        {
+          "x": 65,
+          "y": 18,
+          "label": "Anular — Apolo",
+          "description": "Creatividad, expresión artística, sentido estético. Se compara con el índice (ratio 2D:4D)."
+        },
+        {
+          "x": 78,
+          "y": 35,
+          "label": "Meñique — Mercurio",
+          "description": "Comunicación, elocuencia, habilidad para negocios. Largo = facilidad comunicativa."
+        }
       ]
     },
     {
       "type": "match",
       "instruction": "Conecta cada dedo con la cualidad que representa.",
       "pairs": [
-        { "left": "Índice (Júpiter)", "right": "Ambición y liderazgo" },
-        { "left": "Medio (Saturno)", "right": "Responsabilidad y estructura" },
-        { "left": "Anular (Apolo)", "right": "Creatividad y expresión artística" },
-        { "left": "Meñique (Mercurio)", "right": "Comunicación y negociación" }
+        {
+          "left": "Índice (Júpiter)",
+          "right": "Ambición y liderazgo"
+        },
+        {
+          "left": "Medio (Saturno)",
+          "right": "Responsabilidad y estructura"
+        },
+        {
+          "left": "Anular (Apolo)",
+          "right": "Creatividad y expresión artística"
+        },
+        {
+          "left": "Meñique (Mercurio)",
+          "right": "Comunicación y negociación"
+        }
       ]
     },
     {
       "type": "fill_blanks",
       "instruction": "Completa las frases sobre el análisis de dedos.",
       "template": "Las tres falanges de cada dedo representan: la superior el nivel ___0___, la media el nivel ___1___, y la inferior el nivel ___2___. Según Manning (2002), cuando el anular es más largo que el índice, indica mayor exposición a ___3___ prenatal.",
-      "answers": ["mental", "práctico", "material", "testosterona"]
+      "answers": [
+        "mental",
+        "práctico",
+        "material",
+        "testosterona"
+      ]
+    },
+    {
+      "type": "concept_map",
+      "center": "Mano",
+      "nodes": [
+        "Pulgar (voluntad/lógica)",
+        "Índice (Júpiter/ambición)",
+        "Corazón (Saturno/responsabilidad)",
+        "Anular (Apolo/creatividad)",
+        "Meñique (Mercurio/comunicación)"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "Cada dedo representa una cualidad planetaria específica",
+        "El ratio 2D:4D tiene respaldo científico como marcador hormonal prenatal",
+        "Las tres falanges representan niveles mental, práctico y material"
+      ]
     }
   ],
   "citation": [
@@ -101,10 +162,30 @@
     }
   ],
   "bibliography": [
-    { "author": "Manning, J.T.", "year": "2002", "title": "Digit Ratio: A Pointer to Fertility, Behavior, and Health", "type": "Libro" },
-    { "author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro" },
-    { "author": "Wolff, C.", "year": "1942", "title": "The Human Hand", "type": "Libro" },
-    { "author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro" }
+    {
+      "author": "Manning, J.T.",
+      "year": "2002",
+      "title": "Digit Ratio: A Pointer to Fertility, Behavior, and Health",
+      "type": "Libro"
+    },
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Wolff, C.",
+      "year": "1942",
+      "title": "The Human Hand",
+      "type": "Libro"
+    },
+    {
+      "author": "Goldberg, E.",
+      "year": "2016",
+      "title": "The Art and Science of Hand Reading",
+      "type": "Libro"
+    }
   ],
   "homework": {
     "task": "Compara el análisis de dedos (ratio 2D:4D, falanges dominantes, flexibilidad) entre tu mano dominante y tu mano no dominante. Anota las diferencias y reflexiona: ¿qué ha cambiado entre lo innato y lo adquirido?",

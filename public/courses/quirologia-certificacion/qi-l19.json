@@ -80,7 +80,12 @@
       "type": "fill_blanks",
       "instruction": "Completa el tiempo estimado para cada paso del protocolo.",
       "template": "Paso 1 (Forma de mano): ___0___ minutos. Paso 3 (Montes): ___1___ minutos. Paso 4 (Lineas mayores): ___2___ minutos. Tiempo total del protocolo: ___3___ minutos.",
-      "answers": ["2", "5", "10", "30"]
+      "answers": [
+        "2",
+        "5",
+        "10",
+        "30"
+      ]
     },
     {
       "type": "progress_check",
@@ -105,6 +110,26 @@
           "correct": 1,
           "explanation": "La palpacion de los montes requiere tocar la palma para sentir firmeza, volumen y temperatura. En lectura por foto, la evaluacion de montes queda limitada a la observacion visual, perdiendo la dimension tactil."
         }
+      ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "Protocolo de 6 pasos",
+      "steps": [
+        "1 Forma de mano (elemento)",
+        "2 Dedos y pulgar",
+        "3 Montes (palpación)",
+        "4 Líneas mayores",
+        "5 Líneas menores y marcas",
+        "6 Dermatoglifos"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "El protocolo progresa de lo general a lo específico construyendo capas de significado",
+        "El paso 4 ocupa un tercio del tiempo total por concentrar la información narrativa central",
+        "Ningún paso debe omitirse: cada uno aporta una dimensión única"
       ]
     }
   ],
@@ -131,11 +156,36 @@
     }
   ],
   "bibliography": [
-    {"author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro"},
-    {"author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro"},
-    {"author": "Cummins, H. & Midlo, C.", "year": "1961", "title": "Fingerprints, Palms and Soles", "type": "Libro"},
-    {"author": "Altman, N.", "year": "1999", "title": "Palmistry: The Universal Guide", "type": "Libro"},
-    {"author": "Fitzherbert, A.", "year": "1986", "title": "Hand Psychology: The Meaning of Shapes and Lines", "type": "Libro"}
+    {
+      "author": "Goldberg, E.",
+      "year": "2016",
+      "title": "The Art and Science of Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Cummins, H. & Midlo, C.",
+      "year": "1961",
+      "title": "Fingerprints, Palms and Soles",
+      "type": "Libro"
+    },
+    {
+      "author": "Altman, N.",
+      "year": "1999",
+      "title": "Palmistry: The Universal Guide",
+      "type": "Libro"
+    },
+    {
+      "author": "Fitzherbert, A.",
+      "year": "1986",
+      "title": "Hand Psychology: The Meaning of Shapes and Lines",
+      "type": "Libro"
+    }
   ],
   "homework": {
     "task": "Realiza el protocolo completo de 6 pasos en tu mano no dominante, cronometrando cada paso. Compara los resultados con tu mano dominante (ejercicio guiado de la leccion). Anota en tu cuaderno: que cambia entre ambas manos, que permanece igual, y en que paso te sentiste mas segura y en cual necesitas repasar.",

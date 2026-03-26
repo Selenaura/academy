@@ -64,37 +64,122 @@
       "prompt": "Localiza cada monte planetario en el diagrama de la palma.",
       "imageUrl": "/images/quiro/mano-montes.svg",
       "hotspots": [
-        {"id": "jupiter", "label": "Jupiter", "description": "Bajo el dedo indice: ambicion, liderazgo, confianza."},
-        {"id": "saturno", "label": "Saturno", "description": "Bajo el dedo medio: responsabilidad, disciplina, introversion."},
-        {"id": "apolo", "label": "Apolo / Sol", "description": "Bajo el dedo anular: creatividad, carisma, expresion artistica."},
-        {"id": "mercurio", "label": "Mercurio", "description": "Bajo el menique: comunicacion, comercio, inteligencia verbal."},
-        {"id": "venus", "label": "Venus", "description": "Base del pulgar: amor, vitalidad, pasion, sensualidad."},
-        {"id": "marte_inf", "label": "Marte inferior", "description": "Borde radial entre pulgar y Jupiter: valor, iniciativa, arrojo."},
-        {"id": "luna", "label": "Luna", "description": "Borde ulnar inferior: imaginacion, intuicion, vida interior."}
+        {
+          "id": "jupiter",
+          "label": "Jupiter",
+          "description": "Bajo el dedo indice: ambicion, liderazgo, confianza."
+        },
+        {
+          "id": "saturno",
+          "label": "Saturno",
+          "description": "Bajo el dedo medio: responsabilidad, disciplina, introversion."
+        },
+        {
+          "id": "apolo",
+          "label": "Apolo / Sol",
+          "description": "Bajo el dedo anular: creatividad, carisma, expresion artistica."
+        },
+        {
+          "id": "mercurio",
+          "label": "Mercurio",
+          "description": "Bajo el menique: comunicacion, comercio, inteligencia verbal."
+        },
+        {
+          "id": "venus",
+          "label": "Venus",
+          "description": "Base del pulgar: amor, vitalidad, pasion, sensualidad."
+        },
+        {
+          "id": "marte_inf",
+          "label": "Marte inferior",
+          "description": "Borde radial entre pulgar y Jupiter: valor, iniciativa, arrojo."
+        },
+        {
+          "id": "luna",
+          "label": "Luna",
+          "description": "Borde ulnar inferior: imaginacion, intuicion, vida interior."
+        }
       ]
     },
     {
       "type": "flip_cards",
       "prompt": "Asocia cada monte con su planeta y cualidad principal.",
       "cards": [
-        {"front": "Monte bajo el indice", "back": "JUPITER - Ambicion, liderazgo, confianza en la capacidad propia."},
-        {"front": "Monte bajo el medio", "back": "SATURNO - Responsabilidad, disciplina, introversion reflexiva."},
-        {"front": "Monte bajo el anular", "back": "APOLO / SOL - Creatividad, expresion artistica, carisma."},
-        {"front": "Monte bajo el menique", "back": "MERCURIO - Comunicacion, habilidad comercial, humor."},
-        {"front": "Eminencia tenar (base pulgar)", "back": "VENUS - Vitalidad, amor, pasion, calidez humana."},
-        {"front": "Borde ulnar inferior", "back": "LUNA - Imaginacion, intuicion, viajes, vida interior."},
-        {"front": "Dos zonas en los bordes laterales", "back": "MARTE - Inferior: valor e iniciativa. Superior: resistencia y perseverancia."}
+        {
+          "front": "Monte bajo el indice",
+          "back": "JUPITER - Ambicion, liderazgo, confianza en la capacidad propia."
+        },
+        {
+          "front": "Monte bajo el medio",
+          "back": "SATURNO - Responsabilidad, disciplina, introversion reflexiva."
+        },
+        {
+          "front": "Monte bajo el anular",
+          "back": "APOLO / SOL - Creatividad, expresion artistica, carisma."
+        },
+        {
+          "front": "Monte bajo el menique",
+          "back": "MERCURIO - Comunicacion, habilidad comercial, humor."
+        },
+        {
+          "front": "Eminencia tenar (base pulgar)",
+          "back": "VENUS - Vitalidad, amor, pasion, calidez humana."
+        },
+        {
+          "front": "Borde ulnar inferior",
+          "back": "LUNA - Imaginacion, intuicion, viajes, vida interior."
+        },
+        {
+          "front": "Dos zonas en los bordes laterales",
+          "back": "MARTE - Inferior: valor e iniciativa. Superior: resistencia y perseverancia."
+        }
       ]
     },
     {
       "type": "match",
       "prompt": "Conecta el nivel de desarrollo del monte con su significado.",
       "pairs": [
-        {"left": "Jupiter desarrollado", "right": "Liderazgo natural, iniciativa para asumir roles de autoridad"},
-        {"left": "Saturno excesivo", "right": "Tendencia al pesimismo cronico o al aislamiento autoimpuesto"},
-        {"left": "Venus plano", "right": "Expresion afectiva contenida, menor vitalidad fisica aparente"},
-        {"left": "Luna desarrollado", "right": "Rica vida interior, sensibilidad creativa e imaginativa"},
-        {"left": "Marte inferior firme", "right": "Valor, capacidad de iniciar acciones con arrojo"}
+        {
+          "left": "Jupiter desarrollado",
+          "right": "Liderazgo natural, iniciativa para asumir roles de autoridad"
+        },
+        {
+          "left": "Saturno excesivo",
+          "right": "Tendencia al pesimismo cronico o al aislamiento autoimpuesto"
+        },
+        {
+          "left": "Venus plano",
+          "right": "Expresion afectiva contenida, menor vitalidad fisica aparente"
+        },
+        {
+          "left": "Luna desarrollado",
+          "right": "Rica vida interior, sensibilidad creativa e imaginativa"
+        },
+        {
+          "left": "Marte inferior firme",
+          "right": "Valor, capacidad de iniciar acciones con arrojo"
+        }
+      ]
+    },
+    {
+      "type": "concept_map",
+      "center": "Montes",
+      "nodes": [
+        "Júpiter (ambición)",
+        "Saturno (responsabilidad)",
+        "Apolo (creatividad)",
+        "Mercurio (comunicación)",
+        "Venus (amor)",
+        "Luna (imaginación)",
+        "Marte (valentía)"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "Los 7 montes planetarios representan depósitos de energía específicos",
+        "La lectura de montes es siempre comparativa: nunca interpretar uno aislado",
+        "Venus es considerado el monte más revelador de la vitalidad fundamental"
       ]
     }
   ],

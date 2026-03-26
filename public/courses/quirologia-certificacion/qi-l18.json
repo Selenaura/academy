@@ -63,17 +63,37 @@
       "type": "fill_blanks",
       "prompt": "Completa el procedimiento de conteo de crestas.",
       "template": "Para contar las crestas de un dedo, se traza una linea entre el ___0___ del patron y el ___1___ mas cercano. Los arcos tienen un conteo de ___2___. Para los verticilos, que tienen dos triradios, se toma el valor ___3___ de los dos conteos.",
-      "answers": ["centro (core)", "triradio (delta)", "0", "mayor"]
+      "answers": [
+        "centro (core)",
+        "triradio (delta)",
+        "0",
+        "mayor"
+      ]
     },
     {
       "type": "match",
       "prompt": "Conecta cada rango de TRC con su interpretacion.",
       "pairs": [
-        {"left": "TRC alto (superior a 150)", "right": "Complejidad cognitiva: procesamiento en multiples capas, mas tiempo para decidir"},
-        {"left": "TRC medio (80-150)", "right": "Perfil equilibrado: el rango mas comun sin interpretacion especifica"},
-        {"left": "TRC bajo (inferior a 80)", "right": "Procesamiento directo y practico: juicio rapido, sin rodeos"},
-        {"left": "Alta asimetria entre manos", "right": "Variabilidad en las condiciones del entorno prenatal"},
-        {"left": "Baja asimetria entre manos", "right": "Desarrollo prenatal estable durante las semanas criticas"}
+        {
+          "left": "TRC alto (superior a 150)",
+          "right": "Complejidad cognitiva: procesamiento en multiples capas, mas tiempo para decidir"
+        },
+        {
+          "left": "TRC medio (80-150)",
+          "right": "Perfil equilibrado: el rango mas comun sin interpretacion especifica"
+        },
+        {
+          "left": "TRC bajo (inferior a 80)",
+          "right": "Procesamiento directo y practico: juicio rapido, sin rodeos"
+        },
+        {
+          "left": "Alta asimetria entre manos",
+          "right": "Variabilidad en las condiciones del entorno prenatal"
+        },
+        {
+          "left": "Baja asimetria entre manos",
+          "right": "Desarrollo prenatal estable durante las semanas criticas"
+        }
       ]
     },
     {
@@ -83,6 +103,26 @@
         "Puedo clasificar las 10 huellas de una persona en arcos, bucles y verticilos.",
         "Se como contar crestas entre el core y el triradio para calcular el TRC.",
         "Puedo evaluar la asimetria comparando patrones de dedos homologos entre ambas manos."
+      ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "Conteo de crestas",
+      "steps": [
+        "Identificar patrón del dedo",
+        "Localizar delta y núcleo",
+        "Trazar línea imaginaria",
+        "Contar crestas que cruza",
+        "Registrar por dedo",
+        "Calcular TFRC (total)"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "El TRC es la medida cuantitativa fundamental de los dermatoglifos",
+        "La asimetría fluctuante indica la estabilidad del entorno prenatal",
+        "El perfil dermatoglífico completo es información biológica permanente"
       ]
     }
   ],

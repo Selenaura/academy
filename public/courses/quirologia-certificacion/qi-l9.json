@@ -59,27 +59,96 @@
       "instruction": "Identifica la línea de la cabeza y la línea del destino en el diagrama, con sus puntos clave.",
       "imageUrl": "/images/quiro/mano-lineas-mayores.svg",
       "points": [
-        { "x": 28, "y": 48, "label": "Origen de la cabeza", "description": "Donde la línea de la cabeza nace. Si está unida a la de la vida = cautela. Si está separada = independencia." },
-        { "x": 65, "y": 52, "label": "Dirección de la cabeza", "description": "Recta = pensamiento analítico. Curva hacia Luna = pensamiento creativo. Bifurcada = versatilidad mental." },
-        { "x": 48, "y": 48, "label": "Destino cruza cabeza (~35 años)", "description": "Punto donde la línea del destino cruza la de la cabeza. Marca aproximadamente los 35 años." },
-        { "x": 48, "y": 28, "label": "Destino cruza corazón (~55 años)", "description": "Punto donde la línea del destino cruza la del corazón. Marca aproximadamente los 55 años." }
+        {
+          "x": 28,
+          "y": 48,
+          "label": "Origen de la cabeza",
+          "description": "Donde la línea de la cabeza nace. Si está unida a la de la vida = cautela. Si está separada = independencia."
+        },
+        {
+          "x": 65,
+          "y": 52,
+          "label": "Dirección de la cabeza",
+          "description": "Recta = pensamiento analítico. Curva hacia Luna = pensamiento creativo. Bifurcada = versatilidad mental."
+        },
+        {
+          "x": 48,
+          "y": 48,
+          "label": "Destino cruza cabeza (~35 años)",
+          "description": "Punto donde la línea del destino cruza la de la cabeza. Marca aproximadamente los 35 años."
+        },
+        {
+          "x": 48,
+          "y": 28,
+          "label": "Destino cruza corazón (~55 años)",
+          "description": "Punto donde la línea del destino cruza la del corazón. Marca aproximadamente los 55 años."
+        }
       ]
     },
     {
       "type": "match",
       "instruction": "Conecta cada característica con la línea correcta: cabeza o destino.",
       "pairs": [
-        { "left": "Recta = lógica, curva = creativa", "right": "Línea de la cabeza" },
-        { "left": "Su ausencia indica vida autodeterminada", "right": "Línea del destino" },
-        { "left": "Bifurcación final = 'tenedor del escritor'", "right": "Línea de la cabeza" },
-        { "left": "Cruza la línea de la cabeza a los ~35 años", "right": "Línea del destino" }
+        {
+          "left": "Recta = lógica, curva = creativa",
+          "right": "Línea de la cabeza"
+        },
+        {
+          "left": "Su ausencia indica vida autodeterminada",
+          "right": "Línea del destino"
+        },
+        {
+          "left": "Bifurcación final = 'tenedor del escritor'",
+          "right": "Línea de la cabeza"
+        },
+        {
+          "left": "Cruza la línea de la cabeza a los ~35 años",
+          "right": "Línea del destino"
+        }
       ]
     },
     {
       "type": "fill_blanks",
       "instruction": "Completa las frases sobre la línea del destino.",
       "template": "La línea del destino cruza la línea de la cabeza a los ___0___ años aproximadamente. Su ausencia indica una vida ___1___, no falta de dirección. Cuando nace desde el Monte de la ___2___, indica que la dirección de vida está influida por factores externos.",
-      "answers": ["35", "autodeterminada", "Luna"]
+      "answers": [
+        "35",
+        "autodeterminada",
+        "Luna"
+      ]
+    },
+    {
+      "type": "comparison",
+      "headers": [
+        "Línea cabeza",
+        "Indica"
+      ],
+      "rows": [
+        [
+          "Recta larga",
+          "Pensamiento analítico, lógico"
+        ],
+        [
+          "Curva hacia Luna",
+          "Creatividad, imaginación"
+        ],
+        [
+          "Bifurcada (tenedor)",
+          "Versatilidad, don de escritura"
+        ],
+        [
+          "Corta",
+          "Pensamiento práctico, directo"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La línea de la cabeza revela el estilo cognitivo de la persona",
+        "La línea del destino indica sentido de propósito, no un destino fijo",
+        "La ausencia de línea del destino significa vida autodeterminada, no carencia"
+      ]
     }
   ],
   "citation": [
@@ -100,10 +169,30 @@
     }
   ],
   "bibliography": [
-    { "author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro" },
-    { "author": "Wolff, C.", "year": "1951", "title": "The Hand in Psychological Diagnosis", "type": "Libro" },
-    { "author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro" },
-    { "author": "Altman, N.", "year": "1999", "title": "Practical Palmistry", "type": "Libro" }
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Wolff, C.",
+      "year": "1951",
+      "title": "The Hand in Psychological Diagnosis",
+      "type": "Libro"
+    },
+    {
+      "author": "Goldberg, E.",
+      "year": "2016",
+      "title": "The Art and Science of Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Altman, N.",
+      "year": "1999",
+      "title": "Practical Palmistry",
+      "type": "Libro"
+    }
   ],
   "homework": {
     "task": "Crea un perfil completo de tus 4 líneas principales en ambas manos (vida, cabeza, corazón, destino). Compara mano dominante vs. no dominante y escribe un párrafo sobre cómo ha evolucionado tu perfil desde lo innato a lo adquirido.",

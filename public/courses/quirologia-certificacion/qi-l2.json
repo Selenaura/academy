@@ -72,16 +72,37 @@
         "Manning publica sobre ratio 2D:4D",
         "Cureus publica correlación huellas-MBTI"
       ],
-      "correct_order": [0, 1, 2, 3, 4, 5, 6, 7]
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
     },
     {
       "type": "flip_cards",
       "instruction": "Descubre qué cambió con cada hito histórico.",
       "cards": [
-        { "front": "Benham (1900)", "back": "Primer intento de sistematizar la lectura de la mano con metodología empírica: observación, registro, correlación." },
-        { "front": "Cummins & Midlo (1943)", "back": "Demostraron que los dermatoglifos se forman en el útero y son inmutables — base biológica verificable para la quirología." },
-        { "front": "Charlotte Wolff (1942)", "back": "Introdujo el rigor clínico trabajando con pacientes psiquiátricos, demostrando correlaciones estadísticas mano-personalidad." },
-        { "front": "Manning (2002)", "back": "Demostró que el ratio entre dedo índice y anular correlaciona con exposición a testosterona prenatal." }
+        {
+          "front": "Benham (1900)",
+          "back": "Primer intento de sistematizar la lectura de la mano con metodología empírica: observación, registro, correlación."
+        },
+        {
+          "front": "Cummins & Midlo (1943)",
+          "back": "Demostraron que los dermatoglifos se forman en el útero y son inmutables — base biológica verificable para la quirología."
+        },
+        {
+          "front": "Charlotte Wolff (1942)",
+          "back": "Introdujo el rigor clínico trabajando con pacientes psiquiátricos, demostrando correlaciones estadísticas mano-personalidad."
+        },
+        {
+          "front": "Manning (2002)",
+          "back": "Demostró que el ratio entre dedo índice y anular correlaciona con exposición a testosterona prenatal."
+        }
       ]
     },
     {
@@ -89,7 +110,12 @@
       "questions": [
         {
           "question": "¿Quién acuñó el término 'dermatoglifos' y en qué año?",
-          "options": ["Benham, 1900", "Cummins, 1926", "Wolff, 1942", "Manning, 2002"],
+          "options": [
+            "Benham, 1900",
+            "Cummins, 1926",
+            "Wolff, 1942",
+            "Manning, 2002"
+          ],
           "correct": 1,
           "explanation": "Harold Cummins acuñó el término dermatoglyphics (dermatoglifos) en 1926 y junto con Charles Midlo publicó la obra de referencia en 1943."
         },
@@ -104,6 +130,39 @@
           "correct": 2,
           "explanation": "Es significativo que una revista médica revisada por pares publique investigación que encuentra correlaciones entre patrones de dermatoglifos y tipos de personalidad, legitimando científicamente un área antes considerada pseudociencia."
         }
+      ]
+    },
+    {
+      "type": "timeline",
+      "events": [
+        {
+          "date": "340 AC",
+          "description": "Aristóteles menciona las manos"
+        },
+        {
+          "date": "1900",
+          "description": "Benham Laws of Scientific Hand Reading"
+        },
+        {
+          "date": "1926",
+          "description": "Cummins acuña dermatoglifos"
+        },
+        {
+          "date": "1943",
+          "description": "Cummins & Midlo Finger Prints Palms and Soles"
+        },
+        {
+          "date": "2022",
+          "description": "Cureus publicación peer-reviewed"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La quirología tiene raíces milenarias en India y Grecia antigua",
+        "El siglo XIX trajo la sistematización científica con Benham",
+        "La investigación moderna ha validado los dermatoglifos como biomarcadores legítimos"
       ]
     }
   ],
@@ -130,11 +189,36 @@
     }
   ],
   "bibliography": [
-    { "author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro" },
-    { "author": "Cummins, H. & Midlo, C.", "year": "1943", "title": "Fingerprints, Palms and Soles", "type": "Libro" },
-    { "author": "Wolff, C.", "year": "1942", "title": "The Human Hand", "type": "Libro" },
-    { "author": "Manning, J.T.", "year": "2002", "title": "Digit Ratio: A Pointer to Fertility, Behavior, and Health", "type": "Libro" },
-    { "author": "Cureus Journal", "year": "2022", "title": "Correlation of Fingerprint Patterns with MBTI Personality Types", "type": "Artículo" }
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Cummins, H. & Midlo, C.",
+      "year": "1943",
+      "title": "Fingerprints, Palms and Soles",
+      "type": "Libro"
+    },
+    {
+      "author": "Wolff, C.",
+      "year": "1942",
+      "title": "The Human Hand",
+      "type": "Libro"
+    },
+    {
+      "author": "Manning, J.T.",
+      "year": "2002",
+      "title": "Digit Ratio: A Pointer to Fertility, Behavior, and Health",
+      "type": "Libro"
+    },
+    {
+      "author": "Cureus Journal",
+      "year": "2022",
+      "title": "Correlation of Fingerprint Patterns with MBTI Personality Types",
+      "type": "Artículo"
+    }
   ],
   "homework": {
     "task": "Dibuja una línea temporal con al menos 8 hitos de la historia de la quirología. Para cada hito, anota: fecha, responsable y qué cambió. Luego investiga brevemente a dos figuras (Benham, Wolff o Cummins) y añade un dato adicional sobre cada persona.",

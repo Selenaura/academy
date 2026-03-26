@@ -63,27 +63,96 @@
       "type": "flip_cards",
       "prompt": "Repasa cada formacion rara con su prevalencia y significado quirologico.",
       "cards": [
-        {"front": "Linea Simian", "back": "Fusion cabeza + corazon. 14.4% (India), 4-5% (Europa). Intensidad extrema: pensamiento y emocion inseparables."},
-        {"front": "Linea Sydney", "back": "Cabeza extendida de lado a lado sin fusionarse. 3.6%. Alcance mental extraordinario, tendencia a sobrepensar."},
-        {"front": "Linea Suwon", "back": "Doble transversal completa. 2.4%. Dualidad: alterna entre fusion pensamiento-emocion y analisis independiente."},
-        {"front": "Letra M", "back": "Vida + cabeza + corazon + destino conectadas. Rara. Equilibrio entre las 4 lineas. Tradicionalmente: buena fortuna."}
+        {
+          "front": "Linea Simian",
+          "back": "Fusion cabeza + corazon. 14.4% (India), 4-5% (Europa). Intensidad extrema: pensamiento y emocion inseparables."
+        },
+        {
+          "front": "Linea Sydney",
+          "back": "Cabeza extendida de lado a lado sin fusionarse. 3.6%. Alcance mental extraordinario, tendencia a sobrepensar."
+        },
+        {
+          "front": "Linea Suwon",
+          "back": "Doble transversal completa. 2.4%. Dualidad: alterna entre fusion pensamiento-emocion y analisis independiente."
+        },
+        {
+          "front": "Letra M",
+          "back": "Vida + cabeza + corazon + destino conectadas. Rara. Equilibrio entre las 4 lineas. Tradicionalmente: buena fortuna."
+        }
       ]
     },
     {
       "type": "fill_blanks",
       "prompt": "Completa los datos de prevalencia de las formaciones raras.",
       "template": "La linea Simian aparece en aproximadamente el ___0___% de la poblacion india estudiada. La linea Sydney tiene una prevalencia del ___1___%. La linea Suwon es la mas rara, con solo el ___2___% de prevalencia.",
-      "answers": ["14.4", "3.6", "2.4"]
+      "answers": [
+        "14.4",
+        "3.6",
+        "2.4"
+      ]
     },
     {
       "type": "match",
       "prompt": "Determina en cada caso si se debe derivar a profesional sanitario o interpretar quirologicamente.",
       "pairs": [
-        {"left": "Adulto con Simian unilateral sin otros marcadores", "right": "Interpretar quirologicamente: variante anatomica normal"},
-        {"left": "Menor con Simian bilateral + clinodactilia del menique", "right": "Sugerir con delicadeza revision pediatrica de desarrollo"},
-        {"left": "Adulto con letra M bien definida", "right": "Interpretar quirologicamente: equilibrio entre las 4 lineas"},
-        {"left": "Menor con linea Sydney unilateral", "right": "Interpretar quirologicamente: alcance mental notable"},
-        {"left": "Adulto con Simian bilateral + multiples marcadores fisicos", "right": "Sugerir consulta medica sin alarmar ni diagnosticar"}
+        {
+          "left": "Adulto con Simian unilateral sin otros marcadores",
+          "right": "Interpretar quirologicamente: variante anatomica normal"
+        },
+        {
+          "left": "Menor con Simian bilateral + clinodactilia del menique",
+          "right": "Sugerir con delicadeza revision pediatrica de desarrollo"
+        },
+        {
+          "left": "Adulto con letra M bien definida",
+          "right": "Interpretar quirologicamente: equilibrio entre las 4 lineas"
+        },
+        {
+          "left": "Menor con linea Sydney unilateral",
+          "right": "Interpretar quirologicamente: alcance mental notable"
+        },
+        {
+          "left": "Adulto con Simian bilateral + multiples marcadores fisicos",
+          "right": "Sugerir consulta medica sin alarmar ni diagnosticar"
+        }
+      ]
+    },
+    {
+      "type": "comparison",
+      "headers": [
+        "Formación",
+        "Frecuencia",
+        "Indica"
+      ],
+      "rows": [
+        [
+          "Línea Simian",
+          "1-4%",
+          "Fusión cabeza+corazón, intensidad"
+        ],
+        [
+          "Línea Sydney",
+          "~10%",
+          "Línea cabeza extendida, foco extremo"
+        ],
+        [
+          "Línea Suwon",
+          "Rara",
+          "Combinación única cabeza+destino"
+        ],
+        [
+          "Letra M",
+          "~3%",
+          "Intersección 4 líneas principales"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "Las formaciones raras son variantes anatómicas con prevalencias documentadas",
+        "La línea Simian fusiona pensamiento y emoción produciendo intensidad extrema",
+        "Estas formaciones no son diagnósticos médicos: derivar siempre a profesional sanitario"
       ]
     }
   ],

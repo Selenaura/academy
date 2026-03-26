@@ -75,7 +75,12 @@
       "type": "fill_blanks",
       "prompt": "Completa la informacion clave sobre el desarrollo de los dermatoglifos.",
       "template": "Las crestas papilares se forman junto con el sistema ___0___ entre las semanas ___1___ y ___2___ de gestacion. Una vez formadas, no cambian ___3___ despues del nacimiento.",
-      "answers": ["nervioso central", "13", "19", "nunca"]
+      "answers": [
+        "nervioso central",
+        "13",
+        "19",
+        "nunca"
+      ]
     },
     {
       "type": "progress_check",
@@ -84,6 +89,43 @@
         "Puedo explicar por que los dermatoglifos son biomarcadores del desarrollo prenatal.",
         "Conozco la ventana embrionaria (semanas 13-19) y su coincidencia con el desarrollo del sistema nervioso.",
         "Puedo responder a la pregunta Esto tiene base cientifica? con datos precisos."
+      ]
+    },
+    {
+      "type": "timeline",
+      "events": [
+        {
+          "date": "1823",
+          "description": "Purkinje clasifica huellas"
+        },
+        {
+          "date": "1892",
+          "description": "Galton Finger Prints"
+        },
+        {
+          "date": "1926",
+          "description": "Cummins acuña dermatoglyphics"
+        },
+        {
+          "date": "1943",
+          "description": "Cummins & Midlo obra referencia"
+        },
+        {
+          "date": "1991",
+          "description": "Kimura desarrollo embrionario"
+        },
+        {
+          "date": "2022",
+          "description": "Cureus personalidad"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "Las crestas papilares se forman entre las semanas 13-19 de gestación",
+        "Los dermatoglifos son permanentes e inalterables después del nacimiento",
+        "El campo tiene más de 6000 publicaciones científicas indexadas"
       ]
     }
   ],

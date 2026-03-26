@@ -63,10 +63,22 @@
       "type": "flip_cards",
       "instruction": "Lee la descripción física y adivina qué elemento corresponde.",
       "cards": [
-        { "front": "Palma cuadrada, dedos cortos, piel gruesa, pocas líneas profundas", "back": "TIERRA — practicidad, resistencia, determinación" },
-        { "front": "Palma rectangular, dedos cortos, piel cálida, muchas líneas marcadas", "back": "FUEGO — extroversión, impulso, liderazgo natural" },
-        { "front": "Palma rectangular, dedos largos y finos, piel suave, red de líneas finas", "back": "AGUA — sensibilidad artística, intuición, emocionalidad profunda" },
-        { "front": "Palma cuadrada, dedos largos, nudillos marcados, líneas claras", "back": "AIRE — comunicación, curiosidad intelectual, versatilidad" }
+        {
+          "front": "Palma cuadrada, dedos cortos, piel gruesa, pocas líneas profundas",
+          "back": "TIERRA — practicidad, resistencia, determinación"
+        },
+        {
+          "front": "Palma rectangular, dedos cortos, piel cálida, muchas líneas marcadas",
+          "back": "FUEGO — extroversión, impulso, liderazgo natural"
+        },
+        {
+          "front": "Palma rectangular, dedos largos y finos, piel suave, red de líneas finas",
+          "back": "AGUA — sensibilidad artística, intuición, emocionalidad profunda"
+        },
+        {
+          "front": "Palma cuadrada, dedos largos, nudillos marcados, líneas claras",
+          "back": "AIRE — comunicación, curiosidad intelectual, versatilidad"
+        }
       ]
     },
     {
@@ -74,10 +86,30 @@
       "instruction": "Identifica las cuatro formas elementales de la mano en el diagrama.",
       "imageUrl": "/images/quiro/mano-formas.svg",
       "points": [
-        { "x": 12, "y": 50, "label": "TIERRA", "description": "Palma cuadrada + dedos cortos. Compacta, sólida. Pocas líneas, profundas." },
-        { "x": 37, "y": 50, "label": "FUEGO", "description": "Palma rectangular + dedos cortos. Energética, cálida. Muchas líneas marcadas." },
-        { "x": 62, "y": 50, "label": "AGUA", "description": "Palma rectangular + dedos largos. Elegante, delicada. Red intrincada de líneas finas." },
-        { "x": 87, "y": 50, "label": "AIRE", "description": "Palma cuadrada + dedos largos. Nudillos marcados. Líneas claras y definidas." }
+        {
+          "x": 12,
+          "y": 50,
+          "label": "TIERRA",
+          "description": "Palma cuadrada + dedos cortos. Compacta, sólida. Pocas líneas, profundas."
+        },
+        {
+          "x": 37,
+          "y": 50,
+          "label": "FUEGO",
+          "description": "Palma rectangular + dedos cortos. Energética, cálida. Muchas líneas marcadas."
+        },
+        {
+          "x": 62,
+          "y": 50,
+          "label": "AGUA",
+          "description": "Palma rectangular + dedos largos. Elegante, delicada. Red intrincada de líneas finas."
+        },
+        {
+          "x": 87,
+          "y": 50,
+          "label": "AIRE",
+          "description": "Palma cuadrada + dedos largos. Nudillos marcados. Líneas claras y definidas."
+        }
       ]
     },
     {
@@ -85,16 +117,67 @@
       "questions": [
         {
           "question": "Una persona tiene palma rectangular alargada y dedos proporcionalmente cortos. ¿Qué tipo de mano es?",
-          "options": ["Tierra", "Fuego", "Agua", "Aire"],
+          "options": [
+            "Tierra",
+            "Fuego",
+            "Agua",
+            "Aire"
+          ],
           "correct": 1,
           "explanation": "Palma rectangular (más larga que ancha) + dedos cortos = Fuego. La mano de Fuego indica extroversión, impulso y liderazgo natural."
         },
         {
           "question": "¿Qué tipo de mano tiene nudillos prominentes como rasgo distintivo?",
-          "options": ["Tierra", "Fuego", "Agua", "Aire"],
+          "options": [
+            "Tierra",
+            "Fuego",
+            "Agua",
+            "Aire"
+          ],
           "correct": 3,
           "explanation": "La mano de Aire se caracteriza por palma cuadrada + dedos largos con nudillos marcados. Los nudillos prominentes indican un procesamiento analítico de la información."
         }
+      ]
+    },
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Tierra",
+        "Fuego",
+        "Agua",
+        "Aire"
+      ],
+      "rows": [
+        [
+          "Palma",
+          "Cuadrada corta",
+          "Rectangular corta",
+          "Rectangular larga",
+          "Cuadrada larga"
+        ],
+        [
+          "Dedos",
+          "Cortos",
+          "Cortos",
+          "Largos",
+          "Largos nudosos"
+        ],
+        [
+          "Temperamento",
+          "Práctico, fiable",
+          "Impulsivo, líder",
+          "Sensible, creativo",
+          "Analítico, comunicador"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La clasificación elemental se basa en forma de palma y longitud de dedos",
+        "Los cuatro tipos son Tierra, Fuego, Agua y Aire con temperamentos distintos",
+        "Muchas manos son mixtas con un elemento dominante y uno secundario"
       ]
     }
   ],
@@ -116,10 +199,30 @@
     }
   ],
   "bibliography": [
-    { "author": "D'Arpentigny, C.", "year": "1839", "title": "La Chirognomonie", "type": "Libro" },
-    { "author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro" },
-    { "author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro" },
-    { "author": "Altman, N.", "year": "1999", "title": "Practical Palmistry", "type": "Libro" }
+    {
+      "author": "D'Arpentigny, C.",
+      "year": "1839",
+      "title": "La Chirognomonie",
+      "type": "Libro"
+    },
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Goldberg, E.",
+      "year": "2016",
+      "title": "The Art and Science of Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Altman, N.",
+      "year": "1999",
+      "title": "Practical Palmistry",
+      "type": "Libro"
+    }
   ],
   "homework": {
     "task": "Clasifica las manos de tres personas de tu entorno: mide palma y dedo medio, identifica el tipo elemental, observa textura y líneas, y escribe un párrafo describiendo cómo se manifiestan las cualidades del tipo en su vida. Fotografía cada mano.",

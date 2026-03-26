@@ -63,17 +63,34 @@
       "type": "flip_cards",
       "instruction": "Lee la descripción de la uña y descubre su significado en quirología.",
       "cards": [
-        { "front": "Uñas anchas y cortas", "back": "Temperamento directo y práctico. Constitución física robusta. Asociadas con mano de Tierra." },
-        { "front": "Uñas largas y estrechas", "back": "Sensibilidad y refinamiento. Constitución más delicada. Receptividad emocional." },
-        { "front": "Estrías horizontales (líneas de Beau)", "back": "Pueden indicar un período de estrés intenso. Su posición en la uña permite estimar cuándo ocurrió (3-4 mm/mes de crecimiento)." },
-        { "front": "Lúnulas visibles (medias lunas blancas)", "back": "En la tradición quirológica se asocian con vitalidad y buena circulación. Su ausencia visible no es necesariamente preocupante." }
+        {
+          "front": "Uñas anchas y cortas",
+          "back": "Temperamento directo y práctico. Constitución física robusta. Asociadas con mano de Tierra."
+        },
+        {
+          "front": "Uñas largas y estrechas",
+          "back": "Sensibilidad y refinamiento. Constitución más delicada. Receptividad emocional."
+        },
+        {
+          "front": "Estrías horizontales (líneas de Beau)",
+          "back": "Pueden indicar un período de estrés intenso. Su posición en la uña permite estimar cuándo ocurrió (3-4 mm/mes de crecimiento)."
+        },
+        {
+          "front": "Lúnulas visibles (medias lunas blancas)",
+          "back": "En la tradición quirológica se asocian con vitalidad y buena circulación. Su ausencia visible no es necesariamente preocupante."
+        }
       ]
     },
     {
       "type": "fill_blanks",
       "instruction": "Completa las frases sobre el pulgar.",
       "template": "La falange superior del pulgar representa la ___0___. La falange inferior representa la ___1___. Un ángulo de apertura menor de ___2___ grados indica cautela. Un pulgar hiperextensible indica ___3___ mental.",
-      "answers": ["voluntad", "lógica", "45", "adaptabilidad"]
+      "answers": [
+        "voluntad",
+        "lógica",
+        "45",
+        "adaptabilidad"
+      ]
     },
     {
       "type": "progress_check",
@@ -101,6 +118,39 @@
           "explanation": "La observación de las uñas en quirología es DESCRIPTIVA, no DIAGNÓSTICA. Si se observa algo preocupante, siempre se debe recomendar que la persona consulte con un profesional de la salud."
         }
       ]
+    },
+    {
+      "type": "comparison",
+      "headers": [
+        "Forma uña",
+        "Indica"
+      ],
+      "rows": [
+        [
+          "Ancha",
+          "Energía, franqueza"
+        ],
+        [
+          "Estrecha",
+          "Refinamiento, sensibilidad"
+        ],
+        [
+          "Corta",
+          "Impaciencia, practicidad"
+        ],
+        [
+          "Curvada",
+          "Adaptabilidad"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "El pulgar tiene dos falanges: voluntad y lógica",
+        "El ángulo de apertura indica cautela, equilibrio o generosidad",
+        "Las uñas se observan de forma descriptiva, nunca diagnóstica"
+      ]
     }
   ],
   "citation": [
@@ -121,10 +171,30 @@
     }
   ],
   "bibliography": [
-    { "author": "Wolff, C.", "year": "1951", "title": "The Hand in Psychological Diagnosis", "type": "Libro" },
-    { "author": "Altman, N.", "year": "1999", "title": "Practical Palmistry", "type": "Libro" },
-    { "author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro" },
-    { "author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro" }
+    {
+      "author": "Wolff, C.",
+      "year": "1951",
+      "title": "The Hand in Psychological Diagnosis",
+      "type": "Libro"
+    },
+    {
+      "author": "Altman, N.",
+      "year": "1999",
+      "title": "Practical Palmistry",
+      "type": "Libro"
+    },
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Goldberg, E.",
+      "year": "2016",
+      "title": "The Art and Science of Hand Reading",
+      "type": "Libro"
+    }
   ],
   "homework": {
     "task": "Fotografía los pulgares de ambas manos (vista lateral y frontal) y las uñas de los 10 dedos sin esmalte. Crea una ficha con: tipo de punta, falange dominante, ángulo de apertura, flexibilidad, y características de las uñas (forma, color, marcas, lúnulas).",

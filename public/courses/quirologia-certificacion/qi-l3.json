@@ -63,16 +63,32 @@
       "type": "fill_blanks",
       "instruction": "Completa las frases sobre la lectura de ambas manos.",
       "template": "La mano ___0___ muestra el potencial innato y lo heredado. La mano ___1___ muestra lo adquirido y lo desarrollado. En personas zurdas, la asignación se ___2___.",
-      "answers": ["no dominante", "dominante", "invierte"]
+      "answers": [
+        "no dominante",
+        "dominante",
+        "invierte"
+      ]
     },
     {
       "type": "flip_cards",
       "instruction": "Compara las ventajas de la lectura presencial frente a la remota.",
       "cards": [
-        { "front": "Ventaja presencial #1", "back": "Puedes ajustar la iluminación en tiempo real, moviendo la mano hasta que las líneas tenues se hagan visibles." },
-        { "front": "Ventaja presencial #2", "back": "Acceso a información táctil: flexibilidad de articulaciones, temperatura de la piel, desarrollo de los montes." },
-        { "front": "Ventaja remota #1", "back": "Las fotos de alta resolución se pueden ampliar en pantalla, revelando detalles en dermatoglifos difíciles a simple vista." },
-        { "front": "Ventaja remota #2", "back": "Puedes estudiar con calma, comparar ambas manos lado a lado y volver a observar sin presión de tiempo." }
+        {
+          "front": "Ventaja presencial #1",
+          "back": "Puedes ajustar la iluminación en tiempo real, moviendo la mano hasta que las líneas tenues se hagan visibles."
+        },
+        {
+          "front": "Ventaja presencial #2",
+          "back": "Acceso a información táctil: flexibilidad de articulaciones, temperatura de la piel, desarrollo de los montes."
+        },
+        {
+          "front": "Ventaja remota #1",
+          "back": "Las fotos de alta resolución se pueden ampliar en pantalla, revelando detalles en dermatoglifos difíciles a simple vista."
+        },
+        {
+          "front": "Ventaja remota #2",
+          "back": "Puedes estudiar con calma, comparar ambas manos lado a lado y volver a observar sin presión de tiempo."
+        }
       ]
     },
     {
@@ -80,7 +96,12 @@
       "questions": [
         {
           "question": "¿Cuál es el ángulo de luz óptimo para observar las líneas de la palma?",
-          "options": ["90° (cenital, desde arriba)", "45° (lateral, desde un lado)", "0° (rasante, casi paralela)", "Da igual, cualquier ángulo sirve"],
+          "options": [
+            "90° (cenital, desde arriba)",
+            "45° (lateral, desde un lado)",
+            "0° (rasante, casi paralela)",
+            "Da igual, cualquier ángulo sirve"
+          ],
           "correct": 1,
           "explanation": "La luz lateral a aproximadamente 45° crea sombras suaves en los surcos de la palma, haciendo visibles incluso las líneas más finas. La luz cenital aplana los surcos."
         },
@@ -95,6 +116,25 @@
           "correct": 1,
           "explanation": "La mano no dominante refleja el potencial innato, lo heredado, las tendencias naturales con las que nacemos. La mano dominante muestra cómo hemos desarrollado ese potencial a través de decisiones y experiencias."
         }
+      ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "Preparar una lectura",
+      "steps": [
+        "Luz lateral 45°",
+        "Manos relajadas",
+        "Observar ambas",
+        "Fotografiar (4 fotos)",
+        "Registrar observaciones"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La iluminación lateral a 45° es esencial para ver las líneas con claridad",
+        "Siempre se leen ambas manos: la no dominante muestra lo innato, la dominante lo adquirido",
+        "El protocolo fotográfico de 8 puntos garantiza la calidad de la observación remota"
       ]
     }
   ],
@@ -116,10 +156,30 @@
     }
   ],
   "bibliography": [
-    { "author": "Altman, N.", "year": "1999", "title": "Practical Palmistry", "type": "Libro" },
-    { "author": "Kimura, D.", "year": "1999", "title": "Sex and Cognition", "type": "Libro" },
-    { "author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro" },
-    { "author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro" }
+    {
+      "author": "Altman, N.",
+      "year": "1999",
+      "title": "Practical Palmistry",
+      "type": "Libro"
+    },
+    {
+      "author": "Kimura, D.",
+      "year": "1999",
+      "title": "Sex and Cognition",
+      "type": "Libro"
+    },
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Goldberg, E.",
+      "year": "2016",
+      "title": "The Art and Science of Hand Reading",
+      "type": "Libro"
+    }
   ],
   "homework": {
     "task": "Toma el set completo de fotos profesionales: palma dominante, palma no dominante, dorso de ambas, yemas de los 10 dedos. Evalúa cada foto contra el protocolo de 8 puntos y repite las que no cumplan. Coloca ambas palmas lado a lado y anota 3 diferencias visibles entre ellas.",

@@ -64,26 +64,97 @@
       "prompt": "Identifica los 3 patrones basicos de huellas dactilares en el diagrama.",
       "imageUrl": "/images/quiro/dermatoglifos-patrones.svg",
       "hotspots": [
-        {"id": "arco", "label": "Arco", "description": "Crestas horizontales que cruzan de lado a lado. 5% de las huellas. Patron mas simple."},
-        {"id": "bucle", "label": "Bucle", "description": "Crestas que entran por un lado y salen por el mismo. 60-65%. Ulnar o radial."},
-        {"id": "verticilo", "label": "Verticilo", "description": "Espiral o circulos concentricos. 30-35%. Dos triradios. Patron mas complejo."}
+        {
+          "id": "arco",
+          "label": "Arco",
+          "description": "Crestas horizontales que cruzan de lado a lado. 5% de las huellas. Patron mas simple."
+        },
+        {
+          "id": "bucle",
+          "label": "Bucle",
+          "description": "Crestas que entran por un lado y salen por el mismo. 60-65%. Ulnar o radial."
+        },
+        {
+          "id": "verticilo",
+          "label": "Verticilo",
+          "description": "Espiral o circulos concentricos. 30-35%. Dos triradios. Patron mas complejo."
+        }
       ]
     },
     {
       "type": "flip_cards",
       "prompt": "Repasa cada patron con su frecuencia y rasgo asociado.",
       "cards": [
-        {"front": "Arcos", "back": "5% de las huellas. Los mas raros. Asociacion: practicidad, reserva, preferencia por lo tangible y escepticismo ante lo abstracto."},
-        {"front": "Bucles ulnares", "back": "El subtipo mas comun (mayoria del 60-65%). Asociacion: adaptabilidad, sociabilidad, flexibilidad, trabajo en equipo."},
-        {"front": "Bucles radiales", "back": "Variante rara del bucle (entran desde lado del pulgar). Asociacion: adaptabilidad activa, toma de iniciativa en la adaptacion."},
-        {"front": "Verticilos", "back": "30-35% de las huellas. Asociacion: individualismo, determinacion, pensamiento independiente, no cambian de opinion facilmente."}
+        {
+          "front": "Arcos",
+          "back": "5% de las huellas. Los mas raros. Asociacion: practicidad, reserva, preferencia por lo tangible y escepticismo ante lo abstracto."
+        },
+        {
+          "front": "Bucles ulnares",
+          "back": "El subtipo mas comun (mayoria del 60-65%). Asociacion: adaptabilidad, sociabilidad, flexibilidad, trabajo en equipo."
+        },
+        {
+          "front": "Bucles radiales",
+          "back": "Variante rara del bucle (entran desde lado del pulgar). Asociacion: adaptabilidad activa, toma de iniciativa en la adaptacion."
+        },
+        {
+          "front": "Verticilos",
+          "back": "30-35% de las huellas. Asociacion: individualismo, determinacion, pensamiento independiente, no cambian de opinion facilmente."
+        }
       ]
     },
     {
       "type": "fill_blanks",
       "prompt": "Completa los datos clave sobre los 3 patrones.",
       "template": "Los ___0___ representan el 5% de las huellas y se asocian con practicidad. Los ___1___ son el patron mas comun con un 60-65% y se asocian con adaptabilidad. Los ___2___ representan el 30-35% y se asocian con individualismo y determinacion.",
-      "answers": ["arcos", "bucles", "verticilos"]
+      "answers": [
+        "arcos",
+        "bucles",
+        "verticilos"
+      ]
+    },
+    {
+      "type": "comparison",
+      "headers": [
+        "Patrón",
+        "Forma",
+        "Frecuencia",
+        "Asociación"
+      ],
+      "rows": [
+        [
+          "Arco",
+          "△",
+          "5%",
+          "Pragmatismo, reserva"
+        ],
+        [
+          "Bucle ulnar",
+          "↰",
+          "65%",
+          "Adaptabilidad, sociabilidad"
+        ],
+        [
+          "Bucle radial",
+          "↱",
+          "5%",
+          "Sensibilidad, búsqueda"
+        ],
+        [
+          "Verticilo",
+          "⊙",
+          "25%",
+          "Individualidad, intensidad"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "Toda huella dactilar pertenece a uno de tres patrones: arco, bucle o verticilo",
+        "Los bucles son el patrón más común y los arcos el más raro",
+        "La combinación de patrones en los 10 dedos crea un perfil único"
+      ]
     }
   ],
   "citation": {

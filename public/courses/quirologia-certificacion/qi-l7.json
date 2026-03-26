@@ -59,17 +59,42 @@
       "instruction": "Identifica los puntos de datación temporal en la línea de la vida.",
       "imageUrl": "/images/quiro/mano-lineas-mayores.svg",
       "points": [
-        { "x": 35, "y": 35, "label": "~15 años", "description": "Vertical desde el centro del dedo índice. Marca el inicio de la adolescencia en la línea de la vida." },
-        { "x": 38, "y": 42, "label": "~21 años", "description": "Vertical desde el espacio entre índice y medio. Marca la entrada en la edad adulta." },
-        { "x": 42, "y": 52, "label": "~35 años", "description": "Vertical desde el centro del dedo medio. El punto de referencia principal para la datación." },
-        { "x": 40, "y": 65, "label": "~40-45 años", "description": "Aproximadamente la mitad del recorrido total de la línea." }
+        {
+          "x": 35,
+          "y": 35,
+          "label": "~15 años",
+          "description": "Vertical desde el centro del dedo índice. Marca el inicio de la adolescencia en la línea de la vida."
+        },
+        {
+          "x": 38,
+          "y": 42,
+          "label": "~21 años",
+          "description": "Vertical desde el espacio entre índice y medio. Marca la entrada en la edad adulta."
+        },
+        {
+          "x": 42,
+          "y": 52,
+          "label": "~35 años",
+          "description": "Vertical desde el centro del dedo medio. El punto de referencia principal para la datación."
+        },
+        {
+          "x": 40,
+          "y": 65,
+          "label": "~40-45 años",
+          "description": "Aproximadamente la mitad del recorrido total de la línea."
+        }
       ]
     },
     {
       "type": "fill_blanks",
       "instruction": "Completa las frases sobre la línea de la vida.",
       "template": "A la altura del dedo ___0___ la línea marca aproximadamente los ___1___ años. Una línea ___2___ indica constitución robusta. Una línea ___3___ paralela a la de la vida se llama línea de Marte e indica reserva extra de energía vital.",
-      "answers": ["medio", "35", "profunda", "doble"]
+      "answers": [
+        "medio",
+        "35",
+        "profunda",
+        "doble"
+      ]
     },
     {
       "type": "sort",
@@ -82,7 +107,32 @@
         "Rota con reinicio",
         "Isla (período de estrés)"
       ],
-      "correct_order": [0, 1, 2, 3, 4, 5]
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "Datación en línea de vida",
+      "steps": [
+        "Inicio (borde radial)",
+        "Mitad del recorrido = ~35 años",
+        "Final del monte Venus",
+        "Marcas = eventos, no duración de vida"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La línea de la vida NO indica longevidad sino calidad de la fuerza vital",
+        "La datación temporal permite situar eventos de forma aproximada",
+        "La línea doble de Marte indica reserva extra de energía vital"
+      ]
     }
   ],
   "citation": [
@@ -103,10 +153,30 @@
     }
   ],
   "bibliography": [
-    { "author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro" },
-    { "author": "Altman, N.", "year": "1999", "title": "Practical Palmistry", "type": "Libro" },
-    { "author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro" },
-    { "author": "Destiny Palmistry", "year": "2020", "title": "Técnicas de datación temporal en quirología", "type": "Recurso online" }
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Altman, N.",
+      "year": "1999",
+      "title": "Practical Palmistry",
+      "type": "Libro"
+    },
+    {
+      "author": "Goldberg, E.",
+      "year": "2016",
+      "title": "The Art and Science of Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Destiny Palmistry",
+      "year": "2020",
+      "title": "Técnicas de datación temporal en quirología",
+      "type": "Recurso online"
+    }
   ],
   "homework": {
     "task": "Fotografía la línea de la vida de ambas manos. Marca los puntos de datación (15, 21, 35, 45 años) y señala cualquier marca especial (isla, cadena, interrupción, doble). Escribe 100 palabras describiendo la calidad de tu fuerza vital según lo observado.",

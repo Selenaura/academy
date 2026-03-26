@@ -63,23 +63,40 @@
       "type": "match",
       "instruction": "Conecta cada rama de la quirología con lo que estudia.",
       "pairs": [
-        { "left": "Quirognomía", "right": "Forma de la mano, proporciones, textura" },
-        { "left": "Quiromancia", "right": "Líneas de la palma y marcas especiales" },
-        { "left": "Dermatoglifos", "right": "Crestas papilares (huellas dactilares)" }
+        {
+          "left": "Quirognomía",
+          "right": "Forma de la mano, proporciones, textura"
+        },
+        {
+          "left": "Quiromancia",
+          "right": "Líneas de la palma y marcas especiales"
+        },
+        {
+          "left": "Dermatoglifos",
+          "right": "Crestas papilares (huellas dactilares)"
+        }
       ]
     },
     {
       "type": "fill_blanks",
       "instruction": "Completa las raíces etimológicas de cada rama.",
       "template": "Quirognomía viene del griego cheir + ___0___ (conocer). Quiromancia viene de cheir + ___1___ (lectura). Dermatoglifos viene de derma + ___2___ (grabar).",
-      "answers": ["gnomon", "manteia", "glyphein"]
+      "answers": [
+        "gnomon",
+        "manteia",
+        "glyphein"
+      ]
     },
     {
       "type": "progress_check",
       "questions": [
         {
           "question": "¿Cuál de las tres ramas estudia características que NO cambian nunca durante la vida?",
-          "options": ["Quirognomía", "Quiromancia", "Dermatoglifos"],
+          "options": [
+            "Quirognomía",
+            "Quiromancia",
+            "Dermatoglifos"
+          ],
           "correct": 2,
           "explanation": "Los dermatoglifos se forman entre las semanas 12-24 de gestación y permanecen inmutables de por vida. Las líneas (quiromancia) pueden cambiar, y la forma (quirognomía) es relativamente estable pero no absolutamente inmutable."
         },
@@ -93,6 +110,23 @@
           "correct": 1,
           "explanation": "Leer solo las líneas da información sobre la experiencia vivida, pero sin la quirognomía (constitución) y los dermatoglifos (registro prenatal), falta el contexto para interpretar correctamente lo que las líneas muestran."
         }
+      ]
+    },
+    {
+      "type": "concept_map",
+      "center": "Quirología",
+      "nodes": [
+        "Quirognomía (forma de la mano)",
+        "Quiromancia (líneas)",
+        "Dermatoglifos (huellas)"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La quirología integra tres ramas complementarias: quirognomía, quiromancia y dermatoglifos",
+        "Cada rama estudia una dimensión diferente de la mano con su propia metodología",
+        "Las tres juntas crean una lectura integral imposible de lograr con una sola rama"
       ]
     }
   ],
@@ -114,10 +148,30 @@
     }
   ],
   "bibliography": [
-    { "author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro" },
-    { "author": "Cummins, H. & Midlo, C.", "year": "1943", "title": "Fingerprints, Palms and Soles", "type": "Libro" },
-    { "author": "D'Arpentigny, C.", "year": "1856", "title": "La Science de la Main", "type": "Libro" },
-    { "author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro" }
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Cummins, H. & Midlo, C.",
+      "year": "1943",
+      "title": "Fingerprints, Palms and Soles",
+      "type": "Libro"
+    },
+    {
+      "author": "D'Arpentigny, C.",
+      "year": "1856",
+      "title": "La Science de la Main",
+      "type": "Libro"
+    },
+    {
+      "author": "Goldberg, E.",
+      "year": "2016",
+      "title": "The Art and Science of Hand Reading",
+      "type": "Libro"
+    }
   ],
   "homework": {
     "task": "Fotografía tu mano dominante y no dominante (palma arriba, fondo oscuro, buena luz) y las yemas de los 10 dedos ampliadas. En tu cuaderno, crea una tabla con tres columnas (Quirognomía / Quiromancia / Dermatoglifos) y escribe al menos tres observaciones bajo cada columna.",

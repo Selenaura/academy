@@ -67,20 +67,44 @@
       "type": "match",
       "instruction": "Conecta cada situacion dificil con la respuesta empatica correcta.",
       "pairs": [
-        {"left": "La persona pregunta si va a morir joven por su linea de vida corta", "right": "La longitud de la linea no predice longevidad. Lo que veo es una vitalidad concentrada e intensa."},
-        {"left": "La persona llora al escuchar la lectura de su linea del corazon", "right": "Pausa. Silencio. Toma el tiempo que necesites. Esto parece importante para ti."},
-        {"left": "La persona pide un diagnostico medico basado en su linea de salud", "right": "No tengo formacion medica. Te recomiendo consultar con tu profesional de salud."},
-        {"left": "La persona quiere volver cada semana para consultarte todo", "right": "La quirologia empodera tu propia intuicion. Mi objetivo es que confies en ti, no que dependas de mis lecturas."}
+        {
+          "left": "La persona pregunta si va a morir joven por su linea de vida corta",
+          "right": "La longitud de la linea no predice longevidad. Lo que veo es una vitalidad concentrada e intensa."
+        },
+        {
+          "left": "La persona llora al escuchar la lectura de su linea del corazon",
+          "right": "Pausa. Silencio. Toma el tiempo que necesites. Esto parece importante para ti."
+        },
+        {
+          "left": "La persona pide un diagnostico medico basado en su linea de salud",
+          "right": "No tengo formacion medica. Te recomiendo consultar con tu profesional de salud."
+        },
+        {
+          "left": "La persona quiere volver cada semana para consultarte todo",
+          "right": "La quirologia empodera tu propia intuicion. Mi objetivo es que confies en ti, no que dependas de mis lecturas."
+        }
       ]
     },
     {
       "type": "flip_cards",
       "prompt": "Transforma la afirmacion danina en formulacion profesional.",
       "cards": [
-        {"front": "Tu relacion esta condenada (linea del corazon rota)", "back": "Tu linea del corazon sugiere que tiendes a proteger tus emociones. Los cambios en la linea indican una transformacion emocional importante, no una condena."},
-        {"front": "No tienes destino (sin linea del destino)", "back": "La ausencia de linea del destino indica que construyes tu propio camino con libertad. No tienes una ruta predeterminada, lo cual es una forma de autonomia."},
-        {"front": "A los 30 tuviste una enfermedad grave (isla en linea de vida)", "back": "Observo un periodo alrededor de los treinta que parece haber sido de menor energia o mayor vulnerabilidad. Esto resuena con algo de tu experiencia?"},
-        {"front": "Tienes problemas de comunicacion (menique corto)", "back": "Tu menique sugiere que la comunicacion directa de emociones es un area de crecimiento. Muchas personas con esta caracteristica son excelentes en lo profesional pero mas reservadas en lo personal."}
+        {
+          "front": "Tu relacion esta condenada (linea del corazon rota)",
+          "back": "Tu linea del corazon sugiere que tiendes a proteger tus emociones. Los cambios en la linea indican una transformacion emocional importante, no una condena."
+        },
+        {
+          "front": "No tienes destino (sin linea del destino)",
+          "back": "La ausencia de linea del destino indica que construyes tu propio camino con libertad. No tienes una ruta predeterminada, lo cual es una forma de autonomia."
+        },
+        {
+          "front": "A los 30 tuviste una enfermedad grave (isla en linea de vida)",
+          "back": "Observo un periodo alrededor de los treinta que parece haber sido de menor energia o mayor vulnerabilidad. Esto resuena con algo de tu experiencia?"
+        },
+        {
+          "front": "Tienes problemas de comunicacion (menique corto)",
+          "back": "Tu menique sugiere que la comunicacion directa de emociones es un area de crecimiento. Muchas personas con esta caracteristica son excelentes en lo profesional pero mas reservadas en lo personal."
+        }
       ]
     },
     {
@@ -107,6 +131,31 @@
           "explanation": "Se deriva cuando la persona necesita atencion que esta fuera de tu competencia: crisis de salud mental, preguntas medicas, o patrones de dependencia. No saber una respuesta quirologica se resuelve con honestidad; el desacuerdo se resuelve con dialogo."
         }
       ]
+    },
+    {
+      "type": "branching_scenario",
+      "title": "Dilema ético",
+      "scenario": "La persona pregunta: ¿Voy a tener una enfermedad grave?",
+      "options": [
+        {
+          "label": "Leo la línea de salud y doy mi opinión",
+          "outcome": "Error: no eres médico",
+          "feedback": "Nunca diagnostiques. Di: Las líneas no predicen enfermedades. Si tienes preocupaciones de salud, consulta con un profesional médico"
+        },
+        {
+          "label": "Explico los límites de la quirología y derivo",
+          "outcome": "Correcto: proteges a la persona y tu profesionalidad",
+          "feedback": "La quirología describe patrones, no diagnostica. Derivar a un profesional de salud es siempre la respuesta correcta"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La comunicación empática transforma hallazgos técnicos en herramientas de empoderamiento",
+        "Los cuatro mitos dañinos no tienen respaldo empírico y jamás deben comunicarse",
+        "Saber cuándo derivar es lo que separa la práctica profesional de la afición"
+      ]
     }
   ],
   "citation": [
@@ -127,11 +176,36 @@
     }
   ],
   "bibliography": [
-    {"author": "Rogers, C.", "year": "1961", "title": "On Becoming a Person", "type": "Libro"},
-    {"author": "Wolff, C.", "year": "1951", "title": "The Hand in Psychological Diagnosis", "type": "Libro"},
-    {"author": "Cummins, H. & Midlo, C.", "year": "1961", "title": "Fingerprints, Palms and Soles", "type": "Libro"},
-    {"author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro"},
-    {"author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro"}
+    {
+      "author": "Rogers, C.",
+      "year": "1961",
+      "title": "On Becoming a Person",
+      "type": "Libro"
+    },
+    {
+      "author": "Wolff, C.",
+      "year": "1951",
+      "title": "The Hand in Psychological Diagnosis",
+      "type": "Libro"
+    },
+    {
+      "author": "Cummins, H. & Midlo, C.",
+      "year": "1961",
+      "title": "Fingerprints, Palms and Soles",
+      "type": "Libro"
+    },
+    {
+      "author": "Goldberg, E.",
+      "year": "2016",
+      "title": "The Art and Science of Hand Reading",
+      "type": "Libro"
+    },
+    {
+      "author": "Benham, W.G.",
+      "year": "1900",
+      "title": "The Laws of Scientific Hand Reading",
+      "type": "Libro"
+    }
   ],
   "homework": {
     "task": "Practica la comunicacion empatica con una persona de confianza durante 10 minutos. Observa su mano dominante, elige tres hallazgos y comunicalos con lenguaje de posibilidad y reflejo emocional. Despues, pide feedback sobre como se sintio: algo le resulto alarmante? Que le hizo sentirse escuchada? Anota el feedback en tu cuaderno.",

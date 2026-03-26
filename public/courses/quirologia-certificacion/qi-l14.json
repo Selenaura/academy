@@ -64,30 +64,93 @@
       "prompt": "Identifica las 6 marcas especiales en el diagrama de la palma.",
       "imageUrl": "/images/quiro/mano-lineas-marcas.svg",
       "hotspots": [
-        {"id": "estrella", "label": "Estrella", "description": "Lineas radiantes desde un punto. Evento brillante e intenso. Significado varia segun ubicacion."},
-        {"id": "cruz", "label": "Cruz", "description": "Dos lineas cruzadas en X. Obstaculo o cambio, excepto en Jupiter (buena fortuna)."},
-        {"id": "triangulo", "label": "Triangulo", "description": "Tres lineas formando triangulo. Talento e inteligencia aplicada. Siempre favorable."},
-        {"id": "cuadrado", "label": "Cuadrado", "description": "Cuatro lineas formando rectangulo. Proteccion, especialmente rodeando rupturas de linea."},
-        {"id": "isla", "label": "Isla", "description": "Linea que se divide y vuelve a unirse. Periodo de estres o debilitamiento."},
-        {"id": "rejilla", "label": "Rejilla", "description": "Lineas finas cruzadas en red. Energia dispersa, ansiedad en el area del monte."}
+        {
+          "id": "estrella",
+          "label": "Estrella",
+          "description": "Lineas radiantes desde un punto. Evento brillante e intenso. Significado varia segun ubicacion."
+        },
+        {
+          "id": "cruz",
+          "label": "Cruz",
+          "description": "Dos lineas cruzadas en X. Obstaculo o cambio, excepto en Jupiter (buena fortuna)."
+        },
+        {
+          "id": "triangulo",
+          "label": "Triangulo",
+          "description": "Tres lineas formando triangulo. Talento e inteligencia aplicada. Siempre favorable."
+        },
+        {
+          "id": "cuadrado",
+          "label": "Cuadrado",
+          "description": "Cuatro lineas formando rectangulo. Proteccion, especialmente rodeando rupturas de linea."
+        },
+        {
+          "id": "isla",
+          "label": "Isla",
+          "description": "Linea que se divide y vuelve a unirse. Periodo de estres o debilitamiento."
+        },
+        {
+          "id": "rejilla",
+          "label": "Rejilla",
+          "description": "Lineas finas cruzadas en red. Energia dispersa, ansiedad en el area del monte."
+        }
       ]
     },
     {
       "type": "match",
       "prompt": "Conecta cada marca con su significado general (positivo o negativo).",
       "pairs": [
-        {"left": "Estrella en el monte de Jupiter", "right": "Positivo: exito notable en liderazgo y reconocimiento publico"},
-        {"left": "Cruz sobre la linea de la cabeza", "right": "Desafio: periodo de dificultad mental o cambio cognitivo"},
-        {"left": "Cuadrado rodeando ruptura de linea", "right": "Positivo: proteccion que mitiga el dano potencial"},
-        {"left": "Isla en la linea del corazon", "right": "Atencion: periodo de inseguridad emocional o conflicto"},
-        {"left": "Croix Mystique (entre cabeza y corazon)", "right": "Positivo: inclinacion hacia lo intuitivo e investigativo"}
+        {
+          "left": "Estrella en el monte de Jupiter",
+          "right": "Positivo: exito notable en liderazgo y reconocimiento publico"
+        },
+        {
+          "left": "Cruz sobre la linea de la cabeza",
+          "right": "Desafio: periodo de dificultad mental o cambio cognitivo"
+        },
+        {
+          "left": "Cuadrado rodeando ruptura de linea",
+          "right": "Positivo: proteccion que mitiga el dano potencial"
+        },
+        {
+          "left": "Isla en la linea del corazon",
+          "right": "Atencion: periodo de inseguridad emocional o conflicto"
+        },
+        {
+          "left": "Croix Mystique (entre cabeza y corazon)",
+          "right": "Positivo: inclinacion hacia lo intuitivo e investigativo"
+        }
       ]
     },
     {
       "type": "fill_blanks",
       "prompt": "Completa las afirmaciones sobre marcas especiales.",
       "template": "Una ___0___ en el monte de Jupiter indica exito notable y reconocimiento. La ___1___ es la marca de proteccion que mitiga rupturas de linea. Una ___2___ indica un periodo de estres donde la linea se divide y vuelve a unirse.",
-      "answers": ["estrella", "cuadrado", "isla"]
+      "answers": [
+        "estrella",
+        "cuadrado",
+        "isla"
+      ]
+    },
+    {
+      "type": "concept_map",
+      "center": "Marcas",
+      "nodes": [
+        "Estrella (evento súbito)",
+        "Cruz (crisis/decisión)",
+        "Triángulo (talento)",
+        "Cuadrado (protección)",
+        "Isla (debilidad)",
+        "Rejilla (dispersión)"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "Las 6 marcas principales añaden información puntual a la lectura",
+        "El significado de cada marca depende fundamentalmente de su ubicación",
+        "El cuadrado protector y el triángulo de talento son siempre marcas favorables"
+      ]
     }
   ],
   "citation": {
