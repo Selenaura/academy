@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { COURSES } from '@/lib/constants';
 import { Card, ProgressBar, Badge, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
+import { FlipCards, MatchExercise, HotspotImage, FillBlanks, SortExercise, KeyConcept, ProgressCheck } from '@/components/InteractiveElements';
 
 // ── Chevron Icons for slide navigation ──
 function ChevronLeftIcon({ size = 20, className = '' }) {
@@ -407,6 +408,27 @@ export default function CoursePage({ params }) {
                   ))}
                 </div>
               </Card>
+
+              {/* Interactive elements */}
+              {lessonData.interactive && lessonData.interactive.length > 0 && (
+                <div className="mb-6 space-y-2">
+                  <h3 className="text-sm font-semibold text-selene-white-dim mb-3 flex items-center gap-2">
+                    <span>Ejercicios interactivos</span>
+                  </h3>
+                  {lessonData.interactive.map((el, i) => {
+                    switch (el.type) {
+                      case 'flip_cards': return <FlipCards key={i} cards={el.cards} />;
+                      case 'match': return <MatchExercise key={i} title={el.title} pairs={el.pairs} instruction={el.instruction} />;
+                      case 'hotspot': return <HotspotImage key={i} imageUrl={el.imageUrl} altText={el.altText} hotspots={el.hotspots} title={el.title} />;
+                      case 'fill_blanks': return <FillBlanks key={i} text={el.text} blanks={el.blanks} title={el.title} />;
+                      case 'sort': return <SortExercise key={i} title={el.title} items={el.items} instruction={el.instruction} />;
+                      case 'key_concept': return <KeyConcept key={i} term={el.term} definition={el.definition} icon={el.icon} source={el.source} />;
+                      case 'progress_check': return <ProgressCheck key={i} questions={el.questions} />;
+                      default: return null;
+                    }
+                  })}
+                </div>
+              )}
 
               {/* Slides */}
               {lessonData.slides && lessonData.slides.length > 0 && (

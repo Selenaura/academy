@@ -61,6 +61,39 @@
       "text": "En la siguiente lección exploraremos el Sol: no el signo del horóscopo, sino quién eres cuando nadie te está mirando."
     }
   ],
+  "interactive": [
+    {
+      "type": "flip_cards",
+      "cards": [
+        { "icon": "🗺️", "front": "Carta natal", "back": "Mapa simbólico del cielo en el instante exacto de tu nacimiento. No es destino, es territorio." },
+        { "icon": "☀️", "front": "Signo solar", "back": "Solo UNA pieza del rompecabezas. Tu carta tiene 10 planetas, 12 casas y decenas de aspectos." },
+        { "icon": "🧬", "front": "Cronobiología", "back": "Ciencia que estudia cómo los ritmos naturales (luz, estaciones, ciclos) afectan tu biología y temperamento." },
+        { "icon": "🔴", "front": "Marte prominente", "back": "Energía intensa, tendencia a actuar antes de pensar. La carta lo señala, tú decides qué hacer con ello." },
+        { "icon": "🔮", "front": "¿Predice el futuro?", "back": "No. Muestra patrones, tendencias y recursos internos. Nunca te quita la capacidad de elegir." },
+        { "icon": "🧩", "front": "¿Para qué sirve?", "back": "Nombra tu complejidad psicológica. Lo que ya intuyes sobre ti pero no siempre sabes expresar." }
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Desmonta los mitos",
+      "instruction": "Conecta cada mito con su realidad",
+      "pairs": [
+        { "left": "Tu signo define quién eres", "right": "Es solo una pieza de un sistema complejo" },
+        { "left": "La astrología predice el futuro", "right": "Muestra patrones y tendencias, no eventos" },
+        { "left": "No tiene base alguna", "right": "La cronobiología muestra correlaciones reales" },
+        { "left": "Los planetas envían señales", "right": "Las condiciones estacionales afectan el neurodesarrollo" }
+      ]
+    },
+    {
+      "type": "progress_check",
+      "questions": [
+        "Puedo explicar la diferencia entre carta natal y horóscopo",
+        "Entiendo por qué el signo solar no me define completamente",
+        "Sé qué es la cronobiología y su relación con la astrología",
+        "Comprendo que la carta natal nombra patrones, no los crea"
+      ]
+    }
+  ],
   "quiz_points": [
     "La carta natal es un mapa simbólico del cielo al momento de nacer, no una predicción del destino",
     "El signo solar es solo una de muchas piezas: hay 10 planetas, 12 casas y múltiples aspectos",
