@@ -90,6 +90,56 @@
         { "answer": "cuatro", "hint": "Body scan, sentada, movimiento, caminando" },
         { "answer": "izquierda", "hint": "Lado asociado con emociones positivas" }
       ]
+    },
+    {
+      "type": "timeline",
+      "title": "Historia del MBSR",
+      "events": [
+        {
+          "year": "1979",
+          "title": "Kabat-Zinn crea el MBSR",
+          "detail": "Jon Kabat-Zinn introduce la meditación mindfulness como intervención clínica formal en el Hospital General de Massachusetts, con protocolo estandarizado de 8 semanas."
+        },
+        {
+          "year": "1990",
+          "title": "Publicación de Full Catastrophe Living",
+          "detail": "Kabat-Zinn publica su obra fundamental que presenta el MBSR al público general y documenta sus resultados clínicos con pacientes de dolor crónico."
+        },
+        {
+          "year": "2003",
+          "title": "Meta-análisis confirma eficacia",
+          "detail": "Kabat-Zinn y Davidson publican un estudio que demuestra que MBSR aumenta la activación prefrontal izquierda y fortalece la respuesta inmunitaria."
+        },
+        {
+          "year": "2013",
+          "title": "Usado en más de 720 hospitales",
+          "detail": "El protocolo MBSR se extiende a más de 720 hospitales y clínicas en todo el mundo, consolidándose como el programa de meditación más estudiado."
+        },
+        {
+          "year": "2017",
+          "title": "Integrado en sistemas de salud",
+          "detail": "El MBSR se integra formalmente en sistemas de salud pública de varios países como intervención complementaria basada en evidencia."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "El protocolo más estudiado del mundo",
+          "detail": "MBSR es un programa clínico de 8 semanas creado por Kabat-Zinn en 1979, con más de 800 hospitales que lo ofrecen actualmente."
+        },
+        {
+          "title": "4 técnicas con propósito específico",
+          "detail": "Body scan (interocepción), sentada (atención sostenida), movimiento consciente (propiocepción) y caminando (vida cotidiana)."
+        },
+        {
+          "title": "Cambia la relación, no el estímulo",
+          "detail": "MBSR no elimina el dolor o el estrés. Entrena al cerebro para procesarlos sin amplificarlos con reactividad emocional."
+        }
+      ],
+      "nextLesson": "Práctica guiada: tu primera meditación"
     }
   ],
   "citation": {

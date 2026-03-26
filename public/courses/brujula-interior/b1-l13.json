@@ -86,6 +86,48 @@
         "Se en que nivel de la jerarquia de Maslow estoy ahora",
         "Puedo identificar al menos una actividad de flujo en mi vida"
       ]
+    },
+    {
+      "type": "concept_map",
+      "title": "Los 4 pilares del autoconocimiento",
+      "centerNode": "Autoconocimiento",
+      "nodes": [
+        {
+          "label": "Cuerpo",
+          "description": "Señales físicas: interocepción, marcadores somáticos, coherencia cardíaca. Tu cuerpo sabe antes que tu mente."
+        },
+        {
+          "label": "Mente",
+          "description": "Patrones de pensamiento: tipo psicológico (Jung), sesgos cognitivos, estilos de procesamiento y toma de decisiones."
+        },
+        {
+          "label": "Emociones",
+          "description": "Inteligencia emocional: fortalezas de carácter (Seligman), necesidades profundas (Maslow), vocabulario emocional."
+        },
+        {
+          "label": "Espíritu",
+          "description": "Propósito y valores: autorrealización, estado de flujo (Csikszentmihalyi), sentido de trascendencia y conexión."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "4 pilares, una identidad completa",
+          "detail": "Fortalezas (Seligman), necesidades (Maslow), tipo psicológico (Jung) y flujo (Csikszentmihalyi) forman un sistema de autoconocimiento."
+        },
+        {
+          "title": "Fortalezas, no habilidades",
+          "detail": "Las 24 fortalezas de carácter son cualidades profundas que te definen. Usarlas conscientemente aumenta el bienestar y el propósito."
+        },
+        {
+          "title": "El flujo revela quién eres",
+          "detail": "Las actividades donde el tiempo desaparece son una firma de tu identidad profunda, más allá de roles o etiquetas."
+        }
+      ],
+      "nextLesson": "Tu perfil energético: descúbrelo"
     }
   ],
   "citation": {

@@ -91,6 +91,36 @@
         "He identificado al menos una fuga energetica en mi vida",
         "Se cual es mi dominio energetico mas debil ahora mismo"
       ]
+    },
+    {
+      "type": "comparison",
+      "title": "Los 4 dominios de tu energía",
+      "headers": ["Dominio", "Fortaleza", "Desafío", "Se potencia con"],
+      "rows": [
+        ["Físico", "Vitalidad, resistencia, salud corporal", "Agotamiento, sedentarismo, mal sueño", "Sueño reparador, movimiento, respiración coherente"],
+        ["Emocional", "Gratitud, conexión, entusiasmo", "Resentimiento crónico, ansiedad, culpa", "Relaciones nutritivas, límites sanos, expresión emocional"],
+        ["Mental", "Claridad, concentración, creatividad", "Fatiga de decisión, dispersión, rumiación", "Proteger la atención, reducir interrupciones, delegar"],
+        ["Espiritual", "Propósito, sentido, trascendencia", "Piloto automático, desconexión, vacío", "Conectar con tu por qué, prácticas reflexivas, servicio"]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "4 dominios interdependientes",
+          "detail": "Tu energía se distribuye en dominios físico, emocional, mental y espiritual. Cada uno necesita nutrición específica."
+        },
+        {
+          "title": "La coherencia cardíaca es medible",
+          "detail": "McCraty (2015) demostró que la armonía entre ritmo cardíaco y respiración indica tu energía disponible y se mejora en 5 minutos."
+        },
+        {
+          "title": "Las fugas son lo más peligroso",
+          "detail": "Situaciones, relaciones o hábitos que drenan energía sin que te des cuenta. Las más peligrosas son las que normalizas."
+        }
+      ],
+      "nextLesson": "Práctica: mapa de energía personal"
     }
   ],
   "citation": {

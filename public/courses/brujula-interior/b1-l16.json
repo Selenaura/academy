@@ -87,6 +87,56 @@
         "He identificado mis 2-3 areas de crecimiento prioritarias",
         "He escrito mi declaracion de identidad"
       ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "Tu ruta de crecimiento en SelenaUra",
+      "steps": [
+        {
+          "icon": "🧭",
+          "label": "Brújula Interior",
+          "detail": "Tu punto de partida: autoconocimiento con base científica. Carta natal, neuroplasticidad, meditación, intuición y energía."
+        },
+        {
+          "icon": "⭐",
+          "label": "Astrología Natal",
+          "detail": "Profundización: tránsitos, progresiones, revoluciones solares. Interpretación profesional de la carta natal completa."
+        },
+        {
+          "icon": "🔮",
+          "label": "Especialización",
+          "detail": "Elige tu camino: Tarot terapéutico, Quirología, Interpretación de sueños u otras herramientas de autoconocimiento."
+        },
+        {
+          "icon": "🎓",
+          "label": "Máster",
+          "detail": "Integración avanzada de múltiples herramientas. Desarrollo de tu enfoque personal y metodología propia."
+        },
+        {
+          "icon": "💼",
+          "label": "Práctica profesional",
+          "detail": "Aplicación en consultoría, coaching o acompañamiento. Tu conocimiento se convierte en servicio a otros."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "Mentalidad de crecimiento",
+          "detail": "Dweck (2006): tus capacidades no son fijas. Puedes desarrollar lo que ya eres con esfuerzo, estrategia y aprendizaje."
+        },
+        {
+          "title": "Hábitos mínimos, cambios máximos",
+          "detail": "Fogg (2019): señal + rutina diminuta + celebración. El cambio duradero no depende de la motivación sino de la repetición."
+        },
+        {
+          "title": "Identidad antes que resultados",
+          "detail": "Clear (2018): no digas «quiero meditar». Di «soy una persona que medita». Conectar el hábito con la identidad lo vuelve automático."
+        }
+      ],
+      "nextLesson": "Resumen: lo que has aprendido"
     }
   ],
   "citation": {

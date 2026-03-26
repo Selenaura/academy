@@ -88,6 +88,61 @@
         "He practicado la escucha abdominal y puedo describir mis señales viscerales",
         "Comprendo que no toda señal visceral es intuición: el microbioma puede generar ruido"
       ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "La ruta de la señal visceral: del intestino a la decisión",
+      "steps": [
+        {
+          "icon": "🫁",
+          "label": "Intestino",
+          "detail": "500 millones de neuronas del sistema nervioso entérico procesan información y generan señales somáticas."
+        },
+        {
+          "icon": "🛤️",
+          "label": "Nervio vago",
+          "detail": "El nervio craneal más largo del cuerpo transporta la señal. El 80% de sus fibras son aferentes (ascendentes)."
+        },
+        {
+          "icon": "🧬",
+          "label": "Tronco encefálico",
+          "detail": "Primer punto de procesamiento cerebral. Integra señales viscerales con el estado general del organismo."
+        },
+        {
+          "icon": "💓",
+          "label": "Sistema límbico",
+          "detail": "Procesa la carga emocional de la señal. Aquí se generan las sensaciones de alarma, calma o malestar."
+        },
+        {
+          "icon": "🧠",
+          "label": "Corteza cerebral",
+          "detail": "Integra la señal visceral con el pensamiento consciente. Puede interpretar o ignorar la información."
+        },
+        {
+          "icon": "⚖️",
+          "label": "Decisión",
+          "detail": "La decisión final integra señales somáticas, emociones y análisis racional. Tu cuerpo ya ha votado."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "Tu intestino es un segundo cerebro",
+          "detail": "Gershon (1998): 500 millones de neuronas, produce el 90% de la serotonina corporal y funciona semi-independientemente."
+        },
+        {
+          "title": "La comunicación es mayoritariamente ascendente",
+          "detail": "Mayer (2010): el 80% de las fibras del nervio vago van del intestino al cerebro, no al revés."
+        },
+        {
+          "title": "No toda señal visceral es fiable",
+          "detail": "Un microbioma desequilibrado, falta de sueño o estrés crónico pueden generar falsos marcadores somáticos."
+        }
+      ],
+      "nextLesson": "Práctica: escucha tu intuición 7 días"
     }
   ],
   "citation": {

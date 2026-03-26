@@ -91,6 +91,35 @@
         "Tengo claro cual es mi area de crecimiento prioritaria",
         "Estoy lista o listo para empezar HOY, no manana"
       ]
+    },
+    {
+      "type": "comparison",
+      "title": "Recursos SelenaUra: gratuitos vs. premium",
+      "headers": ["Recurso", "Gratuito", "Premium"],
+      "rows": [
+        ["Carta natal", "Lectura Express", "Carta Completa 7,99 EUR"],
+        ["Formación", "Brújula Interior", "Certificaciones 49-69 EUR"],
+        ["Comunidad", "Blog SelenaUra", "Grupos exclusivos"],
+        ["Herramientas", "Test cronotipo", "Perfil completo"]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "Recursos verificados para seguir",
+          "detail": "Libros de Seligman, Csikszentmihalyi, Clear, Fogg, Dweck y Duckworth. Herramientas como VIA, 16Personalities y HeartMath."
+        },
+        {
+          "title": "Consistencia sobre intensidad",
+          "detail": "15 minutos diarios durante 6 meses producen más transformación que un retiro intensivo. La clave es empezar hoy."
+        },
+        {
+          "title": "Tu brújula ya está calibrada",
+          "detail": "No planifiques más. Empieza. La acción más pequeña de hoy vale más que el plan perfecto de mañana. Confía en tu brújula."
+        }
+      ]
     }
   ],
   "citation": {

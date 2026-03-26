@@ -86,6 +86,56 @@
       "title": "El principio de interdependencia",
       "concept": "Los cuatro dominios energeticos no son independientes. Cuando inviertes en el dominio mas debil, el beneficio se extiende a todos los demas. Este efecto cascada explica por que a veces un pequeno cambio en un area transforma toda tu experiencia vital.",
       "source": "Integracion de McCraty (2015) y Csikszentmihalyi (1990)"
+    },
+    {
+      "type": "process_diagram",
+      "title": "Construye tu mapa de energía personal",
+      "steps": [
+        {
+          "icon": "🔍",
+          "label": "Identificar elemento dominante",
+          "detail": "Puntúa tus 4 dominios energéticos del 1 al 10. Observa cuál es tu punto fuerte natural y cuál tu eslabón débil."
+        },
+        {
+          "icon": "💪",
+          "label": "Mapear fortalezas",
+          "detail": "Coloca tus 5 fortalezas de carácter en el mapa radial, vinculándolas con el dominio que más nutren."
+        },
+        {
+          "icon": "🔋",
+          "label": "Detectar carencias",
+          "detail": "Identifica fugas energéticas concretas en cada dominio: situaciones, relaciones o hábitos que te drenan sin que te des cuenta."
+        },
+        {
+          "icon": "📋",
+          "label": "Diseñar rutina equilibrada",
+          "detail": "Crea una acción diaria específica para nutrir tu dominio más débil. Integra actividades de flujo como fuentes de energía renovable."
+        },
+        {
+          "icon": "📊",
+          "label": "Evaluar en 30 días",
+          "detail": "Repite el mapa radial con otro color. Compara la evolución. Los dominios son interdependientes: nutrir uno mejora todos."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "El mapa integra 5 capas",
+          "detail": "Fortalezas (Seligman), necesidades (Maslow), tipo psicológico (Jung), firma de flujo (Csikszentmihalyi) y balance energético (McCraty)."
+        },
+        {
+          "title": "El mapa radial revela el equilibrio",
+          "detail": "4 ejes con escala del 1 al 10. Un perfil circular indica equilibrio; una estrella irregular señala dónde intervenir."
+        },
+        {
+          "title": "Nutrir el dominio débil eleva todo",
+          "detail": "Los dominios son interdependientes. Un pequeño cambio en el área más débil produce un efecto cascada en todos los demás."
+        }
+      ],
+      "nextLesson": "Tu hoja de ruta formativa"
     }
   ],
   "citation": {

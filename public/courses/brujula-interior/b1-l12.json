@@ -88,6 +88,66 @@
       "definition": "Documento personalizado que describe tus señales corporales más fiables, las situaciones donde conviene consultarlas, y las condiciones en que no son fiables (estrés, falta de sueño, hambre). Es tu manual interoceptivo individual, basado en una semana de observación sistemática.",
       "icon": "🧭",
       "source": "Síntesis de Gigerenzer (2007), Bechara (1997) y Mayer (2010)"
+    },
+    {
+      "type": "timeline",
+      "title": "Tu semana de escucha intuitiva",
+      "events": [
+        {
+          "year": "Día 1",
+          "title": "Línea base corporal",
+          "detail": "Escaneo corporal de 10 minutos al despertar. Identifica 3 zonas con sensación clara y 3 sin sensación. Este es tu mapa de partida."
+        },
+        {
+          "year": "Día 2",
+          "title": "Registro emocional visceral",
+          "detail": "3 veces al día (mañana, mediodía, noche): observa tu abdomen y vincula la sensación con la emoción predominante."
+        },
+        {
+          "year": "Día 3",
+          "title": "Señales ante decisiones menores",
+          "detail": "Usa el péndulo interno con 3 decisiones cotidianas. Anota si la señal corporal coincidió con tu satisfacción posterior."
+        },
+        {
+          "year": "Día 4",
+          "title": "Distinguir calma de entumecimiento",
+          "detail": "Escaneo corporal prestando atención especial a zonas que parecen vacías. La ausencia de sensación puede ser paz o desconexión."
+        },
+        {
+          "year": "Día 5",
+          "title": "Escucha en conversaciones",
+          "detail": "En al menos 2 conversaciones, divide tu atención entre las palabras y las señales corporales que sientes mientras escuchas."
+        },
+        {
+          "year": "Día 6",
+          "title": "Señal ante una decisión real",
+          "detail": "Aplica todo lo aprendido a una decisión pendiente que realmente te importa. Compara la señal corporal con tu análisis racional."
+        },
+        {
+          "year": "Día 7",
+          "title": "Integración y protocolo personal",
+          "detail": "Lee todos tus registros, busca patrones y escribe tu protocolo personal: señales clave, cuándo usarlas y cuándo no fiarte."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "Entrenamiento progresivo en 7 días",
+          "detail": "El programa va de percepción básica (días 1-2) a afinación (3-4) a aplicación real (5-6) y finalmente a integración (día 7)."
+        },
+        {
+          "title": "La intuición se entrena, no se tiene",
+          "detail": "Gigerenzer demostró que la intuición entrenada (heurísticas expertas) puede ser tan precisa como el análisis exhaustivo."
+        },
+        {
+          "title": "Tu protocolo personal es el resultado",
+          "detail": "Al final de la semana tendrás un manual interoceptivo propio: tus señales, cuándo consultarlas y cuándo desconfiar."
+        }
+      ],
+      "nextLesson": "Los 4 pilares del autoconocimiento"
     }
   ],
   "citation": {

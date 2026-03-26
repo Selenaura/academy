@@ -86,6 +86,79 @@
         "He practicado el ejercicio de 5 minutos de observación del tráfico mental",
         "Comprendo qué es el desacoplamiento atencional y por qué importa"
       ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "El ciclo de transformación cerebral por meditación",
+      "steps": [
+        {
+          "icon": "🧘",
+          "label": "Meditación regular",
+          "detail": "Práctica sostenida de atención plena al momento presente, observación sin juicio"
+        },
+        {
+          "icon": "🧠",
+          "label": "Corteza prefrontal más gruesa",
+          "detail": "Lazar (2005): mayor grosor cortical en áreas de atención e interocepción"
+        },
+        {
+          "icon": "🔇",
+          "label": "Amígdala menos reactiva",
+          "detail": "Hölzel (2011): reducción de densidad en la región asociada con estrés y miedo"
+        },
+        {
+          "icon": "⚖️",
+          "label": "Mayor regulación emocional",
+          "detail": "Davidson (2003): activación prefrontal izquierda vinculada con emociones positivas y resiliencia"
+        },
+        {
+          "icon": "✨",
+          "label": "Bienestar",
+          "detail": "Resultado acumulativo: mejor gestión del estrés, mayor claridad mental y estabilidad emocional"
+        }
+      ]
+    },
+    {
+      "type": "concept_map",
+      "title": "Cómo la meditación afecta tu cerebro",
+      "centerNode": "Meditación",
+      "nodes": [
+        {
+          "label": "Corteza prefrontal",
+          "description": "Se engrosa con la práctica. Mejora la atención sostenida, la planificación y el control de impulsos."
+        },
+        {
+          "label": "Amígdala",
+          "description": "Se reduce su densidad. Disminuye la reactividad al estrés y las respuestas automáticas de miedo."
+        },
+        {
+          "label": "Ínsula",
+          "description": "Se fortalece la interocepción: la capacidad de percibir señales internas del cuerpo con mayor precisión."
+        },
+        {
+          "label": "Hipocampo",
+          "description": "Aumenta su materia gris. Mejora la memoria, el aprendizaje y la capacidad de perspectiva."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "La meditación cambia tu cerebro",
+          "detail": "Tres estudios clave (Lazar 2005, Davidson 2003, Hölzel 2011) demuestran cambios estructurales medibles con resonancia magnética."
+        },
+        {
+          "title": "Mindfulness no es mente en blanco",
+          "detail": "Es observar pensamientos y emociones sin reaccionar. El desacoplamiento atencional es el mecanismo central."
+        },
+        {
+          "title": "8 semanas bastan para empezar",
+          "detail": "Hölzel demostró cambios en hipocampo, amígdala y unión temporoparietal con solo 8 semanas de práctica regular."
+        }
+      ],
+      "nextLesson": "MBSR: el protocolo con más evidencia"
     }
   ],
   "citation": {

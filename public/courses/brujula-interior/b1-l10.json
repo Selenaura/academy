@@ -86,6 +86,59 @@
       "definition": "Señal fisiológica generada por el cuerpo (sudoración, cambios cardíacos, tensión muscular) que guía la toma de decisiones antes de que la mente consciente pueda articular una razón. Descubierto por Bechara y Damasio.",
       "icon": "💓",
       "source": "Bechara, A. et al. (1997). Deciding advantageously before knowing the advantageous strategy. Science."
+    },
+    {
+      "type": "comparison",
+      "title": "Intuición vs. Ego: señales para distinguirlos",
+      "headers": ["", "Intuición", "Ego"],
+      "rows": [
+        ["Velocidad", "Instantánea, sin esfuerzo", "Rápida pero reactiva"],
+        ["Sensación corporal", "Calma, claridad, apertura", "Tensión, urgencia, contracción"],
+        ["Base", "Señales somáticas y patrones acumulados", "Miedos, deseos o sesgos cognitivos"],
+        ["Resultado", "Coherente a largo plazo", "Satisfacción inmediata, volátil"]
+      ]
+    },
+    {
+      "type": "concept_map",
+      "title": "Cómo tomamos decisiones",
+      "centerNode": "Decisión",
+      "nodes": [
+        {
+          "label": "Sistema 1",
+          "description": "Kahneman: pensamiento rápido, automático e intuitivo. Eficiente pero susceptible a sesgos cognitivos sistemáticos."
+        },
+        {
+          "label": "Sistema 2",
+          "description": "Kahneman: pensamiento lento, deliberado y analítico. Requiere esfuerzo consciente y se cansa con el uso."
+        },
+        {
+          "label": "Marcadores somáticos",
+          "description": "Bechara/Damasio: señales fisiológicas del cuerpo que guían decisiones antes de que la conciencia las procese."
+        },
+        {
+          "label": "Sesgo cognitivo",
+          "description": "Error sistemático del Sistema 1 que se siente idéntico a la intuición: certeza instantánea sin base fiable."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "Intuición y sesgo se sienten igual",
+          "detail": "Kahneman demostró que ambos llegan como certeza instantánea. Distinguirlos requiere entrenamiento y verificación con el Sistema 2."
+        },
+        {
+          "title": "La intuición entrenada es inteligente",
+          "detail": "Gigerenzer mostró que la intuición es inteligencia adaptativa basada en heurísticas, más fiable cuando hay experiencia en el dominio."
+        },
+        {
+          "title": "Tu cuerpo sabe antes que tu mente",
+          "detail": "Los marcadores somáticos (Bechara 1997) son señales corporales que guían decisiones antes de la conciencia racional."
+        }
+      ],
+      "nextLesson": "Señales del cuerpo: el eje intestino-cerebro"
     }
   ],
   "citation": {

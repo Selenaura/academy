@@ -88,6 +88,61 @@
         "Puedo distinguir las tres fases: anclaje, apertura y presencia abierta",
         "He empezado un diario de práctica donde registro mis observaciones"
       ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "El ciclo de la meditación mindfulness",
+      "steps": [
+        {
+          "icon": "🪑",
+          "label": "Postura",
+          "detail": "Espalda recta pero no rígida. Pies apoyados en el suelo. Manos en rodillas o regazo. Ojos cerrados o mirada baja."
+        },
+        {
+          "icon": "🌬️",
+          "label": "Respiración",
+          "detail": "Observa sin controlar. Elige un punto de anclaje: abdomen o fosas nasales. Deja que el ritmo sea natural."
+        },
+        {
+          "icon": "🎯",
+          "label": "Atención",
+          "detail": "Mantén el foco en tu punto de anclaje. La mente permanece presente con la respiración durante unos instantes."
+        },
+        {
+          "icon": "💭",
+          "label": "Divagación",
+          "detail": "Tu mente se va a pensamientos, recuerdos o planes. Esto no es un fallo: es la parte necesaria del ejercicio."
+        },
+        {
+          "icon": "🔄",
+          "label": "Retorno",
+          "detail": "Notas que tu mente se fue. Dices mentalmente «pensando» y vuelves al anclaje. Cada retorno es una repetición exitosa."
+        },
+        {
+          "icon": "♾️",
+          "label": "Repetir",
+          "detail": "El ciclo se repite una y otra vez. Cada repetición fortalece las redes de atención y regulación del córtex prefrontal."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "La distracción es el ejercicio",
+          "detail": "Notar que tu mente se fue y traerla de vuelta es la repetición completa. Sin distracción no hay entrenamiento atencional."
+        },
+        {
+          "title": "Tres fases progresivas",
+          "detail": "De lo enfocado (respiración) a lo amplio (sensaciones y emociones) a lo abierto (presencia sin intención de enfocar)."
+        },
+        {
+          "title": "15 minutos diarios bastan",
+          "detail": "Hölzel (2011) documentó que los cambios cerebrales comienzan desde las primeras semanas de práctica regular constante."
+        }
+      ],
+      "nextLesson": "El péndulo interno: intuición vs. ego"
     }
   ],
   "citation": {

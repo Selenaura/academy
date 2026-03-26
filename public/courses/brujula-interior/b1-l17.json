@@ -90,6 +90,56 @@
         "Tengo al menos un habito minimo disenado con la formula de Fogg",
         "He escrito mi declaracion de identidad"
       ]
+    },
+    {
+      "type": "concept_map",
+      "title": "Tu Brújula Interior: el sistema completo",
+      "centerNode": "Tu Brújula",
+      "nodes": [
+        {
+          "label": "Carta Natal",
+          "description": "Tu mapa simbólico: Sol (identidad), Luna (emociones), Ascendente (interfaz social), casas, planetas y aspectos."
+        },
+        {
+          "label": "Neuroplasticidad",
+          "description": "Tu cerebro cambia con la práctica. Los patrones de tu carta no son destinos fijos sino puntos de partida moldeables."
+        },
+        {
+          "label": "Meditación",
+          "description": "MBSR y mindfulness: 8 semanas para cambiar la estructura cerebral. Desacoplamiento atencional y regulación emocional."
+        },
+        {
+          "label": "Intuición",
+          "description": "Marcadores somáticos, eje intestino-cerebro y heurísticas. Distinguir la voz interior genuina del ruido del ego."
+        },
+        {
+          "label": "Elementos",
+          "description": "4 dominios energéticos: físico, emocional, mental y espiritual. Fortalezas, necesidades, tipo psicológico y flujo."
+        },
+        {
+          "label": "Cronobiología",
+          "description": "La estación de nacimiento programa neurotransmisores. Cronotipos y ritmos circadianos como base biológica."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "6 módulos, un sistema integrado",
+          "detail": "Fundamentos, casas, planetas, aspectos, autoconocimiento/energía y hoja de ruta forman un sistema completo de autoconocimiento."
+        },
+        {
+          "title": "Conocerte es una práctica continua",
+          "detail": "No es un acto puntual. Requiere curiosidad para explorar, honestidad para ver, y compasión para aceptar lo que descubres."
+        },
+        {
+          "title": "Del saber al hacer",
+          "detail": "La transformación real ocurre cuando conviertes los descubrimientos internos en hábitos concretos sostenidos con mentalidad de crecimiento."
+        }
+      ],
+      "nextLesson": "Recursos y próximos pasos"
     }
   ],
   "citation": {
