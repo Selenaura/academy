@@ -60,12 +60,36 @@
     {
       "type": "flip_cards",
       "cards": [
-        {"icon": "☀️", "front": "El Sol", "back": "Tu identidad esencial. Quién eres cuando nadie observa. Tu propósito vital y energía central."},
-        {"icon": "🌙", "front": "La Luna", "back": "Tu paisaje emocional. Reacciones automáticas, necesidades profundas, patrones de la infancia."},
-        {"icon": "⬆️", "front": "El Ascendente", "back": "Tu interfaz social. La primera impresión que generas. Cambia cada 2 horas, requiere hora de nacimiento precisa."},
-        {"icon": "🔥", "front": "Sol en fuego", "back": "Necesita acción, expresión y movimiento. La pasividad prolongada apaga su vitalidad."},
-        {"icon": "🌊", "front": "Luna en agua", "back": "Necesita profundidad emocional y significado. La superficialidad la vacía."},
-        {"icon": "🏔️", "front": "Ascendente en tierra", "back": "Proyecta estabilidad, competencia y confiabilidad. Primera impresión de solidez."}
+        {
+          "icon": "☀️",
+          "front": "El Sol",
+          "back": "Tu identidad esencial. Quién eres cuando nadie observa. Tu propósito vital y energía central."
+        },
+        {
+          "icon": "🌙",
+          "front": "La Luna",
+          "back": "Tu paisaje emocional. Reacciones automáticas, necesidades profundas, patrones de la infancia."
+        },
+        {
+          "icon": "⬆️",
+          "front": "El Ascendente",
+          "back": "Tu interfaz social. La primera impresión que generas. Cambia cada 2 horas, requiere hora de nacimiento precisa."
+        },
+        {
+          "icon": "🔥",
+          "front": "Sol en fuego",
+          "back": "Necesita acción, expresión y movimiento. La pasividad prolongada apaga su vitalidad."
+        },
+        {
+          "icon": "🌊",
+          "front": "Luna en agua",
+          "back": "Necesita profundidad emocional y significado. La superficialidad la vacía."
+        },
+        {
+          "icon": "🏔️",
+          "front": "Ascendente en tierra",
+          "back": "Proyecta estabilidad, competencia y confiabilidad. Primera impresión de solidez."
+        }
       ]
     },
     {
@@ -73,10 +97,22 @@
       "title": "¿Qué representa cada pilar?",
       "instruction": "Conecta cada componente del triángulo con su función",
       "pairs": [
-        {"left": "Sol", "right": "Quién eres en tu centro, tu propósito vital"},
-        {"left": "Luna", "right": "Cómo sientes y qué necesitas emocionalmente"},
-        {"left": "Ascendente", "right": "Cómo te presentas al mundo y primera impresión"},
-        {"left": "Triángulo integrado", "right": "Tu complejidad psicológica en tres capas"}
+        {
+          "left": "Sol",
+          "right": "Quién eres en tu centro, tu propósito vital"
+        },
+        {
+          "left": "Luna",
+          "right": "Cómo sientes y qué necesitas emocionalmente"
+        },
+        {
+          "left": "Ascendente",
+          "right": "Cómo te presentas al mundo y primera impresión"
+        },
+        {
+          "left": "Triángulo integrado",
+          "right": "Tu complejidad psicológica en tres capas"
+        }
       ]
     },
     {
@@ -87,6 +123,61 @@
         "Sé que las tensiones entre Sol, Luna y Ascendente son normales y productivas",
         "He escrito mis tres frases y un párrafo integrador"
       ]
+    },
+    {
+      "type": "comparison",
+      "title": "Sol, Luna y Ascendente comparados",
+      "headers": [
+        "Aspecto",
+        "Sol",
+        "Luna",
+        "Ascendente"
+      ],
+      "rows": [
+        [
+          "Representa",
+          "Identidad esencial y propósito vital",
+          "Paisaje emocional y necesidades profundas",
+          "Interfaz social y primera impresión"
+        ],
+        [
+          "Elemento clave",
+          "Fuego de la voluntad consciente",
+          "Agua de las emociones subconscientes",
+          "El signo del horizonte al nacer"
+        ],
+        [
+          "Se expresa en",
+          "Lo que haces cuando nadie observa",
+          "Lo que sientes cuando no puedes fingir",
+          "Cómo te perciben al conocerte"
+        ],
+        [
+          "Ejemplo",
+          "Sol en Acuario: necesita innovar y cuestionar",
+          "Luna en Cáncer: necesita hogar y conexión",
+          "Ascendente en Aries: proyecta decisión y energía"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "El triángulo esencial",
+          "detail": "Sol (identidad), Luna (emociones) y Ascendente (interfaz social) son los tres pilares más importantes de tu carta."
+        },
+        {
+          "title": "Tu cuerpo sabe primero",
+          "detail": "Los marcadores somáticos (Damasio) demuestran que el cuerpo toma decisiones emocionales antes que la mente consciente."
+        },
+        {
+          "title": "Integrar, no elegir",
+          "detail": "Siegel: el bienestar surge de integrar sistemas internos diferentes, no de eliminar las tensiones entre ellos."
+        }
+      ],
+      "nextLesson": "Cronobiología: tu estación de nacimiento importa"
     }
   ],
   "citation": [
@@ -112,11 +203,36 @@
     }
   ],
   "bibliography": [
-    {"author": "Jung, C.G.", "year": "1921", "title": "Tipos Psicológicos", "type": "book"},
-    {"author": "Damasio, A.", "year": "1994", "title": "Descartes' Error: Emotion, Reason, and the Human Brain", "type": "book"},
-    {"author": "Siegel, D.", "year": "2012", "title": "The Developing Mind: How Relationships and the Brain Interact to Shape Who We Are", "type": "book"},
-    {"author": "Goffman, E.", "year": "1959", "title": "The Presentation of Self in Everyday Life", "type": "book"},
-    {"author": "Greene, L.", "year": "1984", "title": "The Astrology of Fate", "type": "book"}
+    {
+      "author": "Jung, C.G.",
+      "year": "1921",
+      "title": "Tipos Psicológicos",
+      "type": "book"
+    },
+    {
+      "author": "Damasio, A.",
+      "year": "1994",
+      "title": "Descartes' Error: Emotion, Reason, and the Human Brain",
+      "type": "book"
+    },
+    {
+      "author": "Siegel, D.",
+      "year": "2012",
+      "title": "The Developing Mind: How Relationships and the Brain Interact to Shape Who We Are",
+      "type": "book"
+    },
+    {
+      "author": "Goffman, E.",
+      "year": "1959",
+      "title": "The Presentation of Self in Everyday Life",
+      "type": "book"
+    },
+    {
+      "author": "Greene, L.",
+      "year": "1984",
+      "title": "The Astrology of Fate",
+      "type": "book"
+    }
   ],
   "homework": {
     "task": "Pide a dos personas de confianza que te describan en tres adjetivos cada una. No expliques por qué. Después, compara esos adjetivos con tus tres frases del ejercicio (Sol quiere / Luna necesita / Ascendente muestra). Anota las diferencias.",

@@ -546,7 +546,10 @@ export default function CoursePage({ params }) {
                   <div className="text-xs font-semibold text-selene-white-dim mb-2">📚 Bibliografía</div>
                   {lessonData.bibliography.map((b, bi) => (
                     <div key={bi} className="text-[12px] text-selene-white-dim mb-1 last:mb-0">
-                      {b.author} ({b.year}). <em className="text-selene-white/70">{b.title}</em> {b.type === 'paper' ? '📄' : '📖'}
+                      {typeof b === 'string'
+                        ? <><span>{b.includes('ournal') || b.includes('Cureus') ? '📄' : '📖'}</span> {b}</>
+                        : <><span>{b.type === 'paper' ? '📄' : '📖'}</span> {b.author} ({b.year}). <em className="text-selene-white/70">{b.title}</em></>
+                      }
                     </div>
                   ))}
                 </div>

@@ -60,11 +60,31 @@
     {
       "type": "flip_cards",
       "cards": [
-        {"icon": "🌞", "front": "Fotoperiodo", "back": "Horas de luz solar durante el desarrollo fetal. Programa la producción de serotonina, dopamina y melatonina."},
-        {"icon": "🌕", "front": "Ritmo circalunar", "back": "Reloj biológico interno sincronizado con el ciclo de 29,5 días de la Luna. Afecta la calidad del sueño."},
-        {"icon": "🧬", "front": "Temperamento estacional", "back": "Gonda (2014): nacidos en primavera/verano tienden al optimismo; otoño/invierno a mayor variabilidad emocional."},
-        {"icon": "⏰", "front": "Ritmo circadiano", "back": "Ciclo de ~24 horas que regula sueño, hormonas y temperatura corporal. Base de la cronobiología."},
-        {"icon": "🌿", "front": "Cronobiología", "back": "Ciencia que estudia cómo los ritmos naturales influyen en la fisiología. Publicada en Nature, PLOS ONE, Biological Psychology."}
+        {
+          "icon": "🌞",
+          "front": "Fotoperiodo",
+          "back": "Horas de luz solar durante el desarrollo fetal. Programa la producción de serotonina, dopamina y melatonina."
+        },
+        {
+          "icon": "🌕",
+          "front": "Ritmo circalunar",
+          "back": "Reloj biológico interno sincronizado con el ciclo de 29,5 días de la Luna. Afecta la calidad del sueño."
+        },
+        {
+          "icon": "🧬",
+          "front": "Temperamento estacional",
+          "back": "Gonda (2014): nacidos en primavera/verano tienden al optimismo; otoño/invierno a mayor variabilidad emocional."
+        },
+        {
+          "icon": "⏰",
+          "front": "Ritmo circadiano",
+          "back": "Ciclo de ~24 horas que regula sueño, hormonas y temperatura corporal. Base de la cronobiología."
+        },
+        {
+          "icon": "🌿",
+          "front": "Cronobiología",
+          "back": "Ciencia que estudia cómo los ritmos naturales influyen en la fisiología. Publicada en Nature, PLOS ONE, Biological Psychology."
+        }
       ]
     },
     {
@@ -72,10 +92,22 @@
       "title": "Ciencia y simbolismo",
       "instruction": "Conecta cada hallazgo científico con su paralelo simbólico en la carta natal",
       "pairs": [
-        {"left": "El fotoperiodo programa neurotransmisores", "right": "El signo solar describe tu energía vital central"},
-        {"left": "Los ciclos lunares afectan el sueño", "right": "La Luna natal describe tu vida emocional profunda"},
-        {"left": "El temperamento tiene base estacional", "right": "Los elementos (fuego/tierra/aire/agua) describen estilos temperamentales"},
-        {"left": "La neuroplasticidad permite cambiar patrones", "right": "La carta natal muestra tendencias, no destinos fijos"}
+        {
+          "left": "El fotoperiodo programa neurotransmisores",
+          "right": "El signo solar describe tu energía vital central"
+        },
+        {
+          "left": "Los ciclos lunares afectan el sueño",
+          "right": "La Luna natal describe tu vida emocional profunda"
+        },
+        {
+          "left": "El temperamento tiene base estacional",
+          "right": "Los elementos (fuego/tierra/aire/agua) describen estilos temperamentales"
+        },
+        {
+          "left": "La neuroplasticidad permite cambiar patrones",
+          "right": "La carta natal muestra tendencias, no destinos fijos"
+        }
       ]
     },
     {
@@ -83,12 +115,81 @@
       "title": "Cronobiología en acción",
       "text": "El ___0___ durante el desarrollo fetal programa la producción de ___1___ y ___2___. Gonda (2014) encontró que las personas nacidas en ___3___ tienden al temperamento hipertímico, mientras que Cajochen (2013) descubrió que la ___4___ afecta la calidad del sueño.",
       "blanks": [
-        {"answer": "fotoperiodo", "hint": "Cantidad de horas de luz solar"},
-        {"answer": "serotonina", "hint": "Neurotransmisor relacionado con el bienestar"},
-        {"answer": "melatonina", "hint": "Hormona que regula el ciclo sueño-vigilia"},
-        {"answer": "primavera y verano", "hint": "Las estaciones con más horas de luz"},
-        {"answer": "luna llena", "hint": "Fase lunar con máxima iluminación nocturna"}
+        {
+          "answer": "fotoperiodo",
+          "hint": "Cantidad de horas de luz solar"
+        },
+        {
+          "answer": "serotonina",
+          "hint": "Neurotransmisor relacionado con el bienestar"
+        },
+        {
+          "answer": "melatonina",
+          "hint": "Hormona que regula el ciclo sueño-vigilia"
+        },
+        {
+          "answer": "primavera y verano",
+          "hint": "Las estaciones con más horas de luz"
+        },
+        {
+          "answer": "luna llena",
+          "hint": "Fase lunar con máxima iluminación nocturna"
+        }
       ]
+    },
+    {
+      "type": "timeline",
+      "title": "Descubrimientos clave en cronobiología",
+      "events": [
+        {
+          "year": "1729",
+          "title": "De Mairan: mimosa se abre sin sol",
+          "detail": "Jean-Jacques d’Ortous de Mairan descubre que la mimosa abre y cierra sus hojas incluso en oscuridad constante, evidenciando un reloj biológico interno."
+        },
+        {
+          "year": "1962",
+          "title": "Aschoff: ritmo circadiano humano ~25h",
+          "detail": "Jürgen Aschoff demuestra en búnkeres sin luz que el ritmo circadiano humano endógeno es de aproximadamente 25 horas."
+        },
+        {
+          "year": "2013",
+          "title": "Cajochen: luna afecta sueño",
+          "detail": "Christian Cajochen demuestra en laboratorio que los ciclos lunares afectan la latencia, duración y profundidad del sueño humano."
+        },
+        {
+          "year": "2014",
+          "title": "Gonda: estación nacimiento y temperamento",
+          "detail": "Xenia Gonda encuentra correlaciones significativas entre mes de nacimiento y rasgos temperamentales en más de 400 participantes."
+        },
+        {
+          "year": "2017",
+          "title": "Nobel de Medicina a Hall, Rosbash y Young",
+          "detail": "Jeffrey Hall, Michael Rosbash y Michael Young reciben el Nobel por descubrir los mecanismos moleculares que controlan el ritmo circadiano."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "La estación de nacimiento importa",
+          "detail": "El fotoperiodo durante el desarrollo fetal programa la producción de serotonina, dopamina y melatonina."
+        },
+        {
+          "title": "Los ciclos lunares afectan el sueño",
+          "detail": "Cajochen (2013) demostró en laboratorio que la luna llena reduce la calidad del sueño y los niveles de melatonina."
+        },
+        {
+          "title": "Ciencia y símbolo coexisten",
+          "detail": "La cronobiología y la carta natal son dos lenguajes que describen la misma realidad desde ángulos complementarios."
+        },
+        {
+          "title": "Trabaja con tu naturaleza",
+          "detail": "Tu temperamento estacional no es un destino: es información para diseñar estrategias adaptadas a tu ritmo."
+        }
+      ],
+      "nextLesson": "Módulo 3: Mercurio, Venus y Marte"
     }
   ],
   "citation": [
@@ -114,11 +215,36 @@
     }
   ],
   "bibliography": [
-    {"author": "Foster, R. & Kreitzman, L.", "year": "2017", "title": "Circadian Rhythms: A Very Short Introduction", "type": "book"},
-    {"author": "Gonda, X. et al.", "year": "2014", "title": "Seasonal variation in temperament in a nonclinical sample", "type": "paper"},
-    {"author": "Cajochen, C. et al.", "year": "2013", "title": "Evidence that the Lunar Cycle Influences Human Sleep", "type": "paper"},
-    {"author": "Kanekar, S. et al.", "year": "2015", "title": "Birth season and personality: A meta-analytic review", "type": "paper"},
-    {"author": "Roenneberg, T.", "year": "2012", "title": "Internal Time: Chronotypes, Social Jet Lag, and Why You're So Tired", "type": "book"}
+    {
+      "author": "Foster, R. & Kreitzman, L.",
+      "year": "2017",
+      "title": "Circadian Rhythms: A Very Short Introduction",
+      "type": "book"
+    },
+    {
+      "author": "Gonda, X. et al.",
+      "year": "2014",
+      "title": "Seasonal variation in temperament in a nonclinical sample",
+      "type": "paper"
+    },
+    {
+      "author": "Cajochen, C. et al.",
+      "year": "2013",
+      "title": "Evidence that the Lunar Cycle Influences Human Sleep",
+      "type": "paper"
+    },
+    {
+      "author": "Kanekar, S. et al.",
+      "year": "2015",
+      "title": "Birth season and personality: A meta-analytic review",
+      "type": "paper"
+    },
+    {
+      "author": "Roenneberg, T.",
+      "year": "2012",
+      "title": "Internal Time: Chronotypes, Social Jet Lag, and Why You're So Tired",
+      "type": "book"
+    }
   ],
   "homework": {
     "task": "Durante 2 semanas, registra cada noche tu nivel de energía (1-10), las horas de luz del día y la fase lunar. Al final, busca correlaciones: ¿tu energía sigue algún patrón relacionado con la luz o la fase lunar?",

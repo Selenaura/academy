@@ -73,10 +73,22 @@
       "title": "Principios de observación",
       "text": "En vez de tratar la carta natal como ___0___, la usamos como ___1___ para investigar. No buscamos ___2___ absoluta, sino ___3___ práctica para nuestra vida.",
       "blanks": [
-        {"answer": "dogma", "hint": "Creencia que no se cuestiona"},
-        {"answer": "hipótesis", "hint": "Propuesta que se verifica con la experiencia"},
-        {"answer": "verdad", "hint": "Algo definitivo e incuestionable"},
-        {"answer": "utilidad", "hint": "Que sirve y aporta beneficio real"}
+        {
+          "answer": "dogma",
+          "hint": "Creencia que no se cuestiona"
+        },
+        {
+          "answer": "hipótesis",
+          "hint": "Propuesta que se verifica con la experiencia"
+        },
+        {
+          "answer": "verdad",
+          "hint": "Algo definitivo e incuestionable"
+        },
+        {
+          "answer": "utilidad",
+          "hint": "Que sirve y aporta beneficio real"
+        }
       ]
     },
     {
@@ -87,6 +99,54 @@
         "Sé cómo transformar un adjetivo fijo en una tendencia contextual",
         "Comprendo los tres principios que guían este curso"
       ]
+    },
+    {
+      "type": "branching_scenario",
+      "title": "Escenario: Reacción vs. observación",
+      "scenario": {
+        "start": {
+          "text": "Recibes un mensaje inesperado con críticas sobre un proyecto en el que pusiste mucho esfuerzo. Sientes un nudo en el estómago. ¿Qué haces?",
+          "choices": [
+            {
+              "text": "Respondo inmediatamente defendiendo mi trabajo con enojo",
+              "next": "reactivo"
+            },
+            {
+              "text": "Noto la emoción, respiro, y decido leer el mensaje completo antes de responder",
+              "next": "mindful"
+            }
+          ]
+        },
+        "reactivo": {
+          "text": "Tu respuesta impulsiva escala el conflicto. La otra persona se pone a la defensiva y la conversación se vuelve una pelea de egos. Al día siguiente te arrepientes del tono.",
+          "outcome": "bad",
+          "feedback": "Esta es una reacción automática: la emoción te controla y el resultado te aleja de lo que realmente quieres. La próxima vez, prueba a pausar antes de actuar."
+        },
+        "mindful": {
+          "text": "Al releer con calma, descubres que las críticas tienen puntos válidos mezclados con malentendidos. Respondes reconociendo lo válido y aclarando lo demás. La relación se fortalece.",
+          "outcome": "good",
+          "feedback": "Esto es observación no reactiva en acción: notas la emoción sin que te arrastre, ganas perspectiva y eliges tu respuesta. Es exactamente la habilidad que entrenamos en este curso."
+        }
+      }
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "Ni fe ciega ni escepticismo rígido",
+          "detail": "El tercer camino es la observación atenta: tratar la información como hipótesis para investigar en tu experiencia."
+        },
+        {
+          "title": "La atención dirigida transforma el cerebro",
+          "detail": "Davidson (2003) demostró que 8 semanas de mindfulness cambian la estructura de la corteza prefrontal."
+        },
+        {
+          "title": "De adjetivos a tendencias",
+          "detail": "Transformar «soy impaciente» en «tiendo a la impaciencia cuando...» abre espacio para el cambio."
+        }
+      ],
+      "nextLesson": "Tu cerebro como antena: neuroplasticidad"
     }
   ],
   "citation": [
@@ -107,10 +167,30 @@
     }
   ],
   "bibliography": [
-    {"author": "Davidson, R.J. et al.", "year": "2003", "title": "Alterations in Brain and Immune Function Produced by Mindfulness Meditation", "type": "paper"},
-    {"author": "Kabat-Zinn, J.", "year": "1990", "title": "Full Catastrophe Living: Using the Wisdom of Your Body and Mind to Face Stress, Pain, and Illness", "type": "book"},
-    {"author": "Goleman, D. & Davidson, R.J.", "year": "2017", "title": "Altered Traits: Science Reveals How Meditation Changes Your Mind, Brain, and Body", "type": "book"},
-    {"author": "Harris, D.", "year": "2014", "title": "10% Happier: How I Tamed the Voice in My Head", "type": "book"}
+    {
+      "author": "Davidson, R.J. et al.",
+      "year": "2003",
+      "title": "Alterations in Brain and Immune Function Produced by Mindfulness Meditation",
+      "type": "paper"
+    },
+    {
+      "author": "Kabat-Zinn, J.",
+      "year": "1990",
+      "title": "Full Catastrophe Living: Using the Wisdom of Your Body and Mind to Face Stress, Pain, and Illness",
+      "type": "book"
+    },
+    {
+      "author": "Goleman, D. & Davidson, R.J.",
+      "year": "2017",
+      "title": "Altered Traits: Science Reveals How Meditation Changes Your Mind, Brain, and Body",
+      "type": "book"
+    },
+    {
+      "author": "Harris, D.",
+      "year": "2014",
+      "title": "10% Happier: How I Tamed the Voice in My Head",
+      "type": "book"
+    }
   ],
   "homework": {
     "task": "Busca una descripción de tu signo solar y evalúala como hipótesis. Anota en dos columnas: «Esto resuena porque...» y «Esto no resuena porque...». Lo importante es el proceso de evaluar con honestidad.",

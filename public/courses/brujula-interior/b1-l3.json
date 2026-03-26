@@ -60,11 +60,31 @@
     {
       "type": "flip_cards",
       "cards": [
-        {"icon": "🧠", "front": "Neuroplasticidad", "back": "Capacidad del cerebro de reorganizar sus conexiones a lo largo de toda la vida en respuesta a la experiencia y la atención."},
-        {"icon": "🌱", "front": "Regla de Hebb", "back": "Neuronas que se activan juntas, se conectan. Es el mecanismo básico del aprendizaje y el cambio de patrones."},
-        {"icon": "💚", "front": "Coherencia cardíaca", "back": "Respiración rítmica (5 seg inhalar, 5 seg exhalar) que sincroniza corazón y respiración. Reduce cortisol y mejora autorregulación."},
-        {"icon": "📡", "front": "Cerebro como antena", "back": "Entrenar la atención no solo cambia tu cerebro: cambia lo que puedes percibir. Afinamos la frecuencia del receptor."},
-        {"icon": "🗺️", "front": "Mapa vs. caminos", "back": "Tu carta natal es el mapa (no cambia). La neuroplasticidad es tu capacidad de abrir nuevos caminos en ese terreno."}
+        {
+          "icon": "🧠",
+          "front": "Neuroplasticidad",
+          "back": "Capacidad del cerebro de reorganizar sus conexiones a lo largo de toda la vida en respuesta a la experiencia y la atención."
+        },
+        {
+          "icon": "🌱",
+          "front": "Regla de Hebb",
+          "back": "Neuronas que se activan juntas, se conectan. Es el mecanismo básico del aprendizaje y el cambio de patrones."
+        },
+        {
+          "icon": "💚",
+          "front": "Coherencia cardíaca",
+          "back": "Respiración rítmica (5 seg inhalar, 5 seg exhalar) que sincroniza corazón y respiración. Reduce cortisol y mejora autorregulación."
+        },
+        {
+          "icon": "📡",
+          "front": "Cerebro como antena",
+          "back": "Entrenar la atención no solo cambia tu cerebro: cambia lo que puedes percibir. Afinamos la frecuencia del receptor."
+        },
+        {
+          "icon": "🗺️",
+          "front": "Mapa vs. caminos",
+          "back": "Tu carta natal es el mapa (no cambia). La neuroplasticidad es tu capacidad de abrir nuevos caminos en ese terreno."
+        }
       ]
     },
     {
@@ -72,10 +92,22 @@
       "title": "Neuroplasticidad en acción",
       "text": "Cada vez que eliges ___0___ en lugar de ___1___, fortaleces una conexión entre tu corteza ___2___ y tu ___3___. Con el tiempo, esta nueva ruta se vuelve más fuerte que la reacción automática original.",
       "blanks": [
-        {"answer": "responder", "hint": "Acción deliberada y consciente"},
-        {"answer": "reaccionar", "hint": "Respuesta automática e impulsiva"},
-        {"answer": "prefrontal", "hint": "Parte racional y planificadora del cerebro"},
-        {"answer": "amígdala", "hint": "Parte reactiva y emocional del cerebro"}
+        {
+          "answer": "responder",
+          "hint": "Acción deliberada y consciente"
+        },
+        {
+          "answer": "reaccionar",
+          "hint": "Respuesta automática e impulsiva"
+        },
+        {
+          "answer": "prefrontal",
+          "hint": "Parte racional y planificadora del cerebro"
+        },
+        {
+          "answer": "amígdala",
+          "hint": "Parte reactiva y emocional del cerebro"
+        }
       ]
     },
     {
@@ -86,6 +118,87 @@
         "Sé practicar la respiración de coherencia cardíaca",
         "Comprendo que las tendencias de mi carta natal son puntos de partida, no destinos fijos"
       ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "Cómo se forma un nuevo hábito neural",
+      "steps": [
+        {
+          "icon": "🔁",
+          "label": "Repetición",
+          "detail": "Practicar una nueva respuesta de forma consistente y deliberada"
+        },
+        {
+          "icon": "⚡",
+          "label": "Sinapsis reforzada",
+          "detail": "Las neuronas involucradas fortalecen su conexión (regla de Hebb)"
+        },
+        {
+          "icon": "🧠",
+          "label": "Patrón neural",
+          "detail": "Se forma una red neuronal estable que se activa con facilidad"
+        },
+        {
+          "icon": "🎯",
+          "label": "Hábito",
+          "detail": "La nueva respuesta se vuelve automática y requiere menos esfuerzo"
+        },
+        {
+          "icon": "🌟",
+          "label": "Transformación",
+          "detail": "Tu relación con el patrón original cambia permanentemente"
+        }
+      ]
+    },
+    {
+      "type": "concept_map",
+      "title": "Herramientas de neuroplasticidad",
+      "centerNode": "Neuroplasticidad",
+      "nodes": [
+        {
+          "label": "Meditación",
+          "icon": "🧘",
+          "description": "Lazar (2005): aumenta el grosor cortical en regiones de atención e interocepción."
+        },
+        {
+          "label": "Visualización",
+          "icon": "💡",
+          "description": "Imaginar una acción activa las mismas redes neuronales que ejecutarla realmente."
+        },
+        {
+          "label": "HeartMath",
+          "icon": "💚",
+          "description": "Coherencia cardíaca: respiración rítmica que reduce cortisol y mejora autorregulación."
+        },
+        {
+          "label": "Atención plena",
+          "icon": "🔮",
+          "description": "Observación no reactiva que fortalece la conexión corteza prefrontal-amígdala."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "Tu cerebro cambia con la práctica",
+          "detail": "La neuroplasticidad permite reorganizar conexiones neuronales a cualquier edad mediante atención sostenida."
+        },
+        {
+          "title": "Las tendencias no son condenas",
+          "detail": "Tu carta natal muestra puntos de partida. Puedes abrir nuevos senderos neurales con práctica deliberada."
+        },
+        {
+          "title": "Coherencia cardíaca funciona",
+          "detail": "5 minutos diarios de respiración rítmica (HeartMath) reducen reactividad emocional en semanas."
+        },
+        {
+          "title": "Responder en vez de reaccionar",
+          "detail": "Cada elección consciente fortalece la conexión entre corteza prefrontal y amígdala."
+        }
+      ],
+      "nextLesson": "Tu mapa cósmico — La carta natal"
     }
   ],
   "citation": [
@@ -111,10 +224,30 @@
     }
   ],
   "bibliography": [
-    {"author": "Lazar, S. et al.", "year": "2005", "title": "Meditation experience is associated with increased cortical thickness", "type": "paper"},
-    {"author": "McCraty, R.", "year": "2015", "title": "Science of the Heart: Exploring the Role of the Heart in Human Performance", "type": "book"},
-    {"author": "Doidge, N.", "year": "2007", "title": "The Brain That Changes Itself: Stories of Personal Triumph from the Frontiers of Brain Science", "type": "book"},
-    {"author": "Goleman, D. & Davidson, R.J.", "year": "2017", "title": "Altered Traits: Science Reveals How Meditation Changes Your Mind, Brain, and Body", "type": "book"}
+    {
+      "author": "Lazar, S. et al.",
+      "year": "2005",
+      "title": "Meditation experience is associated with increased cortical thickness",
+      "type": "paper"
+    },
+    {
+      "author": "McCraty, R.",
+      "year": "2015",
+      "title": "Science of the Heart: Exploring the Role of the Heart in Human Performance",
+      "type": "book"
+    },
+    {
+      "author": "Doidge, N.",
+      "year": "2007",
+      "title": "The Brain That Changes Itself: Stories of Personal Triumph from the Frontiers of Brain Science",
+      "type": "book"
+    },
+    {
+      "author": "Goleman, D. & Davidson, R.J.",
+      "year": "2017",
+      "title": "Altered Traits: Science Reveals How Meditation Changes Your Mind, Brain, and Body",
+      "type": "book"
+    }
   ],
   "homework": {
     "task": "Practica la respiración de coherencia cardíaca (inhalar 5 seg, exhalar 5 seg, atención en el pecho) 5 minutos al día durante una semana. Registra cada día: ¿cómo me sentía antes? ¿Después? ¿Noté cambios en mi reactividad?",

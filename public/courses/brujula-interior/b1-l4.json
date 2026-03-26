@@ -62,21 +62,57 @@
       "title": "Componentes de la carta natal",
       "instruction": "Conecta cada componente con lo que representa",
       "pairs": [
-        {"left": "Planetas", "right": "QUÉ funciones psicológicas están activas"},
-        {"left": "Signos", "right": "CÓMO se expresan esas funciones"},
-        {"left": "Casas", "right": "DÓNDE se manifiestan en tu vida"},
-        {"left": "Aspectos", "right": "Relaciones dinámicas entre las fuerzas"}
+        {
+          "left": "Planetas",
+          "right": "QUÉ funciones psicológicas están activas"
+        },
+        {
+          "left": "Signos",
+          "right": "CÓMO se expresan esas funciones"
+        },
+        {
+          "left": "Casas",
+          "right": "DÓNDE se manifiestan en tu vida"
+        },
+        {
+          "left": "Aspectos",
+          "right": "Relaciones dinámicas entre las fuerzas"
+        }
       ]
     },
     {
       "type": "flip_cards",
       "cards": [
-        {"icon": "☀️", "front": "Sol", "back": "Tu identidad esencial. Quién eres en tu centro, tu propósito vital."},
-        {"icon": "🌙", "front": "Luna", "back": "Tu vida emocional. Cómo sientes, qué necesitas para sentirte en seguridad."},
-        {"icon": "💬", "front": "Mercurio", "back": "Tu mente y comunicación. Cómo piensas, procesas información y te expresas."},
-        {"icon": "💕", "front": "Venus", "back": "Tu forma de amar. Qué valoras, qué te atrae, cómo te relacionas."},
-        {"icon": "🔥", "front": "Marte", "back": "Tu impulso de acción. Cómo actúas, qué te motiva, tu energía vital."},
-        {"icon": "⭐", "front": "Júpiter", "back": "Tu expansión. Dónde creces, qué te da sentido, tu búsqueda de significado."}
+        {
+          "icon": "☀️",
+          "front": "Sol",
+          "back": "Tu identidad esencial. Quién eres en tu centro, tu propósito vital."
+        },
+        {
+          "icon": "🌙",
+          "front": "Luna",
+          "back": "Tu vida emocional. Cómo sientes, qué necesitas para sentirte en seguridad."
+        },
+        {
+          "icon": "💬",
+          "front": "Mercurio",
+          "back": "Tu mente y comunicación. Cómo piensas, procesas información y te expresas."
+        },
+        {
+          "icon": "💕",
+          "front": "Venus",
+          "back": "Tu forma de amar. Qué valoras, qué te atrae, cómo te relacionas."
+        },
+        {
+          "icon": "🔥",
+          "front": "Marte",
+          "back": "Tu impulso de acción. Cómo actúas, qué te motiva, tu energía vital."
+        },
+        {
+          "icon": "⭐",
+          "front": "Júpiter",
+          "back": "Tu expansión. Dónde creces, qué te da sentido, tu búsqueda de significado."
+        }
       ]
     },
     {
@@ -90,6 +126,66 @@
         "Reviso qué aspectos forma (relaciones con otros planetas)",
         "Construyo la frase integrando los tres niveles"
       ]
+    },
+    {
+      "type": "concept_map",
+      "title": "Los planetas personales en tu carta",
+      "centerNode": "Tu Carta",
+      "nodes": [
+        {
+          "label": "Sol",
+          "icon": "☀️",
+          "description": "Tu identidad esencial. Quién eres en tu centro, tu propósito vital."
+        },
+        {
+          "label": "Luna",
+          "icon": "🌙",
+          "description": "Tu vida emocional profunda. Cómo sientes y qué necesitas para sentirte segura."
+        },
+        {
+          "label": "Mercurio",
+          "icon": "💬",
+          "description": "Tu mente y comunicación. Cómo piensas, procesas y te expresas."
+        },
+        {
+          "label": "Venus",
+          "icon": "💖",
+          "description": "Tu forma de amar y valorar. Qué te atrae y cómo te relacionas."
+        },
+        {
+          "label": "Marte",
+          "icon": "🔥",
+          "description": "Tu impulso de acción. Cómo actúas, qué te motiva y tu energía vital."
+        },
+        {
+          "label": "Ascendente",
+          "icon": "⬆️",
+          "description": "Tu máscara social. La primera impresión que generas al interactuar."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen",
+      "points": [
+        {
+          "title": "Tres componentes fundamentales",
+          "detail": "Planetas (qué), signos (cómo) y casas (dónde) se combinan para describir tu complejidad psicológica."
+        },
+        {
+          "title": "Los aspectos crean dinámica",
+          "detail": "Las relaciones angulares entre planetas hacen cada carta irrepetible y generan tensiones creativas."
+        },
+        {
+          "title": "Las tensiones son oportunidades",
+          "detail": "Jung: el crecimiento viene de sostener las contradicciones internas, no de eliminarlas."
+        },
+        {
+          "title": "Conversación, no diagnóstico",
+          "detail": "La carta natal es un diálogo continuo con tus patrones internos que evoluciona con el tiempo."
+        }
+      ],
+      "nextLesson": "Sol, Luna, Ascendente: tu triángulo esencial"
     }
   ],
   "citation": [
@@ -110,10 +206,30 @@
     }
   ],
   "bibliography": [
-    {"author": "Arroyo, S.", "year": "1975", "title": "Astrology, Psychology, and the Four Elements", "type": "book"},
-    {"author": "Greene, L.", "year": "1984", "title": "The Astrology of Fate", "type": "book"},
-    {"author": "Jung, C.G.", "year": "1921", "title": "Tipos Psicológicos", "type": "book"},
-    {"author": "Sasportas, H.", "year": "1985", "title": "The Twelve Houses: Exploring the Houses of the Horoscope", "type": "book"}
+    {
+      "author": "Arroyo, S.",
+      "year": "1975",
+      "title": "Astrology, Psychology, and the Four Elements",
+      "type": "book"
+    },
+    {
+      "author": "Greene, L.",
+      "year": "1984",
+      "title": "The Astrology of Fate",
+      "type": "book"
+    },
+    {
+      "author": "Jung, C.G.",
+      "year": "1921",
+      "title": "Tipos Psicológicos",
+      "type": "book"
+    },
+    {
+      "author": "Sasportas, H.",
+      "year": "1985",
+      "title": "The Twelve Houses: Exploring the Houses of the Horoscope",
+      "type": "book"
+    }
   ],
   "homework": {
     "task": "Obtén tu carta natal completa e identifica la posición de tus 10 planetas principales (Sol, Luna, Mercurio, Venus, Marte, Júpiter, Saturno, Urano, Neptuno, Plutón). Anota signo y casa de cada uno. No interpretes todavía, solo familiarízate.",
