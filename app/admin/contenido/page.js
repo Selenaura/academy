@@ -105,9 +105,71 @@ function LessonView({ courseId, lessonId, onClose }) {
       {/* Text content */}
       <Card className="p-6 mb-6">
         <div className="text-[14px] text-selene-white-dim leading-[1.8]">
-          {data.text_content.split('\n\n').map((p, i) => (
-            <p key={i} className="mb-4 last:mb-0">{p}</p>
-          ))}
+          {data.text_content.split('\n\n').map((paragraph, i) => {
+            if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
+              return (
+                <h3 key={i} className="text-[16px] font-display font-semibold text-selene-gold mt-8 mb-3 first:mt-0">
+                  {paragraph.replace(/\*\*/g, '')}
+                </h3>
+              );
+            }
+            const isCaso = paragraph.startsWith('**Caso práctico');
+            const isEjercicio = paragraph.startsWith('**Ejercicio guiado');
+            const isTarea = paragraph.startsWith('**Tarea para casa');
+            if (isCaso) {
+              return (
+                <div key={i} className="my-6 p-5 bg-selene-purple/5 border-l-[3px] border-selene-purple rounded-r-xl">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">📋</span>
+                    <span className="text-sm font-semibold text-selene-purple">Caso práctico</span>
+                  </div>
+                  <p className="text-[14px] text-selene-white-dim leading-[1.8]" style={{ textAlign: 'justify' }}>
+                    {paragraph.replace(/\*\*Caso práctico[^*]*\*\*\s*/, '')}
+                  </p>
+                </div>
+              );
+            }
+            if (isEjercicio) {
+              return (
+                <div key={i} className="my-6 p-5 bg-selene-gold/5 border-l-[3px] border-selene-gold rounded-r-xl">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">🎯</span>
+                    <span className="text-sm font-semibold text-selene-gold">Ejercicio guiado</span>
+                  </div>
+                  <p className="text-[14px] text-selene-white-dim leading-[1.8]" style={{ textAlign: 'justify' }}>
+                    {paragraph.replace(/\*\*Ejercicio guiado[^*]*\*\*\s*/, '')}
+                  </p>
+                </div>
+              );
+            }
+            if (isTarea) {
+              return (
+                <div key={i} className="my-6 p-5 bg-selene-success/5 border-l-[3px] border-selene-success rounded-r-xl">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">📝</span>
+                    <span className="text-sm font-semibold text-selene-success">Tarea para casa</span>
+                  </div>
+                  <p className="text-[14px] text-selene-white-dim leading-[1.8]" style={{ textAlign: 'justify' }}>
+                    {paragraph.replace(/\*\*Tarea para casa[^*]*\*\*\s*/, '')}
+                  </p>
+                </div>
+              );
+            }
+            const hasBold = paragraph.includes('**');
+            if (hasBold) {
+              const parts = paragraph.split(/(\*\*[^*]+\*\*)/g);
+              return (
+                <p key={i} className="mb-4 last:mb-0" style={{ textAlign: 'justify' }}>
+                  {parts.map((part, j) =>
+                    part.startsWith('**') && part.endsWith('**')
+                      ? <strong key={j} className="text-selene-white font-semibold">{part.replace(/\*\*/g, '')}</strong>
+                      : <span key={j}>{part}</span>
+                  )}
+                </p>
+              );
+            }
+            return <p key={i} className="mb-4 last:mb-0" style={{ textAlign: 'justify' }}>{paragraph}</p>;
+          })}
         </div>
       </Card>
 
