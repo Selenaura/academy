@@ -401,11 +401,80 @@ export default function CoursePage({ params }) {
               {/* Text content */}
               <Card className="p-6 md:p-8 mb-6">
                 <div className="prose-selene">
-                  {lessonData.text_content.split('\n\n').map((paragraph, i) => (
-                    <p key={i} className="text-[14px] md:text-[15px] text-selene-white-dim leading-[1.8] mb-5 last:mb-0">
-                      {paragraph}
-                    </p>
-                  ))}
+                  {lessonData.text_content.split('\n\n').map((paragraph, i) => {
+                    // Detect section headers with **bold** markdown
+                    if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
+                      return (
+                        <h3 key={i} className="text-[16px] font-display font-semibold text-selene-gold mt-8 mb-3 first:mt-0">
+                          {paragraph.replace(/\*\*/g, '')}
+                        </h3>
+                      );
+                    }
+                    // Detect special sections
+                    const isCasoPractico = paragraph.startsWith('**Caso práctico');
+                    const isEjercicio = paragraph.startsWith('**Ejercicio guiado');
+                    const isTarea = paragraph.startsWith('**Tarea para casa');
+
+                    if (isCasoPractico) {
+                      return (
+                        <div key={i} className="my-6 p-5 bg-selene-purple/5 border-l-[3px] border-selene-purple rounded-r-xl">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="text-lg">📋</span>
+                            <span className="text-sm font-semibold text-selene-purple">Caso práctico</span>
+                          </div>
+                          <p className="text-[14px] text-selene-white-dim leading-[1.8]" style={{ textAlign: 'justify' }}>
+                            {paragraph.replace(/\*\*Caso práctico[^*]*\*\*\s*/, '')}
+                          </p>
+                        </div>
+                      );
+                    }
+                    if (isEjercicio) {
+                      return (
+                        <div key={i} className="my-6 p-5 bg-selene-gold/5 border-l-[3px] border-selene-gold rounded-r-xl">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="text-lg">🎯</span>
+                            <span className="text-sm font-semibold text-selene-gold">Ejercicio guiado</span>
+                          </div>
+                          <p className="text-[14px] text-selene-white-dim leading-[1.8]" style={{ textAlign: 'justify' }}>
+                            {paragraph.replace(/\*\*Ejercicio guiado[^*]*\*\*\s*/, '')}
+                          </p>
+                        </div>
+                      );
+                    }
+                    if (isTarea) {
+                      return (
+                        <div key={i} className="my-6 p-5 bg-selene-success/5 border-l-[3px] border-selene-success rounded-r-xl">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="text-lg">📝</span>
+                            <span className="text-sm font-semibold text-selene-success">Tarea para casa</span>
+                          </div>
+                          <p className="text-[14px] text-selene-white-dim leading-[1.8]" style={{ textAlign: 'justify' }}>
+                            {paragraph.replace(/\*\*Tarea para casa[^*]*\*\*\s*/, '')}
+                          </p>
+                        </div>
+                      );
+                    }
+                    // Detect inline **bold** within paragraphs
+                    const hasBold = paragraph.includes('**');
+                    if (hasBold) {
+                      const parts = paragraph.split(/(\*\*[^*]+\*\*)/g);
+                      return (
+                        <p key={i} className="text-[14px] md:text-[15px] text-selene-white-dim leading-[1.8] mb-5 last:mb-0" style={{ textAlign: 'justify' }}>
+                          {parts.map((part, j) =>
+                            part.startsWith('**') && part.endsWith('**')
+                              ? <strong key={j} className="text-selene-white font-semibold">{part.replace(/\*\*/g, '')}</strong>
+                              : <span key={j}>{part}</span>
+                          )}
+                        </p>
+                      );
+                    }
+                    // Regular paragraph — justified
+                    return (
+                      <p key={i} className="text-[14px] md:text-[15px] text-selene-white-dim leading-[1.8] mb-5 last:mb-0" style={{ textAlign: 'justify' }}>
+                        {paragraph}
+                      </p>
+                    );
+                  })}
                 </div>
               </Card>
 
@@ -441,14 +510,44 @@ export default function CoursePage({ params }) {
                 </div>
               )}
 
-              {/* Citation */}
+              {/* Citations */}
               {lessonData.citation && (
-                <div className="bg-selene-blue/5 rounded-xl p-4 border border-selene-blue/10 mb-6">
-                  <div className="text-xs font-semibold text-selene-blue-light mb-1.5">Referencia cientifica</div>
-                  <div className="text-[13px] text-selene-white-dim leading-relaxed">
-                    <span className="text-selene-white font-medium">{lessonData.citation.researcher} ({lessonData.citation.year})</span>
-                    {' — '}
-                    {lessonData.citation.finding}
+                <div className="bg-selene-blue/5 rounded-xl p-4 border border-selene-blue/10 mb-4">
+                  <div className="text-xs font-semibold text-selene-blue-light mb-2">🔬 Referencias científicas</div>
+                  {Array.isArray(lessonData.citation) ? lessonData.citation.map((c, ci) => (
+                    <div key={ci} className="text-[13px] text-selene-white-dim leading-relaxed mb-2 last:mb-0">
+                      <span className="text-selene-white font-medium">{c.researcher} ({c.year})</span>
+                      {' — '}{c.finding}
+                    </div>
+                  )) : (
+                    <div className="text-[13px] text-selene-white-dim leading-relaxed">
+                      <span className="text-selene-white font-medium">{lessonData.citation.researcher} ({lessonData.citation.year})</span>
+                      {' — '}{lessonData.citation.finding}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Bibliography */}
+              {lessonData.bibliography?.length > 0 && (
+                <div className="bg-selene-elevated/50 rounded-xl p-4 border border-selene-border mb-4">
+                  <div className="text-xs font-semibold text-selene-white-dim mb-2">📚 Bibliografía</div>
+                  {lessonData.bibliography.map((b, bi) => (
+                    <div key={bi} className="text-[12px] text-selene-white-dim mb-1 last:mb-0">
+                      {b.author} ({b.year}). <em className="text-selene-white/70">{b.title}</em> {b.type === 'paper' ? '📄' : '📖'}
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Homework */}
+              {lessonData.homework && (
+                <div className="bg-selene-gold/5 rounded-xl p-4 border border-selene-gold/20 mb-6">
+                  <div className="text-xs font-semibold text-selene-gold mb-2">📋 Tarea para casa</div>
+                  <p className="text-[13px] text-selene-white-dim leading-relaxed mb-2" style={{ textAlign: 'justify' }}>{lessonData.homework.task}</p>
+                  <div className="flex gap-4 text-[11px] text-selene-white-dim">
+                    {lessonData.homework.duration && <span>⏱ {lessonData.homework.duration}</span>}
+                    {lessonData.homework.materials && <span>📦 {lessonData.homework.materials}</span>}
                   </div>
                 </div>
               )}
