@@ -347,3 +347,233 @@ export function ProgressCheck({ questions }) {
     </Card>
   );
 }
+
+// ── 8. MULTIPLE CHOICE QUIZ — Single or multi-answer ──
+export function MultipleChoice({ question, options, correctIndex, explanation, multiSelect }) {
+  const [selected, setSelected] = useState(multiSelect ? new Set() : null);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSelect = (i) => {
+    if (submitted) return;
+    if (multiSelect) {
+      setSelected(prev => {
+        const next = new Set(prev);
+        next.has(i) ? next.delete(i) : next.add(i);
+        return next;
+      });
+    } else {
+      setSelected(i);
+    }
+  };
+
+  const isCorrect = multiSelect
+    ? submitted && correctIndex.every(c => selected.has(c)) && selected.size === correctIndex.length
+    : submitted && selected === correctIndex;
+
+  const getOptionStyle = (i) => {
+    if (!submitted) {
+      const isActive = multiSelect ? selected.has(i) : selected === i;
+      return isActive
+        ? 'bg-selene-gold/10 border-selene-gold/40 text-selene-gold'
+        : 'bg-selene-elevated border-selene-border text-selene-white hover:border-selene-gold/30';
+    }
+    const isRight = multiSelect ? correctIndex.includes(i) : i === correctIndex;
+    const wasChosen = multiSelect ? selected.has(i) : selected === i;
+    if (isRight) return 'bg-green-500/10 border-green-500/30 text-green-400';
+    if (wasChosen && !isRight) return 'bg-red-500/10 border-red-500/30 text-red-400';
+    return 'bg-selene-elevated border-selene-border text-selene-white-dim opacity-50';
+  };
+
+  return (
+    <Card className="p-5 my-6">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="text-lg">❓</span>
+        <h4 className="text-sm font-semibold text-selene-gold">Pregunta</h4>
+      </div>
+      <p className="text-[14px] text-selene-white mb-4">{question}</p>
+
+      <div className="space-y-2">
+        {options.map((opt, i) => (
+          <button
+            key={i}
+            onClick={() => handleSelect(i)}
+            className={`w-full text-left text-[13px] p-3 rounded-lg border transition ${getOptionStyle(i)}`}
+          >
+            <span className="font-semibold mr-2">{String.fromCharCode(65 + i)}.</span>
+            {opt}
+          </button>
+        ))}
+      </div>
+
+      {!submitted && (
+        <button
+          onClick={() => setSubmitted(true)}
+          disabled={multiSelect ? selected.size === 0 : selected === null}
+          className="mt-4 w-full text-sm font-semibold bg-selene-gold text-selene-bg py-2.5 rounded-lg hover:brightness-110 transition disabled:opacity-40"
+        >
+          Comprobar
+        </button>
+      )}
+
+      {submitted && (
+        <div className={`mt-4 p-3 rounded-lg text-sm ${isCorrect ? 'bg-green-500/10 text-green-400' : 'bg-red-500/10 text-red-400'}`}>
+          {isCorrect ? '✓ Correcto' : '✗ Incorrecto'}
+          {explanation && <p className="mt-1 text-selene-white-dim text-[12px]">{explanation}</p>}
+        </div>
+      )}
+    </Card>
+  );
+}
+
+// ── 9. TIMELINE — Chronological events ──
+export function Timeline({ title, events }) {
+  const [expanded, setExpanded] = useState(null);
+
+  return (
+    <Card className="p-5 my-6">
+      <div className="flex items-center gap-2 mb-4">
+        <span className="text-lg">📅</span>
+        <h4 className="text-sm font-semibold text-selene-gold">{title || 'Línea temporal'}</h4>
+      </div>
+
+      <div className="relative ml-4">
+        <div className="absolute left-0 top-0 bottom-0 w-px bg-selene-gold/20" />
+
+        {events.map((ev, i) => (
+          <button
+            key={i}
+            onClick={() => setExpanded(expanded === i ? null : i)}
+            className="relative pl-6 pb-5 block w-full text-left group"
+          >
+            <div className={`absolute left-[-4px] top-1 w-[9px] h-[9px] rounded-full border-2 transition ${
+              expanded === i ? 'bg-selene-gold border-selene-gold' : 'bg-selene-bg border-selene-gold/40 group-hover:border-selene-gold'
+            }`} />
+            <div className="text-[11px] text-selene-gold font-semibold">{ev.date || ev.year}</div>
+            <div className="text-[13px] text-selene-white">{ev.title}</div>
+            {expanded === i && ev.detail && (
+              <div className="mt-2 text-[12px] text-selene-white-dim leading-relaxed animate-fade-in">
+                {ev.detail}
+              </div>
+            )}
+          </button>
+        ))}
+      </div>
+    </Card>
+  );
+}
+
+// ── 10. COMPARISON TABLE — Side by side ──
+export function ComparisonTable({ title, headers, rows }) {
+  return (
+    <Card className="p-5 my-6 overflow-hidden">
+      <div className="flex items-center gap-2 mb-4">
+        <span className="text-lg">⚖️</span>
+        <h4 className="text-sm font-semibold text-selene-gold">{title || 'Comparación'}</h4>
+      </div>
+
+      <div className="rounded-lg border border-selene-border overflow-hidden">
+        <div className={`grid gap-0 ${headers.length === 3 ? 'grid-cols-3' : 'grid-cols-2'}`}>
+          {headers.map((h, i) => (
+            <div key={i} className="px-3 py-2.5 bg-selene-elevated text-[11px] font-semibold text-selene-gold uppercase tracking-wider text-center border-b border-selene-border">
+              {h}
+            </div>
+          ))}
+        </div>
+        {rows.map((row, i) => (
+          <div key={i} className={`grid ${headers.length === 3 ? 'grid-cols-3' : 'grid-cols-2'} ${i < rows.length - 1 ? 'border-b border-selene-border' : ''}`}>
+            {row.map((cell, j) => (
+              <div key={j} className={`px-3 py-2.5 text-[12px] text-center ${
+                j === 0 ? 'text-selene-white font-medium' : 'text-selene-white-dim'
+              } ${i % 2 === 0 ? 'bg-selene-card' : 'bg-selene-bg'}`}>
+                {cell}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </Card>
+  );
+}
+
+// ── 11. SCENARIO / CASE STUDY — Interactive decision ──
+export function Scenario({ title, description, question, options }) {
+  const [choice, setChoice] = useState(null);
+
+  return (
+    <Card className="p-5 my-6 border-l-[3px] border-l-purple-500/50">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="text-lg">🎭</span>
+        <h4 className="text-sm font-semibold" style={{ color: '#BB86FC' }}>{title || 'Caso práctico'}</h4>
+      </div>
+      <p className="text-[13px] text-selene-white-dim leading-relaxed mb-4 italic">{description}</p>
+      <p className="text-[13px] text-selene-white font-medium mb-3">{question}</p>
+
+      <div className="space-y-2">
+        {options.map((opt, i) => (
+          <button
+            key={i}
+            onClick={() => setChoice(i)}
+            className={`w-full text-left text-[13px] p-3 rounded-lg border transition ${
+              choice === i
+                ? opt.correct
+                  ? 'bg-green-500/10 border-green-500/30 text-green-400'
+                  : 'bg-red-500/10 border-red-500/30 text-red-400'
+                : 'bg-selene-elevated border-selene-border text-selene-white hover:border-selene-gold/30'
+            }`}
+          >
+            {opt.text}
+          </button>
+        ))}
+      </div>
+
+      {choice !== null && options[choice]?.feedback && (
+        <div className="mt-3 p-3 bg-selene-elevated rounded-lg text-[12px] text-selene-white-dim leading-relaxed animate-fade-in">
+          {options[choice].feedback}
+        </div>
+      )}
+    </Card>
+  );
+}
+
+// ── 12. REVEAL / ACCORDION — Progressive disclosure ──
+export function RevealSections({ title, sections }) {
+  const [open, setOpen] = useState(new Set());
+
+  const toggle = (i) => {
+    setOpen(prev => {
+      const next = new Set(prev);
+      next.has(i) ? next.delete(i) : next.add(i);
+      return next;
+    });
+  };
+
+  return (
+    <Card className="p-5 my-6">
+      {title && (
+        <div className="flex items-center gap-2 mb-4">
+          <span className="text-lg">📚</span>
+          <h4 className="text-sm font-semibold text-selene-gold">{title}</h4>
+        </div>
+      )}
+
+      <div className="space-y-2">
+        {sections.map((s, i) => (
+          <div key={i} className="rounded-lg border border-selene-border overflow-hidden">
+            <button
+              onClick={() => toggle(i)}
+              className="w-full flex items-center justify-between px-4 py-3 bg-selene-elevated hover:bg-selene-card transition text-left"
+            >
+              <span className="text-[13px] text-selene-white font-medium">{s.title}</span>
+              <span className={`text-selene-gold transition-transform ${open.has(i) ? 'rotate-180' : ''}`}>▾</span>
+            </button>
+            {open.has(i) && (
+              <div className="px-4 py-3 text-[13px] text-selene-white-dim leading-relaxed animate-fade-in bg-selene-bg">
+                {s.content}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </Card>
+  );
+}

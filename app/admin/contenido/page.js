@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { COURSES } from '@/lib/constants';
 import { Card, BackIcon } from '@/components/ui';
-import { FlipCards, MatchExercise, HotspotImage, FillBlanks, SortExercise, KeyConcept, ProgressCheck } from '@/components/InteractiveElements';
+import { FlipCards, MatchExercise, HotspotImage, FillBlanks, SortExercise, KeyConcept, ProgressCheck, MultipleChoice, Timeline, ComparisonTable, Scenario, RevealSections } from '@/components/InteractiveElements';
 
 // Slide viewer component
 function SlideViewer({ slides }) {
@@ -194,7 +194,12 @@ function LessonView({ courseId, lessonId, onClose }) {
               case 'sort': return <SortExercise key={i} title={el.title} items={el.items} instruction={el.instruction} />;
               case 'key_concept': return <KeyConcept key={i} term={el.term} definition={el.definition} icon={el.icon} source={el.source} />;
               case 'progress_check': return <ProgressCheck key={i} questions={el.questions} />;
-              default: return null;
+              case 'multiple_choice': return <MultipleChoice key={i} question={el.question} options={el.options} correctIndex={el.correct ?? el.correctIndex} explanation={el.explanation} multiSelect={el.multiSelect} />;
+              case 'timeline': return <Timeline key={i} title={el.title} events={el.events} />;
+              case 'comparison': return <ComparisonTable key={i} title={el.title} headers={el.headers} rows={el.rows} />;
+              case 'scenario': return <Scenario key={i} title={el.title} description={el.description} question={el.question} options={el.options} />;
+              case 'reveal': return <RevealSections key={i} title={el.title} sections={el.sections} />;
+              default: return <div key={i} className="p-3 bg-selene-elevated rounded-lg text-xs text-selene-white-dim">Ejercicio tipo: {el.type}</div>;
             }
           })}
         </div>
