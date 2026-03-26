@@ -305,12 +305,70 @@ export function KeyConcept({ term, definition, icon, source }) {
   );
 }
 
-// ── 7. PROGRESS CHECK — Self-assessment ──
+// ── 7. PROGRESS CHECK — Self-assessment (supports string[] or object[] with quiz) ──
 export function ProgressCheck({ questions }) {
   const [answers, setAnswers] = useState({});
-  const total = questions.length;
-  const answered = Object.keys(answers).length;
+  const [quizAnswers, setQuizAnswers] = useState({});
+  const total = questions?.length || 0;
 
+  if (!total) return null;
+
+  // Detect if questions are strings (checklist) or objects (quiz format)
+  const isQuizFormat = typeof questions[0] === 'object' && questions[0]?.question;
+
+  if (isQuizFormat) {
+    const answered = Object.keys(quizAnswers).length;
+    return (
+      <Card className="p-5 my-6">
+        <div className="flex items-center gap-2 mb-4">
+          <span className="text-lg">🎯</span>
+          <h4 className="text-sm font-semibold text-selene-gold">Autoevaluación</h4>
+          <span className="text-[11px] text-selene-white-dim ml-auto">{answered}/{total}</span>
+        </div>
+        <div className="space-y-4">
+          {questions.map((q, i) => {
+            const chosen = quizAnswers[i];
+            const isAnswered = chosen !== undefined;
+            const isCorrect = isAnswered && chosen === q.correct;
+            return (
+              <div key={i} className="border border-selene-border rounded-lg p-3">
+                <p className="text-[13px] text-selene-white mb-2">{q.question}</p>
+                <div className="space-y-1.5">
+                  {q.options?.map((opt, j) => (
+                    <button
+                      key={j}
+                      onClick={() => !isAnswered && setQuizAnswers(prev => ({ ...prev, [i]: j }))}
+                      disabled={isAnswered}
+                      className={`w-full text-left text-[12px] px-3 py-2 rounded border transition ${
+                        isAnswered
+                          ? j === q.correct ? 'bg-green-500/10 border-green-500/30 text-green-400'
+                          : chosen === j ? 'bg-red-500/10 border-red-500/30 text-red-400'
+                          : 'bg-selene-elevated border-selene-border text-selene-white-dim opacity-40'
+                          : 'bg-selene-elevated border-selene-border text-selene-white hover:border-selene-gold/30'
+                      }`}
+                    >
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+                {isAnswered && q.explanation && (
+                  <p className="text-[11px] text-selene-white-dim mt-2 p-2 bg-selene-elevated rounded">{q.explanation}</p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+        {answered === total && (
+          <div className="mt-4 text-center text-sm text-green-400 font-semibold">
+            ✓ {Object.values(quizAnswers).filter((v, i) => v === questions[i]?.correct).length}/{total} correctas
+          </div>
+        )}
+      </Card>
+    );
+  }
+
+  // Simple checklist format (string[])
+  const answered = Object.keys(answers).length;
   return (
     <Card className="p-5 my-6">
       <div className="flex items-center gap-2 mb-4">
@@ -334,7 +392,7 @@ export function ProgressCheck({ questions }) {
             >
               {answers[i] && <span className="text-xs">✓</span>}
             </button>
-            <span className="text-[13px] text-selene-white-dim leading-relaxed">{q}</span>
+            <span className="text-[13px] text-selene-white-dim leading-relaxed">{typeof q === 'string' ? q : q?.question || JSON.stringify(q)}</span>
           </div>
         ))}
       </div>
