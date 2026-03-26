@@ -60,12 +60,36 @@
     {
       "type": "flip_cards",
       "cards": [
-        {"icon": "🌀", "front": "El Loco (0)", "back": "Potencial puro, salto de fe, espontaneidad. Arquetipo del Inocente (puer aeternus). Invertido: imprudencia, caos sin dirección."},
-        {"icon": "♾️", "front": "El Mago (I)", "back": "Voluntad consciente, los 4 elementos disponibles, lemniscata del infinito. Arquetipo del Yo consciente. Invertido: manipulación, talentos desperdiciados."},
-        {"icon": "🌙", "front": "La Sacerdotisa (II)", "back": "Intuición, sabiduría interior, columnas de dualidad (B y J). Arquetipo del Inconsciente/Anima sabia. Invertida: secretos dañinos, desconexión intuitiva."},
-        {"icon": "🌹", "front": "Rosa blanca del Loco", "back": "Representa la pureza de intención: no ingenuidad, sino confianza primordial en el viaje."},
-        {"icon": "⚔️", "front": "Los 4 elementos del Mago", "back": "Copa (agua/emociones), Espada (aire/mente), Basto (fuego/acción), Pentáculo (tierra/materia). Todos los recursos disponibles."},
-        {"icon": "📜", "front": "Torah de la Sacerdotisa", "back": "Parcialmente cubierta por el manto: el conocimiento profundo se revela progresivamente, no de golpe."}
+        {
+          "icon": "🌀",
+          "front": "El Loco (0)",
+          "back": "Potencial puro, salto de fe, espontaneidad. Arquetipo del Inocente (puer aeternus). Invertido: imprudencia, caos sin dirección."
+        },
+        {
+          "icon": "♾️",
+          "front": "El Mago (I)",
+          "back": "Voluntad consciente, los 4 elementos disponibles, lemniscata del infinito. Arquetipo del Yo consciente. Invertido: manipulación, talentos desperdiciados."
+        },
+        {
+          "icon": "🌙",
+          "front": "La Sacerdotisa (II)",
+          "back": "Intuición, sabiduría interior, columnas de dualidad (B y J). Arquetipo del Inconsciente/Anima sabia. Invertida: secretos dañinos, desconexión intuitiva."
+        },
+        {
+          "icon": "🌹",
+          "front": "Rosa blanca del Loco",
+          "back": "Representa la pureza de intención: no ingenuidad, sino confianza primordial en el viaje."
+        },
+        {
+          "icon": "⚔️",
+          "front": "Los 4 elementos del Mago",
+          "back": "Copa (agua/emociones), Espada (aire/mente), Basto (fuego/acción), Pentáculo (tierra/materia). Todos los recursos disponibles."
+        },
+        {
+          "icon": "📜",
+          "front": "Torah de la Sacerdotisa",
+          "back": "Parcialmente cubierta por el manto: el conocimiento profundo se revela progresivamente, no de golpe."
+        }
       ]
     },
     {
@@ -73,10 +97,22 @@
       "title": "Símbolos y significados",
       "instruction": "Conecta cada símbolo visual con lo que representa",
       "pairs": [
-        {"left": "Lemniscata sobre la cabeza del Mago", "right": "Ciclo infinito de la energía, conexión cielo-tierra"},
-        {"left": "Precipicio del Loco", "right": "Lo desconocido, no necesariamente peligro"},
-        {"left": "Columnas B y J de la Sacerdotisa", "right": "Dualidad integrada: luz/oscuridad, consciente/inconsciente"},
-        {"left": "Perro blanco del Loco", "right": "El instinto que acompaña o advierte"}
+        {
+          "left": "Lemniscata sobre la cabeza del Mago",
+          "right": "Ciclo infinito de la energía, conexión cielo-tierra"
+        },
+        {
+          "left": "Precipicio del Loco",
+          "right": "Lo desconocido, no necesariamente peligro"
+        },
+        {
+          "left": "Columnas B y J de la Sacerdotisa",
+          "right": "Dualidad integrada: luz/oscuridad, consciente/inconsciente"
+        },
+        {
+          "left": "Perro blanco del Loco",
+          "right": "El instinto que acompaña o advierte"
+        }
       ]
     },
     {
@@ -86,6 +122,32 @@
         "Entiendo el arquetipo junguiano que representa cada una",
         "Distingo el significado en posición normal e invertida",
         "Comprendo cómo las tres cartas forman el punto de partida del viaje"
+      ]
+    },
+    {
+      "type": "concept_map",
+      "center": "Arcanos 0-II",
+      "nodes": [
+        {
+          "label": "El Loco",
+          "description": "Puer aeternus, libertad"
+        },
+        {
+          "label": "El Mago",
+          "description": "Voluntad consciente, lemniscata"
+        },
+        {
+          "label": "La Sacerdotisa",
+          "description": "Sabiduria inconsciente, pilares B y J"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "El Loco (0) es potencial puro y disposicion a iniciar el viaje sin garantias",
+        "El Mago (I) representa la voluntad consciente y el uso enfocado de recursos",
+        "La Sacerdotisa (II) encarna la sabiduria intuitiva que se revela en el silencio"
       ]
     }
   ],
@@ -112,10 +174,30 @@
     }
   ],
   "bibliography": [
-    {"author": "Jung, C.G.", "year": "1933", "title": "Visions: Notes of the Seminar Given in 1930-1934", "type": "book"},
-    {"author": "Waite, A.E.", "year": "1911", "title": "The Pictorial Key to the Tarot", "type": "book"},
-    {"author": "Campbell, J.", "year": "1949", "title": "El héroe de las mil caras (The Hero with a Thousand Faces)", "type": "book"},
-    {"author": "Jung, C.G.", "year": "1959", "title": "Los arquetipos y lo inconsciente colectivo (Archetypes and the Collective Unconscious)", "type": "book"}
+    {
+      "author": "Jung, C.G.",
+      "year": "1933",
+      "title": "Visions: Notes of the Seminar Given in 1930-1934",
+      "type": "book"
+    },
+    {
+      "author": "Waite, A.E.",
+      "year": "1911",
+      "title": "The Pictorial Key to the Tarot",
+      "type": "book"
+    },
+    {
+      "author": "Campbell, J.",
+      "year": "1949",
+      "title": "El héroe de las mil caras (The Hero with a Thousand Faces)",
+      "type": "book"
+    },
+    {
+      "author": "Jung, C.G.",
+      "year": "1959",
+      "title": "Los arquetipos y lo inconsciente colectivo (Archetypes and the Collective Unconscious)",
+      "type": "book"
+    }
   ],
   "homework": {
     "task": "Dedica un día a cada carta: Día 1 El Loco, Día 2 El Mago, Día 3 La Sacerdotisa. Tenla visible en tu espacio. Al final del día anota: ¿cómo ha aparecido esta energía en mi jornada? ¿Sentí impulso de comenzar, de organizar y actuar, o de detenerme y escuchar?",

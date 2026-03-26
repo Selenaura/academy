@@ -60,12 +60,36 @@
     {
       "type": "flip_cards",
       "cards": [
-        {"icon": "🎴", "front": "Rider-Waite-Smith", "back": "Mazo de 1909 ilustrado por Pamela Colman Smith. Escenas narrativas completas que permiten la proyección psicológica."},
-        {"icon": "📓", "front": "Cuaderno de tarot", "back": "Registro diario de tus interacciones con las cartas: fecha, carta, lo que ves, lo que sientes y una pregunta."},
-        {"icon": "☀️", "front": "Carta diaria", "back": "Práctica matutina: saca una carta, mírala 30 segundos y anota tu percepción sin buscar significados externos."},
-        {"icon": "🧠", "front": "Respuesta somática", "back": "El cuerpo responde a las imágenes antes que la mente consciente (Bechara 1997). La práctica regular refina esta sensibilidad."},
-        {"icon": "🪞", "front": "Proyección inicial", "back": "Las cartas que te atraen revelan lo que valoras. Las que te generan rechazo señalan lo que evitas."},
-        {"icon": "✍️", "front": "Tres anotaciones diarias", "back": "Lo que ves (descripción), lo que sientes (emoción/cuerpo), una pregunta que la carta te inspire."}
+        {
+          "icon": "🎴",
+          "front": "Rider-Waite-Smith",
+          "back": "Mazo de 1909 ilustrado por Pamela Colman Smith. Escenas narrativas completas que permiten la proyección psicológica."
+        },
+        {
+          "icon": "📓",
+          "front": "Cuaderno de tarot",
+          "back": "Registro diario de tus interacciones con las cartas: fecha, carta, lo que ves, lo que sientes y una pregunta."
+        },
+        {
+          "icon": "☀️",
+          "front": "Carta diaria",
+          "back": "Práctica matutina: saca una carta, mírala 30 segundos y anota tu percepción sin buscar significados externos."
+        },
+        {
+          "icon": "🧠",
+          "front": "Respuesta somática",
+          "back": "El cuerpo responde a las imágenes antes que la mente consciente (Bechara 1997). La práctica regular refina esta sensibilidad."
+        },
+        {
+          "icon": "🪞",
+          "front": "Proyección inicial",
+          "back": "Las cartas que te atraen revelan lo que valoras. Las que te generan rechazo señalan lo que evitas."
+        },
+        {
+          "icon": "✍️",
+          "front": "Tres anotaciones diarias",
+          "back": "Lo que ves (descripción), lo que sientes (emoción/cuerpo), una pregunta que la carta te inspire."
+        }
       ]
     },
     {
@@ -73,10 +97,22 @@
       "title": "Los fundamentos de tu práctica",
       "instruction": "Completa cada frase con la palabra correcta",
       "sentences": [
-        {"text": "El mazo recomendado para aprender es el ___.", "answer": "Rider-Waite-Smith"},
-        {"text": "La carta diaria se practica cada ___ sin buscar significados en libros.", "answer": "mañana"},
-        {"text": "En el cuaderno anotamos lo que vemos, lo que sentimos y una ___.", "answer": "pregunta"},
-        {"text": "Las cartas que nos generan rechazo señalan lo que ___.", "answer": "evitamos"}
+        {
+          "text": "El mazo recomendado para aprender es el ___.",
+          "answer": "Rider-Waite-Smith"
+        },
+        {
+          "text": "La carta diaria se practica cada ___ sin buscar significados en libros.",
+          "answer": "mañana"
+        },
+        {
+          "text": "En el cuaderno anotamos lo que vemos, lo que sentimos y una ___.",
+          "answer": "pregunta"
+        },
+        {
+          "text": "Las cartas que nos generan rechazo señalan lo que ___.",
+          "answer": "evitamos"
+        }
       ]
     },
     {
@@ -86,6 +122,44 @@
         "Entiendo cómo funciona la práctica de la carta diaria",
         "Puedo empezar mi cuaderno de tarot con las tres anotaciones básicas",
         "Comprendo que no se necesitan rituales para trabajar con las cartas"
+      ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "Tu practica diaria",
+      "steps": [
+        {
+          "label": "Baraja",
+          "detail": "Mezcla con intencion, sin prisa"
+        },
+        {
+          "label": "Pregunta",
+          "detail": "Formula una pregunta abierta"
+        },
+        {
+          "label": "Extrae",
+          "detail": "Saca una carta con la mano no dominante"
+        },
+        {
+          "label": "Observa",
+          "detail": "30 segundos mirando la imagen sin pensar"
+        },
+        {
+          "label": "Siente",
+          "detail": "Registra sensaciones corporales"
+        },
+        {
+          "label": "Escribe",
+          "detail": "Anota en tu diario de tarot"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "El Rider-Waite-Smith es ideal para aprender por su riqueza visual narrativa",
+        "La carta diaria entrena la sensibilidad intuitiva sin memorizar",
+        "El cuaderno de tarot registra tus proyecciones y revela patrones personales"
       ]
     }
   ],
@@ -112,10 +186,30 @@
     }
   ],
   "bibliography": [
-    {"author": "Waite, A.E.", "year": "1911", "title": "The Pictorial Key to the Tarot", "type": "book"},
-    {"author": "Bechara, A., Damasio, H., Tranel, D. & Damasio, A.R.", "year": "1997", "title": "Deciding Advantageously Before Knowing the Advantageous Strategy", "type": "paper"},
-    {"author": "Jung, C.G.", "year": "1964", "title": "El hombre y sus símbolos (Man and His Symbols)", "type": "book"},
-    {"author": "Semetsky, I.", "year": "2006", "title": "Tarot as a Projective Technique", "type": "paper"}
+    {
+      "author": "Waite, A.E.",
+      "year": "1911",
+      "title": "The Pictorial Key to the Tarot",
+      "type": "book"
+    },
+    {
+      "author": "Bechara, A., Damasio, H., Tranel, D. & Damasio, A.R.",
+      "year": "1997",
+      "title": "Deciding Advantageously Before Knowing the Advantageous Strategy",
+      "type": "paper"
+    },
+    {
+      "author": "Jung, C.G.",
+      "year": "1964",
+      "title": "El hombre y sus símbolos (Man and His Symbols)",
+      "type": "book"
+    },
+    {
+      "author": "Semetsky, I.",
+      "year": "2006",
+      "title": "Tarot as a Projective Technique",
+      "type": "paper"
+    }
   ],
   "homework": {
     "task": "Comienza la práctica de la carta diaria: durante 5 días consecutivos, saca una carta cada mañana, mírala 30 segundos y anota en tu cuaderno lo que ves, lo que sientes y una pregunta que te inspire. Al quinto día, relee las entradas y escribe un párrafo sobre los patrones que observas.",

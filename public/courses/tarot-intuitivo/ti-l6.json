@@ -60,12 +60,36 @@
     {
       "type": "flip_cards",
       "cards": [
-        {"icon": "💕", "front": "Los Enamorados (VI)", "back": "Elección consciente, integración de opuestos, Géminis. El ángel bendice ambas opciones. Invertida: indecisión, autoengaño."},
-        {"icon": "🏎️", "front": "El Carro (VII)", "back": "Voluntad en movimiento, esfinges blanca y negra sin riendas, Cáncer. Invertido: agresividad sin dirección."},
-        {"icon": "⚖️", "front": "La Justicia (VIII)", "back": "Causa y efecto, espada + balanza, Libra. No es castigo: es consecuencia natural. Invertida: injusticia, parcialidad."},
-        {"icon": "🏔️", "front": "El Ermitaño (IX)", "back": "Introspección, soledad elegida, linterna que ilumina hacia abajo, Virgo. Invertido: aislamiento por miedo."},
-        {"icon": "🎡", "front": "La Rueda (X)", "back": "Ciclos, cambio inevitable, Júpiter. Serpiente + Anubis + Esfinge. Invertida: resistencia al cambio, patrones repetidos."},
-        {"icon": "⭐", "front": "Estrella del Ermitaño", "back": "Estrella de seis puntas dentro de la linterna: integración de lo espiritual y lo material. La sabiduría que ilumina desde dentro."}
+        {
+          "icon": "💕",
+          "front": "Los Enamorados (VI)",
+          "back": "Elección consciente, integración de opuestos, Géminis. El ángel bendice ambas opciones. Invertida: indecisión, autoengaño."
+        },
+        {
+          "icon": "🏎️",
+          "front": "El Carro (VII)",
+          "back": "Voluntad en movimiento, esfinges blanca y negra sin riendas, Cáncer. Invertido: agresividad sin dirección."
+        },
+        {
+          "icon": "⚖️",
+          "front": "La Justicia (VIII)",
+          "back": "Causa y efecto, espada + balanza, Libra. No es castigo: es consecuencia natural. Invertida: injusticia, parcialidad."
+        },
+        {
+          "icon": "🏔️",
+          "front": "El Ermitaño (IX)",
+          "back": "Introspección, soledad elegida, linterna que ilumina hacia abajo, Virgo. Invertido: aislamiento por miedo."
+        },
+        {
+          "icon": "🎡",
+          "front": "La Rueda (X)",
+          "back": "Ciclos, cambio inevitable, Júpiter. Serpiente + Anubis + Esfinge. Invertida: resistencia al cambio, patrones repetidos."
+        },
+        {
+          "icon": "⭐",
+          "front": "Estrella del Ermitaño",
+          "back": "Estrella de seis puntas dentro de la linterna: integración de lo espiritual y lo material. La sabiduría que ilumina desde dentro."
+        }
       ]
     },
     {
@@ -73,11 +97,26 @@
       "title": "Cartas y asociaciones astrológicas",
       "instruction": "Conecta cada arcano con su signo o planeta",
       "pairs": [
-        {"left": "Los Enamorados (VI)", "right": "Géminis: dualidad, comunicación, opciones"},
-        {"left": "El Carro (VII)", "right": "Cáncer: protección emocional, tenacidad"},
-        {"left": "La Justicia (VIII)", "right": "Libra: equilibrio, relaciones, justicia"},
-        {"left": "El Ermitaño (IX)", "right": "Virgo: análisis, precisión, servicio discreto"},
-        {"left": "La Rueda (X)", "right": "Júpiter: expansión, fortuna, ciclos de crecimiento"}
+        {
+          "left": "Los Enamorados (VI)",
+          "right": "Géminis: dualidad, comunicación, opciones"
+        },
+        {
+          "left": "El Carro (VII)",
+          "right": "Cáncer: protección emocional, tenacidad"
+        },
+        {
+          "left": "La Justicia (VIII)",
+          "right": "Libra: equilibrio, relaciones, justicia"
+        },
+        {
+          "left": "El Ermitaño (IX)",
+          "right": "Virgo: análisis, precisión, servicio discreto"
+        },
+        {
+          "left": "La Rueda (X)",
+          "right": "Júpiter: expansión, fortuna, ciclos de crecimiento"
+        }
       ]
     },
     {
@@ -87,6 +126,40 @@
         "Entiendo la secuencia narrativa: elegir, avanzar, equilibrar, reflexionar, aceptar el cambio",
         "Conozco la asociación astrológica de cada arcano",
         "Distingo significados en posición normal e invertida de cada carta"
+      ]
+    },
+    {
+      "type": "concept_map",
+      "center": "Arcanos VI-X",
+      "nodes": [
+        {
+          "label": "Los Enamorados",
+          "description": "Eleccion"
+        },
+        {
+          "label": "El Carro",
+          "description": "Voluntad"
+        },
+        {
+          "label": "La Justicia",
+          "description": "Equilibrio"
+        },
+        {
+          "label": "El Ermitano",
+          "description": "Introspeccion"
+        },
+        {
+          "label": "La Rueda",
+          "description": "Ciclos"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "Los Enamorados (VI) representan la eleccion consciente y la integracion de opuestos",
+        "El Ermitano (IX) busca la verdad interior en soledad elegida",
+        "La Rueda (X) introduce los ciclos: la vida se mueve en espirales, no en lineas rectas"
       ]
     }
   ],
@@ -113,10 +186,30 @@
     }
   ],
   "bibliography": [
-    {"author": "Jung, C.G.", "year": "1964", "title": "El hombre y sus símbolos (Man and His Symbols)", "type": "book"},
-    {"author": "Campbell, J.", "year": "1949", "title": "El héroe de las mil caras (The Hero with a Thousand Faces)", "type": "book"},
-    {"author": "Waite, A.E.", "year": "1911", "title": "The Pictorial Key to the Tarot", "type": "book"},
-    {"author": "Gigerenzer, G.", "year": "2007", "title": "Gut Feelings: The Intelligence of the Unconscious", "type": "book"}
+    {
+      "author": "Jung, C.G.",
+      "year": "1964",
+      "title": "El hombre y sus símbolos (Man and His Symbols)",
+      "type": "book"
+    },
+    {
+      "author": "Campbell, J.",
+      "year": "1949",
+      "title": "El héroe de las mil caras (The Hero with a Thousand Faces)",
+      "type": "book"
+    },
+    {
+      "author": "Waite, A.E.",
+      "year": "1911",
+      "title": "The Pictorial Key to the Tarot",
+      "type": "book"
+    },
+    {
+      "author": "Gigerenzer, G.",
+      "year": "2007",
+      "title": "Gut Feelings: The Intelligence of the Unconscious",
+      "type": "book"
+    }
   ],
   "homework": {
     "task": "Elige la carta de este grupo (VI-X) que más te haya resonado. Tenla visible durante una semana. Cada noche escribe una frase sobre cómo su energía apareció en tu día. Al final de la semana, relee las siete frases y observa el patrón.",

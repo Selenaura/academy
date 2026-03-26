@@ -75,10 +75,22 @@
       "title": "Personas clave y sus aportes",
       "instruction": "Conecta cada figura con su contribución al tarot",
       "pairs": [
-        {"left": "Pamela Colman Smith", "right": "Creó las ilustraciones narrativas del Rider-Waite (1909)"},
-        {"left": "Carl Gustav Jung", "right": "Vinculó las cartas con los arquetipos del inconsciente"},
-        {"left": "Joseph Campbell", "right": "Descubrió el Viaje del Héroe presente en los 22 arcanos"},
-        {"left": "Court de Gébelin", "right": "Inventó la falsa conexión del tarot con el antiguo Egipto"}
+        {
+          "left": "Pamela Colman Smith",
+          "right": "Creó las ilustraciones narrativas del Rider-Waite (1909)"
+        },
+        {
+          "left": "Carl Gustav Jung",
+          "right": "Vinculó las cartas con los arquetipos del inconsciente"
+        },
+        {
+          "left": "Joseph Campbell",
+          "right": "Descubrió el Viaje del Héroe presente en los 22 arcanos"
+        },
+        {
+          "left": "Court de Gébelin",
+          "right": "Inventó la falsa conexión del tarot con el antiguo Egipto"
+        }
       ]
     },
     {
@@ -88,6 +100,44 @@
         "Sé quién fue Pamela Colman Smith y por qué sus ilustraciones son fundamentales",
         "Entiendo cómo Jung y Campbell transformaron el tarot en herramienta psicológica",
         "Distingo entre la historia real y las leyendas esotéricas sobre el tarot"
+      ]
+    },
+    {
+      "type": "timeline",
+      "events": [
+        {
+          "date": "1440",
+          "title": "Visconti-Sforza",
+          "description": "Primera baraja conocida, Milan"
+        },
+        {
+          "date": "1781",
+          "title": "Court de Gebelin",
+          "description": "Conecta tarot con esoterismo"
+        },
+        {
+          "date": "1909",
+          "title": "Rider-Waite-Smith",
+          "description": "Pamela Colman Smith ilustra la baraja mas influyente"
+        },
+        {
+          "date": "1944",
+          "title": "Jung",
+          "description": "Conecta arquetipos con simbolismo del tarot"
+        },
+        {
+          "date": "2006",
+          "title": "Semetsky",
+          "description": "Primer estudio academico serio sobre tarot como herramienta proyectiva"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "El tarot nacio como juego de cartas en la Italia del siglo XV",
+        "Pamela Colman Smith creo las ilustraciones que permiten la proyeccion psicologica",
+        "Jung y Campbell transformaron el tarot en herramienta de autoconocimiento"
       ]
     }
   ],
@@ -114,10 +164,30 @@
     }
   ],
   "bibliography": [
-    {"author": "Campbell, J.", "year": "1949", "title": "El héroe de las mil caras (The Hero with a Thousand Faces)", "type": "book"},
-    {"author": "Waite, A.E.", "year": "1911", "title": "The Pictorial Key to the Tarot", "type": "book"},
-    {"author": "Jung, C.G.", "year": "1964", "title": "El hombre y sus símbolos (Man and His Symbols)", "type": "book"},
-    {"author": "Decker, R., Dummett, M. & Depaulis, T.", "year": "1996", "title": "A Wicked Pack of Cards: The Origins of the Occult Tarot", "type": "book"}
+    {
+      "author": "Campbell, J.",
+      "year": "1949",
+      "title": "El héroe de las mil caras (The Hero with a Thousand Faces)",
+      "type": "book"
+    },
+    {
+      "author": "Waite, A.E.",
+      "year": "1911",
+      "title": "The Pictorial Key to the Tarot",
+      "type": "book"
+    },
+    {
+      "author": "Jung, C.G.",
+      "year": "1964",
+      "title": "El hombre y sus símbolos (Man and His Symbols)",
+      "type": "book"
+    },
+    {
+      "author": "Decker, R., Dummett, M. & Depaulis, T.",
+      "year": "1996",
+      "title": "A Wicked Pack of Cards: The Origins of the Occult Tarot",
+      "type": "book"
+    }
   ],
   "homework": {
     "task": "Busca imágenes de la misma carta (ej. La Emperatriz o El Mago) en tres mazos: Visconti-Sforza, Tarot de Marseille y Rider-Waite-Smith. Compara: ¿qué cambia? ¿Qué se mantiene? ¿Cuál te genera más respuesta emocional y por qué?",

@@ -60,12 +60,36 @@
     {
       "type": "flip_cards",
       "cards": [
-        {"icon": "🪞", "front": "Técnica proyectiva", "back": "Herramienta donde una imagen ambigua revela el mundo interior de quien la observa. Rorschach (1921) lo demostró con manchas de tinta."},
-        {"icon": "🃏", "front": "Tarot", "back": "Mazo de 78 imágenes simbólicas que funcionan como estímulos visuales para la autoexploración psicológica, no para la adivinación."},
-        {"icon": "🧠", "front": "Apofenia", "back": "Tendencia del cerebro a encontrar patrones significativos incluso donde no existen. Explica por qué las lecturas parecen precisas."},
-        {"icon": "🏛️", "front": "Origen histórico", "back": "Juego de cartas aristocrático en la Italia del siglo XV (Visconti-Sforza, c. 1440). No tuvo uso esotérico hasta tres siglos después."},
-        {"icon": "🔬", "front": "Semetsky (2006)", "back": "Investigadora que analizó el tarot como técnica proyectiva: lo que emerge en una lectura viene de la persona, no de las cartas."},
-        {"icon": "⚡", "front": "Jung y el tarot", "back": "Para Jung, las cartas son imágenes psicológicas que conectan con arquetipos del inconsciente colectivo. No misterio, sino lenguaje visual."}
+        {
+          "icon": "🪞",
+          "front": "Técnica proyectiva",
+          "back": "Herramienta donde una imagen ambigua revela el mundo interior de quien la observa. Rorschach (1921) lo demostró con manchas de tinta."
+        },
+        {
+          "icon": "🃏",
+          "front": "Tarot",
+          "back": "Mazo de 78 imágenes simbólicas que funcionan como estímulos visuales para la autoexploración psicológica, no para la adivinación."
+        },
+        {
+          "icon": "🧠",
+          "front": "Apofenia",
+          "back": "Tendencia del cerebro a encontrar patrones significativos incluso donde no existen. Explica por qué las lecturas parecen precisas."
+        },
+        {
+          "icon": "🏛️",
+          "front": "Origen histórico",
+          "back": "Juego de cartas aristocrático en la Italia del siglo XV (Visconti-Sforza, c. 1440). No tuvo uso esotérico hasta tres siglos después."
+        },
+        {
+          "icon": "🔬",
+          "front": "Semetsky (2006)",
+          "back": "Investigadora que analizó el tarot como técnica proyectiva: lo que emerge en una lectura viene de la persona, no de las cartas."
+        },
+        {
+          "icon": "⚡",
+          "front": "Jung y el tarot",
+          "back": "Para Jung, las cartas son imágenes psicológicas que conectan con arquetipos del inconsciente colectivo. No misterio, sino lenguaje visual."
+        }
       ]
     },
     {
@@ -73,10 +97,22 @@
       "title": "Tarot real vs. mito popular",
       "instruction": "Conecta cada mito con la realidad",
       "pairs": [
-        {"left": "El tarot predice el futuro", "right": "Proyecta tu mundo interior sobre imágenes ambiguas"},
-        {"left": "Requiere dones especiales", "right": "Requiere atención, vocabulario emocional y práctica"},
-        {"left": "Las cartas envían mensajes", "right": "Tú proyectas significado sobre la imagen"},
-        {"left": "Es una práctica mística antigua", "right": "Nació como juego de cartas en la Italia del siglo XV"}
+        {
+          "left": "El tarot predice el futuro",
+          "right": "Proyecta tu mundo interior sobre imágenes ambiguas"
+        },
+        {
+          "left": "Requiere dones especiales",
+          "right": "Requiere atención, vocabulario emocional y práctica"
+        },
+        {
+          "left": "Las cartas envían mensajes",
+          "right": "Tú proyectas significado sobre la imagen"
+        },
+        {
+          "left": "Es una práctica mística antigua",
+          "right": "Nació como juego de cartas en la Italia del siglo XV"
+        }
       ]
     },
     {
@@ -86,6 +122,36 @@
         "Entiendo la diferencia entre proyección psicológica y adivinación",
         "Sé qué es la apofenia y por qué las lecturas parecen tan precisas",
         "Comprendo que el tarot no requiere dones especiales ni rituales"
+      ]
+    },
+    {
+      "type": "concept_map",
+      "center": "Tarot",
+      "nodes": [
+        {
+          "label": "Proyeccion",
+          "description": "Herramienta proyectiva como Rorschach"
+        },
+        {
+          "label": "Arquetipos",
+          "description": "22 arcanos = arquetipos de Jung"
+        },
+        {
+          "label": "Intuicion",
+          "description": "Entrenamiento de la percepcion sutil"
+        },
+        {
+          "label": "Narrativa",
+          "description": "Las cartas cuentan historias, no predicen"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "El tarot es una herramienta proyectiva, no adivinatoria",
+        "Los 22 arcanos mayores representan arquetipos universales",
+        "La practica diaria entrena la intuicion como habilidad"
       ]
     }
   ],
@@ -112,10 +178,30 @@
     }
   ],
   "bibliography": [
-    {"author": "Jung, C.G.", "year": "1933", "title": "Visions: Notes of the Seminar Given in 1930-1934", "type": "book"},
-    {"author": "Semetsky, I.", "year": "2006", "title": "Tarot as a Projective Technique", "type": "paper"},
-    {"author": "Gigerenzer, G.", "year": "2007", "title": "Gut Feelings: The Intelligence of the Unconscious", "type": "book"},
-    {"author": "Rorschach, H.", "year": "1921", "title": "Psychodiagnostik", "type": "book"}
+    {
+      "author": "Jung, C.G.",
+      "year": "1933",
+      "title": "Visions: Notes of the Seminar Given in 1930-1934",
+      "type": "book"
+    },
+    {
+      "author": "Semetsky, I.",
+      "year": "2006",
+      "title": "Tarot as a Projective Technique",
+      "type": "paper"
+    },
+    {
+      "author": "Gigerenzer, G.",
+      "year": "2007",
+      "title": "Gut Feelings: The Intelligence of the Unconscious",
+      "type": "book"
+    },
+    {
+      "author": "Rorschach, H.",
+      "year": "1921",
+      "title": "Psychodiagnostik",
+      "type": "book"
+    }
   ],
   "homework": {
     "task": "Durante 3 días, elige una imagen diferente cada día (foto, pintura, escena) y realiza el ejercicio de proyección consciente: mira 60 segundos en silencio, luego escribe qué captó tu atención, qué emoción sentiste, a qué te recordó y qué mensaje tendría para ti hoy. Al tercer día, relee todo y busca patrones.",

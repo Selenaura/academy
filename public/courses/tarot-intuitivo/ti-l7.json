@@ -60,12 +60,36 @@
     {
       "type": "flip_cards",
       "cards": [
-        {"icon": "🦁", "front": "La Fuerza (XI)", "back": "Integración de instintos sin violencia, Leo, lemniscata. La mujer no lucha contra el león: lo sostiene con calma. Invertida: represión, fatiga emocional."},
-        {"icon": "🔄", "front": "El Colgado (XII)", "back": "Perspectiva invertida por elección, Neptuno, halo luminoso. Sacrificio voluntario del ego. Invertido: estancamiento, martirio."},
-        {"icon": "🌅", "front": "La Muerte (XIII)", "back": "Transformación profunda, Escorpio, rosa blanca en bandera negra. Sol al fondo = nuevo amanecer. Invertida: resistencia al cambio."},
-        {"icon": "⚗️", "front": "La Templanza (XIV)", "back": "Alquimia interior, Sagitario, líquido entre dos copas. Pie en tierra + pie en agua: equilibrio material-emocional. Invertida: extremismo."},
-        {"icon": "♾️", "front": "Lemniscata en La Fuerza", "back": "El mismo infinito del Mago, pero aquí la maestría es interior, no exterior: dominar las propias pasiones con compasión."},
-        {"icon": "🌹", "front": "Rosa blanca en La Muerte", "back": "Vida que persiste en la oscuridad. En la bandera negra, la rosa dice: la transformación no es destrucción, es renovación."}
+        {
+          "icon": "🦁",
+          "front": "La Fuerza (XI)",
+          "back": "Integración de instintos sin violencia, Leo, lemniscata. La mujer no lucha contra el león: lo sostiene con calma. Invertida: represión, fatiga emocional."
+        },
+        {
+          "icon": "🔄",
+          "front": "El Colgado (XII)",
+          "back": "Perspectiva invertida por elección, Neptuno, halo luminoso. Sacrificio voluntario del ego. Invertido: estancamiento, martirio."
+        },
+        {
+          "icon": "🌅",
+          "front": "La Muerte (XIII)",
+          "back": "Transformación profunda, Escorpio, rosa blanca en bandera negra. Sol al fondo = nuevo amanecer. Invertida: resistencia al cambio."
+        },
+        {
+          "icon": "⚗️",
+          "front": "La Templanza (XIV)",
+          "back": "Alquimia interior, Sagitario, líquido entre dos copas. Pie en tierra + pie en agua: equilibrio material-emocional. Invertida: extremismo."
+        },
+        {
+          "icon": "♾️",
+          "front": "Lemniscata en La Fuerza",
+          "back": "El mismo infinito del Mago, pero aquí la maestría es interior, no exterior: dominar las propias pasiones con compasión."
+        },
+        {
+          "icon": "🌹",
+          "front": "Rosa blanca en La Muerte",
+          "back": "Vida que persiste en la oscuridad. En la bandera negra, la rosa dice: la transformación no es destrucción, es renovación."
+        }
       ]
     },
     {
@@ -73,10 +97,22 @@
       "title": "Símbolos y significados profundos",
       "instruction": "Conecta cada elemento visual con su significado",
       "pairs": [
-        {"left": "Mujer abriendo fauces del león", "right": "Integración de instintos sin represión ni violencia"},
-        {"left": "Hombre colgado boca abajo con halo", "right": "Iluminación que viene de cambiar de perspectiva"},
-        {"left": "Sol detrás de las torres (Muerte)", "right": "Después de la transformación hay un nuevo amanecer"},
-        {"left": "Ángel vertiendo líquido entre copas", "right": "Alquimia de integrar opuestos sin perder ninguno"}
+        {
+          "left": "Mujer abriendo fauces del león",
+          "right": "Integración de instintos sin represión ni violencia"
+        },
+        {
+          "left": "Hombre colgado boca abajo con halo",
+          "right": "Iluminación que viene de cambiar de perspectiva"
+        },
+        {
+          "left": "Sol detrás de las torres (Muerte)",
+          "right": "Después de la transformación hay un nuevo amanecer"
+        },
+        {
+          "left": "Ángel vertiendo líquido entre copas",
+          "right": "Alquimia de integrar opuestos sin perder ninguno"
+        }
       ]
     },
     {
@@ -86,6 +122,36 @@
         "Entiendo el concepto de la Sombra junguiana y su relación con La Fuerza",
         "Sé qué es la función trascendente de Jung y cómo se refleja en La Templanza",
         "Reconozco que la resistencia ante una carta es información psicológica valiosa"
+      ]
+    },
+    {
+      "type": "concept_map",
+      "center": "Arcanos XI-XIV",
+      "nodes": [
+        {
+          "label": "La Fuerza",
+          "description": "Integracion de la sombra"
+        },
+        {
+          "label": "El Colgado",
+          "description": "Rendicion"
+        },
+        {
+          "label": "La Muerte",
+          "description": "Transformacion"
+        },
+        {
+          "label": "La Templanza",
+          "description": "Alquimia"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La Fuerza (XI) ensena que el verdadero poder integra los instintos sin destruirlos",
+        "La Muerte (XIII) no es literal: representa el fin necesario de un ciclo",
+        "La Templanza (XIV) es la alquimia que integra opuestos en una sintesis creativa"
       ]
     }
   ],
@@ -112,10 +178,30 @@
     }
   ],
   "bibliography": [
-    {"author": "Jung, C.G.", "year": "1933", "title": "Visions: Notes of the Seminar Given in 1930-1934", "type": "book"},
-    {"author": "Campbell, J.", "year": "1949", "title": "El héroe de las mil caras (The Hero with a Thousand Faces)", "type": "book"},
-    {"author": "Waite, A.E.", "year": "1911", "title": "The Pictorial Key to the Tarot", "type": "book"},
-    {"author": "Jung, C.G.", "year": "1959", "title": "Los arquetipos y lo inconsciente colectivo", "type": "book"}
+    {
+      "author": "Jung, C.G.",
+      "year": "1933",
+      "title": "Visions: Notes of the Seminar Given in 1930-1934",
+      "type": "book"
+    },
+    {
+      "author": "Campbell, J.",
+      "year": "1949",
+      "title": "El héroe de las mil caras (The Hero with a Thousand Faces)",
+      "type": "book"
+    },
+    {
+      "author": "Waite, A.E.",
+      "year": "1911",
+      "title": "The Pictorial Key to the Tarot",
+      "type": "book"
+    },
+    {
+      "author": "Jung, C.G.",
+      "year": "1959",
+      "title": "Los arquetipos y lo inconsciente colectivo",
+      "type": "book"
+    }
   ],
   "homework": {
     "task": "Durante 4 días, un arcano por día en orden (Fuerza, Colgado, Muerte, Templanza). Cada noche completa: Hoy, la energía de [carta] apareció en mi vida cuando... Al quinto día lee las cuatro frases juntas y observa si forman una narrativa de transformación.",

@@ -60,12 +60,36 @@
     {
       "type": "flip_cards",
       "cards": [
-        {"icon": "☀️", "front": "El Sol (XIX)", "back": "Alegría, vitalidad, autenticidad. Niño en caballo blanco = inocencia recuperada. El Sol: consciencia plena. Invertido: optimismo superficial."},
-        {"icon": "📯", "front": "El Juicio (XX)", "back": "Despertar, renacimiento, vocación. Figuras surgen de ataúdes. Plutón: transformación radical. Invertido: resistencia al despertar."},
-        {"icon": "🌍", "front": "El Mundo (XXI)", "back": "Integración total, 4 elementos, danza. Saturno: madurez, culminación. Corona ovalada: ciclo completo. Invertido: incompletitud."},
-        {"icon": "🐎", "front": "El caballo blanco", "back": "Aparece en La Muerte (XIII) y El Sol (XIX): la misma fuerza que destruye lo viejo lleva hacia la alegría."},
-        {"icon": "♾️", "front": "Tres lemniscatas", "back": "Mago (I): maestría exterior. Fuerza (XI): maestría interior. Mundo (XXI): maestría total. Una progresión a lo largo del viaje."},
-        {"icon": "🏆", "front": "Corona de laurel (Mundo)", "back": "No encierra: celebra. Es ovalada, no cerrada: el ciclo termina y está listo para empezar de nuevo en otro nivel."}
+        {
+          "icon": "☀️",
+          "front": "El Sol (XIX)",
+          "back": "Alegría, vitalidad, autenticidad. Niño en caballo blanco = inocencia recuperada. El Sol: consciencia plena. Invertido: optimismo superficial."
+        },
+        {
+          "icon": "📯",
+          "front": "El Juicio (XX)",
+          "back": "Despertar, renacimiento, vocación. Figuras surgen de ataúdes. Plutón: transformación radical. Invertido: resistencia al despertar."
+        },
+        {
+          "icon": "🌍",
+          "front": "El Mundo (XXI)",
+          "back": "Integración total, 4 elementos, danza. Saturno: madurez, culminación. Corona ovalada: ciclo completo. Invertido: incompletitud."
+        },
+        {
+          "icon": "🐎",
+          "front": "El caballo blanco",
+          "back": "Aparece en La Muerte (XIII) y El Sol (XIX): la misma fuerza que destruye lo viejo lleva hacia la alegría."
+        },
+        {
+          "icon": "♾️",
+          "front": "Tres lemniscatas",
+          "back": "Mago (I): maestría exterior. Fuerza (XI): maestría interior. Mundo (XXI): maestría total. Una progresión a lo largo del viaje."
+        },
+        {
+          "icon": "🏆",
+          "front": "Corona de laurel (Mundo)",
+          "back": "No encierra: celebra. Es ovalada, no cerrada: el ciclo termina y está listo para empezar de nuevo en otro nivel."
+        }
       ]
     },
     {
@@ -85,10 +109,52 @@
       "title": "Cartas y fases del viaje",
       "instruction": "Conecta cada carta con su fase del Viaje del Héroe",
       "pairs": [
-        {"left": "El Loco (0)", "right": "Fase 1 — Partida: la llamada a la aventura"},
-        {"left": "La Muerte (XIII)", "right": "Fase 3 — Transformación: muerte simbólica"},
-        {"left": "La Torre (XVI)", "right": "Fase 4 — Noche oscura: derrumbe de lo falso"},
-        {"left": "El Mundo (XXI)", "right": "Fase 5 — Retorno: integración total y nuevo ciclo"}
+        {
+          "left": "El Loco (0)",
+          "right": "Fase 1 — Partida: la llamada a la aventura"
+        },
+        {
+          "left": "La Muerte (XIII)",
+          "right": "Fase 3 — Transformación: muerte simbólica"
+        },
+        {
+          "left": "La Torre (XVI)",
+          "right": "Fase 4 — Noche oscura: derrumbe de lo falso"
+        },
+        {
+          "left": "El Mundo (XXI)",
+          "right": "Fase 5 — Retorno: integración total y nuevo ciclo"
+        }
+      ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "El Viaje del Heroe en 22 arcanos",
+      "steps": [
+        {
+          "label": "Partida (0-VII)",
+          "detail": "Del Loco al Carro: despertar y voluntad"
+        },
+        {
+          "label": "Descenso (VIII-XIV)",
+          "detail": "Fuerza a Templanza: confrontar la sombra"
+        },
+        {
+          "label": "Crisis (XV-XVIII)",
+          "detail": "Diablo a Luna: destruccion y renacimiento"
+        },
+        {
+          "label": "Retorno (XIX-XXI)",
+          "detail": "Sol a Mundo: integracion y plenitud"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "El Sol (XIX) es la vitalidad recuperada: inocencia consciente tras la oscuridad",
+        "El Juicio (XX) es la llamada del Self junguiano: despertar al proposito autentico",
+        "El Mundo (XXI) integra los opuestos, cierra el viaje e inicia un nuevo ciclo"
       ]
     }
   ],
@@ -115,11 +181,36 @@
     }
   ],
   "bibliography": [
-    {"author": "Campbell, J.", "year": "1949", "title": "El héroe de las mil caras (The Hero with a Thousand Faces)", "type": "book"},
-    {"author": "Jung, C.G.", "year": "1964", "title": "El hombre y sus símbolos (Man and His Symbols)", "type": "book"},
-    {"author": "Waite, A.E.", "year": "1911", "title": "The Pictorial Key to the Tarot", "type": "book"},
-    {"author": "Semetsky, I.", "year": "2006", "title": "Tarot as a Projective Technique", "type": "paper"},
-    {"author": "Gigerenzer, G.", "year": "2007", "title": "Gut Feelings: The Intelligence of the Unconscious", "type": "book"}
+    {
+      "author": "Campbell, J.",
+      "year": "1949",
+      "title": "El héroe de las mil caras (The Hero with a Thousand Faces)",
+      "type": "book"
+    },
+    {
+      "author": "Jung, C.G.",
+      "year": "1964",
+      "title": "El hombre y sus símbolos (Man and His Symbols)",
+      "type": "book"
+    },
+    {
+      "author": "Waite, A.E.",
+      "year": "1911",
+      "title": "The Pictorial Key to the Tarot",
+      "type": "book"
+    },
+    {
+      "author": "Semetsky, I.",
+      "year": "2006",
+      "title": "Tarot as a Projective Technique",
+      "type": "paper"
+    },
+    {
+      "author": "Gigerenzer, G.",
+      "year": "2007",
+      "title": "Gut Feelings: The Intelligence of the Unconscious",
+      "type": "book"
+    }
   ],
   "homework": {
     "task": "Cada mañana durante 7 días, saca una carta usando solo los 22 Arcanos Mayores. Anota: la carta, la fase del viaje (Partida, Iniciación, Transformación, Noche Oscura o Retorno) y cómo se conectó con tu día. Al final de la semana observa qué fase se repite: esa repetición señala tu foco psicológico actual.",

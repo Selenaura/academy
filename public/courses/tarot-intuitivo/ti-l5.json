@@ -60,12 +60,36 @@
     {
       "type": "flip_cards",
       "cards": [
-        {"icon": "🌿", "front": "La Emperatriz (III)", "back": "Creatividad, fertilidad, Venus, Gran Madre nutriente. Campo de trigo, 12 estrellas, granadas. Invertida: bloqueo creativo, sobreprotección."},
-        {"icon": "🏔️", "front": "El Emperador (IV)", "back": "Estructura, autoridad, Aries, Padre interior. Trono de piedra, carneros, armadura. Invertido: autoritarismo, control excesivo."},
-        {"icon": "🔑", "front": "El Hierofante (V)", "back": "Tradición, enseñanza, Tauro, Maestro transmisor. Triple corona, llaves cruzadas. Invertido: dogmatismo, conformismo."},
-        {"icon": "🌾", "front": "Campo de trigo (Emperatriz)", "back": "Fertilidad no solo biológica: ideas, proyectos y relaciones que germinan y maduran."},
-        {"icon": "🐏", "front": "Carneros del Emperador", "back": "Representan a Aries: liderazgo, iniciativa, determinación y energía de acción directa."},
-        {"icon": "🗝️", "front": "Dos llaves del Hierofante", "back": "Oro: conocimiento exterior, tradición. Plata: conocimiento interior, misterio. Ambas necesarias."}
+        {
+          "icon": "🌿",
+          "front": "La Emperatriz (III)",
+          "back": "Creatividad, fertilidad, Venus, Gran Madre nutriente. Campo de trigo, 12 estrellas, granadas. Invertida: bloqueo creativo, sobreprotección."
+        },
+        {
+          "icon": "🏔️",
+          "front": "El Emperador (IV)",
+          "back": "Estructura, autoridad, Aries, Padre interior. Trono de piedra, carneros, armadura. Invertido: autoritarismo, control excesivo."
+        },
+        {
+          "icon": "🔑",
+          "front": "El Hierofante (V)",
+          "back": "Tradición, enseñanza, Tauro, Maestro transmisor. Triple corona, llaves cruzadas. Invertido: dogmatismo, conformismo."
+        },
+        {
+          "icon": "🌾",
+          "front": "Campo de trigo (Emperatriz)",
+          "back": "Fertilidad no solo biológica: ideas, proyectos y relaciones que germinan y maduran."
+        },
+        {
+          "icon": "🐏",
+          "front": "Carneros del Emperador",
+          "back": "Representan a Aries: liderazgo, iniciativa, determinación y energía de acción directa."
+        },
+        {
+          "icon": "🗝️",
+          "front": "Dos llaves del Hierofante",
+          "back": "Oro: conocimiento exterior, tradición. Plata: conocimiento interior, misterio. Ambas necesarias."
+        }
       ]
     },
     {
@@ -73,10 +97,22 @@
       "title": "Polaridades del trío",
       "instruction": "Conecta cada concepto con su carta correspondiente",
       "pairs": [
-        {"left": "Venus, sensualidad, naturaleza", "right": "La Emperatriz (III)"},
-        {"left": "Aries, disciplina, protección", "right": "El Emperador (IV)"},
-        {"left": "Tauro, tradición, transmisión", "right": "El Hierofante (V)"},
-        {"left": "Crear libremente sin estructura", "right": "Emperatriz sin Emperador: necesita complemento"}
+        {
+          "left": "Venus, sensualidad, naturaleza",
+          "right": "La Emperatriz (III)"
+        },
+        {
+          "left": "Aries, disciplina, protección",
+          "right": "El Emperador (IV)"
+        },
+        {
+          "left": "Tauro, tradición, transmisión",
+          "right": "El Hierofante (V)"
+        },
+        {
+          "left": "Crear libremente sin estructura",
+          "right": "Emperatriz sin Emperador: necesita complemento"
+        }
       ]
     },
     {
@@ -86,6 +122,32 @@
         "Entiendo la polaridad complementaria entre Emperatriz y Emperador",
         "Sé qué arquetipo junguiano representa cada carta y su asociación astrológica",
         "Puedo distinguir el significado en posición normal e invertida de cada una"
+      ]
+    },
+    {
+      "type": "concept_map",
+      "center": "Arcanos III-V",
+      "nodes": [
+        {
+          "label": "La Emperatriz",
+          "description": "Venus, fertilidad"
+        },
+        {
+          "label": "El Emperador",
+          "description": "Aries, estructura"
+        },
+        {
+          "label": "El Hierofante",
+          "description": "Tauro, tradicion"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La Emperatriz (Venus) encarna la creatividad fertil y la conexion con la naturaleza",
+        "El Emperador (Aries) aporta estructura y convierte visiones en realidad concreta",
+        "El Hierofante (Tauro) custodia la tradicion y transmision de sabiduria acumulada"
       ]
     }
   ],
@@ -112,10 +174,30 @@
     }
   ],
   "bibliography": [
-    {"author": "Jung, C.G.", "year": "1964", "title": "El hombre y sus símbolos (Man and His Symbols)", "type": "book"},
-    {"author": "Waite, A.E.", "year": "1911", "title": "The Pictorial Key to the Tarot", "type": "book"},
-    {"author": "Campbell, J.", "year": "1949", "title": "El héroe de las mil caras (The Hero with a Thousand Faces)", "type": "book"},
-    {"author": "Jung, C.G.", "year": "1959", "title": "Los arquetipos y lo inconsciente colectivo", "type": "book"}
+    {
+      "author": "Jung, C.G.",
+      "year": "1964",
+      "title": "El hombre y sus símbolos (Man and His Symbols)",
+      "type": "book"
+    },
+    {
+      "author": "Waite, A.E.",
+      "year": "1911",
+      "title": "The Pictorial Key to the Tarot",
+      "type": "book"
+    },
+    {
+      "author": "Campbell, J.",
+      "year": "1949",
+      "title": "El héroe de las mil caras (The Hero with a Thousand Faces)",
+      "type": "book"
+    },
+    {
+      "author": "Jung, C.G.",
+      "year": "1959",
+      "title": "Los arquetipos y lo inconsciente colectivo",
+      "type": "book"
+    }
   ],
   "homework": {
     "task": "Durante 3 días, observa las tres energías en tu entorno. Día 1: creatividad y abundancia (Emperatriz). Día 2: estructura y orden (Emperador). Día 3: tradición y enseñanza (Hierofante). Anota 3 ejemplos por día. Reflexiona: ¿cuál fue más fácil de encontrar? ¿Y más difícil?",

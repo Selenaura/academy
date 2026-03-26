@@ -60,12 +60,36 @@
     {
       "type": "flip_cards",
       "cards": [
-        {"icon": "⛓️", "front": "El Diablo (XV)", "back": "Sombra junguiana, cadenas sueltas, esclavitud voluntaria, Capricornio. Invertido: liberación, romper patrones de dependencia."},
-        {"icon": "⚡", "front": "La Torre (XVI)", "back": "Derrumbe de lo falso, rayo que golpea la corona, Marte. Destrucción creativa. Invertida: resistencia al cambio inevitable."},
-        {"icon": "✨", "front": "La Estrella (XVII)", "back": "Esperanza post-crisis, desnudez auténtica, 8 estrellas, Acuario. Vulnerabilidad como fortaleza. Invertida: desesperanza, fe perdida."},
-        {"icon": "🌙", "front": "La Luna (XVIII)", "back": "Miedos inconscientes, lobo y perro, cangrejo emergente, Piscis. Caminar sin certeza. Invertida: disipación de miedos, claridad."},
-        {"icon": "🔗", "front": "Cadenas sueltas del Diablo", "back": "El detalle más revelador: los dos humanos podrían quitárselas en cualquier momento. La atadura es voluntaria."},
-        {"icon": "👑", "front": "Corona cayendo (Torre)", "back": "Lo más elevado de la estructura era lo más frágil: autoimagen idealizada, estatus, certezas que no admitían duda."}
+        {
+          "icon": "⛓️",
+          "front": "El Diablo (XV)",
+          "back": "Sombra junguiana, cadenas sueltas, esclavitud voluntaria, Capricornio. Invertido: liberación, romper patrones de dependencia."
+        },
+        {
+          "icon": "⚡",
+          "front": "La Torre (XVI)",
+          "back": "Derrumbe de lo falso, rayo que golpea la corona, Marte. Destrucción creativa. Invertida: resistencia al cambio inevitable."
+        },
+        {
+          "icon": "✨",
+          "front": "La Estrella (XVII)",
+          "back": "Esperanza post-crisis, desnudez auténtica, 8 estrellas, Acuario. Vulnerabilidad como fortaleza. Invertida: desesperanza, fe perdida."
+        },
+        {
+          "icon": "🌙",
+          "front": "La Luna (XVIII)",
+          "back": "Miedos inconscientes, lobo y perro, cangrejo emergente, Piscis. Caminar sin certeza. Invertida: disipación de miedos, claridad."
+        },
+        {
+          "icon": "🔗",
+          "front": "Cadenas sueltas del Diablo",
+          "back": "El detalle más revelador: los dos humanos podrían quitárselas en cualquier momento. La atadura es voluntaria."
+        },
+        {
+          "icon": "👑",
+          "front": "Corona cayendo (Torre)",
+          "back": "Lo más elevado de la estructura era lo más frágil: autoimagen idealizada, estatus, certezas que no admitían duda."
+        }
       ]
     },
     {
@@ -86,6 +110,36 @@
         "Entiendo que La Torre destruye lo falso, no lo verdadero",
         "Sé cómo La Estrella representa la esperanza después de la crisis del ego",
         "Comprendo que La Luna es el territorio del miedo inconsciente que debe cruzarse"
+      ]
+    },
+    {
+      "type": "concept_map",
+      "center": "Arcanos XV-XVIII",
+      "nodes": [
+        {
+          "label": "El Diablo",
+          "description": "Cadenas sueltas"
+        },
+        {
+          "label": "La Torre",
+          "description": "Destruccion del ego"
+        },
+        {
+          "label": "La Estrella",
+          "description": "Esperanza"
+        },
+        {
+          "label": "La Luna",
+          "description": "Miedos"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "El Diablo (XV) muestra ataduras autoimpuestas: las cadenas estan sueltas",
+        "La Torre (XVI) destruye lo falso: creencias e identidades que ya no sirven",
+        "La Estrella (XVII) y La Luna (XVIII) son esperanza y camino a traves del miedo"
       ]
     }
   ],
@@ -112,10 +166,30 @@
     }
   ],
   "bibliography": [
-    {"author": "Jung, C.G.", "year": "1964", "title": "El hombre y sus símbolos (Man and His Symbols)", "type": "book"},
-    {"author": "Campbell, J.", "year": "1949", "title": "El héroe de las mil caras (The Hero with a Thousand Faces)", "type": "book"},
-    {"author": "Gigerenzer, G.", "year": "2007", "title": "Gut Feelings: The Intelligence of the Unconscious", "type": "book"},
-    {"author": "Waite, A.E.", "year": "1911", "title": "The Pictorial Key to the Tarot", "type": "book"}
+    {
+      "author": "Jung, C.G.",
+      "year": "1964",
+      "title": "El hombre y sus símbolos (Man and His Symbols)",
+      "type": "book"
+    },
+    {
+      "author": "Campbell, J.",
+      "year": "1949",
+      "title": "El héroe de las mil caras (The Hero with a Thousand Faces)",
+      "type": "book"
+    },
+    {
+      "author": "Gigerenzer, G.",
+      "year": "2007",
+      "title": "Gut Feelings: The Intelligence of the Unconscious",
+      "type": "book"
+    },
+    {
+      "author": "Waite, A.E.",
+      "year": "1911",
+      "title": "The Pictorial Key to the Tarot",
+      "type": "book"
+    }
   ],
   "homework": {
     "task": "Antes de dormir durante 4 noches, mira una carta por noche en orden (Diablo, Torre, Estrella, Luna) durante 60 segundos. Al despertar, anota cualquier sueño que recuerdes. No interpretes: solo registra. Estas cartas tienden a activar material inconsciente.",
