@@ -4,19 +4,84 @@
   "title": "Los 10 planetas: el elenco de tu psique",
   "text_content": "Abre tu carta natal y cuenta. Hay diez cuerpos celestes repartidos por el círculo, cada uno con su símbolo, cada uno en un signo y en una casa. No están ahí por capricho. Cada planeta representa una función psicológica distinta, una voz interior que opera con su propia lógica y sus propios deseos. Juntos, forman el elenco completo de tu psique.\n\nLiz Greene, pionera de la astrología psicológica, propuso en 1976 que los planetas funcionan como subpersonalidades dentro de la estructura psíquica. No se trata de que Marte te haga agresivo o Venus te haga romántico. Se trata de que Marte representa tu capacidad de acción, tu forma de luchar por lo que quieres, y Venus representa tu forma de valorar, de atraer, de relacionarte con el placer. Son funciones, no destinos.\n\nCarl Jung ya había intuido algo similar cuando escribió sobre los arquetipos del inconsciente colectivo. Para Jung, la psique humana contiene patrones universales que se manifiestan a través de imágenes simbólicas. Los planetas son exactamente eso: símbolos que representan fuerzas psicológicas reconocibles en cualquier cultura y cualquier época.\n\nVamos a conocer al elenco. El Sol es tu identidad central, lo que aspiras a ser cuando te expresas con autenticidad. La Luna es tu mundo emocional, tus necesidades de seguridad, lo que te nutre por dentro. Mercurio es tu mente: cómo piensas, cómo comunicas, cómo procesas la información. Venus es tu sentido estético, tu forma de amar y de relacionarte con lo bello. Marte es tu motor de acción, tu forma de perseguir objetivos y enfrentar conflictos.\n\nHasta aquí los planetas personales. Se mueven rápido por el zodíaco, cambian de signo en días o semanas, y por eso reflejan características individuales muy específicas.\n\nDespués vienen los planetas sociales. Júpiter es tu sentido de expansión, de fe, de búsqueda de significado. Saturno es tu estructura interna, tus límites, tu relación con la responsabilidad y el tiempo. Ambos marcan cómo te relacionas con la sociedad y sus expectativas.\n\nFinalmente, los planetas transpersonales. Urano es la ruptura, la innovación, el impulso de libertad que desafía lo establecido. Neptuno es la disolución de fronteras, la espiritualidad, la imaginación que trasciende lo material. Plutón es la transformación profunda, el poder que destruye para regenerar.\n\nLos planetas transpersonales se mueven tan lento que pasan años enteros en un solo signo. Eso significa que generaciones completas comparten el mismo Plutón en el mismo signo. No describen tu personalidad individual, sino la corriente generacional en la que naciste. Su efecto personal aparece cuando caen en una casa específica de tu carta o forman aspectos con tus planetas personales.\n\nHans Eysenck, el psicólogo que estudió las bases biológicas de la personalidad, investigó en 1978 posibles correlaciones entre posiciones planetarias y rasgos temperamentales. Aunque sus resultados fueron controvertidos, abrieron una puerta que la astrología psicológica aprovechó: la idea de que los planetas pueden funcionar como un lenguaje para mapear dimensiones de la personalidad.\n\nPiensa en tu carta como un escenario de teatro. Los planetas son los actores. Cada uno tiene su papel, su motivación, su estilo. A veces colaboran, a veces entran en conflicto. La obra que representan es tu vida interior.\n\nLo que vamos a hacer en las próximas lecciones es conocer a cada actor en profundidad. Empezaremos por los dos protagonistas: el Sol y la Luna. Porque antes de entender todo el elenco, necesitas comprender quién dirige la función y quién cuida el corazón de la historia.\n\nNo necesitas memorizar tablas de correspondencias. Necesitas entender qué función cumple cada planeta y cómo se expresa a través del signo que ocupa y la casa donde reside. Esa comprensión funcional es la base de toda lectura natal seria.",
   "slides": [
-    {"type": "title", "title": "Los 10 planetas: el elenco de tu psique", "subtitle": "Módulo 1 · Lección 1 — Astrología Natal Profunda"},
-    {"type": "content", "title": "Planetas como funciones psicológicas", "body": "Cada planeta representa una función de la psique.\nNo determinan tu destino: describen tus dinámicas internas.\nLiz Greene los llamó subpersonalidades en 1976."},
-    {"type": "content", "title": "Planetas personales", "body": "Sol: identidad, voluntad, propósito central.\nLuna: emociones, necesidades, seguridad interior.\nMercurio: mente, comunicación, procesamiento.\nVenus: valores, estética, relaciones, placer.\nMarte: acción, deseo, impulso, confrontación."},
-    {"type": "content", "title": "Planetas sociales y transpersonales", "body": "Júpiter: expansión, fe, búsqueda de sentido.\nSaturno: estructura, límites, responsabilidad.\nUrano: ruptura, innovación, libertad.\nNeptuno: disolución, espiritualidad, imaginación.\nPlutón: transformación, poder, regeneración."},
-    {"type": "quote", "text": "Los arquetipos del inconsciente colectivo se expresan a través de símbolos universales reconocibles en todas las culturas.", "source": "Carl G. Jung, 1964 — El hombre y sus símbolos"},
-    {"type": "content", "title": "Velocidad y alcance", "body": "Planetas personales: cambian de signo en días o semanas.\nDescriben rasgos individuales específicos.\nPlanetas transpersonales: años en un signo.\nDescriben corrientes generacionales."},
-    {"type": "reflection", "question": "Si tu psique fuera una compañía de teatro, ¿cuál de los diez planetas sientes que tiene el papel protagonista en tu vida ahora mismo?"},
-    {"type": "summary", "points": ["Los 10 planetas representan funciones psicológicas distintas dentro de tu carta natal", "Se dividen en personales, sociales y transpersonales según su velocidad y alcance", "Cada planeta es un actor en el escenario de tu psique, no una sentencia de destino"]},
-    {"type": "next", "text": "En la siguiente lección profundizaremos en los dos protagonistas de toda carta natal: el Sol y la Luna, identidad y emociones."}
+    {
+      "type": "title",
+      "title": "Los 10 planetas: el elenco de tu psique",
+      "subtitle": "Módulo 1 · Lección 1 — Astrología Natal Profunda"
+    },
+    {
+      "type": "content",
+      "title": "Planetas como funciones psicológicas",
+      "body": "Cada planeta representa una función de la psique.\nNo determinan tu destino: describen tus dinámicas internas.\nLiz Greene los llamó subpersonalidades en 1976."
+    },
+    {
+      "type": "content",
+      "title": "Planetas personales",
+      "body": "Sol: identidad, voluntad, propósito central.\nLuna: emociones, necesidades, seguridad interior.\nMercurio: mente, comunicación, procesamiento.\nVenus: valores, estética, relaciones, placer.\nMarte: acción, deseo, impulso, confrontación."
+    },
+    {
+      "type": "content",
+      "title": "Planetas sociales y transpersonales",
+      "body": "Júpiter: expansión, fe, búsqueda de sentido.\nSaturno: estructura, límites, responsabilidad.\nUrano: ruptura, innovación, libertad.\nNeptuno: disolución, espiritualidad, imaginación.\nPlutón: transformación, poder, regeneración."
+    },
+    {
+      "type": "quote",
+      "text": "Los arquetipos del inconsciente colectivo se expresan a través de símbolos universales reconocibles en todas las culturas.",
+      "source": "Carl G. Jung, 1964 — El hombre y sus símbolos"
+    },
+    {
+      "type": "content",
+      "title": "Velocidad y alcance",
+      "body": "Planetas personales: cambian de signo en días o semanas.\nDescriben rasgos individuales específicos.\nPlanetas transpersonales: años en un signo.\nDescriben corrientes generacionales."
+    },
+    {
+      "type": "reflection",
+      "question": "Si tu psique fuera una compañía de teatro, ¿cuál de los diez planetas sientes que tiene el papel protagonista en tu vida ahora mismo?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Los 10 planetas representan funciones psicológicas distintas dentro de tu carta natal",
+        "Se dividen en personales, sociales y transpersonales según su velocidad y alcance",
+        "Cada planeta es un actor en el escenario de tu psique, no una sentencia de destino"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección profundizaremos en los dos protagonistas de toda carta natal: el Sol y la Luna, identidad y emociones."
+    }
   ],
   "citation": {
     "researcher": "Liz Greene",
     "year": "1976",
     "finding": "Los planetas funcionan como subpersonalidades dentro de la estructura psíquica, representando funciones psicológicas diferenciadas que interactúan entre sí"
-  }
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "10 Planetas",
+      "nodes": [
+        "Sol",
+        "Luna",
+        "Mercurio",
+        "Venus",
+        "Marte",
+        "Jupiter",
+        "Saturno",
+        "Urano",
+        "Neptuno",
+        "Pluton"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Los 10 planetas representan funciones psicologicas distintas de tu psique",
+        "Se dividen en personales (Sol-Marte), sociales (Jupiter-Saturno) y transpersonales (Urano-Pluton)",
+        "Cada planeta es un actor en el escenario de tu carta natal",
+        "Su velocidad determina si reflejan rasgos individuales o generacionales"
+      ]
+    }
+  ]
 }

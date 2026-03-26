@@ -41,5 +41,27 @@
     "researcher": "Daniel Kahneman",
     "year": "2011",
     "finding": "La atención es un recurso limitado y direccional. El cerebro utiliza heurísticas y filtros automáticos para gestionar la sobrecarga informativa, priorizando estímulos según relevancia percibida."
-  }
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "SAR",
+      "nodes": [
+        "Filtro sensorial",
+        "Atencion selectiva",
+        "Deteccion de patrones",
+        "Confirmacion"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "El SAR filtra 11 millones de bits por segundo y deja pasar solo ~50",
+        "Programar el SAR con intenciones claras cambia lo que percibes",
+        "La atencion selectiva explica por que ves lo que buscas",
+        "El filtro reticular es reprogramable mediante repeticion e intencion"
+      ]
+    }
+  ]
 }

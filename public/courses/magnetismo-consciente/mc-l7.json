@@ -41,5 +41,28 @@
     "researcher": "Sara Lazar",
     "year": "2005",
     "finding": "Las personas que practican meditación regularmente presentan mayor grosor cortical en áreas de atención y procesamiento sensorial, y estos cambios contrarrestan el adelgazamiento cortical asociado al envejecimiento."
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Neuroplasticidad",
+      "steps": [
+        "Experiencia nueva",
+        "Activacion neuronal",
+        "Repeticion",
+        "Mielinizacion",
+        "Habito automatico"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "El cerebro se recablea continuamente segun las experiencias repetidas",
+        "La mielinizacion convierte circuitos activos en autopistas neuronales",
+        "Los habitos se forman cuando la repeticion automatiza el circuito",
+        "La neuroplasticidad es la base biologica del cambio personal"
+      ]
+    }
+  ]
 }

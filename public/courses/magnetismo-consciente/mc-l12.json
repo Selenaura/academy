@@ -41,5 +41,28 @@
     "researcher": "Michael Meaney",
     "year": "2001",
     "finding": "Las experiencias ambientales y los estados sostenidos modifican la expresión génica a través de mecanismos epigenéticos como la metilación del ADN, con efectos duraderos sobre la fisiología y la conducta."
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Meditacion y expresion genica",
+      "steps": [
+        "Meditacion regular",
+        "Reduccion cortisol",
+        "Cambios en metilacion",
+        "Activacion genes reparacion",
+        "Mejora marcadores biologicos"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Estudios demuestran que la meditacion modifica la expresion de cientos de genes",
+        "8 semanas de meditacion regular producen cambios epigeneticos medibles",
+        "Los genes de reparacion y antiinflamatorios se activan con la practica",
+        "La meditacion es una herramienta epigenetica al alcance de cualquiera"
+      ]
+    }
+  ]
 }

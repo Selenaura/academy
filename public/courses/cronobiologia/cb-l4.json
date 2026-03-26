@@ -60,5 +60,29 @@
     "researcher": "Foster & Kreitzman",
     "year": "2017",
     "finding": "Documentaron cómo los ritmos circadianos crean una arquitectura temporal completa del organismo con picos de rendimiento cognitivo matutino, rendimiento físico vespertino y reparación nocturna"
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Ciclo circadiano de 24 horas",
+      "steps": [
+        "06:00 Cortisol sube, despertar",
+        "09:00 Pico de alerta cognitiva",
+        "14:00 Bajon post-almuerzo",
+        "17:00 Pico de coordinacion fisica",
+        "21:00 Melatonina sube, preparar sueno",
+        "02:00 Sueno profundo, reparacion"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "El ciclo circadiano organiza tus funciones fisiologicas en franjas de 24 horas",
+        "Cortisol, temperatura, presion arterial y cognicion siguen patrones predecibles",
+        "Conocer tu ciclo permite optimizar rendimiento y descanso",
+        "Alterar este ciclo tiene consecuencias medibles en salud y rendimiento"
+      ]
+    }
+  ]
 }

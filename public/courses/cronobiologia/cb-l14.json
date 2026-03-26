@@ -60,5 +60,29 @@
     "researcher": "Roenneberg",
     "year": "2012",
     "finding": "Documentó cómo la exposición insuficiente a luz natural diurna combinada con exceso de luz artificial nocturna debilita la señal circadiana y contribuye al jet lag social y problemas metabólicos"
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Luz artificial y disrupcion circadiana",
+      "steps": [
+        "Exposicion a luz azul nocturna",
+        "Supresion de melatonina",
+        "Retraso del inicio del sueno",
+        "Reduccion del sueno profundo",
+        "Desincronizacion del reloj maestro",
+        "Efectos acumulativos en salud"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "La luz azul de pantallas suprime la melatonina y retrasa el sueno",
+        "La exposicion luminica nocturna desincroniza el reloj maestro",
+        "Los efectos se acumulan y producen consecuencias metabolicas e inmunes",
+        "Estrategias simples (filtros, dimming, rutina nocturna) mitigan el dano"
+      ]
+    }
+  ]
 }

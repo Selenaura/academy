@@ -41,5 +41,28 @@
     "researcher": "Rollin McCraty",
     "year": "2015",
     "finding": "La técnica Quick Coherence de HeartMath genera cambios medibles en la variabilidad de la frecuencia cardíaca en menos de cinco minutos, facilitando la regulación emocional y la claridad cognitiva."
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Protocolo HeartMath",
+      "steps": [
+        "Pausa",
+        "Respira 5s/5s",
+        "Foco corazon",
+        "Recuerda gratitud",
+        "Manten 5 min"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "El protocolo HeartMath es una tecnica validada de autorregulacion emocional",
+        "5 segundos de inhalacion y 5 de exhalacion estabilizan la HRV",
+        "La gratitud activa estados de coherencia cardiaca de forma rapida",
+        "5 minutos diarios de practica producen cambios medibles en semanas"
+      ]
+    }
+  ]
 }

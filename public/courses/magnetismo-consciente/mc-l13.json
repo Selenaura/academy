@@ -41,5 +41,28 @@
     "researcher": "Fabrizio Benedetti",
     "year": "2005",
     "finding": "El efecto placebo implica la activación de circuitos neuroquímicos específicos, incluyendo la liberación de opioides endógenos y dopamina, demostrando que las expectativas generan cambios fisiológicos reales."
-  }
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "Efecto placebo",
+      "nodes": [
+        "Expectativa",
+        "Neuroquimica",
+        "Condicionamiento",
+        "Significado atribuido",
+        "Respuesta fisiologica"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "El placebo demuestra que la expectativa genera cambios fisiologicos reales",
+        "La neuroquimica del placebo incluye dopamina, endorfinas y serotonina",
+        "El significado que atribuyes a una experiencia modifica su efecto biologico",
+        "El placebo es evidencia cientifica del poder de la mente sobre el cuerpo"
+      ]
+    }
+  ]
 }

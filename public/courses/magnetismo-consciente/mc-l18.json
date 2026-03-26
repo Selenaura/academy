@@ -41,5 +41,47 @@
     "researcher": "Rollin McCraty",
     "year": "2015",
     "finding": "La práctica sostenida de coherencia cardíaca genera una línea base emocional y fisiológica más estable, facilitando la autorregulación, la claridad cognitiva y la resiliencia ante el estrés a largo plazo."
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Rutina manana",
+        "Rutina noche"
+      ],
+      "rows": [
+        [
+          "Objetivo",
+          "Establecer intencion y coherencia",
+          "Integrar experiencias y soltar"
+        ],
+        [
+          "Practica clave",
+          "Visualizacion + gratitud activa",
+          "Revision del dia + coherencia cardiaca"
+        ],
+        [
+          "Duracion",
+          "10-15 minutos",
+          "5-10 minutos"
+        ],
+        [
+          "Estado buscado",
+          "Activacion alineada",
+          "Relajacion regenerativa"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Tu rutina magnetica diaria integra todas las herramientas del curso",
+        "La manana se dedica a establecer intencion y activar coherencia",
+        "La noche se dedica a integrar, soltar y regenerar",
+        "La consistencia de la rutina es mas importante que su perfeccion"
+      ]
+    }
+  ]
 }

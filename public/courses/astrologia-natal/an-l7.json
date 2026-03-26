@@ -4,19 +4,82 @@
   "title": "Las 12 casas: las áreas de tu vida",
   "text_content": "Los planetas son los actores. Los signos son el estilo con que actúan. Pero las casas son el escenario: las áreas concretas de tu vida donde toda esa energía se manifiesta. Sin las casas, la carta natal sería un retrato abstracto de tu psique. Con las casas, se convierte en un mapa operativo de tu existencia.\n\nLas 12 casas dividen el círculo de la carta natal en 12 sectores. Cada sector corresponde a un área de la experiencia humana: identidad, recursos, comunicación, hogar, creatividad, trabajo, relaciones, transformación, filosofía, vocación, comunidad y espiritualidad. Es un sistema completo que cubre toda la vida.\n\nLa primera casa comienza en el Ascendente, el punto del horizonte oriental en el momento exacto de tu nacimiento. A partir de ahí, las casas se suceden en sentido contrario a las agujas del reloj. Cada casa tiene un significado primario y una serie de temas asociados.\n\nCasa 1: tu identidad, tu apariencia, tu forma de presentarte al mundo. Casa 2: tus recursos, tu relación con el dinero, tus valores materiales. Casa 3: tu comunicación cotidiana, hermanos, entorno cercano, aprendizaje temprano. Casa 4: tu hogar, tus raíces familiares, tu mundo privado. Casa 5: tu creatividad, el juego, el romance, la expresión personal. Casa 6: tu rutina diaria, el trabajo, la salud, el servicio.\n\nCasa 7: tus relaciones significativas, parejas, socios, lo que proyectas en la otra persona. Casa 8: la transformación compartida, la sexualidad profunda, los recursos de otros, las crisis. Casa 9: la filosofía, los viajes largos, la educación superior, la búsqueda de sentido. Casa 10: tu vocación, tu imagen pública, tus ambiciones, tu legado. Casa 11: la comunidad, los amigos, los proyectos colectivos, los ideales. Casa 12: lo inconsciente, el retiro, la espiritualidad, lo que permanece oculto.\n\nGeoffrey Cornelius argumentó que las casas astrológicas funcionan como un sistema de categorías existenciales. No son espacios físicos, sino marcos interpretativos que permiten situar la experiencia humana en un mapa comprensible. Cuando dices tengo a Saturno en casa 4, no estás describiendo una posición en el espacio. Estás diciendo que la función de estructura y disciplina se manifiesta principalmente en tu vida doméstica y familiar.\n\nUn punto crucial: las casas vacías no significan que esa área de tu vida esté vacía o sea irrelevante. Simplemente significa que no hay planetas ahí en el momento del nacimiento. Esa casa sigue existiendo, sigue operando, y se interpreta a través del signo que la rige y del planeta regente de ese signo.\n\nLiz Greene insistió en que las casas revelan dónde buscamos ciertas experiencias. No predicen qué va a pasar, sino dónde tu psique dirige su atención. Si tienes muchos planetas en casas de agua (4, 8, 12), tu vida interior y emocional demanda mucha energía. Si los concentras en casas de fuego (1, 5, 9), la expresión, la creatividad y la búsqueda de sentido dominan tu experiencia.\n\nDesde Jung, podemos entender las casas como los campos de acción donde los arquetipos planetarios se encarnan. Marte como función de acción es abstracto. Marte en casa 7 es acción en las relaciones: alguien que lucha por sus parejas, que confronta en el ámbito relacional, que busca compañeros de batalla.\n\nEn las próximas dos lecciones vamos a agrupar las casas por tipo: angulares, sucedentes y cadentes. Esta clasificación te dará una herramienta práctica para evaluar rápidamente dónde se concentra la energía de cualquier carta natal.\n\nEjercicio: mira tu carta natal y observa en qué casas se concentran tus planetas. Las casas con más planetas son las áreas de tu vida que demandan más atención, más energía y más consciencia.",
   "slides": [
-    {"type": "title", "title": "Las 12 casas: las áreas de tu vida", "subtitle": "Módulo 3 · Lección 7 — Astrología Natal Profunda"},
-    {"type": "content", "title": "Planetas, signos y casas", "body": "Los planetas son los actores (funciones psicológicas).\nLos signos son el estilo de actuación.\nLas casas son el escenario (áreas de vida concretas)."},
-    {"type": "content", "title": "Las 12 casas: visión general", "body": "1-Identidad, 2-Recursos, 3-Comunicación, 4-Hogar\n5-Creatividad, 6-Rutina, 7-Relaciones, 8-Transformación\n9-Filosofía, 10-Vocación, 11-Comunidad, 12-Inconsciente"},
-    {"type": "content", "title": "Casas vacías", "body": "Una casa sin planetas no está vacía ni inactiva.\nSe interpreta por el signo en su cúspide\ny la posición de su planeta regente."},
-    {"type": "quote", "text": "Las casas astrológicas funcionan como categorías existenciales que sitúan la experiencia humana en un mapa comprensible.", "source": "Geoffrey Cornelius, 2003 — The Moment of Astrology"},
-    {"type": "content", "title": "Concentración de energía", "body": "Las casas con más planetas demandan más atención.\nMuchos planetas en casas de agua: vida emocional intensa.\nMuchos en casas de fuego: expresión y búsqueda de sentido."},
-    {"type": "reflection", "question": "¿En qué casas se concentran tus planetas? ¿Coincide esa distribución con las áreas de tu vida que más atención y energía te demandan?"},
-    {"type": "summary", "points": ["Las 12 casas representan las áreas concretas de la vida donde los planetas actúan", "Casas vacías no significan áreas vacías: se interpretan por signo y regente", "La distribución de planetas por casas revela dónde se concentra la energía de la carta"]},
-    {"type": "next", "text": "En la siguiente lección profundizaremos en las casas angulares (1, 4, 7, 10): los cuatro pilares de la carta natal."}
+    {
+      "type": "title",
+      "title": "Las 12 casas: las áreas de tu vida",
+      "subtitle": "Módulo 3 · Lección 7 — Astrología Natal Profunda"
+    },
+    {
+      "type": "content",
+      "title": "Planetas, signos y casas",
+      "body": "Los planetas son los actores (funciones psicológicas).\nLos signos son el estilo de actuación.\nLas casas son el escenario (áreas de vida concretas)."
+    },
+    {
+      "type": "content",
+      "title": "Las 12 casas: visión general",
+      "body": "1-Identidad, 2-Recursos, 3-Comunicación, 4-Hogar\n5-Creatividad, 6-Rutina, 7-Relaciones, 8-Transformación\n9-Filosofía, 10-Vocación, 11-Comunidad, 12-Inconsciente"
+    },
+    {
+      "type": "content",
+      "title": "Casas vacías",
+      "body": "Una casa sin planetas no está vacía ni inactiva.\nSe interpreta por el signo en su cúspide\ny la posición de su planeta regente."
+    },
+    {
+      "type": "quote",
+      "text": "Las casas astrológicas funcionan como categorías existenciales que sitúan la experiencia humana en un mapa comprensible.",
+      "source": "Geoffrey Cornelius, 2003 — The Moment of Astrology"
+    },
+    {
+      "type": "content",
+      "title": "Concentración de energía",
+      "body": "Las casas con más planetas demandan más atención.\nMuchos planetas en casas de agua: vida emocional intensa.\nMuchos en casas de fuego: expresión y búsqueda de sentido."
+    },
+    {
+      "type": "reflection",
+      "question": "¿En qué casas se concentran tus planetas? ¿Coincide esa distribución con las áreas de tu vida que más atención y energía te demandan?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Las 12 casas representan las áreas concretas de la vida donde los planetas actúan",
+        "Casas vacías no significan áreas vacías: se interpretan por signo y regente",
+        "La distribución de planetas por casas revela dónde se concentra la energía de la carta"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección profundizaremos en las casas angulares (1, 4, 7, 10): los cuatro pilares de la carta natal."
+    }
   ],
   "citation": {
     "researcher": "Geoffrey Cornelius",
     "year": "2003",
     "finding": "Las casas astrológicas funcionan como un sistema de categorías existenciales que permite situar la experiencia en un marco interpretativo comprensible"
-  }
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "12 Casas",
+      "nodes": [
+        "Casa 1: Identidad",
+        "Casa 2-3: Recursos",
+        "Casa 4: Hogar",
+        "Casa 5-6: Creatividad/Servicio",
+        "Casa 7: Relaciones",
+        "Casa 8-9: Transformacion/Filosofia",
+        "Casa 10: Carrera",
+        "Casa 11-12: Comunidad/Inconsciente"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Las 12 casas representan las areas de experiencia vital",
+        "Cada casa es un escenario donde actuan los planetas",
+        "El signo en la cuspide de cada casa matiza como vives esa area",
+        "Las casas dividen tu carta en territorios de experiencia concreta"
+      ]
+    }
+  ]
 }

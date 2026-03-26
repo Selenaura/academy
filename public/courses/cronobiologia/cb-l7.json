@@ -60,5 +60,28 @@
     "researcher": "Foster & Kreitzman",
     "year": "2017",
     "finding": "Documentaron cómo los ritmos ultradianos de aproximadamente 90 minutos organizan tanto los ciclos de sueño como los patrones de reposo-actividad durante la vigilia"
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Ciclo ultradiano de 90 minutos",
+      "steps": [
+        "Fase de alto rendimiento (20-25 min)",
+        "Meseta de productividad (40-50 min)",
+        "Senal de descanso (bostezos, distraccion)",
+        "Pausa de renovacion (15-20 min)",
+        "Nuevo ciclo"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "El cuerpo alterna ciclos de actividad y descanso cada 90 minutos",
+        "Ignorar las senales de descanso reduce el rendimiento acumulativamente",
+        "Las pausas estrategicas cada 90 minutos optimizan la productividad",
+        "Este ritmo ultradiano tambien gobierna las fases del sueno"
+      ]
+    }
+  ]
 }

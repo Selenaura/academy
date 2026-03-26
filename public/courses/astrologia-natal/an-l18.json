@@ -4,19 +4,98 @@
   "title": "Práctica: identifica tus tránsitos activos ahora",
   "text_content": "Esta lección es práctica. Vas a aprender a identificar qué tránsitos están activos en tu carta natal en este momento y a interpretar qué temas están trabajando en tu vida ahora mismo. No necesitas software profesional. Necesitas tu carta natal, las posiciones planetarias actuales y el método que vamos a recorrer juntos.\n\nPaso 1: obtén las posiciones planetarias actuales. Las efemérides de NASA JPL son la fuente más precisa, pero cualquier sitio de astrología serio publica las posiciones diarias. Anota los grados y signos de todos los planetas para el día de hoy.\n\nPaso 2: compara las posiciones actuales con tu carta natal. Busca coincidencias de grado. Un planeta actual a 15 grados de un signo activará cualquier planeta natal que esté alrededor de 15 grados de cualquier signo compatible. La compatibilidad depende del aspecto: el mismo grado es conjunción, el grado opuesto es oposición, los grados a 90 grados son cuadratura, los grados a 120 son trígono.\n\nPaso 3: filtra por importancia. No todos los tránsitos merecen la misma atención. Prioriza así: primero, tránsitos de planetas lentos (Plutón, Neptuno, Urano, Saturno, Júpiter) a tus planetas personales (Sol, Luna, Mercurio, Venus, Marte) y al Ascendente. Estos son los tránsitos transformadores. Segundo, tránsitos de planetas lentos a otros puntos natales. Tercero, tránsitos de planetas rápidos que refuerzan temas de los lentos.\n\nPaso 4: interpreta cada tránsito con la fórmula planeta transitante + aspecto + punto natal + casa natal. Un ejemplo: Saturno transitando en cuadratura a tu Venus natal en casa 5. Interpretación: la función de estructura y disciplina (Saturno) está generando tensión productiva (cuadratura) con tu forma de amar y valorar (Venus) en el área de la creatividad, el placer y la expresión personal (casa 5). Posible experiencia: sientes que tus relaciones o tu vida creativa necesitan más seriedad, compromiso o redefinición.\n\nPaso 5: observa las fechas. Los tránsitos de planetas lentos tienen una fase de aproximación (el planeta se acerca al grado exacto), un aspecto exacto (máxima intensidad) y una separación (el planeta se aleja). Si el planeta retrograda, puede pasar tres veces por el mismo punto, creando un proceso de tres fases que puede durar un año o más.\n\nLiz Greene recomendó llevar un diario de tránsitos: anotar qué tránsitos están activos y qué experiencias estás viviendo. Con el tiempo, desarrollas una sensibilidad para reconocer cómo se manifiestan los tránsitos en tu vida específica. Cada persona experimenta los mismos tránsitos de forma diferente según el contexto de su carta natal completa.\n\nHay un error frecuente que debes evitar: buscar confirmación en lugar de observación. No mires tus tránsitos con miedo ni con esperanza. Míralos con curiosidad. El tránsito no te dice qué va a pasar. Te dice qué temas están activos. Lo que hagas con esos temas es tu responsabilidad y tu libertad.\n\nCornelius insistió en que la astrología de tránsitos funciona mejor como herramienta de reflexión que como sistema de predicción. El valor de conocer tus tránsitos no es saber el futuro sino comprender el presente con mayor profundidad.\n\nEjercicio completo: haz los cinco pasos con tu carta y las posiciones de hoy. Identifica los tres tránsitos más significativos que están activos en tu vida ahora. Para cada uno, escribe una interpretación usando la fórmula y luego compárala con lo que estás viviendo realmente. Las coincidencias te sorprenderán. Las discrepancias te enseñarán. Ambas son valiosas.",
   "slides": [
-    {"type": "title", "title": "Práctica: identifica tus tránsitos activos ahora", "subtitle": "Módulo 6 · Lección 18 — Astrología Natal Profunda"},
-    {"type": "content", "title": "El método en 5 pasos", "body": "1. Obtén posiciones planetarias actuales.\n2. Compara con tu carta natal por grados.\n3. Filtra: lentos a personales primero.\n4. Interpreta: planeta + aspecto + punto natal + casa.\n5. Observa las fechas de las tres fases."},
-    {"type": "content", "title": "Fórmula de interpretación", "body": "Planeta transitante: qué energía se activa externamente.\nAspecto: qué tipo de relación se establece.\nPunto natal: qué función interna se activa.\nCasa natal: en qué área de vida se manifiesta."},
-    {"type": "quote", "text": "La astrología de tránsitos funciona mejor como herramienta de reflexión que como sistema de predicción del futuro.", "source": "Geoffrey Cornelius, 2003 — The Moment of Astrology"},
-    {"type": "content", "title": "Errores comunes", "body": "No busques confirmación: busca observación.\nNo mires con miedo ni esperanza: mira con curiosidad.\nEl tránsito señala temas activos, no destino fijo."},
-    {"type": "content", "title": "El diario de tránsitos", "body": "Anota qué tránsitos están activos y qué vives.\nCon el tiempo desarrollas sensibilidad personal.\nCada persona experimenta los mismos tránsitos de forma única."},
-    {"type": "reflection", "question": "Identifica tus tres tránsitos más significativos ahora. ¿Reconoces sus temas en lo que estás viviendo actualmente?"},
-    {"type": "summary", "points": ["Los tránsitos se leen comparando posiciones actuales con la carta natal, filtrando por importancia", "La fórmula de interpretación combina planeta transitante, aspecto, punto natal y casa", "El valor de los tránsitos no es predecir sino comprender el presente con mayor profundidad"]},
-    {"type": "next", "text": "En el próximo módulo integraremos todo: lectura completa de la carta natal uniendo planetas, casas, signos y aspectos."}
+    {
+      "type": "title",
+      "title": "Práctica: identifica tus tránsitos activos ahora",
+      "subtitle": "Módulo 6 · Lección 18 — Astrología Natal Profunda"
+    },
+    {
+      "type": "content",
+      "title": "El método en 5 pasos",
+      "body": "1. Obtén posiciones planetarias actuales.\n2. Compara con tu carta natal por grados.\n3. Filtra: lentos a personales primero.\n4. Interpreta: planeta + aspecto + punto natal + casa.\n5. Observa las fechas de las tres fases."
+    },
+    {
+      "type": "content",
+      "title": "Fórmula de interpretación",
+      "body": "Planeta transitante: qué energía se activa externamente.\nAspecto: qué tipo de relación se establece.\nPunto natal: qué función interna se activa.\nCasa natal: en qué área de vida se manifiesta."
+    },
+    {
+      "type": "quote",
+      "text": "La astrología de tránsitos funciona mejor como herramienta de reflexión que como sistema de predicción del futuro.",
+      "source": "Geoffrey Cornelius, 2003 — The Moment of Astrology"
+    },
+    {
+      "type": "content",
+      "title": "Errores comunes",
+      "body": "No busques confirmación: busca observación.\nNo mires con miedo ni esperanza: mira con curiosidad.\nEl tránsito señala temas activos, no destino fijo."
+    },
+    {
+      "type": "content",
+      "title": "El diario de tránsitos",
+      "body": "Anota qué tránsitos están activos y qué vives.\nCon el tiempo desarrollas sensibilidad personal.\nCada persona experimenta los mismos tránsitos de forma única."
+    },
+    {
+      "type": "reflection",
+      "question": "Identifica tus tres tránsitos más significativos ahora. ¿Reconoces sus temas en lo que estás viviendo actualmente?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Los tránsitos se leen comparando posiciones actuales con la carta natal, filtrando por importancia",
+        "La fórmula de interpretación combina planeta transitante, aspecto, punto natal y casa",
+        "El valor de los tránsitos no es predecir sino comprender el presente con mayor profundidad"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el próximo módulo integraremos todo: lectura completa de la carta natal uniendo planetas, casas, signos y aspectos."
+    }
   ],
   "citation": {
     "researcher": "NASA JPL",
     "year": "2017",
     "finding": "Las efemérides planetarias del Jet Propulsion Laboratory permiten calcular con precisión milimétrica las posiciones de todos los cuerpos del sistema solar para cualquier fecha"
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Transito suave",
+        "Transito dificil"
+      ],
+      "rows": [
+        [
+          "Aspectos",
+          "Trigono, sextil, conjuncion benefica",
+          "Cuadratura, oposicion, conjuncion tensa"
+        ],
+        [
+          "Sensacion",
+          "Oportunidad, fluidez, apoyo",
+          "Presion, crisis, obligacion de cambiar"
+        ],
+        [
+          "Duracion",
+          "Variable segun el planeta",
+          "Variable segun el planeta"
+        ],
+        [
+          "Mejor actitud",
+          "Aprovechar la ventana",
+          "Aceptar el proceso y crecer"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Los transitos activos ahora en tu carta revelan tus temas actuales",
+        "Identificar que planetas transitan tus casas te da contexto vital",
+        "Los transitos suaves abren puertas; los dificiles obligan a crecer",
+        "La practica regular de seguir tus transitos desarrolla la intuicion astrologica"
+      ]
+    }
+  ]
 }

@@ -4,19 +4,79 @@
   "title": "Casas sucedentes y cadentes: recursos y adaptación",
   "text_content": "Las casas angulares son los pilares. Pero una estructura necesita más que pilares. Las casas sucedentes consolidan lo que las angulares inician, y las casas cadentes preparan la transición hacia el siguiente ciclo. Juntas, las tres categorías forman un ritmo completo: acción, estabilización y adaptación.\n\nLas casas sucedentes son la 2, 5, 8 y 11. Siguen inmediatamente a cada casa angular y su función es consolidar, acumular, dar sustancia a lo que se inició. Si la casa 1 es tu identidad, la casa 2 son tus recursos: lo que posees, lo que valoras, lo que te da sustento material. Si la casa 4 es tu hogar, la casa 5 es lo que creas desde esa base: tu creatividad, tus hijos, tu expresión personal.\n\nLa Casa 2 gobierna los recursos materiales, el dinero ganado por esfuerzo propio, los valores personales, la relación con lo que posees. No se trata solo de dinero. Se trata de autoestima material: qué consideras valioso y cómo te sustentas.\n\nLa Casa 5 gobierna la creatividad, el juego, el romance, la autoexpresión gozosa. Es la casa del placer, de lo que haces por el puro disfrute de hacerlo. También rige los hijos como extensión creativa de tu ser.\n\nLa Casa 8 gobierna los recursos compartidos, la transformación a través de la intimidad, la sexualidad profunda, las crisis que te obligan a soltar lo que ya no sirve. Es la contraparte de la casa 2: mientras la 2 es lo que es tuyo, la 8 es lo que se transforma cuando lo mezclas con la otra persona.\n\nLa Casa 11 gobierna la comunidad, las amistades, los proyectos colectivos, los ideales compartidos. Es la contraparte de la casa 5: mientras la 5 es tu expresión individual, la 11 es tu participación en algo más grande que tú.\n\nLiz Greene observó que las casas sucedentes están relacionadas con la fijación de energía. Son casas donde las cosas se estabilizan, se vuelven concretas, adquieren forma duradera. Por eso los planetas en casas sucedentes tienden a manifestarse de forma persistente: una vez que se activan, no se sueltan fácilmente.\n\nLas casas cadentes son la 3, 6, 9 y 12. Preceden a cada casa angular y su función es preparar, adaptar, procesar lo que viene. Son casas de aprendizaje y transición.\n\nLa Casa 3 gobierna la comunicación cotidiana, los hermanos, el entorno cercano, el aprendizaje informal. Es la mente que procesa el día a día.\n\nLa Casa 6 gobierna la rutina, la salud, el trabajo diario, el servicio. Es donde ajustas tu vida para que funcione de forma práctica.\n\nLa Casa 9 gobierna la filosofía, la educación superior, los viajes largos, la búsqueda de significado. Es la expansión mental que prepara el terreno para la vocación de la casa 10.\n\nLa Casa 12 gobierna lo inconsciente, el retiro, la espiritualidad, lo que permanece oculto. Es la disolución de la identidad que precede al renacimiento de la casa 1.\n\nJung describió el inconsciente como un vasto territorio que contiene tanto material reprimido como potencial sin desarrollar. La casa 12 es ese territorio en la carta natal. Los planetas aquí operan desde las sombras: son poderosos pero difíciles de reconocer conscientemente.\n\nGeoffrey Cornelius señaló que las casas cadentes han sido históricamente consideradas débiles en la tradición astrológica, pero que desde una perspectiva psicológica son las casas del procesamiento interno. Los planetas cadentes no son débiles: son sutiles. Su trabajo ocurre en el interior.\n\nLa distribución angular-sucedente-cadente de tus planetas revela tu estilo de vida energético. Si domina lo angular, eres una persona de acción directa y visible. Si domina lo sucedente, eres una persona que consolida y acumula. Si domina lo cadente, eres una persona que procesa, aprende y se adapta.\n\nEjercicio: clasifica tus planetas en angulares, sucedentes y cadentes. Observa dónde está la mayoría. Ese patrón te dice algo fundamental sobre cómo operas en el mundo: si tiendes a iniciar, a consolidar o a adaptarte.",
   "slides": [
-    {"type": "title", "title": "Casas sucedentes y cadentes: recursos y adaptación", "subtitle": "Módulo 3 · Lección 9 — Astrología Natal Profunda"},
-    {"type": "content", "title": "Casas sucedentes (2, 5, 8, 11)", "body": "Consolidan lo que las angulares inician.\nCasa 2: recursos propios. Casa 5: creatividad.\nCasa 8: transformación compartida. Casa 11: comunidad."},
-    {"type": "content", "title": "Casas cadentes (3, 6, 9, 12)", "body": "Preparan y procesan para el siguiente ciclo.\nCasa 3: comunicación. Casa 6: rutina y salud.\nCasa 9: filosofía. Casa 12: inconsciente y retiro."},
-    {"type": "quote", "text": "El inconsciente es un vasto territorio que contiene tanto material reprimido como potencial sin desarrollar, esperando ser integrado.", "source": "Carl G. Jung, 1964 — El hombre y sus símbolos"},
-    {"type": "content", "title": "El ritmo de tres tiempos", "body": "Angular: acción, inicio, visibilidad directa.\nSucedente: consolidación, acumulación, persistencia.\nCadente: procesamiento, aprendizaje, adaptación."},
-    {"type": "content", "title": "Casa 12: la más malentendida", "body": "Históricamente llamada la casa de los enemigos ocultos.\nPsicológicamente: el territorio del inconsciente.\nLos planetas aquí son poderosos pero operan desde las sombras."},
-    {"type": "reflection", "question": "Clasifica tus planetas en angulares, sucedentes y cadentes. ¿Dónde está la mayoría? ¿Te reconoces como alguien que inicia, consolida o se adapta?"},
-    {"type": "summary", "points": ["Las casas sucedentes (2, 5, 8, 11) consolidan y dan forma duradera a la energía", "Las casas cadentes (3, 6, 9, 12) procesan, aprenden y preparan transiciones", "La distribución de planetas entre los tres tipos revela tu estilo energético fundamental"]},
-    {"type": "next", "text": "En el próximo módulo exploraremos los 12 signos zodiacales como arquetipos psicológicos: los estilos de expresión de toda la carta."}
+    {
+      "type": "title",
+      "title": "Casas sucedentes y cadentes: recursos y adaptación",
+      "subtitle": "Módulo 3 · Lección 9 — Astrología Natal Profunda"
+    },
+    {
+      "type": "content",
+      "title": "Casas sucedentes (2, 5, 8, 11)",
+      "body": "Consolidan lo que las angulares inician.\nCasa 2: recursos propios. Casa 5: creatividad.\nCasa 8: transformación compartida. Casa 11: comunidad."
+    },
+    {
+      "type": "content",
+      "title": "Casas cadentes (3, 6, 9, 12)",
+      "body": "Preparan y procesan para el siguiente ciclo.\nCasa 3: comunicación. Casa 6: rutina y salud.\nCasa 9: filosofía. Casa 12: inconsciente y retiro."
+    },
+    {
+      "type": "quote",
+      "text": "El inconsciente es un vasto territorio que contiene tanto material reprimido como potencial sin desarrollar, esperando ser integrado.",
+      "source": "Carl G. Jung, 1964 — El hombre y sus símbolos"
+    },
+    {
+      "type": "content",
+      "title": "El ritmo de tres tiempos",
+      "body": "Angular: acción, inicio, visibilidad directa.\nSucedente: consolidación, acumulación, persistencia.\nCadente: procesamiento, aprendizaje, adaptación."
+    },
+    {
+      "type": "content",
+      "title": "Casa 12: la más malentendida",
+      "body": "Históricamente llamada la casa de los enemigos ocultos.\nPsicológicamente: el territorio del inconsciente.\nLos planetas aquí son poderosos pero operan desde las sombras."
+    },
+    {
+      "type": "reflection",
+      "question": "Clasifica tus planetas en angulares, sucedentes y cadentes. ¿Dónde está la mayoría? ¿Te reconoces como alguien que inicia, consolida o se adapta?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Las casas sucedentes (2, 5, 8, 11) consolidan y dan forma duradera a la energía",
+        "Las casas cadentes (3, 6, 9, 12) procesan, aprenden y preparan transiciones",
+        "La distribución de planetas entre los tres tipos revela tu estilo energético fundamental"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el próximo módulo exploraremos los 12 signos zodiacales como arquetipos psicológicos: los estilos de expresión de toda la carta."
+    }
   ],
   "citation": {
     "researcher": "Carl G. Jung",
     "year": "1964",
     "finding": "El inconsciente contiene tanto material reprimido como potencial no desarrollado que busca integración a través del proceso de individuación"
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Identificar la casa de un planeta",
+      "steps": [
+        "Localizar el grado del planeta",
+        "Identificar las cuspides de las casas",
+        "Determinar en que sector cae",
+        "Leer el signo de la cuspide",
+        "Interpretar planeta + signo + casa"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Las casas sucedentes (2,5,8,11) estabilizan recursos y valores",
+        "Las casas cadentes (3,6,9,12) procesan, adaptan y aprenden",
+        "El tipo de casa matiza la intensidad de expresion del planeta",
+        "Saber en que casa esta cada planeta contextualiza su funcion"
+      ]
+    }
+  ]
 }

@@ -60,5 +60,28 @@
     "researcher": "Foster & Kreitzman",
     "year": "2017",
     "finding": "Concluyeron que somos organismos fundamentalmente temporales, donde cada célula lleva un reloj y la fisiología responde a ciclos que van desde los ultradianos hasta los estacionales"
-  }
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "Cronobiologia + Carta natal",
+      "nodes": [
+        "Cronotipo biologico",
+        "Sol natal: vitalidad",
+        "Luna natal: ritmo emocional",
+        "Saturno: estructura temporal",
+        "Ciclos planetarios y biologicos"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "La cronobiologia y la astrologia comparten la observacion de ciclos temporales",
+        "Tu cronotipo biologico puede dialogar con tu carta natal como herramientas complementarias",
+        "La integracion permite un autoconocimiento multidimensional",
+        "Ciencia y simbolismo se enriquecen mutuamente cuando se aplican con rigor"
+      ]
+    }
+  ]
 }

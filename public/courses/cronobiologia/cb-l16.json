@@ -60,5 +60,28 @@
     "researcher": "Roenneberg",
     "year": "2012",
     "finding": "Desarrolló el punto medio de sueño en días libres corregido como medida accesible y fiable del cronotipo individual, demostrando su correlación con marcadores fisiológicos circadianos"
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Test de cronotipo personalizado",
+      "steps": [
+        "Registrar hora natural de despertar (sin alarma, 1 semana)",
+        "Registrar hora natural de sueno",
+        "Anotar picos de energia y bajones",
+        "Comparar con cuestionario MEQ",
+        "Clasificar: alondra, buho o colibri"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Tu cronotipo se determina observando tus patrones naturales sin alarma",
+        "El cuestionario MEQ es la herramienta estandar de clasificacion",
+        "Una semana de registro libre es mas fiable que un test puntual",
+        "Conocer tu cronotipo real es el primer paso para optimizar tu vida"
+      ]
+    }
+  ]
 }

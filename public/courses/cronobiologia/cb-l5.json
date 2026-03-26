@@ -60,5 +60,52 @@
     "researcher": "Roenneberg",
     "year": "2012",
     "finding": "Demostró mediante el Munich Chronotype Questionnaire que los cronotipos se distribuyen en campana gaussiana, cambian con la edad y están determinados por variantes genéticas en genes reloj"
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Alondra (matutino)",
+        "Buho (vespertino)",
+        "Colibri (intermedio)"
+      ],
+      "rows": [
+        [
+          "Pico de energia",
+          "Primeras horas de la manana",
+          "Tarde-noche",
+          "Media manana"
+        ],
+        [
+          "Hora ideal de dormir",
+          "21:00-22:00",
+          "00:00-01:00",
+          "23:00"
+        ],
+        [
+          "Porcentaje poblacion",
+          "~25%",
+          "~25%",
+          "~50%"
+        ],
+        [
+          "Genetica",
+          "Variantes PER2, CRY1",
+          "Variantes CLOCK, CRY2",
+          "Expresion intermedia"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Tu cronotipo esta determinado geneticamente por variantes de genes reloj",
+        "No hay cronotipos mejores ni peores, solo diferentes ventanas optimas",
+        "El colibri (intermedio) es el cronotipo mas flexible y comun",
+        "Conocer tu cronotipo permite alinear tus actividades con tu biologia"
+      ]
+    }
+  ]
 }

@@ -4,19 +4,78 @@
   "title": "Elementos y modalidades: fuego, tierra, aire, agua",
   "text_content": "Los 12 signos del zodíaco no son 12 entidades independientes. Están organizados por un sistema de clasificación doble: los cuatro elementos y las tres modalidades. Esta clasificación es la gramática secreta de la astrología. Sin ella, interpretas signos sueltos. Con ella, entiendes cómo se relacionan entre sí y qué patrones dominan en una carta natal.\n\nLos cuatro elementos dividen los signos en familias de tres. Fuego: Aries, Leo, Sagitario. Tierra: Tauro, Virgo, Capricornio. Aire: Géminis, Libra, Acuario. Agua: Cáncer, Escorpio, Piscis.\n\nEl fuego es energía de acción, entusiasmo, inspiración. Las personas con mucho fuego en su carta son dinámicas, iniciativas, necesitan movimiento y estímulo. Su riesgo es quemarse: demasiado impulso sin pausa. La tierra es energía de materialización, estabilidad, practicidad. Mucha tierra da solidez, paciencia, sentido práctico. Su riesgo es la rigidez: aferrarse a lo conocido hasta perder la capacidad de adaptarse.\n\nEl aire es energía de pensamiento, comunicación, conexión intelectual. Mucho aire da agilidad mental, sociabilidad, capacidad de ver múltiples perspectivas. Su riesgo es la desconexión emocional: vivir en la cabeza sin bajar al cuerpo. El agua es energía de emoción, intuición, profundidad. Mucha agua da empatía, sensibilidad, acceso al mundo interior. Su riesgo es la absorción: perderse en las emociones propias o ajenas hasta ahogarse.\n\nLiz Greene observó que el elemento dominante en una carta natal indica el modo primario de procesamiento de la experiencia. Si domina el fuego, procesas a través de la acción. Si domina el agua, procesas a través del sentimiento. El elemento que falta o escasea indica una función menos desarrollada que puede compensarse conscientemente.\n\nJung propuso cuatro funciones psicológicas que se mapean sobre los elementos: intuición (fuego), sensación (tierra), pensamiento (aire) y sentimiento (agua). No es una correspondencia exacta, pero la analogía estructural es notable. Ambas clasificaciones describen cuatro modos fundamentales de interactuar con la realidad.\n\nLas tres modalidades dividen los signos en otro grupo de familias. Cardinal: Aries, Cáncer, Libra, Capricornio. Fijo: Tauro, Leo, Escorpio, Acuario. Mutable: Géminis, Virgo, Sagitario, Piscis.\n\nLa modalidad cardinal inicia. Las personas con mucha energía cardinal son emprendedoras, toman la iniciativa, ponen las cosas en marcha. No siempre las terminan, pero nadie arranca como ellas. La modalidad fija sostiene. Las personas con mucha energía fija perseveran, mantienen lo que empezaron, tienen resistencia. Su riesgo es la terquedad: seguir cuando ya debían soltar. La modalidad mutable adapta. Las personas con mucha energía mutable son flexibles, versátiles, se ajustan a los cambios. Su riesgo es la dispersión: cambiar demasiado sin consolidar nada.\n\nCada signo tiene una combinación única de elemento y modalidad. Aries es fuego cardinal: inicio enérgico. Tauro es tierra fija: estabilidad persistente. Géminis es aire mutable: pensamiento adaptable. Y así sucesivamente. Esa combinación de dos por dos da la textura específica de cada signo.\n\nPara analizar una carta natal, cuenta cuántos planetas tienes en cada elemento y cada modalidad. Si tienes cinco planetas en signos de agua y ninguno en fuego, tu vida emocional es intensa pero te cuesta tomar iniciativa impulsiva. Si tienes cuatro planetas en signos fijos, eres resistente y constante pero te cuesta cambiar de rumbo.\n\nEysenck propuso dimensiones de personalidad que pueden relacionarse con este esquema. La extraversión se asocia al fuego y al aire. La introversión se asocia a la tierra y al agua. La estabilidad se asocia a la tierra y al fuego. La reactividad emocional se asocia al agua y al aire. Estas correspondencias no son absolutas pero ofrecen puentes interesantes entre sistemas.\n\nEjercicio: haz el recuento elemental y modal de tu carta. Cuenta planetas por elemento y modalidad. Identifica cuál domina y cuál escasea. Ese mapa te dice cómo procesas la experiencia y dónde tienes puntos ciegos que puedes trabajar conscientemente.",
   "slides": [
-    {"type": "title", "title": "Elementos y modalidades: fuego, tierra, aire, agua", "subtitle": "Módulo 4 · Lección 11 — Astrología Natal Profunda"},
-    {"type": "content", "title": "Los cuatro elementos", "body": "Fuego (Aries, Leo, Sagitario): acción, inspiración.\nTierra (Tauro, Virgo, Capricornio): estabilidad, práctica.\nAire (Géminis, Libra, Acuario): pensamiento, conexión.\nAgua (Cáncer, Escorpio, Piscis): emoción, intuición."},
-    {"type": "content", "title": "Las tres modalidades", "body": "Cardinal (Aries, Cáncer, Libra, Capricornio): inicia.\nFijo (Tauro, Leo, Escorpio, Acuario): sostiene.\nMutable (Géminis, Virgo, Sagitario, Piscis): adapta."},
-    {"type": "quote", "text": "Las cuatro funciones psicológicas — intuición, sensación, pensamiento y sentimiento — describen modos fundamentales de interactuar con la realidad.", "source": "Carl G. Jung, 1964 — Tipos psicológicos"},
-    {"type": "content", "title": "Elemento dominante y ausente", "body": "El elemento con más planetas: tu modo primario de procesar.\nEl elemento sin planetas: tu función menos desarrollada.\nAmbos datos son igualmente informativos."},
-    {"type": "content", "title": "Combinación elemento + modalidad", "body": "Cada signo tiene una combinación única.\nAries: fuego cardinal. Tauro: tierra fija.\nEsa combinación da la textura específica del signo."},
-    {"type": "reflection", "question": "Cuenta tus planetas por elemento y modalidad. ¿Cuál domina? ¿Cuál escasea? ¿Reconoces esos patrones en tu forma habitual de procesar la experiencia?"},
-    {"type": "summary", "points": ["Los 12 signos se organizan en 4 elementos (fuego, tierra, aire, agua) y 3 modalidades (cardinal, fijo, mutable)", "El elemento dominante indica tu modo primario de procesamiento; el ausente, tu punto ciego", "La combinación elemento + modalidad da la textura específica de cada signo zodiacal"]},
-    {"type": "next", "text": "En la siguiente lección profundizaremos en el Ascendente: tu máscara y tu puerta de entrada al mundo."}
+    {
+      "type": "title",
+      "title": "Elementos y modalidades: fuego, tierra, aire, agua",
+      "subtitle": "Módulo 4 · Lección 11 — Astrología Natal Profunda"
+    },
+    {
+      "type": "content",
+      "title": "Los cuatro elementos",
+      "body": "Fuego (Aries, Leo, Sagitario): acción, inspiración.\nTierra (Tauro, Virgo, Capricornio): estabilidad, práctica.\nAire (Géminis, Libra, Acuario): pensamiento, conexión.\nAgua (Cáncer, Escorpio, Piscis): emoción, intuición."
+    },
+    {
+      "type": "content",
+      "title": "Las tres modalidades",
+      "body": "Cardinal (Aries, Cáncer, Libra, Capricornio): inicia.\nFijo (Tauro, Leo, Escorpio, Acuario): sostiene.\nMutable (Géminis, Virgo, Sagitario, Piscis): adapta."
+    },
+    {
+      "type": "quote",
+      "text": "Las cuatro funciones psicológicas — intuición, sensación, pensamiento y sentimiento — describen modos fundamentales de interactuar con la realidad.",
+      "source": "Carl G. Jung, 1964 — Tipos psicológicos"
+    },
+    {
+      "type": "content",
+      "title": "Elemento dominante y ausente",
+      "body": "El elemento con más planetas: tu modo primario de procesar.\nEl elemento sin planetas: tu función menos desarrollada.\nAmbos datos son igualmente informativos."
+    },
+    {
+      "type": "content",
+      "title": "Combinación elemento + modalidad",
+      "body": "Cada signo tiene una combinación única.\nAries: fuego cardinal. Tauro: tierra fija.\nEsa combinación da la textura específica del signo."
+    },
+    {
+      "type": "reflection",
+      "question": "Cuenta tus planetas por elemento y modalidad. ¿Cuál domina? ¿Cuál escasea? ¿Reconoces esos patrones en tu forma habitual de procesar la experiencia?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Los 12 signos se organizan en 4 elementos (fuego, tierra, aire, agua) y 3 modalidades (cardinal, fijo, mutable)",
+        "El elemento dominante indica tu modo primario de procesamiento; el ausente, tu punto ciego",
+        "La combinación elemento + modalidad da la textura específica de cada signo zodiacal"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección profundizaremos en el Ascendente: tu máscara y tu puerta de entrada al mundo."
+    }
   ],
   "citation": {
     "researcher": "Hans Eysenck",
     "year": "1978",
     "finding": "Las dimensiones de personalidad como extraversión e introversión pueden relacionarse con diferentes modos de procesamiento de la experiencia sensorial y emocional"
-  }
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "3 Modalidades",
+      "nodes": [
+        "Cardinal: inicia",
+        "Fija: sostiene",
+        "Mutable: adapta",
+        "4 signos por modalidad"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Los 4 elementos (fuego, tierra, aire, agua) definen la naturaleza energetica",
+        "Las 3 modalidades (cardinal, fija, mutable) definen el estilo de accion",
+        "Cada signo es una combinacion unica de elemento + modalidad",
+        "Tu balance elemental y modal revela tus fortalezas y areas de desarrollo"
+      ]
+    }
+  ]
 }

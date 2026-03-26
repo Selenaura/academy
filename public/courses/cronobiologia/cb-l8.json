@@ -60,5 +60,52 @@
     "researcher": "Foster & Kreitzman",
     "year": "2017",
     "finding": "Incluyeron el ciclo menstrual como ejemplo central de cómo los relojes biológicos operan en múltiples escalas temporales simultáneamente, modulándose entre el circadiano y el estacional"
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "Fase del ciclo",
+        "Duracion aprox.",
+        "Caracteristicas",
+        "Actividades optimas"
+      ],
+      "rows": [
+        [
+          "Menstrual",
+          "3-7 dias",
+          "Descanso, introspeccion",
+          "Reflexion, planificacion suave"
+        ],
+        [
+          "Folicular",
+          "7-10 dias",
+          "Energia creciente, creatividad",
+          "Proyectos nuevos, socializacion"
+        ],
+        [
+          "Ovulatoria",
+          "3-5 dias",
+          "Pico de energia y comunicacion",
+          "Presentaciones, negociaciones"
+        ],
+        [
+          "Lutea",
+          "10-14 dias",
+          "Energia decreciente, detalle",
+          "Tareas de organizacion, cierre"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "El ciclo menstrual es un reloj biologico de ~28 dias con fases distintas",
+        "Cada fase ofrece ventanas optimas para diferentes tipos de actividad",
+        "Sincronizar actividades con las fases mejora rendimiento y bienestar",
+        "Este conocimiento aplica a cualquier persona con ciclo menstrual activo"
+      ]
+    }
+  ]
 }

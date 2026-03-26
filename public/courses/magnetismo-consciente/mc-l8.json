@@ -41,5 +41,42 @@
     "researcher": "Joe Dispenza",
     "year": "2012",
     "finding": "El ensayo mental vívido y repetido genera adaptaciones neuroplásticas similares a las producidas por la experiencia real, facilitando nuevos patrones de pensamiento y conducta."
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Visualizacion",
+        "Accion real"
+      ],
+      "rows": [
+        [
+          "Activacion corteza motora",
+          "Activa las mismas areas cerebrales",
+          "Activacion completa con movimiento"
+        ],
+        [
+          "Tiempo necesario",
+          "Minutos de practica mental diaria",
+          "Horas de entrenamiento fisico"
+        ],
+        [
+          "Efecto demostrado",
+          "Mejora rendimiento 20-30%",
+          "Mejora rendimiento 50-70%"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "La visualizacion activa las mismas zonas cerebrales que la accion real",
+        "Estudios demuestran mejoras del 20-30% solo con ensayo mental",
+        "La combinacion de visualizacion y accion produce los mejores resultados",
+        "Ver mentalmente un resultado prepara al cerebro para ejecutarlo"
+      ]
+    }
+  ]
 }

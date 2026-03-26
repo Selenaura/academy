@@ -4,19 +4,79 @@
   "title": "Tránsitos: cuando el cielo activa tu carta",
   "text_content": "Tu carta natal es una fotografía del cielo en el momento de tu nacimiento. Pero el cielo no se detuvo. Los planetas siguieron moviéndose después de que naciste, y sus posiciones actuales interactúan constantemente con las posiciones fijas de tu carta. Esas interacciones se llaman tránsitos, y son la herramienta principal de la astrología predictiva.\n\nUn tránsito ocurre cuando un planeta en movimiento actual forma un aspecto con un planeta de tu carta natal. Si hoy Saturno está a 15 grados de Piscis y tu Sol natal está a 15 grados de Virgo, Saturno está transitando en oposición a tu Sol. Esa oposición va a activar temas de identidad, estructura y responsabilidad durante el tiempo que Saturno permanezca en ese grado.\n\nLa velocidad del planeta transitante determina la duración del efecto. La Luna transita cada grado en aproximadamente dos horas. Un tránsito lunar dura horas: puede colorear tu estado emocional durante una tarde. El Sol transita un grado por día: un tránsito solar dura unos días. Marte tarda unos dos días por grado, así que sus tránsitos se sienten durante una semana o dos.\n\nPero los tránsitos que transforman la vida son los de los planetas lentos. Júpiter tarda un año por signo y sus tránsitos duran semanas. Saturno tarda dos años y medio por signo y sus tránsitos duran meses. Urano, Neptuno y Plutón pueden transitar sobre un punto natal durante uno o dos años, especialmente cuando retrogradan y pasan tres veces sobre el mismo grado.\n\nFoster y Kreitzman documentaron cómo los organismos biológicos responden a ciclos externos de forma medible. Los tránsitos planetarios pueden entenderse como un marco simbólico para ciclos de experiencia personal. No es que Saturno cause una crisis al transitar tu Sol. Es que el periodo de vida que corresponde a ese tránsito suele coincidir con experiencias que piden más estructura, más responsabilidad, más madurez.\n\nLiz Greene desarrolló un enfoque psicológico de los tránsitos que cambió la práctica astrológica. Para Greene, un tránsito no predice un evento externo. Activa una función psicológica interna. Cuando Plutón transita tu Venus, no predice que tu relación va a terminar. Predice que tu forma de amar, valorar y relacionarte va a ser sometida a una transformación profunda. Cómo se manifieste eso externamente depende de muchos factores.\n\nHay cuatro fases clave en un tránsito de planeta lento. La aproximación es cuando el planeta se acerca al grado exacto: empiezas a sentir los temas pero no sabes nombrarlos. El aspecto exacto es el punto de máxima intensidad. La separación es cuando el planeta se aleja: integras lo que has vivido. La repetición ocurre si el planeta retrograda y pasa de nuevo por el mismo punto: reprocesas lo que creías resuelto.\n\nLas efemérides de NASA JPL permiten calcular con precisión absoluta dónde estará cada planeta en cualquier fecha. Esto hace que los tránsitos sean la dimensión más verificable de la astrología: puedes saber exactamente cuándo un tránsito comienza, alcanza su pico y termina.\n\nCornelius matizó que el tránsito no es la causa del cambio sino su correlato simbólico. La persona que conoce sus tránsitos tiene una ventaja: puede prepararse para los temas que se van a activar, puede trabajar conscientemente con las energías en juego, puede usar el ciclo en lugar de ser arrastrada por él.\n\nEjercicio: consulta las efemérides actuales y observa qué planetas están transitando tus posiciones natales. Presta especial atención a los tránsitos de Júpiter, Saturno, Urano, Neptuno y Plutón. Esos son los que marcan las grandes temporadas de tu vida.",
   "slides": [
-    {"type": "title", "title": "Tránsitos: cuando el cielo activa tu carta", "subtitle": "Módulo 6 · Lección 16 — Astrología Natal Profunda"},
-    {"type": "content", "title": "¿Qué es un tránsito?", "body": "Un planeta actual forma un aspecto con un planeta natal.\nActiva funciones psicológicas internas.\nNo predice eventos: señala temas que se intensifican."},
-    {"type": "content", "title": "Velocidad y duración", "body": "Luna: horas. Sol: días. Marte: semanas.\nJúpiter: semanas. Saturno: meses.\nUrano, Neptuno, Plutón: meses a años."},
-    {"type": "content", "title": "Las cuatro fases del tránsito", "body": "Aproximación: empiezas a sentir los temas.\nAspecto exacto: máxima intensidad.\nSeparación: integración de lo vivido.\nRepetición (retrogradación): reprocesamiento."},
-    {"type": "quote", "text": "Un tránsito no predice un evento externo. Activa una función psicológica interna que busca expresión en la experiencia vital.", "source": "Liz Greene, 1976 — Astrología psicológica y tránsitos"},
-    {"type": "content", "title": "Tránsitos como herramienta consciente", "body": "Conocer tus tránsitos te permite prepararte.\nTrabajar con las energías en lugar de ser arrastrado.\nLas efemérides de NASA JPL dan fechas precisas."},
-    {"type": "reflection", "question": "¿Qué grandes temas te han marcado en el último año? Consulta los tránsitos de planetas lentos sobre tus posiciones natales: ¿encuentras alguna correlación?"},
-    {"type": "summary", "points": ["Los tránsitos son las interacciones entre los planetas actuales y tu carta natal fija", "Los planetas lentos producen los tránsitos más transformadores, que duran meses o años", "Conocer tus tránsitos permite trabajar conscientemente con los temas que se activan"]},
-    {"type": "next", "text": "En la siguiente lección profundizaremos en el retorno de Saturno y otros ciclos clave que marcan las grandes transiciones de la vida adulta."}
+    {
+      "type": "title",
+      "title": "Tránsitos: cuando el cielo activa tu carta",
+      "subtitle": "Módulo 6 · Lección 16 — Astrología Natal Profunda"
+    },
+    {
+      "type": "content",
+      "title": "¿Qué es un tránsito?",
+      "body": "Un planeta actual forma un aspecto con un planeta natal.\nActiva funciones psicológicas internas.\nNo predice eventos: señala temas que se intensifican."
+    },
+    {
+      "type": "content",
+      "title": "Velocidad y duración",
+      "body": "Luna: horas. Sol: días. Marte: semanas.\nJúpiter: semanas. Saturno: meses.\nUrano, Neptuno, Plutón: meses a años."
+    },
+    {
+      "type": "content",
+      "title": "Las cuatro fases del tránsito",
+      "body": "Aproximación: empiezas a sentir los temas.\nAspecto exacto: máxima intensidad.\nSeparación: integración de lo vivido.\nRepetición (retrogradación): reprocesamiento."
+    },
+    {
+      "type": "quote",
+      "text": "Un tránsito no predice un evento externo. Activa una función psicológica interna que busca expresión en la experiencia vital.",
+      "source": "Liz Greene, 1976 — Astrología psicológica y tránsitos"
+    },
+    {
+      "type": "content",
+      "title": "Tránsitos como herramienta consciente",
+      "body": "Conocer tus tránsitos te permite prepararte.\nTrabajar con las energías en lugar de ser arrastrado.\nLas efemérides de NASA JPL dan fechas precisas."
+    },
+    {
+      "type": "reflection",
+      "question": "¿Qué grandes temas te han marcado en el último año? Consulta los tránsitos de planetas lentos sobre tus posiciones natales: ¿encuentras alguna correlación?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Los tránsitos son las interacciones entre los planetas actuales y tu carta natal fija",
+        "Los planetas lentos producen los tránsitos más transformadores, que duran meses o años",
+        "Conocer tus tránsitos permite trabajar conscientemente con los temas que se activan"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección profundizaremos en el retorno de Saturno y otros ciclos clave que marcan las grandes transiciones de la vida adulta."
+    }
   ],
   "citation": {
     "researcher": "Foster y Kreitzman",
     "year": "2017",
     "finding": "Los organismos biológicos responden a ciclos externos de forma medible, estableciendo un marco para comprender la sincronización entre ritmos cósmicos y experiencia individual"
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Interpretar transitos",
+      "steps": [
+        "Obtener efemerides actuales",
+        "Comparar con carta natal",
+        "Identificar aspectos de transito",
+        "Evaluar planeta transitante + natal",
+        "Determinar duracion y fase"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Los transitos son la posicion actual de los planetas sobre tu carta natal",
+        "Cuando un planeta en transito aspecta tu carta, activa esa funcion",
+        "Los transitos de planetas lentos marcan periodos de transformacion profunda",
+        "Entender los transitos convierte la carta natal en una herramienta dinamica"
+      ]
+    }
+  ]
 }

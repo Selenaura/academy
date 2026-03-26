@@ -60,5 +60,47 @@
     "researcher": "Roenneberg et al.",
     "year": "2012",
     "finding": "Demostraron que la variación genética en genes reloj contribuye significativamente a las diferencias individuales en cronotipos, junto con factores como la edad y la exposición lumínica"
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "Gen reloj",
+        "Funcion",
+        "Efecto de mutacion"
+      ],
+      "rows": [
+        [
+          "PER (period)",
+          "Proteina que se acumula de noche y degrada de dia",
+          "Ritmos acortados o abolidos"
+        ],
+        [
+          "CLOCK",
+          "Activa la transcripcion de genes reloj",
+          "Ritmos desincronizados"
+        ],
+        [
+          "CRY (cryptochrome)",
+          "Inhibe CLOCK, cierra el bucle de retroalimentacion",
+          "Hipersensibilidad a la luz"
+        ],
+        [
+          "BMAL1",
+          "Forma dimero con CLOCK para activar transcripcion",
+          "Perdida total del ritmo"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Los genes PER, CLOCK, CRY y BMAL1 forman el bucle molecular del reloj",
+        "La interaccion de estos genes crea ciclos de retroalimentacion de ~24h",
+        "Las mutaciones en genes reloj alteran profundamente los ritmos biologicos",
+        "Estos mecanismos estan conservados evolutivamente desde insectos hasta humanos"
+      ]
+    }
+  ]
 }

@@ -60,5 +60,47 @@
     "researcher": "Gonda et al.",
     "year": "2014",
     "finding": "Evaluaron a más de 400 personas y encontraron patrones estadísticamente significativos entre estación de nacimiento y temperamento afectivo: primavera/verano asociados con hipertimia, otoño con tendencia depresiva"
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "Estacion de nacimiento",
+        "Rasgos asociados",
+        "Posible mecanismo"
+      ],
+      "rows": [
+        [
+          "Primavera",
+          "Mayor tendencia a hipertimia",
+          "Exposicion a luz creciente en gestacion tardia"
+        ],
+        [
+          "Verano",
+          "Ciclotimia, busqueda de novedad",
+          "Fotoperiodo largo al nacer"
+        ],
+        [
+          "Otono",
+          "Menor tendencia a depresion",
+          "Transicion luminica gradual"
+        ],
+        [
+          "Invierno",
+          "Mayor riesgo de depresion estacional",
+          "Privacion luminica en desarrollo temprano"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Estudios poblacionales muestran correlaciones entre estacion de nacimiento y temperamento",
+        "El fotoperiodo durante la gestacion y primeros meses es un mecanismo plausible",
+        "Las correlaciones son estadisticas, no deterministas individuales",
+        "Este campo conecta cronobiologia con epidemiologia y salud mental"
+      ]
+    }
+  ]
 }

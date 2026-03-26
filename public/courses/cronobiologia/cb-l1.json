@@ -60,5 +60,43 @@
     "researcher": "Hall, Rosbash & Young",
     "year": "2017",
     "finding": "Descubrimiento de los mecanismos moleculares que controlan los ritmos circadianos, demostrando que genes como period, timeless y clock forman bucles de retroalimentación de ~24h conservados evolutivamente"
-  }
+  },
+  "interactive": [
+    {
+      "type": "timeline",
+      "title": "Nobel 2017: Hitos de la cronobiologia",
+      "events": [
+        {
+          "label": "1729",
+          "description": "De Mairan observa ritmos en la mimosa en oscuridad"
+        },
+        {
+          "label": "1971",
+          "description": "Konopka y Benzer descubren el gen period en Drosophila"
+        },
+        {
+          "label": "1984",
+          "description": "Hall y Rosbash aislan el gen period"
+        },
+        {
+          "label": "1994",
+          "description": "Young descubre timeless y doubletime"
+        },
+        {
+          "label": "2017",
+          "description": "Nobel de Fisiologia: Hall, Rosbash y Young"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "La cronobiologia estudia los relojes biologicos internos de los seres vivos",
+        "El Nobel 2017 premio el descubrimiento de los genes reloj en cada celula",
+        "Cada celula lleva un cronometro molecular con ciclos de ~24 horas",
+        "Tus ritmos de energia, cognicion y emocion son medibles y predecibles"
+      ]
+    }
+  ]
 }

@@ -60,5 +60,47 @@
     "researcher": "Lévi et al.",
     "year": "2010",
     "finding": "Demostraron que la administración cronomodulada de fluorouracilo y oxaliplatino en cáncer colorrectal metastásico producía menor toxicidad grave y mejor tolerancia que la administración convencional a ritmo constante"
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "Franja horaria",
+        "Funcion fisiologica pico",
+        "Aplicacion cronomedica"
+      ],
+      "rows": [
+        [
+          "06:00-09:00",
+          "Cortisol maximo, presion arterial sube",
+          "Evitar estatinas nocturnas, antihipertensivos AM"
+        ],
+        [
+          "09:00-12:00",
+          "Alerta cognitiva maxima",
+          "Mejor hora para decisiones y aprendizaje"
+        ],
+        [
+          "14:00-17:00",
+          "Coordinacion fisica optima",
+          "Ejercicio de fuerza, fisioterapia"
+        ],
+        [
+          "21:00-02:00",
+          "Reparacion celular, hormona del crecimiento",
+          "Quimioterapia cronometrada, sueno reparador"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "La cronomedicina adapta tratamientos a los ritmos biologicos del paciente",
+        "La eficacia de muchos medicamentos varia segun la hora de administracion",
+        "La cronoterapia del cancer ha demostrado reducir efectos secundarios",
+        "El futuro de la medicina incluira el reloj biologico como variable clinica"
+      ]
+    }
+  ]
 }

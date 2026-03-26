@@ -41,5 +41,28 @@
     "researcher": "Joe Dispenza",
     "year": "2012",
     "finding": "La personalización de las prácticas de recableado neuronal según la naturaleza individual del practicante incrementa la adherencia y la intensidad emocional de las visualizaciones, potenciando los cambios neuroplásticos."
-  }
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "Magnetismo + Carta natal",
+      "nodes": [
+        "Sol: estilo de intencion",
+        "Luna: necesidades emocionales",
+        "Mercurio: comunicacion magnetica",
+        "Venus: atraccion natural",
+        "Marte: accion alineada"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Tu carta natal revela tu estilo natural de intencion y atraccion",
+        "Cada planeta personal aporta una dimension distinta al magnetismo",
+        "Conocer tu mapa astrologico personaliza tu protocolo magnetico",
+        "La astrologia aqui funciona como herramienta de autoconocimiento, no de prediccion"
+      ]
+    }
+  ]
 }

@@ -60,5 +60,29 @@
     "researcher": "Cajochen et al.",
     "year": "2013",
     "finding": "En un estudio controlado, encontraron que alrededor de la luna llena la latencia del sueño aumentó, la duración del sueño se redujo y los niveles de melatonina disminuyeron significativamente"
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Ciclo melatonina-cortisol",
+      "steps": [
+        "Oscuridad: pineal libera melatonina",
+        "Melatonina sube: somnolencia",
+        "Sueno profundo: hormona del crecimiento",
+        "Luz matinal: cortisol sube",
+        "Cortisol pico: activacion y alerta",
+        "Melatonina suprimida durante el dia"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Melatonina y cortisol son las hormonas maestras del ritmo circadiano",
+        "La melatonina se libera con la oscuridad y prepara el sueno",
+        "El cortisol sube con la luz matinal y activa la vigilia",
+        "La serotonina durante el dia se convierte en melatonina por la noche"
+      ]
+    }
+  ]
 }

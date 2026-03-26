@@ -60,5 +60,47 @@
     "researcher": "Roenneberg",
     "year": "2012",
     "finding": "Demostró que vivir alineada con el tiempo interno mejora indicadores metabólicos, calidad de sueño, rendimiento cognitivo y reduce el estrés percibido, respaldando el diseño de calendarios vitales cronobiológicos"
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Calendario vital optimizado",
+        "Calendario convencional"
+      ],
+      "rows": [
+        [
+          "Manana",
+          "Actividades segun tu pico de energia real",
+          "Horario fijo independiente del cronotipo"
+        ],
+        [
+          "Alimentacion",
+          "Comidas sincronizadas con reloj metabolico",
+          "Horarios sociales de comida"
+        ],
+        [
+          "Ejercicio",
+          "En la franja de mejor coordinacion fisica",
+          "Cuando hay hueco en la agenda"
+        ],
+        [
+          "Sueno",
+          "Hora de dormir alineada con melatonina",
+          "Acostarse cuando se acaban las tareas"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Un calendario vital sincronizado alinea tus actividades con tus ritmos",
+        "Alimentacion, ejercicio y sueno tienen ventanas optimas diferentes",
+        "Pequenos ajustes horarios producen grandes mejoras en rendimiento",
+        "Disenar tu calendario vital es aplicar cronobiologia a la vida diaria"
+      ]
+    }
+  ]
 }

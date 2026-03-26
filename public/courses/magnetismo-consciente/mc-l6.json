@@ -41,5 +41,47 @@
     "researcher": "Rollin McCraty",
     "year": "2015",
     "finding": "Los patrones de VFC son indicadores fiables del estado emocional: la coherencia cardíaca se asocia con estados de gratitud y aprecio, mientras que los patrones erráticos correlacionan con frustración y ansiedad."
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Alta variabilidad",
+        "Baja variabilidad"
+      ],
+      "rows": [
+        [
+          "Resiliencia",
+          "Alta capacidad de adaptacion al estres",
+          "Respuesta rigida, agotamiento rapido"
+        ],
+        [
+          "Estres",
+          "Recuperacion rapida tras picos",
+          "Activacion cronica, cortisol elevado"
+        ],
+        [
+          "Creatividad",
+          "Mayor flexibilidad cognitiva",
+          "Pensamiento repetitivo y rigido"
+        ],
+        [
+          "Salud",
+          "Sistema inmune robusto",
+          "Mayor vulnerabilidad a enfermedades"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "La HRV mide la variabilidad entre latidos y refleja tu estado de regulacion",
+        "Alta variabilidad se asocia con resiliencia, creatividad y salud",
+        "Baja variabilidad indica estres cronico y rigidez adaptativa",
+        "Puedes mejorar tu HRV con practicas de coherencia cardiaca"
+      ]
+    }
+  ]
 }

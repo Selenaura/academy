@@ -41,5 +41,27 @@
     "researcher": "Robert K. Merton",
     "year": "1948",
     "finding": "Las profecías autocumplidas demuestran que las expectativas modifican el comportamiento, provocando que las creencias iniciales se confirmen en la realidad."
-  }
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "Atraccion",
+      "nodes": [
+        "SAR (filtro cerebral)",
+        "Profecia autocumplida",
+        "Sesgo de confirmacion",
+        "Intencion"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "La ley de atraccion opera mediante tres pilares: neurociencia, psicologia y fisiologia",
+        "El SAR filtra millones de bits y prioriza lo que defines como importante",
+        "La coherencia cardiaca optimiza percepcion, conducta y fisiologia",
+        "El magnetismo consciente sustituye el pensamiento magico por mecanismos verificables"
+      ]
+    }
+  ]
 }

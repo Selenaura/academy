@@ -41,5 +41,28 @@
     "researcher": "Daniel Kahneman",
     "year": "2011",
     "finding": "El sesgo de confirmación es uno de los sesgos cognitivos más persistentes: el cerebro busca, interpreta y recuerda información que confirma las creencias existentes, filtrando de forma sistemática la evidencia contraria."
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Ciclo de la profecia autocumplida",
+      "steps": [
+        "Creencia inicial",
+        "Conducta inconsciente coherente",
+        "Reaccion del entorno",
+        "Confirmacion de la creencia",
+        "Refuerzo del ciclo"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "El sesgo de confirmacion te hace ver solo lo que confirma tus creencias",
+        "Puede ser aliado si lo diriges hacia expectativas constructivas",
+        "Puede ser enemigo si refuerza creencias limitantes sin cuestionarlas",
+        "La consciencia del sesgo es el primer paso para usarlo a tu favor"
+      ]
+    }
+  ]
 }

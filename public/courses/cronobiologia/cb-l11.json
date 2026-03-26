@@ -60,5 +60,29 @@
     "researcher": "Cajochen et al.",
     "year": "2013",
     "finding": "Observaron que la reducción de melatonina durante luna llena afecta específicamente la proporción de sueño profundo, comprometiendo la función restauradora del sueño incluso sin cambiar la duración total"
-  }
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "Sueno y Luna",
+      "nodes": [
+        "Fases lunares",
+        "Calidad del sueno",
+        "Latencia de sueno",
+        "Sueno profundo (delta)",
+        "Melatonina nocturna",
+        "Luminosidad nocturna"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Algunos estudios sugieren que la luna llena reduce el sueno profundo",
+        "La luminosidad nocturna puede ser un factor mediador",
+        "Los ritmos cerebrales durante el sueno muestran variaciones ciclicas",
+        "La relacion sueno-luna requiere mas investigacion controlada"
+      ]
+    }
+  ]
 }

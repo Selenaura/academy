@@ -41,5 +41,29 @@
     "researcher": "Peter Gollwitzer",
     "year": "1999",
     "finding": "Las implementaciones de intención en formato si-entonces aumentan significativamente la probabilidad de alcanzar objetivos al automatizar la respuesta conductual ante señales ambientales."
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "De intencion a resultado",
+      "steps": [
+        "Formular intencion",
+        "Implementation intentions",
+        "Atencion selectiva",
+        "Deteccion oportunidades",
+        "Accion",
+        "Resultado"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "La intencion funciona como un GPS neuronal que orienta la atencion",
+        "Las implementation intentions (si-entonces) duplican la tasa de exito",
+        "La ciencia respalda el poder de la intencion con estudios medibles",
+        "De la intencion al resultado hay un camino verificable, no mistico"
+      ]
+    }
+  ]
 }

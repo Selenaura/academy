@@ -4,19 +4,98 @@
   "title": "Aspectos menores y patrones de aspecto",
   "text_content": "Los cuatro aspectos mayores son el vocabulario básico. Pero la carta natal tiene un vocabulario mucho más rico. Los aspectos menores añaden matices, y los patrones de aspecto revelan configuraciones que operan como sistemas integrados dentro de tu psique.\n\nEl sextil ocurre a 60 grados. Es un aspecto de oportunidad: las energías se apoyan pero requieren un esfuerzo consciente para activarse. Si el trígono es un regalo que llega sin pedir, el sextil es una puerta que se abre pero tienes que decidir cruzarla. Un sextil Mercurio-Júpiter facilita la conexión entre pensamiento y expansión, pero solo si la persona busca activamente aprender, comunicar, enseñar.\n\nEl quincuncio ocurre a 150 grados. Es uno de los aspectos más difíciles de integrar. Los dos planetas no comparten ni elemento ni modalidad: no tienen nada en común. Generan una incomodidad sutil, una sensación de que algo no encaja. Un quincuncio Sol-Plutón crea una relación incómoda entre la identidad consciente y las fuerzas de transformación profunda. La persona siente que necesita reinventarse pero no sabe cómo ni cuándo.\n\nEl semicuadratura (45 grados) y la sesquicuadratura (135 grados) son aspectos de irritación menor. No generan la tensión dramática de una cuadratura, pero producen fricciones persistentes que erosionan si no se atienden. Son como una piedra en el zapato: no te impide caminar, pero no puedes ignorarla indefinidamente.\n\nMás allá de los aspectos individuales, la carta natal puede contener patrones de aspecto: configuraciones donde tres o más planetas se conectan formando figuras geométricas reconocibles. Estos patrones funcionan como circuitos integrados de energía.\n\nEl Gran Trígono se forma cuando tres planetas hacen trígonos entre sí, creando un triángulo equilátero. Los tres planetas están en signos del mismo elemento. Es una configuración de gran fluidez y talento natural. Un Gran Trígono en agua da una sensibilidad emocional y una intuición que fluye sin obstáculos. El riesgo es la pasividad: como todo fluye tan bien internamente, puede faltar motivación para actuar.\n\nLa T-Cuadrada se forma cuando dos planetas en oposición hacen cuadratura a un tercer planeta. Es una configuración de tensión concentrada. El planeta que recibe las dos cuadraturas se llama el planeta focal y es donde se descarga toda la energía del patrón. Una T-Cuadrada con Marte como planeta focal concentra toda la tensión en la acción: la persona actúa bajo presión constante pero puede desarrollar una capacidad de ejecución extraordinaria.\n\nLa Gran Cruz se forma cuando cuatro planetas hacen oposiciones y cuadraturas entre sí, formando una cruz. Es la configuración de mayor tensión estructural. Las personas con Gran Cruz viven con una sensación permanente de estar tirando en cuatro direcciones a la vez. Pero si aprenden a manejar esa tensión, desarrollan una fortaleza y una versatilidad poco comunes.\n\nEl Yod o Dedo de Dios se forma cuando dos planetas en sextil hacen quincuncios a un tercer planeta. El planeta focal del Yod recibe una presión ajustiva muy específica: algo en esa función necesita ser reconfigurado, pero el proceso es sutil y toma tiempo. Greene describió el Yod como un aspecto de misión: el planeta focal parece destinado a cumplir una función particular, aunque el camino para llegar ahí sea tortuoso.\n\nJung habría reconocido en estos patrones lo que llamó complejos: constelaciones de energía psíquica que operan como unidades funcionales dentro de la psique. Un Gran Trígono es un complejo de fluidez. Una T-Cuadrada es un complejo de tensión dirigida. Una Gran Cruz es un complejo de equilibrio forzado.\n\nEjercicio: observa tu carta natal con ojos geométricos. Busca triángulos, cruces, configuraciones que salten a la vista. Si tienes un patrón de aspecto, ese patrón probablemente sea uno de los temas dominantes de tu vida. Nómbralo, obsérvalo, trabaja con él.",
   "slides": [
-    {"type": "title", "title": "Aspectos menores y patrones de aspecto", "subtitle": "Módulo 5 · Lección 14 — Astrología Natal Profunda"},
-    {"type": "content", "title": "Aspectos menores", "body": "Sextil (60°): oportunidad que requiere acción consciente.\nQuincuncio (150°): incomodidad sin lenguaje común.\nSemicuadratura (45°) y sesquicuadratura (135°): fricciones persistentes."},
-    {"type": "content", "title": "Patrones de aspecto principales", "body": "Gran Trígono: tres trígonos, fluidez y talento natural.\nT-Cuadrada: oposición + cuadraturas, tensión concentrada.\nGran Cruz: máxima tensión estructural en cuatro direcciones.\nYod: dos quincuncios + sextil, misión ajustiva."},
-    {"type": "quote", "text": "Los complejos son constelaciones de energía psíquica que operan como unidades funcionales autónomas dentro de la psique.", "source": "Carl G. Jung, 1964 — Estructura del inconsciente"},
-    {"type": "content", "title": "El planeta focal", "body": "En la T-Cuadrada: donde se descarga la tensión.\nEn el Yod: donde se concentra la misión ajustiva.\nEl planeta focal es la clave de interpretación del patrón."},
-    {"type": "content", "title": "Fluidez versus tensión", "body": "Gran Trígono: talento sin esfuerzo, riesgo de pasividad.\nT-Cuadrada: presión constante, potencial de maestría.\nGran Cruz: tirón en cuatro direcciones, fortaleza si se integra."},
-    {"type": "reflection", "question": "Observa tu carta con ojos geométricos. ¿Ves alguna figura que destaque? Si tienes un patrón de aspecto, probablemente sea un tema central de tu vida."},
-    {"type": "summary", "points": ["Los aspectos menores añaden matices de oportunidad, incomodidad y fricción al mapa natal", "Los patrones de aspecto son circuitos integrados que funcionan como complejos psicológicos", "El planeta focal de cada patrón es la clave para entender cómo se descarga la energía de la configuración"]},
-    {"type": "next", "text": "En la siguiente lección pondrás todo esto en práctica: leerás los aspectos de tu propia carta natal."}
+    {
+      "type": "title",
+      "title": "Aspectos menores y patrones de aspecto",
+      "subtitle": "Módulo 5 · Lección 14 — Astrología Natal Profunda"
+    },
+    {
+      "type": "content",
+      "title": "Aspectos menores",
+      "body": "Sextil (60°): oportunidad que requiere acción consciente.\nQuincuncio (150°): incomodidad sin lenguaje común.\nSemicuadratura (45°) y sesquicuadratura (135°): fricciones persistentes."
+    },
+    {
+      "type": "content",
+      "title": "Patrones de aspecto principales",
+      "body": "Gran Trígono: tres trígonos, fluidez y talento natural.\nT-Cuadrada: oposición + cuadraturas, tensión concentrada.\nGran Cruz: máxima tensión estructural en cuatro direcciones.\nYod: dos quincuncios + sextil, misión ajustiva."
+    },
+    {
+      "type": "quote",
+      "text": "Los complejos son constelaciones de energía psíquica que operan como unidades funcionales autónomas dentro de la psique.",
+      "source": "Carl G. Jung, 1964 — Estructura del inconsciente"
+    },
+    {
+      "type": "content",
+      "title": "El planeta focal",
+      "body": "En la T-Cuadrada: donde se descarga la tensión.\nEn el Yod: donde se concentra la misión ajustiva.\nEl planeta focal es la clave de interpretación del patrón."
+    },
+    {
+      "type": "content",
+      "title": "Fluidez versus tensión",
+      "body": "Gran Trígono: talento sin esfuerzo, riesgo de pasividad.\nT-Cuadrada: presión constante, potencial de maestría.\nGran Cruz: tirón en cuatro direcciones, fortaleza si se integra."
+    },
+    {
+      "type": "reflection",
+      "question": "Observa tu carta con ojos geométricos. ¿Ves alguna figura que destaque? Si tienes un patrón de aspecto, probablemente sea un tema central de tu vida."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Los aspectos menores añaden matices de oportunidad, incomodidad y fricción al mapa natal",
+        "Los patrones de aspecto son circuitos integrados que funcionan como complejos psicológicos",
+        "El planeta focal de cada patrón es la clave para entender cómo se descarga la energía de la configuración"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección pondrás todo esto en práctica: leerás los aspectos de tu propia carta natal."
+    }
   ],
   "citation": {
     "researcher": "Carl G. Jung",
     "year": "1964",
     "finding": "Los complejos psicológicos funcionan como constelaciones autónomas de energía que operan como unidades funcionales integradas dentro de la estructura psíquica"
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Trigono (120)",
+        "Cuadratura (90)"
+      ],
+      "rows": [
+        [
+          "Sensacion",
+          "Flujo natural, facilidad",
+          "Tension, friccion, desafio"
+        ],
+        [
+          "Riesgo",
+          "Complacencia, dar por sentado",
+          "Estres, conflicto interno"
+        ],
+        [
+          "Potencial",
+          "Talento innato a desarrollar",
+          "Crecimiento a traves del esfuerzo"
+        ],
+        [
+          "Accion requerida",
+          "Activar conscientemente",
+          "Integrar las energias opuestas"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Los aspectos menores anaden matices sutiles a la carta natal",
+        "Los patrones de aspecto (gran trigono, T-cuadrada, yod) son configuraciones clave",
+        "La carta se lee como una red de relaciones entre planetas",
+        "Cada aspecto es una conversacion interna entre funciones psicologicas"
+      ]
+    }
+  ]
 }

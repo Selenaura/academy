@@ -41,5 +41,27 @@
     "researcher": "Sara Lazar",
     "year": "2005",
     "finding": "Cambios estructurales en el cerebro comienzan a ser detectables tras aproximadamente ocho semanas de práctica meditativa regular, incluyendo aumento del grosor cortical en áreas de atención."
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Rewiring 10 min",
+      "steps": [
+        "Minuto 1-2 relajacion",
+        "3-5 visualizacion",
+        "6-8 sensacion corporal",
+        "9-10 gratitud"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "10 minutos diarios de practica estructurada recablean el cerebro",
+        "La secuencia relajacion-visualizacion-sensacion-gratitud maximiza el impacto",
+        "La sensacion corporal ancla la visualizacion en la fisiologia",
+        "La consistencia importa mas que la duracion de cada sesion"
+      ]
+    }
+  ]
 }

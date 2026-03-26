@@ -60,5 +60,28 @@
     "researcher": "Gonda et al.",
     "year": "2014",
     "finding": "Encontraron asociaciones significativas entre la estación de nacimiento y tipos de temperamento afectivo: primavera/verano con tendencia hipertímica, otoño con tendencia depresiva, en una muestra de más de 400 personas"
-  }
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "Ritmos infradianos",
+      "nodes": [
+        "Ciclo menstrual (~28 dias)",
+        "Ciclos estacionales",
+        "Ritmos lunares",
+        "Ciclos hormonales anuales",
+        "Variaciones inmunes estacionales"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Los ritmos infradianos son ciclos biologicos mas largos que 24 horas",
+        "Incluyen el ciclo menstrual, estaciones y posibles influencias lunares",
+        "La estacion de nacimiento correlaciona con ciertos rasgos temperamentales",
+        "Estos ritmos largos modulan el estado de animo y la fisiologia de fondo"
+      ]
+    }
+  ]
 }

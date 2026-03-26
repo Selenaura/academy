@@ -41,5 +41,47 @@
     "researcher": "Robert K. Merton",
     "year": "1948",
     "finding": "La profecía autocumplida demuestra que una definición inicial de una situación, aunque sea falsa, provoca comportamientos que terminan haciendo verdadera la creencia original."
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Sesgo como aliado",
+        "Sesgo como enemigo"
+      ],
+      "rows": [
+        [
+          "Expectativa positiva",
+          "Detectas oportunidades reales",
+          "Ignoras riesgos legitimos"
+        ],
+        [
+          "Expectativa negativa",
+          "Te proteges de amenazas",
+          "Bloqueas posibilidades reales"
+        ],
+        [
+          "Relaciones",
+          "Ves lo mejor en otros",
+          "Confirmas prejuicios"
+        ],
+        [
+          "Decisiones",
+          "Sesgo hacia la accion",
+          "Paralisis por sobreconfirmacion"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Las expectativas moldean la realidad a traves de la profecia autocumplida",
+        "El efecto Pygmalion demuestra que las expectativas ajenas nos transforman",
+        "Tus expectativas modifican tu conducta de forma inconsciente",
+        "Elegir expectativas es elegir los resultados que cultivas"
+      ]
+    }
+  ]
 }

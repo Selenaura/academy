@@ -60,5 +60,47 @@
     "researcher": "Cajochen et al.",
     "year": "2013",
     "finding": "En condiciones de laboratorio controladas sin acceso a luz natural, encontraron que alrededor de luna llena la latencia del sueño aumentó, el sueño profundo se redujo un 30% y los niveles de melatonina bajaron significativamente"
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "Estudio",
+        "Hallazgo",
+        "Nivel de evidencia"
+      ],
+      "rows": [
+        [
+          "Cajochen et al. 2013",
+          "Sueno mas corto y superficial en luna llena",
+          "Moderado (controlado, N=33)"
+        ],
+        [
+          "Foster & Roenneberg 2008",
+          "Sin correlacion solida luna-comportamiento",
+          "Alto (meta-analisis)"
+        ],
+        [
+          "Zimecki 2006",
+          "Posible influencia lunar en sistema inmune",
+          "Bajo (revision preliminar)"
+        ],
+        [
+          "Bevington 2015",
+          "Correlacion debil luna-ingresos hospitalarios",
+          "Bajo (observacional)"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "La evidencia cientifica sobre la influencia lunar en biologia es mixta",
+        "Algunos estudios controlados muestran efectos en calidad de sueno",
+        "Los meta-analisis no confirman efectos fuertes luna-comportamiento",
+        "Es un campo abierto donde la investigacion continua"
+      ]
+    }
+  ]
 }

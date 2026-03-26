@@ -41,5 +41,47 @@
     "researcher": "Rollin McCraty",
     "year": "2015",
     "finding": "Estados emocionales de coherencia incrementan los niveles de IgA y DHEA mientras reducen el cortisol, generando un perfil hormonal asociado con vitalidad, resiliencia y mejor función inmune."
-  }
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Estres cronico",
+        "Estados elevados"
+      ],
+      "rows": [
+        [
+          "Hormonas",
+          "Cortisol y adrenalina elevados",
+          "Oxitocina, serotonina, dopamina"
+        ],
+        [
+          "Expresion genica",
+          "Genes inflamatorios activos",
+          "Genes de reparacion activos"
+        ],
+        [
+          "Sistema inmune",
+          "Suprimido, vulnerable",
+          "Fortalecido, resiliente"
+        ],
+        [
+          "Cognicion",
+          "Vision de tunel, reactividad",
+          "Creatividad, apertura, claridad"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "El estres cronico activa genes inflamatorios y suprime la inmunidad",
+        "Los estados elevados (gratitud, compasion) activan genes de reparacion",
+        "La diferencia entre ambos estados es quimica, medible y modificable",
+        "Elegir tus estados emocionales es una forma de medicina epigenetica"
+      ]
+    }
+  ]
 }

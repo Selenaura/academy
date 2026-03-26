@@ -41,5 +41,28 @@
     "researcher": "Michael Meaney",
     "year": "2001",
     "finding": "El cuidado materno modifica la metilación del gen del receptor de glucocorticoides en las crías, alterando de forma duradera su respuesta al estrés y demostrando que la experiencia regula la expresión génica."
-  }
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "Epigenetica",
+      "nodes": [
+        "Expresion genica",
+        "Entorno emocional",
+        "Metilacion del ADN",
+        "Histonas",
+        "Herencia epigenetica"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "La epigenetica demuestra que tus emociones hablan a tus genes",
+        "El entorno emocional modifica la expresion genica sin alterar el ADN",
+        "La metilacion y las histonas son los mecanismos principales",
+        "Los cambios epigeneticos pueden ser heredados por las siguientes generaciones"
+      ]
+    }
+  ]
 }

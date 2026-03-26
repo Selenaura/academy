@@ -60,5 +60,28 @@
     "researcher": "Foster & Kreitzman",
     "year": "2017",
     "finding": "Documentaron extensamente cómo el núcleo supraquiasmático coordina la fisiología temporal del organismo completo, incluyendo ajustes estacionales de los ritmos internos de día y noche"
-  }
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "NSQ (Reloj maestro)",
+      "nodes": [
+        "Hipotalamo",
+        "Senal luminosa retina",
+        "Sincronizacion relojes perifericos",
+        "Regulacion hormonal",
+        "Ciclo sueno-vigilia"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "El nucleo supraquiasmatico (NSQ) es el reloj maestro del cerebro",
+        "Recibe informacion luminica directa de la retina",
+        "Sincroniza todos los relojes perifericos del cuerpo",
+        "Su dano produce desregulacion completa de los ritmos circadianos"
+      ]
+    }
+  ]
 }

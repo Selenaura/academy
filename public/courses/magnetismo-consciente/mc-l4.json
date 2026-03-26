@@ -41,5 +41,28 @@
     "researcher": "Rollin McCraty",
     "year": "2015",
     "finding": "La coherencia cardíaca facilita las funciones cognitivas superiores al enviar señales ordenadas desde el corazón a la corteza prefrontal, mejorando la toma de decisiones y la regulación emocional."
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Coherencia cardiaca",
+      "steps": [
+        "Respiracion ritmica",
+        "Foco en corazon",
+        "Emocion positiva",
+        "Coherencia HRV",
+        "Senal vagal al cerebro"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "El corazon genera el campo electromagnetico mas potente del cuerpo",
+        "La coherencia cardiaca mejora la toma de decisiones y la creatividad",
+        "La senal vagal del corazon al cerebro influye en estados emocionales",
+        "Entrenar la coherencia es entrenar tu capacidad de magnetismo"
+      ]
+    }
+  ]
 }

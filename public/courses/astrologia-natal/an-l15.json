@@ -4,19 +4,79 @@
   "title": "Práctica: lee los aspectos de tu propia carta",
   "text_content": "Esta es una lección de práctica. No hay teoría nueva. Hay un método, un ejemplo y tu propia carta esperando ser leída. Vamos a aplicar todo lo que has aprendido sobre aspectos en un ejercicio guiado paso a paso.\n\nPaso 1: prepara tu carta natal. Necesitas una carta que muestre la tabla de aspectos, esa cuadrícula triangular donde se cruzan todos los planetas entre sí. La mayoría de programas y sitios web de astrología la incluyen. Si no la tienes, genera tu carta en cualquier servicio gratuito que use las efemérides de NASA JPL para cálculos precisos.\n\nPaso 2: identifica los aspectos mayores. Busca primero las conjunciones, oposiciones, trígonos y cuadraturas. Márcalos o anótalos en una lista. No te preocupes por los aspectos menores todavía. Necesitas ver el esqueleto antes de los matices.\n\nPaso 3: prioriza los aspectos que involucran al Sol, la Luna y el Ascendente. Estos son los más personales y los que más directamente experimentas. Un aspecto entre Neptuno y Plutón es generacional y apenas lo sientes individualmente. Un aspecto entre el Sol y Saturno lo sientes cada día de tu vida.\n\nPaso 4: interpreta cada aspecto con la fórmula función + relación + función. No memorices recetas. Usa la lógica. Si tienes una cuadratura Luna-Marte, piensa: la función emocional (Luna) está en tensión productiva con la función de acción (Marte). Eso puede traducirse como me cuesta encontrar el equilibrio entre lo que siento y lo que hago, o mis emociones me impulsan a actuar de forma impulsiva y luego me arrepiento.\n\nPaso 5: observa los patrones. ¿Tienes algún Gran Trígono, T-Cuadrada, Gran Cruz o Yod? Si lo tienes, ese patrón merece un análisis especial porque probablemente sea uno de los temas centrales de tu vida.\n\nVeamos un ejemplo de lectura. Supongamos una carta con Sol en Aries en casa 10, conjunción a Marte en Aries en casa 10, cuadratura a Luna en Cáncer en casa 1, y trígono a Júpiter en Leo en casa 2.\n\nLa conjunción Sol-Marte en casa 10 fusiona identidad y acción en el ámbito de la vocación. Esta persona se define por lo que hace profesionalmente. Su sentido de propósito pasa directamente por la acción visible y el liderazgo.\n\nLa cuadratura Luna en Cáncer en casa 1 genera tensión entre esa identidad de acción y unas necesidades emocionales de seguridad, hogar y cuidado que se manifiestan en la forma de presentarse al mundo. La persona siente un tira y afloja entre la ambición pública y la vulnerabilidad emocional que lleva puesta como una segunda piel.\n\nEl trígono a Júpiter en Leo en casa 2 facilita que la acción profesional se traduzca en recursos, autoestima y abundancia. Hay un flujo natural entre lo que esta persona hace en el mundo y la prosperidad que genera.\n\nLiz Greene insistió en que la lectura de aspectos requiere síntesis, no enumeración. No se trata de leer cada aspecto por separado sino de tejer una narrativa que integre todos los hilos. Los aspectos son las relaciones entre los personajes de tu historia psíquica. La lectura consiste en contar esa historia con coherencia.\n\nCornelius añadió que la interpretación astrológica es un acto creativo: el mapa está ahí, pero el significado emerge en la interacción entre el mapa y la persona que lo lee. No hay una lectura correcta. Hay lecturas más o menos profundas, más o menos honestas.\n\nEjercicio completo: haz los cinco pasos con tu propia carta. Escribe las interpretaciones a mano. No busques en internet. Usa lo que has aprendido: función + relación + función. Luego lee tu texto en voz alta. Si algo vibra, vas por buen camino. Si algo suena hueco, profundiza. Tu carta te está hablando. Aprende a escucharla.",
   "slides": [
-    {"type": "title", "title": "Práctica: lee los aspectos de tu propia carta", "subtitle": "Módulo 5 · Lección 15 — Astrología Natal Profunda"},
-    {"type": "content", "title": "El método en 5 pasos", "body": "1. Prepara tu carta con tabla de aspectos.\n2. Identifica aspectos mayores.\n3. Prioriza los que tocan Sol, Luna y Ascendente.\n4. Interpreta: función + relación + función.\n5. Observa patrones geométricos."},
-    {"type": "content", "title": "Ejemplo de lectura", "body": "Sol-Marte conjunción en casa 10: identidad = acción profesional.\nCuadratura a Luna en casa 1: tensión ambición vs. vulnerabilidad.\nTrígono a Júpiter en casa 2: la acción genera abundancia."},
-    {"type": "quote", "text": "La interpretación astrológica es un acto creativo: el mapa está ahí, pero el significado emerge en la interacción entre el mapa y quien lo lee.", "source": "Geoffrey Cornelius, 2003 — The Moment of Astrology"},
-    {"type": "content", "title": "Síntesis, no enumeración", "body": "No leas cada aspecto por separado.\nTeje una narrativa que integre todos los hilos.\nLos aspectos son relaciones entre personajes de tu historia."},
-    {"type": "content", "title": "Señales de una buena lectura", "body": "Si algo vibra, vas por buen camino.\nSi algo suena hueco, profundiza más.\nLa carta te habla: la práctica te enseña a escuchar."},
-    {"type": "reflection", "question": "Elige el aspecto más fuerte de tu carta (el que involucre luminarias con orbe estrecho). Escribe tres líneas sobre cómo sientes esa dinámica en tu vida cotidiana."},
-    {"type": "summary", "points": ["La lectura de aspectos sigue un método: preparar, identificar, priorizar, interpretar y buscar patrones", "La fórmula función + relación + función permite interpretar cualquier aspecto sin memorizar recetas", "La lectura de calidad integra todos los aspectos en una narrativa coherente, no una lista de datos aislados"]},
-    {"type": "next", "text": "En el próximo módulo daremos vida a la carta en movimiento: los tránsitos y cómo el cielo actual activa tu carta natal."}
+    {
+      "type": "title",
+      "title": "Práctica: lee los aspectos de tu propia carta",
+      "subtitle": "Módulo 5 · Lección 15 — Astrología Natal Profunda"
+    },
+    {
+      "type": "content",
+      "title": "El método en 5 pasos",
+      "body": "1. Prepara tu carta con tabla de aspectos.\n2. Identifica aspectos mayores.\n3. Prioriza los que tocan Sol, Luna y Ascendente.\n4. Interpreta: función + relación + función.\n5. Observa patrones geométricos."
+    },
+    {
+      "type": "content",
+      "title": "Ejemplo de lectura",
+      "body": "Sol-Marte conjunción en casa 10: identidad = acción profesional.\nCuadratura a Luna en casa 1: tensión ambición vs. vulnerabilidad.\nTrígono a Júpiter en casa 2: la acción genera abundancia."
+    },
+    {
+      "type": "quote",
+      "text": "La interpretación astrológica es un acto creativo: el mapa está ahí, pero el significado emerge en la interacción entre el mapa y quien lo lee.",
+      "source": "Geoffrey Cornelius, 2003 — The Moment of Astrology"
+    },
+    {
+      "type": "content",
+      "title": "Síntesis, no enumeración",
+      "body": "No leas cada aspecto por separado.\nTeje una narrativa que integre todos los hilos.\nLos aspectos son relaciones entre personajes de tu historia."
+    },
+    {
+      "type": "content",
+      "title": "Señales de una buena lectura",
+      "body": "Si algo vibra, vas por buen camino.\nSi algo suena hueco, profundiza más.\nLa carta te habla: la práctica te enseña a escuchar."
+    },
+    {
+      "type": "reflection",
+      "question": "Elige el aspecto más fuerte de tu carta (el que involucre luminarias con orbe estrecho). Escribe tres líneas sobre cómo sientes esa dinámica en tu vida cotidiana."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La lectura de aspectos sigue un método: preparar, identificar, priorizar, interpretar y buscar patrones",
+        "La fórmula función + relación + función permite interpretar cualquier aspecto sin memorizar recetas",
+        "La lectura de calidad integra todos los aspectos en una narrativa coherente, no una lista de datos aislados"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el próximo módulo daremos vida a la carta en movimiento: los tránsitos y cómo el cielo actual activa tu carta natal."
+    }
   ],
   "citation": {
     "researcher": "Geoffrey Cornelius",
     "year": "2003",
     "finding": "La interpretación astrológica es un acto creativo de significación donde el sentido emerge de la interacción entre el sistema simbólico y la persona que lo interpreta"
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Leer los aspectos de tu carta",
+      "steps": [
+        "Identificar aspectos mayores",
+        "Priorizar aspectos a planetas personales",
+        "Notar patrones de aspecto",
+        "Interpretar los dialogos internos",
+        "Sintetizar la narrativa"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "Empieza por los aspectos a tu Sol y Luna para entender tus dinamicas centrales",
+        "Los aspectos a planetas personales son los mas relevantes individualmente",
+        "Busca patrones (gran trigono, T-cuadrada) para ver temas recurrentes",
+        "La practica convierte la lectura de aspectos en una habilidad natural"
+      ]
+    }
+  ]
 }

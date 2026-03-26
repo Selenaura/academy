@@ -41,5 +41,27 @@
     "researcher": "Sara Lazar",
     "year": "2005",
     "finding": "Los cambios estructurales cerebrales asociados a la práctica meditativa comienzan a ser detectables tras aproximadamente ocho semanas de práctica regular, apoyando protocolos sostenidos como base del recableado neuroplástico."
-  }
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Protocolo de 21 dias",
+      "steps": [
+        "Dia 1-7: Establecer intencion + coherencia cardiaca",
+        "Dia 8-14: Visualizacion + rewiring diario",
+        "Dia 15-21: Integracion + registro de sincronicidades",
+        "Evaluacion: medir cambios percibidos"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "21 dias es el minimo para instalar un nuevo patron neuronal",
+        "El protocolo combina coherencia, visualizacion y registro consciente",
+        "La progresion semanal permite asentar cada capa antes de anadir la siguiente",
+        "Disenar tu protocolo personalizado aumenta el compromiso y la eficacia"
+      ]
+    }
+  ]
 }

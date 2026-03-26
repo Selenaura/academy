@@ -60,5 +60,28 @@
     "researcher": "Wittmann et al.",
     "year": "2006",
     "finding": "Demostraron que el jet lag social (discrepancia entre reloj biológico y social) se asocia con mayor IMC, mayor consumo de estimulantes y peor salud, de forma proporcional a la magnitud de la discrepancia"
-  }
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "Jet lag social",
+      "nodes": [
+        "Horario biologico vs social",
+        "Desalineacion cronica",
+        "Fatiga y bajo rendimiento",
+        "Mayor riesgo metabolico",
+        "Cronotipo ignorado"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la leccion",
+      "points": [
+        "El jet lag social es la diferencia entre tu reloj biologico y tu horario social",
+        "Afecta especialmente a los cronotipos vespertinos con horarios matutinos",
+        "Produce fatiga cronica, peor rendimiento y mayor riesgo metabolico",
+        "Reducir el jet lag social mejora salud, humor y productividad"
+      ]
+    }
+  ]
 }
