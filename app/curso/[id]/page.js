@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { COURSES } from '@/lib/constants';
 import { Card, ProgressBar, Badge, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
 import { FlipCards, MatchExercise, HotspotImage, FillBlanks, SortExercise, KeyConcept, ProgressCheck, MultipleChoice, Timeline, ComparisonTable, Scenario, RevealSections } from '@/components/InteractiveElements';
+import { ProcessDiagram, ConceptMap, LessonSummary, SpacedReview, AnnotatedImage, BranchingScenario } from '@/components/LearningElements';
 
 // ── Chevron Icons for slide navigation ──
 function ChevronLeftIcon({ size = 20, className = '' }) {
@@ -498,6 +499,12 @@ export default function CoursePage({ params }) {
                       case 'comparison': return <ComparisonTable key={i} title={el.title} headers={el.headers} rows={el.rows} />;
                       case 'scenario': return <Scenario key={i} title={el.title} description={el.description} question={el.question} options={el.options} />;
                       case 'reveal': return <RevealSections key={i} title={el.title} sections={el.sections} />;
+                      case 'process_diagram': return <ProcessDiagram key={i} title={el.title} steps={el.steps} direction={el.direction} />;
+                      case 'concept_map': return <ConceptMap key={i} title={el.title} centerNode={el.centerNode} nodes={el.nodes} />;
+                      case 'lesson_summary': return <LessonSummary key={i} title={el.title} points={el.points} citation={el.citation} nextLesson={el.nextLesson} />;
+                      case 'spaced_review': return <SpacedReview key={i} questions={el.questions} />;
+                      case 'annotated_image': return <AnnotatedImage key={i} title={el.title} imageUrl={el.imageUrl} altText={el.altText} annotations={el.annotations} />;
+                      case 'branching_scenario': return <BranchingScenario key={i} title={el.title} scenario={el.scenario} />;
                       default: return null;
                     }
                   })}
