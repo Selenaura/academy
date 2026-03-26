@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" style="background:#0A0A0F">
+  <text x="200" y="20" fill="#C9A84C" font-size="14" font-family="Georgia" text-anchor="middle" font-weight="bold">Líneas Menores y Marcas</text>
+
+  <!-- Palm outline -->
+  <path d="M200,470 C130,470 70,415 55,340 L50,260 C47,225 55,185 70,155 L85,125 C90,110 100,95 105,85 L115,60 C120,45 130,30 145,25 L155,23 C163,22 170,27 173,35 L180,60 L185,85 L187,105
+  M187,105 C190,90 195,65 200,45 L205,25 C208,15 215,10 223,10 L227,10 C235,10 240,17 242,25 L247,50 L250,80 L251,105
+  M251,105 C253,85 257,60 263,40 L267,25 C270,15 277,10 285,13 L288,15 C293,18 295,25 294,33 L290,60 L287,85 L285,105
+  M285,105 C288,90 293,70 298,55 L303,43 C307,33 313,30 320,33 L323,35 C327,38 329,45 327,55 L323,75 L317,95 L313,110
+  M313,110 C325,120 345,145 353,175 L360,205 C367,235 363,275 355,305 L345,345 C330,385 295,435 265,460 L245,472 C230,478 215,478 200,470 Z" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.4"/>
+
+  <!-- Main lines (faint reference) -->
+  <path d="M315,170 C280,160 245,155 215,157 C185,159 155,165 125,175 C110,181 95,189 80,199" fill="none" stroke="#555" stroke-width="1" opacity="0.3"/>
+  <path d="M85,215 C115,213 145,215 175,220 C205,225 235,233 265,245" fill="none" stroke="#555" stroke-width="1" opacity="0.3"/>
+  <path d="M125,135 C115,155 105,180 95,215 C85,255 80,295 83,335 C85,365 90,395 100,425" fill="none" stroke="#555" stroke-width="1" opacity="0.3"/>
+
+  <!-- MINOR LINES -->
+
+  <!-- Mars line (parallel to life, inner) -->
+  <path d="M115,160 C108,180 100,210 95,240 C90,270 88,300 90,325" fill="none" stroke="#FF9F43" stroke-width="2" opacity="0.8"/>
+  <text x="55" y="240" fill="#FF9F43" font-size="8" font-family="sans-serif">Marte</text>
+
+  <!-- Intuition line (arc on Luna mount) -->
+  <path d="M330,250 C335,280 330,310 315,340" fill="none" stroke="#BB86FC" stroke-width="2" opacity="0.8"/>
+  <text x="340" y="295" fill="#BB86FC" font-size="8" font-family="sans-serif">Intuición</text>
+
+  <!-- Marriage lines (lateral under pinky) -->
+  <line x1="325" y1="155" x2="340" y2="155" stroke="#FF6B6B" stroke-width="1.5" opacity="0.8"/>
+  <line x1="325" y1="162" x2="338" y2="162" stroke="#FF6B6B" stroke-width="1.5" opacity="0.6"/>
+  <text x="345" y="160" fill="#FF6B6B" font-size="7" font-family="sans-serif">Unión</text>
+
+  <!-- Health line (diagonal to Mercury) -->
+  <path d="M160,420 C180,380 220,320 270,260 C290,235 305,215 315,195" fill="none" stroke="#6B8FC5" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/>
+  <text x="260" y="305" fill="#6B8FC5" font-size="8" font-family="sans-serif">Salud</text>
+
+  <!-- SPECIAL MARKINGS -->
+
+  <!-- Star on Jupiter mount -->
+  <g transform="translate(155,140)">
+    <line x1="0" y1="-6" x2="0" y2="6" stroke="#C9A84C" stroke-width="1.5"/>
+    <line x1="-5" y1="-3" x2="5" y2="3" stroke="#C9A84C" stroke-width="1.5"/>
+    <line x1="-5" y1="3" x2="5" y2="-3" stroke="#C9A84C" stroke-width="1.5"/>
+    <text x="12" y="3" fill="#C9A84C" font-size="7" font-family="sans-serif">★</text>
+  </g>
+
+  <!-- Cross (Croix Mystique between head and heart) -->
+  <g transform="translate(190,195)">
+    <line x1="0" y1="-5" x2="0" y2="5" stroke="#00D68F" stroke-width="1.5"/>
+    <line x1="-5" y1="0" x2="5" y2="0" stroke="#00D68F" stroke-width="1.5"/>
+    <text x="10" y="3" fill="#00D68F" font-size="7" font-family="sans-serif">✝ Mística</text>
+  </g>
+
+  <!-- Triangle on Apollo mount -->
+  <g transform="translate(270,140)">
+    <polygon points="0,-6 -5,4 5,4" fill="none" stroke="#FF9F43" stroke-width="1.5"/>
+    <text x="10" y="0" fill="#FF9F43" font-size="7" font-family="sans-serif">△</text>
+  </g>
+
+  <!-- Square (protection on life line break) -->
+  <g transform="translate(95,280)">
+    <rect x="-5" y="-5" width="10" height="10" fill="none" stroke="#00D68F" stroke-width="1.5"/>
+    <text x="12" y="3" fill="#00D68F" font-size="7" font-family="sans-serif">□ Protección</text>
+  </g>
+
+  <!-- Island on heart line -->
+  <ellipse cx="230" cy="158" rx="8" ry="4" fill="none" stroke="#FF6B6B" stroke-width="1.5"/>
+  <text x="245" y="162" fill="#FF6B6B" font-size="7" font-family="sans-serif">○ Isla</text>
+
+  <!-- Grille on Venus mount -->
+  <g transform="translate(115,345)">
+    <line x1="-6" y1="-4" x2="-6" y2="4" stroke="#FF6B6B" stroke-width="0.8" opacity="0.7"/>
+    <line x1="-2" y1="-4" x2="-2" y2="4" stroke="#FF6B6B" stroke-width="0.8" opacity="0.7"/>
+    <line x1="2" y1="-4" x2="2" y2="4" stroke="#FF6B6B" stroke-width="0.8" opacity="0.7"/>
+    <line x1="-8" y1="-2" x2="4" y2="-2" stroke="#FF6B6B" stroke-width="0.8" opacity="0.7"/>
+    <line x1="-8" y1="2" x2="4" y2="2" stroke="#FF6B6B" stroke-width="0.8" opacity="0.7"/>
+    <text x="12" y="3" fill="#FF6B6B" font-size="7" font-family="sans-serif">▦ Rejilla</text>
+  </g>
+
+  <!-- Legend -->
+  <rect x="15" y="440" width="370" height="50" rx="8" fill="#12121A" stroke="#333" stroke-width="0.5"/>
+  <text x="200" y="457" fill="#C9A84C" font-size="9" font-family="Georgia" text-anchor="middle">Marcas positivas: ★ Estrella · △ Triángulo · □ Cuadrado</text>
+  <text x="200" y="473" fill="#FF6B6B" font-size="9" font-family="Georgia" text-anchor="middle">Marcas de atención: ✝ Cruz · ○ Isla · ▦ Rejilla</text>
+</svg>

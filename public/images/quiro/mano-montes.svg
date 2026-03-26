@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" style="background:#0A0A0F">
+  <!-- Palm outline -->
+  <path d="M200,480 C120,480 60,420 50,340 L45,260 C42,220 50,180 65,150 L80,120 C85,105 95,90 100,80 L110,55 C115,40 125,25 140,20 L150,18 C158,17 165,22 168,30 L175,55 L180,80 L182,100
+  M182,100 C185,85 190,60 195,40 L200,20 C203,10 210,5 218,5 L222,5 C230,5 235,12 237,20 L242,45 L245,75 L246,100
+  M246,100 C248,80 252,55 258,35 L262,20 C265,10 272,5 280,8 L283,10 C288,13 290,20 289,28 L285,55 L282,80 L280,100
+  M280,100 C283,85 288,65 293,50 L298,38 C302,28 308,25 315,28 L318,30 C322,33 324,40 322,50 L318,70 L312,90 L308,105
+  M308,105 C320,115 340,140 348,170 L355,200 C362,230 358,270 350,300 L340,340 C325,380 290,430 260,460 L240,475 C225,482 210,482 200,480 Z" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Mount zones (filled areas) -->
+  <!-- Jupiter (bajo índice) -->
+  <ellipse cx="148" cy="135" rx="25" ry="18" fill="#FF6B6B" opacity="0.15" stroke="#FF6B6B" stroke-width="1"/>
+  <text x="148" y="139" fill="#FF6B6B" font-size="10" font-family="Georgia" text-anchor="middle" font-weight="bold">Júpiter</text>
+  <text x="148" y="152" fill="#FF6B6B" font-size="7" font-family="sans-serif" text-anchor="middle" opacity="0.7">Ambición</text>
+
+  <!-- Saturn (bajo medio) -->
+  <ellipse cx="210" cy="125" rx="25" ry="18" fill="#6B8FC5" opacity="0.15" stroke="#6B8FC5" stroke-width="1"/>
+  <text x="210" y="129" fill="#6B8FC5" font-size="10" font-family="Georgia" text-anchor="middle" font-weight="bold">Saturno</text>
+  <text x="210" y="142" fill="#6B8FC5" font-size="7" font-family="sans-serif" text-anchor="middle" opacity="0.7">Disciplina</text>
+
+  <!-- Apollo (bajo anular) -->
+  <ellipse cx="265" cy="128" rx="22" ry="16" fill="#C9A84C" opacity="0.15" stroke="#C9A84C" stroke-width="1"/>
+  <text x="265" y="132" fill="#C9A84C" font-size="10" font-family="Georgia" text-anchor="middle" font-weight="bold">Apolo</text>
+  <text x="265" y="145" fill="#C9A84C" font-size="7" font-family="sans-serif" text-anchor="middle" opacity="0.7">Creatividad</text>
+
+  <!-- Mercury (bajo meñique) -->
+  <ellipse cx="315" cy="138" rx="20" ry="15" fill="#BB86FC" opacity="0.15" stroke="#BB86FC" stroke-width="1"/>
+  <text x="315" y="141" fill="#BB86FC" font-size="9" font-family="Georgia" text-anchor="middle" font-weight="bold">Mercurio</text>
+  <text x="315" y="153" fill="#BB86FC" font-size="7" font-family="sans-serif" text-anchor="middle" opacity="0.7">Comunicación</text>
+
+  <!-- Venus (base pulgar) -->
+  <ellipse cx="120" cy="340" rx="45" ry="65" fill="#FF9F43" opacity="0.1" stroke="#FF9F43" stroke-width="1"/>
+  <text x="120" y="335" fill="#FF9F43" font-size="11" font-family="Georgia" text-anchor="middle" font-weight="bold">Venus</text>
+  <text x="120" y="350" fill="#FF9F43" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.7">Amor · Vitalidad</text>
+
+  <!-- Mars Upper (bajo Mercury) -->
+  <ellipse cx="335" cy="220" rx="18" ry="22" fill="#FF6B6B" opacity="0.1" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="335" y="218" fill="#FF6B6B" font-size="8" font-family="Georgia" text-anchor="middle" font-weight="bold">Marte↑</text>
+  <text x="335" y="230" fill="#FF6B6B" font-size="7" font-family="sans-serif" text-anchor="middle" opacity="0.7">Resistencia</text>
+
+  <!-- Mars Lower (sobre Venus) -->
+  <ellipse cx="100" cy="195" rx="18" ry="22" fill="#FF6B6B" opacity="0.1" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="100" y="193" fill="#FF6B6B" font-size="8" font-family="Georgia" text-anchor="middle" font-weight="bold">Marte↓</text>
+  <text x="100" y="205" fill="#FF6B6B" font-size="7" font-family="sans-serif" text-anchor="middle" opacity="0.7">Valor</text>
+
+  <!-- Moon (borde exterior) -->
+  <ellipse cx="325" cy="340" rx="30" ry="50" fill="#6B8FC5" opacity="0.1" stroke="#6B8FC5" stroke-width="1"/>
+  <text x="325" y="335" fill="#6B8FC5" font-size="10" font-family="Georgia" text-anchor="middle" font-weight="bold">Luna</text>
+  <text x="325" y="350" fill="#6B8FC5" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.7">Imaginación</text>
+
+  <!-- Title -->
+  <text x="200" y="20" fill="#C9A84C" font-size="14" font-family="Georgia" text-anchor="middle" font-weight="bold">Los 7 Montes Planetarios</text>
+</svg>

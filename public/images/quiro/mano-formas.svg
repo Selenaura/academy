@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" style="background:#0A0A0F">
+  <text x="300" y="22" fill="#C9A84C" font-size="14" font-family="Georgia" text-anchor="middle" font-weight="bold">Las 4 Formas de Mano</text>
+
+  <!-- EARTH: square palm, short fingers -->
+  <g transform="translate(75,150)">
+    <rect x="-35" y="-30" width="70" height="75" rx="8" fill="none" stroke="#00D68F" stroke-width="1.5" opacity="0.6"/>
+    <line x1="-20" y1="-30" x2="-20" y2="-65" stroke="#00D68F" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <line x1="-5" y1="-30" x2="-5" y2="-72" stroke="#00D68F" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <line x1="10" y1="-30" x2="10" y2="-68" stroke="#00D68F" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <line x1="25" y1="-30" x2="25" y2="-58" stroke="#00D68F" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <text x="0" y="65" fill="#00D68F" font-size="12" font-family="Georgia" text-anchor="middle" font-weight="bold">🌍 TIERRA</text>
+    <text x="0" y="80" fill="#F0EDE4" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.5">Palma cuadrada</text>
+    <text x="0" y="92" fill="#F0EDE4" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.5">Dedos cortos</text>
+    <text x="0" y="108" fill="#00D68F" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.7">Práctica · Resistente</text>
+  </g>
+
+  <!-- FIRE: long palm, short fingers -->
+  <g transform="translate(225,150)">
+    <rect x="-30" y="-40" width="60" height="85" rx="8" fill="none" stroke="#FF6B6B" stroke-width="1.5" opacity="0.6"/>
+    <line x1="-18" y1="-40" x2="-18" y2="-72" stroke="#FF6B6B" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <line x1="-4" y1="-40" x2="-4" y2="-80" stroke="#FF6B6B" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <line x1="10" y1="-40" x2="10" y2="-76" stroke="#FF6B6B" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <line x1="22" y1="-40" x2="22" y2="-65" stroke="#FF6B6B" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <text x="0" y="65" fill="#FF6B6B" font-size="12" font-family="Georgia" text-anchor="middle" font-weight="bold">🔥 FUEGO</text>
+    <text x="0" y="80" fill="#F0EDE4" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.5">Palma larga</text>
+    <text x="0" y="92" fill="#F0EDE4" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.5">Dedos cortos</text>
+    <text x="0" y="108" fill="#FF6B6B" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.7">Extrovertida · Líder</text>
+  </g>
+
+  <!-- WATER: rectangular palm, long fingers -->
+  <g transform="translate(375,150)">
+    <rect x="-30" y="-35" width="60" height="80" rx="8" fill="none" stroke="#6B8FC5" stroke-width="1.5" opacity="0.6"/>
+    <line x1="-18" y1="-35" x2="-18" y2="-85" stroke="#6B8FC5" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <line x1="-4" y1="-35" x2="-4" y2="-98" stroke="#6B8FC5" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <line x1="10" y1="-35" x2="10" y2="-92" stroke="#6B8FC5" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <line x1="22" y1="-35" x2="22" y2="-78" stroke="#6B8FC5" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <text x="0" y="65" fill="#6B8FC5" font-size="12" font-family="Georgia" text-anchor="middle" font-weight="bold">💧 AGUA</text>
+    <text x="0" y="80" fill="#F0EDE4" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.5">Palma rectangular</text>
+    <text x="0" y="92" fill="#F0EDE4" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.5">Dedos largos</text>
+    <text x="0" y="108" fill="#6B8FC5" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.7">Artística · Intuitiva</text>
+  </g>
+
+  <!-- AIR: square palm, long fingers -->
+  <g transform="translate(525,150)">
+    <rect x="-35" y="-30" width="70" height="75" rx="8" fill="none" stroke="#BB86FC" stroke-width="1.5" opacity="0.6"/>
+    <line x1="-20" y1="-30" x2="-20" y2="-82" stroke="#BB86FC" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <line x1="-5" y1="-30" x2="-5" y2="-95" stroke="#BB86FC" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <line x1="10" y1="-30" x2="10" y2="-90" stroke="#BB86FC" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <line x1="25" y1="-30" x2="25" y2="-75" stroke="#BB86FC" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <text x="0" y="65" fill="#BB86FC" font-size="12" font-family="Georgia" text-anchor="middle" font-weight="bold">🌬️ AIRE</text>
+    <text x="0" y="80" fill="#F0EDE4" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.5">Palma cuadrada</text>
+    <text x="0" y="92" fill="#F0EDE4" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.5">Dedos largos</text>
+    <text x="0" y="108" fill="#BB86FC" font-size="8" font-family="sans-serif" text-anchor="middle" opacity="0.7">Intelectual · Curiosa</text>
+  </g>
+</svg>

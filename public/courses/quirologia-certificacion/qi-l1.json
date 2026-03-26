@@ -1,66 +1,132 @@
 {
   "lesson_number": 1,
   "module": 1,
-  "title": "Historia de la quirología: de Aristóteles a la dermatoglífica moderna",
-  "text_content": "Existe una disciplina que ha acompañado a la humanidad desde sus primeros registros escritos: el estudio de la mano como reflejo de la persona. Antes de que existieran los tests psicológicos o el escáner cerebral, los seres humanos ya miraban sus palmas buscando entenderse. Y lo hacían en todas las culturas, en todos los continentes, en todas las épocas.\n\nEsta disciplina tiene un nombre preciso: quirología. Del griego cheir (mano) y logos (estudio, conocimiento). No se trata de adivinación ni de predicciones sobre el futuro. Se trata de leer en las manos lo que la biología, la genética y el desarrollo embrionario han escrito en ellas. Quien se forma en quirología aprende a leer un mapa biológico único e irrepetible.\n\nCRONOLOGÍA ESENCIAL: DE LA ANTIGÜEDAD A LA CIENCIA MODERNA\n\n30.000 a.C. — Las cuevas de Altamira (España) y Lascaux (Francia) conservan impresiones de manos humanas en las paredes de roca. Aunque desconocemos su significado exacto, la mano era ya un símbolo central en la experiencia humana.\n\n3.000 a.C. — En la India, los Vedas contienen referencias al samudrika shastra, un sistema integral de lectura corporal que incluye la lectura de las líneas de la mano como parte de una comprensión holística de la persona.\n\n384-322 a.C. — Aristóteles dedica pasajes de su Historia Animalium al estudio de la mano. Anaxágoras argumentaba que la inteligencia humana está directamente relacionada con la complejidad de nuestras manos. Este vínculo entre mano y cognición es hoy un área activa de investigación neurocientífica.\n\n1652 — Se publica en España la primera obra conocida en castellano sobre el estudio de la mano. La tradición hispana en este campo es más antigua de lo que muchas personas suponen.\n\n1823 — El anatomista checo Jan Evangelista Purkinje publica la primera clasificación sistemática de patrones de huellas dactilares. Esta obra sienta las bases de la dermatoglífica.\n\n1892 — Sir Francis Galton publica Finger Prints, un trabajo estadístico riguroso que demuestra que las huellas dactilares son únicas e inmutables a lo largo de la vida. Galton calcula que la probabilidad de que dos personas compartan las mismas huellas es de aproximadamente 1 entre 64.000 millones.\n\n1900 — William G. Benham publica The Laws of Scientific Hand Reading, la primera obra que intenta sistematizar la lectura de la mano con metodología empírica. Benham cataloga cientos de configuraciones palmares y las correlaciona con rasgos observados en sus sujetos de estudio. Este libro sigue siendo una referencia fundamental para practicantes serios.\n\n1926-1943 — Harold Cummins acuña el término dermatoglyphics (dermatoglifos) y, junto con Charles Midlo, publica en 1943 Fingerprints, Palms and Soles, la obra de referencia en dermatoglífica. Demuestran que los patrones de crestas dérmicas se forman entre las semanas 12 y 24 de gestación y, una vez formados, no cambian nunca.\n\n1933 — Noel Jaquin publica The Hand of Man, donde establece protocolos prácticos de lectura que influirán en generaciones de practicantes. Jaquin es clave para entender la transición de la quiromancia tradicional a la quirología moderna basada en observación.\n\n1942-1951 — Charlotte Wolff, médica y psicóloga berlinesa exiliada en Londres, publica The Human Hand (1942) y The Hand in Psychological Diagnosis (1951). Wolff trabaja con pacientes psiquiátricos y demuestra correlaciones estadísticas entre la forma de la mano y rasgos de personalidad. Su trabajo introduce el rigor clínico en el campo.\n\n1955 — Julius Spier publica The Hands of Children, un estudio pionero sobre el desarrollo de las líneas de la mano en la infancia, demostrando que las líneas cambian durante el desarrollo pero los dermatoglifos permanecen fijos.\n\n1999 — Doreen Kimura publica investigación sobre la asimetría de los patrones de crestas entre ambas manos y su correlación con la lateralización cerebral y la exposición a testosterona prenatal.\n\n2016 — Ellen Goldberg publica The Art and Science of Hand Reading, una síntesis moderna que integra la tradición quirológica con hallazgos de la neurociencia y la psicología contemporáneas.\n\nDOS CONCEPTOS CLAVE PARA ESTA CERTIFICACIÓN\n\nPrimero: la quirología no es quiromancia. La quiromancia predice el futuro; la quirología lee el presente y el pasado biológico inscrito en la mano. Toda esta certificación se basa en la observación sistemática, no en la adivinación.\n\nSegundo: la mano es un órgano extraordinariamente complejo. Contiene 27 huesos, más de 30 músculos, una red vascular y nerviosa densísima, y una piel cubierta de patrones únicos formados antes del nacimiento. La corteza cerebral dedica más espacio a la mano que a cualquier otra parte del cuerpo (excepto los labios). La conexión mano-cerebro no es una metáfora: es anatomía.\n\nConsulta el diagrama 1.1 (Cronología visual de la quirología) en el material complementario para una representación visual de esta línea temporal.\n\n--- EJERCICIO PRÁCTICO ---\n\nAntes de continuar con la siguiente lección, realiza este ejercicio:\n\n1. Construye tu propia línea temporal de la quirología en una hoja de papel, incluyendo al menos 8 de los hitos mencionados en esta lección.\n2. Junto a cada hito, anota si corresponde a la tradición cultural (T), la investigación científica (C) o la práctica clínica (P).\n3. Investiga brevemente quiénes fueron Benham y Charlotte Wolff. Anota una contribución clave de cada persona.\n4. Reflexiona por escrito (mínimo 100 palabras): ¿Por qué crees que es importante distinguir entre quiromancia y quirología? ¿Cómo explicarías esta diferencia a alguien que no conoce el campo?\n\nGuarda este ejercicio: formará parte de tu portfolio de certificación.",
+  "title": "Las 3 ramas de la quirología",
+  "text_content": "Hay una disciplina milenaria que estudia la mano humana como mapa biológico, psicológico y energético de la persona. No se trata de adivinación ni de predicciones vagas: se trata de un sistema de observación con tres ramas diferenciadas, cada una con su propia historia, su propia metodología y su propio campo de estudio. Esas tres ramas son la quirognomía, la quiromancia y los dermatoglifos. Juntas, forman lo que hoy llamamos quirología.\n\nAntes de leer una sola línea, antes de interpretar una sola forma, necesitas entender qué estudia cada rama y por qué las tres juntas ofrecen una lectura infinitamente más rica que cualquiera de ellas por separado. Eso es lo que vamos a explorar en esta primera lección.\n\nETIMOLOGÍA: LAS RAÍCES GRIEGAS\n\nLas tres ramas comparten una raíz etimológica común: la palabra griega cheir (o quiros en su forma latinizada), que significa mano o palma. A partir de ahí, cada rama añade un sufijo que define su campo de acción.\n\nQuirognomía viene de cheir + gnomon, que significa \"conocer\" o \"interpretar\". La quirognomía es el estudio de la forma de la mano: su tamaño, sus proporciones, la longitud de los dedos, la anchura de la palma, la textura de la piel, la flexibilidad de las articulaciones. Observa la mano como estructura tridimensional.\n\nQuiromancia viene de cheir + manteia, que significa \"adivinación\" o \"lectura profética\". En su uso moderno dentro de la quirología profesional, la quiromancia se ha redefinido: ya no se trata de predecir el futuro, sino de leer las líneas de la palma como registro de la biografía energética y emocional de la persona. Las líneas cambian a lo largo de la vida, y esos cambios reflejan procesos internos reales.\n\nDermatoglifos viene del griego derma (piel) + glyphein (grabar). Los dermatoglifos son los patrones de crestas papilares que cubren las yemas de los dedos y la superficie palmar: las huellas dactilares y los patrones palmares. Se forman entre las semanas 12 y 24 de gestación y no cambian nunca durante toda la vida. Son un registro permanente del desarrollo prenatal.\n\nQUÉ ESTUDIA CADA RAMA\n\nQuirognomía: la forma de la mano\n\nLa quirognomía observa todo lo que puedes ver y tocar sin necesidad de mirar las líneas. La forma general de la palma (cuadrada, rectangular, alargada). La longitud y grosor de los dedos. La proporción entre la palma y los dedos. La flexibilidad de las articulaciones. La textura de la piel (gruesa, fina, suave, áspera). El desarrollo de los montes (las zonas carnosas de la palma). El ángulo de apertura del pulgar.\n\nCasimir d'Arpentigny fue el primer autor que sistematizó la clasificación de las formas de la mano en el siglo XIX, estableciendo categorías que luego fueron refinadas por William Benham en 1900. D'Arpentigny observó que la forma de la mano se correlaciona de manera consistente con el temperamento y el estilo de comportamiento de la persona.\n\nLa quirognomía responde a la pregunta: ¿con qué constitución básica nació esta persona? Es la rama más estable, porque la estructura ósea y muscular de la mano cambia muy poco a lo largo de la vida adulta.\n\nQuiromancia: las líneas de la palma\n\nLa quiromancia estudia los surcos que recorren la superficie de la palma. Las tres líneas principales (vida, cabeza y corazón) están presentes en prácticamente todas las manos. Las líneas secundarias (destino, sol, salud) aparecen con frecuencia variable. Y luego están las marcas especiales: estrellas, cruces, islas, cadenas, cuadrados, triángulos.\n\nLo que hace fascinante a la quiromancia es que las líneas cambian. No son estáticas. Un estudio publicado por Kimura en 1999 documentó cambios en los patrones lineales de la palma asociados a transformaciones psicológicas y vitales. Las líneas profundas pueden volverse tenues, las interrupciones pueden cerrarse, y nuevas líneas pueden aparecer.\n\nLa quiromancia responde a la pregunta: ¿qué ha experimentado esta persona y cómo se expresa eso en su mapa palmar actual?\n\nDermatoglifos: las crestas papilares\n\nLos dermatoglifos son la rama con mayor respaldo científico verificable. Harold Cummins y Charles Midlo acuñaron el término en 1926 y publicaron su obra de referencia, Fingerprints, Palms and Soles, en 1943. Demostraron que los patrones de crestas — arcos, bucles y torbellinos — se forman durante el desarrollo fetal y permanecen inmutables de por vida.\n\nLos dermatoglifos se utilizan en medicina forense (identificación), en genética clínica (ciertos patrones se asocian con condiciones cromosómicas) y en investigación sobre el desarrollo prenatal. En quirología, aportan información sobre las tendencias cognitivas innatas, el estilo de aprendizaje y las inclinaciones neurológicas de la persona.\n\nLos dermatoglifos responden a la pregunta: ¿qué información biológica inmutable quedó inscrita en esta mano antes del nacimiento?\n\nPOR QUÉ LAS TRES JUNTAS: LA LECTURA INTEGRAL\n\nImagina que quieres conocer a una persona a través de su mano. Si solo lees las líneas (quiromancia), sabrás qué ha experimentado y cómo se expresan sus emociones actualmente, pero no tendrás contexto sobre su constitución básica. Si solo observas la forma (quirognomía), entenderás su temperamento innato pero no sabrás cómo ha evolucionado. Si solo analizas los dermatoglifos, tendrás un perfil prenatal preciso pero estático, sin los matices de la experiencia vivida.\n\nLas tres ramas juntas crean un retrato tridimensional: la constitución innata (quirognomía), el registro biológico permanente (dermatoglifos) y la biografía energética en evolución (quiromancia). Es la diferencia entre mirar una fotografía en blanco y negro y contemplar una escultura que puedes rodear, tocar y observar desde todos los ángulos.\n\nCASO PRÁCTICO: LECTURA PARCIAL VS. LECTURA INTEGRAL\n\nMaría, terapeuta ocupacional, acudió a una lectura quirológica. La persona que la atendió solo leyó sus líneas y le dijo que su línea de la vida era corta y que su línea del corazón mostraba \"problemas emocionales\". María se fue preocupada y confundida.\n\nMeses después, una quiróloga profesional formada en las tres ramas le hizo una lectura integral. Primero observó la forma de su mano: palma rectangular con dedos largos y finos, piel suave, articulaciones flexibles — una mano de agua, asociada con sensibilidad artística e intuición profunda. Luego analizó sus dermatoglifos: predominancia de bucles ulnares con torbellinos en los dedos índice y anular, un perfil que indica adaptabilidad con focos de intensidad creativa. Finalmente, leyó sus líneas: la línea de la vida, aunque más corta que la media, era extraordinariamente profunda, indicando una vitalidad concentrada e intensa. Su línea del corazón, lejos de mostrar \"problemas\", presentaba una hermosa curva ascendente que terminaba entre Júpiter y Saturno, señal de equilibrio entre idealismo y pragmatismo emocional.\n\nLa diferencia fue abismal. La primera lectura, basada solo en líneas y sin contexto, generó ansiedad. La segunda, integrando las tres ramas, ofreció un retrato completo y empoderador. María entendió que su constitución (agua) hacía que experimentara las emociones con más intensidad, que sus dermatoglifos confirmaban una predisposición a la empatía, y que sus líneas reflejaban una vida emocional rica, no problemática.\n\nEJERCICIO GUIADO: TUS PRIMERAS OBSERVACIONES\n\nVamos a hacer tu primer ejercicio de las tres ramas con tus propias manos. Necesitarás buena luz natural y un cuaderno.\n\nPaso 1 — Quirognomía: Coloca tu mano dominante sobre una superficie plana con los dedos ligeramente separados. Observa la forma general de la palma. ¿Es más cuadrada o más rectangular? Ahora compara la longitud de la palma (desde la base de los dedos hasta la primera línea de la muñeca) con la longitud del dedo medio. ¿Es la palma más larga, más corta o similar al dedo medio? Anota tus observaciones.\n\nPaso 2 — Quiromancia: Sin entrar aún en interpretaciones (eso vendrá en lecciones posteriores), localiza visualmente las tres líneas principales de tu palma dominante. La línea de la vida rodea la base del pulgar. La línea de la cabeza cruza el centro de la palma. La línea del corazón recorre la parte superior. ¿Puedes distinguir las tres? ¿Son profundas y claras, o finas y tenues? Anota lo que ves.\n\nPaso 3 — Dermatoglifos: Mira las yemas de tus dedos bajo buena luz (una lupa o el zoom del móvil ayudan). En cada dedo, intenta identificar si el patrón es un arco (líneas que cruzan de lado a lado sin cerrarse), un bucle (líneas que entran por un lado, hacen una curva y vuelven) o un torbellino (líneas que forman círculos o espirales). No te preocupes si no puedes clasificarlos todos todavía — simplemente observa.\n\nTAREA PARA CASA\n\nFotografía tu mano dominante (palma arriba, buena luz, fondo oscuro) y tu mano no dominante. Haz también una foto ampliada de las yemas de los dedos de ambas manos. En tu cuaderno, crea una tabla con tres columnas: Quirognomía, Quiromancia, Dermatoglifos. Bajo cada columna, escribe al menos tres observaciones que hayas hecho sobre tus propias manos. Guarda las fotos y la tabla: las usarás durante toda la certificación.\n\nDuración estimada: 15-20 minutos. Materiales: tus manos, cámara de móvil, cuaderno.",
   "slides": [
     {
       "type": "title",
-      "title": "Historia de la quirología",
-      "subtitle": "Módulo 1 · Lección 1 — De Aristóteles a la dermatoglífica moderna"
+      "title": "Las 3 ramas de la quirología",
+      "subtitle": "Módulo 1 · Lección 1 — Quirognomía, quiromancia y dermatoglifos"
     },
     {
       "type": "content",
-      "title": "Quirología ≠ Quiromancia",
-      "body": "Quirología: del griego cheir (mano) + logos (estudio).\nLectura del presente y pasado biológico.\nBasada en observación sistemática, no adivinación."
+      "title": "Etimología: raíces griegas",
+      "body": "Cheir (quiros) = mano / palma\n\nQuirognomía: cheir + gnomon (conocer) → forma de la mano\nQuiromancia: cheir + manteia (lectura) → líneas de la palma\nDermatoglifos: derma + glyphein (grabar) → crestas papilares\n\n[Visual: tres manos con flechas señalando forma, líneas y huellas respectivamente]"
     },
     {
       "type": "content",
-      "title": "Antigüedad: 30.000 años de historia",
-      "body": "Altamira y Lascaux: manos en las cuevas.\nVedas (3.000 a.C.): samudrika shastra.\nAristóteles: mano e inteligencia conectadas."
+      "title": "Quirognomía: la estructura",
+      "body": "Estudia: forma de palma, dedos, proporciones, textura de piel, flexibilidad, montes\n\nRespuesta: ¿Con qué constitución nació esta persona?\nEstabilidad: alta (la estructura ósea cambia poco)\n\nRef: D'Arpentigny (siglo XIX), Benham (1900)\n\n[Visual: siluetas de cuatro formas de mano distintas]"
     },
     {
       "type": "content",
-      "title": "El salto científico (siglo XIX)",
-      "body": "1823: Purkinje clasifica huellas dactilares.\n1892: Galton demuestra unicidad e inmutabilidad.\n1900: Benham publica Laws of Scientific Hand Reading."
+      "title": "Quiromancia: el mapa vivo",
+      "body": "Estudia: líneas principales, secundarias y marcas especiales\n\nRespuesta: ¿Qué ha experimentado esta persona?\nEstabilidad: media (las líneas cambian con el tiempo)\n\nDato clave: las líneas NO son estáticas — reflejan procesos internos reales\n\n[Visual: palma con las tres líneas principales trazadas en colores distintos]"
+    },
+    {
+      "type": "content",
+      "title": "Dermatoglifos: el sello prenatal",
+      "body": "Estudia: arcos, bucles y torbellinos en yemas y palma\n\nFormación: semanas 12-24 de gestación\nEstabilidad: absoluta (inmutables de por vida)\nUso: medicina forense, genética clínica, quirología\n\nRef: Cummins & Midlo (1943)\n\n[Visual: tres tipos de huellas — arco, bucle, torbellino]"
+    },
+    {
+      "type": "content",
+      "title": "La lectura integral: las tres juntas",
+      "body": "Solo líneas → presente sin contexto\nSolo forma → constitución sin evolución\nSolo dermatoglifos → biología sin experiencia\n\nLas tres juntas → retrato tridimensional:\nConstitución innata + registro biológico + biografía energética\n\n[Visual: diagrama de Venn con las tres ramas intersectándose]"
     },
     {
       "type": "quote",
       "text": "Los patrones de crestas dérmicas se forman entre las semanas 12 y 24 de gestación y, una vez formados, no cambian nunca.",
-      "source": "Cummins & Midlo (1943) — Fingerprints, Palms and Soles"
+      "source": "Cummins, H. & Midlo, C. (1943) — Fingerprints, Palms and Soles"
     },
     {
       "type": "content",
-      "title": "Siglo XX: rigor clínico",
-      "body": "Wolff (1942): correlaciones mano-personalidad.\nJaquin (1933): protocolos prácticos de lectura.\nSpier (1955): desarrollo de líneas en la infancia.\nKimura (1999): asimetría y lateralización cerebral."
+      "title": "Reflexión",
+      "body": "Piensa en tu propia mano durante un momento.\n\nLa forma con la que naciste sigue ahí.\nLas huellas que se formaron antes de nacer permanecen intactas.\nPero las líneas han ido cambiando, creciendo, transformándose.\n\nTu mano es un documento vivo: parte fija, parte en evolución."
     },
     {
-      "type": "content",
-      "title": "La mano: un órgano extraordinario",
-      "body": "27 huesos, +30 músculos, red nerviosa densa.\nLa corteza cerebral dedica más espacio a la mano\nque a cualquier otra zona (excepto los labios)."
-    },
-    {
-      "type": "content",
-      "title": "Ejercicio práctico",
-      "body": "1. Dibuja tu línea temporal con 8+ hitos.\n2. Clasifica cada hito: Tradición (T), Ciencia (C), Clínica (P).\n3. Investiga a Benham y Wolff.\n4. Escribe 100+ palabras: quiromancia vs. quirología."
+      "type": "summary",
+      "points": [
+        "La quirología tiene tres ramas: quirognomía (forma), quiromancia (líneas) y dermatoglifos (crestas papilares)",
+        "Cada rama responde a una pregunta diferente: constitución, experiencia vivida y registro prenatal",
+        "Las tres juntas crean una lectura integral imposible de lograr con una sola rama",
+        "Los dermatoglifos son inmutables; las líneas cambian; la forma es relativamente estable"
+      ]
     },
     {
       "type": "next",
-      "text": "En la próxima lección: la ciencia de los dermatoglifos — qué son, cómo se forman y qué nos revela la investigación moderna."
+      "text": "En la próxima lección: recorreremos la fascinante historia de la quirología, desde Aristóteles y el Samudrika Shastra hasta la ciencia moderna de los dermatoglifos."
     }
   ],
-  "citation": {
-    "researcher": "Benham, William G.",
-    "year": "1900",
-    "finding": "Primer intento sistemático de catalogar configuraciones palmares y correlacionarlas con rasgos observables, estableciendo la base para la lectura de manos como disciplina empírica"
-  },
-  "bibliography": [
-    "Benham, W.G. (1900). The Laws of Scientific Hand Reading. G.P. Putnam's Sons.",
-    "Cummins, H. & Midlo, C. (1943). Fingerprints, Palms and Soles. Dover Publications.",
-    "Wolff, C. (1942). The Human Hand. Methuen & Co.",
-    "Jaquin, N. (1933). The Hand of Man. Faber & Faber.",
-    "Goldberg, E. (2016). The Art and Science of Hand Reading. Destiny Books."
+  "interactive": [
+    {
+      "type": "match",
+      "instruction": "Conecta cada rama de la quirología con lo que estudia.",
+      "pairs": [
+        { "left": "Quirognomía", "right": "Forma de la mano, proporciones, textura" },
+        { "left": "Quiromancia", "right": "Líneas de la palma y marcas especiales" },
+        { "left": "Dermatoglifos", "right": "Crestas papilares (huellas dactilares)" }
+      ]
+    },
+    {
+      "type": "fill_blanks",
+      "instruction": "Completa las raíces etimológicas de cada rama.",
+      "template": "Quirognomía viene del griego cheir + ___0___ (conocer). Quiromancia viene de cheir + ___1___ (lectura). Dermatoglifos viene de derma + ___2___ (grabar).",
+      "answers": ["gnomon", "manteia", "glyphein"]
+    },
+    {
+      "type": "progress_check",
+      "questions": [
+        {
+          "question": "¿Cuál de las tres ramas estudia características que NO cambian nunca durante la vida?",
+          "options": ["Quirognomía", "Quiromancia", "Dermatoglifos"],
+          "correct": 2,
+          "explanation": "Los dermatoglifos se forman entre las semanas 12-24 de gestación y permanecen inmutables de por vida. Las líneas (quiromancia) pueden cambiar, y la forma (quirognomía) es relativamente estable pero no absolutamente inmutable."
+        },
+        {
+          "question": "¿Por qué una lectura que solo analiza las líneas es incompleta?",
+          "options": [
+            "Porque las líneas no existen en todas las manos",
+            "Porque falta el contexto de la constitución innata y el registro prenatal",
+            "Porque las líneas son siempre iguales en todas las personas"
+          ],
+          "correct": 1,
+          "explanation": "Leer solo las líneas da información sobre la experiencia vivida, pero sin la quirognomía (constitución) y los dermatoglifos (registro prenatal), falta el contexto para interpretar correctamente lo que las líneas muestran."
+        }
+      ]
+    }
   ],
-  "practical_exercise": "Construir una línea temporal personal de la quirología con 8+ hitos clasificados por tipo (tradición/ciencia/clínica) y redactar una reflexión sobre la diferencia entre quiromancia y quirología.",
-  "competency": "Tras completar esta lección, puedes explicar con precisión la historia de la quirología, nombrar a sus figuras clave y distinguir con fundamento la quirología de la quiromancia."
+  "citation": [
+    {
+      "researcher": "Benham, William G.",
+      "year": "1900",
+      "finding": "Sistematizó la lectura de la mano integrando forma y líneas, estableciendo que la observación empírica de la estructura de la mano correlaciona con rasgos de temperamento"
+    },
+    {
+      "researcher": "Cummins, Harold & Midlo, Charles",
+      "year": "1943",
+      "finding": "Demostraron que los patrones de crestas dérmicas se forman entre las semanas 12-24 de gestación y permanecen inmutables durante toda la vida"
+    },
+    {
+      "researcher": "D'Arpentigny, Casimir",
+      "year": "1856",
+      "finding": "Creó la primera clasificación sistemática de formas de mano correlacionadas con tipos de temperamento y comportamiento"
+    }
+  ],
+  "bibliography": [
+    { "author": "Benham, W.G.", "year": "1900", "title": "The Laws of Scientific Hand Reading", "type": "Libro" },
+    { "author": "Cummins, H. & Midlo, C.", "year": "1943", "title": "Fingerprints, Palms and Soles", "type": "Libro" },
+    { "author": "D'Arpentigny, C.", "year": "1856", "title": "La Science de la Main", "type": "Libro" },
+    { "author": "Goldberg, E.", "year": "2016", "title": "The Art and Science of Hand Reading", "type": "Libro" }
+  ],
+  "homework": {
+    "task": "Fotografía tu mano dominante y no dominante (palma arriba, fondo oscuro, buena luz) y las yemas de los 10 dedos ampliadas. En tu cuaderno, crea una tabla con tres columnas (Quirognomía / Quiromancia / Dermatoglifos) y escribe al menos tres observaciones bajo cada columna.",
+    "duration": "15-20 min",
+    "materials": "Manos, cámara de móvil, cuaderno"
+  },
+  "quiz_points": [
+    "La quirología tiene tres ramas: quirognomía (forma), quiromancia (líneas) y dermatoglifos (crestas papilares)",
+    "Los dermatoglifos son inmutables (prenatales); las líneas cambian; la forma de la mano es relativamente estable",
+    "Una lectura integral que combine las tres ramas ofrece un retrato tridimensional imposible de lograr con una sola"
+  ]
 }

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" style="background:#0A0A0F">
+  <!-- Palm outline -->
+  <path d="M200,480 C120,480 60,420 50,340 L45,260 C42,220 50,180 65,150 L80,120 C85,105 95,90 100,80 L110,55 C115,40 125,25 140,20 L150,18 C158,17 165,22 168,30 L175,55 L180,80 L182,100
+  M182,100 C185,85 190,60 195,40 L200,20 C203,10 210,5 218,5 L222,5 C230,5 235,12 237,20 L242,45 L245,75 L246,100
+  M246,100 C248,80 252,55 258,35 L262,20 C265,10 272,5 280,8 L283,10 C288,13 290,20 289,28 L285,55 L282,80 L280,100
+  M280,100 C283,85 288,65 293,50 L298,38 C302,28 308,25 315,28 L318,30 C322,33 324,40 322,50 L318,70 L312,90 L308,105
+  M308,105 C320,115 340,140 348,170 L355,200 C362,230 358,270 350,300 L340,340 C325,380 290,430 260,460 L240,475 C225,482 210,482 200,480 Z" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- HEART LINE (red) -->
+  <path d="M310,165 C280,155 250,148 220,150 C190,152 160,158 130,168 C115,174 100,182 85,192" fill="none" stroke="#FF6B6B" stroke-width="3" stroke-linecap="round"/>
+  <text x="85" y="205" fill="#FF6B6B" font-size="11" font-family="Georgia">Corazón</text>
+
+  <!-- HEAD LINE (blue) -->
+  <path d="M90,210 C120,208 150,210 180,215 C210,220 240,228 270,240 C285,246 295,255 300,265" fill="none" stroke="#6B8FC5" stroke-width="3" stroke-linecap="round"/>
+  <text x="300" y="258" fill="#6B8FC5" font-size="11" font-family="Georgia">Cabeza</text>
+
+  <!-- LIFE LINE (green) -->
+  <path d="M130,130 C120,150 110,175 100,210 C90,250 85,290 88,330 C90,360 95,390 105,420 C110,440 118,455 130,465" fill="none" stroke="#00D68F" stroke-width="3" stroke-linecap="round"/>
+  <text x="60" y="335" fill="#00D68F" font-size="11" font-family="Georgia">Vida</text>
+
+  <!-- FATE LINE (gold) -->
+  <path d="M210,460 C208,420 205,380 202,340 C200,300 198,260 196,220 C195,200 194,180 193,160" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6,3"/>
+  <text x="210" y="350" fill="#C9A84C" font-size="11" font-family="Georgia">Destino</text>
+
+  <!-- Age markers on life line -->
+  <circle cx="118" cy="168" r="3" fill="#00D68F"/>
+  <text x="70" y="172" fill="#00D68F" font-size="9" font-family="sans-serif" opacity="0.8">~15</text>
+  <circle cx="108" cy="195" r="3" fill="#00D68F"/>
+  <text x="60" y="199" fill="#00D68F" font-size="9" font-family="sans-serif" opacity="0.8">~21</text>
+  <circle cx="95" cy="250" r="3" fill="#00D68F"/>
+  <text x="50" y="254" fill="#00D68F" font-size="9" font-family="sans-serif" opacity="0.8">~35</text>
+  <circle cx="88" cy="310" r="3" fill="#00D68F"/>
+  <text x="45" y="314" fill="#00D68F" font-size="9" font-family="sans-serif" opacity="0.8">~40</text>
+
+  <!-- Title -->
+  <text x="200" y="20" fill="#C9A84C" font-size="14" font-family="Georgia" text-anchor="middle" font-weight="bold">Líneas Mayores</text>
+
+  <!-- Legend -->
+  <rect x="15" y="440" width="370" height="50" rx="8" fill="#12121A" stroke="#333" stroke-width="0.5"/>
+  <line x1="25" y1="460" x2="45" y2="460" stroke="#FF6B6B" stroke-width="2"/>
+  <text x="50" y="464" fill="#F0EDE4" font-size="9" font-family="sans-serif">Corazón</text>
+  <line x1="110" y1="460" x2="130" y2="460" stroke="#6B8FC5" stroke-width="2"/>
+  <text x="135" y="464" fill="#F0EDE4" font-size="9" font-family="sans-serif">Cabeza</text>
+  <line x1="195" y1="460" x2="215" y2="460" stroke="#00D68F" stroke-width="2"/>
+  <text x="220" y="464" fill="#F0EDE4" font-size="9" font-family="sans-serif">Vida</text>
+  <line x1="270" y1="460" x2="290" y2="460" stroke="#C9A84C" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="295" y="464" fill="#F0EDE4" font-size="9" font-family="sans-serif">Destino</text>
+</svg>
