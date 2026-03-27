@@ -4,14 +4,92 @@
   "title": "Sinastría sistémica: tu pareja como espejo familiar",
   "text_content": "Hay una frase que se repite en terapia de pareja: no elegimos a nuestra pareja por casualidad. Y desde la perspectiva sistémica, esta frase cobra un significado profundo. Nuestras relaciones de pareja tienden a reactivar, con precisión casi quirúrgica, las dinámicas no resueltas de nuestro sistema familiar de origen.\n\nIván Boszormenyi-Nagy, en su obra Lealtades invisibles publicada en 1973, desarrolló el concepto de la contabilidad relacional. Según Nagy, cada persona lleva una especie de libro de cuentas emocional heredado de su familia. Hay deudas que no pagamos nosotros pero que sentimos la obligación de saldar. Hay créditos que nunca recibimos pero que seguimos esperando. Y cuando formamos una pareja, esos libros de cuentas se encuentran y a menudo chocan.\n\nLa sinastría, en astrología, es la comparación entre dos cartas natales para entender la dinámica de una relación. La sinastría sistémica que proponemos aquí va un paso más allá: no solo compara dos cartas natales, sino dos sistemas familiares completos.\n\nConsideremos algunos patrones comunes. Si en tu familia había un padre emocionalmente ausente, es probable que hayas elegido una pareja que también tenga dificultades con la presencia emocional. No por masoquismo, sino porque tu sistema nervioso reconoce esa dinámica como familiar, y lo familiar se confunde con lo seguro. Si en tu familia había una madre que sacrificaba todo por los demás, quizá buscas parejas que necesiten ser rescatadas, o quizá tú misma asumes el rol de rescatadora.\n\nBowen llamó a esto el entrelazamiento emocional de los sistemas. Cuando dos personas forman pareja, sus sistemas familiares de origen se activan mutuamente. Los temas no resueltos de una persona atraen y son atraídos por los temas no resueltos de la otra. Es como si los sistemas se reconocieran y dijeran: aquí hay alguien con quien puedo intentar resolver esto.\n\nEjercicio de sinastría sistémica. Para este ejercicio necesitas tu genograma y, si es posible, información básica sobre la familia de tu pareja. Responde estas preguntas. ¿Qué rol ocupaba cada miembro de la pareja en su familia de origen? ¿Había alguien excluido o invisible en alguno de los dos sistemas? ¿Qué emociones estaban prohibidas en cada familia? ¿Qué temas generan más conflicto en la relación y cómo se conectan con los temas familiares de origen?\n\nRachel Yehuda, en sus investigaciones sobre transmisión epigenética del trauma publicadas a partir de 2016, demostró que las experiencias traumáticas de una generación pueden modificar la expresión genética de las siguientes. Este hallazgo biológico respalda lo que la terapia sistémica lleva décadas observando: que las parejas no solo comparten presente, sino que cargan con los pasados de sus respectivos sistemas.\n\nLa buena noticia es que la pareja también puede ser el espacio de sanación. Si ambas personas están dispuestas a hacer conscientes sus patrones familiares, la relación se convierte en un laboratorio de transformación. El conflicto deja de ser un problema y se convierte en información sobre qué necesita ser visto y trabajado.\n\nNo se trata de culpar a la familia ni de responsabilizar a la pareja de tus heridas. Se trata de comprender que las relaciones íntimas son el escenario donde los patrones familiares se hacen visibles, y por tanto, transformables.\n\nEn la próxima lección abordaremos cómo romper el ciclo y crear tu propio orden relacional.",
   "slides": [
-    {"type": "title", "title": "Sinastría sistémica: tu pareja como espejo familiar", "subtitle": "Módulo 7 · Lección 20 — Certificación en Astrogenealogía"},
-    {"type": "content", "title": "La contabilidad relacional", "body": "Cada persona hereda un libro de cuentas emocional.\nDeudas que no son nuestras pero sentimos.\nCréditos que nunca recibimos pero esperamos."},
-    {"type": "content", "title": "Lo familiar se confunde con lo seguro", "body": "El sistema nervioso reconoce lo conocido.\nElegimos parejas que reactivan dinámicas familiares.\nNo es masoquismo: es reconocimiento inconsciente."},
-    {"type": "quote", "text": "Cada persona lleva una contabilidad relacional heredada que incluye deudas y créditos emocionales de generaciones anteriores.", "source": "Boszormenyi-Nagy, 1973 — Lealtades Invisibles"},
-    {"type": "content", "title": "Ejercicio de sinastría sistémica", "body": "Compara los genogramas de ambas personas.\n¿Qué roles tenían en su familia de origen?\n¿Qué temas familiares alimentan los conflictos actuales?"},
-    {"type": "content", "title": "La pareja como laboratorio", "body": "El conflicto no es problema, es información.\nHacer conscientes los patrones permite transformarlos.\nLa relación íntima es el escenario de sanación."},
-    {"type": "summary", "points": ["Las relaciones de pareja reactivan los patrones no resueltos de ambos sistemas familiares", "La contabilidad relacional de Nagy explica las deudas y créditos emocionales heredados", "La pareja puede ser el espacio de sanación cuando ambas personas hacen conscientes sus patrones"]},
-    {"type": "next", "text": "En la próxima lección abordaremos cómo romper el ciclo y crear tu propio orden relacional."}
+    {
+      "type": "title",
+      "title": "Sinastría sistémica: tu pareja como espejo familiar",
+      "subtitle": "Módulo 7 · Lección 20 — Certificación en Astrogenealogía"
+    },
+    {
+      "type": "content",
+      "title": "La contabilidad relacional",
+      "body": "Cada persona hereda un libro de cuentas emocional.\nDeudas que no son nuestras pero sentimos.\nCréditos que nunca recibimos pero esperamos."
+    },
+    {
+      "type": "content",
+      "title": "Lo familiar se confunde con lo seguro",
+      "body": "El sistema nervioso reconoce lo conocido.\nElegimos parejas que reactivan dinámicas familiares.\nNo es masoquismo: es reconocimiento inconsciente."
+    },
+    {
+      "type": "quote",
+      "text": "Cada persona lleva una contabilidad relacional heredada que incluye deudas y créditos emocionales de generaciones anteriores.",
+      "source": "Boszormenyi-Nagy, 1973 — Lealtades Invisibles"
+    },
+    {
+      "type": "content",
+      "title": "Ejercicio de sinastría sistémica",
+      "body": "Compara los genogramas de ambas personas.\n¿Qué roles tenían en su familia de origen?\n¿Qué temas familiares alimentan los conflictos actuales?"
+    },
+    {
+      "type": "content",
+      "title": "La pareja como laboratorio",
+      "body": "El conflicto no es problema, es información.\nHacer conscientes los patrones permite transformarlos.\nLa relación íntima es el escenario de sanación."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Las relaciones de pareja reactivan los patrones no resueltos de ambos sistemas familiares",
+        "La contabilidad relacional de Nagy explica las deudas y créditos emocionales heredados",
+        "La pareja puede ser el espacio de sanación cuando ambas personas hacen conscientes sus patrones"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la próxima lección abordaremos cómo romper el ciclo y crear tu propio orden relacional."
+    }
   ],
-  "citation": {"researcher": "Boszormenyi-Nagy", "year": "1973", "finding": "El concepto de contabilidad relacional reveló que cada persona hereda un sistema de deudas y créditos emocionales intergeneracionales que influyen profundamente en la elección de pareja y en la dinámica de las relaciones íntimas"}
+  "citation": {
+    "researcher": "Boszormenyi-Nagy",
+    "year": "1973",
+    "finding": "El concepto de contabilidad relacional reveló que cada persona hereda un sistema de deudas y créditos emocionales intergeneracionales que influyen profundamente en la elección de pareja y en la dinámica de las relaciones íntimas"
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Astrogenealogía",
+        "Terapia familiar",
+        "Constelaciones"
+      ],
+      "rows": [
+        [
+          "Enfoque",
+          "Carta natal + sistema",
+          "Comunicación + estructura",
+          "Representación corporal"
+        ],
+        [
+          "Base",
+          "Astrología + Bowen",
+          "Sistémica + cognitiva",
+          "Fenomenológica"
+        ],
+        [
+          "Complementa a",
+          "Terapia, coaching",
+          "Astrogenealogía",
+          "Terapia, astrogenealogía"
+        ],
+        [
+          "Formación",
+          "Este curso",
+          "Máster universitario",
+          "Formación específica"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary"
+    }
+  ]
 }

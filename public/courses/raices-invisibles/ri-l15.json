@@ -4,14 +4,74 @@
   "title": "Práctica: lectura sistémica de tu propia carta",
   "text_content": "Ha llegado el momento de aplicar todo lo que hemos aprendido a tu propia carta natal. Esta práctica es el corazón de la certificación. No es un ejercicio teórico. Es un encuentro personal con tu sistema familiar a través del lenguaje astrológico.\n\nAntes de comenzar, un recordatorio importante: este ejercicio puede activar emociones profundas. No estás simplemente analizando símbolos. Estás tocando la historia emocional de tu linaje. Procede con respeto hacia ti y hacia tu sistema. Si en algún momento la intensidad es excesiva, está bien detenerse.\n\nNecesitarás tu carta natal calculada (puedes obtenerla gratuitamente en múltiples sitios web con tu fecha, hora y lugar de nacimiento) y el genograma emocional que construiste en la lección 12.\n\nPaso 1: Los cimientos — Casa 4 e IC.\n\nIdentifica el signo en la cúspide de tu Casa 4. Este signo describe el tono emocional de tu hogar de origen. ¿Resonate con lo que viviste? Ahora identifica los planetas que tengas en Casa 4 o en aspecto al IC. Cada planeta es una fuerza específica que operaba en tu hogar. Anota tus observaciones. No interpretes todavía. Solo observa.\n\nAhora mira tu genograma. ¿Ves conexiones entre lo que describes en Casa 4 y la atmósfera emocional que registraste en el genograma? ¿El tono del signo coincide con lo que sentías al entrar en tu casa de la infancia?\n\nPaso 2: La herencia emocional — La Luna.\n\nIdentifica el signo, la casa y los aspectos de tu Luna. El signo te dice cómo aprendiste a gestionar las emociones. La casa te dice en qué área de la vida las emociones heredadas se manifiestan con más fuerza. Los aspectos revelan las tensiones o armonías de tu herencia emocional.\n\nConecta con tu genograma: ¿cómo gestionaba las emociones tu madre o cuidadora principal? ¿Y tu abuela? ¿Ves un patrón? ¿El signo de tu Luna describe algo que reconoces en la línea materna?\n\nPaso 3: Los mandatos — Saturno.\n\nLocaliza a Saturno en tu carta. Su signo revela el tono de los mandatos familiares. Su casa indica el área donde esos mandatos son más limitantes. Sus aspectos muestran cómo esos mandatos interactúan con tus otras necesidades.\n\nVuelve al genograma: ¿cuáles eran las reglas no escritas de tu familia? ¿Qué se esperaba de ti sin que nadie lo dijera? ¿Saturno describe esos mandatos?\n\nPaso 4: Lo oculto — Casa 8 y Casa 12.\n\nRevisa los planetas en estas casas. Casa 8: ¿qué herencias emocionales vinieron con condiciones? ¿Qué secretos intuyes? Casa 12: ¿qué energías fueron reprimidas en tu sistema? ¿Quién fue excluido?\n\nMira tu genograma en busca de huecos, silencios, temas evitados. ¿Los planetas en Casa 8 y 12 hablan de esos temas?\n\nPaso 5: La dirección evolutiva — Nodos Lunares.\n\nIdentifica tus Nodos. El Nodo Sur describe lo que tu sistema domina. El Nodo Norte, lo que necesita integrar. ¿Coincide con lo que observas en tu genograma? ¿Tu familia es experta en algo (Nodo Sur) y tiene una carencia recurrente en algo más (Nodo Norte)?\n\nDaniel Stern, investigador del desarrollo infantil, demostró que los bebés son extraordinariamente sensibles a los patrones afectivos de su entorno. Lo que él llamó entonamiento afectivo describe cómo la persona cuidadora refleja y regula las emociones del bebé. Tu carta natal registra el entonamiento específico que recibiste, que a su vez fue el entonamiento que tu madre recibió de la suya.\n\nCuando completes esta lectura, tendrás algo valioso: un mapa integrado de tu sistema familiar visto a través de tu carta natal. No es la verdad absoluta. Es una perspectiva. Pero es una perspectiva que puede iluminar rincones que ni la terapia convencional ni la astrología sola alcanzan.\n\nGuarda tus notas. Las usaremos en los módulos de transformación que vienen a continuación.",
   "slides": [
-    {"type": "title", "title": "Práctica: lectura sistémica de tu carta", "subtitle": "Módulo 5 · Lección 15 — Certificación en Astrogenealogía"},
-    {"type": "content", "title": "Lo que necesitas", "body": "Tu carta natal calculada con hora de nacimiento.\nTu genograma emocional de la lección 12.\nDisposición para tocar la historia de tu linaje."},
-    {"type": "content", "title": "Paso 1-2: Cimientos y herencia emocional", "body": "Casa 4/IC: el tono emocional de tu hogar de origen.\nLa Luna: cómo aprendiste a gestionar emociones.\nConecta ambos con lo que registra tu genograma."},
-    {"type": "content", "title": "Paso 3-4: Mandatos y lo oculto", "body": "Saturno: las reglas no escritas de tu familia.\nCasa 8: herencias con condiciones, secretos.\nCasa 12: energías reprimidas, miembros excluidos."},
-    {"type": "quote", "text": "El entonamiento afectivo describe cómo la persona cuidadora refleja y regula las emociones del bebé, configurando patrones que se transmiten generacionalmente.", "source": "Daniel Stern, 1985 — El Mundo Interpersonal del Infante"},
-    {"type": "content", "title": "Paso 5: Dirección evolutiva", "body": "Nodo Sur: lo que tu sistema familiar domina.\nNodo Norte: lo que necesita integrar.\n¿Coincide con las fortalezas y carencias del genograma?"},
-    {"type": "summary", "points": ["La lectura sistémica integra Casa 4, Luna, Saturno, Casas 8/12 y Nodos", "Cada paso se conecta con el genograma para validar la resonancia", "El resultado es un mapa integrado del sistema familiar visto desde la carta natal"]},
-    {"type": "next", "text": "En el Módulo 6 pasaremos a la acción con ejercicios de transformación sistémica guiados."}
+    {
+      "type": "title",
+      "title": "Práctica: lectura sistémica de tu carta",
+      "subtitle": "Módulo 5 · Lección 15 — Certificación en Astrogenealogía"
+    },
+    {
+      "type": "content",
+      "title": "Lo que necesitas",
+      "body": "Tu carta natal calculada con hora de nacimiento.\nTu genograma emocional de la lección 12.\nDisposición para tocar la historia de tu linaje."
+    },
+    {
+      "type": "content",
+      "title": "Paso 1-2: Cimientos y herencia emocional",
+      "body": "Casa 4/IC: el tono emocional de tu hogar de origen.\nLa Luna: cómo aprendiste a gestionar emociones.\nConecta ambos con lo que registra tu genograma."
+    },
+    {
+      "type": "content",
+      "title": "Paso 3-4: Mandatos y lo oculto",
+      "body": "Saturno: las reglas no escritas de tu familia.\nCasa 8: herencias con condiciones, secretos.\nCasa 12: energías reprimidas, miembros excluidos."
+    },
+    {
+      "type": "quote",
+      "text": "El entonamiento afectivo describe cómo la persona cuidadora refleja y regula las emociones del bebé, configurando patrones que se transmiten generacionalmente.",
+      "source": "Daniel Stern, 1985 — El Mundo Interpersonal del Infante"
+    },
+    {
+      "type": "content",
+      "title": "Paso 5: Dirección evolutiva",
+      "body": "Nodo Sur: lo que tu sistema familiar domina.\nNodo Norte: lo que necesita integrar.\n¿Coincide con las fortalezas y carencias del genograma?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La lectura sistémica integra Casa 4, Luna, Saturno, Casas 8/12 y Nodos",
+        "Cada paso se conecta con el genograma para validar la resonancia",
+        "El resultado es un mapa integrado del sistema familiar visto desde la carta natal"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el Módulo 6 pasaremos a la acción con ejercicios de transformación sistémica guiados."
+    }
   ],
-  "citation": {"researcher": "Daniel Stern", "year": "1985", "finding": "El entonamiento afectivo entre cuidador e infante configura patrones de regulación emocional que se transmiten generacionalmente, estableciendo las bases del desarrollo interpersonal"}
+  "citation": {
+    "researcher": "Daniel Stern",
+    "year": "1985",
+    "finding": "El entonamiento afectivo entre cuidador e infante configura patrones de regulación emocional que se transmiten generacionalmente, estableciendo las bases del desarrollo interpersonal"
+  },
+  "interactive": [
+    {
+      "type": "branching_scenario",
+      "title": "Secreto familiar",
+      "scenario": "Tu cliente descubre durante la exploración que su abuela tuvo un hijo secreto que fue dado en adopción",
+      "options": [
+        {
+          "label": "Analizas cómo esto explica los patrones familiares",
+          "outcome": "Parcial: falta contención emocional",
+          "feedback": "Primero contén emocionalmente. Luego, si la persona está lista, explora cómo este secreto puede haber configurado lealtades invisibles"
+        },
+        {
+          "label": "Pausas, ofreces espacio emocional, y preguntas cómo se siente",
+          "outcome": "Correcto: priorizas la persona sobre el análisis",
+          "feedback": "Los secretos familiares son material sensible. La contención siempre va antes que la interpretación"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary"
+    }
+  ]
 }

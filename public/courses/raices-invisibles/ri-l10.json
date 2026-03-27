@@ -4,14 +4,79 @@
   "title": "Epigenética: cómo el trauma se hereda biológicamente",
   "text_content": "Hasta hace unas décadas, la ciencia asumía que la herencia biológica se limitaba a la secuencia de ADN. Tus genes determinaban tus rasgos, y las experiencias vividas no podían modificar esos genes para la siguiente generación. Era un dogma central de la biología.\n\nLa epigenética lo cambió todo.\n\nLa epigenética estudia los cambios en la expresión genética que no alteran la secuencia del ADN. Imagina que tus genes son un libro. La epigenética no cambia las palabras del libro, pero sí decide qué párrafos se leen en voz alta y cuáles se silencian. Y esas decisiones, los marcadores epigenéticos, pueden ser influenciadas por el entorno, las experiencias y, crucialmente, pueden transmitirse a la descendencia.\n\nEl estudio que revolucionó nuestra comprensión fue el de Rachel Yehuda y su equipo en 2016. Investigaron a descendientes de supervivientes del Holocausto y encontraron que portaban modificaciones epigenéticas en el gen FKBP5, involucrado en la regulación del eje hipotalámico-pituitario-adrenal (HPA), el sistema que controla nuestra respuesta al estrés.\n\nLo que esto significa es profundo: las personas descendientes de supervivientes de trauma extremo presentaban una respuesta biológica al estrés alterada, no por haber vivido el trauma directamente, sino por haberlo heredado epigenéticamente.\n\nPero la investigación no se limita al Holocausto. Michael Meaney, neurocientífico de la Universidad McGill, demostró en estudios con modelos animales que el comportamiento maternal de cuidado activa o silencia genes específicos en la descendencia. Las crías que recibieron más contacto físico desarrollaron patrones epigenéticos diferentes en genes relacionados con la regulación del estrés. Y estas diferencias persistieron durante toda su vida.\n\nLo más notable del trabajo de Meaney es que demostró que estas marcas epigenéticas podían revertirse. Cuando las crías con menos contacto eran criadas por madres más cuidadoras, sus patrones epigenéticos se modificaban. La biología no es destino.\n\nEsta reversibilidad es la gran esperanza de la epigenética para el trabajo terapéutico y sistémico. Si el trauma se inscribe en el cuerpo, también puede desinscribirse. No borrando la historia, sino cambiando la relación con ella.\n\nDesde la astrogenealogía, esto tiene implicaciones enormes. Cuando leemos la carta natal como un mapa del sistema familiar, no estamos haciendo una lectura abstracta. Estamos nombrando dinámicas que tienen un correlato biológico real. La ansiedad que simboliza esa Luna en cuadratura con Plutón no es solo un concepto astrológico. Puede corresponder a una hiperactivación del eje HPA que se transmitió epigenéticamente desde la abuela hasta la nieta.\n\nDarles nombre a estos patrones tiene un efecto documentado. James Pennebaker, psicólogo de la Universidad de Texas, demostró en múltiples estudios desde 1986 que el acto de narrar experiencias traumáticas, de poner palabras a lo que duele, produce cambios medibles en el sistema inmunológico y en la regulación emocional. Escribir sobre el trauma reduce la respuesta inflamatoria y mejora los marcadores de salud.\n\nEn nuestro trabajo, la carta natal funciona como un marco para esa narración. Te da un lenguaje para contar la historia de tu sistema familiar. Y contar esa historia, desde la perspectiva de la epigenética, no es un ejercicio meramente simbólico. Es un acto que puede modificar tu biología.\n\nEsto no significa que la carta natal reemplace a la terapia o a la medicina. Significa que se integra en un enfoque más amplio de comprensión y sanación. La epigenética nos dice que lo que heredamos no nos condena. Y la astrogenealogía nos dice que nombrarlo es el primer paso para transformarlo.\n\nReflexiona: ¿hay algún patrón de salud que se repita en tu familia? ¿Ansiedad crónica, problemas digestivos, tensión muscular, insomnio? Estos patrones pueden tener un componente epigenético. No para asustarte, sino para entender que tu cuerpo también cuenta la historia de tu linaje.",
   "slides": [
-    {"type": "title", "title": "Epigenética: cómo el trauma se hereda biológicamente", "subtitle": "Módulo 4 · Lección 10 — Certificación en Astrogenealogía"},
-    {"type": "content", "title": "Más allá de los genes", "body": "La epigenética no cambia las palabras del libro genético.\nDecide qué párrafos se leen y cuáles se silencian.\nEstas decisiones pueden transmitirse a la descendencia."},
-    {"type": "quote", "text": "Descendientes de supervivientes de trauma portaban modificaciones epigenéticas en genes de regulación del estrés sin haber vivido el trauma directamente.", "source": "Rachel Yehuda et al., 2016 — Mount Sinai School of Medicine"},
-    {"type": "content", "title": "Las marcas son reversibles", "body": "Meaney (McGill) demostró que el cuidado cambia\nlos patrones epigenéticos en la descendencia.\nLa biología no es destino: puede transformarse."},
-    {"type": "content", "title": "Narrar transforma la biología", "body": "Pennebaker demostró que poner palabras al trauma\nreduce la inflamación y mejora la regulación emocional.\nLa carta natal da marco a esa narración sanadora."},
-    {"type": "content", "title": "Astrogenealogía y epigenética", "body": "Los patrones que leemos en la carta natal\npueden tener correlatos biológicos reales.\nNombrarlos no es simbólico: es potencialmente terapéutico."},
-    {"type": "summary", "points": ["El trauma se transmite biológicamente vía modificaciones epigenéticas (Yehuda, 2016)", "Las marcas epigenéticas son reversibles con nuevas experiencias (Meaney, 2004)", "Narrar las experiencias traumáticas produce cambios medibles en salud (Pennebaker, 1986)"]},
-    {"type": "next", "text": "En la siguiente lección exploraremos las lealtades invisibles: por qué repites patrones que nunca viviste personalmente."}
+    {
+      "type": "title",
+      "title": "Epigenética: cómo el trauma se hereda biológicamente",
+      "subtitle": "Módulo 4 · Lección 10 — Certificación en Astrogenealogía"
+    },
+    {
+      "type": "content",
+      "title": "Más allá de los genes",
+      "body": "La epigenética no cambia las palabras del libro genético.\nDecide qué párrafos se leen y cuáles se silencian.\nEstas decisiones pueden transmitirse a la descendencia."
+    },
+    {
+      "type": "quote",
+      "text": "Descendientes de supervivientes de trauma portaban modificaciones epigenéticas en genes de regulación del estrés sin haber vivido el trauma directamente.",
+      "source": "Rachel Yehuda et al., 2016 — Mount Sinai School of Medicine"
+    },
+    {
+      "type": "content",
+      "title": "Las marcas son reversibles",
+      "body": "Meaney (McGill) demostró que el cuidado cambia\nlos patrones epigenéticos en la descendencia.\nLa biología no es destino: puede transformarse."
+    },
+    {
+      "type": "content",
+      "title": "Narrar transforma la biología",
+      "body": "Pennebaker demostró que poner palabras al trauma\nreduce la inflamación y mejora la regulación emocional.\nLa carta natal da marco a esa narración sanadora."
+    },
+    {
+      "type": "content",
+      "title": "Astrogenealogía y epigenética",
+      "body": "Los patrones que leemos en la carta natal\npueden tener correlatos biológicos reales.\nNombrarlos no es simbólico: es potencialmente terapéutico."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "El trauma se transmite biológicamente vía modificaciones epigenéticas (Yehuda, 2016)",
+        "Las marcas epigenéticas son reversibles con nuevas experiencias (Meaney, 2004)",
+        "Narrar las experiencias traumáticas produce cambios medibles en salud (Pennebaker, 1986)"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección exploraremos las lealtades invisibles: por qué repites patrones que nunca viviste personalmente."
+    }
   ],
-  "citation": {"researcher": "Michael Meaney", "year": "2004", "finding": "El comportamiento maternal de cuidado modifica patrones epigenéticos en genes de regulación del estrés en la descendencia, y estas modificaciones son reversibles con cambios en el entorno de crianza"}
+  "citation": {
+    "researcher": "Michael Meaney",
+    "year": "2004",
+    "finding": "El comportamiento maternal de cuidado modifica patrones epigenéticos en genes de regulación del estrés en la descendencia, y estas modificaciones son reversibles con cambios en el entorno de crianza"
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "Epigenética",
+      "nodes": [
+        {
+          "label": "Metilación ADN",
+          "description": "Silenciar genes"
+        },
+        {
+          "label": "Histonas",
+          "description": "Empaquetar ADN"
+        },
+        {
+          "label": "miRNA",
+          "description": "Regular expresión"
+        },
+        {
+          "label": "Herencia transgeneracional",
+          "description": "3+ generaciones"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary"
+    }
+  ]
 }

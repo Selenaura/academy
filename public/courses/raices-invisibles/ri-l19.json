@@ -4,14 +4,69 @@
   "title": "Cómo tus patrones familiares afectan tus relaciones",
   "text_content": "Hasta ahora hemos explorado tu sistema familiar como algo que ocurrió en el pasado: las dinámicas de tus padres, las lealtades invisibles, los mandatos generacionales. Pero esos patrones no se quedaron atrás. Están activos ahora mismo, en tus relaciones actuales. En este módulo aprenderemos a reconocer cómo el pasado familiar se manifiesta en el presente relacional.\n\nMurray Bowen, fundador de la terapia familiar sistémica, acuñó el concepto de transmisión multigeneracional. Bowen observó que los patrones emocionales no resueltos se transmiten de generación en generación, no a través de los genes, sino a través de las dinámicas relacionales. Cada generación repite, con pequeñas variaciones, los patrones de la anterior, hasta que alguien los hace conscientes.\n\nPiensa en tus relaciones más significativas: pareja, amistades cercanas, relaciones laborales. Ahora hazte estas preguntas. ¿Qué tipo de personas atraigo repetidamente? ¿Qué conflictos se repiten en mis relaciones? ¿Qué papel tiendo a asumir: cuidadora, rescatadora, mediadora, distante? ¿Qué emociones me resultan difíciles de tolerar en las demás personas?\n\nJohn Bowlby, en su teoría del apego desarrollada a partir de 1969, demostró que las primeras relaciones de vinculación establecen un modelo interno que guía todas las relaciones posteriores. Si en tu familia el amor era condicional, tenderás a esforzarte compulsivamente para mantener las relaciones. Si la cercanía era amenazante, tenderás a mantener distancia emocional. Si el cuidado era inconsistente, oscilarás entre la necesidad de cercanía y el miedo a ella.\n\nEstos patrones de apego no son defectos. Son estrategias que desarrollaste en la infancia para adaptarte a tu entorno familiar. Fueron inteligentes entonces. Pero pueden ser limitantes ahora, cuando tu contexto ha cambiado pero tus respuestas automáticas siguen siendo las mismas.\n\nRichard Schwartz, creador del modelo de Sistemas Familiares Internos, propuso que cada persona alberga múltiples partes internas, cada una con su propia función. Hay partes protectoras que intentan evitar el dolor. Hay partes exiliadas que cargan heridas antiguas. Y hay un Self central que puede observar todas las partes con compasión. Cuando una relación activa una parte herida, la parte protectora se dispara automáticamente, y reaccionamos desde el patrón familiar, no desde la elección consciente.\n\nEjercicio de mapeo relacional. Toma las tres relaciones más significativas de tu vida actual. Para cada una, responde: ¿Qué patrón de mi familia de origen se activa en esta relación? ¿Qué parte de mí se activa cuando hay conflicto? ¿Qué necesitaba de niña que busco inconscientemente en esta persona? ¿Cómo reaccionaría si respondiera desde mi Self en vez de desde mi parte protectora?\n\nBowen señaló que el grado de diferenciación de una persona, es decir, su capacidad de mantener su identidad mientras permanece conectada emocionalmente, es el mejor predictor de la salud de sus relaciones. No se trata de eliminar los patrones familiares, sino de hacerlos conscientes para que dejen de dirigir tu vida desde la sombra.\n\nEn la próxima lección exploraremos cómo tu pareja funciona como espejo de tu sistema familiar.",
   "slides": [
-    {"type": "title", "title": "Cómo tus patrones familiares afectan tus relaciones", "subtitle": "Módulo 7 · Lección 19 — Certificación en Astrogenealogía"},
-    {"type": "content", "title": "Transmisión multigeneracional", "body": "Los patrones emocionales no resueltos\nse transmiten de generación en generación\nhasta que alguien los hace conscientes."},
-    {"type": "content", "title": "Patrones de apego en relaciones", "body": "Amor condicional: esfuerzo compulsivo.\nCercanía amenazante: distancia emocional.\nCuidado inconsistente: oscilación entre necesidad y miedo."},
-    {"type": "quote", "text": "Las primeras relaciones de vinculación establecen un modelo interno que guía todas las relaciones posteriores.", "source": "John Bowlby, 1969 — Teoría del Apego"},
-    {"type": "content", "title": "Partes internas (IFS)", "body": "Partes protectoras: evitan el dolor.\nPartes exiliadas: cargan heridas antiguas.\nSelf central: observa con compasión."},
-    {"type": "content", "title": "Ejercicio de mapeo relacional", "body": "3 relaciones significativas actuales.\n¿Qué patrón familiar se activa en cada una?\n¿Qué necesitabas de niña que buscas aquí?"},
-    {"type": "summary", "points": ["Los patrones familiares no se quedaron en el pasado: están activos en tus relaciones actuales", "El estilo de apego desarrollado en la infancia guía las respuestas relacionales adultas", "La diferenciación (Bowen) es la clave: hacer conscientes los patrones para que dejen de dirigirte"]},
-    {"type": "next", "text": "En la próxima lección exploraremos cómo tu pareja funciona como espejo de tu sistema familiar."}
+    {
+      "type": "title",
+      "title": "Cómo tus patrones familiares afectan tus relaciones",
+      "subtitle": "Módulo 7 · Lección 19 — Certificación en Astrogenealogía"
+    },
+    {
+      "type": "content",
+      "title": "Transmisión multigeneracional",
+      "body": "Los patrones emocionales no resueltos\nse transmiten de generación en generación\nhasta que alguien los hace conscientes."
+    },
+    {
+      "type": "content",
+      "title": "Patrones de apego en relaciones",
+      "body": "Amor condicional: esfuerzo compulsivo.\nCercanía amenazante: distancia emocional.\nCuidado inconsistente: oscilación entre necesidad y miedo."
+    },
+    {
+      "type": "quote",
+      "text": "Las primeras relaciones de vinculación establecen un modelo interno que guía todas las relaciones posteriores.",
+      "source": "John Bowlby, 1969 — Teoría del Apego"
+    },
+    {
+      "type": "content",
+      "title": "Partes internas (IFS)",
+      "body": "Partes protectoras: evitan el dolor.\nPartes exiliadas: cargan heridas antiguas.\nSelf central: observa con compasión."
+    },
+    {
+      "type": "content",
+      "title": "Ejercicio de mapeo relacional",
+      "body": "3 relaciones significativas actuales.\n¿Qué patrón familiar se activa en cada una?\n¿Qué necesitabas de niña que buscas aquí?"
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Los patrones familiares no se quedaron en el pasado: están activos en tus relaciones actuales",
+        "El estilo de apego desarrollado en la infancia guía las respuestas relacionales adultas",
+        "La diferenciación (Bowen) es la clave: hacer conscientes los patrones para que dejen de dirigirte"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la próxima lección exploraremos cómo tu pareja funciona como espejo de tu sistema familiar."
+    }
   ],
-  "citation": {"researcher": "John Bowlby", "year": "1969", "finding": "La teoría del apego demostró que los modelos internos de relación formados en la primera infancia funcionan como plantillas que guían las expectativas y respuestas emocionales en todas las relaciones significativas posteriores"}
+  "citation": {
+    "researcher": "John Bowlby",
+    "year": "1969",
+    "finding": "La teoría del apego demostró que los modelos internos de relación formados en la primera infancia funcionan como plantillas que guían las expectativas y respuestas emocionales en todas las relaciones significativas posteriores"
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Integración",
+      "steps": [
+        "Revisar genograma completo",
+        "Conectar con carta natal",
+        "Identificar patrón dominante",
+        "Diseñar plan de transformación",
+        "Establecer indicadores de cambio",
+        "Revisión a 3 meses"
+      ]
+    },
+    {
+      "type": "lesson_summary"
+    }
+  ]
 }

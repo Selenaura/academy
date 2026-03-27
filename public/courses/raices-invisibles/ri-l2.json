@@ -4,14 +4,82 @@
   "title": "Teoría de Sistemas Familiares: de Bowen a la epigenética",
   "text_content": "En 1966, Murray Bowen hizo algo inusual para un psiquiatra de su época: dejó de mirar al paciente individual y empezó a observar a la familia completa. Lo que descubrió cambió para siempre nuestra comprensión del comportamiento humano.\n\nBowen propuso que la familia no es simplemente un grupo de personas que viven juntas. Es un sistema emocional: un organismo vivo con sus propias reglas, equilibrios y mecanismos de supervivencia. Y como todo sistema, tiende a mantener su homeostasis, su estabilidad interna, incluso cuando esa estabilidad es disfuncional.\n\nSu teoría se articula en ocho conceptos interconectados. Los tres más relevantes para nuestro trabajo son la diferenciación del self, los triángulos y el proceso de transmisión multigeneracional.\n\nLa diferenciación del self describe la capacidad de una persona para mantener su propio sentido de identidad mientras permanece emocionalmente conectada con su sistema familiar. Las personas con baja diferenciación tienden a fusionarse emocionalmente con su familia o, en el extremo opuesto, a cortarse emocionalmente de ella. Ambas respuestas son formas de reactividad, no de libertad.\n\nLos triángulos son la unidad básica del sistema emocional. Cuando la tensión entre dos personas sube, una tercera persona (o un tema, o un síntoma) es reclutada para estabilizar la relación. Tu madre y tu padre discuten, y tú, de niño o niña, desarrollas un síntoma que los une en la preocupación compartida. El triángulo se cierra. La tensión baja. Pero el precio lo pagas tú.\n\nEl proceso de transmisión multigeneracional explica cómo estos patrones viajan a través del tiempo. No se transmiten por instrucción directa. Se transmiten por la calidad emocional de los vínculos. La ansiedad crónica de una generación se convierte en la rigidez de la siguiente, que se convierte en la depresión de la tercera.\n\nAhora bien, Bowen trabajó desde la observación clínica. Décadas después, la ciencia encontró un mecanismo biológico que confirma sus intuiciones: la epigenética.\n\nEn 2016, Rachel Yehuda y su equipo en la Escuela de Medicina Mount Sinai publicaron un estudio que sacudió el mundo científico. Estudiaron a descendientes de supervivientes del Holocausto y encontraron modificaciones epigenéticas en el gen FKBP5, asociado a la regulación del cortisol. Estas modificaciones no estaban en los genes mismos, sino en cómo esos genes se expresaban. Y se habían transmitido de progenitores a descendencia.\n\nLo que esto significa es profundo: el trauma no solo se transmite a través de historias, silencios y atmósferas emocionales. También se inscribe en la biología. Tus células llevan la huella de experiencias que no viviste personalmente.\n\nPero la epigenética también trae buenas noticias. Las marcas epigenéticas son reversibles. A diferencia de las mutaciones genéticas, las modificaciones epigenéticas pueden cambiar con el entorno, las experiencias y el trabajo terapéutico. Esto significa que tomar conciencia de tus patrones heredados no es un ejercicio meramente intelectual. Tiene el potencial de modificar tu biología.\n\nDan Siegel, neuropsiquiatra de UCLA, ha demostrado que las relaciones de apego seguro pueden modificar la estructura neuronal. Bowlby ya lo intuía en 1969 cuando formuló la teoría del apego: la calidad del vínculo temprano configura nuestro sistema nervioso para toda la vida. Pero Siegel va más allá: esa configuración puede rehacerse.\n\nAsí que tenemos un puente: desde la observación clínica de Bowen hasta la evidencia biológica de Yehuda, desde la teoría del apego de Bowlby hasta la neuroplasticidad relacional de Siegel. Todas estas líneas de investigación convergen en una idea: lo que vivieron tus ancestros está en ti, pero no tiene que definirte.\n\nEn astrogenealogía, trabajamos con la carta natal como un mapa que hace visibles estos patrones heredados. Los planetas y las casas no causan los patrones. Los simbolizan. Y al darles nombre y estructura, nos permiten trabajar con ellos de forma consciente.\n\nLa teoría sin práctica es estéril. Al final de este módulo tendrás herramientas concretas para empezar a identificar tus propios patrones sistémicos. Por ahora, sienta las bases: entiende que tu familia es un sistema, que ese sistema tiene reglas invisibles, y que esas reglas se transmiten tanto emocional como biológicamente.",
   "slides": [
-    {"type": "title", "title": "De Bowen a la epigenética", "subtitle": "Módulo 1 · Lección 2 — Certificación en Astrogenealogía"},
-    {"type": "content", "title": "La familia como sistema emocional", "body": "Bowen propuso que la familia es un organismo vivo\ncon reglas, equilibrios y mecanismos propios.\nTiende a mantener su estabilidad, incluso la disfuncional."},
-    {"type": "content", "title": "Tres conceptos clave de Bowen", "body": "Diferenciación del self: tu identidad vs. fusión familiar.\nTriángulos: estabilizar tensión reclutando a una tercera persona.\nTransmisión multigeneracional: patrones que viajan en el tiempo."},
-    {"type": "quote", "text": "Encontramos modificaciones epigenéticas en descendientes de supervivientes de trauma que afectan la regulación del cortisol.", "source": "Rachel Yehuda et al., 2016 — Mount Sinai School of Medicine"},
-    {"type": "content", "title": "La epigenética confirma a Bowen", "body": "El trauma se inscribe en la biología:\nmodificaciones en cómo se expresan los genes,\ntransmitidas de progenitores a descendencia."},
-    {"type": "content", "title": "La buena noticia", "body": "Las marcas epigenéticas son reversibles.\nLas experiencias, el entorno y el trabajo terapéutico\npueden modificar esa herencia biológica."},
-    {"type": "summary", "points": ["La familia es un sistema emocional con reglas invisibles (Bowen, 1978)", "El trauma se transmite biológicamente vía epigenética (Yehuda, 2016)", "Las marcas epigenéticas son reversibles: la herencia no es destino"]},
-    {"type": "next", "text": "En la siguiente lección abordaremos las tres leyes sistémicas fundamentales: pertenencia, orden y equilibrio."}
+    {
+      "type": "title",
+      "title": "De Bowen a la epigenética",
+      "subtitle": "Módulo 1 · Lección 2 — Certificación en Astrogenealogía"
+    },
+    {
+      "type": "content",
+      "title": "La familia como sistema emocional",
+      "body": "Bowen propuso que la familia es un organismo vivo\ncon reglas, equilibrios y mecanismos propios.\nTiende a mantener su estabilidad, incluso la disfuncional."
+    },
+    {
+      "type": "content",
+      "title": "Tres conceptos clave de Bowen",
+      "body": "Diferenciación del self: tu identidad vs. fusión familiar.\nTriángulos: estabilizar tensión reclutando a una tercera persona.\nTransmisión multigeneracional: patrones que viajan en el tiempo."
+    },
+    {
+      "type": "quote",
+      "text": "Encontramos modificaciones epigenéticas en descendientes de supervivientes de trauma que afectan la regulación del cortisol.",
+      "source": "Rachel Yehuda et al., 2016 — Mount Sinai School of Medicine"
+    },
+    {
+      "type": "content",
+      "title": "La epigenética confirma a Bowen",
+      "body": "El trauma se inscribe en la biología:\nmodificaciones en cómo se expresan los genes,\ntransmitidas de progenitores a descendencia."
+    },
+    {
+      "type": "content",
+      "title": "La buena noticia",
+      "body": "Las marcas epigenéticas son reversibles.\nLas experiencias, el entorno y el trabajo terapéutico\npueden modificar esa herencia biológica."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La familia es un sistema emocional con reglas invisibles (Bowen, 1978)",
+        "El trauma se transmite biológicamente vía epigenética (Yehuda, 2016)",
+        "Las marcas epigenéticas son reversibles: la herencia no es destino"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección abordaremos las tres leyes sistémicas fundamentales: pertenencia, orden y equilibrio."
+    }
   ],
-  "citation": {"researcher": "Rachel Yehuda", "year": "2016", "finding": "Descendientes de supervivientes de trauma muestran modificaciones epigenéticas en el gen FKBP5 que afectan la regulación del cortisol, evidenciando transmisión biológica intergeneracional del trauma"}
+  "citation": {
+    "researcher": "Rachel Yehuda",
+    "year": "2016",
+    "finding": "Descendientes de supervivientes de trauma muestran modificaciones epigenéticas en el gen FKBP5 que afectan la regulación del cortisol, evidenciando transmisión biológica intergeneracional del trauma"
+  },
+  "interactive": [
+    {
+      "type": "timeline",
+      "events": [
+        {
+          "year": 1966,
+          "description": "Bowen teoría familiar"
+        },
+        {
+          "year": 1973,
+          "description": "Boszormenyi-Nagy lealtades invisibles"
+        },
+        {
+          "year": 1980,
+          "description": "Hellinger constelaciones"
+        },
+        {
+          "year": 2001,
+          "description": "Meaney epigenética"
+        },
+        {
+          "year": 2016,
+          "description": "Yehuda trauma transgeneracional"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary"
+    }
+  ]
 }

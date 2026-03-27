@@ -4,14 +4,69 @@
   "title": "Astrogenealogía: cuando la carta natal habla de tu familia",
   "text_content": "Hemos recorrido las bases teóricas de la terapia sistémica y hemos explorado las casas y planetas que resuenan con la herencia familiar. Ahora es momento de unir ambos mundos de forma explícita. La astrogenealogía no es astrología con otro nombre. Es una disciplina integradora que lee la carta natal como un mapa del sistema familiar, no solo como un retrato individual.\n\nEl cambio de perspectiva es sutil pero radical. Cuando miras tu carta natal desde la astrología convencional, ves tus tendencias, tus talentos, tus desafíos personales. Cuando la miras desde la astrogenealogía, ves algo más: las huellas de quienes vinieron antes que tú.\n\nEsa Luna en Escorpio no habla solo de tu intensidad emocional. Habla de una línea materna donde las emociones eran cuestión de vida o muerte. Ese Saturno en Casa 4 no es solo tu dificultad con el hogar. Es la rigidez de un sistema familiar que aprendió a sobrevivir a base de control. Esos Nodos Lunares en el eje 4-10 no son solo tu tensión entre lo privado y lo público. Son la historia de un linaje que tuvo que elegir entre familia y mundo exterior.\n\nLili Chin, terapeuta gestáltica y autora de trabajos sobre psicogenealogía, propone que el sistema familiar tiene una psique propia que trasciende a sus miembros individuales. Cada persona dentro del sistema es portadora de una parte de esa psique colectiva. Y la carta natal de cada miembro revela qué parte del sistema le tocó llevar.\n\nEsto se conecta directamente con el modelo de Sistemas Familiares Internos (IFS) de Richard Schwartz. En IFS, cada persona tiene partes internas que cumplen funciones específicas: protectores, exiliados, gerentes. Desde la astrogenealogía, podemos ir un paso más allá: algunas de esas partes internas no se originaron en tu experiencia personal. Son partes heredadas del sistema familiar.\n\nEl protector interno que te impide confiar puede ser la respuesta de un ancestro que fue traicionado. El exiliado que carga vergüenza profunda puede estar procesando la vergüenza de alguien en tu linaje que fue rechazado. El gerente que te mantiene hipervigilante puede estar reproduciendo la vigilancia necesaria de una generación que vivió en peligro real.\n\nPara hacer una lectura astrogenealógica necesitas desarrollar tres habilidades:\n\nPrimera: lectura sistémica de casas. En lugar de leer cada casa como un área de tu vida individual, léela como un área de tu sistema familiar. Casa 4: el hogar ancestral. Casa 8: las herencias y deudas del linaje. Casa 12: el inconsciente colectivo familiar. Casa 10: el mandato sobre tu lugar en el mundo.\n\nSegunda: lectura transgeneracional de planetas. En lugar de ver cada planeta como una función psicológica tuya, pregúntate: ¿de quién heredé esta energía? ¿Quién en mi sistema tenía esta misma intensidad, esta misma rigidez, esta misma creatividad? Los planetas no solo te describen a ti. Describen a todo tu linaje.\n\nTercera: lectura de aspectos como dinámicas familiares. Un aspecto difícil entre dos planetas puede representar una tensión que existía entre dos miembros o dos dinámicas de tu sistema. Una cuadratura Luna-Saturno puede simbolizar la tensión entre la necesidad de nutrición y el mandato de austeridad que atravesó generaciones.\n\nBowen hablaría de fusión emocional cuando vemos conjunciones entre planetas personales y transpersonales. Hablaría de triángulos cuando vemos configuraciones como T-cuadradas donde tres puntos planetarios se tensan mutuamente. Hablaría de corte emocional cuando vemos planetas sin aspectos mayores, aislados en la carta.\n\nLa astrogenealogía no pretende reemplazar a la terapia familiar. Es una herramienta complementaria que ofrece un lenguaje simbólico para nombrar lo que la terapia busca resolver. Y nombrar, como hemos visto, es un acto profundamente terapéutico.\n\nReflexiona: toma tu carta natal y elige un planeta que siempre te haya llamado la atención o que te resulte difícil de integrar. Ahora pregúntate: ¿a quién de mi familia me recuerda esta energía? La respuesta puede abrirte una puerta que ni la astrología convencional ni la terapia solas podrían abrir.",
   "slides": [
-    {"type": "title", "title": "Astrogenealogía: cuando la carta habla de tu familia", "subtitle": "Módulo 5 · Lección 13 — Certificación en Astrogenealogía"},
-    {"type": "content", "title": "Un cambio de perspectiva radical", "body": "La astrología convencional ve tus rasgos individuales.\nLa astrogenealogía ve las huellas de quienes\nvinieron antes que tú en tu carta natal."},
-    {"type": "content", "title": "Partes heredadas del sistema (IFS)", "body": "Schwartz describe partes internas protectoras.\nAlgunas no se originaron en tu experiencia personal:\nson partes heredadas del sistema familiar."},
-    {"type": "quote", "text": "Cada persona dentro del sistema familiar es portadora de una parte de la psique colectiva del linaje.", "source": "Richard Schwartz, 1995 — Modelo de Sistemas Familiares Internos (IFS)"},
-    {"type": "content", "title": "Tres habilidades de lectura", "body": "1. Lectura sistémica de casas (área del sistema).\n2. Lectura transgeneracional de planetas (¿de quién heredé esto?).\n3. Lectura de aspectos como dinámicas familiares."},
-    {"type": "content", "title": "Aspectos como dinámicas del sistema", "body": "Conjunciones: fusión emocional entre dinámicas.\nT-cuadradas: triángulos sistémicos.\nPlanetas sin aspectos: corte emocional familiar."},
-    {"type": "summary", "points": ["La astrogenealogía lee la carta natal como mapa del sistema familiar completo", "Las partes internas pueden ser heredadas del sistema (Schwartz, IFS)", "Tres habilidades clave: lectura sistémica de casas, planetas y aspectos"]},
-    {"type": "next", "text": "En la siguiente lección profundizaremos en los aspectos planetarios que revelan dinámicas familiares específicas."}
+    {
+      "type": "title",
+      "title": "Astrogenealogía: cuando la carta habla de tu familia",
+      "subtitle": "Módulo 5 · Lección 13 — Certificación en Astrogenealogía"
+    },
+    {
+      "type": "content",
+      "title": "Un cambio de perspectiva radical",
+      "body": "La astrología convencional ve tus rasgos individuales.\nLa astrogenealogía ve las huellas de quienes\nvinieron antes que tú en tu carta natal."
+    },
+    {
+      "type": "content",
+      "title": "Partes heredadas del sistema (IFS)",
+      "body": "Schwartz describe partes internas protectoras.\nAlgunas no se originaron en tu experiencia personal:\nson partes heredadas del sistema familiar."
+    },
+    {
+      "type": "quote",
+      "text": "Cada persona dentro del sistema familiar es portadora de una parte de la psique colectiva del linaje.",
+      "source": "Richard Schwartz, 1995 — Modelo de Sistemas Familiares Internos (IFS)"
+    },
+    {
+      "type": "content",
+      "title": "Tres habilidades de lectura",
+      "body": "1. Lectura sistémica de casas (área del sistema).\n2. Lectura transgeneracional de planetas (¿de quién heredé esto?).\n3. Lectura de aspectos como dinámicas familiares."
+    },
+    {
+      "type": "content",
+      "title": "Aspectos como dinámicas del sistema",
+      "body": "Conjunciones: fusión emocional entre dinámicas.\nT-cuadradas: triángulos sistémicos.\nPlanetas sin aspectos: corte emocional familiar."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La astrogenealogía lee la carta natal como mapa del sistema familiar completo",
+        "Las partes internas pueden ser heredadas del sistema (Schwartz, IFS)",
+        "Tres habilidades clave: lectura sistémica de casas, planetas y aspectos"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección profundizaremos en los aspectos planetarios que revelan dinámicas familiares específicas."
+    }
   ],
-  "citation": {"researcher": "Richard Schwartz", "year": "1995", "finding": "El modelo de Sistemas Familiares Internos describe partes internas con funciones protectoras, gerenciales y exiliadas que pueden originarse no solo en la experiencia personal sino en dinámicas heredadas del sistema familiar"}
+  "citation": {
+    "researcher": "Richard Schwartz",
+    "year": "1995",
+    "finding": "El modelo de Sistemas Familiares Internos describe partes internas con funciones protectoras, gerenciales y exiliadas que pueden originarse no solo en la experiencia personal sino en dinámicas heredadas del sistema familiar"
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "IFS: trabajar con partes",
+      "steps": [
+        "Identificar la parte activada",
+        "Separarse (unblending)",
+        "Preguntar: ¿qué necesitas?",
+        "Escuchar sin juzgar",
+        "Encontrar al exiliado debajo",
+        "Ofrecer lo que necesitó y no recibió"
+      ]
+    },
+    {
+      "type": "lesson_summary"
+    }
+  ]
 }

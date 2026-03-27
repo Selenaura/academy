@@ -4,14 +4,87 @@
   "title": "Ejercicio: tu genograma emocional",
   "text_content": "Hasta ahora hemos explorado la teoría. Ahora vamos a llevarla a la práctica con una herramienta poderosa: el genograma emocional. Esta no es una simple árbol genealógico. Es un mapa dinámico de las relaciones, patrones y transmisiones emocionales de tu sistema familiar.\n\nEl genograma fue desarrollado como herramienta clínica por Monica McGoldrick y Randy Gerson en 1985, basándose en el trabajo previo de Murray Bowen. A diferencia del árbol genealógico convencional, el genograma incluye información sobre la calidad de las relaciones (cercanas, conflictivas, distantes, fusionadas), los eventos significativos (muertes, migraciones, divorcios, enfermedades) y los patrones que se repiten a lo largo de las generaciones.\n\nVamos a construir tu genograma en tres capas.\n\nPrimera capa: la estructura familiar. Dibuja tres generaciones: tus abuelos y abuelas, tus progenitores y tíos y tías, y tu propia generación. Para cada persona, anota: nombre, año de nacimiento (y de muerte si aplica), profesión, y cualquier evento significativo (migración, enfermedad grave, pérdida importante, éxito notable).\n\nNo te preocupes si no tienes toda la información. Los vacíos también son datos. ¿Hay alguien de quien nadie habla? ¿Alguien cuya historia es difusa? Esos huecos suelen ser los más reveladores.\n\nSegunda capa: las relaciones emocionales. Entre cada par de personas, dibuja el tipo de relación: líneas dobles para relaciones muy cercanas o fusionadas, líneas zigzag para conflicto, líneas punteadas para distancia emocional, líneas cortadas para cortes relacionales completos.\n\nPregúntate: ¿quién estaba fusionado con quién? ¿Quién estaba en conflicto permanente? ¿Hubo alianzas entre ciertos miembros contra otros? ¿Hubo alguien que funcionó como mediador o chivo expiatorio del sistema?\n\nTercera capa: la conexión astrológica. Si conoces los datos natales de algunos miembros de tu familia, puedes superponer información astrológica básica. ¿Cuál es la Luna de tu madre? ¿Y la de tu abuela? ¿Hay un signo que se repite en posiciones clave a lo largo de las generaciones?\n\nNo necesitas cartas natales completas de toda tu familia. Incluso con los signos solares puedes empezar a ver patrones. Si tres generaciones de mujeres tienen el Sol en signos de agua (Cáncer, Escorpio, Piscis), eso habla de una línea donde la emocionalidad intensa es un tema central.\n\nAhora viene la parte más importante: la lectura de patrones. Con tu genograma delante, busca:\n\nRepeticiones: ¿Se repiten eventos similares en diferentes generaciones? ¿Divorcios a la misma edad? ¿Enfermedades del mismo tipo? ¿Profesiones idénticas?\n\nExclusiones: ¿Hay alguien que fue borrado de la historia familiar? ¿Alguien cuyo nombre no se menciona? Recuerda la primera ley sistémica: nadie puede ser excluido sin consecuencias.\n\nTriángulos: ¿Puedes identificar los triángulos de Bowen? ¿Dos personas en tensión que reclutan a una tercera para estabilizarse?\n\nParentificaciones: ¿Hubo descendientes que asumieron roles de progenitores? ¿Personas jóvenes que cuidaron a personas adultas emocionalmente?\n\nMcGoldrick y Gerson encontraron que los patrones familiares tienden a repetirse cada dos o tres generaciones. Lo que la abuela vivió, la nieta lo repite en alguna forma, especialmente si el evento original no fue procesado emocionalmente.\n\nEste ejercicio puede remover emociones intensas. Es normal. Estás tocando el tejido emocional de tu sistema familiar. Si en algún momento sientes que la intensidad es excesiva, detente. Respira. Recuerda que ver el patrón no significa revivirlo. Significa ganar perspectiva sobre él.\n\nGuarda tu genograma. Lo usaremos en lecciones posteriores cuando integremos la carta natal con el mapa sistémico familiar. Será una de las herramientas más valiosas de toda esta certificación.",
   "slides": [
-    {"type": "title", "title": "Ejercicio: tu genograma emocional", "subtitle": "Módulo 4 · Lección 12 — Certificación en Astrogenealogía"},
-    {"type": "content", "title": "Más que un árbol genealógico", "body": "El genograma incluye calidad de relaciones,\neventos significativos y patrones repetidos.\nEs un mapa dinámico del sistema emocional familiar."},
-    {"type": "content", "title": "Capa 1: Estructura familiar", "body": "Tres generaciones: abuelos, progenitores, tú.\nNombre, fechas, profesión, eventos significativos.\nLos vacíos de información también son datos."},
-    {"type": "content", "title": "Capa 2: Relaciones emocionales", "body": "Fusión, conflicto, distancia, corte relacional.\n¿Quién era mediador? ¿Quién chivo expiatorio?\n¿Qué alianzas y qué triángulos existían?"},
-    {"type": "quote", "text": "Los patrones familiares tienden a repetirse cada dos o tres generaciones, especialmente cuando el evento original no fue procesado.", "source": "McGoldrick y Gerson, 1985 — Genogramas en Evaluación Familiar"},
-    {"type": "content", "title": "Capa 3: Conexión astrológica", "body": "Superpón signos solares o lunares de tu familia.\n¿Se repite algún signo en posiciones clave?\nIncluso datos parciales revelan patrones."},
-    {"type": "summary", "points": ["El genograma emocional mapea estructura, relaciones y patrones del sistema", "Busca repeticiones, exclusiones, triángulos y parentificaciones", "La capa astrológica superpone datos natales para enriquecer la lectura sistémica"]},
-    {"type": "next", "text": "En el Módulo 5 integraremos constelaciones y carta natal: cuando tu carta habla directamente de tu familia."}
+    {
+      "type": "title",
+      "title": "Ejercicio: tu genograma emocional",
+      "subtitle": "Módulo 4 · Lección 12 — Certificación en Astrogenealogía"
+    },
+    {
+      "type": "content",
+      "title": "Más que un árbol genealógico",
+      "body": "El genograma incluye calidad de relaciones,\neventos significativos y patrones repetidos.\nEs un mapa dinámico del sistema emocional familiar."
+    },
+    {
+      "type": "content",
+      "title": "Capa 1: Estructura familiar",
+      "body": "Tres generaciones: abuelos, progenitores, tú.\nNombre, fechas, profesión, eventos significativos.\nLos vacíos de información también son datos."
+    },
+    {
+      "type": "content",
+      "title": "Capa 2: Relaciones emocionales",
+      "body": "Fusión, conflicto, distancia, corte relacional.\n¿Quién era mediador? ¿Quién chivo expiatorio?\n¿Qué alianzas y qué triángulos existían?"
+    },
+    {
+      "type": "quote",
+      "text": "Los patrones familiares tienden a repetirse cada dos o tres generaciones, especialmente cuando el evento original no fue procesado.",
+      "source": "McGoldrick y Gerson, 1985 — Genogramas en Evaluación Familiar"
+    },
+    {
+      "type": "content",
+      "title": "Capa 3: Conexión astrológica",
+      "body": "Superpón signos solares o lunares de tu familia.\n¿Se repite algún signo en posiciones clave?\nIncluso datos parciales revelan patrones."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "El genograma emocional mapea estructura, relaciones y patrones del sistema",
+        "Busca repeticiones, exclusiones, triángulos y parentificaciones",
+        "La capa astrológica superpone datos natales para enriquecer la lectura sistémica"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el Módulo 5 integraremos constelaciones y carta natal: cuando tu carta habla directamente de tu familia."
+    }
   ],
-  "citation": {"researcher": "Monica McGoldrick y Randy Gerson", "year": "1985", "finding": "El genograma como herramienta clínica revela patrones familiares multigeneracionales que tienden a repetirse cada dos o tres generaciones, incluyendo eventos, relaciones y dinámicas emocionales"}
+  "citation": {
+    "researcher": "Monica McGoldrick y Randy Gerson",
+    "year": "1985",
+    "finding": "El genograma como herramienta clínica revela patrones familiares multigeneracionales que tienden a repetirse cada dos o tres generaciones, incluyendo eventos, relaciones y dinámicas emocionales"
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Memoria explícita",
+        "Memoria implícita"
+      ],
+      "rows": [
+        [
+          "Tipo",
+          "Consciente, verbal",
+          "Inconsciente, corporal"
+        ],
+        [
+          "Ejemplo",
+          "Abuela contó historia de guerra",
+          "Ansiedad inexplicable ante ruidos fuertes"
+        ],
+        [
+          "Transmisión",
+          "Narrativa familiar",
+          "Epigenética + modelado"
+        ],
+        [
+          "Acceso",
+          "Preguntando a la familia",
+          "Terapia somática, constelaciones"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary"
+    }
+  ]
 }
