@@ -4,15 +4,95 @@
   "title": "Diario onírico: tu herramienta fundamental",
   "text_content": "Si hay un solo hábito que puede transformar tu relación con los sueños, es llevar un diario onírico. No es un ejercicio complementario ni un accesorio del curso. Es la herramienta central de todo intérprete de sueños, y la diferencia entre quienes recuerdan y comprenden sus sueños y quienes los olvidan al despertar.\n\nLa razón es fisiológica. Los sueños se almacenan en la memoria a corto plazo y, si no se registran en los primeros minutos tras despertar, desaparecen. La norepinefrina, neurotransmisor esencial para la consolidación de memorias, está prácticamente ausente durante el sueño REM. Esto significa que el cerebro no está preparado para retener los sueños de forma automática. Necesita ayuda. Esa ayuda es tu diario.\n\nMatthew Walker documentó que la ventana para recordar un sueño es extraordinariamente breve. Cinco minutos después de despertar, ya has olvidado el 50% del contenido onírico. A los diez minutos, el 90% ha desaparecido. No es que los sueños no sean importantes para tu cerebro. Es que están diseñados para procesarse internamente, no para exportarse a la consciencia.\n\nPor eso el diario onírico tiene reglas específicas que debes seguir con disciplina.\n\nPrimera regla: coloca tu diario al alcance de la mano antes de dormir. Puede ser un cuaderno físico con bolígrafo o una grabadora de voz. Lo importante es que no tengas que moverte, encender luces ni buscar nada. Cada segundo cuenta.\n\nSegunda regla: al despertar, no te muevas. Quédate en la posición exacta en que despertaste. El movimiento corporal activa la consciencia diurna y borra los contenidos oníricos. Mantén los ojos cerrados unos segundos y deja que las imágenes del sueño vuelvan a ti.\n\nTercera regla: registra lo que recuerdes, aunque sea un fragmento. No esperes a recordar el sueño completo. A veces solo tendrás una imagen, una emoción o una palabra. Anótala. Muchas veces, al escribir ese fragmento, el resto del sueño emerge como un hilo del que puedes tirar.\n\nCuarta regla: registra la emoción predominante. ¿Cómo te sentías en el sueño? ¿Y cómo te sentiste al despertar? La emoción es la brújula más fiable para la interpretación posterior.\n\nQuinta regla: no interpretes mientras registras. El momento de anotar el sueño no es el momento de analizarlo. Registra con la mayor fidelidad posible, sin juzgar, sin censurar, sin intentar que tenga sentido. La interpretación viene después.\n\nTu diario onírico debe incluir ciertos elementos en cada entrada. Fecha y hora de despertar. Título breve para el sueño, algo que capture su esencia en pocas palabras. Narrativa del sueño tal como la recuerdas, en presente y en primera persona. Emoción predominante durante el sueño. Emoción al despertar. Personas, lugares y objetos destacados. Y, opcionalmente, una nota sobre qué estaba pasando en tu vida el día anterior, porque los sueños frecuentemente procesan los estímulos de las horas previas, lo que la investigación denomina efecto residuo diurno.\n\nHall y Nordby demostraron en su investigación que llevar un diario onírico durante al menos cuatro semanas incrementa significativamente la capacidad de recordar sueños. Es un efecto de entrenamiento: al prestar atención sistemática a tus sueños, el cerebro aprende a darles más prioridad en el proceso de consolidación.\n\nOtro beneficio documentado es que el diario onírico favorece la autoconciencia emocional. Al revisar tus sueños periódicamente, empiezas a detectar patrones que no verías de otra forma: temas recurrentes, emociones persistentes, conflictos no resueltos que tu psique sigue procesando noche tras noche.\n\nAlgunas personas prefieren diarios digitales. Esto es aceptable, pero el cuaderno físico tiene una ventaja: no emite luz azul que estimule la vigilia y no te expone a notificaciones que borrarán el sueño de tu mente. Si usas el móvil, activa el modo avión la noche anterior y abre directamente la app de notas sin mirar nada más.\n\nEl diario onírico no es solo para este curso. Es una práctica que, si la adoptas, te acompañará toda la vida profesional como intérprete. Cada sueño registrado es un dato. Y los datos acumulados a lo largo de meses y años cuentan historias que ningún sueño individual puede revelar.",
   "slides": [
-    {"type": "title", "title": "Diario onírico: tu herramienta fundamental", "subtitle": "Módulo 3 · Lección 7 — Certificación en Interpretación de Sueños"},
-    {"type": "content", "title": "Por qué olvidamos los sueños", "body": "La norepinefrina está casi ausente en REM.\nA los 5 minutos pierdes el 50% del contenido.\nA los 10 minutos, el 90% ha desaparecido."},
-    {"type": "content", "title": "Las cinco reglas del registro", "body": "1. Diario al alcance antes de dormir.\n2. Al despertar, no te muevas.\n3. Registra aunque sea un fragmento."},
-    {"type": "content", "title": "Reglas 4 y 5", "body": "4. Anota la emoción predominante.\n5. No interpretes mientras registras.\nLa interpretación viene después."},
-    {"type": "content", "title": "Qué debe incluir cada entrada", "body": "Fecha, título breve, narrativa en presente.\nEmoción en el sueño y al despertar.\nPersonas, lugares, objetos y contexto vital."},
-    {"type": "quote", "text": "Cinco minutos después de despertar, ya has olvidado el 50% del contenido onírico. A los diez minutos, el 90% ha desaparecido.", "source": "Matthew Walker, 2017 — Why We Sleep"},
-    {"type": "content", "title": "El efecto acumulativo", "body": "Cuatro semanas de diario incrementan\nsignificativamente el recuerdo onírico.\nLos patrones emergen con el tiempo."},
-    {"type": "summary", "points": ["El diario onírico es la herramienta central de todo intérprete de sueños", "Registra inmediatamente al despertar, sin moverte y sin interpretar", "La práctica constante entrena al cerebro a recordar más y mejor"]},
-    {"type": "next", "text": "En la siguiente lección aprenderás técnicas específicas para mejorar el recuerdo de tus sueños."}
+    {
+      "type": "title",
+      "title": "Diario onírico: tu herramienta fundamental",
+      "subtitle": "Módulo 3 · Lección 7 — Certificación en Interpretación de Sueños"
+    },
+    {
+      "type": "content",
+      "title": "Por qué olvidamos los sueños",
+      "body": "La norepinefrina está casi ausente en REM.\nA los 5 minutos pierdes el 50% del contenido.\nA los 10 minutos, el 90% ha desaparecido."
+    },
+    {
+      "type": "content",
+      "title": "Las cinco reglas del registro",
+      "body": "1. Diario al alcance antes de dormir.\n2. Al despertar, no te muevas.\n3. Registra aunque sea un fragmento."
+    },
+    {
+      "type": "content",
+      "title": "Reglas 4 y 5",
+      "body": "4. Anota la emoción predominante.\n5. No interpretes mientras registras.\nLa interpretación viene después."
+    },
+    {
+      "type": "content",
+      "title": "Qué debe incluir cada entrada",
+      "body": "Fecha, título breve, narrativa en presente.\nEmoción en el sueño y al despertar.\nPersonas, lugares, objetos y contexto vital."
+    },
+    {
+      "type": "quote",
+      "text": "Cinco minutos después de despertar, ya has olvidado el 50% del contenido onírico. A los diez minutos, el 90% ha desaparecido.",
+      "source": "Matthew Walker, 2017 — Why We Sleep"
+    },
+    {
+      "type": "content",
+      "title": "El efecto acumulativo",
+      "body": "Cuatro semanas de diario incrementan\nsignificativamente el recuerdo onírico.\nLos patrones emergen con el tiempo."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "El diario onírico es la herramienta central de todo intérprete de sueños",
+        "Registra inmediatamente al despertar, sin moverte y sin interpretar",
+        "La práctica constante entrena al cerebro a recordar más y mejor"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección aprenderás técnicas específicas para mejorar el recuerdo de tus sueños."
+    }
   ],
-  "citation": {"researcher": "Calvin Hall y Robert Van de Castle", "year": "1966", "finding": "El registro sistemático de sueños durante al menos cuatro semanas produce un incremento estadísticamente significativo en la frecuencia de recuerdo onírico, pasando de 1-2 sueños por semana a 4-5 en promedio."}
+  "citation": {
+    "researcher": "Calvin Hall y Robert Van de Castle",
+    "year": "1966",
+    "finding": "El registro sistemático de sueños durante al menos cuatro semanas produce un incremento estadísticamente significativo en la frecuencia de recuerdo onírico, pasando de 1-2 sueños por semana a 4-5 en promedio."
+  },
+  "interactive": [
+    {
+      "type": "concept_map",
+      "center": "Arquetipos en sueños",
+      "nodes": [
+        {
+          "label": "Sombra",
+          "description": "Lo rechazado"
+        },
+        {
+          "label": "Anima/Animus",
+          "description": "Contrasexual"
+        },
+        {
+          "label": "Self",
+          "description": "Totalidad"
+        },
+        {
+          "label": "Persona",
+          "description": "Máscara"
+        },
+        {
+          "label": "Sabio/a",
+          "description": "Guía interior"
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la lección",
+      "points": [
+        "El diario onírico es la herramienta central de todo intérprete de sueños",
+        "La ventana de recuerdo es muy breve: a los 5 minutos se pierde el 50% del contenido",
+        "Registra inmediatamente al despertar, sin moverte, sin interpretar y anotando la emoción",
+        "Cuatro semanas de diario incrementan significativamente la frecuencia de recuerdo onírico"
+      ]
+    }
+  ]
 }

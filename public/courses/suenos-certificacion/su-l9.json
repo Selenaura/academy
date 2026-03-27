@@ -4,15 +4,81 @@
   "title": "Práctica: tu diario de 30 días",
   "text_content": "Has aprendido la teoría. Has conocido las técnicas. Ahora comienza la parte que realmente te transformará: la práctica sostenida. Durante los próximos 30 días, vas a llevar un diario onírico con disciplina y atención. Esta experiencia es el fundamento sobre el que se construye todo lo que viene después en esta certificación.\n\nPor qué 30 días. La investigación sobre formación de hábitos muestra que se necesitan al menos tres semanas para que una práctica nueva se integre en la rutina diaria. Philippa Lally y su equipo en el University College London demostraron en 2009 que el tiempo medio para automatizar un hábito es de 66 días, pero que los primeros 30 son los más críticos: es cuando se establece el patrón neuronal que luego se consolida.\n\nAdemás, 30 días te dan material suficiente para empezar a ver patrones. Un sueño aislado es como una palabra suelta. Treinta días de sueños son un párrafo que empieza a tener sentido.\n\nVamos a estructurar tu práctica.\n\nSemana 1: solo registrar. No interpretes nada. Tu único objetivo es establecer el hábito de anotar tus sueños cada mañana. Usa el formato que aprendiste: fecha, título breve, narrativa en presente, emoción durante el sueño, emoción al despertar. Si no recuerdas ningún sueño, anota la fecha y escribe: no recuerdo sueños esta noche. El acto de anotar la ausencia también entrena la atención onírica.\n\nSemana 2: registrar y observar. Sigue anotando tus sueños, pero ahora añade una breve observación al final de cada entrada. No una interpretación formal, sino una nota personal: ¿qué me llama la atención de este sueño? ¿Hay algo que reconozco de mi vida diurna? ¿Qué emoción persiste después de anotarlo?\n\nSemana 3: registrar, observar y conectar. Además de la anotación diaria, dedica diez minutos el fin de semana a releer todos los sueños de la semana. Busca hilos comunes: ¿se repiten personas, lugares, emociones o situaciones? ¿Hay un tema que insiste? Esta visión panorámica es donde empiezan las revelaciones.\n\nSemana 4: revisión integral. Al final de los 30 días, relee todo tu diario de principio a fin. Marca los temas recurrentes. Identifica los símbolos que aparecen más de una vez. Observa la evolución emocional a lo largo del mes. Escribe un breve resumen de lo que has descubierto sobre tu vida onírica.\n\nConsejos prácticos para mantener la constancia. Prepara tu espacio la noche anterior: cuaderno abierto, bolígrafo destapado. Establece una rutina de sueño regular: acuéstate y levántate a la misma hora. Evita alcohol y pantallas una hora antes de dormir. Si despiertas sin recuerdo, quédate en cama dos minutos extra con los ojos cerrados: frecuentemente, un fragmento aparece.\n\nNo te frustres si los primeros días no recuerdas nada. Es completamente normal. La investigación de Schredl y Erlacher demostró que la frecuencia de recuerdo onírico aumenta progresivamente con la práctica del diario: la media pasa de dos sueños recordados por semana a cinco en el plazo de un mes.\n\nTambién es normal que algunos sueños parezcan triviales o absurdos. No descartes ninguno. Los sueños aparentemente insignificantes a menudo revelan su importancia cuando se leen en el contexto de la serie. Un sueño sobre hacer la compra puede ser la psique procesando decisiones que te abruman. Un sueño sobre un pasillo puede ser sobre transiciones que estás atravesando.\n\nDurante estos 30 días, vas a notar cambios. Tu capacidad de recuerdo mejorará notablemente. Empezarás a tener sueños más vívidos y detallados. Puede que experimentes momentos de lucidez dentro de los sueños. Y lo más importante: empezarás a sentir que tus sueños te hablan, que hay una inteligencia detrás de las imágenes que merece ser escuchada.\n\nEste diario de 30 días no es un ejercicio de clase que entregas y olvidas. Es el comienzo de una práctica que, si la mantienes, será tu recurso más valioso como intérprete profesional. Los mejores intérpretes de sueños son quienes llevan décadas escuchando los propios.",
   "slides": [
-    {"type": "title", "title": "Práctica: tu diario de 30 días", "subtitle": "Módulo 3 · Lección 9 — Certificación en Interpretación de Sueños"},
-    {"type": "content", "title": "Por qué 30 días", "body": "Se necesitan al menos 3 semanas para instalar un hábito.\nUn sueño es una palabra; 30 días son un párrafo.\nLos patrones solo emergen con acumulación."},
-    {"type": "content", "title": "Semanas 1 y 2", "body": "Semana 1: solo registrar, sin interpretar.\nSemana 2: añadir una observación personal breve.\n¿Qué me llama la atención? ¿Qué reconozco?"},
-    {"type": "content", "title": "Semanas 3 y 4", "body": "Semana 3: releer la semana y buscar hilos comunes.\nSemana 4: revisión integral de todo el mes.\nMarcar temas recurrentes y evolución emocional."},
-    {"type": "quote", "text": "La frecuencia de recuerdo onírico pasa de 2 sueños por semana a 5 en promedio tras un mes de registro sistemático.", "source": "Schredl y Erlacher, 2004 — Estudios sobre recuerdo onírico"},
-    {"type": "content", "title": "Si no recuerdas nada", "body": "Anota: no recuerdo sueños esta noche.\nEl acto mismo entrena la atención onírica.\nQuédate 2 minutos extra con los ojos cerrados."},
-    {"type": "content", "title": "Qué vas a notar", "body": "Mejor recuerdo y sueños más vívidos.\nPosibles momentos de lucidez dentro del sueño.\nSensación creciente de que los sueños te hablan."},
-    {"type": "summary", "points": ["Estructura tu práctica en 4 fases: registrar, observar, conectar y revisar", "No descartes sueños triviales: revelan su importancia en contexto", "Este diario será tu recurso más valioso como intérprete profesional"]},
-    {"type": "next", "text": "En el siguiente módulo aprenderás el método junguiano de interpretación paso a paso."}
+    {
+      "type": "title",
+      "title": "Práctica: tu diario de 30 días",
+      "subtitle": "Módulo 3 · Lección 9 — Certificación en Interpretación de Sueños"
+    },
+    {
+      "type": "content",
+      "title": "Por qué 30 días",
+      "body": "Se necesitan al menos 3 semanas para instalar un hábito.\nUn sueño es una palabra; 30 días son un párrafo.\nLos patrones solo emergen con acumulación."
+    },
+    {
+      "type": "content",
+      "title": "Semanas 1 y 2",
+      "body": "Semana 1: solo registrar, sin interpretar.\nSemana 2: añadir una observación personal breve.\n¿Qué me llama la atención? ¿Qué reconozco?"
+    },
+    {
+      "type": "content",
+      "title": "Semanas 3 y 4",
+      "body": "Semana 3: releer la semana y buscar hilos comunes.\nSemana 4: revisión integral de todo el mes.\nMarcar temas recurrentes y evolución emocional."
+    },
+    {
+      "type": "quote",
+      "text": "La frecuencia de recuerdo onírico pasa de 2 sueños por semana a 5 en promedio tras un mes de registro sistemático.",
+      "source": "Schredl y Erlacher, 2004 — Estudios sobre recuerdo onírico"
+    },
+    {
+      "type": "content",
+      "title": "Si no recuerdas nada",
+      "body": "Anota: no recuerdo sueños esta noche.\nEl acto mismo entrena la atención onírica.\nQuédate 2 minutos extra con los ojos cerrados."
+    },
+    {
+      "type": "content",
+      "title": "Qué vas a notar",
+      "body": "Mejor recuerdo y sueños más vívidos.\nPosibles momentos de lucidez dentro del sueño.\nSensación creciente de que los sueños te hablan."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Estructura tu práctica en 4 fases: registrar, observar, conectar y revisar",
+        "No descartes sueños triviales: revelan su importancia en contexto",
+        "Este diario será tu recurso más valioso como intérprete profesional"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el siguiente módulo aprenderás el método junguiano de interpretación paso a paso."
+    }
   ],
-  "citation": {"researcher": "Michael Schredl y Daniel Erlacher", "year": "2004", "finding": "El entrenamiento en recuerdo de sueños mediante diario onírico mostró un aumento del 150% en la frecuencia de recuerdo en participantes que mantuvieron la práctica durante cuatro semanas consecutivas."}
+  "citation": {
+    "researcher": "Michael Schredl y Daniel Erlacher",
+    "year": "2004",
+    "finding": "El entrenamiento en recuerdo de sueños mediante diario onírico mostró un aumento del 150% en la frecuencia de recuerdo en participantes que mantuvieron la práctica durante cuatro semanas consecutivas."
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Imaginación activa",
+      "steps": [
+        "Relajación profunda",
+        "Evocar imagen del sueño",
+        "Dialogar con la imagen",
+        "Dejar que evolucione",
+        "Registrar insights",
+        "Integrar en vida despierta"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la lección",
+      "points": [
+        "El diario de 30 días se estructura en 4 fases: registrar, observar, conectar y revisar",
+        "No descartes sueños aparentemente triviales: revelan su importancia en el contexto de la serie",
+        "La frecuencia de recuerdo pasa de 2 a 5 sueños por semana tras un mes de práctica",
+        "Este diario será tu recurso más valioso como intérprete profesional"
+      ]
+    }
+  ]
 }

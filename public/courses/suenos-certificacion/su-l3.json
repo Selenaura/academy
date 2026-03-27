@@ -4,15 +4,81 @@
   "title": "Jung y el inconsciente",
   "text_content": "Si hay una figura que transformó para siempre la forma en que entendemos los sueños, es Carl Gustav Jung. Su ruptura con Freud no fue solo un desacuerdo teórico: fue una revolución en la comprensión de la psique humana que sigue vigente más de un siglo después.\n\nPara entender a Jung, necesitas entender primero lo que rechazó de Freud. Freud veía los sueños como disfraces: el inconsciente tiene deseos inaceptables y los viste con imágenes engañosas para que la mente consciente no los reconozca. Para Freud, interpretar un sueño era desenmascararlos, quitar las capas de disfraz hasta llegar al deseo oculto, generalmente de naturaleza sexual.\n\nJung vio algo diferente. Para él, los sueños no disfrazan: expresan. El inconsciente no miente ni engaña. Habla en el único lenguaje que conoce: el del símbolo. Un sueño con agua no es un deseo disfrazado. Es la psique hablando de emociones, de lo fluido, de lo profundo, usando el lenguaje natural de las imágenes.\n\nEsta diferencia es fundamental. Si los sueños disfrazan, necesitas un experto que los descifre. Si los sueños expresan, necesitas aprender su lenguaje. Y ese lenguaje se puede aprender.\n\nJung propuso una estructura de la psique con varias capas. En la superficie está la consciencia: lo que sabes que sabes. Debajo está el inconsciente personal: memorias olvidadas, experiencias reprimidas, contenidos que alguna vez fueron conscientes pero que quedaron sumergidos. Hasta aquí, Freud estaría de acuerdo.\n\nPero Jung añadió una capa más profunda: el inconsciente colectivo. No se trata de memorias personales, sino de patrones psíquicos heredados, compartidos por toda la humanidad. Jung los llamó arquetipos. Son formas vacías que se llenan de contenido según la cultura y la experiencia personal, pero cuya estructura es universal.\n\nEl arquetipo de la Sombra representa todo lo que rechazas de ti: los impulsos que consideras inaceptables, los rasgos que niegas tener. En sueños, la Sombra suele aparecer como una figura del mismo género que te persigue, amenaza o incomoda. No es tu enemiga. Es la parte de ti que necesita ser integrada.\n\nEl Ánima y el Ánimus representan la contraparte psíquica interna. Jung describió el Ánima como la dimensión femenina en la psique masculina y el Ánimus como la dimensión masculina en la psique femenina. Aunque esta formulación binaria ha sido revisada por la psicología contemporánea, el concepto subyacente permanece valioso: todos llevamos dentro cualidades que nuestra socialización nos enseñó a reprimir.\n\nEl Sí-mismo, o Self, es el arquetipo de la totalidad. Representa la integración de todos los opuestos psíquicos. En sueños aparece como figuras de sabiduría, mandalas, niños divinos o paisajes de extraordinaria belleza y armonía. Soñar con el Self es una señal de que la psique busca unificarse.\n\nLa función compensatoria de los sueños es quizás la idea más práctica de Jung. Los sueños compensan las actitudes unilaterales de la consciencia. Si durante el día eres excesivamente racional, tus sueños serán emocionales. Si reprimes tu agresividad, soñarás con violencia. No porque estés enfermo, sino porque tu psique busca equilibrio.\n\nEsta idea tiene respaldo neurocientífico. Mark Solms, neuropsicólogo sudafricano, demostró que las áreas cerebrales que generan los sueños son las mismas que gestionan la motivación y la emoción, no las que procesan la percepción sensorial. Los sueños nacen de la necesidad emocional, no de la estimulación externa.\n\nJung también introdujo el concepto de individuación: el proceso de llegar a ser quien realmente eres, integrando consciencia e inconsciente. Los sueños son guías en este proceso. No te dicen quién debes ser. Te muestran quién ya eres debajo de las máscaras sociales.\n\nPara Jung, trabajar con los sueños no era un ejercicio intelectual. Era un acto de respeto hacia la sabiduría del inconsciente. Cada sueño tiene algo que decir. La pregunta no es si el sueño tiene sentido, sino si estamos dispuestos a escucharlo.\n\nEste enfoque será la columna vertebral de todo lo que aprenderás en este curso. No interpretaremos sueños como acertijos que resolver, sino como mensajes que escuchar con atención, humildad y curiosidad.",
   "slides": [
-    {"type": "title", "title": "Jung y el inconsciente", "subtitle": "Módulo 1 · Lección 3 — Certificación en Interpretación de Sueños"},
-    {"type": "content", "title": "Freud vs. Jung: una diferencia crucial", "body": "Freud: los sueños disfrazan deseos reprimidos.\nJung: los sueños expresan en lenguaje simbólico.\nEl inconsciente no miente. Habla con imágenes."},
-    {"type": "content", "title": "Capas de la psique", "body": "Consciencia: lo que sabes que sabes.\nInconsciente personal: memorias sumergidas.\nInconsciente colectivo: patrones universales heredados."},
-    {"type": "content", "title": "Los arquetipos principales", "body": "Sombra: lo que rechazas de ti.\nÁnima/Ánimus: tu contraparte psíquica interna.\nSelf: el arquetipo de la totalidad e integración."},
-    {"type": "quote", "text": "Quien mira hacia afuera, sueña. Quien mira hacia adentro, despierta.", "source": "Carl Gustav Jung, 1964 — El hombre y sus símbolos"},
-    {"type": "content", "title": "Función compensatoria", "body": "Los sueños equilibran las actitudes de la consciencia.\nSi reprimes algo durante el día,\naparecerá amplificado en tus sueños."},
-    {"type": "content", "title": "Individuación: llegar a ser", "body": "El proceso de integrar consciencia e inconsciente.\nLos sueños son guías en este camino.\nNo te dicen quién ser. Te muestran quién ya eres."},
-    {"type": "summary", "points": ["Jung propuso que los sueños expresan en lugar de disfrazar", "El inconsciente colectivo contiene arquetipos universales: Sombra, Ánima/Ánimus, Self", "Los sueños compensan las actitudes unilaterales de la consciencia y guían la individuación"]},
-    {"type": "next", "text": "En el siguiente módulo exploraremos la simbología onírica: los arquetipos universales que aparecen en sueños de todas las culturas."}
+    {
+      "type": "title",
+      "title": "Jung y el inconsciente",
+      "subtitle": "Módulo 1 · Lección 3 — Certificación en Interpretación de Sueños"
+    },
+    {
+      "type": "content",
+      "title": "Freud vs. Jung: una diferencia crucial",
+      "body": "Freud: los sueños disfrazan deseos reprimidos.\nJung: los sueños expresan en lenguaje simbólico.\nEl inconsciente no miente. Habla con imágenes."
+    },
+    {
+      "type": "content",
+      "title": "Capas de la psique",
+      "body": "Consciencia: lo que sabes que sabes.\nInconsciente personal: memorias sumergidas.\nInconsciente colectivo: patrones universales heredados."
+    },
+    {
+      "type": "content",
+      "title": "Los arquetipos principales",
+      "body": "Sombra: lo que rechazas de ti.\nÁnima/Ánimus: tu contraparte psíquica interna.\nSelf: el arquetipo de la totalidad e integración."
+    },
+    {
+      "type": "quote",
+      "text": "Quien mira hacia afuera, sueña. Quien mira hacia adentro, despierta.",
+      "source": "Carl Gustav Jung, 1964 — El hombre y sus símbolos"
+    },
+    {
+      "type": "content",
+      "title": "Función compensatoria",
+      "body": "Los sueños equilibran las actitudes de la consciencia.\nSi reprimes algo durante el día,\naparecerá amplificado en tus sueños."
+    },
+    {
+      "type": "content",
+      "title": "Individuación: llegar a ser",
+      "body": "El proceso de integrar consciencia e inconsciente.\nLos sueños son guías en este camino.\nNo te dicen quién ser. Te muestran quién ya eres."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Jung propuso que los sueños expresan en lugar de disfrazar",
+        "El inconsciente colectivo contiene arquetipos universales: Sombra, Ánima/Ánimus, Self",
+        "Los sueños compensan las actitudes unilaterales de la consciencia y guían la individuación"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el siguiente módulo exploraremos la simbología onírica: los arquetipos universales que aparecen en sueños de todas las culturas."
+    }
   ],
-  "citation": {"researcher": "Mark Solms", "year": "2000", "finding": "Las áreas cerebrales que generan los sueños corresponden al circuito dopaminérgico de búsqueda y motivación, no a la percepción sensorial, confirmando la base emocional-motivacional propuesta por Jung."}
+  "citation": {
+    "researcher": "Mark Solms",
+    "year": "2000",
+    "finding": "Las áreas cerebrales que generan los sueños corresponden al circuito dopaminérgico de búsqueda y motivación, no a la percepción sensorial, confirmando la base emocional-motivacional propuesta por Jung."
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Diario de sueños",
+      "steps": [
+        "Despertar sin moverse",
+        "Recordar imágenes",
+        "Escribir inmediatamente",
+        "Titular el sueño",
+        "Registrar emociones",
+        "Buscar patrones semanales"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la lección",
+      "points": [
+        "Jung propuso que los sueños expresan en lenguaje simbólico, no disfrazan deseos reprimidos",
+        "El inconsciente colectivo contiene arquetipos universales: Sombra, Ánima/Ánimus, Self",
+        "Los sueños compensan las actitudes unilaterales de la consciencia y guían la individuación",
+        "La función compensatoria tiene respaldo neurocientífico en la investigación de Mark Solms"
+      ]
+    }
+  ]
 }

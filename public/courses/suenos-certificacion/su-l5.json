@@ -4,15 +4,99 @@
   "title": "Símbolos: agua, fuego, animales y muerte",
   "text_content": "Los símbolos oníricos más poderosos son aquellos que la humanidad ha soñado durante milenios. Agua, fuego, animales y muerte no son decoraciones casuales del sueño. Son el vocabulario básico del inconsciente, y aprender a leerlos es esencial para cualquier intérprete.\n\nComencemos por el agua. En los sueños, el agua suele representar el mundo emocional. Pero no existe un significado único. El estado del agua importa tanto como su presencia. Un océano en calma sugiere paz emocional. Un mar tempestuoso indica turbulencia interior. Un río que fluye puede señalar el curso natural de la vida. Agua estancada frecuentemente apunta a emociones bloqueadas. Inundaciones pueden representar emociones que desbordan la capacidad de contenerlas. Y sumergirse bajo el agua puede indicar inmersión en el inconsciente, con todo lo que eso implica de valioso y aterrador.\n\nFreud interpretaba el agua como símbolo del nacimiento y lo maternal. Jung la asociaba con el inconsciente mismo: lo profundo, lo que no se ve desde la superficie, lo que contiene vida pero también peligro. Ambas lecturas pueden coexistir en un mismo sueño.\n\nEl fuego tiene una dualidad igualmente rica. Puede destruir y puede transformar. Puede ser la pasión que te consume o la iluminación que te transforma. Un incendio descontrolado en un sueño puede señalar rabia no expresada, una situación que amenaza con destruir algo valioso. Pero una hoguera cálida puede representar el hogar, la comunidad, la seguridad. Una vela encendida puede ser la chispa de una idea nueva o la llama de la devoción.\n\nEn la mitología griega, Prometeo robó el fuego de los dioses para dárselo a la humanidad. El fuego en los sueños a menudo tiene esta cualidad prometeica: representa algo poderoso que puede elevar o destruir, dependiendo de cómo se maneje.\n\nLos animales son quizás los símbolos más frecuentes en los sueños. Representan nuestros instintos, las fuerzas naturales de la psique que la civilización ha domesticado pero nunca eliminado. Cada animal trae sus propias cualidades: la serpiente muda de piel y representa transformación y renovación, pero también peligro y lo ctónico, lo subterráneo. El lobo puede ser la amenaza que acecha o la fuerza salvaje que necesitas recuperar. Un caballo suele representar la energía vital, la fuerza instintiva. Las aves frecuentemente simbolizan aspiraciones espirituales, la capacidad de elevarse por encima de lo mundano.\n\nPero cuidado con los diccionarios de sueños que asignan significados fijos a cada animal. Lo que un gato significa para alguien que creció rodeada de gatos es completamente diferente de lo que significa para alguien que les tiene fobia. El símbolo universal es un punto de partida, nunca una conclusión.\n\nY llegamos a la muerte, posiblemente el símbolo más malinterpretado en los sueños. Soñar con la muerte rara vez tiene que ver con la muerte literal. Jung fue muy claro al respecto: la muerte en sueños casi siempre representa una transformación. Algo está muriendo para que algo nuevo pueda nacer. Puede ser una identidad que ya no te sirve, una relación que está terminando, una fase de la vida que concluye.\n\nAntti Revonsuo documentó que los sueños con contenido amenazante, incluida la muerte, son significativamente más frecuentes que las experiencias amenazantes reales. Esto refuerza su teoría de simulación: el cerebro ensaya escenarios difíciles durante el sueño para fortalecerte ante ellos.\n\nSoñar con tu propia muerte puede ser profundamente transformador. En muchas tradiciones espirituales, la muerte simbólica es un requisito para el renacimiento. Los ritos de iniciación en culturas tradicionales incluyen una muerte ceremonial: el individuo muere como quien era para renacer como quien está llamado a ser.\n\nHay otros símbolos que merece la pena mencionar brevemente. La casa suele representar la psique: el sótano es el inconsciente, la buhardilla los pensamientos elevados, las habitaciones desconocidas son partes de ti que no has explorado. Los vehículos representan cómo te mueves por la vida: ¿quién conduce?, ¿vas con control o sin frenos? Los dientes que se caen, uno de los sueños más comunes universalmente, suelen relacionarse con la ansiedad, la pérdida de poder o las transiciones vitales.\n\nLa clave para trabajar con símbolos es mantener la tensión entre lo universal y lo personal. Los símbolos tienen capas de significado colectivo acumuladas durante milenios. Pero también tienen un significado único e irrepetible para cada persona que los sueña. Un buen intérprete honra ambas dimensiones.",
   "slides": [
-    {"type": "title", "title": "Símbolos: agua, fuego, animales y muerte", "subtitle": "Módulo 2 · Lección 5 — Certificación en Interpretación de Sueños"},
-    {"type": "content", "title": "El agua: espejo emocional", "body": "Océano en calma = paz. Mar tempestuoso = turbulencia.\nRío que fluye = curso natural de la vida.\nInundación = emociones que desbordan."},
-    {"type": "content", "title": "El fuego: destrucción y transformación", "body": "Incendio = rabia, amenaza, descontrol.\nHoguera = hogar, comunidad, seguridad.\nVela = idea nueva, chispa, devoción."},
-    {"type": "content", "title": "Animales: los instintos hablan", "body": "Serpiente: transformación y renovación.\nLobo: amenaza o fuerza salvaje necesaria.\nAves: aspiraciones que buscan elevarse."},
-    {"type": "quote", "text": "Los sueños con contenido amenazante son significativamente más frecuentes que las amenazas reales, lo que sugiere una función de simulación adaptativa.", "source": "Antti Revonsuo, 2000 — The Reinterpretation of Dreams"},
-    {"type": "content", "title": "Muerte: transformación, no final", "body": "La muerte en sueños casi nunca es literal.\nRepresenta algo que muere para que algo nazca.\nIdentidades, relaciones o fases que concluyen."},
-    {"type": "content", "title": "Otros símbolos clave", "body": "Casa = tu psique (sótano = inconsciente).\nVehículos = cómo te mueves por la vida.\nDientes que caen = ansiedad, pérdida de poder."},
-    {"type": "summary", "points": ["Agua, fuego, animales y muerte son el vocabulario básico del inconsciente", "Cada símbolo tiene capas universales y un significado único para cada persona", "La muerte onírica casi siempre señala transformación, no final literal"]},
-    {"type": "next", "text": "En la siguiente lección veremos por qué el contexto personal es más importante que cualquier diccionario de símbolos."}
+    {
+      "type": "title",
+      "title": "Símbolos: agua, fuego, animales y muerte",
+      "subtitle": "Módulo 2 · Lección 5 — Certificación en Interpretación de Sueños"
+    },
+    {
+      "type": "content",
+      "title": "El agua: espejo emocional",
+      "body": "Océano en calma = paz. Mar tempestuoso = turbulencia.\nRío que fluye = curso natural de la vida.\nInundación = emociones que desbordan."
+    },
+    {
+      "type": "content",
+      "title": "El fuego: destrucción y transformación",
+      "body": "Incendio = rabia, amenaza, descontrol.\nHoguera = hogar, comunidad, seguridad.\nVela = idea nueva, chispa, devoción."
+    },
+    {
+      "type": "content",
+      "title": "Animales: los instintos hablan",
+      "body": "Serpiente: transformación y renovación.\nLobo: amenaza o fuerza salvaje necesaria.\nAves: aspiraciones que buscan elevarse."
+    },
+    {
+      "type": "quote",
+      "text": "Los sueños con contenido amenazante son significativamente más frecuentes que las amenazas reales, lo que sugiere una función de simulación adaptativa.",
+      "source": "Antti Revonsuo, 2000 — The Reinterpretation of Dreams"
+    },
+    {
+      "type": "content",
+      "title": "Muerte: transformación, no final",
+      "body": "La muerte en sueños casi nunca es literal.\nRepresenta algo que muere para que algo nazca.\nIdentidades, relaciones o fases que concluyen."
+    },
+    {
+      "type": "content",
+      "title": "Otros símbolos clave",
+      "body": "Casa = tu psique (sótano = inconsciente).\nVehículos = cómo te mueves por la vida.\nDientes que caen = ansiedad, pérdida de poder."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Agua, fuego, animales y muerte son el vocabulario básico del inconsciente",
+        "Cada símbolo tiene capas universales y un significado único para cada persona",
+        "La muerte onírica casi siempre señala transformación, no final literal"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección veremos por qué el contexto personal es más importante que cualquier diccionario de símbolos."
+    }
   ],
-  "citation": {"researcher": "Antti Revonsuo", "year": "2000", "finding": "La teoría de simulación de amenazas demostró que el 66% de los sueños contienen al menos un evento amenazante, proporción muy superior a la experiencia diurna, lo que sugiere una función evolutiva de ensayo protector."}
+  "citation": {
+    "researcher": "Antti Revonsuo",
+    "year": "2000",
+    "finding": "La teoría de simulación de amenazas demostró que el 66% de los sueños contienen al menos un evento amenazante, proporción muy superior a la experiencia diurna, lo que sugiere una función evolutiva de ensayo protector."
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Símbolo personal",
+        "Símbolo colectivo"
+      ],
+      "rows": [
+        [
+          "Origen",
+          "Experiencia propia",
+          "Herencia cultural/arquetípica"
+        ],
+        [
+          "Ejemplo",
+          "Tu perro de infancia",
+          "El lobo como instinto"
+        ],
+        [
+          "Interpretación",
+          "Contexto biográfico",
+          "Mitología/arquetipo"
+        ],
+        [
+          "Prioridad",
+          "Alta (más específico)",
+          "Complementaria"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la lección",
+      "points": [
+        "Agua, fuego, animales y muerte son el vocabulario básico del inconsciente",
+        "Cada símbolo tiene capas de significado universal y un significado único para cada persona",
+        "La muerte onírica casi siempre señala transformación, no un final literal",
+        "La casa representa la psique, los vehículos cómo te mueves por la vida"
+      ]
+    }
+  ]
 }

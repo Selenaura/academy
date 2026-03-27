@@ -4,14 +4,76 @@
   "title": "La Luna como guía onírica",
   "text_content": "La Luna ha sido la compañera nocturna de la humanidad desde el principio de los tiempos. Antes de la iluminación eléctrica, era la única luz en la oscuridad. No es casual que las palabras lunático, lúnula y mes deriven todas de la Luna. Tampoco es casual que la Luna esté profundamente entrelazada con la vida onírica.\n\nEn la astrología, la Luna representa el mundo emocional, la reacción instintiva, la memoria ancestral y lo que necesitamos para sentirnos seguras. Es el astro de la noche, del inconsciente, de lo receptivo. Si el Sol representa quién eres cuando brillas conscientemente, la Luna representa quién eres cuando nadie te mira: tus hábitos emocionales, tus necesidades no negociables, tu forma de buscar consuelo.\n\nLa conexión entre la Luna y los sueños tiene una base tanto simbólica como empírica. Un estudio publicado por Christian Cajochen en Current Biology en 2013 encontró que durante la luna llena, los participantes tardaban más en dormirse, dormían 20 minutos menos y mostraban una reducción del 30% en la actividad delta del sueño profundo. Además, sus niveles de melatonina eran más bajos. Aunque el estudio ha sido debatido y necesita replicación, abrió una línea de investigación fascinante sobre la relación entre los ciclos lunares y la arquitectura del sueño.\n\nDesde una perspectiva simbólica, las fases de la Luna ofrecen un marco para observar los patrones oníricos. La luna nueva es el momento de la oscuridad máxima, el equivalente celeste del inconsciente más profundo. Es un buen momento para sembrar intenciones: antes de dormir, formula una pregunta que quieras que tus sueños respondan. La luna creciente es el periodo de desarrollo y crecimiento. Los sueños durante esta fase a menudo reflejan proyectos en marcha, posibilidades que se expanden y energía constructiva.\n\nLa luna llena ilumina todo. Es el momento de máxima visibilidad, y muchas personas reportan sueños más vívidos, intensos y emocionalmente cargados durante la luna llena. Si la luna nueva planta la semilla en la oscuridad, la luna llena la expone a la luz. Lo que estaba oculto se revela. La luna menguante es el periodo de liberación y disolución. Los sueños durante esta fase pueden traer temas de soltar, despedirse, limpiar y completar ciclos.\n\nEn tu carta natal, la posición de la Luna por signo describe el tono emocional de tu vida onírica. La Luna en signos de agua (Cáncer, Escorpio, Piscis) suele producir sueños especialmente vívidos, emocionales e intuitivos. La Luna en signos de fuego (Aries, Leo, Sagitario) genera sueños dinámicos, llenos de acción y aventura. La Luna en signos de tierra (Tauro, Virgo, Capricornio) produce sueños más concretos, sensoriales y relacionados con el cuerpo. La Luna en signos de aire (Géminis, Libra, Acuario) genera sueños verbales, sociales y conceptuales.\n\nLa casa natal donde se encuentra tu Luna indica el área de la vida donde los sueños tienden a concentrarse. Luna en casa 4 sueña frecuentemente con el hogar y la familia. Luna en casa 7 procesa relaciones de pareja en sueños. Luna en casa 10 sueña con la carrera, la vocación y la imagen pública. Luna en casa 12, la casa más onírica de todas, produce una vida de sueños extraordinariamente rica e intensa.\n\nPara usar la Luna como guía onírica de forma práctica, comienza observando. Durante un mes, anota en tu diario onírico la fase lunar de cada noche. Después de tres meses, revisa tus anotaciones y busca correlaciones. ¿Tus sueños más vívidos coinciden con la luna llena? ¿Los temas de tu luna nueva se desarrollan durante el ciclo? No busques confirmación. Busca patrones genuinos.\n\nTambién puedes usar las fases lunares para la incubación de sueños. En luna nueva, formula tu pregunta más profunda. En cuarto creciente, pide claridad sobre un proyecto. En luna llena, pide revelación. En cuarto menguante, pide guía sobre qué soltar.\n\nEsta conexión entre astrología y sueños no es superstición. Es un sistema de observación que lleva milenios de práctica y que, combinado con la neurociencia del sueño y el método junguiano, ofrece una dimensión adicional de profundidad a tu trabajo interpretativo.",
   "slides": [
-    {"type": "title", "title": "La Luna como guía onírica", "subtitle": "Módulo 6 · Lección 16 — Certificación en Interpretación de Sueños"},
-    {"type": "content", "title": "La Luna en astrología", "body": "Representa el mundo emocional e instintivo.\nQuién eres cuando nadie te mira.\nTus hábitos emocionales y necesidades profundas."},
-    {"type": "content", "title": "Fases lunares y sueños", "body": "Luna nueva: siembra intenciones en la oscuridad.\nLuna llena: revelación, sueños más vívidos.\nMenguante: temas de soltar y completar ciclos."},
-    {"type": "content", "title": "La Luna natal y la vida onírica", "body": "Luna en agua: sueños vívidos y emocionales.\nLuna en fuego: sueños dinámicos y de acción.\nLuna en tierra o aire: sensoriales o conceptuales."},
-    {"type": "quote", "text": "Durante la luna llena, la actividad de sueño profundo se redujo un 30% y los participantes tardaron más en dormirse.", "source": "Christian Cajochen, 2013 — Current Biology"},
-    {"type": "content", "title": "Incubación con fases lunares", "body": "Luna nueva: tu pregunta más profunda.\nCreciente: claridad sobre un proyecto.\nLlena: pide revelación. Menguante: qué soltar."},
-    {"type": "summary", "points": ["La Luna representa el mundo emocional, los instintos y la vida onírica en la carta natal", "Las fases lunares ofrecen un marco para observar y trabajar con los patrones oníricos", "La posición de la Luna por signo y casa describe el tono y los temas de tus sueños"]},
-    {"type": "next", "text": "En la siguiente lección exploraremos Neptuno y la Casa 12: las claves astrológicas de la dimensión onírica."}
+    {
+      "type": "title",
+      "title": "La Luna como guía onírica",
+      "subtitle": "Módulo 6 · Lección 16 — Certificación en Interpretación de Sueños"
+    },
+    {
+      "type": "content",
+      "title": "La Luna en astrología",
+      "body": "Representa el mundo emocional e instintivo.\nQuién eres cuando nadie te mira.\nTus hábitos emocionales y necesidades profundas."
+    },
+    {
+      "type": "content",
+      "title": "Fases lunares y sueños",
+      "body": "Luna nueva: siembra intenciones en la oscuridad.\nLuna llena: revelación, sueños más vívidos.\nMenguante: temas de soltar y completar ciclos."
+    },
+    {
+      "type": "content",
+      "title": "La Luna natal y la vida onírica",
+      "body": "Luna en agua: sueños vívidos y emocionales.\nLuna en fuego: sueños dinámicos y de acción.\nLuna en tierra o aire: sensoriales o conceptuales."
+    },
+    {
+      "type": "quote",
+      "text": "Durante la luna llena, la actividad de sueño profundo se redujo un 30% y los participantes tardaron más en dormirse.",
+      "source": "Christian Cajochen, 2013 — Current Biology"
+    },
+    {
+      "type": "content",
+      "title": "Incubación con fases lunares",
+      "body": "Luna nueva: tu pregunta más profunda.\nCreciente: claridad sobre un proyecto.\nLlena: pide revelación. Menguante: qué soltar."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La Luna representa el mundo emocional, los instintos y la vida onírica en la carta natal",
+        "Las fases lunares ofrecen un marco para observar y trabajar con los patrones oníricos",
+        "La posición de la Luna por signo y casa describe el tono y los temas de tus sueños"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección exploraremos Neptuno y la Casa 12: las claves astrológicas de la dimensión onírica."
+    }
   ],
-  "citation": {"researcher": "Christian Cajochen", "year": "2013", "finding": "El estudio controlado publicado en Current Biology encontró que la fase lunar correlacionaba con cambios objetivos en la arquitectura del sueño, incluyendo reducción del sueño profundo y de los niveles de melatonina durante la luna llena."}
+  "citation": {
+    "researcher": "Christian Cajochen",
+    "year": "2013",
+    "finding": "El estudio controlado publicado en Current Biology encontró que la fase lunar correlacionaba con cambios objetivos en la arquitectura del sueño, incluyendo reducción del sueño profundo y de los niveles de melatonina durante la luna llena."
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Círculo de sueños grupal",
+      "steps": [
+        "Regla de confidencialidad",
+        "Alguien comparte sueño",
+        "Grupo escucha sin interpretar",
+        "Ronda: Si fuera MI sueño...",
+        "Soñante responde qué resonó",
+        "Cierre con gratitud"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la lección",
+      "points": [
+        "La Luna representa el mundo emocional, los instintos y la vida onírica en la carta natal",
+        "Las fases lunares ofrecen un marco para observar y trabajar con los patrones oníricos",
+        "La Luna en signos de agua produce sueños especialmente vívidos y emocionales",
+        "La incubación de sueños puede sincronizarse con las fases lunares para mayor efectividad"
+      ]
+    }
+  ]
 }

@@ -4,13 +4,71 @@
   "title": "Interpretación profesional: estructura de una sesión",
   "text_content": "Interpretar un sueño propio es una cosa. Interpretar el sueño de otra persona es radicalmente diferente. Porque el sueño no te pertenece. Los símbolos no son los tuyos. Y la tentación de proyectar tu propio mundo interno es enorme.\n\nClara Hill, investigadora de la Universidad de Maryland, desarrolló en 1996 el modelo de interpretación de sueños en tres fases que se ha convertido en el estándar en psicoterapia: Exploración, Insight y Acción. Este modelo es el que adaptamos para nuestras sesiones profesionales.\n\nFase 1 — Exploración (15 min). La persona narra el sueño completo sin interrupciones. Después, exploras cada elemento con preguntas abiertas: ¿cómo te sentías en el sueño? ¿Qué asocias con ese lugar/persona/objeto? ¿Hay algo en tu vida ahora que se parezca a esa sensación? No interpretes todavía. Solo recoge material.\n\nFase 2 — Insight (15 min). Comparte tus observaciones. Usa siempre el formato hipotético: 'Me pregunto si...', 'Una posibilidad sería...', 'Noto que...'. Conecta los símbolos con lo que la persona te ha contado de su vida. Busca el tema emocional central, no el significado literal de cada elemento.\n\nFase 3 — Acción (10 min). Pregunta: si este sueño te estuviera diciendo algo importante, ¿qué sería? ¿Hay alguna acción concreta que sientas que necesitas tomar? La acción puede ser interna (prestar atención a algo, reflexionar sobre una relación) o externa (tener una conversación, cambiar un hábito).\n\nEstructura completa de sesión de 50 minutos: 5 min bienvenida y encuadre, 15 min exploración, 15 min insight, 10 min acción, 5 min cierre.\n\nErrores comunes del principiante: interpretar demasiado rápido sin explorar primero, usar diccionarios de sueños genéricos, proyectar tu propia experiencia, dar significados absolutos en vez de hipótesis, olvidar preguntar qué siente la persona ante tu interpretación.\n\nRecuerda: la persona que soñó es la máxima autoridad sobre su sueño. Si tu interpretación no resuena, suéltala. El objetivo no es tener razón — es que la persona entienda algo nuevo sobre sí misma.",
   "slides": [
-    {"type": "title", "title": "Interpretación profesional: estructura de una sesión", "subtitle": "Módulo 7 · Lección 19 — Certificación en Interpretación de Sueños"},
-    {"type": "content", "title": "Modelo de Hill: 3 fases", "body": "Exploración: narración + preguntas abiertas.\nInsight: observaciones en formato hipotético.\nAcción: qué sientes que necesitas hacer."},
-    {"type": "quote", "text": "El modelo de tres fases (exploración, insight, acción) es el estándar validado para la interpretación de sueños en contexto terapéutico.", "source": "Clara Hill, 1996 — Working with Dreams in Psychotherapy"},
-    {"type": "content", "title": "Sesión de 50 minutos", "body": "5 min: bienvenida y encuadre.\n15 min: exploración del sueño.\n15 min: insight compartido.\n10 min: acción concreta.\n5 min: cierre."},
-    {"type": "content", "title": "Errores del principiante", "body": "Interpretar sin explorar primero.\nUsar diccionarios genéricos.\nProyectar tu propia experiencia.\nDar significados absolutos."},
-    {"type": "summary", "points": ["El modelo de Hill (exploración-insight-acción) estructura la sesión profesional de interpretación", "Usa siempre formato hipotético: 'Me pregunto si...', nunca afirmaciones absolutas", "La persona que soñó es la máxima autoridad sobre su sueño — si no resuena, suelta tu interpretación"]},
-    {"type": "next", "text": "Siguiente lección: ética profesional — límites, confidencialidad y derivación."}
+    {
+      "type": "title",
+      "title": "Interpretación profesional: estructura de una sesión",
+      "subtitle": "Módulo 7 · Lección 19 — Certificación en Interpretación de Sueños"
+    },
+    {
+      "type": "content",
+      "title": "Modelo de Hill: 3 fases",
+      "body": "Exploración: narración + preguntas abiertas.\nInsight: observaciones en formato hipotético.\nAcción: qué sientes que necesitas hacer."
+    },
+    {
+      "type": "quote",
+      "text": "El modelo de tres fases (exploración, insight, acción) es el estándar validado para la interpretación de sueños en contexto terapéutico.",
+      "source": "Clara Hill, 1996 — Working with Dreams in Psychotherapy"
+    },
+    {
+      "type": "content",
+      "title": "Sesión de 50 minutos",
+      "body": "5 min: bienvenida y encuadre.\n15 min: exploración del sueño.\n15 min: insight compartido.\n10 min: acción concreta.\n5 min: cierre."
+    },
+    {
+      "type": "content",
+      "title": "Errores del principiante",
+      "body": "Interpretar sin explorar primero.\nUsar diccionarios genéricos.\nProyectar tu propia experiencia.\nDar significados absolutos."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "El modelo de Hill (exploración-insight-acción) estructura la sesión profesional de interpretación",
+        "Usa siempre formato hipotético: 'Me pregunto si...', nunca afirmaciones absolutas",
+        "La persona que soñó es la máxima autoridad sobre su sueño — si no resuena, suelta tu interpretación"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "Siguiente lección: ética profesional — límites, confidencialidad y derivación."
+    }
   ],
-  "citation": {"researcher": "Clara Hill", "year": "1996", "finding": "El modelo de interpretación de sueños en tres fases (exploración, insight, acción) demostró mayor eficacia terapéutica que la interpretación directa."}
+  "citation": {
+    "researcher": "Clara Hill",
+    "year": "1996",
+    "finding": "El modelo de interpretación de sueños en tres fases (exploración, insight, acción) demostró mayor eficacia terapéutica que la interpretación directa."
+  },
+  "interactive": [
+    {
+      "type": "process_diagram",
+      "title": "Construir tu práctica",
+      "steps": [
+        "Formarte sólidamente",
+        "50 interpretaciones gratuitas",
+        "Recoger testimonios",
+        "Definir tu nicho",
+        "Establecer precios",
+        "Crear presencia online"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la lección",
+      "points": [
+        "El modelo de Hill (exploración-insight-acción) estructura la sesión profesional de interpretación",
+        "La sesión de 50 minutos se divide en bienvenida, exploración, insight, acción y cierre",
+        "Usa siempre formato hipotético: 'Me pregunto si...', nunca afirmaciones absolutas",
+        "La persona que soñó es la máxima autoridad sobre su sueño"
+      ]
+    }
+  ]
 }

@@ -4,15 +4,104 @@
   "title": "Técnicas de recuerdo onírico",
   "text_content": "Recordar los sueños no es cuestión de suerte. Es una habilidad que se entrena. Y como toda habilidad, tiene técnicas específicas que, aplicadas con constancia, producen resultados notables. En esta lección vas a aprender las estrategias más efectivas, respaldadas tanto por la tradición interpretativa como por la investigación en neurociencia del sueño.\n\nLa técnica más fundamental es la intención antes de dormir. Suena simple, casi ingenuo, pero la investigación la respalda. Deirdre Barrett, psicóloga de Harvard, demostró que la incubación de sueños funciona: cuando una persona se duerme con la intención deliberada de recordar sus sueños, o incluso de soñar con un tema específico, la probabilidad de lograrlo aumenta significativamente. El mecanismo parece involucrar la activación de circuitos de atención que permanecen parcialmente activos durante el sueño.\n\nLa práctica es sencilla. Antes de dormirte, repite mentalmente: esta noche recordaré mis sueños. Hazlo con calma, sin ansiedad, como quien coloca un ancla suave en la mente. No se trata de forzar. Se trata de señalar a tu cerebro que los sueños importan.\n\nLa segunda técnica es el despertar natural. Las alarmas abruptas son enemigas del recuerdo onírico. El sonido estridente activa la respuesta de alerta, inundando el cerebro de norepinefrina y cortisol, que barren los contenidos oníricos. Si necesitas alarma, usa sonidos suaves que te despierten gradualmente. Lo ideal es despertar sin alarma, dejando que el cuerpo complete sus ciclos naturales de sueño.\n\nRelacionada con esta técnica está la del despertar parcial. Si te despiertas en mitad de la noche tras un sueño vívido, no te despabiles completamente. Mantén los ojos cerrados, repasa mentalmente el sueño una o dos veces y luego anota las palabras clave en tu diario. Puedes expandir la nota por la mañana. Este método es extraordinariamente efectivo porque capturas el sueño en su momento de máxima frescura.\n\nLa tercera técnica involucra el cuerpo. La posición corporal está vinculada a la memoria onírica. Si despiertas y no recuerdas ningún sueño, prueba a cambiar de posición: gírate hacia el otro lado o ponte boca arriba. Con frecuencia, al retomar la posición en que estabas soñando, el sueño regresa. Esto se relaciona con lo que la neurociencia llama memoria dependiente del estado: la información se recupera mejor en las condiciones en que fue codificada.\n\nLa cuarta técnica es la revisión antes de dormir. Dedica dos o tres minutos antes de dormirte a revisar brevemente tu día. No para analizarlo, sino para observarlo: qué hiciste, qué sentiste, qué quedó sin resolver. Esta práctica reduce la brecha entre vigilia y sueño, facilitando que el material diurno se integre en los sueños de forma más accesible a la memoria.\n\nLa quinta técnica es la reducción de sustancias que interfieren con el REM. El alcohol suprime dramáticamente el sueño REM. Aunque ayuda a dormirse más rápido, fragmenta la arquitectura del sueño y reduce las fases REM donde ocurren los sueños más memorables. La cafeína, consumida después del mediodía, interfiere con la profundidad del sueño. Y las pantallas con luz azul antes de dormir retrasan la producción de melatonina.\n\nWalker demostró que incluso cantidades moderadas de alcohol antes de dormir reducen la calidad del sueño REM en un 20-30%. Si quieres recordar tus sueños, la sobriedad nocturna es una aliada poderosa.\n\nLa sexta técnica es la fragmentación del sueño, usada con precaución. Ponerte una alarma suave cuatro o cinco horas después de dormirte, anotar lo que recuerdes y volver a dormir puede capturar sueños de la primera mitad de la noche que normalmente se pierden. Solo úsala ocasionalmente para no alterar tu descanso.\n\nFinalmente, la técnica de la visualización hipnagógica. El estado hipnagógico es la frontera entre vigilia y sueño. Al acostarte, observa las imágenes que empiezan a formarse detrás de tus párpados cerrados. No las controles, solo obsérvales. Esta práctica entrena la atención a los contenidos internos y se traslada progresivamente al recuerdo de los sueños completos.\n\nNinguna técnica funciona de forma aislada. La combinación de intención antes de dormir, despertar gradual, registro inmediato y revisión periódica crea un sistema que transforma tu relación con tus sueños en cuestión de semanas.",
   "slides": [
-    {"type": "title", "title": "Técnicas de recuerdo onírico", "subtitle": "Módulo 3 · Lección 8 — Certificación en Interpretación de Sueños"},
-    {"type": "content", "title": "Intención antes de dormir", "body": "Repite mentalmente: recordaré mis sueños.\nLa incubación de sueños funciona.\nSeñala a tu cerebro que los sueños importan."},
-    {"type": "content", "title": "Despertar natural y parcial", "body": "Las alarmas abruptas borran los sueños.\nUsa sonidos suaves o despierta sin alarma.\nSi despiertas de noche, anota palabras clave."},
-    {"type": "content", "title": "Memoria corporal", "body": "La posición corporal ayuda a recuperar sueños.\nSi no recuerdas nada, cambia de posición.\nLa memoria es dependiente del estado."},
-    {"type": "quote", "text": "Cuando una persona se duerme con la intención deliberada de soñar sobre un problema, la probabilidad de lograrlo aumenta significativamente.", "source": "Deirdre Barrett, 2001 — The Committee of Sleep"},
-    {"type": "content", "title": "Sustancias que interfieren", "body": "El alcohol suprime el REM hasta un 30%.\nLa cafeína tras el mediodía fragmenta el sueño.\nLas pantallas con luz azul retrasan la melatonina."},
-    {"type": "content", "title": "Visualización hipnagógica", "body": "Observa las imágenes entre vigilia y sueño.\nNo las controles, solo atiéndelas.\nEntrena la atención a los contenidos internos."},
-    {"type": "summary", "points": ["La intención antes de dormir y el despertar gradual son las técnicas más efectivas", "La posición corporal, la revisión del día y la reducción de sustancias complementan el sistema", "La combinación de técnicas transforma el recuerdo onírico en semanas"]},
-    {"type": "next", "text": "En la siguiente lección comenzarás tu práctica de diario onírico de 30 días."}
+    {
+      "type": "title",
+      "title": "Técnicas de recuerdo onírico",
+      "subtitle": "Módulo 3 · Lección 8 — Certificación en Interpretación de Sueños"
+    },
+    {
+      "type": "content",
+      "title": "Intención antes de dormir",
+      "body": "Repite mentalmente: recordaré mis sueños.\nLa incubación de sueños funciona.\nSeñala a tu cerebro que los sueños importan."
+    },
+    {
+      "type": "content",
+      "title": "Despertar natural y parcial",
+      "body": "Las alarmas abruptas borran los sueños.\nUsa sonidos suaves o despierta sin alarma.\nSi despiertas de noche, anota palabras clave."
+    },
+    {
+      "type": "content",
+      "title": "Memoria corporal",
+      "body": "La posición corporal ayuda a recuperar sueños.\nSi no recuerdas nada, cambia de posición.\nLa memoria es dependiente del estado."
+    },
+    {
+      "type": "quote",
+      "text": "Cuando una persona se duerme con la intención deliberada de soñar sobre un problema, la probabilidad de lograrlo aumenta significativamente.",
+      "source": "Deirdre Barrett, 2001 — The Committee of Sleep"
+    },
+    {
+      "type": "content",
+      "title": "Sustancias que interfieren",
+      "body": "El alcohol suprime el REM hasta un 30%.\nLa cafeína tras el mediodía fragmenta el sueño.\nLas pantallas con luz azul retrasan la melatonina."
+    },
+    {
+      "type": "content",
+      "title": "Visualización hipnagógica",
+      "body": "Observa las imágenes entre vigilia y sueño.\nNo las controles, solo atiéndelas.\nEntrena la atención a los contenidos internos."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La intención antes de dormir y el despertar gradual son las técnicas más efectivas",
+        "La posición corporal, la revisión del día y la reducción de sustancias complementan el sistema",
+        "La combinación de técnicas transforma el recuerdo onírico en semanas"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la siguiente lección comenzarás tu práctica de diario onírico de 30 días."
+    }
   ],
-  "citation": {"researcher": "Deirdre Barrett", "year": "2001", "finding": "El estudio con estudiantes universitarios demostró que la incubación de sueños (dormirse con intención de soñar sobre un problema específico) produjo sueños relevantes en el 50% de los participantes, y el 25% encontró soluciones útiles en sus sueños."}
+  "citation": {
+    "researcher": "Deirdre Barrett",
+    "year": "2001",
+    "finding": "El estudio con estudiantes universitarios demostró que la incubación de sueños (dormirse con intención de soñar sobre un problema específico) produjo sueños relevantes en el 50% de los participantes, y el 25% encontró soluciones útiles en sus sueños."
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Freud",
+        "Jung",
+        "Cognitivo"
+      ],
+      "rows": [
+        [
+          "Sueño es",
+          "Deseo reprimido",
+          "Mensaje del inconsciente",
+          "Procesamiento de memoria"
+        ],
+        [
+          "Método",
+          "Asociación libre",
+          "Amplificación",
+          "Análisis de contenido"
+        ],
+        [
+          "Símbolo",
+          "Disfraz (censura)",
+          "Lenguaje natural",
+          "Activación aleatoria"
+        ],
+        [
+          "Objetivo",
+          "Revelar deseo",
+          "Integrar opuestos",
+          "Entender cognición"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la lección",
+      "points": [
+        "La intención antes de dormir y el despertar gradual son las técnicas más efectivas de recuerdo",
+        "La posición corporal está vinculada a la memoria onírica por la memoria dependiente del estado",
+        "El alcohol, la cafeína y las pantallas interfieren significativamente con el sueño REM",
+        "La combinación de técnicas transforma el recuerdo onírico en cuestión de semanas"
+      ]
+    }
+  ]
 }

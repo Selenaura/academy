@@ -1,1 +1,97 @@
-{"lesson_number":23,"module":8,"title":"Portfolio: tus mejores interpretaciones","text_content":"Tu portfolio es la prueba tangible de tu competencia profesional. No es un currículum — es una muestra de tu trabajo real con sueños reales de personas reales.\n\nEn la investigación sobre formación profesional, Donald Schön (1983) introdujo el concepto de profesional reflexivo: alguien que no solo practica su oficio, sino que reflexiona sistemáticamente sobre su práctica para mejorar. Tu portfolio es exactamente eso — un instrumento de reflexión profesional.\n\nQué debe contener tu portfolio:\n\n1. Tu diario de sueños personal (resumen de 30 días). No compartas todos los sueños — selecciona los 5 más significativos y tu interpretación de cada uno. Esto demuestra que has trabajado con tu propio material onírico antes de trabajar con el de otras personas.\n\n2. Tres interpretaciones de sueños ajenos. Para cada una incluye: el sueño narrado (con consentimiento escrito de la persona), tu proceso de exploración (qué preguntas hiciste y qué descubriste), tu interpretación y el feedback que recibiste. Anonimiza todos los datos identificativos.\n\n3. Un caso de estudio desarrollado. Elige tu mejor interpretación y desarróllala en profundidad: el contexto de la persona, el sueño, los símbolos clave, la conexión con arquetipos junguianos, tu interpretación, la respuesta de la persona, y qué aprendiste del proceso.\n\n4. Tu declaración de método (de la lección anterior).\n\n5. Tu código ético personal.\n\nFormato recomendado: documento PDF con diseño limpio. No necesita ser largo — calidad sobre cantidad. 10-15 páginas son suficientes.\n\nConsejos para el caso de estudio: elige un sueño que te haya desafiado, no el más fácil. Los evaluadores valoran más la honestidad sobre lo que no entendiste que la pretensión de tenerlo todo claro. Si hubo un momento donde te equivocaste o cambiaste de interpretación, inclúyelo — eso demuestra reflexión profesional.\n\nUna vez completado el portfolio, estarás en condiciones de presentarte al examen final. El portfolio se evalúa como parte de la certificación.","slides":[{"type":"title","title":"Portfolio: tus mejores interpretaciones","subtitle":"Módulo 8 · Lección 23 — Certificación en Interpretación de Sueños"},{"type":"content","title":"Contenido del portfolio","body":"1. Diario de sueños personal (5 mejores).\n2. Tres interpretaciones de sueños ajenos.\n3. Un caso de estudio en profundidad.\n4. Declaración de método.\n5. Código ético personal."},{"type":"quote","text":"El profesional reflexivo no solo practica su oficio — reflexiona sistemáticamente sobre su práctica para mejorar.","source":"Donald Schön, 1983 — The Reflective Practitioner"},{"type":"content","title":"El caso de estudio","body":"Elige un sueño que te desafió, no el más fácil.\nIncluye dónde te equivocaste o cambiaste.\nEso demuestra reflexión profesional."},{"type":"content","title":"Formato","body":"PDF limpio, 10-15 páginas.\nCalidad sobre cantidad.\nTodos los datos anonimizados."},{"type":"summary","points":["El portfolio demuestra competencia real: diario propio + 3 interpretaciones ajenas + caso de estudio","Schön demostró que reflexionar sobre la práctica es lo que distingue al profesional del aficionado","Incluir errores y cambios de interpretación demuestra más madurez que pretender perfección"]},{"type":"next","text":"Última lección: recursos para seguir creciendo y preparación para el examen final."}],"citation":{"researcher":"Donald Schön","year":"1983","finding":"El concepto de profesional reflexivo demuestra que la excelencia no viene de la técnica sino de la reflexión sistemática sobre la propia práctica."}}
+{
+  "lesson_number": 23,
+  "module": 8,
+  "title": "Portfolio: tus mejores interpretaciones",
+  "text_content": "Tu portfolio es la prueba tangible de tu competencia profesional. No es un currículum — es una muestra de tu trabajo real con sueños reales de personas reales.\n\nEn la investigación sobre formación profesional, Donald Schön (1983) introdujo el concepto de profesional reflexivo: alguien que no solo practica su oficio, sino que reflexiona sistemáticamente sobre su práctica para mejorar. Tu portfolio es exactamente eso — un instrumento de reflexión profesional.\n\nQué debe contener tu portfolio:\n\n1. Tu diario de sueños personal (resumen de 30 días). No compartas todos los sueños — selecciona los 5 más significativos y tu interpretación de cada uno. Esto demuestra que has trabajado con tu propio material onírico antes de trabajar con el de otras personas.\n\n2. Tres interpretaciones de sueños ajenos. Para cada una incluye: el sueño narrado (con consentimiento escrito de la persona), tu proceso de exploración (qué preguntas hiciste y qué descubriste), tu interpretación y el feedback que recibiste. Anonimiza todos los datos identificativos.\n\n3. Un caso de estudio desarrollado. Elige tu mejor interpretación y desarróllala en profundidad: el contexto de la persona, el sueño, los símbolos clave, la conexión con arquetipos junguianos, tu interpretación, la respuesta de la persona, y qué aprendiste del proceso.\n\n4. Tu declaración de método (de la lección anterior).\n\n5. Tu código ético personal.\n\nFormato recomendado: documento PDF con diseño limpio. No necesita ser largo — calidad sobre cantidad. 10-15 páginas son suficientes.\n\nConsejos para el caso de estudio: elige un sueño que te haya desafiado, no el más fácil. Los evaluadores valoran más la honestidad sobre lo que no entendiste que la pretensión de tenerlo todo claro. Si hubo un momento donde te equivocaste o cambiaste de interpretación, inclúyelo — eso demuestra reflexión profesional.\n\nUna vez completado el portfolio, estarás en condiciones de presentarte al examen final. El portfolio se evalúa como parte de la certificación.",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Portfolio: tus mejores interpretaciones",
+      "subtitle": "Módulo 8 · Lección 23 — Certificación en Interpretación de Sueños"
+    },
+    {
+      "type": "content",
+      "title": "Contenido del portfolio",
+      "body": "1. Diario de sueños personal (5 mejores).\n2. Tres interpretaciones de sueños ajenos.\n3. Un caso de estudio en profundidad.\n4. Declaración de método.\n5. Código ético personal."
+    },
+    {
+      "type": "quote",
+      "text": "El profesional reflexivo no solo practica su oficio — reflexiona sistemáticamente sobre su práctica para mejorar.",
+      "source": "Donald Schön, 1983 — The Reflective Practitioner"
+    },
+    {
+      "type": "content",
+      "title": "El caso de estudio",
+      "body": "Elige un sueño que te desafió, no el más fácil.\nIncluye dónde te equivocaste o cambiaste.\nEso demuestra reflexión profesional."
+    },
+    {
+      "type": "content",
+      "title": "Formato",
+      "body": "PDF limpio, 10-15 páginas.\nCalidad sobre cantidad.\nTodos los datos anonimizados."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "El portfolio demuestra competencia real: diario propio + 3 interpretaciones ajenas + caso de estudio",
+        "Schön demostró que reflexionar sobre la práctica es lo que distingue al profesional del aficionado",
+        "Incluir errores y cambios de interpretación demuestra más madurez que pretender perfección"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "Última lección: recursos para seguir creciendo y preparación para el examen final."
+    }
+  ],
+  "citation": {
+    "researcher": "Donald Schön",
+    "year": "1983",
+    "finding": "El concepto de profesional reflexivo demuestra que la excelencia no viene de la técnica sino de la reflexión sistemática sobre la propia práctica."
+  },
+  "interactive": [
+    {
+      "type": "comparison",
+      "headers": [
+        "",
+        "Interpretación",
+        "Facilitación grupal",
+        "Escritura onírica"
+      ],
+      "rows": [
+        [
+          "Habilidad",
+          "Escucha + simbolismo",
+          "Dinámicas de grupo",
+          "Narrativa + creatividad"
+        ],
+        [
+          "Ingresos",
+          "40-120€/sesión",
+          "15-25€/persona",
+          "Pasivo (libros, blog)"
+        ],
+        [
+          "Escalabilidad",
+          "Baja",
+          "Media",
+          "Alta"
+        ],
+        [
+          "Formación extra",
+          "Psicología básica",
+          "Facilitación grupal",
+          "Escritura creativa"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "title": "Resumen de la lección",
+      "points": [
+        "El portfolio demuestra competencia real con diario propio, interpretaciones ajenas y caso de estudio",
+        "Schön demostró que reflexionar sobre la práctica distingue al profesional del aficionado",
+        "Incluir errores y cambios de interpretación demuestra más madurez que pretender perfección",
+        "El portfolio se evalúa como parte de la certificación: 10-15 páginas en PDF"
+      ]
+    }
+  ]
+}
