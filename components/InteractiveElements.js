@@ -176,6 +176,7 @@ export function FillBlanks({ text, blanks, title }) {
   const [answers, setAnswers] = useState({});
   const [checked, setChecked] = useState(false);
 
+  if (!text || typeof text !== 'string') return null;
   const parts = text.split(/___(\d+)___/);
 
   const handleChange = (id, value) => {
