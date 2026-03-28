@@ -1,11 +1,10 @@
-import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
-import { cookies } from 'next/headers';
+import { createClient } from '@/lib/supabase-server';
 import { NextResponse } from 'next/server';
 
 // GET /api/review?course_id=brujula-interior&limit=5
 // Returns spaced review questions due for the user
 export async function GET(request) {
-  const supabase = createRouteHandlerClient({ cookies });
+  const supabase = createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
 
@@ -46,7 +45,7 @@ export async function GET(request) {
 
 // POST /api/review — Record review result and update SM-2 interval
 export async function POST(request) {
-  const supabase = createRouteHandlerClient({ cookies });
+  const supabase = createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
 
