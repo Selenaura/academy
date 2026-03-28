@@ -6,12 +6,12 @@ export const metadata = {
   title: 'Curso Tarot Buenos Aires · Certificación Astrología Argentina — Selene Academia',
   description:
     'Formación holística Argentina con base científica. Curso tarot Buenos Aires, certificación astrología Argentina. Pagá en cuotas con tarjeta local. Certificados verificables.',
-  metadataBase: new URL('https://academia.selenaura.com'),
+  metadataBase: new URL('https://academy.selenaura.com'),
   alternates: {
-    canonical: 'https://academia.selenaura.com/argentina',
+    canonical: 'https://academy.selenaura.com/argentina',
     languages: {
-      'es-AR': 'https://academia.selenaura.com/argentina',
-      'es': 'https://academia.selenaura.com',
+      'es-AR': 'https://academy.selenaura.com/argentina',
+      'es': 'https://academy.selenaura.com',
     },
   },
   openGraph: {
@@ -21,7 +21,7 @@ export const metadata = {
     siteName: 'Selene Academia',
     locale: 'es_AR',
     type: 'website',
-    url: 'https://academia.selenaura.com/argentina',
+    url: 'https://academy.selenaura.com/argentina',
   },
   twitter: {
     card: 'summary_large_image',

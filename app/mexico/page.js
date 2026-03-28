@@ -6,12 +6,12 @@ export const metadata = {
   title: 'Certificación Tarotista y Astrología Profesional en México — Selene Academia',
   description:
     'Formación espiritual con base científica en México. Certificación tarotista México, curso tarot México, astrólogo profesional México. Paga en 3 cuotas sin intereses. Certificados verificables.',
-  metadataBase: new URL('https://academia.selenaura.com'),
+  metadataBase: new URL('https://academy.selenaura.com'),
   alternates: {
-    canonical: 'https://academia.selenaura.com/mexico',
+    canonical: 'https://academy.selenaura.com/mexico',
     languages: {
-      'es-MX': 'https://academia.selenaura.com/mexico',
-      'es': 'https://academia.selenaura.com',
+      'es-MX': 'https://academy.selenaura.com/mexico',
+      'es': 'https://academy.selenaura.com',
     },
   },
   openGraph: {
@@ -21,7 +21,7 @@ export const metadata = {
     siteName: 'Selene Academia',
     locale: 'es_MX',
     type: 'website',
-    url: 'https://academia.selenaura.com/mexico',
+    url: 'https://academy.selenaura.com/mexico',
   },
   twitter: {
     card: 'summary_large_image',

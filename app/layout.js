@@ -3,7 +3,7 @@ import './globals.css';
 export const metadata = {
   title: 'Selene Academia — Tu escuela de consciencia cósmica',
   description: 'Cursos de astrología, tarot, meditación y autoconocimiento respaldados por estudios peer-reviewed. Neurociencia + tradición milenaria.',
-  metadataBase: new URL('https://academia.selenaura.com'),
+  metadataBase: new URL('https://academy.selenaura.com'),
   openGraph: {
     title: 'Selene Academia — Ciencia y consciencia de lo invisible',
     description: 'Cursos de astrología, tarot y autoconocimiento con base científica. Tu carta natal guía tu camino.',

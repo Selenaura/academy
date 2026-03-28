@@ -1,6 +1,6 @@
 import { COURSES } from '@/lib/constants';
 
-const BASE_URL = 'https://academia.selenaura.com';
+const BASE_URL = 'https://academy.selenaura.com';
 
 export default function sitemap() {
   const courseUrls = COURSES.map((course) => ({

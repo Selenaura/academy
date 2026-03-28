@@ -6,12 +6,12 @@ export const metadata = {
   title: 'Certificación Espiritual en Español para la Comunidad Latina — Selene Academia',
   description:
     'Certificación espiritual en español para hispanohablantes en Estados Unidos. Tarot profesional español, curso astrología hispanohablantes. Pay in 3 installments. Verified certificates.',
-  metadataBase: new URL('https://academia.selenaura.com'),
+  metadataBase: new URL('https://academy.selenaura.com'),
   alternates: {
-    canonical: 'https://academia.selenaura.com/hispanos',
+    canonical: 'https://academy.selenaura.com/hispanos',
     languages: {
-      'es-US': 'https://academia.selenaura.com/hispanos',
-      'es': 'https://academia.selenaura.com',
+      'es-US': 'https://academy.selenaura.com/hispanos',
+      'es': 'https://academy.selenaura.com',
     },
   },
   openGraph: {
@@ -21,7 +21,7 @@ export const metadata = {
     siteName: 'Selene Academia',
     locale: 'es_US',
     type: 'website',
-    url: 'https://academia.selenaura.com/hispanos',
+    url: 'https://academy.selenaura.com/hispanos',
   },
   twitter: {
     card: 'summary_large_image',

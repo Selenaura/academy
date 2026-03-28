@@ -8,7 +8,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const course = COURSES.find(c => c.id === params.id);
+  const { id } = await params;
+  const course = COURSES.find(c => c.id === id);
   if (!course) return {};
   return {
     title: `${course.title} — Selene Academia`,
@@ -16,8 +17,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function CursoDetallePage({ params }) {
-  const course = COURSES.find(c => c.id === params.id);
+export default async function CursoDetallePage({ params }) {
+  const { id } = await params;
+  const course = COURSES.find(c => c.id === id);
   if (!course) notFound();
 
   // Group lessons by module
@@ -121,7 +123,7 @@ export default function CursoDetallePage({ params }) {
 
         {/* CTA */}
         <Link
-          href={course.price === 0 ? '/auth?mode=register' : '/auth?mode=register'}
+          href={course.price === 0 ? '/auth?redirect=/dashboard' : `/auth?redirect=/curso/${course.id}`}
           className="block w-full text-center text-[15px] font-semibold bg-selene-gold text-selene-bg py-3.5 rounded-xl hover:brightness-110 transition no-underline mb-8"
         >
           {course.price === 0 ? 'Empezar gratis' : `Inscribirme — ${course.price_label}`}
@@ -160,7 +162,7 @@ export default function CursoDetallePage({ params }) {
         {/* Bottom CTA */}
         <div className="text-center mt-10">
           <Link
-            href="/auth?mode=register"
+            href={course.price === 0 ? '/auth?redirect=/dashboard' : `/auth?redirect=/curso/${course.id}`}
             className="inline-flex items-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-10 py-4 rounded-xl hover:brightness-110 transition no-underline"
           >
             {course.price === 0 ? 'Empezar gratis' : `Inscribirme — ${course.price_label}`}

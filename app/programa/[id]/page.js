@@ -56,15 +56,15 @@ export async function generateMetadata({ params }) {
   return {
     title: `Programa ${course.title} — Selene Academia`,
     description: `Programa completo: ${course.modules} módulos, ${course.lessons_count} lecciones, ${course.hours} de formación. ${course.description?.substring(0, 120)}`,
-    metadataBase: new URL('https://academia.selenaura.com'),
-    alternates: { canonical: `https://academia.selenaura.com/programa/${id}` },
+    metadataBase: new URL('https://academy.selenaura.com'),
+    alternates: { canonical: `https://academy.selenaura.com/programa/${id}` },
     openGraph: {
       title: `Programa ${course.title}`,
       description: course.description,
       siteName: 'Selene Academia',
       locale: 'es_ES',
       type: 'website',
-      url: `https://academia.selenaura.com/programa/${id}`,
+      url: `https://academy.selenaura.com/programa/${id}`,
     },
   };
 }
