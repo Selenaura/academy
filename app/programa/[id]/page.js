@@ -104,19 +104,39 @@ export default async function ProgramaPage({ params }) {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-selene-gold/10 border border-selene-gold/20 text-selene-gold text-xs font-medium mb-6">
             {course.icon} {course.level} · {course.modules} módulos · {course.hours}
           </div>
-          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-normal text-selene-white leading-tight mb-6">
-            {course.title}
-          </h1>
-          {course.subtitle && (
-            <p className="text-lg text-selene-white-dim max-w-2xl mx-auto mb-4 leading-relaxed">
-              {course.subtitle}
-            </p>
+
+          {isMaster ? (
+            <>
+              <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-normal text-selene-white leading-tight mb-6">
+                Ya tienes el don.<br />
+                <span className="text-selene-gold">Ahora conviértelo en tu profesión.</span>
+              </h1>
+              <p className="text-lg text-selene-white-dim max-w-2xl mx-auto mb-4 leading-relaxed">
+                El máster que te lleva de practicante a profesional certificada — con marca personal,
+                ética, casos reales supervisados y todo lo que necesitas para vivir de esto.
+              </p>
+              <p className="text-sm text-selene-white-dim/70 max-w-xl mx-auto mb-8">
+                40 horas · 10 módulos · 3 casos supervisados · Guía legal y fiscal · Certificación profesional con perfil en el directorio Selene.
+              </p>
+            </>
+          ) : (
+            <>
+              <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-normal text-selene-white leading-tight mb-6">
+                {course.title}
+              </h1>
+              {course.subtitle && (
+                <p className="text-lg text-selene-white-dim max-w-2xl mx-auto mb-4 leading-relaxed">
+                  {course.subtitle}
+                </p>
+              )}
+              {course.description && (
+                <p className="text-sm text-selene-white-dim/80 max-w-2xl mx-auto mb-8 leading-relaxed">
+                  {course.description}
+                </p>
+              )}
+            </>
           )}
-          {course.description && (
-            <p className="text-sm text-selene-white-dim/80 max-w-2xl mx-auto mb-8 leading-relaxed">
-              {course.description}
-            </p>
-          )}
+
           <div className="flex flex-wrap justify-center gap-6 text-sm text-selene-white-dim mb-10">
             <span className="flex items-center gap-1.5">📚 {totalLessons} lecciones</span>
             {totalQuizzes > 0 && <span className="flex items-center gap-1.5">✅ {totalQuizzes} evaluaciones</span>}
@@ -129,27 +149,55 @@ export default async function ProgramaPage({ params }) {
               href={isFree ? '/auth?redirect=/dashboard' : `/auth?redirect=/curso/${id}`}
               className="px-8 py-3.5 rounded-full bg-selene-gold text-selene-bg font-semibold text-base hover:bg-selene-gold/90 transition-all shadow-lg shadow-selene-gold/20"
             >
-              {isFree ? 'Empezar gratis' : `Inscribirme — ${course.price_label}`}
+              {isFree ? 'Empezar gratis' : isMaster ? 'Quiero ser guía profesional ✦' : `Inscribirme — ${course.price_label}`}
             </Link>
             {isMaster && (
               <Link
                 href={`/auth?redirect=/curso/${id}`}
                 className="px-8 py-3.5 rounded-full border border-selene-gold/30 text-selene-gold font-medium text-base hover:bg-selene-gold/5 transition-all"
               >
-                3 cuotas de €50
+                3 cuotas de €50/mes
               </Link>
             )}
           </div>
-          {course.cert_requirements && (
+          {isMaster ? (
+            <p className="text-xs text-selene-white-dim/60 mt-4">Requisito: 2+ certificaciones Selene previas</p>
+          ) : course.cert_requirements ? (
             <p className="text-xs text-selene-white-dim/60 mt-4">Requisito: {course.cert_requirements}</p>
-          )}
+          ) : null}
         </div>
       </section>
 
       <GoldDivider />
 
       {/* ── Para quién / Qué aprenderás ── */}
-      {(course.for_whom || course.outcome) && (
+      {isMaster ? (
+        <section className="py-16 px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-selene-elevated/50 rounded-2xl p-6 border border-selene-border">
+                <h3 className="text-selene-gold text-sm font-semibold mb-4">🎯 Esto es para ti si...</h3>
+                <ul className="space-y-3 text-sm text-selene-white-dim leading-relaxed">
+                  <li className="flex gap-2"><span className="text-selene-gold shrink-0">✓</span> Ya lees cartas, tarot o sueños — pero no te atreves a cobrar</li>
+                  <li className="flex gap-2"><span className="text-selene-gold shrink-0">✓</span> Quieres vivir de tu don, pero no sabes por dónde empezar</li>
+                  <li className="flex gap-2"><span className="text-selene-gold shrink-0">✓</span> Te falta la estructura: ¿cómo cobro? ¿qué digo? ¿es legal?</li>
+                  <li className="flex gap-2"><span className="text-selene-gold shrink-0">✓</span> Necesitas practicar con casos reales antes de lanzarte</li>
+                </ul>
+              </div>
+              <div className="bg-selene-elevated/50 rounded-2xl p-6 border border-selene-border">
+                <h3 className="text-selene-gold text-sm font-semibold mb-4">✨ Cuando termines tendrás</h3>
+                <ul className="space-y-3 text-sm text-selene-white-dim leading-relaxed">
+                  <li className="flex gap-2"><span className="text-selene-gold shrink-0">✓</span> Tu marca personal lista y tu oferta de servicios definida</li>
+                  <li className="flex gap-2"><span className="text-selene-gold shrink-0">✓</span> 10+ consultas supervisadas bajo tu cinturón</li>
+                  <li className="flex gap-2"><span className="text-selene-gold shrink-0">✓</span> Tu código ético profesional propio</li>
+                  <li className="flex gap-2"><span className="text-selene-gold shrink-0">✓</span> Perfil premium en el directorio Selene</li>
+                  <li className="flex gap-2"><span className="text-selene-gold shrink-0">✓</span> Plan de lanzamiento de 90 días con todo resuelto</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : (course.for_whom || course.outcome) ? (
         <section className="py-16 px-6">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
             {course.for_whom && (
@@ -164,6 +212,39 @@ export default async function ProgramaPage({ params }) {
                 <p className="text-sm text-selene-white-dim leading-relaxed">{course.outcome}</p>
               </div>
             )}
+          </div>
+        </section>
+      ) : null}
+
+      {/* ── ROI / Ingresos (solo Máster) ── */}
+      {isMaster && (
+        <section className="py-12 px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-selene-gold/5 to-selene-accent/5 rounded-2xl p-8 border border-selene-gold/20">
+              <h2 className="font-display text-2xl md:text-3xl text-selene-gold mb-3 text-center">
+                Las cuentas son simples
+              </h2>
+              <p className="text-sm text-selene-white-dim text-center mb-8 max-w-xl mx-auto">
+                Una guía espiritual profesional cobra entre €40 y €180 por sesión en España. En 2-3 sesiones ya has recuperado tu inversión en el máster.
+              </p>
+              <div className="grid sm:grid-cols-3 gap-5 text-center">
+                <div className="bg-selene-bg/60 rounded-xl p-5 border border-selene-border">
+                  <p className="text-2xl font-display text-selene-gold mb-1">€40-180</p>
+                  <p className="text-xs text-selene-white-dim">por sesión en España</p>
+                </div>
+                <div className="bg-selene-bg/60 rounded-xl p-5 border border-selene-border">
+                  <p className="text-2xl font-display text-selene-gold mb-1">2-3</p>
+                  <p className="text-xs text-selene-white-dim">sesiones para recuperar la inversión</p>
+                </div>
+                <div className="bg-selene-bg/60 rounded-xl p-5 border border-selene-border">
+                  <p className="text-2xl font-display text-selene-gold mb-1">€1.200+</p>
+                  <p className="text-xs text-selene-white-dim">ingresos potenciales al mes (4 sesiones/semana)</p>
+                </div>
+              </div>
+              <p className="text-xs text-selene-white-dim/50 text-center mt-5">
+                Datos de mercado 2025. Precios por país incluidos en el módulo 7.
+              </p>
+            </div>
           </div>
         </section>
       )}
@@ -284,30 +365,44 @@ export default async function ProgramaPage({ params }) {
       <section className="py-20 px-6 bg-selene-elevated/20">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-display text-3xl text-selene-gold mb-6">
-            {isFree ? 'Empieza gratis ahora' : 'Inscríbete'}
+            {isFree ? 'Empieza gratis ahora' : isMaster ? 'Tu carrera como guía empieza aquí' : 'Inscríbete'}
           </h2>
-          <p className="text-selene-white-dim mb-8">
-            Acceso inmediato a {totalLessons > 1 ? `los ${course.modules} módulos` : 'todo el contenido'}. Avanza a tu ritmo.
-          </p>
+          {isMaster ? (
+            <p className="text-selene-white-dim mb-8">
+              Formaciones similares cuestan entre €2.000 y €5.000. Este máster incluye todo — casos supervisados, guía legal, certificación y directorio — por una fracción.
+            </p>
+          ) : (
+            <p className="text-selene-white-dim mb-8">
+              Acceso inmediato a {totalLessons > 1 ? `los ${course.modules} módulos` : 'todo el contenido'}. Avanza a tu ritmo.
+            </p>
+          )}
 
           <div className="bg-selene-bg/80 rounded-2xl p-8 border border-selene-gold/20 mb-8">
             {isFree ? (
               <p className="text-3xl font-display text-selene-gold mb-6">GRATIS</p>
+            ) : isMaster ? (
+              <div className="mb-6">
+                <p className="text-xs text-selene-white-dim/40 line-through mb-2">Formaciones equivalentes: €2.000-5.000</p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+                  <div>
+                    <p className="text-xs text-selene-white-dim/60 mb-1">Pago único</p>
+                    <p className="text-3xl font-display text-selene-gold">{course.price_label}</p>
+                    <p className="text-xs text-selene-white-dim/50 mt-1">€1,25/día durante 4 meses</p>
+                  </div>
+                  <div className="hidden sm:block w-px h-16 bg-selene-border" />
+                  <div>
+                    <p className="text-xs text-selene-white-dim/60 mb-1">3 cuotas mensuales</p>
+                    <p className="text-3xl font-display text-selene-white">€50<span className="text-lg text-selene-white-dim">/mes</span></p>
+                    <p className="text-xs text-selene-white-dim/50 mt-1">Sin intereses</p>
+                  </div>
+                </div>
+              </div>
             ) : (
               <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-6">
                 <div>
                   <p className="text-xs text-selene-white-dim/60 mb-1">Pago único</p>
                   <p className="text-3xl font-display text-selene-gold">{course.price_label}</p>
                 </div>
-                {isMaster && (
-                  <>
-                    <div className="hidden sm:block w-px h-12 bg-selene-border" />
-                    <div>
-                      <p className="text-xs text-selene-white-dim/60 mb-1">3 cuotas mensuales</p>
-                      <p className="text-3xl font-display text-selene-white">€50<span className="text-lg text-selene-white-dim">/mes</span></p>
-                    </div>
-                  </>
-                )}
               </div>
             )}
 
@@ -317,14 +412,21 @@ export default async function ProgramaPage({ params }) {
               <li className="flex gap-2"><span className="text-selene-gold">✓</span> Acceso de por vida + actualizaciones</li>
               {isMaster && <li className="flex gap-2"><span className="text-selene-gold">✓</span> 3 casos prácticos supervisados</li>}
               {isMaster && <li className="flex gap-2"><span className="text-selene-gold">✓</span> Guía legal y fiscal completa</li>}
+              {isMaster && <li className="flex gap-2"><span className="text-selene-gold">✓</span> Perfil en el directorio profesional Selene</li>}
             </ul>
 
             <Link
               href={isFree ? '/auth?redirect=/dashboard' : `/auth?redirect=/curso/${id}`}
               className="inline-block px-10 py-4 rounded-full bg-selene-gold text-selene-bg font-semibold text-base hover:bg-selene-gold/90 transition-all shadow-lg shadow-selene-gold/20"
             >
-              {isFree ? 'Empezar gratis →' : 'Empezar ahora →'}
+              {isFree ? 'Empezar gratis →' : isMaster ? 'Sí, quiero ser guía profesional ✦' : 'Empezar ahora →'}
             </Link>
+
+            {isMaster && (
+              <p className="text-xs text-selene-white-dim/50 mt-4">
+                Pago seguro con Stripe · Tarjeta, Klarna o cuotas
+              </p>
+            )}
           </div>
 
           <p className="text-xs text-selene-white-dim/50">
@@ -332,6 +434,55 @@ export default async function ProgramaPage({ params }) {
           </p>
         </div>
       </section>
+
+      {/* ── FAQ (solo Máster) ── */}
+      {isMaster && (
+        <section className="py-16 px-6">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl text-selene-gold mb-10 text-center">
+              Preguntas frecuentes
+            </h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: '¿Necesito experiencia previa?',
+                  a: 'Sí — necesitas al menos 2 certificaciones Selene previas. Este máster es el paso final: convierte lo que ya sabes en una profesión.',
+                },
+                {
+                  q: '¿Puedo vivir de esto?',
+                  a: 'En España, una guía espiritual cobra entre €40 y €180 por sesión. Con 4 sesiones a la semana puedes generar €1.200+/mes. En el módulo 7 te damos datos de mercado reales por país.',
+                },
+                {
+                  q: '¿El certificado tiene validez oficial?',
+                  a: 'Es un certificado profesional privado de SelenaUra Academy, verificable públicamente con código CSV. No es un título universitario, pero acredita tu formación y te da acceso al directorio profesional.',
+                },
+                {
+                  q: '¿Cuánto tiempo tengo para completarlo?',
+                  a: 'Acceso de por vida. El contenido está diseñado para completarse en 3-4 meses a tu ritmo, pero no hay fecha límite.',
+                },
+                {
+                  q: '¿Qué incluye la guía legal?',
+                  a: 'Todo: alta autónomo/a, IAE y CNAE correctos, facturación con IVA e IRPF, protección de datos (RGPD), y equivalencias para México, Argentina, Colombia y Chile.',
+                },
+                {
+                  q: '¿Puedo pagar en cuotas?',
+                  a: 'Sí — 3 cuotas mensuales de €50, sin intereses. También aceptamos Klarna y todas las tarjetas.',
+                },
+              ].map((faq, i) => (
+                <details key={i} className="group bg-selene-elevated/50 rounded-xl border border-selene-border overflow-hidden">
+                  <summary className="px-6 py-4 cursor-pointer text-sm font-medium text-selene-white flex justify-between items-center hover:text-selene-gold transition">
+                    {faq.q}
+                    <span className="text-selene-gold/50 group-open:rotate-45 transition-transform text-lg ml-4">+</span>
+                  </summary>
+                  <div className="px-6 pb-4">
+                    <p className="text-sm text-selene-white-dim leading-relaxed">{faq.a}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <Footer />
     </main>

@@ -66,6 +66,8 @@ export async function POST(request) {
         payment_method_types: ['card'],
         mode: 'subscription',
         customer_email: user.email,
+        automatic_tax: { enabled: true },
+        tax_id_collection: { enabled: true },
         metadata: {
           user_id: user.id,
           course_id: courseId,
@@ -91,6 +93,9 @@ export async function POST(request) {
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       customer_email: user.email,
+      automatic_tax: { enabled: true },
+      invoice_creation: { enabled: true },
+      tax_id_collection: { enabled: true },
       metadata: {
         user_id: user.id,
         course_id: courseId,
