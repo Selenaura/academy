@@ -176,6 +176,31 @@ export default async function ProgramaPage({ params }) {
         </div>
       </section>
 
+      {/* ── Proceso visual (solo Máster) ── */}
+      {isMaster && (
+        <section className="py-12 px-6 bg-selene-elevated/20">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { step: '01', icon: '📚', label: '2 certificaciones', desc: 'Tu base de conocimiento' },
+                { step: '02', icon: '🌀', label: '10 módulos del Máster', desc: 'De practicante a profesional' },
+                { step: '03', icon: '📋', label: 'Casos supervisados', desc: 'Práctica con clientes reales' },
+                { step: '04', icon: '🚀', label: 'Lanzamiento', desc: 'Tu carrera empieza' },
+              ].map((s) => (
+                <div key={s.step} className="text-center p-4">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-selene-gold/10 border border-selene-gold/20 text-xl mb-3">
+                    {s.icon}
+                  </div>
+                  <p className="text-[10px] text-selene-gold/50 font-medium mb-1">PASO {s.step}</p>
+                  <p className="text-sm text-selene-white font-medium">{s.label}</p>
+                  <p className="text-[11px] text-selene-white-dim mt-1">{s.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <GoldDivider />
 
       {/* ── Para quién / Qué aprenderás ── */}
@@ -516,6 +541,17 @@ export default async function ProgramaPage({ params }) {
             )}
           </div>
 
+          {/* Garantía */}
+          {isMaster && (
+            <div className="flex items-center justify-center gap-3 mb-6 p-4 bg-selene-elevated/30 rounded-xl border border-selene-border/50 max-w-md mx-auto">
+              <span className="text-2xl shrink-0">🛡️</span>
+              <div>
+                <p className="text-sm text-selene-white font-medium">Garantía de 14 días</p>
+                <p className="text-xs text-selene-white-dim">Si no es lo que esperabas, te devolvemos el dinero. Sin preguntas.</p>
+              </div>
+            </div>
+          )}
+
           <p className="text-xs text-selene-white-dim/50">
             ¿Preguntas? Escríbenos a <a href="mailto:info@selenaura.com" className="text-selene-gold/60 hover:text-selene-gold">info@selenaura.com</a>
           </p>
@@ -567,6 +603,41 @@ export default async function ProgramaPage({ params }) {
                 </details>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── Bundle pathway (solo Máster) ── */}
+      {isMaster && (
+        <section className="py-16 px-6 bg-selene-elevated/20">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-display text-2xl md:text-3xl text-selene-gold mb-4">
+              ¿Aún no tienes 2 certificaciones?
+            </h2>
+            <p className="text-sm text-selene-white-dim mb-10 max-w-xl mx-auto">
+              El Máster requiere al menos 2 certificaciones Selene previas. Estas son las más populares para empezar tu camino:
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { id: 'tarot-intuitivo', icon: '✨', title: 'Tarot Intuitivo', price: '€69,99', hours: '25h' },
+                { id: 'astrologia-natal', icon: '⭐', title: 'Astrología Natal', price: '€69,99', hours: '30h' },
+                { id: 'suenos-certificacion', icon: '💤', title: 'Interpretación de Sueños', price: '€49,99', hours: '18h' },
+                { id: 'quirologia-certificacion', icon: '🤚', title: 'Quirología', price: '€49,99', hours: '23h' },
+              ].map((cert) => (
+                <Link
+                  key={cert.id}
+                  href={`/programa/${cert.id}`}
+                  className="bg-selene-bg/80 rounded-xl p-5 border border-selene-border hover:border-selene-gold/30 transition group"
+                >
+                  <p className="text-2xl mb-2">{cert.icon}</p>
+                  <p className="text-sm text-selene-white font-medium group-hover:text-selene-gold transition">{cert.title}</p>
+                  <p className="text-xs text-selene-white-dim mt-1">{cert.hours} · {cert.price}</p>
+                </Link>
+              ))}
+            </div>
+            <p className="text-xs text-selene-white-dim/50 mt-6">
+              Completa 2 certificaciones → accede al Máster → conviértete en guía profesional
+            </p>
           </div>
         </section>
       )}
