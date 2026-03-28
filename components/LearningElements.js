@@ -7,6 +7,8 @@ import { Card } from '@/components/ui';
 export function ProcessDiagram({ title, steps, direction = 'horizontal' }) {
   const [activeStep, setActiveStep] = useState(null);
 
+  if (!steps || !steps.length) return null;
+
   return (
     <Card className="p-5 my-6">
       <div className="flex items-center gap-2 mb-4">
@@ -47,6 +49,8 @@ export function ProcessDiagram({ title, steps, direction = 'horizontal' }) {
 // ── 2. CONCEPT MAP — Interactive node network ──
 export function ConceptMap({ title, centerNode, nodes }) {
   const [activeNode, setActiveNode] = useState(null);
+
+  if (!nodes || !nodes.length) return null;
 
   return (
     <Card className="p-5 my-6">
@@ -98,6 +102,8 @@ export function ConceptMap({ title, centerNode, nodes }) {
 
 // ── 3. LESSON SUMMARY INFOGRAPHIC — Visual recap ──
 export function LessonSummary({ title, points, citation, nextLesson }) {
+  if (!points || !points.length) return null;
+
   return (
     <div className="my-8 rounded-2xl border border-selene-gold/20 overflow-hidden">
       {/* Header */}

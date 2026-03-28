@@ -7,6 +7,8 @@ import { Card } from '@/components/ui';
 export function FlipCards({ cards }) {
   const [flipped, setFlipped] = useState(new Set());
 
+  if (!cards || !cards.length) return null;
+
   const toggle = (i) => {
     setFlipped(prev => {
       const next = new Set(prev);
@@ -47,8 +49,10 @@ export function MatchExercise({ title, pairs, instruction }) {
   const [selected, setSelected] = useState(null);
   const [matches, setMatches] = useState({});
   const [shuffledRight] = useState(() =>
-    [...pairs.map((p, i) => ({ text: p.right, idx: i }))].sort(() => Math.random() - 0.5)
+    pairs ? [...pairs.map((p, i) => ({ text: p.right, idx: i }))].sort(() => Math.random() - 0.5) : []
   );
+
+  if (!pairs || !pairs.length) return null;
 
   const allCorrect = Object.keys(matches).length === pairs.length &&
     Object.entries(matches).every(([l, r]) => Number(l) === r);
@@ -130,6 +134,8 @@ export function MatchExercise({ title, pairs, instruction }) {
 // ── 3. HOTSPOT IMAGE — Click zones on image ──
 export function HotspotImage({ imageUrl, altText, hotspots, title }) {
   const [activeSpot, setActiveSpot] = useState(null);
+
+  if (!hotspots || !hotspots.length) return null;
 
   return (
     <Card className="p-5 my-6 overflow-hidden">
@@ -236,7 +242,9 @@ export function FillBlanks({ text, blanks, title }) {
 
 // ── 5. SORTING EXERCISE — Order items correctly ──
 export function SortExercise({ title, items, instruction }) {
-  const [order, setOrder] = useState(() => [...items].sort(() => Math.random() - 0.5));
+  const [order, setOrder] = useState(() => items ? [...items].sort(() => Math.random() - 0.5) : []);
+
+  if (!items || !items.length) return null;
   const [checked, setChecked] = useState(false);
 
   const moveUp = (i) => {
@@ -412,6 +420,8 @@ export function MultipleChoice({ question, options, correctIndex, explanation, m
   const [selected, setSelected] = useState(multiSelect ? new Set() : null);
   const [submitted, setSubmitted] = useState(false);
 
+  if (!options || !options.length) return null;
+
   const handleSelect = (i) => {
     if (submitted) return;
     if (multiSelect) {
@@ -488,6 +498,8 @@ export function MultipleChoice({ question, options, correctIndex, explanation, m
 export function Timeline({ title, events }) {
   const [expanded, setExpanded] = useState(null);
 
+  if (!events || !events.length) return null;
+
   return (
     <Card className="p-5 my-6">
       <div className="flex items-center gap-2 mb-4">
@@ -523,6 +535,8 @@ export function Timeline({ title, events }) {
 
 // ── 10. COMPARISON TABLE — Side by side ──
 export function ComparisonTable({ title, headers, rows }) {
+  if (!rows || !rows.length) return null;
+
   return (
     <Card className="p-5 my-6 overflow-hidden">
       <div className="flex items-center gap-2 mb-4">
@@ -557,6 +571,8 @@ export function ComparisonTable({ title, headers, rows }) {
 // ── 11. SCENARIO / CASE STUDY — Interactive decision ──
 export function Scenario({ title, description, question, options }) {
   const [choice, setChoice] = useState(null);
+
+  if (!options || !options.length) return null;
 
   return (
     <Card className="p-5 my-6 border-l-[3px] border-l-purple-500/50">
@@ -597,6 +613,8 @@ export function Scenario({ title, description, question, options }) {
 // ── 12. REVEAL / ACCORDION — Progressive disclosure ──
 export function RevealSections({ title, sections }) {
   const [open, setOpen] = useState(new Set());
+
+  if (!sections || !sections.length) return null;
 
   const toggle = (i) => {
     setOpen(prev => {
