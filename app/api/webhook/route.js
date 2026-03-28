@@ -1,6 +1,8 @@
 import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
 import { NextResponse } from 'next/server';
+import { COURSES } from '@/lib/constants';
+import { sendWelcomeEmail, sendInstallmentEmail } from '@/lib/email';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -60,6 +62,17 @@ export async function POST(request) {
     // Only handle 'payment' mode here — subscriptions are handled in invoice.paid
     if (user_id && course_id && session.mode === 'payment') {
       await enrollUser(user_id, course_id, session.id, session.amount_total);
+
+      // Send welcome email
+      const course = COURSES.find(c => c.id === course_id);
+      if (course && session.customer_email) {
+        await sendWelcomeEmail({
+          email: session.customer_email,
+          courseName: course.title,
+          courseId: course_id,
+          userName: session.customer_details?.name || null,
+        });
+      }
     }
   }
 
@@ -83,9 +96,34 @@ export async function POST(request) {
       metadata: { ...subscription.metadata, paid_cycles: String(paidCount) },
     });
 
-    // First installment: enroll the user
+    // First installment: enroll the user + send welcome email
     if (paidCount === 1) {
       await enrollUser(user_id, course_id, subscriptionId, invoice.amount_paid);
+
+      const course = COURSES.find(c => c.id === course_id);
+      const customerEmail = invoice.customer_email;
+      if (course && customerEmail) {
+        await sendWelcomeEmail({
+          email: customerEmail,
+          courseName: course.title,
+          courseId: course_id,
+          userName: null,
+        });
+      }
+    } else {
+      // Send installment confirmation for subsequent payments
+      const course = COURSES.find(c => c.id === course_id);
+      const customerEmail = invoice.customer_email;
+      if (course && customerEmail) {
+        await sendInstallmentEmail({
+          email: customerEmail,
+          courseName: course.title,
+          installmentNumber: paidCount,
+          totalInstallments: maxCycles,
+          amount: invoice.amount_paid,
+          currency: invoice.currency,
+        });
+      }
     }
 
     // Record this installment payment
