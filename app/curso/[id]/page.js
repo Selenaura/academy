@@ -192,14 +192,14 @@ export default function CoursePage({ params }) {
     }
   }, [course, activeLesson]);
 
-  async function handleEnroll() {
+  async function handleEnroll(installments = null) {
     if (enrolling) return;
     setEnrolling(true);
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ courseId: course.id }),
+        body: JSON.stringify({ courseId: course.id, installments }),
       });
       const data = await res.json();
       if (data.url) {
@@ -733,13 +733,37 @@ export default function CoursePage({ params }) {
           <div className="text-center py-10">
             <LockIcon size={32} className="text-selene-white-dim mx-auto" />
             <p className="text-sm text-selene-white-dim mt-3 mb-4">Inscríbete para ver el contenido completo</p>
-            <button
-              onClick={handleEnroll}
-              disabled={enrolling}
-              className="bg-selene-gold text-selene-bg font-semibold px-8 py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-60"
-            >
-              {enrolling ? 'Procesando...' : course.price === 0 ? 'Inscribirse gratis' : `Comprar por ${course.price_label}`}
-            </button>
+            {course.price === 0 ? (
+              <button
+                onClick={() => handleEnroll()}
+                disabled={enrolling}
+                className="bg-selene-gold text-selene-bg font-semibold px-8 py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-60"
+              >
+                {enrolling ? 'Procesando...' : 'Inscribirse gratis'}
+              </button>
+            ) : (
+              <div className="space-y-3">
+                <button
+                  onClick={() => handleEnroll()}
+                  disabled={enrolling}
+                  className="w-full bg-selene-gold text-selene-bg font-semibold px-8 py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-60"
+                >
+                  {enrolling ? 'Procesando...' : `Pago único · ${course.price_label}`}
+                </button>
+                {course.price >= 2000 && (
+                  <button
+                    onClick={() => handleEnroll(3)}
+                    disabled={enrolling}
+                    className="w-full bg-transparent border border-selene-gold/40 text-selene-gold font-medium px-8 py-3 rounded-xl hover:border-selene-gold/80 transition disabled:opacity-60 text-sm"
+                  >
+                    {enrolling ? 'Procesando...' : `3 cuotas de ${(course.price / 3 / 100).toFixed(2).replace('.', ',')}€`}
+                  </button>
+                )}
+                <p className="text-[11px] text-selene-white-dim">
+                  Pago seguro · Klarna disponible para compra única · Acceso inmediato
+                </p>
+              </div>
+            )}
           </div>
         )}
       </div>

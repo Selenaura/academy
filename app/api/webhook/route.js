@@ -10,6 +10,36 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
+async function enrollUser(user_id, course_id, stripe_session_id, amount) {
+  const { error: enrollError } = await supabase
+    .from('enrollments')
+    .upsert({
+      user_id,
+      course_id,
+      status: 'active',
+      enrolled_at: new Date().toISOString(),
+      stripe_session_id,
+      amount_paid: amount,
+    });
+
+  if (enrollError) console.error('Enrollment error:', enrollError);
+
+  const { error: paymentError } = await supabase
+    .from('payments')
+    .insert({
+      user_id,
+      course_id,
+      stripe_session_id,
+      amount,
+      currency: 'eur',
+      status: 'completed',
+    });
+
+  if (paymentError) console.error('Payment record error:', paymentError);
+
+  console.log(`✅ Enrolled user ${user_id} in course ${course_id}`);
+}
+
 export async function POST(request) {
   const body = await request.text();
   const sig = request.headers.get('stripe-signature');
@@ -22,44 +52,57 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 });
   }
 
+  // ── Single payment (card or Klarna) ──
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object;
-    const { user_id, course_id } = session.metadata;
+    const { user_id, course_id } = session.metadata || {};
 
-    if (user_id && course_id) {
-      // Create enrollment
-      const { error: enrollError } = await supabase
-        .from('enrollments')
-        .upsert({
-          user_id,
-          course_id,
-          status: 'active',
-          enrolled_at: new Date().toISOString(),
-          stripe_session_id: session.id,
-          amount_paid: session.amount_total,
-        });
+    if (user_id && course_id && session.mode === 'payment') {
+      await enrollUser(user_id, course_id, session.id, session.amount_total);
+    }
 
-      if (enrollError) {
-        console.error('Enrollment error:', enrollError);
-      }
+    // Subscription (installment plan): enroll on first payment
+    if (user_id && course_id && session.mode === 'subscription') {
+      await enrollUser(user_id, course_id, session.id, session.amount_total);
+    }
+  }
 
-      // Record payment
-      const { error: paymentError } = await supabase
-        .from('payments')
-        .insert({
-          user_id,
-          course_id,
-          stripe_session_id: session.id,
-          amount: session.amount_total,
-          currency: session.currency,
-          status: 'completed',
-        });
+  // ── Installment plan: track payments and auto-cancel after N cycles ──
+  if (event.type === 'invoice.paid') {
+    const invoice = event.data.object;
+    const subscriptionId = invoice.subscription;
+    if (!subscriptionId) return NextResponse.json({ received: true });
 
-      if (paymentError) {
-        console.error('Payment record error:', paymentError);
-      }
+    const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+    const { user_id, course_id, installments, max_cycles } = subscription.metadata || {};
+    if (!user_id || !course_id || !max_cycles) return NextResponse.json({ received: true });
 
-      console.log(`✅ Enrolled user ${user_id} in course ${course_id}`);
+    const maxCycles = parseInt(max_cycles, 10);
+    const paidCount = subscription.metadata?.paid_cycles
+      ? parseInt(subscription.metadata.paid_cycles, 10) + 1
+      : 1;
+
+    // Update paid_cycles counter
+    await stripe.subscriptions.update(subscriptionId, {
+      metadata: { ...subscription.metadata, paid_cycles: String(paidCount) },
+    });
+
+    // Record payment
+    await supabase.from('payments').insert({
+      user_id,
+      course_id,
+      stripe_session_id: subscriptionId,
+      amount: invoice.amount_paid,
+      currency: invoice.currency,
+      status: 'completed',
+      installment_number: paidCount,
+      installments_total: maxCycles,
+    }).catch(() => {});
+
+    // Cancel subscription when all installments paid
+    if (paidCount >= maxCycles) {
+      await stripe.subscriptions.cancel(subscriptionId);
+      console.log(`✅ Installment plan complete for ${user_id} / ${course_id} (${maxCycles} payments)`);
     }
   }
 
