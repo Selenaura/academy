@@ -1,35 +1,156 @@
 {
-  "lesson_number": 19, "module": 7, "title": "Pricing: cuanto cobrar y como justificarlo (datos reales)",
-  "text_content": "Esta es la leccion que mas incomodidad genera en formaciones de guia espiritual. Hablar de dinero parece incompatible con la vocacion de servicio. Pero esa creencia es exactamente lo que mantiene a miles de guias en la precariedad mientras ofrecen un servicio de enorme valor.\n\nVamos a abordar el pricing con datos reales, psicologia de precios y un marco practico para que puedas cobrar con confianza y justificacion.\n\nDATOS REALES DEL MERCADO\n\nSegun datos agregados de Glassdoor, PayScale y encuestas del sector en 2024-2025:\n\nEspana: sesiones de guia espiritual/astrologica oscilan entre 40 y 150 euros por sesion de 60 minutos. El rango medio esta entre 60 y 90 euros. Guias con especializacion y mas de 2 anos de experiencia cobran entre 80 y 150 euros.\n\nLatinoamerica: los precios varian enormemente por pais. Mexico: 500-2000 MXN (30-120 USD). Argentina: 15.000-50.000 ARS (15-50 USD al cambio). Colombia: 100.000-350.000 COP (25-90 USD).\n\nOnline internacional (en ingles): 80-250 USD por sesion. Guias reconocidas cobran 200-500 USD.\n\nEstos datos son orientativos. Tu precio dependera de tu mercado, tu experiencia y tu posicionamiento.\n\nLA PSICOLOGIA DEL PRECIO\n\nKahneman (2011) demostro que el precio funciona como senal de calidad. Un precio demasiado bajo genera desconfianza: si cobra tan poco, sera que no es buena? Un precio demasiado alto sin justificacion genera rechazo. El punto optimo es el precio que comunica profesionalidad y es accesible para tu cliente ideal.\n\nEl efecto de anclaje tambien aplica: si tu primer servicio cuesta 40 euros y tu servicio premium cuesta 120, el de 120 parece razonable porque tiene un ancla inferior. Si solo ofreces el de 120 sin contexto, puede parecer caro. Un menu de servicios con diferentes niveles de precio facilita la decision.\n\nCOMO CALCULAR TU PRECIO MINIMO\n\nFormula practica:\n\nPaso 1: calcula tu ingreso mensual deseado. Incluye: gastos fijos personales (vivienda, alimentacion, transporte), cuota de autonomo o equivalente, ahorro, formacion continua y un margen de reinversion en tu negocio. Supongamos 2.500 euros/mes en Espana.\n\nPaso 2: calcula cuantas sesiones puedes hacer al mes. Considerando preparacion, la sesion en si, notas post-sesion, descanso y tareas administrativas, una guia puede sostener entre 15 y 20 sesiones semanales sin quemarse. Al mes: 60-80 sesiones como maximo. Pero para empezar, estimamos 30-40 sesiones/mes.\n\nPaso 3: divide. 2.500 / 30 = 83 euros por sesion. 2.500 / 40 = 63 euros por sesion.\n\nTu precio minimo esta entre 63 y 83 euros. Todo lo que cobres por debajo no es sostenible a medio plazo.\n\nCOMO JUSTIFICAR TU PRECIO\n\nNo justificas el precio con la tecnica (se astrologia). Lo justificas con el resultado y la experiencia.\n\nResultado: lo que la consultante se lleva. No 60 minutos de astrologia. Sino claridad sobre una decision importante, comprension de un patron que lleva anos repitiendose, un plan de accion concreto para los proximos 90 dias.\n\nExperiencia: lo que se siente. Un espacio seguro, profesional, sin juicio, donde la persona puede explorar lo que no explora en ningun otro lugar.\n\nFormacion: la inversion que has hecho. Tus certificaciones, tus horas de practica, tu formacion continua. Todo eso tiene un coste que tu precio necesita recuperar.\n\nESTRATEGIAS DE PRICING INTELIGENTES\n\nPaquetes: ofrecer bonos de 3 o 5 sesiones con descuento incentiva el compromiso. Ejemplo: sesion individual 80 EUR, bono de 3 sesiones 210 EUR (70 EUR/sesion), bono de 5 sesiones 325 EUR (65 EUR/sesion).\n\nPrecios escalonados: diferentes servicios a diferentes precios. Lectura rapida (30 min, 45 EUR), sesion completa (60 min, 80 EUR), sesion premium (90 min, 120 EUR).\n\nRevision anual: revisa tus precios cada 12 meses. Si tu agenda esta llena al 80%, es senal de que puedes subir precios. Si esta al 40%, quiza el precio no es el problema sino el posicionamiento o la captacion.\n\nCASO PRACTICO: LA TRANSICION DE PRECIOS DE ANA\n\nAna empezo cobrando 30 euros por sesion de 60 minutos. Hacia 8 sesiones semanales. Ingreso mensual: 960 euros. Despues de impuestos y cuota de autonomo, le quedaban 550 euros. Insostenible.\n\nAnalisis: Ana subvaloraba su servicio por miedo al rechazo. Cuando calculo su precio minimo (2.000 EUR deseados / 30 sesiones = 67 EUR), entendio que 30 EUR era la mitad de lo que necesitaba.\n\nTransicion: subio a 70 EUR con un mes de preaviso a sus consultantes. Perdio 2 de 8 consultantes regulares. Gano 3 nuevas que percibieron mayor profesionalidad por el precio. Ingreso mensual: 2.240 EUR. Despues de impuestos: 1.500 EUR. Viable.\n\nEJERCICIO GUIADO: CALCULA TU PRECIO\n\nPaso 1: anota tu ingreso mensual deseado (incluye todos los gastos). Paso 2: estima cuantas sesiones puedes hacer al mes de forma sostenible. Paso 3: divide. Ese es tu precio minimo por sesion. Paso 4: compara con el mercado. Esta dentro del rango? Si es mas bajo, tienes margen para subir. Si es mas alto, necesitas justificarlo con especializacion.\n\nTAREA PARA CASA\n\nDisena tu estructura de precios completa: sesion individual, bono de 3, bono de 5 y sesion premium si la tienes. Incluye precios, duraciones y que incluye cada formato. Compara con 3 guias de tu nicho y mercado. Tus precios transmiten profesionalidad? Estan dentro del rango? Ajusta segun analisis.",
+  "lesson_number": 19,
+  "module": 7,
+  "title": "Pricing: cuanto cobrar y como justificarlo (datos reales)",
+  "text_content": "Esta es la leccion que mas incomodidad genera en formaciones de guia espiritual. Hablar de dinero parece incompatible con la vocacion de servicio. Pero esa creencia es exactamente lo que mantiene a miles de guias en la precariedad mientras ofrecen un servicio de enorme valor.\n\nVamos a abordar el pricing con datos reales del mercado hispanohablante en 2025, psicologia de precios y un marco practico para que puedas cobrar con confianza y justificacion.\n\nDAT0S REALES DEL MERCADO 2025\n\nEspaña — rangos por nivel de experiencia y especializacion:\n- Guias de inicio (menos de 1 ano, sin nicho definido): 40-55 EUR/sesion 60 min\n- Guias con nicho claro (1-3 anos): 60-90 EUR/sesion 60 min\n- Guias especializadas con testimonios solidos (mas de 3 anos): 90-130 EUR/sesion\n- Guias con autoridad reconocida (publicaciones, talleres, presencia media): 130-180 EUR\n- Sesion online de 30 min (consulta rapida de transitos): 35-55 EUR\n\nLATAM — datos por pais (USD como referencia de cambio, precios en moneda local equivalentes):\n- Mexico: 500-2.500 MXN/sesion (USD 25-130 aprox. segun tipo de cambio 2025). CDMX y Monterrey en rango alto; ciudades medianas en rango bajo.\n- Argentina: el contexto inflacionario hace que los precios en pesos varien, pero el rango en USD es 15-60 USD. Profesionales con audiencia online internacional cobran en dolares: 40-80 USD.\n- Colombia: 120.000-400.000 COP/sesion (USD 30-100). Bogota y Medellin en rango alto.\n- Chile: 25.000-80.000 CLP/sesion (USD 28-90). Santiago en rango alto.\n- Peru: 80-250 PEN/sesion (USD 22-70).\n\nOnline en ingles (mercado global): 80-250 USD. Guias con audiencia consolidada cobran 200-500 USD. Este mercado es accesible si tu comunicacion funciona en ingles.\n\nEstos datos proceden de una revision de plataformas como Calendly.com, Fiverr Pro, Thumbtack y comunidades de profesionales del bienestar en cada region. Son orientativos. Tu precio real depende de tu mercado, experiencia y posicionamiento.\n\nLA PSICOLOGIA DEL PRECIO\n\nDaniel Kahneman (2011, Thinking, Fast and Slow) demostro que el precio funciona como senal de calidad a traves del efecto de anclaje y la heuristica precio-calidad. Un precio demasiado bajo genera desconfianza: si cobra tan poco, sera que no es buena? Un precio demasiado alto sin justificacion genera rechazo. El punto optimo es el precio que comunica profesionalidad y es accesible para tu cliente ideal.\n\nEl efecto de anclaje aplica directamente al menu de servicios: si tu primer servicio cuesta 45 EUR y tu servicio premium cuesta 120 EUR, el de 120 parece razonable porque tiene un ancla inferior. Si solo ofreces el de 120 sin contexto, puede parecer caro. Disena tu menu con el anclaje en mente.\n\nARIELY et al. (2008, Journal of Marketing Research) documentaron el efecto señuelo: cuando ofreces tres opciones de precio, la del medio es elegida desproporcionadamente. La opcion premium hace que la intermedia parezca razonable. Usa esto al estructurar tus bonos y paquetes.\n\nCOMO CALCULAR TU PRECIO MINIMO\n\nFormula practica basada en costes reales en Espana:\n\nPaso 1: calcula tu ingreso mensual deseado. Incluye:\n- Gastos fijos personales en Espana: vivienda (700-1.200 EUR), alimentacion (300-500), transporte (100-200), ocio y cultura (100-200)\n- Cuota de autonomo en tramo basico 2025: aprox. 290 EUR/mes (tras tarifa plana)\n- Asesoria fiscal: 50-80 EUR/mes\n- Herramientas digitales (Calendly, Zoom, Mailchimp, hosting): 30-50 EUR/mes\n- Formacion continua (10% de ingresos): variable\n- Ahorro/colchon: 200-300 EUR/mes recomendados\n- Total referencia para Espana: 1.800-2.600 EUR/mes segun estilo de vida\n\nPaso 2: calcula cuantas sesiones puedes hacer al mes de forma sostenible. Considerando preparacion previa (15-20 min), la sesion en si, notas post-sesion (10 min) y descanso entre sesiones (15 min buffer), una guia que trabaja a tiempo completo puede sostener entre 15 y 20 sesiones semanales sin quemarse. Al mes: 60-80 como maximo absoluto. Para empezar sin burnout: 25-35 sesiones/mes.\n\nPaso 3: divide. Si tu objetivo es 2.200 EUR netos deseados pero necesitas pagar impuestos (IRPF aprox. 15-25% segun renta), el ingreso bruto necesario es 2.600-2.750 EUR.\n- 2.700 EUR / 30 sesiones = 90 EUR/sesion\n- 2.700 EUR / 35 sesiones = 77 EUR/sesion\n\nTu precio minimo para Espana con ese objetivo esta entre 77 y 90 EUR. Todo lo que cobres por debajo de ese rango no es sostenible a medio plazo.\n\nCOMO JUSTIFICAR TU PRECIO\n\nNo justificas el precio con la tecnica. Lo justificas con el resultado, la experiencia y el tiempo total invertido.\n\nResultado: lo que la consultante se lleva. No 60 minutos de astrologia. Sino claridad sobre una decision importante, comprension de un patron que lleva anos repitiendose, un plan de accion concreto para los proximos 90 dias.\n\nExperiencia total: tu tiempo visible (la sesion) mas tu tiempo invisible: preparacion de la carta, revision de transitos, notas post-sesion, email de seguimiento. Una sesion de 60 min representa frecuentemente 90-120 min de trabajo total.\n\nFormacion: la inversion que has hecho. Dos o tres certificaciones de SelenaUra mas este master representan cientos de horas de formacion y miles de euros invertidos. Todo eso justifica un precio profesional.\n\nESTRATEGIAS DE PRICING INTELIGENTES\n\nPaquetes: ofrecer bonos de 3 o 5 sesiones con descuento incentiva el compromiso y te da ingresos previsibles.\n- Ejemplo Espana: sesion individual 85 EUR, bono 3 sesiones 225 EUR (75 EUR/sesion), bono 5 sesiones 375 EUR (75 EUR/sesion con mayor descuento por volumen)\n- Ejemplo Mexico: sesion individual 1.400 MXN, bono 3 sesiones 3.900 MXN (1.300/sesion), bono 5 sesiones 6.000 MXN (1.200/sesion)\n\nPrecios escalonados: diferentes servicios a diferentes precios.\n- Lectura rapida de transitos (30 min, Espana 45 EUR / LATAM USD 25-35)\n- Sesion completa (60 min, Espana 80-90 EUR / LATAM USD 50-70)\n- Sesion premium integrativa (90 min, Espana 120-140 EUR / LATAM USD 80-100)\n\nRevision anual: revisa tus precios cada 12 meses. Si tu agenda esta llena al 80%, es senal de que puedes subir entre un 10-15%. Si esta al 40%, el precio probablemente no es el problema sino el posicionamiento o la captacion.\n\nCASO PRACTICO: LA TRANSICION DE PRECIOS DE ANA\n\nAna empezo cobrando 30 euros por sesion de 60 minutos en Madrid. Hacia 8 sesiones semanales. Ingreso mensual bruto: 960 EUR. Despues de impuestos (IVA + IRPF) y cuota de autonomo, le quedaban menos de 450 EUR. Insostenible.\n\nAnalisis con la formula: Ana calculó que necesitaba 1.900 EUR netos para vivir dignamente en Madrid. Con el coste fiscal real eso supone unos 2.350 EUR brutos. Dividido entre 30 sesiones sostenibles: precio minimo 78 EUR. Estaba cobrando menos de la mitad.\n\nTransicion: subio a 75 EUR gradualmente (65 EUR el primer mes, 70 EUR el segundo, 75 EUR el tercero, con comunicacion anticipada a sus consultantes). Perdio 2 de 8 consultantes habituales. Gano 4 nuevas que percibieron mayor profesionalidad por el precio. Ingreso mensual: 2.250 EUR. Despues de impuestos: 1.600 EUR. Viable y creciendo.\n\nEJERCICIO GUIADO: CALCULA TU PRECIO\n\nPaso 1: anota tu ingreso mensual deseado (incluye todos los gastos reales de tu vida). Paso 2: suma los costes del negocio (cuota autonomo o equivalente, asesoria, herramientas). Paso 3: divide por el numero de sesiones sostenibles al mes. Paso 4: multiplica por 1.25-1.30 para compensar impuestos. Ese es tu precio minimo real. Paso 5: compara con el mercado de tu nicho y zona. Ajusta segun especializacion y posicionamiento.\n\nTAREA PARA CASA\n\nDisena tu estructura de precios completa: sesion individual, bono de 3, bono de 5 y sesion premium si la tienes. Incluye precios en tu moneda local, duraciones y que incluye cada formato. Compara con 3 guias de tu nicho y mercado. Tus precios transmiten profesionalidad? Estan dentro del rango? Ajusta segun analisis.",
   "slides": [
-    {"type": "title", "title": "Pricing: cuanto cobrar", "subtitle": "Modulo 7 · Leccion 19 — Master en Guia Espiritual Profesional"},
-    {"type": "content", "title": "Datos reales del mercado", "body": "Espana: 60-150 EUR/sesion (60 min).\nMexico: 500-2000 MXN. Colombia: 100-350k COP.\nOnline (ingles): 80-250 USD.\nGuias especializadas cobran en el rango superior."},
-    {"type": "content", "title": "Formula del precio minimo", "body": "Ingreso mensual deseado / sesiones sostenibles al mes.\nEjemplo: 2.500 EUR / 30 sesiones = 83 EUR/sesion.\nTodo por debajo no es sostenible a medio plazo.\nIncluir: gastos, autonomo, ahorro, formacion, reinversion."},
-    {"type": "quote", "text": "El precio funciona como senal de calidad. Demasiado bajo genera desconfianza; demasiado alto sin justificacion genera rechazo.", "source": "Basado en Kahneman, 2011 — Efecto de anclaje"},
-    {"type": "content", "title": "Justificacion: resultado, no tecnica", "body": "No vendes 60 minutos de astrologia.\nVendes claridad, comprension, plan de accion.\nVendes una experiencia: espacio seguro y profesional.\nVendes tu formacion: certificaciones + horas de practica."},
-    {"type": "content", "title": "Estrategias de pricing", "body": "Paquetes: bono 3 sesiones con 10-15% descuento.\nEscalonado: rapida (30 min), completa (60), premium (90).\nRevision anual: agenda al 80%? Sube precios."},
-    {"type": "content", "title": "Caso Ana: de 30 a 70 EUR", "body": "30 EUR x 32/mes = 960 EUR (insostenible despues de impuestos).\nSubio a 70 EUR. Perdio 2, gano 3 consultantes.\nIngreso: 2.240 EUR. Despues de impuestos: 1.500 EUR.\nMayor profesionalidad percibida = mayor demanda."},
-    {"type": "summary", "points": ["El precio minimo se calcula: ingreso deseado / sesiones sostenibles al mes", "El precio comunica calidad (Kahneman): ni demasiado bajo ni sin justificacion", "Justifica con resultado y experiencia, no con tecnica"]},
-    {"type": "next", "text": "En la proxima leccion exploraremos los diferentes formatos de ingreso: sesiones, talleres, retiros y cursos."}
+    {
+      "type": "title",
+      "title": "Pricing: cuanto cobrar",
+      "subtitle": "Modulo 7 · Leccion 19 — Master en Guia Espiritual Profesional"
+    },
+    {
+      "type": "content",
+      "title": "Datos reales del mercado 2025",
+      "body": "Espana inicio: 40-55 EUR. Con nicho: 60-90 EUR.\nEspecializadas +3 anos: 90-130 EUR.\nMexico: 500-2.500 MXN. Colombia: 120-400k COP.\nArgentina online: 40-80 USD. Chile: 25-80k CLP."
+    },
+    {
+      "type": "content",
+      "title": "Formula del precio minimo",
+      "body": "Ingreso deseado + costes negocio + impuestos\ndividido entre sesiones sostenibles al mes.\nEspana referencia: 2.700 EUR / 30 sesiones = 90 EUR.\nTodo por debajo: insostenible a medio plazo."
+    },
+    {
+      "type": "quote",
+      "text": "El precio funciona como senal de calidad a traves del efecto precio-calidad. Un precio demasiado bajo genera desconfianza; demasiado alto sin justificacion genera rechazo.",
+      "source": "Kahneman, D. — Thinking, Fast and Slow (2011)"
+    },
+    {
+      "type": "content",
+      "title": "Justificacion: resultado + tiempo total",
+      "body": "No vendes 60 minutos de astrologia.\nVendes claridad, comprension, plan de accion.\nTiempo total: preparacion + sesion + notas + seguimiento.\nTu formacion y certificaciones tambien tienen coste."
+    },
+    {
+      "type": "content",
+      "title": "Estrategias de pricing",
+      "body": "Paquetes: bono 3 (10-15% descuento) y bono 5 (mayor).\nEscalonado: rapida (30 min), completa (60), premium (90).\nRevision anual: agenda al 80%? Sube 10-15%."
+    },
+    {
+      "type": "content",
+      "title": "Caso Ana: de 30 a 75 EUR",
+      "body": "30 EUR x 32/mes = 960 EUR brutos (insostenible).\nSubio gradualmente: 65 → 70 → 75 EUR.\nPerdio 2, gano 4 consultantes nuevas.\nIngreso: 2.250 EUR. Despues impuestos: 1.600 EUR."
+    },
+    {
+      "type": "summary",
+      "points": [
+        "El precio minimo se calcula con la formula: (ingreso deseado + costes) / sesiones sostenibles, ajustado por impuestos",
+        "El precio comunica calidad (Kahneman): ni demasiado bajo ni sin justificacion",
+        "Justifica con resultado y tiempo total invertido, no con la herramienta tecnica"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la proxima leccion exploraremos los diferentes formatos de ingreso: sesiones, talleres, retiros y cursos."
+    }
   ],
   "interactive": [
-    {"type": "fill_blanks", "instruction": "Calcula el precio minimo con estos datos.", "template": "Ingreso deseado: 2.000 EUR/mes. Sesiones sostenibles: 25/mes. Precio minimo: ___0___ EUR/sesion. Si quiero margen de reinversion (500 EUR mas): precio ajustado: ___1___ EUR/sesion.", "answers": ["80", "100"]},
-    {"type": "match", "title": "Precio y senal que envia", "pairs": [{"left": "Sesion de 60 min a 20 EUR", "right": "Senal: baja calidad o falta de confianza profesional"}, {"left": "Sesion de 60 min a 80 EUR", "right": "Senal: rango profesional estandar, confianza"}, {"left": "Sesion premium 90 min a 120 EUR", "right": "Senal: servicio especializado de alto valor"}, {"left": "Bono 3 sesiones a 210 EUR (70/sesion)", "right": "Senal: compromiso incentivado con descuento justo"}]},
-    {"type": "sort", "title": "Pasos para calcular tu precio", "instruction": "Ordena los pasos de la formula de pricing.", "correct_order": ["Calcula tu ingreso mensual deseado (gastos + autonomo + ahorro + formacion)", "Estima sesiones sostenibles al mes (sin quemarte)", "Divide ingreso entre sesiones = precio minimo", "Compara con el mercado de tu nicho y zona", "Ajusta segun especializacion y posicionamiento"]},
-    {"type": "comparison", "headers": ["Formato", "Precio ejemplo (Espana)", "Ventaja"], "rows": [["Sesion individual", "80 EUR (60 min)", "Flexibilidad, sin compromiso previo"], ["Bono 3 sesiones", "210 EUR (70/sesion)", "Compromiso, ingreso previsible"], ["Bono 5 sesiones", "325 EUR (65/sesion)", "Fidelizacion, descuento significativo"], ["Sesion premium", "120 EUR (90 min)", "Mayor profundidad, mayor percepcion de valor"]]},
-    {"type": "lesson_summary", "points": ["El precio minimo se calcula dividiendo ingreso mensual deseado entre sesiones sostenibles", "Kahneman: el precio funciona como senal de calidad; demasiado bajo genera desconfianza", "Justificar el precio con resultado y experiencia, no con la tecnica o herramienta usada", "Estrategias de paquetes y escalonado facilitan la decision y fidelizan consultantes"]}
+    {
+      "type": "comparison_table",
+      "title": "Rangos de precios reales por mercado y nivel (2025)",
+      "headers": ["Pais / Mercado", "Inicio (menos de 1 ano)", "Con nicho y experiencia", "Especializada reconocida"],
+      "rows": [
+        ["Espana (EUR, sesion 60 min)", "40-55 EUR", "65-90 EUR", "100-150 EUR"],
+        ["Mexico (MXN, sesion 60 min)", "500-900 MXN", "1.000-1.800 MXN", "2.000-3.000 MXN"],
+        ["Argentina (USD, online)", "15-25 USD", "30-55 USD", "60-90 USD"],
+        ["Colombia (COP, sesion 60 min)", "120.000-200.000 COP", "220.000-320.000 COP", "350.000-500.000 COP"],
+        ["Chile (CLP, sesion 60 min)", "25.000-40.000 CLP", "45.000-70.000 CLP", "75.000-110.000 CLP"],
+        ["Online en ingles (USD)", "60-80 USD", "90-150 USD", "180-350 USD"]
+      ]
+    },
+    {
+      "type": "fill_blanks",
+      "instruction": "Calcula el precio minimo con estos datos de Espana.",
+      "template": "Ingreso neto deseado: 2.000 EUR/mes. Costes negocio (autonomo + asesoria + herramientas): 450 EUR/mes. Ajuste impuestos (multiplicar por 1.25): ingreso bruto necesario = ___0___ EUR. Sesiones sostenibles: 30/mes. Precio minimo: ___1___ EUR/sesion.",
+      "answers": ["3.063", "102"]
+    },
+    {
+      "type": "match",
+      "title": "Precio y senal que envia",
+      "pairs": [
+        {"left": "Sesion de 60 min a 20 EUR en Espana", "right": "Senal: baja calidad o falta de confianza profesional"},
+        {"left": "Sesion de 60 min a 80 EUR en Espana", "right": "Senal: rango profesional estandar, sostenible"},
+        {"left": "Bono 5 sesiones a 375 EUR (75 EUR/sesion)", "right": "Senal: compromiso incentivado, ingreso previsible"},
+        {"left": "Sesion premium 90 min a 130 EUR en Espana", "right": "Senal: servicio de alto valor, especialista reconocida"}
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Pasos para calcular tu precio",
+      "instruction": "Ordena los pasos de la formula de pricing.",
+      "correct_order": [
+        "Calcula tu ingreso mensual deseado (gastos personales + estandar de vida)",
+        "Suma los costes del negocio (autonomo, asesoria, herramientas)",
+        "Multiplica el total por 1.25-1.30 para compensar impuestos",
+        "Divide entre sesiones sostenibles al mes = precio minimo bruto",
+        "Compara con el mercado de tu nicho y zona geografica",
+        "Ajusta segun especializacion y posicionamiento"
+      ]
+    },
+    {
+      "type": "branching_scenario",
+      "title": "Una consultante te pide descuento",
+      "scenario": "Una consultante en tu primera semana de precios de pago te dice: me parece caro para lo que es. Podrias hacerme precio especial? Que respondes?",
+      "options": [
+        {
+          "text": "Le haces descuento porque no quieres perder tu primera cliente de pago",
+          "feedback": "Bajar el precio por presion establece un patron problematico. La consultante aprende que el precio es negociable y tu comienzas a infravalorar tu servicio desde el primer dia. Ademas, el precio bajo comunica menor calidad."
+        },
+        {
+          "text": "Explicas el valor que ofreces (preparacion, experiencia, resultado) y mantienes el precio, ofreciendo como alternativa el bono de 3 sesiones con descuento si quiere comprometerse",
+          "feedback": "Correcto. Mantener el precio con justificacion clara demuestra profesionalidad. Ofrecer el bono como alternativa es dar opciones sin bajar la percepcion de valor. Si la persona no puede pagarlo, puede que no sea tu cliente ideal ahora."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "El precio minimo en Espana para una practica sostenible esta entre 75 y 100 EUR/sesion (60 min) segun nivel de experiencia",
+        "En LATAM los rangos varian significativamente por pais: de 500-900 MXN en Mexico inicio a 120.000-200.000 COP en Colombia inicio",
+        "La formula precio minimo = (ingresos deseados + costes negocio) x 1.25-1.30 / sesiones sostenibles",
+        "El precio se justifica con resultado, experiencia y tiempo total, nunca solo con la herramienta tecnica"
+      ]
+    }
   ],
   "citation": [
-    {"researcher": "Daniel Kahneman", "year": "2011", "finding": "El efecto de anclaje demuestra que los precios se evaluan en relacion a un punto de referencia, no de forma absoluta"},
-    {"researcher": "Robert Cialdini", "year": "2006", "finding": "El principio de escasez y la senal de calidad del precio influyen en la percepcion de valor del servicio"},
-    {"researcher": "Martin Seligman", "year": "2011", "finding": "El logro (Accomplishment) del modelo PERMA incluye la sostenibilidad financiera como componente del bienestar profesional"}
+    {
+      "researcher": "Daniel Kahneman",
+      "year": "2011",
+      "finding": "Demostro que el precio funciona como senal de calidad a traves de la heuristica precio-calidad: los consumidores infieren calidad del precio cuando no tienen otra informacion disponible"
+    },
+    {
+      "researcher": "Ariely, D., Loewenstein, G. & Prelec, D.",
+      "year": "2003",
+      "finding": "En Journal of Marketing Research documentaron el efecto de ancla arbitraria: los precios de referencia que se presentan primero sesgan la percepcion de todos los precios posteriores"
+    },
+    {
+      "researcher": "Robert Cialdini",
+      "year": "2006",
+      "finding": "El principio de escasez (plazas limitadas) y la senal de calidad del precio influyen conjuntamente en la percepcion de valor de un servicio personal"
+    }
   ],
   "bibliography": [
     {"author": "Kahneman, D.", "year": "2011", "title": "Thinking, Fast and Slow", "type": "Libro"},
+    {"author": "Ariely, D., Loewenstein, G. & Prelec, D.", "year": "2003", "title": "Coherent Arbitrariness — Quarterly Journal of Economics", "type": "Articulo academico"},
     {"author": "Cialdini, R.", "year": "2006", "title": "Influence: The Psychology of Persuasion", "type": "Libro"},
-    {"author": "Ramit Sethi", "year": "2019", "title": "I Will Teach You to Be Rich", "type": "Libro"},
-    {"author": "Glassdoor/PayScale", "year": "2024", "title": "Compensation Data for Spiritual Counselors and Holistic Practitioners", "type": "Datos agregados"}
+    {"author": "Ramit Sethi", "year": "2019", "title": "I Will Teach You to Be Rich", "type": "Libro"}
   ],
-  "homework": {"task": "Disena tu estructura de precios completa: sesion individual, bono de 3 sesiones, bono de 5 y sesion premium (si aplica). Incluye precios, duraciones y que incluye cada formato. Compara con 3 guias de tu nicho. Ajusta segun analisis.", "duration": "45-60 min", "materials": "Hoja de calculo, acceso a internet para investigar mercado"},
-  "quiz_points": ["El precio minimo se calcula: ingreso mensual deseado (incluyendo gastos, impuestos y ahorro) dividido entre sesiones sostenibles al mes", "Kahneman demostro que el precio funciona como senal de calidad: demasiado bajo genera desconfianza, demasiado alto sin justificacion genera rechazo", "El precio se justifica con el resultado que obtiene la consultante y la experiencia del espacio, no con la tecnica o herramienta utilizada"]
+  "homework": {
+    "task": "Disena tu estructura de precios completa para tu mercado (Espana o tu pais de residencia): sesion individual, bono de 3 sesiones, bono de 5 y sesion premium. Usa la formula de precio minimo con tus datos reales de costes. Compara con 3 guias de tu nicho. Ajusta segun analisis.",
+    "duration": "45-60 min",
+    "materials": "Hoja de calculo para calcular costes reales, acceso a internet para investigar mercado"
+  },
+  "quiz_points": [
+    "Una guia en Espana con 1-3 anos de experiencia y nicho definido necesita cobrar entre 65-90 EUR/sesion para que su negocio sea sostenible considerando impuestos, autonomo y costes operativos — cobrar 30-40 EUR la hace trabajar por debajo del minimo sostenible",
+    "Cuando una consultante pide descuento, la respuesta profesional es explicar el valor concreto del servicio (preparacion + sesion + seguimiento) y ofrecer alternativas como el bono de sesiones, sin bajar el precio unitario por presion",
+    "En LATAM los precios varian entre paises: una guia en Colombia inicio cobra 120.000-200.000 COP mientras que en Mexico inicio son 500-900 MXN — usar precios sin referencia del mercado local lleva a infra o sobrevalorar el servicio"
+  ]
 }
