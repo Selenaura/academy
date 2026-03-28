@@ -158,6 +158,37 @@ export default function CoursePage({ params }) {
   const [quizAnswers, setQuizAnswers] = useState({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [enrolling, setEnrolling] = useState(false);
+  const [isEnrolled, setIsEnrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [completedLessons, setCompletedLessons] = useState(new Set());
+  const [enrollLoading, setEnrollLoading] = useState(true);
+
+  // Check real enrollment from Supabase
+  useEffect(() => {
+    if (!course) return;
+    const supabase = createClient();
+    async function checkEnrollment() {
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user) { setEnrollLoading(false); return; }
+        const { data: enrollment } = await supabase
+          .from('enrollments')
+          .select('progress, completed_lessons')
+          .eq('user_id', user.id)
+          .eq('course_id', course.id)
+          .single();
+        if (enrollment) {
+          setIsEnrolled(true);
+          setProgress(enrollment.progress || 0);
+          setCompletedLessons(new Set(enrollment.completed_lessons || []));
+        }
+      } catch (e) {
+        // Not enrolled or table doesn't exist yet
+      }
+      setEnrollLoading(false);
+    }
+    checkEnrollment();
+  }, [course]);
 
   // Fetch lesson JSON when a lesson is selected
   useEffect(() => {
@@ -227,16 +258,7 @@ export default function CoursePage({ params }) {
     );
   }
 
-  // Mock enrollment (in production, fetch from Supabase)
-  const isEnrolled = course.id === 'brujula-interior' || course.id === 'magnetismo-consciente';
-  const progress = course.id === 'brujula-interior' ? 0.35 : course.id === 'magnetismo-consciente' ? 0.12 : 0;
-
-  // Mock completed lessons
-  const completedLessons = course.lessons.length > 0
-    ? new Set(course.lessons.slice(0, Math.floor(course.lessons.length * progress)).map(l => l.id))
-    : new Set();
-
-  // Mock quiz questions
+  // Quiz questions for review
   const quizQuestions = [
     {
       q: '¿Qué estructura cerebral se modifica con la práctica meditativa según los estudios de neuroplasticidad?',
@@ -700,39 +722,9 @@ export default function CoursePage({ params }) {
           </Card>
         </div>
 
-        {/* Lessons */}
-        {course.lessons.length > 0 ? (
-          <div>
-            <h3 className="font-display text-lg font-medium mb-4">Contenido del curso</h3>
-            {course.lessons.map((lesson, i) => (
-              <button
-                key={lesson.id}
-                onClick={() => isEnrolled ? setActiveLesson(lesson) : null}
-                disabled={!isEnrolled}
-                className="flex items-center gap-3.5 p-4 w-full bg-selene-card border border-selene-border rounded-xl text-left mb-2 hover:border-selene-gold/20 transition disabled:opacity-60 disabled:cursor-not-allowed"
-              >
-                <div className={`w-9 h-9 rounded-[10px] shrink-0 flex items-center justify-center border ${
-                  completedLessons.has(lesson.id) ? 'bg-selene-success/10 border-selene-success/20' : 'bg-selene-elevated border-selene-border'
-                }`}>
-                  {completedLessons.has(lesson.id) ? <CheckIcon size={16} /> :
-                   lesson.type === 'quiz' ? <span className="text-sm">📝</span> :
-                   lesson.type === 'exam' ? <span className="text-sm">🎓</span> :
-                   <BookOpenIcon size={14} className="text-selene-white-dim" />}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-sm text-selene-white font-medium mb-0.5 truncate">{lesson.title}</div>
-                  <div className="text-[11px] text-selene-white-dim">
-                    {lesson.type === 'quiz' ? 'Quiz' : lesson.type === 'exam' ? 'Evaluación' : 'Lección'} · {lesson.duration}
-                  </div>
-                </div>
-                <ArrowIcon size={14} className="text-selene-white-dim shrink-0" />
-              </button>
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-10">
-            <LockIcon size={32} className="text-selene-white-dim mx-auto" />
-            <p className="text-sm text-selene-white-dim mt-3 mb-4">Inscríbete para ver el contenido completo</p>
+        {/* Enrollment CTA — always visible when not enrolled */}
+        {!isEnrolled && !enrollLoading && (
+          <div className="text-center py-8 mb-6">
             {course.price === 0 ? (
               <button
                 onClick={() => handleEnroll()}
@@ -742,7 +734,7 @@ export default function CoursePage({ params }) {
                 {enrolling ? 'Procesando...' : 'Inscribirse gratis'}
               </button>
             ) : (
-              <div className="space-y-3">
+              <div className="space-y-3 max-w-sm mx-auto">
                 <button
                   onClick={() => handleEnroll()}
                   disabled={enrolling}
@@ -764,6 +756,38 @@ export default function CoursePage({ params }) {
                 </p>
               </div>
             )}
+          </div>
+        )}
+
+        {/* Lessons */}
+        {course.lessons.length > 0 && (
+          <div>
+            <h3 className="font-display text-lg font-medium mb-4">Contenido del curso</h3>
+            {course.lessons.map((lesson, i) => (
+              <button
+                key={lesson.id}
+                onClick={() => isEnrolled ? setActiveLesson(lesson) : null}
+                disabled={!isEnrolled}
+                className="flex items-center gap-3.5 p-4 w-full bg-selene-card border border-selene-border rounded-xl text-left mb-2 hover:border-selene-gold/20 transition disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                <div className={`w-9 h-9 rounded-[10px] shrink-0 flex items-center justify-center border ${
+                  completedLessons.has(lesson.id) ? 'bg-selene-success/10 border-selene-success/20' : 'bg-selene-elevated border-selene-border'
+                }`}>
+                  {completedLessons.has(lesson.id) ? <CheckIcon size={16} /> :
+                   !isEnrolled ? <LockIcon size={14} className="text-selene-white-dim" /> :
+                   lesson.type === 'quiz' ? <span className="text-sm">📝</span> :
+                   lesson.type === 'exam' ? <span className="text-sm">🎓</span> :
+                   <BookOpenIcon size={14} className="text-selene-white-dim" />}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm text-selene-white font-medium mb-0.5 truncate">{lesson.title}</div>
+                  <div className="text-[11px] text-selene-white-dim">
+                    {lesson.type === 'quiz' ? 'Quiz' : lesson.type === 'exam' ? 'Evaluación' : 'Lección'} · {lesson.duration}
+                  </div>
+                </div>
+                {isEnrolled ? <ArrowIcon size={14} className="text-selene-white-dim shrink-0" /> : <LockIcon size={12} className="text-selene-white-dim/40 shrink-0" />}
+              </button>
+            ))}
           </div>
         )}
       </div>
