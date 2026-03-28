@@ -53,14 +53,22 @@ export async function generateMetadata({ params }) {
   const { id } = await params;
   const course = COURSES.find(c => c.id === id);
   if (!course) return {};
+  const isMasterMeta = id === 'guia-profesional';
+  const metaDescription = isMasterMeta
+    ? 'Conviértete en guía espiritual profesional certificada. 10 módulos, casos supervisados, guía legal y marca personal. Desde €50/mes.'
+    : `Programa completo: ${course.modules} módulos, ${course.lessons_count} lecciones, ${course.hours} de formación. ${course.description?.substring(0, 120)}`;
+  const metaTitle = isMasterMeta
+    ? 'Máster en Guía Espiritual Profesional — Selene Academia'
+    : `Programa ${course.title} — Selene Academia`;
+
   return {
-    title: `Programa ${course.title} — Selene Academia`,
-    description: `Programa completo: ${course.modules} módulos, ${course.lessons_count} lecciones, ${course.hours} de formación. ${course.description?.substring(0, 120)}`,
+    title: metaTitle,
+    description: metaDescription,
     metadataBase: new URL('https://academy.selenaura.com'),
     alternates: { canonical: `https://academy.selenaura.com/programa/${id}` },
     openGraph: {
-      title: `Programa ${course.title}`,
-      description: course.description,
+      title: isMasterMeta ? 'Máster en Guía Espiritual Profesional' : `Programa ${course.title}`,
+      description: metaDescription,
       siteName: 'Selene Academia',
       locale: 'es_ES',
       type: 'website',
@@ -360,6 +368,85 @@ export default async function ProgramaPage({ params }) {
           </div>
         </div>
       </section>
+
+      {/* ── Status quo + Testimonios (solo Máster) ── */}
+      {isMaster && (
+        <section className="py-16 px-6">
+          <div className="max-w-4xl mx-auto">
+            {/* Status quo — nombrar el dolor */}
+            <div className="bg-selene-elevated/30 rounded-2xl p-8 border border-selene-border mb-12">
+              <h2 className="font-display text-2xl md:text-3xl text-selene-white mb-4 text-center">
+                ¿Te suena esto?
+              </h2>
+              <div className="grid sm:grid-cols-3 gap-6 mt-8">
+                <div className="text-center">
+                  <p className="text-3xl mb-3">🎴</p>
+                  <p className="text-sm text-selene-white-dim leading-relaxed">
+                    Llevas meses leyendo cartas para amigas y familiares gratis. Te dicen que eres buenísima. Pero nunca cobras.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl mb-3">😶</p>
+                  <p className="text-sm text-selene-white-dim leading-relaxed">
+                    Quieres poner precio a tus sesiones pero te da miedo. ¿Cuánto cobro? ¿Y si no me toman en serio? ¿Es legal?
+                  </p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl mb-3">🔄</p>
+                  <p className="text-sm text-selene-white-dim leading-relaxed">
+                    Sigues en tu trabajo de siempre, sabiendo que tu don podría ser tu profesión. Pero no das el paso.
+                  </p>
+                </div>
+              </div>
+              <p className="text-sm text-selene-gold text-center mt-8 font-medium">
+                Este máster existe para que dejes de regalar tu talento y empieces a vivir de él.
+              </p>
+            </div>
+
+            {/* Testimonios */}
+            <h2 className="font-display text-2xl md:text-3xl text-selene-gold mb-8 text-center">
+              Lo que dicen nuestras alumnas
+            </h2>
+            <div className="grid sm:grid-cols-3 gap-5">
+              {[
+                {
+                  quote: 'Me dio escalofríos de lo precisa que fue mi lectura. El máster me dio la seguridad de hacer lo mismo para otras personas.',
+                  name: 'Laura M.',
+                  sign: 'Escorpio',
+                  detail: 'Ya cobra €60/sesión',
+                },
+                {
+                  quote: 'Por fin algo con ciencia real, no solo frases bonitas. La guía legal me ahorró meses de investigación.',
+                  name: 'María C.',
+                  sign: 'Acuario',
+                  detail: 'Alta como autónoma',
+                },
+                {
+                  quote: 'Los casos supervisados fueron lo mejor. Cuando hice mi primera sesión real ya sabía exactamente qué hacer.',
+                  name: 'Ana R.',
+                  sign: 'Cáncer',
+                  detail: '4 clientes recurrentes',
+                },
+              ].map((t, i) => (
+                <div key={i} className="bg-selene-elevated/50 rounded-2xl p-6 border border-selene-border">
+                  <p className="text-sm text-selene-white-dim leading-relaxed mb-4 italic">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-selene-gold/10 border border-selene-gold/20 flex items-center justify-center text-selene-gold text-xs font-bold">
+                      {t.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p className="text-xs text-selene-white font-medium">{t.name} · {t.sign}</p>
+                      <p className="text-[11px] text-selene-gold/70">{t.detail}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── Pricing CTA ── */}
       <section className="py-20 px-6 bg-selene-elevated/20">
