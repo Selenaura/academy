@@ -15,11 +15,14 @@ export async function GET(request) {
       // Check if user needs onboarding
       const { data: { user } } = await supabase.auth.getUser();
       const onboardingComplete = user?.user_metadata?.onboarding_complete;
+      const redirectTo = searchParams.get('redirect');
+      const safePath = redirectTo && redirectTo.startsWith('/') ? redirectTo : null;
 
       if (!onboardingComplete) {
-        return NextResponse.redirect(`${origin}/onboarding`);
+        const onboardingUrl = safePath ? `/onboarding?redirect=${encodeURIComponent(safePath)}` : '/onboarding';
+        return NextResponse.redirect(`${origin}${onboardingUrl}`);
       }
-      return NextResponse.redirect(`${origin}/dashboard`);
+      return NextResponse.redirect(`${origin}${safePath || '/dashboard'}`);
     }
   }
 

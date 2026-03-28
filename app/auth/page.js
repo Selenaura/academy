@@ -27,6 +27,7 @@ function AuthContent() {
   const [name, setName] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const redirectTo = searchParams.get('redirect') || null;
 
   const supabase = createClient();
 
@@ -45,14 +46,14 @@ function AuthContent() {
           },
         });
         if (signUpError) throw signUpError;
-        router.push('/onboarding');
+        router.push(redirectTo ? `/onboarding?redirect=${encodeURIComponent(redirectTo)}` : '/onboarding');
       } else {
         const { data, error: signInError } = await supabase.auth.signInWithPassword({
           email,
           password,
         });
         if (signInError) throw signInError;
-        router.push('/dashboard');
+        router.push(redirectTo || '/dashboard');
       }
     } catch (err) {
       setError(err.message === 'Invalid login credentials'
@@ -65,10 +66,13 @@ function AuthContent() {
   }
 
   async function handleGoogleLogin() {
+    const callbackUrl = redirectTo
+      ? `${window.location.origin}/auth/callback?redirect=${encodeURIComponent(redirectTo)}`
+      : `${window.location.origin}/auth/callback`;
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`,
+        redirectTo: callbackUrl,
       },
     });
     if (error) setError(error.message);
