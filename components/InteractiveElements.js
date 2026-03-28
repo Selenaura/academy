@@ -243,9 +243,9 @@ export function FillBlanks({ text, blanks, title }) {
 // ── 5. SORTING EXERCISE — Order items correctly ──
 export function SortExercise({ title, items, instruction }) {
   const [order, setOrder] = useState(() => items ? [...items].sort(() => Math.random() - 0.5) : []);
+  const [checked, setChecked] = useState(false);
 
   if (!items || !items.length) return null;
-  const [checked, setChecked] = useState(false);
 
   const moveUp = (i) => {
     if (i === 0) return;
