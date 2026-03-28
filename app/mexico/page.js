@@ -33,11 +33,15 @@ export const metadata = {
 const PAID_COURSES = COURSES.filter((c) => c.price > 0);
 
 const coursePricesMXN = {
-  'magnetismo-consciente': { usd: 26, label: 'USD 26' },
-  'astrologia-natal': { usd: 32, label: 'USD 32' },
-  cronobiologia: { usd: 32, label: 'USD 32' },
-  'tarot-cientifico': { usd: 49, label: 'USD 49' },
-  'guia-espiritual': { usd: 159, label: 'USD 159' },
+  'brujula-interior': { usd: 0, label: 'GRATIS' },
+  'tarot-intuitivo': { usd: 32, label: 'USD 32' },
+  'quirologia-certificacion': { usd: 37, label: 'USD 37' },
+  'raices-invisibles': { usd: 32, label: 'USD 32' },
+  'suenos-certificacion': { usd: 32, label: 'USD 32' },
+  'magnetismo-consciente': { usd: 32, label: 'USD 32' },
+  'astrologia-natal': { usd: 37, label: 'USD 37' },
+  'cronobiologia': { usd: 26, label: 'USD 26' },
+  'guia-profesional': { usd: 159, label: 'USD 159' },
 };
 
 const valueProps = [
