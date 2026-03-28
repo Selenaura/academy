@@ -274,6 +274,115 @@ function LessonView({ courseId, lessonId, onClose }) {
   );
 }
 
+// Master improvements changelog
+const MASTER_NOVEDADES = [
+  {
+    fecha: '2026-03-28',
+    categoria: 'Marketing',
+    items: [
+      { titulo: 'Hero PAS Framework', desc: 'Reescrito con Pain-Agitate-Solution: "Ya tienes el don. Ahora conviértelo en tu profesión."' },
+      { titulo: 'CTA en primera persona', desc: 'Botones cambiados a voz Selene: "Quiero ser guía profesional ✦"' },
+      { titulo: 'Proceso visual 4 pasos', desc: 'Sección con iconos: Certificaciones → Módulos → Casos supervisados → Lanzamiento' },
+      { titulo: 'Sección "Para quién"', desc: 'Reescrita con voice-of-customer emocional: ya practicas pero no cobras, sabes que es tu camino' },
+      { titulo: 'ROI con datos reales', desc: '€40-180/sesión, 2-3 sesiones recuperas inversión, €1.200+/mes potencial' },
+      { titulo: 'Status quo "¿Te suena esto?"', desc: '3 escenarios: lees gratis para amigos, miedo a cobrar, atrapada en trabajo de oficina' },
+      { titulo: '3 testimonios con resultado', desc: 'Laura M. Escorpio "€60/sesión", María C. Acuario "Alta como autónoma", Ana R. Cáncer "4 clientes recurrentes"' },
+      { titulo: 'Precio con anclaje', desc: '"Formaciones equivalentes: €2.000-5.000" (tachado) → €149,99 / €50/mes + "€1,25/día"' },
+      { titulo: 'Garantía 14 días', desc: 'Escudo visual + texto de garantía de devolución sin preguntas' },
+      { titulo: 'FAQ 6 preguntas', desc: 'Resuelve objeciones: tiempo, experiencia previa, vivir de esto, certificado, soporte, requisitos' },
+      { titulo: 'Bundle pathway', desc: '"¿Aún no tienes 2 certificaciones?" con cross-sell a tarot €69,99, astrología €69,99, sueños €49,99, quirología €49,99' },
+    ]
+  },
+  {
+    fecha: '2026-03-28',
+    categoria: 'SEO',
+    items: [
+      { titulo: 'Meta title optimizado', desc: 'Máster Guía Espiritual Profesional — específico para búsquedas de formación' },
+      { titulo: 'Meta description', desc: 'Conviértete en guía espiritual profesional certificada. 10 módulos, casos supervisados, guía legal y marca personal. Desde €50/mes.' },
+    ]
+  },
+  {
+    fecha: '2026-03-28',
+    categoria: 'Pagos',
+    items: [
+      { titulo: 'Stripe Tax automático', desc: 'automatic_tax + tax_id_collection activados en checkout (21% IVA España)' },
+      { titulo: 'Facturas automáticas', desc: 'invoice_creation activado — cada compra genera factura PDF automáticamente' },
+      { titulo: 'Klarna Pay-in-3', desc: 'Opción de pago en 3 plazos sin intereses disponible en España/Europa' },
+    ]
+  },
+  {
+    fecha: '2026-03-28',
+    categoria: 'Currículo',
+    items: [
+      { titulo: 'Expansión 40h → 80h', desc: 'Duplicadas las horas del Máster para competir con Scholistico, Cosmograma e iPEC' },
+      { titulo: '10 → 12 módulos', desc: 'Añadidos: Casos Prácticos II (3 casos avanzados) + Prácticas Supervisadas (3 sesiones)' },
+      { titulo: '30 → 40 lecciones', desc: '10 lecciones nuevas: 4 casos extra (duelo, transición, conflicto familiar, bloqueo) + protocolo supervisión + 3 sesiones' },
+      { titulo: 'Bloom\'s taxonomy completo', desc: 'Cubiertos los 6 niveles: Remember→Understand→Apply→Analyze→Evaluate→Create' },
+      { titulo: '15 consultas supervisadas', desc: 'Requisito actualizado para certificación — de 10 a 15 consultas' },
+    ]
+  },
+  {
+    fecha: '2026-03-28',
+    categoria: 'Plataforma',
+    items: [
+      { titulo: 'Chatbot "Pregunta a Selene"', desc: 'Widget flotante con panel lateral tipo Outlier — responde dudas sobre cursos, certificaciones y astrología' },
+      { titulo: 'Centro de ayuda /ayuda', desc: 'Página con FAQ organizado: cursos, Máster, certificaciones, pagos y soporte' },
+      { titulo: 'Certificado arreglado', desc: 'Nombre real del usuario (no hardcoded), código persistente en BD, descarga imagen, botón compartir' },
+      { titulo: 'Icono ayuda en navbar', desc: 'Icono ? añadido entre dashboard y perfil en la barra de navegación' },
+    ]
+  },
+];
+
+function MasterNovedadesPanel() {
+  const [open, setOpen] = useState(true);
+  return (
+    <div className="mb-8 bg-selene-card border border-selene-gold/30 rounded-xl overflow-hidden">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between px-5 py-4 hover:bg-selene-elevated/30 transition"
+      >
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">👑</span>
+          <div className="text-left">
+            <div className="text-[15px] font-semibold text-selene-gold">Novedades del Máster</div>
+            <div className="text-[11px] text-selene-white-dim">{MASTER_NOVEDADES.reduce((sum, g) => sum + g.items.length, 0)} mejoras implementadas</div>
+          </div>
+        </div>
+        <span className="text-selene-white-dim text-sm">{open ? '▲' : '▼'}</span>
+      </button>
+      {open && (
+        <div className="px-5 pb-5 space-y-5">
+          {MASTER_NOVEDADES.map((grupo, gi) => (
+            <div key={gi}>
+              <div className="flex items-center gap-2 mb-3">
+                <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${
+                  grupo.categoria === 'Marketing' ? 'bg-selene-purple/10 text-selene-purple' :
+                  grupo.categoria === 'SEO' ? 'bg-selene-blue/10 text-selene-blue-light' :
+                  grupo.categoria === 'Currículo' ? 'bg-selene-gold/10 text-selene-gold' :
+                  grupo.categoria === 'Plataforma' ? 'bg-orange-500/10 text-orange-400' :
+                  'bg-selene-success/10 text-selene-success'
+                }`}>{grupo.categoria}</span>
+                <span className="text-[11px] text-selene-white-dim">{grupo.fecha}</span>
+              </div>
+              <div className="space-y-2">
+                {grupo.items.map((item, ii) => (
+                  <div key={ii} className="flex gap-3 p-3 bg-selene-elevated/50 rounded-lg border border-selene-border/50">
+                    <span className="text-selene-gold shrink-0 text-xs mt-0.5">✦</span>
+                    <div>
+                      <div className="text-[13px] text-selene-white font-medium">{item.titulo}</div>
+                      <div className="text-[12px] text-selene-white-dim mt-0.5">{item.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function AdminContenidoPage() {
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [selectedLesson, setSelectedLesson] = useState(null);
@@ -290,6 +399,8 @@ export default function AdminContenidoPage() {
         <div className="max-w-[800px] mx-auto px-5 py-8">
           <h1 className="font-display text-2xl text-selene-white mb-2">Contenido de todos los cursos</h1>
           <p className="text-sm text-selene-white-dim mb-8">Acceso directo a todas las lecciones sin restricción de compra ni inscripción.</p>
+
+          <MasterNovedadesPanel />
 
           <div className="space-y-3">
             {COURSES.map(course => {

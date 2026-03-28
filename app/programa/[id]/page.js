@@ -55,7 +55,7 @@ export async function generateMetadata({ params }) {
   if (!course) return {};
   const isMasterMeta = id === 'guia-profesional';
   const metaDescription = isMasterMeta
-    ? 'Conviértete en guía espiritual profesional certificada. 10 módulos, casos supervisados, guía legal y marca personal. Desde €50/mes.'
+    ? 'Conviértete en guía espiritual profesional certificada. 12 módulos, 80h, prácticas supervisadas, guía legal y marca personal. Desde €50/mes.'
     : `Programa completo: ${course.modules} módulos, ${course.lessons_count} lecciones, ${course.hours} de formación. ${course.description?.substring(0, 120)}`;
   const metaTitle = isMasterMeta
     ? 'Máster en Guía Espiritual Profesional — Selene Academia'
@@ -124,7 +124,7 @@ export default async function ProgramaPage({ params }) {
                 ética, casos reales supervisados y todo lo que necesitas para vivir de esto.
               </p>
               <p className="text-sm text-selene-white-dim/70 max-w-xl mx-auto mb-8">
-                40 horas · 10 módulos · 3 casos supervisados · Guía legal y fiscal · Certificación profesional con perfil en el directorio Selene.
+                80 horas · 12 módulos · 7 casos prácticos · 3 sesiones supervisadas · Guía legal y fiscal · Certificación profesional con perfil en el directorio Selene.
               </p>
             </>
           ) : (
@@ -183,8 +183,8 @@ export default async function ProgramaPage({ params }) {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { step: '01', icon: '📚', label: '2 certificaciones', desc: 'Tu base de conocimiento' },
-                { step: '02', icon: '🌀', label: '10 módulos del Máster', desc: 'De practicante a profesional' },
-                { step: '03', icon: '📋', label: 'Casos supervisados', desc: 'Práctica con clientes reales' },
+                { step: '02', icon: '🌀', label: '12 módulos · 80h', desc: 'De practicante a profesional' },
+                { step: '03', icon: '📋', label: '7 casos + 3 supervisadas', desc: 'Práctica con clientes reales' },
                 { step: '04', icon: '🚀', label: 'Lanzamiento', desc: 'Tu carrera empieza' },
               ].map((s) => (
                 <div key={s.step} className="text-center p-4">

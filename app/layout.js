@@ -1,4 +1,5 @@
 import './globals.css';
+import ChatWidget from '../components/ChatWidget';
 
 export const metadata = {
   title: 'Selene Academia — Tu escuela de consciencia cósmica',
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-selene-bg text-selene-white antialiased">
         {children}
+        <ChatWidget />
       </body>
     </html>
   );
