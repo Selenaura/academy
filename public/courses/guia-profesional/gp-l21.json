@@ -1,29 +1,312 @@
 {
-  "lesson_number": 21, "module": 7, "title": "Herramientas: agenda, pagos, CRM, automatizacion basica",
+  "lesson_number": 21,
+  "module": 7,
+  "title": "Herramientas: agenda, pagos, CRM, automatizacion basica",
   "text_content": "Tu practica profesional necesita infraestructura. No puedes gestionar citas por WhatsApp, cobrar por Bizum sin registro y guardar notas de sesion en papeles sueltos. No porque sea ilegal, sino porque es insostenible y poco profesional.\n\nEn esta leccion vas a montar tu sistema operativo de negocio: las herramientas minimas que necesitas para funcionar como profesional desde el dia uno.\n\nAGENDA PROFESIONAL\n\nNecesitas un sistema donde las consultantes puedan ver tu disponibilidad y reservar directamente, sin intercambios de mensajes. Herramientas recomendadas:\n\nCalendly (gratuito hasta cierto nivel): la mas popular. Sincroniza con Google Calendar, permite definir horarios disponibles, anadir buffer entre sesiones y enviar recordatorios automaticos. La version gratuita permite un tipo de evento.\n\nTidyCal (pago unico de 29 USD): alternativa economica sin cuota mensual. Funcionalidad similar a Calendly con pago unico de por vida.\n\nAcuity Scheduling (integrado con Squarespace): mas completo, permite cobro anticipado y formularios pre-sesion.\n\nConfiguracion minima: define tus horarios disponibles (no ofrezcas todo el dia), anade un buffer de 15 minutos entre sesiones (para notas y descanso), y activa recordatorios automaticos 24 horas antes.\n\nSISTEMA DE PAGOS\n\nCobrar antes de la sesion es profesional y evita cancelaciones. Opciones:\n\nStripe: la plataforma de pago mas profesional. Comision: 1.4% + 0.25 EUR por transaccion en Europa. Se integra con Calendly, web propia y enlaces de pago.\n\nPayPal: mas conocida pero comision mas alta (3.49% + 0.49 EUR). Util si tu mercado es internacional.\n\nBizum (Espana): comodo pero no profesional para importes altos. Util como complemento, no como sistema principal.\n\nTransferencia bancaria: la opcion mas economica pero requiere verificar manualmente cada pago.\n\nRecomendacion: Stripe integrado con tu agenda para cobro automatico al reservar. La consultante reserva, paga y recibe confirmacion. Tu no haces nada manual.\n\nCRM BASICO (GESTION DE CONSULTANTES)\n\nNecesitas un lugar centralizado donde guardar: datos de cada consultante (nombre, datos natales, historial de sesiones), notas de cada sesion, seguimiento de temas trabajados.\n\nOpciones sencillas:\n\nNotion: gratuito, flexible, puedes crear una base de datos de consultantes con campos personalizados. Ideal para empezar.\n\nGoogle Sheets: funcional, gratuito, compartible. Menos elegante que Notion pero cumple su funcion.\n\nPractice (app especifica para coaches/terapeutas): mas profesional, incluye agenda + notas + pagos en un solo lugar. Pago mensual.\n\nInformacion minima por consultante: nombre, datos natales, fecha de cada sesion, tema trabajado, notas clave, tarea asignada, fecha de proxima sesion.\n\nIMPORTANTE: toda la informacion de consultantes debe cumplir RGPD. Veremos los detalles legales en la leccion 27.\n\nAUTOMATIZACION BASICA\n\nLas automatizaciones te ahorran horas de trabajo repetitivo.\n\nAutomatizacion 1: email de bienvenida. Cuando una nueva consultante reserva, recibe automaticamente: confirmacion de cita, enlace de videoconferencia (Zoom/Google Meet), consentimiento informado para firmar, formulario pre-sesion con preguntas basicas.\n\nAutomatizacion 2: recordatorio 24h antes. Un email o mensaje automatico que recuerde la cita y el enlace.\n\nAutomatizacion 3: seguimiento post-sesion. 48 horas despues de la sesion, un email con: resumen de la tarea asignada, enlace para reservar proxima sesion, solicitud de testimonio (si es apropiado).\n\nHerramientas para automatizar: Mailchimp (email marketing gratuito hasta 500 contactos), Zapier (conecta herramientas entre si), o el propio Calendly que tiene automatizaciones basicas integradas.\n\nCASO PRACTICO: EL SISTEMA DE LUCIA\n\nLucia monto su sistema en un fin de semana: Calendly (gratuito) + Stripe (cobro al reservar) + Notion (CRM) + Gmail con plantillas (seguimiento). Coste mensual: 0 EUR (todo gratuito). Tiempo de gestion administrativa: 30 minutos al dia. Resultado: puede dedicar el 90% de su tiempo a lo que importa: sus consultantes.\n\nEJERCICIO GUIADO: MONTA TU SISTEMA\n\nPaso 1: crea una cuenta en Calendly o TidyCal y configura tu primer tipo de sesion. Paso 2: configura un metodo de cobro (Stripe o PayPal). Paso 3: crea tu base de datos de consultantes en Notion o Google Sheets. Paso 4: escribe la plantilla de tu email de bienvenida y tu email de seguimiento post-sesion.\n\nTAREA PARA CASA\n\nMonta tu sistema completo y haz una reserva de prueba como si fueras una consultante. Funciona todo: la reserva, el pago, la confirmacion, el recordatorio? Si algo falla, ajusta. Tu sistema debe funcionar sin tu intervencion manual antes de empezar a atender.",
   "slides": [
-    {"type": "title", "title": "Herramientas profesionales", "subtitle": "Modulo 7 · Leccion 21 — Master en Guia Espiritual Profesional"},
-    {"type": "content", "title": "Cuatro pilares de infraestructura", "body": "1. Agenda profesional (Calendly, TidyCal)\n2. Sistema de pagos (Stripe, PayPal)\n3. CRM basico (Notion, Google Sheets)\n4. Automatizaciones (emails de bienvenida, recordatorios)"},
-    {"type": "content", "title": "Agenda: configuracion minima", "body": "Horarios definidos (no todo el dia).\nBuffer de 15 min entre sesiones.\nRecordatorios automaticos 24h antes.\nCobro al reservar integrado con Stripe."},
-    {"type": "content", "title": "Tres automatizaciones esenciales", "body": "1. Email de bienvenida al reservar (consentimiento + enlace).\n2. Recordatorio 24h antes.\n3. Seguimiento 48h despues (tarea + proxima cita + testimonio)."},
-    {"type": "quote", "text": "La automatizacion no es frialdad. Es liberar tu tiempo para lo que realmente importa: la conexion humana con tus consultantes.", "source": "Principio de eficiencia operativa"},
-    {"type": "content", "title": "Caso Lucia: sistema gratuito", "body": "Calendly (gratis) + Stripe + Notion + Gmail plantillas.\nCoste mensual: 0 EUR.\nGestion administrativa: 30 min/dia.\n90% del tiempo dedicado a consultantes."},
-    {"type": "summary", "points": ["Cuatro herramientas esenciales: agenda, pagos, CRM y automatizaciones", "Cobrar antes de la sesion es profesional y reduce cancelaciones", "Todo el sistema puede montarse con herramientas gratuitas en un fin de semana"]},
-    {"type": "next", "text": "En el Modulo 8 aprenderemos marketing y captacion: Pinterest, email marketing y referidos."}
+    {
+      "type": "title",
+      "title": "Herramientas profesionales",
+      "subtitle": "Modulo 7 Â· Leccion 21 â€” Master en Guia Espiritual Profesional"
+    },
+    {
+      "type": "content",
+      "title": "Cuatro pilares de infraestructura",
+      "body": "1. Agenda profesional (Calendly, TidyCal)\n2. Sistema de pagos (Stripe, PayPal)\n3. CRM basico (Notion, Google Sheets)\n4. Automatizaciones (emails de bienvenida, recordatorios)"
+    },
+    {
+      "type": "content",
+      "title": "Agenda: configuracion minima",
+      "body": "Horarios definidos (no todo el dia).\nBuffer de 15 min entre sesiones.\nRecordatorios automaticos 24h antes.\nCobro al reservar integrado con Stripe."
+    },
+    {
+      "type": "content",
+      "title": "Tres automatizaciones esenciales",
+      "body": "1. Email de bienvenida al reservar (consentimiento + enlace).\n2. Recordatorio 24h antes.\n3. Seguimiento 48h despues (tarea + proxima cita + testimonio)."
+    },
+    {
+      "type": "quote",
+      "text": "La automatizacion no es frialdad. Es liberar tu tiempo para lo que realmente importa: la conexion humana con tus consultantes.",
+      "source": "Principio de eficiencia operativa"
+    },
+    {
+      "type": "content",
+      "title": "Caso Lucia: sistema gratuito",
+      "body": "Calendly (gratis) + Stripe + Notion + Gmail plantillas.\nCoste mensual: 0 EUR.\nGestion administrativa: 30 min/dia.\n90% del tiempo dedicado a consultantes."
+    },
+    {
+      "type": "comparison_table",
+      "title": "Herramientas esenciales del sistema operativo de negocio",
+      "columns": [
+        "Categoria",
+        "Herramienta recomendada",
+        "Version gratuita disponible",
+        "Para que sirve"
+      ],
+      "rows": [
+        {
+          "label": "Agenda y citas",
+          "values": [
+            "Calendly o Acuity Scheduling",
+            "Si (Calendly basico)",
+            "Que las consultantes reserven solas: elimina ping-pong de WhatsApp"
+          ]
+        },
+        {
+          "label": "Pagos online",
+          "values": [
+            "Stripe o PayPal Business",
+            "Si (comision por transaccion)",
+            "Cobrar sesiones y cursos online con tarjeta o transferencia automatizada"
+          ]
+        },
+        {
+          "label": "Email marketing",
+          "values": [
+            "Brevo (ex-Sendinblue) o Mailchimp",
+            "Si (hasta 300 emails/dia en Brevo)",
+            "Newsletters, secuencias de bienvenida, comunicacion con lista propia"
+          ]
+        },
+        {
+          "label": "CRM / seguimiento de clientes",
+          "values": [
+            "Notion o Airtable como CRM simple",
+            "Si",
+            "Registro de sesiones, notas, estado del proceso, fechas de seguimiento"
+          ]
+        },
+        {
+          "label": "Facturacion",
+          "values": [
+            "Billin o Quipu (Espana) / Wave (LATAM)",
+            "Si (planes basicos)",
+            "Emitir facturas legales, llevar registro de ingresos, preparar modelos fiscales"
+          ]
+        },
+        {
+          "label": "Videollamadas",
+          "values": [
+            "Zoom o Google Meet",
+            "Si (Google Meet ilimitado)",
+            "Sesiones online con consultantes de cualquier pais"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Cuatro herramientas esenciales: agenda, pagos, CRM y automatizaciones",
+        "Cobrar antes de la sesion es profesional y reduce cancelaciones",
+        "Todo el sistema puede montarse con herramientas gratuitas en un fin de semana"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el Modulo 8 aprenderemos marketing y captacion: Pinterest, email marketing y referidos."
+    }
   ],
   "interactive": [
-    {"type": "match", "title": "Herramienta y funcion", "pairs": [{"left": "Calendly / TidyCal", "right": "Agenda: reservas, horarios, recordatorios"}, {"left": "Stripe / PayPal", "right": "Cobro automatico al reservar"}, {"left": "Notion / Google Sheets", "right": "CRM: datos, notas de sesion, seguimiento"}, {"left": "Mailchimp / Zapier", "right": "Automatizaciones: emails, conexion entre herramientas"}]},
-    {"type": "sort", "title": "Flujo automatizado de nueva consultante", "instruction": "Ordena el flujo desde la reserva hasta el seguimiento.", "correct_order": ["Consultante reserva en Calendly y paga via Stripe", "Email de bienvenida automatico: confirmacion + enlace + consentimiento", "Recordatorio automatico 24 horas antes", "Sesion se realiza", "Email de seguimiento 48h despues: tarea + proxima cita + testimonio"]},
-    {"type": "flip_cards", "title": "Sistemas de pago comparados", "cards": [{"front": "Stripe", "back": "Comision: 1.4% + 0.25 EUR. Profesional. Se integra con agenda y web. Recomendado."}, {"front": "PayPal", "back": "Comision: 3.49% + 0.49 EUR. Mas conocido pero mas caro. Util para mercado internacional."}, {"front": "Bizum", "back": "Comodo pero no profesional para importes altos. Complemento, no sistema principal."}, {"front": "Transferencia bancaria", "back": "Sin comision pero requiere verificacion manual. Lento y propenso a errores."}]},
-    {"type": "comparison", "headers": ["Herramienta", "Coste", "Mejor para"], "rows": [["Calendly (gratuito)", "0 EUR/mes", "1 tipo de sesion, empezar rapido"], ["TidyCal", "29 USD (pago unico)", "Varios tipos de sesion, sin cuota mensual"], ["Notion", "0 EUR/mes", "CRM flexible y personalizable"], ["Stripe", "1.4% + 0.25 EUR/transaccion", "Cobro profesional integrado"]]},
-    {"type": "lesson_summary", "points": ["Las cuatro herramientas esenciales son agenda, pagos, CRM y automatizaciones", "Cobrar antes de la sesion (Stripe integrado con Calendly) es profesional y reduce cancelaciones", "Tres automatizaciones basicas: bienvenida, recordatorio 24h y seguimiento 48h post-sesion", "Todo el sistema puede montarse gratuitamente en un fin de semana"]}
+    {
+      "type": "match",
+      "title": "Herramienta y funcion",
+      "pairs": [
+        {
+          "left": "Calendly / TidyCal",
+          "right": "Agenda: reservas, horarios, recordatorios"
+        },
+        {
+          "left": "Stripe / PayPal",
+          "right": "Cobro automatico al reservar"
+        },
+        {
+          "left": "Notion / Google Sheets",
+          "right": "CRM: datos, notas de sesion, seguimiento"
+        },
+        {
+          "left": "Mailchimp / Zapier",
+          "right": "Automatizaciones: emails, conexion entre herramientas"
+        }
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Flujo automatizado de nueva consultante",
+      "instruction": "Ordena el flujo desde la reserva hasta el seguimiento.",
+      "correct_order": [
+        "Consultante reserva en Calendly y paga via Stripe",
+        "Email de bienvenida automatico: confirmacion + enlace + consentimiento",
+        "Recordatorio automatico 24 horas antes",
+        "Sesion se realiza",
+        "Email de seguimiento 48h despues: tarea + proxima cita + testimonio"
+      ]
+    },
+    {
+      "type": "flip_cards",
+      "title": "Sistemas de pago comparados",
+      "cards": [
+        {
+          "front": "Stripe",
+          "back": "Comision: 1.4% + 0.25 EUR. Profesional. Se integra con agenda y web. Recomendado."
+        },
+        {
+          "front": "PayPal",
+          "back": "Comision: 3.49% + 0.49 EUR. Mas conocido pero mas caro. Util para mercado internacional."
+        },
+        {
+          "front": "Bizum",
+          "back": "Comodo pero no profesional para importes altos. Complemento, no sistema principal."
+        },
+        {
+          "front": "Transferencia bancaria",
+          "back": "Sin comision pero requiere verificacion manual. Lento y propenso a errores."
+        }
+      ]
+    },
+    {
+      "type": "comparison",
+      "headers": [
+        "Herramienta",
+        "Coste",
+        "Mejor para"
+      ],
+      "rows": [
+        [
+          "Calendly (gratuito)",
+          "0 EUR/mes",
+          "1 tipo de sesion, empezar rapido"
+        ],
+        [
+          "TidyCal",
+          "29 USD (pago unico)",
+          "Varios tipos de sesion, sin cuota mensual"
+        ],
+        [
+          "Notion",
+          "0 EUR/mes",
+          "CRM flexible y personalizable"
+        ],
+        [
+          "Stripe",
+          "1.4% + 0.25 EUR/transaccion",
+          "Cobro profesional integrado"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "Las cuatro herramientas esenciales son agenda, pagos, CRM y automatizaciones",
+        "Cobrar antes de la sesion (Stripe integrado con Calendly) es profesional y reduce cancelaciones",
+        "Tres automatizaciones basicas: bienvenida, recordatorio 24h y seguimiento 48h post-sesion",
+        "Todo el sistema puede montarse gratuitamente en un fin de semana"
+      ]
+    }
   ],
   "citation": [
-    {"researcher": "Daniel Kahneman", "year": "2011", "finding": "La reduccion de carga cognitiva (menos decisiones administrativas) libera recursos mentales para tareas de mayor valor como la atencion a consultantes"},
-    {"researcher": "Martin Seligman", "year": "2011", "finding": "El compromiso (Engagement) del modelo PERMA aumenta cuando la persona puede dedicar la mayor parte de su tiempo a su zona de genio, lo que requiere automatizar lo administrativo"},
-    {"researcher": "RGPD", "year": "2018", "finding": "El Reglamento General de Proteccion de Datos exige que toda informacion personal se almacene y procese conforme a principios de licitud, lealtad y transparencia"}
+    {
+      "researcher": "Daniel Kahneman",
+      "year": "2011",
+      "finding": "La reduccion de carga cognitiva (menos decisiones administrativas) libera recursos mentales para tareas de mayor valor como la atencion a consultantes"
+    },
+    {
+      "researcher": "Martin Seligman",
+      "year": "2011",
+      "finding": "El compromiso (Engagement) del modelo PERMA aumenta cuando la persona puede dedicar la mayor parte de su tiempo a su zona de genio, lo que requiere automatizar lo administrativo"
+    },
+    {
+      "researcher": "RGPD",
+      "year": "2018",
+      "finding": "El Reglamento General de Proteccion de Datos exige que toda informacion personal se almacene y procese conforme a principios de licitud, lealtad y transparencia"
+    }
   ],
-  "bibliography": [{"author": "Kahneman, D.", "year": "2011", "title": "Thinking, Fast and Slow", "type": "Libro"}, {"author": "Seligman, M.", "year": "2011", "title": "Flourish", "type": "Libro"}, {"author": "Allen, D.", "year": "2001", "title": "Getting Things Done", "type": "Libro"}, {"author": "Reglamento UE 2016/679", "year": "2018", "title": "Reglamento General de Proteccion de Datos (RGPD)", "type": "Legislacion"}],
-  "homework": {"task": "Monta tu sistema operativo completo: 1) Crea cuenta en Calendly/TidyCal con tu primer tipo de sesion, 2) Configura Stripe o PayPal, 3) Crea CRM en Notion o Google Sheets, 4) Escribe plantillas de email de bienvenida y seguimiento. Haz una reserva de prueba como consultante para verificar que todo funciona.", "duration": "2-3 horas", "materials": "Ordenador con acceso a internet, cuenta de email profesional"},
-  "quiz_points": ["Las cuatro herramientas esenciales de infraestructura son: agenda profesional, sistema de pagos, CRM basico y automatizaciones de email", "Cobrar antes de la sesion mediante Stripe integrado con la agenda es la practica profesional estandar", "Las tres automatizaciones basicas (bienvenida al reservar, recordatorio 24h y seguimiento 48h) se montan con herramientas gratuitas"]
+  "bibliography": [
+    {
+      "author": "Kahneman, D.",
+      "year": "2011",
+      "title": "Thinking, Fast and Slow",
+      "type": "Libro"
+    },
+    {
+      "author": "Seligman, M.",
+      "year": "2011",
+      "title": "Flourish",
+      "type": "Libro"
+    },
+    {
+      "author": "Allen, D.",
+      "year": "2001",
+      "title": "Getting Things Done",
+      "type": "Libro"
+    },
+    {
+      "author": "Reglamento UE 2016/679",
+      "year": "2018",
+      "title": "Reglamento General de Proteccion de Datos (RGPD)",
+      "type": "Legislacion"
+    }
+  ],
+  "homework": {
+    "task": "Monta tu sistema operativo completo: 1) Crea cuenta en Calendly/TidyCal con tu primer tipo de sesion, 2) Configura Stripe o PayPal, 3) Crea CRM en Notion o Google Sheets, 4) Escribe plantillas de email de bienvenida y seguimiento. Haz una reserva de prueba como consultante para verificar que todo funciona.",
+    "duration": "2-3 horas",
+    "materials": "Ordenador con acceso a internet, cuenta de email profesional"
+  },
+  "quiz_points": [
+    {
+      "question": "Una guia que gestiona sus citas por WhatsApp en lugar de usar una herramienta de agenda online tiene como riesgo principal:",
+      "options": [
+        "a) Incumplir la legislacion de proteccion de datos al usar una app de mensajeria para datos de consultantes",
+        "b) Invertir horas semanales en coordinar horarios manualmente, tiempo que podria dedicar a preparar sesiones o crear contenido",
+        "c) No poder atender a consultantes de otros paises por diferencias horarias que WhatsApp no gestiona bien",
+        "d) Perder clientes que prefieren reservar por email en lugar de por mensajeria instantanea"
+      ],
+      "correct": 1,
+      "explanation": "El ping-pong de WhatsApp para coordinar citas consume tiempo y energia que no genera valor. Una herramienta como Calendly automatiza la reserva, envia recordatorios y sincroniza con tu calendario. El tiempo recuperado puede invertirse en trabajo que si genera ingreso."
+    },
+    {
+      "question": "Usar Stripe o PayPal Business en lugar de cobrar por Bizum o transferencia manual es preferible porque:",
+      "options": [
+        "a) Stripe y PayPal son las unicas plataformas legales para cobrar por servicios profesionales en Espana",
+        "b) Automatizan el cobro, envian comprobante al cliente, facilitan la emision de facturas y permiten pagos con tarjeta desde cualquier pais",
+        "c) Tienen menores comisiones que las transferencias bancarias tradicionales en todos los casos",
+        "d) Son obligatorios para declarar el IVA correctamente ante la Agencia Tributaria en Espana"
+      ],
+      "correct": 1,
+      "explanation": "El cobro automatizado no es solo comodidad: es profesionalidad. El cliente recibe un comprobante automatico, tu llevas registro automatico, y puedes cobrar a consultantes de cualquier pais con tarjeta. El Bizum manual no genera registro automatico ni comprobante profesional."
+    },
+    {
+      "question": "Un CRM (Customer Relationship Management) para guia espiritual sirve principalmente para:",
+      "options": [
+        "a) Gestionar el marketing en redes sociales y programar publicaciones automaticamente",
+        "b) Registrar notas de sesiones, estado del proceso de cada consultante y fechas de seguimiento",
+        "c) Gestionar la contabilidad y la facturacion de todos los servicios ofrecidos",
+        "d) Automatizar el envio de emails comerciales a posibles nuevas consultantes"
+      ],
+      "correct": 1,
+      "explanation": "Un CRM simple (incluso Notion con una tabla) registra informacion clave de cada consultante: cuando fue su ultima sesion, que temas se trabajaron, cuando hacer seguimiento. Con 20 consultantes activas, es imposible recordar todo sin un sistema. El seguimiento oportuno genera fidelizacion."
+    },
+    {
+      "question": "La automatizacion basica mas importante para una guia espiritual que empieza es:",
+      "options": [
+        "a) Un chatbot en su web que responda preguntas frecuentes de posibles consultantes las 24 horas",
+        "b) Una secuencia de bienvenida automatica por email para quienes se suscriben a su lista",
+        "c) Publicaciones programadas en redes sociales con 2 semanas de antelacion",
+        "d) Un sistema de cobro recurrente para consultantes que contratan sesiones mensuales"
+      ],
+      "correct": 1,
+      "explanation": "La secuencia de bienvenida automatica crea una primera impresion profesional y calida cada vez que alguien se une a tu lista, sin que estes presente. Es el unico punto de contacto que puedes escalar desde el dia uno sin coste adicional de tiempo."
+    },
+    {
+      "question": "Por que una guia espiritual en Espana necesita una herramienta de facturacion como Billin o Quipu desde el inicio?",
+      "options": [
+        "a) Porque la Agencia Tributaria exige que las facturas se emitan desde software certificado homologado",
+        "b) Porque en Espana toda factura debe cumplir requisitos legales especificos (numero, fecha, NIF, IVA) y el registro facilita la declaracion trimestral",
+        "c) Porque las plataformas de pago online como Stripe no envian comprobantes que sirvan como facturas legales en Espana",
+        "d) Porque sin software de facturacion no es posible darse de alta como autonoma en la Seguridad Social"
+      ],
+      "correct": 1,
+      "explanation": "Toda factura en Espana debe incluir numero correlativo, fecha, NIF del emisor, NIF del receptor, concepto, base imponible, tipo de IVA y cuota. Un software de facturacion garantiza que todos los requisitos se cumplen automaticamente y genera el registro necesario para la declaracion trimestral."
+    }
+  ]
 }

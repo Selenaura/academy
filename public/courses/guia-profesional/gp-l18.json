@@ -1,35 +1,256 @@
 {
-  "lesson_number": 18, "module": 6, "title": "Testimonios y portfolio: como construir credibilidad",
-  "text_content": "La credibilidad no se proclama. Se demuestra. Puedes decir que eres la mejor guia espiritual del mundo, pero hasta que alguien mas lo confirme, es solo tu opinion. Los testimonios y el portfolio son las herramientas que convierten tu palabra en prueba.\n\nCialdini (2006) identifico la prueba social como uno de los seis principios de influencia: las personas confian mas en un servicio cuando ven que otros lo han usado y recomiendan. No es vanidad. Es psicologia humana basica.\n\nCOMO CONSEGUIR TUS PRIMEROS TESTIMONIOS\n\nCuando empiezas, no tienes clientes reales todavia. Pero si tienes companeros de curso con quienes has practicado. Esos primeros testimonios son validos si son honestos.\n\nDespues de cada sesion practica, pide feedback especifico. No le digas dame un testimonio. Dile: podrias responder estas tres preguntas? 1) Como te sentiste durante la sesion? 2) Que fue lo mas util que te llevaste? 3) Se la recomendarias a alguien?\n\nLas respuestas a estas preguntas generan testimonios naturales, especificos y creibles. Un testimonio que dice la sesion fue increible es inutil. Un testimonio que dice me ayudo a entender por que siempre elijo parejas que repiten el patron de mi padre, y sali con una tarea concreta que ya estoy aplicando es oro.\n\nEL PORTFOLIO PROFESIONAL\n\nTu portfolio no es una coleccion de cartas natales. Es una muestra de tu capacidad profesional. Incluye: tu declaracion de metodo (leccion 1), tu menu de servicios (leccion 6), 3-5 testimonios (con nombre y, si es posible, foto, siempre con consentimiento), un caso de estudio anonimizado (un relato breve de una sesion exitosa donde describes el tema, el proceso y el resultado sin revelar datos personales), y tus certificaciones.\n\nEl caso de estudio anonimizado es particularmente poderoso. Permite que la potencial consultante se vea reflejada: esa podria ser yo.\n\nFormato del caso de estudio: Contexto (una profesional de 40 anos llego porque...), Proceso (exploramos su carta natal enfocandose en..., usamos la escucha activa para...), Resultado (salio con una comprension nueva de... y una tarea practica que...). Sin nombres reales. Sin datos identificables.\n\nLA CADENA DE CREDIBILIDAD\n\nLa credibilidad se construye en cuatro niveles:\n\nNivel 1 - Competencia: tus certificaciones demuestran que sabes. Nivel 2 - Experiencia: tus horas de practica demuestran que has aplicado lo que sabes. Nivel 3 - Prueba social: los testimonios demuestran que otros han recibido valor. Nivel 4 - Autoridad reconocida: publicaciones, colaboraciones, invitaciones a eventos.\n\nNo necesitas el nivel 4 para empezar. Pero necesitas al menos los niveles 1 y 2, y trabajar activamente en el 3.\n\nCASO PRACTICO: DE CERO TESTIMONIOS A PORTFOLIO COMPLETO\n\nSara empezo sin ningun testimonio. Su estrategia: ofreció 10 sesiones gratuitas a cambio de feedback detallado y permiso para usar el testimonio. En un mes, tenia 10 testimonios reales y 3 casos de estudio anonimizados. Con ese material, construyo su pagina de testimonios y empezo a cobrar por sus sesiones. Los primeros clientes de pago mencionaron que los testimonios fueron decisivos para contactarla.\n\nCoste de la estrategia: cero euros. Inversion: 10 horas de trabajo. Retorno: una base de credibilidad solida.\n\nEJERCICIO GUIADO: REDACTA TU PRIMER CASO DE ESTUDIO\n\nElige una sesion practica que hayas realizado. Redacta un caso de estudio anonimizado con tres secciones: Contexto (quien vino y por que, sin datos identificables), Proceso (que herramientas usaste y como), Resultado (que se llevo la persona). Maximo 250 palabras.\n\nTAREA PARA CASA\n\nCompila tu portfolio profesional: declaracion de metodo, menu de servicios, certificaciones, al menos 2 testimonios y 1 caso de estudio. Organizalo en un documento limpio y profesional o en una pagina de tu web. Este portfolio debe estar listo para enviar a cualquier persona que pregunte por tus servicios.",
+  "lesson_number": 18,
+  "module": 6,
+  "title": "Testimonios y portfolio: como construir credibilidad",
+  "text_content": "La credibilidad no se proclama. Se demuestra. Puedes decir que eres la mejor guia espiritual del mundo, pero hasta que alguien mas lo confirme, es solo tu opinion. Los testimonios y el portfolio son las herramientas que convierten tu palabra en prueba.\n\nCialdini (2006) identifico la prueba social como uno de los seis principios de influencia: las personas confian mas en un servicio cuando ven que otros lo han usado y recomiendan. No es vanidad. Es psicologia humana basica.\n\nCOMO CONSEGUIR TUS PRIMEROS TESTIMONIOS\n\nCuando empiezas, no tienes clientes reales todavia. Pero si tienes companeros de curso con quienes has practicado. Esos primeros testimonios son validos si son honestos.\n\nDespues de cada sesion practica, pide feedback especifico. No le digas dame un testimonio. Dile: podrias responder estas tres preguntas? 1) Como te sentiste durante la sesion? 2) Que fue lo mas util que te llevaste? 3) Se la recomendarias a alguien?\n\nLas respuestas a estas preguntas generan testimonios naturales, especificos y creibles. Un testimonio que dice la sesion fue increible es inutil. Un testimonio que dice me ayudo a entender por que siempre elijo parejas que repiten el patron de mi padre, y sali con una tarea concreta que ya estoy aplicando es oro.\n\nEL PORTFOLIO PROFESIONAL\n\nTu portfolio no es una coleccion de cartas natales. Es una muestra de tu capacidad profesional. Incluye: tu declaracion de metodo (leccion 1), tu menu de servicios (leccion 6), 3-5 testimonios (con nombre y, si es posible, foto, siempre con consentimiento), un caso de estudio anonimizado (un relato breve de una sesion exitosa donde describes el tema, el proceso y el resultado sin revelar datos personales), y tus certificaciones.\n\nEl caso de estudio anonimizado es particularmente poderoso. Permite que la potencial consultante se vea reflejada: esa podria ser yo.\n\nFormato del caso de estudio: Contexto (una profesional de 40 anos llego porque...), Proceso (exploramos su carta natal enfocandose en..., usamos la escucha activa para...), Resultado (salio con una comprension nueva de... y una tarea practica que...). Sin nombres reales. Sin datos identificables.\n\nLA CADENA DE CREDIBILIDAD\n\nLa credibilidad se construye en cuatro niveles:\n\nNivel 1 - Competencia: tus certificaciones demuestran que sabes. Nivel 2 - Experiencia: tus horas de practica demuestran que has aplicado lo que sabes. Nivel 3 - Prueba social: los testimonios demuestran que otros han recibido valor. Nivel 4 - Autoridad reconocida: publicaciones, colaboraciones, invitaciones a eventos.\n\nNo necesitas el nivel 4 para empezar. Pero necesitas al menos los niveles 1 y 2, y trabajar activamente en el 3.\n\nCASO PRACTICO: DE CERO TESTIMONIOS A PORTFOLIO COMPLETO\n\nSara empezo sin ningun testimonio. Su estrategia: ofreciÃ³ 10 sesiones gratuitas a cambio de feedback detallado y permiso para usar el testimonio. En un mes, tenia 10 testimonios reales y 3 casos de estudio anonimizados. Con ese material, construyo su pagina de testimonios y empezo a cobrar por sus sesiones. Los primeros clientes de pago mencionaron que los testimonios fueron decisivos para contactarla.\n\nCoste de la estrategia: cero euros. Inversion: 10 horas de trabajo. Retorno: una base de credibilidad solida.\n\nEJERCICIO GUIADO: REDACTA TU PRIMER CASO DE ESTUDIO\n\nElige una sesion practica que hayas realizado. Redacta un caso de estudio anonimizado con tres secciones: Contexto (quien vino y por que, sin datos identificables), Proceso (que herramientas usaste y como), Resultado (que se llevo la persona). Maximo 250 palabras.\n\nTAREA PARA CASA\n\nCompila tu portfolio profesional: declaracion de metodo, menu de servicios, certificaciones, al menos 2 testimonios y 1 caso de estudio. Organizalo en un documento limpio y profesional o en una pagina de tu web. Este portfolio debe estar listo para enviar a cualquier persona que pregunte por tus servicios.",
   "slides": [
-    {"type": "title", "title": "Testimonios y portfolio", "subtitle": "Modulo 6 · Leccion 18 — Master en Guia Espiritual Profesional"},
-    {"type": "content", "title": "Prueba social: Cialdini", "body": "Las personas confian mas cuando ven que otros\nhan usado y recomiendan el servicio.\nNo es vanidad. Es psicologia humana basica.\nLos testimonios convierten tu palabra en prueba."},
-    {"type": "content", "title": "Tres preguntas para obtener testimonios", "body": "1. Como te sentiste durante la sesion?\n2. Que fue lo mas util que te llevaste?\n3. Se la recomendarias a alguien?\nGeneran testimonios naturales, especificos y creibles."},
-    {"type": "content", "title": "El caso de estudio anonimizado", "body": "Contexto: quien vino y por que (sin datos identificables).\nProceso: herramientas usadas y como.\nResultado: que se llevo la persona.\nPermite que la potencial consultante se vea reflejada."},
-    {"type": "quote", "text": "La prueba social es uno de los motores mas poderosos de la decision humana. Confiamos en lo que otros han validado.", "source": "Cialdini, 2006 — Influence"},
-    {"type": "content", "title": "Cuatro niveles de credibilidad", "body": "1. Competencia: certificaciones (sabes).\n2. Experiencia: horas de practica (has aplicado).\n3. Prueba social: testimonios (otros lo confirman).\n4. Autoridad: publicaciones, colaboraciones."},
-    {"type": "content", "title": "Caso Sara: de cero a portfolio completo", "body": "10 sesiones gratuitas a cambio de feedback + permiso.\n1 mes: 10 testimonios reales + 3 casos de estudio.\nCoste: 0 EUR. Inversion: 10 horas.\nResultado: base de credibilidad solida."},
-    {"type": "summary", "points": ["Los testimonios especificos superan a los genericos: detalle > emocion vaga", "El caso de estudio anonimizado permite que la potencial consultante se identifique", "10 sesiones gratuitas a cambio de feedback es la estrategia mas eficaz para empezar"]},
-    {"type": "next", "text": "En el Modulo 7 construiremos tu modelo de negocio: pricing, formatos de ingreso y herramientas."}
+    {
+      "type": "title",
+      "title": "Testimonios y portfolio",
+      "subtitle": "Modulo 6 Â· Leccion 18 â€” Master en Guia Espiritual Profesional"
+    },
+    {
+      "type": "content",
+      "title": "Prueba social: Cialdini",
+      "body": "Las personas confian mas cuando ven que otros\nhan usado y recomiendan el servicio.\nNo es vanidad. Es psicologia humana basica.\nLos testimonios convierten tu palabra en prueba."
+    },
+    {
+      "type": "content",
+      "title": "Tres preguntas para obtener testimonios",
+      "body": "1. Como te sentiste durante la sesion?\n2. Que fue lo mas util que te llevaste?\n3. Se la recomendarias a alguien?\nGeneran testimonios naturales, especificos y creibles."
+    },
+    {
+      "type": "content",
+      "title": "El caso de estudio anonimizado",
+      "body": "Contexto: quien vino y por que (sin datos identificables).\nProceso: herramientas usadas y como.\nResultado: que se llevo la persona.\nPermite que la potencial consultante se vea reflejada."
+    },
+    {
+      "type": "quote",
+      "text": "La prueba social es uno de los motores mas poderosos de la decision humana. Confiamos en lo que otros han validado.",
+      "source": "Cialdini, 2006 â€” Influence"
+    },
+    {
+      "type": "content",
+      "title": "Cuatro niveles de credibilidad",
+      "body": "1. Competencia: certificaciones (sabes).\n2. Experiencia: horas de practica (has aplicado).\n3. Prueba social: testimonios (otros lo confirman).\n4. Autoridad: publicaciones, colaboraciones."
+    },
+    {
+      "type": "content",
+      "title": "Caso Sara: de cero a portfolio completo",
+      "body": "10 sesiones gratuitas a cambio de feedback + permiso.\n1 mes: 10 testimonios reales + 3 casos de estudio.\nCoste: 0 EUR. Inversion: 10 horas.\nResultado: base de credibilidad solida."
+    },
+    {
+      "type": "process_diagram",
+      "title": "Sistema de recopilacion de testimonios profesionales",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Momento optimo: justo despues del insight",
+          "description": "El mejor momento para pedir un testimonio es en los minutos finales de una sesion cuando la consultante acaba de experimentar un insight significativo. En ese momento la experiencia es viva y las palabras salen naturales"
+        },
+        {
+          "step": 2,
+          "title": "Pregunta especifica, no generica",
+          "description": "No pidas 'que te ha parecido la sesion' (respuesta: 'muy bien'). Pregunta: '¿Cual era tu situacion antes de esta sesion y donde te sientes ahora?' o '¿Que es lo que mas te llevas?' Esas respuestas son testimonios naturales"
+        },
+        {
+          "step": 3,
+          "title": "Pide permiso explicito",
+          "description": "Antes de usar cualquier testimonio: '¿Puedo usar esto para que otras personas que esten en una situacion similar sepan como es trabajar conmigo? Puedo anonimizarlo completamente si lo prefieres.' El consentimiento explicito es obligatorio"
+        },
+        {
+          "step": 4,
+          "title": "Formato: antes-despues-resultado",
+          "description": "El testimonio mas efectivo tiene estructura: antes ('llegue con X situacion'), proceso ('lo que ocurrio en sesion fue'), despues ('ahora me siento/pienso/actuo diferente en Y aspecto'). Ayuda a la consultante a estructurar su testimonio con estas preguntas"
+        },
+        {
+          "step": 5,
+          "title": "Diversifica los formatos",
+          "description": "Testimonios escritos (para web y redes), audio (mas autentico para redes), video (el mas poderoso pero requiere mayor confianza). Empieza por escrito y avanza cuando tengas confianza con la consultante"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Los testimonios especificos superan a los genericos: detalle > emocion vaga",
+        "El caso de estudio anonimizado permite que la potencial consultante se identifique",
+        "10 sesiones gratuitas a cambio de feedback es la estrategia mas eficaz para empezar"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el Modulo 7 construiremos tu modelo de negocio: pricing, formatos de ingreso y herramientas."
+    }
   ],
   "interactive": [
-    {"type": "sort", "title": "Niveles de credibilidad", "instruction": "Ordena los 4 niveles de credibilidad de basico a avanzado.", "correct_order": ["Nivel 1: Competencia — certificaciones demuestran que sabes", "Nivel 2: Experiencia — horas de practica demuestran aplicacion", "Nivel 3: Prueba social — testimonios confirman el valor", "Nivel 4: Autoridad reconocida — publicaciones y colaboraciones"]},
-    {"type": "flip_cards", "title": "Testimonio generico vs especifico", "cards": [{"front": "La sesion fue increible, me encanto", "back": "Generico: no comunica nada concreto. No ayuda a decidir. Inutil para tu portfolio."}, {"front": "Me ayudo a entender por que repito patrones en mis relaciones y sali con una tarea practica que ya estoy aplicando", "back": "Especifico: comunica resultado concreto, proceso util y accion. Muy valioso para tu portfolio."}, {"front": "Es muy buena en lo que hace", "back": "Generico: no dice que hace ni como. No diferencia. Poco util."}, {"front": "Despues de ver mi carta natal con ella, tome la decision de cambiar de carrera y fue la mejor decision del ano", "back": "Especifico: resultado transformador, herramienta mencionada, impacto real. Excelente testimonio."}]},
-    {"type": "fill_blanks", "instruction": "Completa la estructura del caso de estudio anonimizado.", "template": "___0___: quien vino y por que (sin datos identificables). ___1___: herramientas usadas y como se aplicaron. ___2___: que se llevo la persona y como le impacto.", "answers": ["Contexto", "Proceso", "Resultado"]},
-    {"type": "process_diagram", "title": "De cero testimonios a portfolio completo", "steps": ["Ofrecer sesiones gratuitas a cambio de feedback detallado", "Pedir las 3 preguntas especificas despues de cada sesion", "Solicitar permiso para usar el testimonio", "Redactar caso de estudio anonimizado por cada sesion", "Compilar portfolio: metodo + servicios + testimonios + casos"]},
-    {"type": "lesson_summary", "points": ["La prueba social de Cialdini confirma que los testimonios son decisivos para la conversion", "Testimonios especificos (resultado concreto) superan a los genericos (fue increible)", "El caso de estudio anonimizado (contexto, proceso, resultado) permite identificacion", "La estrategia de 10 sesiones gratuitas a cambio de feedback es la forma mas eficaz de empezar"]}
+    {
+      "type": "sort",
+      "title": "Niveles de credibilidad",
+      "instruction": "Ordena los 4 niveles de credibilidad de basico a avanzado.",
+      "correct_order": [
+        "Nivel 1: Competencia â€” certificaciones demuestran que sabes",
+        "Nivel 2: Experiencia â€” horas de practica demuestran aplicacion",
+        "Nivel 3: Prueba social â€” testimonios confirman el valor",
+        "Nivel 4: Autoridad reconocida â€” publicaciones y colaboraciones"
+      ]
+    },
+    {
+      "type": "flip_cards",
+      "title": "Testimonio generico vs especifico",
+      "cards": [
+        {
+          "front": "La sesion fue increible, me encanto",
+          "back": "Generico: no comunica nada concreto. No ayuda a decidir. Inutil para tu portfolio."
+        },
+        {
+          "front": "Me ayudo a entender por que repito patrones en mis relaciones y sali con una tarea practica que ya estoy aplicando",
+          "back": "Especifico: comunica resultado concreto, proceso util y accion. Muy valioso para tu portfolio."
+        },
+        {
+          "front": "Es muy buena en lo que hace",
+          "back": "Generico: no dice que hace ni como. No diferencia. Poco util."
+        },
+        {
+          "front": "Despues de ver mi carta natal con ella, tome la decision de cambiar de carrera y fue la mejor decision del ano",
+          "back": "Especifico: resultado transformador, herramienta mencionada, impacto real. Excelente testimonio."
+        }
+      ]
+    },
+    {
+      "type": "fill_blanks",
+      "instruction": "Completa la estructura del caso de estudio anonimizado.",
+      "template": "___0___: quien vino y por que (sin datos identificables). ___1___: herramientas usadas y como se aplicaron. ___2___: que se llevo la persona y como le impacto.",
+      "answers": [
+        "Contexto",
+        "Proceso",
+        "Resultado"
+      ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "De cero testimonios a portfolio completo",
+      "steps": [
+        "Ofrecer sesiones gratuitas a cambio de feedback detallado",
+        "Pedir las 3 preguntas especificas despues de cada sesion",
+        "Solicitar permiso para usar el testimonio",
+        "Redactar caso de estudio anonimizado por cada sesion",
+        "Compilar portfolio: metodo + servicios + testimonios + casos"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La prueba social de Cialdini confirma que los testimonios son decisivos para la conversion",
+        "Testimonios especificos (resultado concreto) superan a los genericos (fue increible)",
+        "El caso de estudio anonimizado (contexto, proceso, resultado) permite identificacion",
+        "La estrategia de 10 sesiones gratuitas a cambio de feedback es la forma mas eficaz de empezar"
+      ]
+    }
   ],
   "citation": [
-    {"researcher": "Robert Cialdini", "year": "2006", "finding": "La prueba social es uno de los seis principios de influencia: las personas confian mas en servicios validados por otros"},
-    {"researcher": "Daniel Kahneman", "year": "2011", "finding": "Los testimonios concretos activan el Sistema 1 (intuitivo) y generan confianza mas rapidamente que las descripciones abstractas de servicios"},
-    {"researcher": "Martin Seligman", "year": "2011", "finding": "El logro (Accomplishment) del modelo PERMA se refuerza cuando los resultados son visibles y reconocidos por otros"}
+    {
+      "researcher": "Robert Cialdini",
+      "year": "2006",
+      "finding": "La prueba social es uno de los seis principios de influencia: las personas confian mas en servicios validados por otros"
+    },
+    {
+      "researcher": "Daniel Kahneman",
+      "year": "2011",
+      "finding": "Los testimonios concretos activan el Sistema 1 (intuitivo) y generan confianza mas rapidamente que las descripciones abstractas de servicios"
+    },
+    {
+      "researcher": "Martin Seligman",
+      "year": "2011",
+      "finding": "El logro (Accomplishment) del modelo PERMA se refuerza cuando los resultados son visibles y reconocidos por otros"
+    }
   ],
   "bibliography": [
-    {"author": "Cialdini, R.", "year": "2006", "title": "Influence: The Psychology of Persuasion", "type": "Libro"},
-    {"author": "Kahneman, D.", "year": "2011", "title": "Thinking, Fast and Slow", "type": "Libro"},
-    {"author": "Godin, S.", "year": "2018", "title": "This Is Marketing", "type": "Libro"},
-    {"author": "Brown, B.", "year": "2012", "title": "Daring Greatly", "type": "Libro"}
+    {
+      "author": "Cialdini, R.",
+      "year": "2006",
+      "title": "Influence: The Psychology of Persuasion",
+      "type": "Libro"
+    },
+    {
+      "author": "Kahneman, D.",
+      "year": "2011",
+      "title": "Thinking, Fast and Slow",
+      "type": "Libro"
+    },
+    {
+      "author": "Godin, S.",
+      "year": "2018",
+      "title": "This Is Marketing",
+      "type": "Libro"
+    },
+    {
+      "author": "Brown, B.",
+      "year": "2012",
+      "title": "Daring Greatly",
+      "type": "Libro"
+    }
   ],
-  "homework": {"task": "Compila tu portfolio profesional completo: declaracion de metodo, menu de servicios, certificaciones, al menos 2 testimonios y 1 caso de estudio anonimizado. Organizalo en documento limpio o pagina web. Debe estar listo para enviar a cualquier persona que pregunte.", "duration": "45-60 min", "materials": "Documentos profesionales de lecciones anteriores, procesador de texto o plataforma web"},
-  "quiz_points": ["La prueba social de Cialdini demuestra que testimonios de terceros son mas persuasivos que la autopromocion", "Los testimonios especificos (resultado concreto, proceso util, impacto real) superan a los genericos en credibilidad y conversion", "El portfolio profesional minimo incluye declaracion de metodo, menu de servicios, testimonios, caso de estudio anonimizado y certificaciones"]
+  "homework": {
+    "task": "Compila tu portfolio profesional completo: declaracion de metodo, menu de servicios, certificaciones, al menos 2 testimonios y 1 caso de estudio anonimizado. Organizalo en documento limpio o pagina web. Debe estar listo para enviar a cualquier persona que pregunte.",
+    "duration": "45-60 min",
+    "materials": "Documentos profesionales de lecciones anteriores, procesador de texto o plataforma web"
+  },
+  "quiz_points": [
+    {
+      "question": "El testimonio mas persuasivo para atraer nuevas consultantes tiene estructura:",
+      "options": [
+        "a) Nombre de la consultante, fecha de la sesion y herramientas utilizadas durante el trabajo",
+        "b) Antes (situacion inicial), proceso (lo que ocurrio en sesion), despues (cambio o resultado observado)",
+        "c) Una frase de impacto que describe en pocas palabras el resultado de la sesion",
+        "d) Una evaluacion numerica del servicio acompanada de un comentario breve"
+      ],
+      "correct": 1,
+      "explanation": "La estructura antes-proceso-despues permite a quien lo lee proyectarse en la narrativa: 'yo tambien estaba en una situacion similar'. Es mucho mas persuasiva que una evaluacion positiva sin contexto porque cuenta una historia de transformacion especifica."
+    },
+    {
+      "question": "Segun Cialdini (2006), la prueba social funciona porque:",
+      "options": [
+        "a) Las personas imitan la conducta de quienes tienen mas autoridad que ellas en un tema",
+        "b) Las personas usan las decisiones de otros como atajo para reducir la incertidumbre en situaciones nuevas",
+        "c) La repeticion de mensajes positivos sobre un servicio aumenta automaticamente su credibilidad",
+        "d) El numero de seguidores en redes sociales funciona como prueba de la calidad del servicio"
+      ],
+      "correct": 1,
+      "explanation": "Cialdini demostro que la prueba social es un mecanismo de reduccion de incertidumbre: cuando no sabemos si algo es bueno, miramos lo que otros como nosotras han decidido. Un testimonio de alguien con quien la lectora se identifica tiene mas peso que cualquier argumento de la guia sobre si misma."
+    },
+    {
+      "question": "Cuando una consultante te da un testimonio espontaneo excelente al final de la sesion, tu siguiente paso etico es:",
+      "options": [
+        "a) Anotarlo inmediatamente y publicarlo en tus redes sociales para no perder el momento de frescura",
+        "b) Agradecerle y pedir permiso explicito antes de usarlo, con opcion de anonimizacion",
+        "c) Enviarselo por escrito para que lo publique ella misma en sus propias redes sociales",
+        "d) Guardarlo para uso interno como parte de tu carpeta de supervision profesional"
+      ],
+      "correct": 1,
+      "explanation": "El RGPD y la etica profesional exigen consentimiento explicito para usar testimonios, incluso los espontaneos. El testimonio es informacion personal que incluye detalles de la vida de la consultante. Sin permiso explicito, no puedes usarlo."
+    },
+    {
+      "question": "Un portfolio de casos de guia espiritual que cumple con el RGPD y la etica profesional:",
+      "options": [
+        "a) Incluye nombres completos y fotos de consultantes con sus testimonios completos",
+        "b) Usa casos anonimizados o con seudonymos con consentimiento explicito para describir situaciones y transformaciones",
+        "c) Solo puede ser compartido en sesiones privadas de formacion, nunca de forma publica",
+        "d) No incluye ningun detalle de sesiones reales para proteger la confidencialidad absoluta"
+      ],
+      "correct": 1,
+      "explanation": "Un portfolio etico usa anonimizacion y consentimiento explicito. Los casos anonimizados son validos y utiles: describen situaciones con las que el publico puede identificarse sin revelar la identidad de la persona. La confidencialidad se mantiene con la anonimizacion adecuada."
+    },
+    {
+      "question": "Por que los testimonios en video son mas persuasivos que los testimonios escritos?",
+      "options": [
+        "a) Porque son mas dificiles de falsificar y por tanto tienen mayor credibilidad percibida",
+        "b) Porque muestran tono de voz, emocion y autenticidad que el texto no puede transmitir, activando la confianza de forma mas directa",
+        "c) Porque los algoritmos de redes sociales dan mas alcance al contenido en video que al contenido escrito",
+        "d) Porque permiten incluir mas informacion sobre el proceso de sesion que un texto breve"
+      ],
+      "correct": 1,
+      "explanation": "El video activa el sistema de neuronas espejo: ver a alguien hablar con emocion genuina sobre su experiencia genera identificacion y confianza de forma mas directa que leer palabras. El tono, la pausa, la emocion visible son datos que el texto no puede transmitir."
+    }
+  ]
 }

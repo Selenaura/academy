@@ -1,28 +1,135 @@
 {
-  "lesson_number": 27, "module": 9, "title": "RGPD, consentimiento informado y proteccion de datos",
+  "lesson_number": 27,
+  "module": 9,
+  "title": "RGPD, consentimiento informado y proteccion de datos",
   "text_content": "Si trabajas con personas en Europa o con ciudadanos europeos, el RGPD (Reglamento General de Proteccion de Datos) te afecta directamente. En Espana, el RGPD se complementa con la Ley Organica 3/2018 de Proteccion de Datos Personales y Garantia de los Derechos Digitales (LOPDGDD), que establece requisitos adicionales y especifica sanciones. Y aunque no trabajes en Europa, la proteccion de datos es un principio etico y profesional que debes cumplir en cualquier jurisdiccion.\n\nQUE ES EL RGPD Y POR QUE TE AFECTA\n\nEl RGPD (Reglamento UE 2016/679) es la normativa europea de proteccion de datos personales, vigente desde el 25 de mayo de 2018. Te afecta porque manejas datos personales de tus consultantes: nombre, fecha de nacimiento, hora y lugar de nacimiento, datos de contacto, informacion sobre su vida personal compartida en sesion, y notas de sesion.\n\nLos datos de una carta natal son especialmente sensibles: fecha, hora y lugar de nacimiento combinados permiten identificar univocamente a una persona (datos de identificacion directa bajo el articulo 4.1 del RGPD).\n\nLa LOPDGDD 3/2018 establece que los responsables del tratamiento de datos deben poder demostrar el cumplimiento activo (principio de responsabilidad proactiva, articulo 5.2 RGPD). Esto significa que no basta con cumplir: tienes que poder demostrar que cumples.\n\nSEIS PRINCIPIOS BASICOS DEL RGPD (ARTICULO 5)\n\nLicitud y transparencia: debes tener una base legal para tratar datos. En tu caso, la base legal es el consentimiento explicito de la consultante (articulo 6.1.a del RGPD).\n\nLimitacion de finalidad: solo usas los datos para la finalidad declarada (la sesion de acompanamiento). No los usas para marketing sin consentimiento adicional explicito.\n\nMinimizacion: solo recoges los datos estrictamente necesarios. No pidas fecha y hora de nacimiento si no vas a usar astrologia en la sesion.\n\nExactitud: los datos deben ser correctos y actualizados. Si una consultante cambia de telefono o correo, actualiza.\n\nLimitacion de conservacion: no guardas datos indefinidamente. Define un periodo de conservacion claro (recomendacion: 2 anos desde la ultima sesion para datos de sesion; 5 anos para facturas, que es obligacion fiscal). Transcurrido el plazo, elimina o anonimiza.\n\nIntegridad y confidencialidad: proteccion contra acceso no autorizado, perdida o destruccion accidental.\n\nTU CLAUSULA DE CONFIDENCIALIDAD Y PROTECCION DE DATOS\n\nTu consentimiento informado debe incluir una clausula de confidencialidad y proteccion de datos. Aqui tienes un modelo que puedes adaptar:\n\n---\nCLAUSULA DE CONFIDENCIALIDAD Y PROTECCION DE DATOS\n\nResponsable del tratamiento: [Tu nombre completo], NIF [tu NIF], correo [tu email].\n\nDatos que tratamos: nombre, datos de contacto, fecha, hora y lugar de nacimiento, e informacion compartida voluntariamente durante las sesiones de acompanamiento.\n\nFinalidad: prestar el servicio de acompanamiento personal contratado. Los datos no se utilizaran para ninguna otra finalidad sin consentimiento previo.\n\nBase legal: consentimiento explicito de la persona interesada (articulo 6.1.a del Reglamento UE 2016/679).\n\nConservacion: los datos se conservaran durante el tiempo necesario para prestar el servicio y un maximo de 2 anos despues de la ultima sesion, salvo obligacion legal de conservacion mas prolongada (datos de facturacion: 5 anos).\n\nConfidencialidad: toda la informacion compartida en sesion es estrictamente confidencial. No se revelara a terceros salvo obligacion legal expresa o riesgo grave para la seguridad de la persona.\n\nDerechos del interesado: tiene derecho a acceder a sus datos, rectificarlos, solicitar su supresion, limitar u oponerse al tratamiento, y solicitar la portabilidad de sus datos. Para ejercer estos derechos, puede contactar a [tu email] con el asunto Derechos RGPD. Tiene tambien derecho a presentar reclamacion ante la Agencia Espanola de Proteccion de Datos (aepd.es) si considera que sus derechos no han sido respetados.\n---\n\nEste modelo cubre los elementos obligatorios establecidos en el articulo 13 del RGPD (informacion que debe proporcionarse cuando los datos se obtienen directamente del interesado).\n\nLOS CUATRO DERECHOS ARCO+P DE LA CONSULTANTE\n\nEl acronimo ARCO+P resume los derechos fundamentales del RGPD:\n- Acceso (art. 15): puede pedir ver todos sus datos.\n- Rectificacion (art. 16): puede pedir corregir datos inexactos.\n- Cancelacion/Supresion (art. 17): derecho al olvido, puede pedir que elimines todos sus datos.\n- Oposicion (art. 21): puede oponerse al tratamiento en determinadas circunstancias.\n- Portabilidad (art. 20): puede pedir sus datos en formato digital transferible.\n\nCuando recibes una solicitud de ejercicio de derechos, tienes un mes para responder (art. 12 RGPD). Si no puedes cumplir, debes comunicarlo indicando el motivo.\n\nMEDIDAS DE SEGURIDAD PRACTICAS\n\nPara una practica individual, las medidas minimas son: almacenar datos en plataformas seguras (Notion, Google Drive o equivalente con contrasena robusta y verificacion en dos pasos), no guardar datos de consultantes en papel sin proteccion fisica, no usar el correo sin cifrar para compartir datos sensibles, anonimizar cualquier caso que compartas en redes o formacion (nombre, edad, localidad, datos que permitan identificacion directa o indirecta), y tener un protocolo escrito de eliminacion cuando la consultante lo solicite o cuando expire el periodo de conservacion.\n\nPOLITICA DE PRIVACIDAD PARA TU WEB\n\nSi tienes web, necesitas una politica de privacidad accesible desde todas las paginas. Debe incluir: responsable del tratamiento (tu nombre y datos), que datos recoges a traves del formulario de contacto, cookies o newsletter, para que los usas, con quien los compartes (procesadores: Calendly, Stripe, Mailchimp o equivalentes), cuanto tiempo los conservas, y los derechos del usuario. Puedes generar una politica basica con Termly o Iubenda (versiones gratuitas disponibles).\n\nBANNER DE COOKIES: si tu web usa Google Analytics, pixel de Meta o cualquier cookie no esencial, necesitas un banner de consentimiento de cookies previo a su activacion. La normativa espanola (LOPDGDD y Guia de Cookies de la AEPD, 2023) exige que el consentimiento sea activo, especifico e informado.\n\nEMAIL MARKETING Y DOBLE OPT-IN: para enviar emails de marketing (newsletter, promociones), necesitas consentimiento explicito. El doble opt-in (la persona confirma su suscripcion haciendo clic en un email de verificacion) es la practica recomendada. Nunca compres ni compartas listas de correo.\n\nCASO PRACTICO: LA AUDITORIA DE DATOS DE PATRICIA\n\nPatricia tenia notas de sesion en un cuaderno fisico, datos de consultantes en un Excel sin contrasena, y fotos de cartas natales en la galeria del movil sin bloqueo. Tras esta leccion, migro todo a Notion con contrasena robusta, activo verificacion en dos pasos en todos sus servicios (Google, Notion, Calendly, Stripe), creo un protocolo de eliminacion (datos de sesion eliminados 2 anos despues de la ultima sesion; facturas conservadas 5 anos por obligacion fiscal), y anadio la clausula de confidencialidad y proteccion de datos a su consentimiento informado.\n\nEJERCICIO GUIADO: AUDITORIA DE DATOS\n\nResponde estas preguntas: Donde almacenas los datos de tus consultantes? Estan protegidos con contrasena y 2FA? Has definido un periodo de conservacion por escrito? Tu consentimiento informado incluye la clausula RGPD con todos los elementos del articulo 13? Tu web tiene politica de privacidad actualizada? Si tienes newsletter, tienes consentimiento explicito documentado?\n\nTAREA PARA CASA\n\nActualiza tu consentimiento informado con la clausula de confidencialidad y proteccion de datos usando el modelo de esta leccion. Activa verificacion en dos pasos en todas tus herramientas. Define tu periodo de conservacion de datos por escrito. Si tienes web, actualiza o genera tu politica de privacidad.",
   "slides": [
-    {"type": "title", "title": "RGPD y proteccion de datos", "subtitle": "Modulo 9 · Leccion 27 — Master en Guia Espiritual Profesional"},
-    {"type": "content", "title": "Por que el RGPD te afecta", "body": "Tratas datos personales sensibles: nombre, datos natales,\ninformacion de vida personal compartida en sesion.\nRGPD (UE 2016/679) vigente desde mayo 2018.\nEspana: LOPDGDD 3/2018 complementa el RGPD."},
-    {"type": "content", "title": "Seis principios basicos (art. 5 RGPD)", "body": "1. Licitud y transparencia (consentimiento explicito art. 6.1.a).\n2. Limitacion de finalidad (solo para la sesion).\n3. Minimizacion (solo datos necesarios).\n4. Exactitud. 5. Limitacion de conservacion (2 anos).\n6. Integridad y confidencialidad."},
-    {"type": "content", "title": "Clausula modelo: elementos obligatorios", "body": "Responsable del tratamiento (tu nombre y NIF).\nDatos tratados y finalidad del tratamiento.\nBase legal: consentimiento explicito (art. 6.1.a).\nPeriodo de conservacion (2 anos sesion / 5 anos facturas).\nDerechos ARCO+P y como ejercerlos."},
-    {"type": "quote", "text": "Los datos personales deben ser tratados de manera licita, leal y transparente en relacion con el interesado. El responsable del tratamiento debe poder demostrar el cumplimiento activo.", "source": "RGPD, Articulo 5 — Reglamento UE 2016/679 y LOPDGDD 3/2018"},
-    {"type": "content", "title": "Derechos ARCO+P de la consultante", "body": "Acceso (art. 15), Rectificacion (art. 16),\nSupresion/Cancelacion (art. 17, derecho al olvido),\nOposicion (art. 21), Portabilidad (art. 20).\nPlazo de respuesta: 1 mes (art. 12 RGPD)."},
-    {"type": "content", "title": "Caso Patricia: auditoria completa", "body": "Antes: cuaderno fisico, Excel sin contrasena, fotos en movil.\nDespues: Notion + 2FA + protocolo de eliminacion.\n2 anos para datos de sesion. 5 anos para facturas.\nClausula RGPD en consentimiento informado."},
-    {"type": "summary", "points": ["La clausula de confidencialidad debe incluir: responsable, datos, finalidad, base legal, conservacion y derechos ARCO+P", "Periodo de conservacion recomendado: 2 anos datos de sesion, 5 anos facturas (obligacion fiscal)", "La LOPDGDD 3/2018 exige cumplimiento proactivo demostrable, no solo declarativo"]},
-    {"type": "next", "text": "En el Modulo 10 disenaremos tu plan de lanzamiento: 90 dias de certificada a primeros clientes."}
+    {
+      "type": "title",
+      "title": "RGPD y proteccion de datos",
+      "subtitle": "Modulo 9 Â· Leccion 27 â€” Master en Guia Espiritual Profesional"
+    },
+    {
+      "type": "content",
+      "title": "Por que el RGPD te afecta",
+      "body": "Tratas datos personales sensibles: nombre, datos natales,\ninformacion de vida personal compartida en sesion.\nRGPD (UE 2016/679) vigente desde mayo 2018.\nEspana: LOPDGDD 3/2018 complementa el RGPD."
+    },
+    {
+      "type": "content",
+      "title": "Seis principios basicos (art. 5 RGPD)",
+      "body": "1. Licitud y transparencia (consentimiento explicito art. 6.1.a).\n2. Limitacion de finalidad (solo para la sesion).\n3. Minimizacion (solo datos necesarios).\n4. Exactitud. 5. Limitacion de conservacion (2 anos).\n6. Integridad y confidencialidad."
+    },
+    {
+      "type": "content",
+      "title": "Clausula modelo: elementos obligatorios",
+      "body": "Responsable del tratamiento (tu nombre y NIF).\nDatos tratados y finalidad del tratamiento.\nBase legal: consentimiento explicito (art. 6.1.a).\nPeriodo de conservacion (2 anos sesion / 5 anos facturas).\nDerechos ARCO+P y como ejercerlos."
+    },
+    {
+      "type": "quote",
+      "text": "Los datos personales deben ser tratados de manera licita, leal y transparente en relacion con el interesado. El responsable del tratamiento debe poder demostrar el cumplimiento activo.",
+      "source": "RGPD, Articulo 5 â€” Reglamento UE 2016/679 y LOPDGDD 3/2018"
+    },
+    {
+      "type": "content",
+      "title": "Derechos ARCO+P de la consultante",
+      "body": "Acceso (art. 15), Rectificacion (art. 16),\nSupresion/Cancelacion (art. 17, derecho al olvido),\nOposicion (art. 21), Portabilidad (art. 20).\nPlazo de respuesta: 1 mes (art. 12 RGPD)."
+    },
+    {
+      "type": "content",
+      "title": "Caso Patricia: auditoria completa",
+      "body": "Antes: cuaderno fisico, Excel sin contrasena, fotos en movil.\nDespues: Notion + 2FA + protocolo de eliminacion.\n2 anos para datos de sesion. 5 anos para facturas.\nClausula RGPD en consentimiento informado."
+    },
+    {
+      "type": "process_diagram",
+      "title": "RGPD para guia espiritual: cumplimiento paso a paso",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Registro de Actividades de Tratamiento",
+          "description": "Documento interno obligatorio que lista que datos recopilas, para que, cuanto tiempo los conservas y con quien los compartes. Minimo: datos de contacto de consultantes (nombre, email, telefono), notas de sesion, lista de email. No necesita registrarse en ningun organismo: es un documento interno tuyo"
+        },
+        {
+          "step": 2,
+          "title": "Politica de privacidad en tu web",
+          "description": "Documento publico obligatorio si tienes web. Debe incluir: quien eres (nombre y NIF), que datos recopilas, para que, cuanto tiempo los conservas, con quien los compartes (servicios de email como Mailchimp, plataformas de pago), y como ejercer los derechos ARCO (acceso, rectificacion, cancelacion, oposicion)"
+        },
+        {
+          "step": 3,
+          "title": "Consentimiento informado en formularios",
+          "description": "Cualquier formulario en tu web (contacto, suscripcion a newsletter) debe incluir: casilla de consentimiento no pre-marcada, texto que explica para que usas los datos y enlace a la politica de privacidad. La persona debe marcar activamente la casilla: el consentimiento tacito no es valido segun el RGPD"
+        },
+        {
+          "step": 4,
+          "title": "Proteccion de datos en sesion",
+          "description": "Las notas de sesion son datos personales sensibles (salud mental, situacion familiar, emociones). Debes: guardarlas en lugar seguro (no en un cuaderno sin contrasena), no compartirlas con terceros sin consentimiento, y anonimizarlas si las usas como casos de estudio"
+        },
+        {
+          "step": 5,
+          "title": "Limites legales: que no puedes hacer ni decir",
+          "description": "No puedes: diagnosticar enfermedades fisicas o mentales (incluso si tu herramienta 'lo sugiere'), garantizar resultados especificos, hacer pronósticos que la persona pueda interpretar como certezas, ni sostener comunicacion con menores sin consentimiento de los tutores legales"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "points": [
+        "La clausula de confidencialidad debe incluir: responsable, datos, finalidad, base legal, conservacion y derechos ARCO+P",
+        "Periodo de conservacion recomendado: 2 anos datos de sesion, 5 anos facturas (obligacion fiscal)",
+        "La LOPDGDD 3/2018 exige cumplimiento proactivo demostrable, no solo declarativo"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el Modulo 10 disenaremos tu plan de lanzamiento: 90 dias de certificada a primeros clientes."
+    }
   ],
   "interactive": [
     {
       "type": "comparison_table",
       "title": "Derechos ARCO+P: que son y como responder",
-      "headers": ["Derecho", "Articulo RGPD", "Que solicita la consultante", "Tu obligacion", "Plazo"],
+      "headers": [
+        "Derecho",
+        "Articulo RGPD",
+        "Que solicita la consultante",
+        "Tu obligacion",
+        "Plazo"
+      ],
       "rows": [
-        ["Acceso", "Art. 15", "Ver todos los datos que tienes sobre ella", "Proporcionar copia de todos sus datos en formato legible", "1 mes"],
-        ["Rectificacion", "Art. 16", "Corregir datos incorrectos o incompletos", "Actualizar o corregir los datos indicados", "1 mes"],
-        ["Supresion (olvido)", "Art. 17", "Eliminar todos sus datos personales", "Eliminar de todas tus plataformas (excepto facturas: 5 anos obligacion fiscal)", "1 mes"],
-        ["Oposicion", "Art. 21", "Oponerse al tratamiento para un fin concreto (p.ej. marketing)", "Cesar ese uso especifico salvo causa legitima imperiosa", "1 mes"],
-        ["Portabilidad", "Art. 20", "Recibir sus datos en formato digital transferible", "Exportar y entregar sus datos en formato estructurado (CSV, JSON)", "1 mes"]
+        [
+          "Acceso",
+          "Art. 15",
+          "Ver todos los datos que tienes sobre ella",
+          "Proporcionar copia de todos sus datos en formato legible",
+          "1 mes"
+        ],
+        [
+          "Rectificacion",
+          "Art. 16",
+          "Corregir datos incorrectos o incompletos",
+          "Actualizar o corregir los datos indicados",
+          "1 mes"
+        ],
+        [
+          "Supresion (olvido)",
+          "Art. 17",
+          "Eliminar todos sus datos personales",
+          "Eliminar de todas tus plataformas (excepto facturas: 5 anos obligacion fiscal)",
+          "1 mes"
+        ],
+        [
+          "Oposicion",
+          "Art. 21",
+          "Oponerse al tratamiento para un fin concreto (p.ej. marketing)",
+          "Cesar ese uso especifico salvo causa legitima imperiosa",
+          "1 mes"
+        ],
+        [
+          "Portabilidad",
+          "Art. 20",
+          "Recibir sus datos en formato digital transferible",
+          "Exportar y entregar sus datos en formato estructurado (CSV, JSON)",
+          "1 mes"
+        ]
       ]
     },
     {
@@ -44,17 +151,169 @@
         }
       ]
     },
-    {"type": "flip_cards", "title": "Principios del RGPD para guias", "cards": [{"front": "Licitud y transparencia", "back": "Debes tener base legal (consentimiento explicito art. 6.1.a) y ser transparente sobre que haces con los datos."}, {"front": "Limitacion de finalidad", "back": "Solo usas los datos para lo declarado (sesion de acompanamiento). Marketing requiere consentimiento adicional explicito."}, {"front": "Minimizacion de datos", "back": "Solo recoges los datos que realmente necesitas. Si no usas astrologia, no necesitas datos natales."}, {"front": "Limitacion de conservacion", "back": "2 anos para datos de sesion; 5 anos para facturas por obligacion fiscal. Transcurrido el plazo, elimina o anonimiza."}, {"front": "Responsabilidad proactiva (LOPDGDD)", "back": "No basta con cumplir. Debes poder demostrar que cumples: clausulas documentadas, protocolos escritos, consentimientos firmados."}]},
-    {"type": "sort", "title": "Elementos obligatorios de la clausula RGPD (art. 13)", "instruction": "Ordena los elementos que debe contener la clausula de proteccion de datos segun el articulo 13 del RGPD.", "correct_order": ["Identidad y datos de contacto del responsable del tratamiento", "Datos personales que se recogen y tratan", "Finalidad del tratamiento y base legal (consentimiento explicito)", "Periodo de conservacion de los datos", "Derechos del interesado (ARCO+P) y como ejercerlos", "Derecho a presentar reclamacion ante la AEPD"]},
-    {"type": "lesson_summary", "points": ["La clausula de confidencialidad y proteccion de datos debe incluir todos los elementos del art. 13 RGPD: responsable, datos, finalidad, base legal, conservacion, derechos ARCO+P y via de reclamacion", "Los cinco derechos ARCO+P (acceso, rectificacion, supresion, oposicion, portabilidad) deben respetarse en un mes maximo", "La LOPDGDD 3/2018 exige cumplimiento proactivo demostrable: clausulas documentadas, consentimientos firmados, protocolos escritos", "Periodo de conservacion: 2 anos datos de sesion, 5 anos facturas (obligacion fiscal independiente del RGPD)"]}
+    {
+      "type": "flip_cards",
+      "title": "Principios del RGPD para guias",
+      "cards": [
+        {
+          "front": "Licitud y transparencia",
+          "back": "Debes tener base legal (consentimiento explicito art. 6.1.a) y ser transparente sobre que haces con los datos."
+        },
+        {
+          "front": "Limitacion de finalidad",
+          "back": "Solo usas los datos para lo declarado (sesion de acompanamiento). Marketing requiere consentimiento adicional explicito."
+        },
+        {
+          "front": "Minimizacion de datos",
+          "back": "Solo recoges los datos que realmente necesitas. Si no usas astrologia, no necesitas datos natales."
+        },
+        {
+          "front": "Limitacion de conservacion",
+          "back": "2 anos para datos de sesion; 5 anos para facturas por obligacion fiscal. Transcurrido el plazo, elimina o anonimiza."
+        },
+        {
+          "front": "Responsabilidad proactiva (LOPDGDD)",
+          "back": "No basta con cumplir. Debes poder demostrar que cumples: clausulas documentadas, protocolos escritos, consentimientos firmados."
+        }
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Elementos obligatorios de la clausula RGPD (art. 13)",
+      "instruction": "Ordena los elementos que debe contener la clausula de proteccion de datos segun el articulo 13 del RGPD.",
+      "correct_order": [
+        "Identidad y datos de contacto del responsable del tratamiento",
+        "Datos personales que se recogen y tratan",
+        "Finalidad del tratamiento y base legal (consentimiento explicito)",
+        "Periodo de conservacion de los datos",
+        "Derechos del interesado (ARCO+P) y como ejercerlos",
+        "Derecho a presentar reclamacion ante la AEPD"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La clausula de confidencialidad y proteccion de datos debe incluir todos los elementos del art. 13 RGPD: responsable, datos, finalidad, base legal, conservacion, derechos ARCO+P y via de reclamacion",
+        "Los cinco derechos ARCO+P (acceso, rectificacion, supresion, oposicion, portabilidad) deben respetarse en un mes maximo",
+        "La LOPDGDD 3/2018 exige cumplimiento proactivo demostrable: clausulas documentadas, consentimientos firmados, protocolos escritos",
+        "Periodo de conservacion: 2 anos datos de sesion, 5 anos facturas (obligacion fiscal independiente del RGPD)"
+      ]
+    }
   ],
   "citation": [
-    {"researcher": "Reglamento UE 2016/679 (RGPD)", "year": "2018", "finding": "El articulo 5 establece los principios del tratamiento de datos; el articulo 13 los requisitos de informacion al interesado; los articulos 15-21 los derechos ARCO+P; el articulo 12 el plazo de un mes para responder"},
-    {"researcher": "Ley Organica 3/2018 (LOPDGDD)", "year": "2018", "finding": "La ley espanola complementa el RGPD estableciendo el principio de responsabilidad proactiva demostrable y especificando el regimen sancionador aplicable en Espana (hasta 20 millones EUR o el 4% del volumen de negocio mundial para infracciones graves)"},
-    {"researcher": "Agencia Espanola de Proteccion de Datos (AEPD)", "year": "2023", "finding": "La Guia de Cookies de la AEPD (2023) exige consentimiento activo, especifico e informado previo a la instalacion de cookies no esenciales, con banner de consentimiento que no use patrones de diseno oscuro"},
-    {"researcher": "Daniel Kahneman", "year": "2011", "finding": "La transparencia en el manejo de datos genera confianza percibida en el cliente, un activo intangible que Kahneman asocia con el Sistema 1 de pensamiento rapido: la confianza o desconfianza se genera de forma automatica e inmediata"}
+    {
+      "researcher": "Reglamento UE 2016/679 (RGPD)",
+      "year": "2018",
+      "finding": "El articulo 5 establece los principios del tratamiento de datos; el articulo 13 los requisitos de informacion al interesado; los articulos 15-21 los derechos ARCO+P; el articulo 12 el plazo de un mes para responder"
+    },
+    {
+      "researcher": "Ley Organica 3/2018 (LOPDGDD)",
+      "year": "2018",
+      "finding": "La ley espanola complementa el RGPD estableciendo el principio de responsabilidad proactiva demostrable y especificando el regimen sancionador aplicable en Espana (hasta 20 millones EUR o el 4% del volumen de negocio mundial para infracciones graves)"
+    },
+    {
+      "researcher": "Agencia Espanola de Proteccion de Datos (AEPD)",
+      "year": "2023",
+      "finding": "La Guia de Cookies de la AEPD (2023) exige consentimiento activo, especifico e informado previo a la instalacion de cookies no esenciales, con banner de consentimiento que no use patrones de diseno oscuro"
+    },
+    {
+      "researcher": "Daniel Kahneman",
+      "year": "2011",
+      "finding": "La transparencia en el manejo de datos genera confianza percibida en el cliente, un activo intangible que Kahneman asocia con el Sistema 1 de pensamiento rapido: la confianza o desconfianza se genera de forma automatica e inmediata"
+    }
   ],
-  "bibliography": [{"author": "Reglamento UE 2016/679", "year": "2018", "title": "Reglamento General de Proteccion de Datos (RGPD)", "type": "Legislacion"}, {"author": "Ley Organica 3/2018", "year": "2018", "title": "Ley de Proteccion de Datos Personales y Garantia de los Derechos Digitales (LOPDGDD)", "type": "Legislacion"}, {"author": "AEPD", "year": "2023", "title": "Guia de Cookies: segunda edicion actualizada", "type": "Guia institucional"}, {"author": "AEPD", "year": "2023", "title": "Guia para el cumplimiento del deber de informar (art. 13 RGPD)", "type": "Guia institucional"}, {"author": "Kahneman, D.", "year": "2011", "title": "Thinking, Fast and Slow", "type": "Libro"}],
-  "homework": {"task": "Actualiza tu consentimiento informado usando el modelo de clausula de confidencialidad y proteccion de datos de esta leccion. Verifica que incluye todos los elementos del art. 13 RGPD. Activa 2FA en todas tus plataformas. Define tu protocolo de conservacion y eliminacion por escrito. Si tienes web, genera o actualiza tu politica de privacidad.", "duration": "60-90 min", "materials": "Consentimiento informado actual, modelo de clausula de esta leccion, acceso a todas tus herramientas digitales, Termly o Iubenda para politica de privacidad web"},
-  "quiz_points": ["Una consultante ejercita su derecho de supresion (art. 17 RGPD). Tienes datos de sesion, datos natales Y una factura de sus sesiones. La accion correcta es eliminar inmediatamente datos de sesion y datos natales, pero conservar las facturas los 5 anos obligatorios por ley fiscal (art. 17.3.b RGPD), explicando a la consultante esta excepcion especifica", "Quieres compartir un caso de exito en Instagram. Aunque lo anonimices, la practica correcta segun la LOPDGDD 3/2018 es obtener consentimiento explicito adicional para compartir informacion de sesion en cualquier medio publico, ademas de asegurarte de que no sea identificable por ningun medio (nombre, localidad, profesion, edad combinados pueden identificar)", "Los cinco derechos ARCO+P del RGPD son: Acceso (art. 15), Rectificacion (art. 16), Supresion/Cancelacion (art. 17), Oposicion (art. 21) y Portabilidad (art. 20). El plazo de respuesta en todos los casos es de un mes desde la solicitud (art. 12 RGPD), ampliable a tres meses en casos complejos comunicando la ampliacion al interesado"]
+  "bibliography": [
+    {
+      "author": "Reglamento UE 2016/679",
+      "year": "2018",
+      "title": "Reglamento General de Proteccion de Datos (RGPD)",
+      "type": "Legislacion"
+    },
+    {
+      "author": "Ley Organica 3/2018",
+      "year": "2018",
+      "title": "Ley de Proteccion de Datos Personales y Garantia de los Derechos Digitales (LOPDGDD)",
+      "type": "Legislacion"
+    },
+    {
+      "author": "AEPD",
+      "year": "2023",
+      "title": "Guia de Cookies: segunda edicion actualizada",
+      "type": "Guia institucional"
+    },
+    {
+      "author": "AEPD",
+      "year": "2023",
+      "title": "Guia para el cumplimiento del deber de informar (art. 13 RGPD)",
+      "type": "Guia institucional"
+    },
+    {
+      "author": "Kahneman, D.",
+      "year": "2011",
+      "title": "Thinking, Fast and Slow",
+      "type": "Libro"
+    }
+  ],
+  "homework": {
+    "task": "Actualiza tu consentimiento informado usando el modelo de clausula de confidencialidad y proteccion de datos de esta leccion. Verifica que incluye todos los elementos del art. 13 RGPD. Activa 2FA en todas tus plataformas. Define tu protocolo de conservacion y eliminacion por escrito. Si tienes web, genera o actualiza tu politica de privacidad.",
+    "duration": "60-90 min",
+    "materials": "Consentimiento informado actual, modelo de clausula de esta leccion, acceso a todas tus herramientas digitales, Termly o Iubenda para politica de privacidad web"
+  },
+  "quiz_points": [
+    {
+      "question": "Una guia espiritual en Espana que tiene formulario de suscripcion en su web DEBE incluir obligatoriamente:",
+      "options": [
+        "a) Un aviso de cookies y una politica de cookies completa antes de que el usuario pueda navegar la web",
+        "b) Una casilla de consentimiento no pre-marcada con texto explicativo del uso de los datos y enlace a la politica de privacidad",
+        "c) La certificacion de la Agencia Espanola de Proteccion de Datos (AEPD) que valida el formulario",
+        "d) El listado completo de todos los proveedores tecnologicos que tendran acceso a los datos de la suscriptora"
+      ],
+      "correct": 1,
+      "explanation": "El RGPD exige consentimiento activo, libre, especifico e informado. Una casilla pre-marcada no cumple este requisito. La persona debe marcar activamente la casilla de forma consciente, con texto claro sobre para que se usaran sus datos y acceso a la politica completa."
+    },
+    {
+      "question": "Las notas de sesion de una guia espiritual son datos personales bajo el RGPD porque:",
+      "options": [
+        "a) Contienen informacion de pago como tarifas y metodos de cobro usados en cada sesion",
+        "b) Incluyen informacion sobre la salud mental, situacion familiar y vida emocional de las consultantes, que son categorias especialmente protegidas",
+        "c) Estan redactadas por la guia y por tanto son propiedad intelectual sujeta a regulacion especifica",
+        "d) Se guardan en formato digital, lo que las convierte automaticamente en datos personales bajo la normativa europea"
+      ],
+      "correct": 1,
+      "explanation": "Las notas de sesion contienen datos sobre la vida intima, la salud mental y las relaciones personales de las consultantes. Bajo el RGPD, la salud (incluida la salud mental) es una categoria especialmente protegida que requiere mayor nivel de cuidado en su tratamiento y almacenamiento."
+    },
+    {
+      "question": "El principio de 'limitacion de la finalidad' del RGPD aplicado a la guia espiritual significa que:",
+      "options": [
+        "a) La guia solo puede recopilar los datos de las consultantes que sean estrictamente necesarios para prestar el servicio",
+        "b) Los datos que una consultante te proporciona para la sesion no pueden usarse para otra finalidad (como incluirla en tu newsletter) sin su consentimiento separado",
+        "c) La guia debe limitar el numero de sesiones con cada consultante para evitar acumular demasiados datos personales",
+        "d) Los datos de las consultantes deben eliminarse automaticamente al cabo de un ano de la ultima sesion"
+      ],
+      "correct": 1,
+      "explanation": "El RGPD establece que los datos recopilados para un proposito especifico (prestar la sesion) no pueden usarse para otro fin diferente (email marketing) sin consentimiento explicito para ese segundo fin. Cada uso requiere su propio consentimiento."
+    },
+    {
+      "question": "Una clausula de deslinde de responsabilidad en el consentimiento informado de una guia espiritual debe incluir:",
+      "options": [
+        "a) La declaracion de que la guia no es responsable de ninguna decision que la consultante tome basandose en la sesion",
+        "b) La aclaracion de que el servicio no constituye diagnostico medico ni psiquiatrico, no sustituye tratamiento clinico y la guia trabaja dentro de sus limites de competencia",
+        "c) La renuncia de la consultante a cualquier accion legal contra la guia por el contenido de la sesion",
+        "d) La lista completa de condiciones medicas para las que la guia espiritual no puede ofrecer ningun tipo de orientacion"
+      ],
+      "correct": 1,
+      "explanation": "Una clausula de deslinde efectiva no es una renuncia de derechos sino una delimitacion clara del servicio: no es diagnostico, no sustituye atencion clinica, la guia trabaja dentro de sus competencias. Esto protege legalmente a la guia y establece expectativas realistas para la consultante."
+    },
+    {
+      "question": "El derecho al olvido bajo el RGPD en el contexto de la guia espiritual significa que:",
+      "options": [
+        "a) Las consultantes pueden solicitar que la guia elimine todos los datos que tiene de ellas, incluidas las notas de sesion",
+        "b) La guia puede negar la eliminacion de los datos si tiene una obligacion legal de conservarlos (como las facturas durante 5 anos)",
+        "c) Solo aplica a los datos de la newsletter y no a las notas de sesion ni los datos de facturacion",
+        "d) La guia tiene un plazo maximo de 90 dias para eliminar los datos tras la solicitud de la consultante"
+      ],
+      "correct": 0,
+      "explanation": "Ambas opciones a) y b) son correctas y complementarias. El derecho al olvido existe, pero no es absoluto: la guia debe eliminar los datos cuando se solicita, EXCEPTO cuando existe obligacion legal de conservarlos (facturas: 5 anos segun la ley tributaria espanola). En ese caso, puede conservar lo minimo necesario para cumplir con la ley."
+    }
+  ]
 }

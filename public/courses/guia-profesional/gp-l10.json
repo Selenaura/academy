@@ -7,7 +7,7 @@
     {
       "type": "title",
       "title": "Estructura de sesion: apertura, desarrollo, cierre",
-      "subtitle": "Modulo 4 · Leccion 10 — Master en Guia Espiritual Profesional"
+      "subtitle": "Modulo 4 Â· Leccion 10 â€” Master en Guia Espiritual Profesional"
     },
     {
       "type": "content",
@@ -32,7 +32,7 @@
     {
       "type": "quote",
       "text": "La profundidad de procesamiento correlaciona con la memoria y el impacto. Mejor tres temas en profundidad que diez de pasada.",
-      "source": "Basado en Kahneman, 2011 — Procesamiento cognitivo"
+      "source": "Basado en Kahneman, 2011 â€” Procesamiento cognitivo"
     },
     {
       "type": "content",
@@ -43,6 +43,37 @@
       "type": "content",
       "title": "Caso Sofia: primera sesion completa",
       "body": "Apertura (12 min): consentimiento, intencion, check-in.\nDesarrollo (35 min): MC Acuario, Urano, Nodo Norte Casa 6.\nCierre (13 min): resumen, tarea (carta a su yo futuro),\ncierre emocional: siento que tengo permiso."
+    },
+    {
+      "type": "process_diagram",
+      "title": "Estructura de sesion profesional: apertura, desarrollo, cierre",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Apertura (5-10 min)",
+          "description": "Check-in emocional: '¿Como llegas hoy? ¿Que quieres explorar en esta sesion?' Establece el encuadre (tiempo, objetivo, herramientas). Confirma o actualiza el consentimiento informado"
+        },
+        {
+          "step": 2,
+          "title": "Clarificacion del tema (5 min)",
+          "description": "Identifica la pregunta real debajo de la pregunta presentada. '¿Que es lo mas importante para ti hoy?' Distingue entre la queja superficial y el tema profundo"
+        },
+        {
+          "step": 3,
+          "title": "Desarrollo (25-35 min)",
+          "description": "Aplica la herramienta o combinacion elegida. Mantein el hilo conductor. Invita la participacion activa de la consultante en cada fase. No monologues: la sesion es un dialogo facilitado"
+        },
+        {
+          "step": 4,
+          "title": "Integracion (5-10 min)",
+          "description": "'¿Que te llevas de hoy? ¿Que resuena mas? ¿Que te sorprende?' La consultante construye su propio resumen. No resumas tu: deja que ella articule el insight"
+        },
+        {
+          "step": 5,
+          "title": "Cierre y anclaje (5 min)",
+          "description": "Una accion concreta para los proximos dias. Pequena, especifica y elegida por la consultante: '¿Que vas a hacer diferente esta semana?' Cierre formal: 'Gracias por tu confianza'"
+        }
+      ]
     },
     {
       "type": "summary",
@@ -170,8 +201,60 @@
     "materials": "Cronometro, herramientas de tu toolkit, cuaderno"
   },
   "quiz_points": [
-    "La estructura de sesion tiene tres fases: apertura (10-15 min), desarrollo (30-40 min) y cierre (10-15 min)",
-    "La apertura establece seguridad e intencion con la pregunta clave: que te gustaria explorar hoy?",
-    "El cierre requiere minimo 10 minutos para sumarizacion, tarea y cierre emocional: nunca terminar abruptamente"
+    {
+      "question": "En la fase de apertura de la sesion, el objetivo principal es:",
+      "options": [
+        "a) Repasar los transitos astrologicos actuales de la consultante antes de que ella hable",
+        "b) Establecer el encuadre, crear el espacio de trabajo y clarificar el objetivo de la sesion de hoy",
+        "c) Revisar lo que se trabajo en la sesion anterior para mantener la continuidad",
+        "d) Evaluar el estado emocional de la consultante para decidir si la sesion puede continuar"
+      ],
+      "correct": 1,
+      "explanation": "La apertura crea el espacio de trabajo: encuadre temporal, objetivo especifico y conexion inicial. Sin ella, la sesion comienza sin direccion y la consultante no sabe exactamente que puede esperar."
+    },
+    {
+      "question": "Una consultante dice 'quiero saber si mi relacion va a funcionar'. La clarificacion del tema real implica:",
+      "options": [
+        "a) Revisar la sinastria entre ambas cartas natales para responder directamente",
+        "b) Preguntar: '¿Que significa para ti que funcione? ¿Que esta pasando ahora que te trae esta pregunta hoy?'",
+        "c) Hacer una tirada de tarot de si/no sobre el futuro de la relacion",
+        "d) Explorar el historial relacional completo antes de abordar la pregunta presente"
+      ],
+      "correct": 1,
+      "explanation": "La pregunta presentada raramente es la pregunta real. Clarificar revela el tema subyacente. La herramienta correcta depende del tema real, no de la pregunta superficial."
+    },
+    {
+      "question": "En la fase de integracion, la guia debe:",
+      "options": [
+        "a) Resumir los puntos clave de la lectura para asegurarse de que la consultante los recuerda",
+        "b) Invitar a la consultante a articular su propio resumen: '¿Que te llevas de hoy? ¿Que resuena mas?'",
+        "c) Dar los proximos pasos concretos basados en la lectura astrologica o de tarot",
+        "d) Evaluar si la sesion fue efectiva segun los objetivos establecidos en la apertura"
+      ],
+      "correct": 1,
+      "explanation": "La integracion construida por la propia consultante tiene mayor impacto que el resumen de la guia. Cuando la persona articula su propio insight, lo incorpora de forma mas profunda."
+    },
+    {
+      "question": "El anclaje al final de la sesion consiste en:",
+      "options": [
+        "a) Dar a la consultante una lista de tareas para aplicar lo aprendido durante la semana",
+        "b) Una accion concreta, pequena y elegida por la consultante para los proximos dias",
+        "c) Establecer un compromiso de la consultante con su proceso de cambio a largo plazo",
+        "d) Recomendar recursos bibliograficos relacionados con el tema de la sesion"
+      ],
+      "correct": 1,
+      "explanation": "El anclaje es la transicion entre la sesion y la vida cotidiana. Debe ser concreto, pequeno (alcanzable esta semana) y elegido por la consultante. Esto aumenta la probabilidad de que se lleve a cabo y refuerza la autonomia."
+    },
+    {
+      "question": "Una sesion sin fase de apertura clara tiene como riesgo principal:",
+      "options": [
+        "a) Que la consultante sienta que el precio de la sesion no esta justificado",
+        "b) Comenzar sin saber el objetivo real de hoy, lo que puede llevar a una sesion sin impacto definido",
+        "c) Que la guia use la herramienta equivocada para el nivel de experiencia de la consultante",
+        "d) Que la fase de desarrollo dure demasiado tiempo y no haya espacio para el cierre"
+      ],
+      "correct": 1,
+      "explanation": "Sin apertura, la sesion carece de encuadre. No saber cual es el objetivo de hoy lleva a explorar de forma difusa sin punto de llegada, lo que reduce el impacto y deja a la consultante sin claridad sobre que se trabajo."
+    }
   ]
 }

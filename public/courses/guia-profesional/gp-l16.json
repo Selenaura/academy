@@ -7,7 +7,7 @@
     {
       "type": "title",
       "title": "Posicionamiento profesional",
-      "subtitle": "Modulo 6 · Leccion 16 — Master en Guia Espiritual Profesional"
+      "subtitle": "Modulo 6 Â· Leccion 16 â€” Master en Guia Espiritual Profesional"
     },
     {
       "type": "content",
@@ -22,7 +22,7 @@
     {
       "type": "quote",
       "text": "La especificidad genera credibilidad. Cuanto mas concreto es tu mensaje, mas confianza activa en el receptor.",
-      "source": "Cialdini, R. — Influence: The Psychology of Persuasion (2006)"
+      "source": "Cialdini, R. â€” Influence: The Psychology of Persuasion (2006)"
     },
     {
       "type": "content",
@@ -33,6 +33,32 @@
       "type": "content",
       "title": "Caso Paula: de generica a encontrable",
       "body": "Antes: te ayudo a descubrir tu potencial. 3 clientes en 6 meses.\nDespues: acompano a profesionales de salud a prevenir burnout.\n15 clientes en 3 meses. La especificidad funciona."
+    },
+    {
+      "type": "process_diagram",
+      "title": "Construir tu posicionamiento en 4 pasos",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Define tu nicho especifico",
+          "description": "No 'guia espiritual' sino 'guia de carta natal para mujeres en transicion profesional'. La especificidad no limita: atrae. Un nicho definido genera referencias precisas y reduce la competencia directa"
+        },
+        {
+          "step": 2,
+          "title": "Identifica tu diferencial real",
+          "description": "Que combinas que nadie mas combina? Tu diferencial no son tus certificaciones: es tu perspectiva, tu experiencia de vida, tu forma de facilitar. Ejemplo: 'astrologia psicologica con perspectiva de neurociencia'"
+        },
+        {
+          "step": 3,
+          "title": "Formula tu mensaje central",
+          "description": "Una frase de 10-15 palabras que responda: que hago, para quien, con que resultado. Ejemplo: 'Ayudo a profesionales en crisis a encontrar su siguiente paso con astrologia y neurociencia'. Sin espiritualese"
+        },
+        {
+          "step": 4,
+          "title": "Prueba y ajusta",
+          "description": "Di tu mensaje a 5 personas fuera del mundo espiritual. Si lo entienden y dicen 'ah, eso lo necesita fulana', tu mensaje funciona. Si dicen 'no entiendo bien de que va', necesita ajuste"
+        }
+      ]
     },
     {
       "type": "summary",
@@ -51,19 +77,49 @@
     {
       "type": "comparison_table",
       "title": "Posicionamiento generico vs especifico: ejemplos reales",
-      "headers": ["Tipo", "Ejemplo de mensaje", "Resultado en mercado", "Precio que suele sostener"],
+      "headers": [
+        "Tipo",
+        "Ejemplo de mensaje",
+        "Resultado en mercado",
+        "Precio que suele sostener"
+      ],
       "rows": [
-        ["Generico", "Te ayudo a conectar con tu esencia y descubrir tu potencial", "Invisible entre miles de perfiles similares. Dificulta fijar precio.", "40-50 EUR (se infravalora al no tener diferencial)"],
-        ["Parcialmente especifico", "Astrologa especializada en carta natal", "Algo visible pero sin comunicar resultado. Compite por tecnica.", "60-70 EUR"],
-        ["Especifico (nicho + resultado)", "Acompano a mujeres emprendedoras a tomar decisiones estrategicas con carta natal", "Encontrable, genera confianza, atrae cliente ideal.", "80-120 EUR"],
-        ["Muy especifico con diferencial claro", "Guio a profesionales de salud a prevenir burnout y redisenar carrera usando transitos de Saturno", "Autoridad reconocida en un nicho. Lista de espera posible.", "100-150 EUR"]
+        [
+          "Generico",
+          "Te ayudo a conectar con tu esencia y descubrir tu potencial",
+          "Invisible entre miles de perfiles similares. Dificulta fijar precio.",
+          "40-50 EUR (se infravalora al no tener diferencial)"
+        ],
+        [
+          "Parcialmente especifico",
+          "Astrologa especializada en carta natal",
+          "Algo visible pero sin comunicar resultado. Compite por tecnica.",
+          "60-70 EUR"
+        ],
+        [
+          "Especifico (nicho + resultado)",
+          "Acompano a mujeres emprendedoras a tomar decisiones estrategicas con carta natal",
+          "Encontrable, genera confianza, atrae cliente ideal.",
+          "80-120 EUR"
+        ],
+        [
+          "Muy especifico con diferencial claro",
+          "Guio a profesionales de salud a prevenir burnout y redisenar carrera usando transitos de Saturno",
+          "Autoridad reconocida en un nicho. Lista de espera posible.",
+          "100-150 EUR"
+        ]
       ]
     },
     {
       "type": "fill_blanks",
       "instruction": "Completa la plantilla de posicionamiento.",
       "template": "Ayudo a ___0___ a ___1___ usando ___2___ para que puedan ___3___.",
-      "answers": ["nicho especifico", "resultado deseado", "metodo o herramientas", "beneficio final"]
+      "answers": [
+        "nicho especifico",
+        "resultado deseado",
+        "metodo o herramientas",
+        "beneficio final"
+      ]
     },
     {
       "type": "sort",
@@ -119,10 +175,30 @@
     }
   ],
   "bibliography": [
-    {"author": "Cialdini, R.", "year": "2006", "title": "Influence: The Psychology of Persuasion", "type": "Libro"},
-    {"author": "Seligman, M.", "year": "2011", "title": "Flourish", "type": "Libro"},
-    {"author": "Godin, S.", "year": "2018", "title": "This Is Marketing", "type": "Libro"},
-    {"author": "Kahneman, D.", "year": "2011", "title": "Thinking, Fast and Slow", "type": "Libro"}
+    {
+      "author": "Cialdini, R.",
+      "year": "2006",
+      "title": "Influence: The Psychology of Persuasion",
+      "type": "Libro"
+    },
+    {
+      "author": "Seligman, M.",
+      "year": "2011",
+      "title": "Flourish",
+      "type": "Libro"
+    },
+    {
+      "author": "Godin, S.",
+      "year": "2018",
+      "title": "This Is Marketing",
+      "type": "Libro"
+    },
+    {
+      "author": "Kahneman, D.",
+      "year": "2011",
+      "title": "Thinking, Fast and Slow",
+      "type": "Libro"
+    }
   ],
   "homework": {
     "task": "Investiga a 5 guias que admires y analiza su posicionamiento: nicho, mensaje, diferencial y precio visible si lo tienen. Luego escribe 3 versiones de tu frase de posicionamiento usando la plantilla y pidele feedback a companeros del curso y a 2 personas fuera del ambito espiritual. Entienden que haces? A quien lo recomendarian?",
@@ -130,8 +206,60 @@
     "materials": "Acceso a internet, documento de Declaracion de Metodo y zona de genio de leccion 2"
   },
   "quiz_points": [
-    "Ante una frase como soy guia espiritual y astrologa, el primer paso para mejorar el posicionamiento es identificar el resultado concreto que ofreces a un nicho especifico, no listar mas herramientas",
-    "El proceso de validacion del nicho incluye buscar si hay competencia en ese espacio: la existencia de otras guias en ese nicho es una senal positiva de demanda real, no una razon para evitarlo",
-    "Un posicionamiento especifico no solo hace mas visible la practica: tambien permite sostener precios superiores porque la persona percibe que eres la experta exacta que necesita, no una generica"
+    {
+      "question": "Por que 'te ayudo a conectar con tu esencia' es un mensaje de posicionamiento ineficaz?",
+      "options": [
+        "a) Porque es demasiado corto y no incluye el precio ni las herramientas que usas",
+        "b) Porque es tan generico que no diferencia tu propuesta de la de miles de guias y no dice nada especifico a nadie",
+        "c) Porque mezcla lenguaje espiritual con lenguaje de coaching, lo que genera confusion de marca",
+        "d) Porque no menciona las certificaciones que respaldan el servicio"
+      ],
+      "correct": 1,
+      "explanation": "Los mensajes genericos son invisibles porque aplican a cualquiera y a nadie en particular. Un posicionamiento efectivo es especifico: dice a quien ayudas, con que resultado, y de que forma diferente a los demas."
+    },
+    {
+      "question": "Tu diferencial como guia espiritual profesional se construye principalmente a partir de:",
+      "options": [
+        "a) El numero de certificaciones y anos de estudio en herramientas simbolicas",
+        "b) La combinacion unica de perspectiva, experiencia de vida y forma de facilitar que ninguna otra guia replica",
+        "c) El precio de tus sesiones respecto al mercado: precios altos indican mayor calidad percibida",
+        "d) La plataforma o red social donde tienes mayor visibilidad y engagement"
+      ],
+      "correct": 1,
+      "explanation": "Las certificaciones son credenciales, no diferenciales: mucha gente tiene las mismas. Tu diferencial real es tu perspectiva unica, la interseccion de herramientas que usas, y la experiencia de vida que informa tu forma de acompanar."
+    },
+    {
+      "question": "Una guia con nicho definido en 'acompanamiento de duelo con astrologia y constelaciones' comparado con una guia generalista:",
+      "options": [
+        "a) Tiene menos clientes potenciales y por tanto menos ingresos a largo plazo",
+        "b) Atrae referencias mas precisas, cobra mas por su especializacion y compite menos directamente",
+        "c) Solo puede atender a personas que esten en duelo activo, lo que limita su mercado",
+        "d) Debe rechazar cualquier consultante que no cumpla exactamente con su nicho definido"
+      ],
+      "correct": 1,
+      "explanation": "La especializacion paradojicamente amplia el alcance: quien busca ayuda especifica para el duelo encontrara a la especialista antes que a una generalista. Ademas, la especializacion justifica tarifas mas altas y genera referencias mas concretas."
+    },
+    {
+      "question": "Para probar si tu mensaje de posicionamiento funciona, el test mas eficaz es:",
+      "options": [
+        "a) Publicarlo en redes sociales y medir los likes y comentarios en las primeras 24 horas",
+        "b) Decirlo a 5 personas fuera del mundo espiritual y ver si lo entienden y a quien se lo recomendarian",
+        "c) Enviarlo a otras guias espirituales para que validen si es diferente de sus propios mensajes",
+        "d) Presentarlo en una feria de salud y bienestar y medir cuantas personas se detienen a escuchar"
+      ],
+      "correct": 1,
+      "explanation": "El test mas valido es la comprension de alguien fuera de tu burbuja. Si una persona sin contexto espiritual entiende a quien ayudas y con que resultado, tu mensaje tiene claridad. Si no lo entienden, necesitas simplificar."
+    },
+    {
+      "question": "La frase de posicionamiento 'Soy guia especializada en astrologia psicologica para mujeres emprendedoras que quieren alinear su negocio con su carta natal' es efectiva porque:",
+      "options": [
+        "a) Usa el termino 'psicologica' que da credibilidad cientifica al trabajo astrologico",
+        "b) Especifica herramienta (astrologia psicologica), publico (mujeres emprendedoras) y resultado (alinear negocio con carta natal)",
+        "c) Es lo suficientemente larga para demostrar la profundidad del servicio ofrecido",
+        "d) Apela al segmento de mercado mas rentable del mundo de la guia espiritual"
+      ],
+      "correct": 1,
+      "explanation": "La formula efectiva de posicionamiento incluye los tres elementos: herramienta (como trabajas), publico especifico (con quien trabajas) y resultado tangible (que obtienen). Esta frase los tiene los tres de forma clara y memorable."
+    }
   ]
 }

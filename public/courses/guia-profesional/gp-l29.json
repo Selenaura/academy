@@ -1,30 +1,272 @@
 {
-  "lesson_number": 29, "module": 10, "title": "Las 30 lecturas gratuitas: tu rito de paso profesional",
-  "text_content": "Las 30 lecturas gratuitas no son caridad. Son la inversion mas estrategica de tu lanzamiento. Son tu escuela de vuelo, tu residencia medica, tu practicum. Ningun profesional sale directamente de la formacion al mercado sin un periodo de practica supervisada. En nuestro caso, las 30 lecturas son ese periodo.\n\nEn esta leccion vamos a disenar tu plan de lecturas gratuitas con estructura, criterios de seleccion y sistema de evaluacion.\n\nPOR QUE EXACTAMENTE 30\n\nLa investigacion sobre practica deliberada (Ericsson, 2016) demuestra que la mejora significativa en cualquier habilidad requiere practica repetida con retroalimentacion. 30 sesiones te dan: suficiente repeticion para automatizar tu estructura de sesion, suficiente variedad de consultantes para enfrentar diferentes tipos de preguntas, suficiente feedback para identificar tus fortalezas y debilidades reales, y un corpus de testimonios que establece tu credibilidad inicial.\n\nNo son 5 (insuficiente para aprender). No son 100 (te agotarias antes de empezar a cobrar). 30 es el punto dulce entre practica suficiente y sostenibilidad.\n\nCOMO SELECCIONAR A TUS 30 CONSULTANTES\n\nNo vale cualquiera. Quieres personas que representen a tu cliente ideal. Si tu nicho son mujeres en transicion profesional, tus 30 consultantes deben ser mayoritariamente mujeres en transicion profesional. Esto te da practica relevante en tu area de especializacion.\n\nFuentes: companeros del master y de certificaciones anteriores (10 personas), amigos y conocidos que encajen en tu nicho (10 personas), desconocidos que respondan a tu publicacion en redes (10 personas). Este mix te da una progresion natural de comodidad: empiezas con gente conocida y terminas con desconocidos, que es exactamente lo que haras en la practica real.\n\nESTRUCTURA DE CADA SESION GRATUITA\n\nCada sesion gratuita debe ser igual de profesional que una de pago. No es una sesion light. Es tu sesion completa.\n\nAntes: envias consentimiento informado y pides datos natales. Durante: sigues tu estructura de tres fases (apertura, desarrollo, cierre) con cronometro. Despues: envias email de seguimiento con tarea + formulario de feedback + solicitud de testimonio.\n\nEL FORMULARIO DE FEEDBACK\n\nEnvia un formulario simple (Google Forms) con estas preguntas: del 1 al 10, como valoras la sesion? Que fue lo mas util? Que mejorarías? Recomendarias mi servicio a alguien? Si es asi, a quien? (esto te da pistas sobre tu mercado). Puedo usar tu feedback como testimonio en mi web? (si/no + nombre).\n\nTU DIARIO DE PRACTICA\n\nDespues de cada sesion, dedica 10 minutos a escribir en tu diario de practica: que salio bien, que salio mal, que haria diferente, que aprendi, como me senti (contratransferencia). Este diario es tu herramienta de mejora continua y tu material para la supervision.\n\nCRONOGRAMA REALISTA\n\n5 sesiones por semana durante 6 semanas es lo recomendado. Pero si tu vida no lo permite, puedes hacer 3 por semana durante 10 semanas. Lo importante es la consistencia y completar las 30.\n\nNo hagas mas de 2 sesiones en un dia. El agotamiento emocional reduce la calidad. Deja al menos 30 minutos entre sesiones para notas y regulacion.\n\nQUE HACER CON LOS RESULTADOS\n\nAl terminar las 30: calcula tu puntuacion media (del 1 al 10). Si es 8 o superior, estas lista para cobrar. Si es 6-7, identifica que areas necesitan mejora y haz 10 sesiones mas enfocadas en esas areas. Si es menos de 6, necesitas revision profunda de tu enfoque antes de lanzar.\n\nSelecciona los 5-8 testimonios mas potentes. Redacta 3 casos de estudio anonimizados. Actualiza tu web con este material.\n\nCASO PRACTICO: LAS 30 LECTURAS DE VICTORIA\n\nVictoria hizo sus 30 lecturas en 7 semanas (4-5 por semana). Puntuacion media: 8.4/10. Feedback recurrente positivo: me senti muy escuchada, la conexion entre carta natal y mi experiencia fue reveladora. Feedback constructivo: a veces usaba demasiados tecnicismos, el cierre era apresurado en las primeras sesiones. Victoria ajusto: simplifico su lenguaje y extendio su cierre a 15 minutos. Obtuvo 26 testimonios y 4 casos de estudio. Su web se lanzo con un portfolio solido desde el primer dia.\n\nEJERCICIO GUIADO: PLANIFICA TUS 30 LECTURAS\n\nPaso 1: haz una lista de 30 personas (10 conocidos, 10 del ambito, 10 de redes). Paso 2: define tu cronograma (sesiones por semana x semanas). Paso 3: prepara tu formulario de feedback en Google Forms. Paso 4: crea tu diario de practica (puede ser un Notion o un cuaderno).\n\nTAREA PARA CASA\n\nContacta a las primeras 10 personas de tu lista e invitalas a una sesion de practica profesional. Agenda las sesiones en tu Calendly. Prepara tu formulario de feedback. Crea tu diario de practica. La proxima semana empiezas.",
+  "lesson_number": 29,
+  "module": 10,
+  "title": "Las 30 lecturas gratuitas: tu rito de paso profesional",
+  "text_content": "Las 30 lecturas gratuitas no son caridad. Son la inversion mas estrategica de tu lanzamiento. Son tu escuela de vuelo, tu residencia medica, tu practicum. Ningun profesional sale directamente de la formacion al mercado sin un periodo de practica supervisada. En nuestro caso, las 30 lecturas son ese periodo.\n\nEn esta leccion vamos a disenar tu plan de lecturas gratuitas con estructura, criterios de seleccion y sistema de evaluacion.\n\nPOR QUE EXACTAMENTE 30\n\nLa investigacion sobre practica deliberada (Ericsson, 2016) demuestra que la mejora significativa en cualquier habilidad requiere practica repetida con retroalimentacion. 30 sesiones te dan: suficiente repeticion para automatizar tu estructura de sesion, suficiente variedad de consultantes para enfrentar diferentes tipos de preguntas, suficiente feedback para identificar tus fortalezas y debilidades reales, y un corpus de testimonios que establece tu credibilidad inicial.\n\nNo son 5 (insuficiente para aprender). No son 100 (te agotarias antes de empezar a cobrar). 30 es el punto dulce entre practica suficiente y sostenibilidad.\n\nCOMO SELECCIONAR A TUS 30 CONSULTANTES\n\nNo vale cualquiera. Quieres personas que representen a tu cliente ideal. Si tu nicho son mujeres en transicion profesional, tus 30 consultantes deben ser mayoritariamente mujeres en transicion profesional. Esto te da practica relevante en tu area de especializacion.\n\nFuentes: companeros del master y de certificaciones anteriores (10 personas), amigos y conocidos que encajen en tu nicho (10 personas), desconocidos que respondan a tu publicacion en redes (10 personas). Este mix te da una progresion natural de comodidad: empiezas con gente conocida y terminas con desconocidos, que es exactamente lo que haras en la practica real.\n\nESTRUCTURA DE CADA SESION GRATUITA\n\nCada sesion gratuita debe ser igual de profesional que una de pago. No es una sesion light. Es tu sesion completa.\n\nAntes: envias consentimiento informado y pides datos natales. Durante: sigues tu estructura de tres fases (apertura, desarrollo, cierre) con cronometro. Despues: envias email de seguimiento con tarea + formulario de feedback + solicitud de testimonio.\n\nEL FORMULARIO DE FEEDBACK\n\nEnvia un formulario simple (Google Forms) con estas preguntas: del 1 al 10, como valoras la sesion? Que fue lo mas util? Que mejorarÃ­as? Recomendarias mi servicio a alguien? Si es asi, a quien? (esto te da pistas sobre tu mercado). Puedo usar tu feedback como testimonio en mi web? (si/no + nombre).\n\nTU DIARIO DE PRACTICA\n\nDespues de cada sesion, dedica 10 minutos a escribir en tu diario de practica: que salio bien, que salio mal, que haria diferente, que aprendi, como me senti (contratransferencia). Este diario es tu herramienta de mejora continua y tu material para la supervision.\n\nCRONOGRAMA REALISTA\n\n5 sesiones por semana durante 6 semanas es lo recomendado. Pero si tu vida no lo permite, puedes hacer 3 por semana durante 10 semanas. Lo importante es la consistencia y completar las 30.\n\nNo hagas mas de 2 sesiones en un dia. El agotamiento emocional reduce la calidad. Deja al menos 30 minutos entre sesiones para notas y regulacion.\n\nQUE HACER CON LOS RESULTADOS\n\nAl terminar las 30: calcula tu puntuacion media (del 1 al 10). Si es 8 o superior, estas lista para cobrar. Si es 6-7, identifica que areas necesitan mejora y haz 10 sesiones mas enfocadas en esas areas. Si es menos de 6, necesitas revision profunda de tu enfoque antes de lanzar.\n\nSelecciona los 5-8 testimonios mas potentes. Redacta 3 casos de estudio anonimizados. Actualiza tu web con este material.\n\nCASO PRACTICO: LAS 30 LECTURAS DE VICTORIA\n\nVictoria hizo sus 30 lecturas en 7 semanas (4-5 por semana). Puntuacion media: 8.4/10. Feedback recurrente positivo: me senti muy escuchada, la conexion entre carta natal y mi experiencia fue reveladora. Feedback constructivo: a veces usaba demasiados tecnicismos, el cierre era apresurado en las primeras sesiones. Victoria ajusto: simplifico su lenguaje y extendio su cierre a 15 minutos. Obtuvo 26 testimonios y 4 casos de estudio. Su web se lanzo con un portfolio solido desde el primer dia.\n\nEJERCICIO GUIADO: PLANIFICA TUS 30 LECTURAS\n\nPaso 1: haz una lista de 30 personas (10 conocidos, 10 del ambito, 10 de redes). Paso 2: define tu cronograma (sesiones por semana x semanas). Paso 3: prepara tu formulario de feedback en Google Forms. Paso 4: crea tu diario de practica (puede ser un Notion o un cuaderno).\n\nTAREA PARA CASA\n\nContacta a las primeras 10 personas de tu lista e invitalas a una sesion de practica profesional. Agenda las sesiones en tu Calendly. Prepara tu formulario de feedback. Crea tu diario de practica. La proxima semana empiezas.",
   "slides": [
-    {"type": "title", "title": "Las 30 lecturas gratuitas", "subtitle": "Modulo 10 · Leccion 29 — Master en Guia Espiritual Profesional"},
-    {"type": "content", "title": "Por que 30 es el numero correcto", "body": "Suficiente repeticion para automatizar la estructura.\nSuficiente variedad de consultantes.\nSuficiente feedback para mejorar.\nSuficientes testimonios para credibilidad.\nNi pocas (5) ni demasiadas (100)."},
-    {"type": "content", "title": "Seleccion de consultantes", "body": "10 companeros del master/certificaciones.\n10 amigos/conocidos de tu nicho.\n10 desconocidos de redes sociales.\nProgresion natural: de comodidad a practica real."},
-    {"type": "content", "title": "Cada sesion: igual de profesional que una de pago", "body": "Antes: consentimiento + datos natales.\nDurante: estructura completa con cronometro.\nDespues: email seguimiento + feedback + testimonio.\nNo es sesion light. Es tu sesion completa."},
-    {"type": "content", "title": "El diario de practica", "body": "Despues de cada sesion, 10 minutos:\nQue salio bien? Que salio mal?\nQue haria diferente? Que aprendi?\nComo me senti? (contratransferencia)"},
-    {"type": "quote", "text": "La mejora significativa en cualquier habilidad requiere practica repetida con retroalimentacion explicita y deliberada.", "source": "Ericsson, K.A., 2016 — Peak: Secrets from the New Science of Expertise"},
-    {"type": "content", "title": "Caso Victoria: 30 lecturas en 7 semanas", "body": "Puntuacion media: 8.4/10.\nFeedback positivo: escucha + conexion carta-experiencia.\nFeedback constructivo: tecnicismos + cierre apresurado.\n26 testimonios + 4 casos de estudio para la web."},
-    {"type": "summary", "points": ["30 sesiones gratuitas son tu rito de paso profesional y la base de tu credibilidad", "Cada sesion debe ser tan profesional como una de pago: estructura completa", "El diario de practica y el formulario de feedback son herramientas de mejora continua"]},
-    {"type": "next", "text": "En la ultima leccion hablaremos de mentoria continua, supervision y comunidad para crecer como profesional."}
+    {
+      "type": "title",
+      "title": "Las 30 lecturas gratuitas",
+      "subtitle": "Modulo 10 Â· Leccion 29 â€” Master en Guia Espiritual Profesional"
+    },
+    {
+      "type": "content",
+      "title": "Por que 30 es el numero correcto",
+      "body": "Suficiente repeticion para automatizar la estructura.\nSuficiente variedad de consultantes.\nSuficiente feedback para mejorar.\nSuficientes testimonios para credibilidad.\nNi pocas (5) ni demasiadas (100)."
+    },
+    {
+      "type": "content",
+      "title": "Seleccion de consultantes",
+      "body": "10 companeros del master/certificaciones.\n10 amigos/conocidos de tu nicho.\n10 desconocidos de redes sociales.\nProgresion natural: de comodidad a practica real."
+    },
+    {
+      "type": "content",
+      "title": "Cada sesion: igual de profesional que una de pago",
+      "body": "Antes: consentimiento + datos natales.\nDurante: estructura completa con cronometro.\nDespues: email seguimiento + feedback + testimonio.\nNo es sesion light. Es tu sesion completa."
+    },
+    {
+      "type": "content",
+      "title": "El diario de practica",
+      "body": "Despues de cada sesion, 10 minutos:\nQue salio bien? Que salio mal?\nQue haria diferente? Que aprendi?\nComo me senti? (contratransferencia)"
+    },
+    {
+      "type": "quote",
+      "text": "La mejora significativa en cualquier habilidad requiere practica repetida con retroalimentacion explicita y deliberada.",
+      "source": "Ericsson, K.A., 2016 â€” Peak: Secrets from the New Science of Expertise"
+    },
+    {
+      "type": "content",
+      "title": "Caso Victoria: 30 lecturas en 7 semanas",
+      "body": "Puntuacion media: 8.4/10.\nFeedback positivo: escucha + conexion carta-experiencia.\nFeedback constructivo: tecnicismos + cierre apresurado.\n26 testimonios + 4 casos de estudio para la web."
+    },
+    {
+      "type": "process_diagram",
+      "title": "Las 30 lecturas gratuitas: protocolo de rito de paso",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Seleccion de las 30 personas",
+          "description": "No eliges al azar: contactas a personas de tu red que puedan beneficiarse del trabajo Y que te den feedback honesto. Variedad de perfiles: edades, contextos vitales, niveles de familiaridad con herramientas simbolicas. Evita hacerlas todas con personas que ya te conocen bien: incluye al menos 10 'casi desconocidas'"
+        },
+        {
+          "step": 2,
+          "title": "Encuadre de cada sesion",
+          "description": "Presenta la sesion como lo que es: practica profesional en formacion, no sesion definitiva. La persona sabe que le pediras feedback. Esto no reduce el valor: muchas personas aprecian mas ser parte del proceso que recibir una sesion estandar"
+        },
+        {
+          "step": 3,
+          "title": "Aplica el protocolo completo en cada sesion",
+          "description": "Apertura, clarificacion, desarrollo, integracion, cierre y anclaje. No improvises ni recortes fases porque 'es gratis'. Estas 30 sesiones son tu entrenamiento de alta intensidad: cada sesion completa construye musculo profesional"
+        },
+        {
+          "step": 4,
+          "title": "Feedback estructurado despues de cada sesion",
+          "description": "Pide feedback especifico, no generico. Preguntas utiles: '¿Hubo algun momento en que te perdiste o no te senti escuchada?', '¿Que fue lo mas util?', '¿Que cambiarías?'. Anota el feedback y busca patrones tras las primeras 10 sesiones"
+        },
+        {
+          "step": 5,
+          "title": "Supervision y ajuste cada 10 sesiones",
+          "description": "Tras cada bloque de 10, revisa: que funciona bien, que necesita trabajo, que patrones de contratransferencia aparecen. Lleva las situaciones mas complejas a supervision o a tu grupo de pares. Las 30 sesiones son un proceso, no 30 eventos aislados"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "points": [
+        "30 sesiones gratuitas son tu rito de paso profesional y la base de tu credibilidad",
+        "Cada sesion debe ser tan profesional como una de pago: estructura completa",
+        "El diario de practica y el formulario de feedback son herramientas de mejora continua"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la ultima leccion hablaremos de mentoria continua, supervision y comunidad para crecer como profesional."
+    }
   ],
   "interactive": [
-    {"type": "fill_blanks", "instruction": "Completa los datos del plan de 30 lecturas.", "template": "Total sesiones: ___0___. Ritmo recomendado: ___1___ sesiones/semana. Duracion: ___2___ semanas. Fuentes: ___3___ companeros + ___4___ conocidos + ___5___ desconocidos. Maximo sesiones por dia: ___6___.", "answers": ["30", "5", "6", "10", "10", "10", "2"]},
-    {"type": "sort", "title": "Flujo de cada sesion gratuita", "instruction": "Ordena los pasos de cada sesion gratuita.", "correct_order": ["Enviar consentimiento informado y pedir datos natales", "Realizar sesion con estructura completa (apertura-desarrollo-cierre)", "Enviar email de seguimiento con tarea asignada", "Enviar formulario de feedback (Google Forms)", "Escribir en diario de practica (10 minutos)"]},
-    {"type": "match", "title": "Puntuacion media y accion", "pairs": [{"left": "8-10 puntos", "right": "Lista para cobrar. Lanza con confianza."}, {"left": "6-7 puntos", "right": "Identifica areas de mejora y haz 10 sesiones mas enfocadas."}, {"left": "Menos de 6", "right": "Revision profunda del enfoque antes de lanzar."}]},
-    {"type": "flip_cards", "title": "Preguntas del formulario de feedback", "cards": [{"front": "Valoracion numerica", "back": "Del 1 al 10, como valoras la sesion? Te da un indicador cuantificable de calidad."}, {"front": "Lo mas util", "back": "Que fue lo mas util de la sesion? Revela tus fortalezas reales."}, {"front": "Area de mejora", "back": "Que mejorarias? Revela tus areas de desarrollo sin suposiciones."}, {"front": "Recomendacion", "back": "Recomendarias mi servicio? A quien? Te da pistas sobre tu mercado real."}, {"front": "Permiso de testimonio", "back": "Puedo usar tu feedback en mi web? Base legal para tu portfolio de testimonios."}]},
-    {"type": "lesson_summary", "points": ["30 sesiones gratuitas son el rito de paso profesional que da practica, testimonios y red inicial", "Cada sesion debe ser igual de profesional que una de pago: estructura completa con cronometro", "El formulario de feedback (5 preguntas) y el diario de practica son herramientas de mejora continua", "Puntuacion 8+ indica que estas lista para cobrar; 6-7 requiere practica adicional enfocada"]}
+    {
+      "type": "fill_blanks",
+      "instruction": "Completa los datos del plan de 30 lecturas.",
+      "template": "Total sesiones: ___0___. Ritmo recomendado: ___1___ sesiones/semana. Duracion: ___2___ semanas. Fuentes: ___3___ companeros + ___4___ conocidos + ___5___ desconocidos. Maximo sesiones por dia: ___6___.",
+      "answers": [
+        "30",
+        "5",
+        "6",
+        "10",
+        "10",
+        "10",
+        "2"
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Flujo de cada sesion gratuita",
+      "instruction": "Ordena los pasos de cada sesion gratuita.",
+      "correct_order": [
+        "Enviar consentimiento informado y pedir datos natales",
+        "Realizar sesion con estructura completa (apertura-desarrollo-cierre)",
+        "Enviar email de seguimiento con tarea asignada",
+        "Enviar formulario de feedback (Google Forms)",
+        "Escribir en diario de practica (10 minutos)"
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Puntuacion media y accion",
+      "pairs": [
+        {
+          "left": "8-10 puntos",
+          "right": "Lista para cobrar. Lanza con confianza."
+        },
+        {
+          "left": "6-7 puntos",
+          "right": "Identifica areas de mejora y haz 10 sesiones mas enfocadas."
+        },
+        {
+          "left": "Menos de 6",
+          "right": "Revision profunda del enfoque antes de lanzar."
+        }
+      ]
+    },
+    {
+      "type": "flip_cards",
+      "title": "Preguntas del formulario de feedback",
+      "cards": [
+        {
+          "front": "Valoracion numerica",
+          "back": "Del 1 al 10, como valoras la sesion? Te da un indicador cuantificable de calidad."
+        },
+        {
+          "front": "Lo mas util",
+          "back": "Que fue lo mas util de la sesion? Revela tus fortalezas reales."
+        },
+        {
+          "front": "Area de mejora",
+          "back": "Que mejorarias? Revela tus areas de desarrollo sin suposiciones."
+        },
+        {
+          "front": "Recomendacion",
+          "back": "Recomendarias mi servicio? A quien? Te da pistas sobre tu mercado real."
+        },
+        {
+          "front": "Permiso de testimonio",
+          "back": "Puedo usar tu feedback en mi web? Base legal para tu portfolio de testimonios."
+        }
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "30 sesiones gratuitas son el rito de paso profesional que da practica, testimonios y red inicial",
+        "Cada sesion debe ser igual de profesional que una de pago: estructura completa con cronometro",
+        "El formulario de feedback (5 preguntas) y el diario de practica son herramientas de mejora continua",
+        "Puntuacion 8+ indica que estas lista para cobrar; 6-7 requiere practica adicional enfocada"
+      ]
+    }
   ],
   "citation": [
-    {"researcher": "Ericsson, K.A.", "year": "2016", "finding": "La practica deliberada con retroalimentacion explicita es el mecanismo demostrado para alcanzar la expertise en cualquier dominio profesional"},
-    {"researcher": "Martin Seligman", "year": "2011", "finding": "El compromiso (Engagement) del modelo PERMA se maximiza cuando la practica profesional permite el estado de flujo (flow)"},
-    {"researcher": "Robert Cialdini", "year": "2006", "finding": "El compromiso publico (compartir el plan) aumenta significativamente la probabilidad de cumplimiento"}
+    {
+      "researcher": "Ericsson, K.A.",
+      "year": "2016",
+      "finding": "La practica deliberada con retroalimentacion explicita es el mecanismo demostrado para alcanzar la expertise en cualquier dominio profesional"
+    },
+    {
+      "researcher": "Martin Seligman",
+      "year": "2011",
+      "finding": "El compromiso (Engagement) del modelo PERMA se maximiza cuando la practica profesional permite el estado de flujo (flow)"
+    },
+    {
+      "researcher": "Robert Cialdini",
+      "year": "2006",
+      "finding": "El compromiso publico (compartir el plan) aumenta significativamente la probabilidad de cumplimiento"
+    }
   ],
-  "bibliography": [{"author": "Ericsson, K.A.", "year": "2016", "title": "Peak: Secrets from the New Science of Expertise", "type": "Libro"}, {"author": "Seligman, M.", "year": "2011", "title": "Flourish", "type": "Libro"}, {"author": "Cialdini, R.", "year": "2006", "title": "Influence", "type": "Libro"}, {"author": "Clear, J.", "year": "2018", "title": "Atomic Habits", "type": "Libro"}],
-  "homework": {"task": "Contacta a las primeras 10 personas de tu lista e invitalas a sesion de practica. Agenda en Calendly. Prepara tu formulario de feedback en Google Forms. Crea tu diario de practica en Notion o cuaderno. La proxima semana empiezas tus 30 lecturas.", "duration": "60-90 min preparacion + sesiones durante las proximas semanas", "materials": "Lista de 30 personas, Calendly configurado, Google Forms, diario de practica"},
-  "quiz_points": ["Las 30 lecturas gratuitas proporcionan practica deliberada, testimonios y red inicial: son la inversion mas estrategica del lanzamiento", "Cada sesion gratuita debe seguir la estructura profesional completa y terminar con formulario de feedback y diario de practica", "Una puntuacion media de 8/10 o superior indica que la guia esta lista para cobrar por sus sesiones"]
+  "bibliography": [
+    {
+      "author": "Ericsson, K.A.",
+      "year": "2016",
+      "title": "Peak: Secrets from the New Science of Expertise",
+      "type": "Libro"
+    },
+    {
+      "author": "Seligman, M.",
+      "year": "2011",
+      "title": "Flourish",
+      "type": "Libro"
+    },
+    {
+      "author": "Cialdini, R.",
+      "year": "2006",
+      "title": "Influence",
+      "type": "Libro"
+    },
+    {
+      "author": "Clear, J.",
+      "year": "2018",
+      "title": "Atomic Habits",
+      "type": "Libro"
+    }
+  ],
+  "homework": {
+    "task": "Contacta a las primeras 10 personas de tu lista e invitalas a sesion de practica. Agenda en Calendly. Prepara tu formulario de feedback en Google Forms. Crea tu diario de practica en Notion o cuaderno. La proxima semana empiezas tus 30 lecturas.",
+    "duration": "60-90 min preparacion + sesiones durante las proximas semanas",
+    "materials": "Lista de 30 personas, Calendly configurado, Google Forms, diario de practica"
+  },
+  "quiz_points": [
+    {
+      "question": "Por que hacer 30 lecturas gratuitas antes de cobrar por el servicio es recomendable aunque ya tengas formacion completa?",
+      "options": [
+        "a) Porque la ley espanola exige un periodo de practicas no remuneradas antes de ejercer como guia espiritual",
+        "b) Porque la diferencia entre saber hacer algo y hacerlo de forma fluida con personas reales solo se construye con practica deliberada acumulada",
+        "c) Porque los testimonios de las sesiones gratuitas son los unicos que Hacienda acepta como prueba de actividad ante una inspeccion",
+        "d) Porque las plataformas de venta de sesiones online exigen un minimo de 30 sesiones documentadas para aceptar a nuevas profesionales"
+      ],
+      "correct": 1,
+      "explanation": "La formacion da el marco; la practica deliberada con personas reales construye la fluidez. Las 30 sesiones son el puente entre saber la teoria y ejecutar el proceso con naturalidad, manejar lo inesperado y desarrollar el estilo propio. No hay atajos para este tipo de experiencia encarnada."
+    },
+    {
+      "question": "El feedback de las personas que participan en las 30 lecturas gratuitas es mas valioso cuando:",
+      "options": [
+        "a) Proviene de personas cercanas que te conocen bien y pueden evaluar si el trabajo refleja tu verdadera personalidad",
+        "b) Es especifico y estructurado: no 'me ha gustado mucho' sino respuestas a preguntas concretas sobre momentos y experiencias de la sesion",
+        "c) Incluye una evaluacion numerica del 1 al 10 que permite comparar objetivamente el progreso entre sesiones",
+        "d) Proviene de personas con experiencia previa en herramientas simbolicas que pueden evaluar la precision tecnica"
+      ],
+      "correct": 1,
+      "explanation": "El feedback generico ('estuvo muy bien') no informa el desarrollo profesional. El feedback especifico ('en el minuto 20, cuando dijiste eso sobre mi madre, me perdi completamente') identifica exactamente que ajustar. Las preguntas estructuradas de feedback producen informacion accionable."
+    },
+    {
+      "question": "Incluir al menos 10 personas 'casi desconocidas' en las 30 lecturas es importante porque:",
+      "options": [
+        "a) Las personas desconocidas tienen cartas natales mas complejas que las personas cercanas, lo que ofrece mayor variedad tecnica",
+        "b) Con personas cercanas tiendes a adaptar el estilo inconscientemente; con desconocidas el proceso es mas neutro y revela el trabajo real",
+        "c) La normativa de proteccion de datos recomienda no hacer sesiones con personas del circulo intimo para evitar conflictos de interes",
+        "d) Los testimonios de personas desconocidas tienen mayor credibilidad ante potenciales nuevas consultantes que los de conocidas"
+      ],
+      "correct": 1,
+      "explanation": "Con personas del circulo intimo existe contratransferencia previa y tendencia a adaptar el trabajo. Con desconocidas, el proceso es mas cercano a lo que sera la practica real: sin historia compartida, sin ajustes inconscientes, con la tension real de no saber nada de la persona antes de la sesion."
+    },
+    {
+      "question": "Las 30 sesiones se hacen con el protocolo completo (apertura, desarrollo, integracion, cierre) porque:",
+      "options": [
+        "a) Sin seguir el protocolo completo las sesiones no cuentan como practica valida segun el codigo de conducta del Metodo Selene",
+        "b) Practicar el proceso completo en cada sesion construye la estructura como habito automatico, no como esfuerzo consciente",
+        "c) El protocolo completo garantiza que la sesion dure el tiempo minimo requerido para ser considerada una sesion profesional",
+        "d) Las personas que participan gratis merecen el mismo nivel de servicio que las que pagan, por respeto y gratitud"
+      ],
+      "correct": 1,
+      "explanation": "El habito profesional se construye repitiendo el proceso correcto, no una version reducida. Si practicas con atajos, el atajo se convierte en el habito. Las 30 sesiones con protocolo completo instalan la estructura como segundo idioma: disponible automaticamente cuando la situacion lo requiere."
+    },
+    {
+      "question": "La supervision cada 10 sesiones durante el proceso de las 30 lecturas tiene como objetivo principal:",
+      "options": [
+        "a) Verificar que las interpretaciones astrologicas y de tarot son tecnicamente correctas segun los estandares del master",
+        "b) Identificar patrones de contratransferencia, puntos ciegos y areas de mejora que no son visibles desde dentro de la propia practica",
+        "c) Obtener la firma del supervisor como prueba de que las practicas han sido completadas para obtener el certificado",
+        "d) Resolver dudas tecnicas sobre herramientas simbolicas que surgieron durante las sesiones practicas"
+      ],
+      "correct": 1,
+      "explanation": "La supervision no es correccion tecnica sino espejo profesional. Despues de 10 sesiones aparecen patrones: el tipo de consultante que te resulta mas dificil, el momento en que pierdes el hilo, las emociones propias que activan ciertas tematicas. La supervision hace visible lo que desde dentro es invisible."
+    }
+  ]
 }

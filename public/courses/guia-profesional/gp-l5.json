@@ -7,7 +7,7 @@
     {
       "type": "title",
       "title": "Astrologia + suenos + constelaciones",
-      "subtitle": "Modulo 2 · Leccion 5 — Master en Guia Espiritual Profesional"
+      "subtitle": "Modulo 2 Â· Leccion 5 â€” Master en Guia Espiritual Profesional"
     },
     {
       "type": "content",
@@ -17,12 +17,12 @@
     {
       "type": "content",
       "title": "Protocolo de sesion triple (75-90 min)",
-      "body": "Fase 1: Mapa estructural — carta natal (20 min)\nFase 2: Exploracion onirica — sueno reciente (25 min)\nFase 3: Exploracion sistemica — constelacion individual (25 min)\nFase 4: Integracion tridimensional (15 min)"
+      "body": "Fase 1: Mapa estructural â€” carta natal (20 min)\nFase 2: Exploracion onirica â€” sueno reciente (25 min)\nFase 3: Exploracion sistemica â€” constelacion individual (25 min)\nFase 4: Integracion tridimensional (15 min)"
     },
     {
       "type": "quote",
       "text": "La neuroplasticidad permite que nuevas experiencias de comprension remodelen los circuitos neuronales que sostienen patrones repetitivos.",
-      "source": "Dispenza, J. — 2012, Breaking the Habit of Being Yourself"
+      "source": "Dispenza, J. â€” 2012, Breaking the Habit of Being Yourself"
     },
     {
       "type": "content",
@@ -43,6 +43,50 @@
       "type": "content",
       "title": "La constelacion individual",
       "body": "Sin grupo: la consultante coloca objetos sobre la mesa.\nCada objeto representa un miembro familiar.\nLa disposicion espacial revela dinamicas invisibles.\nGuiada por el patron que revelo la carta natal."
+    },
+    {
+      "type": "comparison_table",
+      "title": "Modelo tridimensional: tres herramientas, tres preguntas",
+      "columns": [
+        "Herramienta",
+        "Pregunta que responde",
+        "Dimension",
+        "Cuando es clave"
+      ],
+      "rows": [
+        {
+          "label": "Astrologia",
+          "values": [
+            "Que patron esta activo y que estructura tiene",
+            "Estructura",
+            "Patrones repetitivos, momentos de transicion"
+          ]
+        },
+        {
+          "label": "Suenos",
+          "values": [
+            "Como se manifiesta ese patron en mi experiencia interna",
+            "Proceso psiquico",
+            "Emociones no resueltas, simbolos recurrentes"
+          ]
+        },
+        {
+          "label": "Constelaciones",
+          "values": [
+            "De donde viene ese patron en mi sistema familiar",
+            "Origen transgeracional",
+            "Herencia emocional, mandatos no dichos"
+          ]
+        },
+        {
+          "label": "Integracion triple",
+          "values": [
+            "Como se relacionan los tres niveles",
+            "Comprension tridimensional",
+            "Patrones con dimension familiar evidente"
+          ]
+        }
+      ]
     },
     {
       "type": "summary",
@@ -191,8 +235,60 @@
     "materials": "Carta natal propia, diario de suenos, cuaderno"
   },
   "quiz_points": [
-    "El modelo tridimensional asigna una pregunta diferente a cada herramienta: estructura (astrologia), proceso (suenos) y origen (constelaciones)",
-    "El protocolo de sesion triple requiere minimo 75 minutos y no debe usarse en situaciones de crisis aguda",
-    "La integracion tridimensional permite que la consultante vea el patron completo por primera vez, lo cual es el primer paso para transformarlo"
+    {
+      "question": "En el caso de Isabel, la cuadratura Venus Cancer / Pluton Libra en la carta natal revela la estructura del patron. Que dimension aniade el sueno de la cocina?",
+      "options": [
+        "a) Confirma el patron astrologico desde otra fuente simbolica",
+        "b) Muestra como se vive internamente el patron: cuidar sin ser recibida genera ansiedad de desaparicion",
+        "c) Revela el origen familiar del patron en la madre de Isabel",
+        "d) Indica el momento de transito mas intenso del patron en la vida adulta"
+      ],
+      "correct": 1,
+      "explanation": "El sueno aporta la dimension de proceso psiquico: como Isabel experimenta internamente el patron que la carta natal describe estructuralmente. La cocina y la ausencia de comensales son la experiencia subjetiva de la cuadratura Venus-Pluton."
+    },
+    {
+      "question": "Por que la constelacion individual (con objetos sobre la mesa) puede revelar dinamicas que la carta natal no muestra?",
+      "options": [
+        "a) Porque es mas precisa que la astrologia para identificar fechas de eventos",
+        "b) Porque la disposicion espacial de las figuras revela dinamicas sistemicas invisibles: distancias, lealtades, ausencias",
+        "c) Porque la consultante puede manipular los objetos a diferencia de los simbolos astrologicos",
+        "d) Porque conecta directamente con el inconsciente colectivo sin filtros simbolicos"
+      ],
+      "correct": 1,
+      "explanation": "La constelacion individual externaliza las representaciones internas del sistema familiar. La disposicion espacial revela dinamicas que no son visibles en la carta natal."
+    },
+    {
+      "question": "Segun Rosalind Cartwright (2010), los suenos recurrentes procesan:",
+      "options": [
+        "a) Informacion del futuro que el inconsciente anticipa",
+        "b) Emociones no resueltas durante el sueno REM",
+        "c) Memorias de vidas pasadas almacenadas en el ADN",
+        "d) Mensajes de la carta natal que la mente consciente no puede integrar"
+      ],
+      "correct": 1,
+      "explanation": "Cartwright demostro que el sueno REM procesa emociones no resueltas. Un sueno recurrente indica que hay material emocional que el sistema no ha podido integrar en vigilia, lo que lo hace especialmente util para el trabajo de patron."
+    },
+    {
+      "question": "Cuando NO debes usar el protocolo de integracion triple?",
+      "options": [
+        "a) Cuando la consultante no tiene formacion en astrologia o no conoce sus suenos",
+        "b) Cuando la consulta es puntual y concreta, la consultante esta en crisis aguda o el tiempo es limitado",
+        "c) Cuando la consultante ha trabajado previamente con otra guia espiritual",
+        "d) Cuando los aspectos natales relevantes son cuadraturas en lugar de oposiciones"
+      ],
+      "correct": 1,
+      "explanation": "El protocolo triple requiere capacidad de introspeccion, ausencia de crisis aguda y tiempo suficiente (minimo 75 min). Una crisis aguda requiere contencion, no profundizacion."
+    },
+    {
+      "question": "Joe Dispenza argumenta que entender un patron desde tres angulos diferentes debilita el circuito neuronal que lo sostiene. Esto implica que:",
+      "options": [
+        "a) La comprension intelectual del patron es suficiente para cambiarlo",
+        "b) La integracion tridimensional no es solo simbolica sino que tiene un correlato neurobiologico en la transformacion",
+        "c) Los tres angulos deben presentarse en una sola sesion para que el efecto neurologico sea completo",
+        "d) La neuroplasticidad solo funciona cuando la comprension ocurre durante el sueno REM"
+      ],
+      "correct": 1,
+      "explanation": "Dispenza mostro que nuevas experiencias de comprension remodelen circuitos establecidos. La integracion triple crea una comprension multi-perspectiva que ataca el patron desde diferentes representaciones neuronales."
+    }
   ]
 }

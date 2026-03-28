@@ -7,7 +7,7 @@
     {
       "type": "title",
       "title": "Escucha activa y presencia",
-      "subtitle": "Modulo 3 · Leccion 7 — Master en Guia Espiritual Profesional"
+      "subtitle": "Modulo 3 Â· Leccion 7 â€” Master en Guia Espiritual Profesional"
     },
     {
       "type": "content",
@@ -22,7 +22,7 @@
     {
       "type": "quote",
       "text": "Cuando alguien te escucha de verdad, sin juzgarte, sin intentar responsabilizarse por ti, sin intentar moldearte, se siente tremendamente bien.",
-      "source": "Carl Rogers, 1961 — On Becoming a Person"
+      "source": "Carl Rogers, 1961 â€” On Becoming a Person"
     },
     {
       "type": "content",
@@ -43,6 +43,37 @@
       "type": "content",
       "title": "Empatia vs simpatia",
       "body": "Simpatia: sentir lo mismo (ay, que horrible).\nEmpatia: comprender sin confundir.\nPercibo que experimentas un vacio profundo.\nQuieres contarme mas sobre como se siente?"
+    },
+    {
+      "type": "process_diagram",
+      "title": "Escucha activa: del oyente pasivo al facilitador presente",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Presencia plena antes de empezar",
+          "description": "2 minutos de respiracion consciente antes de la sesion. Durante la sesion: pantalla cerrada, movil en silencio, contacto visual sostenido. La presencia es una decision activa, no un estado automatico"
+        },
+        {
+          "step": 2,
+          "title": "Escucha sin agenda",
+          "description": "No estes pensando en la siguiente interpretacion mientras la consultante habla. Escucha las palabras exactas que elige, el tono, el ritmo, lo que no dice. Lo que omite es tan informativo como lo que expresa"
+        },
+        {
+          "step": 3,
+          "title": "Reflejo y parafraseo",
+          "description": "Devuelve lo que escuchaste con las palabras de la consultante: 'Lo que escucho es que...' Confirma comprension y da oportunidad de corregir o profundizar"
+        },
+        {
+          "step": 4,
+          "title": "Pregunta abierta de apertura",
+          "description": "Tras el reflejo, una pregunta abierta: que mas hay ahi o que sientes cuando lo dices asi. Evita preguntas de si/no o que guien hacia tu interpretacion"
+        },
+        {
+          "step": 5,
+          "title": "Validacion sin acuerdo",
+          "description": "Valida la experiencia sin necesariamente validar la interpretacion: 'Tiene sentido que te sientas asi' no es lo mismo que 'tienes razon en esa lectura de la situacion'"
+        }
+      ]
     },
     {
       "type": "summary",
@@ -138,7 +169,7 @@
     {
       "type": "branching_scenario",
       "title": "Tu consultante rompe a llorar",
-      "scenario": "Estás explicando un aspecto natal y tu consultante empieza a llorar silenciosamente. Que haces?",
+      "scenario": "EstÃ¡s explicando un aspecto natal y tu consultante empieza a llorar silenciosamente. Que haces?",
       "options": [
         {
           "text": "Continuas con la explicacion para no hacer el llanto mas incomodo",
@@ -213,8 +244,60 @@
     "materials": "Diario o cuaderno para anotaciones"
   },
   "quiz_points": [
-    "Las tres condiciones de Rogers (empatia, aceptacion incondicional y congruencia) son necesarias y suficientes para facilitar el cambio, segun su investigacion de 1957",
-    "Los seis componentes practicos de la escucha activa son: reflejo simple, reflejo de sentimiento, parafraseo, preguntas abiertas, silencios y sumarizacion",
-    "Con herramientas simbolicas, la escucha activa transforma la interpretacion unidireccional en exploracion participativa donde la consultante es coautora de su comprension"
+    {
+      "question": "Carl Rogers demostro que el cambio terapeutico ocurre principalmente gracias a:",
+      "options": [
+        "a) La precision tecnica del facilitador en el uso de las herramientas",
+        "b) La calidad de la relacion: empatia, aceptacion incondicional y congruencia del facilitador",
+        "c) El numero de sesiones y la profundidad del trabajo a largo plazo",
+        "d) El nivel de motivacion de cambio que trae la consultante a la sesion"
+      ],
+      "correct": 1,
+      "explanation": "Rogers demostro que las tecnicas especificas son secundarias. Las condiciones relacionales son las condiciones necesarias y suficientes para el cambio. Una guia congruente y empatica es mas efectiva que una brillante pero distante."
+    },
+    {
+      "question": "Una consultante dice: 'Siempre me pasa lo mismo en el trabajo, es que soy un desastre.' La respuesta de escucha activa mas adecuada es:",
+      "options": [
+        "a) 'No, no eres un desastre. Tu carta natal muestra que tienes muchos recursos'",
+        "b) 'Lo que escucho es que sientes que hay un patron que se repite. Que es exactamente lo que pasa?'",
+        "c) 'Eso puede estar relacionado con tu Saturno natal en Casa 10'",
+        "d) 'Desde cuando te sientes asi? Es algo reciente o viene de lejos?'"
+      ],
+      "correct": 1,
+      "explanation": "La respuesta de escucha activa refleja lo que se escucho sin evaluar ni redirigir. Opcion a) invalida. Opcion c) redirige hacia la herramienta. Opcion d) es historial, no reflejo. Solo b) devuelve lo escuchado y abre sin agenda."
+    },
+    {
+      "question": "La congruencia de Rogers en la practica de guia espiritual significa:",
+      "options": [
+        "a) Que la guia debe compartir sus propias experiencias personales para conectar con la consultante",
+        "b) Que la guia esta alineada internamente: lo que siente, lo que piensa y lo que expresa son coherentes entre si",
+        "c) Que la interpretacion de la carta natal es coherente con la interpretacion del tarot",
+        "d) Que la guia sigue exactamente el protocolo de sesion sin desviarse"
+      ],
+      "correct": 1,
+      "explanation": "Congruencia es autenticidad: no hay discrepancia entre la experiencia interna y la expresion externa. Las consultantes perciben la incongruencia aunque no la puedan verbalizar."
+    },
+    {
+      "question": "El silencio durante una sesion es un indicador de que:",
+      "options": [
+        "a) La consultante no esta comprometida y necesita mas preguntas",
+        "b) La guia ha cometido un error y la consultante no sabe como responder",
+        "c) Algo importante esta siendo procesado y el silencio debe sostenerse, no llenarse",
+        "d) Es momento de pasar a la siguiente herramienta o fase de la sesion"
+      ],
+      "correct": 2,
+      "explanation": "El silencio no es vacio: es procesamiento. Llenarlo con palabras por incomodidad de la guia interrumpe el trabajo interno de la consultante. Sostener el silencio es una de las habilidades mas avanzadas de la facilitacion."
+    },
+    {
+      "question": "Una guia esta pensando en la siguiente interpretacion mientras la consultante habla. Esto compromete la sesion porque:",
+      "options": [
+        "a) Reduce el tiempo disponible para la interpretacion astrologica o de tarot",
+        "b) La guia pierde datos verbales y no verbales cruciales que solo estan disponibles en ese momento",
+        "c) La consultante puede percibir la distraccion y sentirse juzgada por sus palabras",
+        "d) Genera contratransferencia que puede contaminar la lectura de la carta"
+      ],
+      "correct": 1,
+      "explanation": "La escucha activa requiere presencia total. Pensar en la siguiente interpretacion bloquea la recepcion de informacion. Lo que la consultante dice mientras la guia no escucha se pierde para siempre."
+    }
   ]
 }

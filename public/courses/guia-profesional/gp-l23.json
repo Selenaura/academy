@@ -1,29 +1,268 @@
 {
-  "lesson_number": 23, "module": 8, "title": "Email marketing: tu lista es tu activo mas valioso",
+  "lesson_number": 23,
+  "module": 8,
+  "title": "Email marketing: tu lista es tu activo mas valioso",
   "text_content": "Instagram puede cambiar su algoritmo manana. Pinterest puede desaparecer. Tu web puede caer. Pero tu lista de email es tuya. Nadie te la puede quitar. Es el unico canal de comunicacion donde tienes acceso directo a las personas que han elegido escucharte.\n\nCialdini (2006) identifico el compromiso y la coherencia como principios de influencia: cuando alguien se suscribe a tu lista, ha dado un primer paso de compromiso. Ese compromiso facilita los siguientes pasos (reservar una sesion, comprar un taller).\n\nPOR QUE EL EMAIL SUPERA A LAS REDES\n\nTasas de apertura de email marketing para coaches y terapeutas: 20-35% (dato del sector 2024). Alcance organico de Instagram: 5-15% de tus seguidores. El email llega directamente a la bandeja de entrada. Las redes filtran tu contenido a traves de un algoritmo que tu no controlas.\n\nTU LEAD MAGNET: EL GANCHO DE ENTRADA\n\nUn lead magnet es un recurso gratuito que ofreces a cambio del email. Debe ser: valioso (la persona lo quiere de verdad), especifico (resuelve un problema concreto de tu nicho), rapido de consumir (PDF de 5-10 paginas, una guia practica, un mini-curso de 3 emails).\n\nEjemplos de lead magnets para guias: guia descargable: Los 5 transitos mas importantes de tu carta natal y que significan para ti. Mini-curso por email (3 dias): Descubre tu Luna natal en 3 pasos. Checklist: Que preguntar antes de tu primera sesion de astrologia. Meditacion guiada: Conecta con tu carta natal (audio de 10 minutos).\n\nEl lead magnet se ofrece en tu web (pop-up o pagina dedicada), en tu bio de Instagram y en tus pins de Pinterest.\n\nLA SECUENCIA DE BIENVENIDA\n\nCuando alguien se suscribe, no le envias un email de venta inmediato. Le envias una secuencia de bienvenida de 3-5 emails que construye confianza.\n\nEmail 1 (inmediato): entrega del lead magnet + presentacion breve. Hola, soy [nombre]. Aqui tienes tu guia. Un poco sobre mi y mi enfoque.\n\nEmail 2 (dia 2): valor puro. Un consejo practico relacionado con tu nicho. Sin vender nada.\n\nEmail 3 (dia 4): tu historia. Por que te dedicas a esto. Conexion emocional.\n\nEmail 4 (dia 7): caso de estudio o testimonio. Prueba social.\n\nEmail 5 (dia 10): invitacion suave a trabajar contigo. Si lo que te he compartido resuena, aqui puedes reservar una sesion.\n\nNEWSLETTER REGULAR\n\nDespues de la secuencia de bienvenida, envias un email semanal o quincenal con contenido de valor. Temas: reflexiones sobre transitos actuales que afectan a tu nicho, tips practicos, historias anonimizadas de sesiones, invitaciones a talleres o eventos.\n\nRegla: 80% valor, 20% promocion (misma regla que en redes).\n\nHerramientas: Mailchimp (gratuito hasta 500 contactos), MailerLite (gratuito hasta 1000), ConvertKit (mas avanzado, orientado a creadores).\n\nCASO PRACTICO: LA LISTA DE ROSA\n\nRosa creo un lead magnet (guia de transitos 2025 para emprendedoras) y lo promociono en Pinterest e Instagram. En 6 meses: 450 suscriptores. Con un newsletter quincenal, mantiene un 28% de apertura. De esos 450, 35 han reservado sesion (conversion del 7.8%). Ingreso generado por la lista: 2.800 EUR en 6 meses.\n\nEJERCICIO GUIADO: DISENA TU LEAD MAGNET\n\nElige un problema concreto de tu nicho que puedas resolver en 5-10 paginas. Escribe el indice del lead magnet. Redacta las primeras 2 paginas. Disena la portada en Canva.\n\nTAREA PARA CASA\n\nCrea tu lead magnet completo (PDF de 5-10 paginas) y configura la secuencia de bienvenida de 5 emails en Mailchimp o MailerLite. Escribe los 5 emails completos. Configura la entrega automatica del lead magnet. Haz una prueba enviandotelo a ti misma.",
   "slides": [
-    {"type": "title", "title": "Email marketing para guias", "subtitle": "Modulo 8 · Leccion 23 — Master en Guia Espiritual Profesional"},
-    {"type": "content", "title": "Email vs redes sociales", "body": "Tasa apertura email: 20-35%.\nAlcance organico Instagram: 5-15%.\nTu lista de email es tuya: nadie te la quita.\nLas redes dependen de algoritmos que no controlas."},
-    {"type": "content", "title": "El lead magnet", "body": "Recurso gratuito a cambio del email.\nDebe ser: valioso, especifico, rapido de consumir.\nEjemplos: guia PDF, mini-curso 3 emails, checklist.\nSe ofrece en web, bio Instagram, pins Pinterest."},
-    {"type": "content", "title": "Secuencia de bienvenida (5 emails)", "body": "Email 1: entrega lead magnet + presentacion.\nEmail 2: valor puro, consejo practico.\nEmail 3: tu historia personal.\nEmail 4: caso de estudio o testimonio.\nEmail 5: invitacion suave a trabajar contigo."},
-    {"type": "quote", "text": "El compromiso inicial (suscribirse a tu lista) facilita los compromisos posteriores. Es el principio de coherencia en accion.", "source": "Cialdini, 2006 — Principio de compromiso y coherencia"},
-    {"type": "content", "title": "Caso Rosa: 450 suscriptores, 35 clientes", "body": "Lead magnet: guia de transitos para emprendedoras.\n6 meses: 450 suscriptores, 28% apertura.\n35 sesiones reservadas = 7.8% conversion.\nIngreso de la lista: 2.800 EUR."},
-    {"type": "summary", "points": ["Tu lista de email es tu activo mas valioso: no depende de algoritmos", "El lead magnet atrae suscriptores con valor especifico y rapido", "La secuencia de 5 emails construye confianza antes de vender"]},
-    {"type": "next", "text": "En la proxima leccion veremos la estrategia mas rentable: referidos y boca a boca."}
+    {
+      "type": "title",
+      "title": "Email marketing para guias",
+      "subtitle": "Modulo 8 Â· Leccion 23 â€” Master en Guia Espiritual Profesional"
+    },
+    {
+      "type": "content",
+      "title": "Email vs redes sociales",
+      "body": "Tasa apertura email: 20-35%.\nAlcance organico Instagram: 5-15%.\nTu lista de email es tuya: nadie te la quita.\nLas redes dependen de algoritmos que no controlas."
+    },
+    {
+      "type": "content",
+      "title": "El lead magnet",
+      "body": "Recurso gratuito a cambio del email.\nDebe ser: valioso, especifico, rapido de consumir.\nEjemplos: guia PDF, mini-curso 3 emails, checklist.\nSe ofrece en web, bio Instagram, pins Pinterest."
+    },
+    {
+      "type": "content",
+      "title": "Secuencia de bienvenida (5 emails)",
+      "body": "Email 1: entrega lead magnet + presentacion.\nEmail 2: valor puro, consejo practico.\nEmail 3: tu historia personal.\nEmail 4: caso de estudio o testimonio.\nEmail 5: invitacion suave a trabajar contigo."
+    },
+    {
+      "type": "quote",
+      "text": "El compromiso inicial (suscribirse a tu lista) facilita los compromisos posteriores. Es el principio de coherencia en accion.",
+      "source": "Cialdini, 2006 â€” Principio de compromiso y coherencia"
+    },
+    {
+      "type": "content",
+      "title": "Caso Rosa: 450 suscriptores, 35 clientes",
+      "body": "Lead magnet: guia de transitos para emprendedoras.\n6 meses: 450 suscriptores, 28% apertura.\n35 sesiones reservadas = 7.8% conversion.\nIngreso de la lista: 2.800 EUR."
+    },
+    {
+      "type": "process_diagram",
+      "title": "Sistema de email marketing: de suscriptora a consultante",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Lead magnet: oferta de entrada de valor",
+          "description": "Algo gratuito que tu publico quiere descargarse a cambio de su email. Ejemplos: 'Mini-lectura de tu Luna natal en 5 preguntas', 'Guia de los transitos de 2025', 'Meditacion para conectar con tu carta natal'. Debe ser util e inmediatamente aplicable"
+        },
+        {
+          "step": 2,
+          "title": "Secuencia de bienvenida (5-7 emails)",
+          "description": "Email 1: entrega el lead magnet + quien eres. Email 2: tu historia y por que haces esto. Email 3: como funciona trabajar contigo. Email 4: un caso de exito anonimizado. Email 5: invitacion a una sesion de introduccion o llamada de descubrimiento. Se envia de forma automatica en los primeros 10-14 dias"
+        },
+        {
+          "step": 3,
+          "title": "Newsletter regular (cada 1-2 semanas)",
+          "description": "Contenido de valor consistente: una lectura de transitos, una reflexion, un ejercicio practico. El objetivo no es vender en cada envio: es estar presente de forma util hasta que la persona este lista para reservar"
+        },
+        {
+          "step": 4,
+          "title": "Emails de venta (maximo 20% del total)",
+          "description": "De cada 5 emails, maximo 1 es abiertamente comercial. El resto aporta valor. Cuando lanzas un programa, taller o retiro, puedes tener una semana con 3-4 emails de venta, seguida de vuelta al contenido de valor"
+        },
+        {
+          "step": 5,
+          "title": "Segmentacion basica",
+          "description": "Minimo: distingue entre suscriptoras nuevas (reciben la secuencia de bienvenida) y suscriptoras activas (reciben la newsletter regular). Avanzado: segmenta por interes (astrologia, tarot, constelaciones) para enviar contenido mas relevante"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Tu lista de email es tu activo mas valioso: no depende de algoritmos",
+        "El lead magnet atrae suscriptores con valor especifico y rapido",
+        "La secuencia de 5 emails construye confianza antes de vender"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la proxima leccion veremos la estrategia mas rentable: referidos y boca a boca."
+    }
   ],
   "interactive": [
-    {"type": "sort", "title": "Secuencia de bienvenida", "instruction": "Ordena los 5 emails de la secuencia de bienvenida.", "correct_order": ["Email 1 (dia 0): Entrega lead magnet + presentacion breve", "Email 2 (dia 2): Valor puro, consejo practico del nicho", "Email 3 (dia 4): Tu historia personal, por que te dedicas a esto", "Email 4 (dia 7): Caso de estudio o testimonio (prueba social)", "Email 5 (dia 10): Invitacion suave a reservar sesion"]},
-    {"type": "flip_cards", "title": "Lead magnets efectivos para guias", "cards": [{"front": "Guia PDF de transitos anuales", "back": "Valor alto, especifico, rapido de consumir. Funciona muy bien para nicho de astrologia. 5-10 paginas."}, {"front": "Mini-curso de 3 emails", "back": "Genera engagement sostenido. La persona abre 3 emails seguidos y se habitua a leer tus correos."}, {"front": "Checklist pre-sesion", "back": "Ultra-rapido de consumir. Posiciona como profesional y prepara para la sesion de pago."}, {"front": "Meditacion guiada en audio", "back": "Diferencial experiencial. Conecta emocionalmente. Nota: audio para meditaciones es apropiado segun las directrices."}]},
-    {"type": "fill_blanks", "instruction": "Completa las metricas de email marketing.", "template": "Tasa de apertura en el sector: ___0___%. Alcance organico Instagram: ___1___%. Conversion de suscriptor a cliente (caso Rosa): ___2___%. Regla de contenido: ___3___% valor, ___4___% promocion.", "answers": ["20-35", "5-15", "7.8", "80", "20"]},
-    {"type": "comparison", "headers": ["Herramienta email", "Plan gratuito", "Mejor para"], "rows": [["Mailchimp", "Hasta 500 contactos", "Empezar rapido, intuitivo"], ["MailerLite", "Hasta 1000 contactos", "Mas contactos gratis, buen diseno"], ["ConvertKit", "Hasta 1000 suscriptores", "Creadores avanzados, automatizaciones"]]},
-    {"type": "lesson_summary", "points": ["La lista de email es el unico canal que controlas: no depende de algoritmos externos", "El lead magnet efectivo es valioso, especifico y rapido de consumir", "La secuencia de 5 emails construye confianza progresivamente antes de ofrecer servicios", "La regla 80/20 (valor/promocion) aplica igual que en redes sociales"]}
+    {
+      "type": "sort",
+      "title": "Secuencia de bienvenida",
+      "instruction": "Ordena los 5 emails de la secuencia de bienvenida.",
+      "correct_order": [
+        "Email 1 (dia 0): Entrega lead magnet + presentacion breve",
+        "Email 2 (dia 2): Valor puro, consejo practico del nicho",
+        "Email 3 (dia 4): Tu historia personal, por que te dedicas a esto",
+        "Email 4 (dia 7): Caso de estudio o testimonio (prueba social)",
+        "Email 5 (dia 10): Invitacion suave a reservar sesion"
+      ]
+    },
+    {
+      "type": "flip_cards",
+      "title": "Lead magnets efectivos para guias",
+      "cards": [
+        {
+          "front": "Guia PDF de transitos anuales",
+          "back": "Valor alto, especifico, rapido de consumir. Funciona muy bien para nicho de astrologia. 5-10 paginas."
+        },
+        {
+          "front": "Mini-curso de 3 emails",
+          "back": "Genera engagement sostenido. La persona abre 3 emails seguidos y se habitua a leer tus correos."
+        },
+        {
+          "front": "Checklist pre-sesion",
+          "back": "Ultra-rapido de consumir. Posiciona como profesional y prepara para la sesion de pago."
+        },
+        {
+          "front": "Meditacion guiada en audio",
+          "back": "Diferencial experiencial. Conecta emocionalmente. Nota: audio para meditaciones es apropiado segun las directrices."
+        }
+      ]
+    },
+    {
+      "type": "fill_blanks",
+      "instruction": "Completa las metricas de email marketing.",
+      "template": "Tasa de apertura en el sector: ___0___%. Alcance organico Instagram: ___1___%. Conversion de suscriptor a cliente (caso Rosa): ___2___%. Regla de contenido: ___3___% valor, ___4___% promocion.",
+      "answers": [
+        "20-35",
+        "5-15",
+        "7.8",
+        "80",
+        "20"
+      ]
+    },
+    {
+      "type": "comparison",
+      "headers": [
+        "Herramienta email",
+        "Plan gratuito",
+        "Mejor para"
+      ],
+      "rows": [
+        [
+          "Mailchimp",
+          "Hasta 500 contactos",
+          "Empezar rapido, intuitivo"
+        ],
+        [
+          "MailerLite",
+          "Hasta 1000 contactos",
+          "Mas contactos gratis, buen diseno"
+        ],
+        [
+          "ConvertKit",
+          "Hasta 1000 suscriptores",
+          "Creadores avanzados, automatizaciones"
+        ]
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "La lista de email es el unico canal que controlas: no depende de algoritmos externos",
+        "El lead magnet efectivo es valioso, especifico y rapido de consumir",
+        "La secuencia de 5 emails construye confianza progresivamente antes de ofrecer servicios",
+        "La regla 80/20 (valor/promocion) aplica igual que en redes sociales"
+      ]
+    }
   ],
   "citation": [
-    {"researcher": "Robert Cialdini", "year": "2006", "finding": "El principio de compromiso y coherencia demuestra que un primer paso (suscribirse) facilita los compromisos posteriores (comprar)"},
-    {"researcher": "Robert Cialdini", "year": "2006", "finding": "La reciprocidad generada por contenido gratuito de valor crea un impulso natural de correspondencia"},
-    {"researcher": "Daniel Kahneman", "year": "2011", "finding": "La familiaridad generada por emails regulares reduce la percepcion de riesgo al contratar un servicio"}
+    {
+      "researcher": "Robert Cialdini",
+      "year": "2006",
+      "finding": "El principio de compromiso y coherencia demuestra que un primer paso (suscribirse) facilita los compromisos posteriores (comprar)"
+    },
+    {
+      "researcher": "Robert Cialdini",
+      "year": "2006",
+      "finding": "La reciprocidad generada por contenido gratuito de valor crea un impulso natural de correspondencia"
+    },
+    {
+      "researcher": "Daniel Kahneman",
+      "year": "2011",
+      "finding": "La familiaridad generada por emails regulares reduce la percepcion de riesgo al contratar un servicio"
+    }
   ],
-  "bibliography": [{"author": "Cialdini, R.", "year": "2006", "title": "Influence", "type": "Libro"}, {"author": "Godin, S.", "year": "1999", "title": "Permission Marketing", "type": "Libro"}, {"author": "Kahneman, D.", "year": "2011", "title": "Thinking, Fast and Slow", "type": "Libro"}, {"author": "Patel, N.", "year": "2020", "title": "Email Marketing Best Practices", "type": "Articulo"}],
-  "homework": {"task": "Crea tu lead magnet completo (PDF 5-10 paginas en Canva) y configura la secuencia de 5 emails de bienvenida en Mailchimp o MailerLite. Escribe los 5 emails, configura la entrega automatica y haz una prueba enviandotelo a ti misma.", "duration": "3-4 horas", "materials": "Canva, Mailchimp o MailerLite, tu contenido de nicho"},
-  "quiz_points": ["La lista de email es el unico canal de comunicacion que no depende de algoritmos externos y es propiedad de la guia", "El lead magnet efectivo es valioso, especifico para el nicho y rapido de consumir (5-10 paginas o 3 emails)", "La secuencia de bienvenida de 5 emails sigue la progresion: entrega, valor, historia, prueba social, invitacion suave"]
+  "bibliography": [
+    {
+      "author": "Cialdini, R.",
+      "year": "2006",
+      "title": "Influence",
+      "type": "Libro"
+    },
+    {
+      "author": "Godin, S.",
+      "year": "1999",
+      "title": "Permission Marketing",
+      "type": "Libro"
+    },
+    {
+      "author": "Kahneman, D.",
+      "year": "2011",
+      "title": "Thinking, Fast and Slow",
+      "type": "Libro"
+    },
+    {
+      "author": "Patel, N.",
+      "year": "2020",
+      "title": "Email Marketing Best Practices",
+      "type": "Articulo"
+    }
+  ],
+  "homework": {
+    "task": "Crea tu lead magnet completo (PDF 5-10 paginas en Canva) y configura la secuencia de 5 emails de bienvenida en Mailchimp o MailerLite. Escribe los 5 emails, configura la entrega automatica y haz una prueba enviandotelo a ti misma.",
+    "duration": "3-4 horas",
+    "materials": "Canva, Mailchimp o MailerLite, tu contenido de nicho"
+  },
+  "quiz_points": [
+    {
+      "question": "Por que la lista de email es considerada mas valiosa que los seguidores en redes sociales para una guia espiritual?",
+      "options": [
+        "a) Porque el email tiene mayor tasa de apertura que cualquier contenido en redes sociales",
+        "b) Porque la lista de email te pertenece: si Instagram o TikTok cierran tu cuenta, sigues teniendo acceso directo a tu audiencia",
+        "c) Porque los emails permiten enviar contenido mas largo y detallado que las publicaciones en redes sociales",
+        "d) Porque construir una lista de email es gratuito mientras que crecer en redes sociales requiere inversion en publicidad"
+      ],
+      "correct": 1,
+      "explanation": "Una lista de email es un activo que te pertenece. Instagram puede cambiar el algoritmo, bloquearte o desaparecer. Tu lista de email sigue siendo tuya. Ademas, el email permite una comunicacion mas directa, personal y sin competencia por el algoritmo."
+    },
+    {
+      "question": "Una secuencia de bienvenida de 5-7 emails automaticos sirve para:",
+      "options": [
+        "a) Presentar todos los servicios disponibles para que la suscriptora elija el que mas le interesa",
+        "b) Construir la relacion y la confianza de forma progresiva hasta hacer una primera invitacion a trabajar juntas",
+        "c) Confirmar que la suscriptora recibio correctamente el lead magnet y que el email funciona correctamente",
+        "d) Cumplir con el requisito del RGPD de informar a las nuevas suscriptoras sobre la politica de privacidad"
+      ],
+      "correct": 1,
+      "explanation": "La secuencia de bienvenida es la primera impresion extendida. Una nueva suscriptora que recibe 5-7 emails de valor en las primeras 2 semanas llega a conocerte, confiar en ti y entender como trabajas antes de que le hagas cualquier invitacion comercial. Convierte mucho mejor que lanzar inmediatamente una oferta."
+    },
+    {
+      "question": "Un lead magnet efectivo para una guia de astrologia es:",
+      "options": [
+        "a) Un descuento del 20% en la primera sesion a cambio de suscribirse a la newsletter",
+        "b) Una guia practica descargable como 'Los transitos de 2025: que significa cada planeta para tu signo solar'",
+        "c) Una invitacion a una sesion gratuita de 15 minutos para conocer el trabajo de la guia",
+        "d) El acceso a los videos de una leccion del master como muestra del contenido formativo"
+      ],
+      "correct": 1,
+      "explanation": "Un lead magnet efectivo es inmediatamente util y relevante para tu publico objetivo. Una guia de transitos satisface la curiosidad inmediata de quien sigue astrologia, demuestra tu expertise y da valor real antes de pedir nada. El descuento funciona para ecommerce, no para servicios de relacion."
+    },
+    {
+      "question": "La proporcion recomendada entre emails de valor y emails de venta en email marketing es:",
+      "options": [
+        "a) 50/50: la mitad de valor y la mitad comercial para mantener un negocio sostenible",
+        "b) Maximo 20% de emails comerciales y minimo 80% de contenido de valor",
+        "c) 100% de valor: nunca enviar emails comerciales porque la lista de email es para la comunidad, no para vender",
+        "d) Depende del tamano de la lista: con mas de 1000 suscriptoras puedes aumentar la proporcion comercial"
+      ],
+      "correct": 1,
+      "explanation": "La regla general es 80% valor / 20% comercial. Las personas se suscriben por el valor, no para recibir publicidad. Si perciben que cada email es un intento de venta, se dan de baja. La confianza construida con contenido de valor es lo que hace que el 20% comercial funcione."
+    },
+    {
+      "question": "La tasa de apertura de emails considerada buena para el nicho de bienestar y espiritualidad es:",
+      "options": [
+        "a) 5-10%: si una de cada 10 personas abre el email, el contenido esta funcionando bien",
+        "b) 25-40%: en nichos de alta implicacion como el espiritual, una lista comprometida abre en ese rango",
+        "c) 60-70%: si no llegas a ese rango, el contenido no es lo suficientemente relevante para tu lista",
+        "d) La tasa de apertura no es una metrica relevante: lo que importa es la tasa de conversion a clientes"
+      ],
+      "correct": 1,
+      "explanation": "El nicho espiritual y de bienestar tiene tasas de apertura tipicamente superiores al promedio (20% en todos los nichos). Una lista comprometida y bien segmentada en este nicho puede estar en el rango 25-40%. Por debajo del 20% indica que la lista esta fria o el contenido no es relevante."
+    }
+  ]
 }

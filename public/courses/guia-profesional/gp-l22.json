@@ -1,29 +1,270 @@
 {
-  "lesson_number": 22, "module": 8, "title": "Pinterest + Instagram: contenido que atrae sin vender",
-  "text_content": "El marketing que funciona para guias espirituales no parece marketing. Parece valor. Parece educacion. Parece una persona generosa compartiendo conocimiento util. Eso es exactamente lo que debe ser.\n\nCialdini (2006) identifico que la reciprocidad y la simpatia son los dos principios de influencia mas eficaces en servicios de confianza. Cuando compartes contenido valioso de forma consistente, activas ambos principios: la persona recibe valor (reciprocidad) y te percibe como alguien cercano y confiable (simpatia).\n\nPINTEREST: TU MOTOR DE BUSQUEDA VISUAL\n\nPinterest no es una red social. Es un motor de busqueda visual. La gente entra a Pinterest buscando ideas, inspiracion y soluciones, exactamente igual que en Google. La diferencia es que en Pinterest buscan con imagenes.\n\nEstrategia Pinterest para guias: crea tableros tematicos alineados con tu nicho (5-10 tableros). Ejemplo si tu nicho es transiciones profesionales: carta natal y carrera, transitos de Saturno, reinvencion profesional a los 40, encontrar tu proposito vital.\n\nPublica 5-15 pins por semana. Cada pin debe: tener una imagen vertical atractiva con texto legible, incluir un titulo con palabras clave que la gente busca, enlazar a tu web o a un articulo de valor. Herramientas gratuitas para crear pins: Canva (plantillas especificas para Pinterest).\n\nPinterest tiene una ventaja enorme: los pins pueden generar trafico durante meses o anos. Un post de Instagram desaparece en 24 horas. Un pin bien posicionado sigue trayendo visitas un ano despues.\n\nINSTAGRAM: TU ESCAPARATE RELACIONAL\n\nInstagram sirve para que la gente te conozca como persona. Si Pinterest trae trafico, Instagram construye confianza.\n\nPerfil profesional: foto clara de tu cara (no de tu gato ni de un paisaje), nombre + titulo en el nombre de usuario o nombre visible, bio con tu frase de posicionamiento, enlace a tu web o a un enlace multiple (Linktree o similar).\n\nTipos de contenido que funcionan:\n\nCarruseles educativos: los reyes del engagement. 5-10 slides que ensenen algo concreto. Ejemplo: que hacer cuando Saturno transita tu Casa 10 (5 pasos). Incluyen portada atractiva, contenido de valor y ultima slide con llamada a la accion.\n\nReels cortos (15-60 segundos): tips rapidos, desmitificacion de conceptos, reflexiones breves. El algoritmo favorece el video corto.\n\nStories: muestran tu proceso, tu dia a dia profesional, tu lado humano. Son efimeras pero crean cercanía.\n\nPosts de texto: reflexiones profundas, preguntas abiertas, fragmentos de aprendizaje. Menos alcance pero mas profundidad.\n\nFrecuencia recomendada: 3 publicaciones en feed por semana + stories diarias o casi diarias.\n\nEL CALENDARIO DE CONTENIDO\n\nSin planificacion, el contenido se convierte en estres. Con un calendario, se convierte en sistema.\n\nEstructura semanal: lunes (carrusel educativo), miercoles (reel o reflexion), viernes (post de texto o testimonio). Esto cubre los tres posts semanales sin improvisar.\n\nMensualmente: 10 posts de valor (educacion, reflexion, herramientas), 2 posts promocionales (servicios, agenda abierta, testimonios).\n\nBatch creating: dedica un dia al mes a crear todo el contenido del mes siguiente. Esto es mas eficiente que crear contenido cada dia.\n\nCASO PRACTICO: LA ESTRATEGIA DE MARINA\n\nMarina se especializa en astrologia para emprendedoras. Su estrategia: Pinterest (10 pins/semana enlazando a su blog) + Instagram (3 posts/semana + stories diarias). En 8 meses: 1200 seguidores en Instagram, 8000 visualizaciones mensuales en Pinterest, 6-8 consultantes nuevas al mes (80% vienen de Pinterest, 20% de Instagram). Inversion en publicidad: 0 EUR.\n\nEJERCICIO GUIADO: PLANIFICA TU PRIMER MES\n\nCrea un calendario de contenido para las proximas 4 semanas. Define: 12 posts de Instagram (tipo, tema, dia de publicacion), 20-30 pins de Pinterest (temas, tableros de destino), temas de stories semanales. Usa una hoja de calculo o Notion para organizarlo.\n\nTAREA PARA CASA\n\nCrea y publica tu primera semana de contenido: 3 posts de Instagram y 5 pins de Pinterest. Al final de la semana, analiza: cual tuvo mas interaccion? Cual genero preguntas o mensajes? Ajusta tu calendario del mes 2 basandote en los resultados.",
+  "lesson_number": 22,
+  "module": 8,
+  "title": "Pinterest + Instagram: contenido que atrae sin vender",
+  "text_content": "El marketing que funciona para guias espirituales no parece marketing. Parece valor. Parece educacion. Parece una persona generosa compartiendo conocimiento util. Eso es exactamente lo que debe ser.\n\nCialdini (2006) identifico que la reciprocidad y la simpatia son los dos principios de influencia mas eficaces en servicios de confianza. Cuando compartes contenido valioso de forma consistente, activas ambos principios: la persona recibe valor (reciprocidad) y te percibe como alguien cercano y confiable (simpatia).\n\nPINTEREST: TU MOTOR DE BUSQUEDA VISUAL\n\nPinterest no es una red social. Es un motor de busqueda visual. La gente entra a Pinterest buscando ideas, inspiracion y soluciones, exactamente igual que en Google. La diferencia es que en Pinterest buscan con imagenes.\n\nEstrategia Pinterest para guias: crea tableros tematicos alineados con tu nicho (5-10 tableros). Ejemplo si tu nicho es transiciones profesionales: carta natal y carrera, transitos de Saturno, reinvencion profesional a los 40, encontrar tu proposito vital.\n\nPublica 5-15 pins por semana. Cada pin debe: tener una imagen vertical atractiva con texto legible, incluir un titulo con palabras clave que la gente busca, enlazar a tu web o a un articulo de valor. Herramientas gratuitas para crear pins: Canva (plantillas especificas para Pinterest).\n\nPinterest tiene una ventaja enorme: los pins pueden generar trafico durante meses o anos. Un post de Instagram desaparece en 24 horas. Un pin bien posicionado sigue trayendo visitas un ano despues.\n\nINSTAGRAM: TU ESCAPARATE RELACIONAL\n\nInstagram sirve para que la gente te conozca como persona. Si Pinterest trae trafico, Instagram construye confianza.\n\nPerfil profesional: foto clara de tu cara (no de tu gato ni de un paisaje), nombre + titulo en el nombre de usuario o nombre visible, bio con tu frase de posicionamiento, enlace a tu web o a un enlace multiple (Linktree o similar).\n\nTipos de contenido que funcionan:\n\nCarruseles educativos: los reyes del engagement. 5-10 slides que ensenen algo concreto. Ejemplo: que hacer cuando Saturno transita tu Casa 10 (5 pasos). Incluyen portada atractiva, contenido de valor y ultima slide con llamada a la accion.\n\nReels cortos (15-60 segundos): tips rapidos, desmitificacion de conceptos, reflexiones breves. El algoritmo favorece el video corto.\n\nStories: muestran tu proceso, tu dia a dia profesional, tu lado humano. Son efimeras pero crean cercanÃ­a.\n\nPosts de texto: reflexiones profundas, preguntas abiertas, fragmentos de aprendizaje. Menos alcance pero mas profundidad.\n\nFrecuencia recomendada: 3 publicaciones en feed por semana + stories diarias o casi diarias.\n\nEL CALENDARIO DE CONTENIDO\n\nSin planificacion, el contenido se convierte en estres. Con un calendario, se convierte en sistema.\n\nEstructura semanal: lunes (carrusel educativo), miercoles (reel o reflexion), viernes (post de texto o testimonio). Esto cubre los tres posts semanales sin improvisar.\n\nMensualmente: 10 posts de valor (educacion, reflexion, herramientas), 2 posts promocionales (servicios, agenda abierta, testimonios).\n\nBatch creating: dedica un dia al mes a crear todo el contenido del mes siguiente. Esto es mas eficiente que crear contenido cada dia.\n\nCASO PRACTICO: LA ESTRATEGIA DE MARINA\n\nMarina se especializa en astrologia para emprendedoras. Su estrategia: Pinterest (10 pins/semana enlazando a su blog) + Instagram (3 posts/semana + stories diarias). En 8 meses: 1200 seguidores en Instagram, 8000 visualizaciones mensuales en Pinterest, 6-8 consultantes nuevas al mes (80% vienen de Pinterest, 20% de Instagram). Inversion en publicidad: 0 EUR.\n\nEJERCICIO GUIADO: PLANIFICA TU PRIMER MES\n\nCrea un calendario de contenido para las proximas 4 semanas. Define: 12 posts de Instagram (tipo, tema, dia de publicacion), 20-30 pins de Pinterest (temas, tableros de destino), temas de stories semanales. Usa una hoja de calculo o Notion para organizarlo.\n\nTAREA PARA CASA\n\nCrea y publica tu primera semana de contenido: 3 posts de Instagram y 5 pins de Pinterest. Al final de la semana, analiza: cual tuvo mas interaccion? Cual genero preguntas o mensajes? Ajusta tu calendario del mes 2 basandote en los resultados.",
   "slides": [
-    {"type": "title", "title": "Pinterest + Instagram para guias", "subtitle": "Modulo 8 · Leccion 22 — Master en Guia Espiritual Profesional"},
-    {"type": "content", "title": "Pinterest: motor de busqueda visual", "body": "No es red social: es buscador como Google pero visual.\n5-15 pins/semana con palabras clave de tu nicho.\nCada pin enlaza a tu web.\nVida util de meses a anos (vs horas en Instagram)."},
-    {"type": "content", "title": "Instagram: escaparate relacional", "body": "Carruseles educativos: los reyes del engagement.\nReels cortos: el algoritmo favorece video.\nStories: cercania y dia a dia profesional.\n3 posts/semana + stories diarias."},
-    {"type": "content", "title": "Calendario de contenido semanal", "body": "Lunes: carrusel educativo.\nMiercoles: reel o reflexion.\nViernes: post de texto o testimonio.\nMensual: 10 de valor + 2 promocionales."},
-    {"type": "quote", "text": "La reciprocidad y la simpatia son los principios de influencia mas eficaces en servicios de confianza. Dar valor es la mejor estrategia de captacion.", "source": "Cialdini, 2006 — Influence"},
-    {"type": "content", "title": "Caso Marina: 0 EUR en publicidad", "body": "Pinterest: 10 pins/semana -> 8000 vistas/mes.\nInstagram: 3 posts/semana -> 1200 seguidores en 8 meses.\n6-8 consultantes nuevas/mes. 80% vienen de Pinterest."},
-    {"type": "summary", "points": ["Pinterest es buscador visual con vida util larga: tu motor de trafico", "Instagram construye confianza relacional: tu escaparate personal", "Calendario de contenido semanal evita el estres de la improvisacion"]},
-    {"type": "next", "text": "En la proxima leccion veremos email marketing: tu lista es tu activo mas valioso."}
+    {
+      "type": "title",
+      "title": "Pinterest + Instagram para guias",
+      "subtitle": "Modulo 8 Â· Leccion 22 â€” Master en Guia Espiritual Profesional"
+    },
+    {
+      "type": "content",
+      "title": "Pinterest: motor de busqueda visual",
+      "body": "No es red social: es buscador como Google pero visual.\n5-15 pins/semana con palabras clave de tu nicho.\nCada pin enlaza a tu web.\nVida util de meses a anos (vs horas en Instagram)."
+    },
+    {
+      "type": "content",
+      "title": "Instagram: escaparate relacional",
+      "body": "Carruseles educativos: los reyes del engagement.\nReels cortos: el algoritmo favorece video.\nStories: cercania y dia a dia profesional.\n3 posts/semana + stories diarias."
+    },
+    {
+      "type": "content",
+      "title": "Calendario de contenido semanal",
+      "body": "Lunes: carrusel educativo.\nMiercoles: reel o reflexion.\nViernes: post de texto o testimonio.\nMensual: 10 de valor + 2 promocionales."
+    },
+    {
+      "type": "quote",
+      "text": "La reciprocidad y la simpatia son los principios de influencia mas eficaces en servicios de confianza. Dar valor es la mejor estrategia de captacion.",
+      "source": "Cialdini, 2006 â€” Influence"
+    },
+    {
+      "type": "content",
+      "title": "Caso Marina: 0 EUR en publicidad",
+      "body": "Pinterest: 10 pins/semana -> 8000 vistas/mes.\nInstagram: 3 posts/semana -> 1200 seguidores en 8 meses.\n6-8 consultantes nuevas/mes. 80% vienen de Pinterest."
+    },
+    {
+      "type": "process_diagram",
+      "title": "Estrategia de contenido para Pinterest e Instagram",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Define 3-4 pilares de contenido",
+          "description": "Ejemplo para guia de astrologia: 1) Ensenanza (que significa la Luna en Escorpio), 2) Reflexion personal (preguntas que abren), 3) Detras de bastidores (tu proceso, tus herramientas), 4) Resultados de clientes (anonimizados). Varia entre pilares para no ser monotemica"
+        },
+        {
+          "step": 2,
+          "title": "Frecuencia sostenible: 3 veces/semana",
+          "description": "Es mejor publicar 3 veces por semana durante 6 meses que 7 veces por semana durante 3 semanas y desaparecer. El algoritmo premia la consistencia. Elige una frecuencia que puedas mantener aunque tengas una semana dificil"
+        },
+        {
+          "step": 3,
+          "title": "Call to action clara en cada publicacion",
+          "description": "Cada publicacion debe tener un proximo paso: 'Guardalo para releerlo', 'Escribe en comentarios tu Luna', 'Enlace en bio para reservar sesion', 'Mandame DM con 'LUNA' para informacion'. Sin CTA, el contenido no convierte"
+        },
+        {
+          "step": 4,
+          "title": "Pinterest: contenido evergreen con keywords",
+          "description": "Pinterest funciona como buscador, no como red social. Un pin sobre 'que significa Venus en Aries' puede generar visitas durante 2 anos. Usa keywords que tu publico busca realmente. Cada pin enlaza a tu web o blog"
+        },
+        {
+          "step": 5,
+          "title": "Mide lo que importa: guardados y DMs, no likes",
+          "description": "Un post con 10 likes y 50 guardados vale mas que un post con 200 likes y 0 guardados. Los guardados indican que el contenido es tan util que la persona quiere volver a el. Los DMs indican interes en trabajar contigo"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Pinterest es buscador visual con vida util larga: tu motor de trafico",
+        "Instagram construye confianza relacional: tu escaparate personal",
+        "Calendario de contenido semanal evita el estres de la improvisacion"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En la proxima leccion veremos email marketing: tu lista es tu activo mas valioso."
+    }
   ],
   "interactive": [
-    {"type": "comparison", "headers": ["Plataforma", "Funcion principal", "Vida util contenido", "Frecuencia recomendada"], "rows": [["Pinterest", "Trafico a tu web (buscador)", "Meses a anos", "5-15 pins/semana"], ["Instagram Feed", "Confianza relacional", "24-48 horas", "3 posts/semana"], ["Instagram Stories", "Cercania y dia a dia", "24 horas", "Diarias o casi diarias"]]},
-    {"type": "match", "title": "Tipo de contenido Instagram y su funcion", "pairs": [{"left": "Carruseles educativos", "right": "Mayor engagement: ensenan algo concreto en 5-10 slides"}, {"left": "Reels cortos", "right": "Mayor alcance: el algoritmo favorece el video"}, {"left": "Stories", "right": "Mayor cercania: muestran tu lado humano"}, {"left": "Posts de texto", "right": "Mayor profundidad: reflexiones y preguntas abiertas"}]},
-    {"type": "sort", "title": "Estrategia de batch creating", "instruction": "Ordena los pasos del batch creating mensual.", "correct_order": ["Elegir un dia al mes para crear contenido", "Definir los 12 temas del mes siguiente", "Crear todas las imagenes y textos en una sesion", "Programar publicaciones con herramienta (Later, Buffer)", "Revisar resultados al final del mes y ajustar"]},
-    {"type": "fill_blanks", "instruction": "Completa la distribucion mensual de contenido.", "template": "Al mes: ___0___ posts de valor (educacion, reflexion, herramientas) + ___1___ posts promocionales (servicios, testimonios, agenda). Total: ___2___ publicaciones en feed.", "answers": ["10", "2", "12"]},
-    {"type": "lesson_summary", "points": ["Pinterest funciona como buscador visual: genera trafico durante meses, no horas", "Instagram construye confianza relacional con carruseles, reels y stories", "El calendario semanal (L: carrusel, X: reel, V: texto) elimina la improvisacion", "Batch creating mensual es la forma mas eficiente de mantener consistencia"]}
+    {
+      "type": "comparison",
+      "headers": [
+        "Plataforma",
+        "Funcion principal",
+        "Vida util contenido",
+        "Frecuencia recomendada"
+      ],
+      "rows": [
+        [
+          "Pinterest",
+          "Trafico a tu web (buscador)",
+          "Meses a anos",
+          "5-15 pins/semana"
+        ],
+        [
+          "Instagram Feed",
+          "Confianza relacional",
+          "24-48 horas",
+          "3 posts/semana"
+        ],
+        [
+          "Instagram Stories",
+          "Cercania y dia a dia",
+          "24 horas",
+          "Diarias o casi diarias"
+        ]
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Tipo de contenido Instagram y su funcion",
+      "pairs": [
+        {
+          "left": "Carruseles educativos",
+          "right": "Mayor engagement: ensenan algo concreto en 5-10 slides"
+        },
+        {
+          "left": "Reels cortos",
+          "right": "Mayor alcance: el algoritmo favorece el video"
+        },
+        {
+          "left": "Stories",
+          "right": "Mayor cercania: muestran tu lado humano"
+        },
+        {
+          "left": "Posts de texto",
+          "right": "Mayor profundidad: reflexiones y preguntas abiertas"
+        }
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Estrategia de batch creating",
+      "instruction": "Ordena los pasos del batch creating mensual.",
+      "correct_order": [
+        "Elegir un dia al mes para crear contenido",
+        "Definir los 12 temas del mes siguiente",
+        "Crear todas las imagenes y textos en una sesion",
+        "Programar publicaciones con herramienta (Later, Buffer)",
+        "Revisar resultados al final del mes y ajustar"
+      ]
+    },
+    {
+      "type": "fill_blanks",
+      "instruction": "Completa la distribucion mensual de contenido.",
+      "template": "Al mes: ___0___ posts de valor (educacion, reflexion, herramientas) + ___1___ posts promocionales (servicios, testimonios, agenda). Total: ___2___ publicaciones en feed.",
+      "answers": [
+        "10",
+        "2",
+        "12"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "Pinterest funciona como buscador visual: genera trafico durante meses, no horas",
+        "Instagram construye confianza relacional con carruseles, reels y stories",
+        "El calendario semanal (L: carrusel, X: reel, V: texto) elimina la improvisacion",
+        "Batch creating mensual es la forma mas eficiente de mantener consistencia"
+      ]
+    }
   ],
   "citation": [
-    {"researcher": "Robert Cialdini", "year": "2006", "finding": "La reciprocidad (dar valor) y la simpatia (ser cercano) son los principios de influencia mas eficaces para servicios basados en confianza"},
-    {"researcher": "Daniel Kahneman", "year": "2011", "finding": "El contenido visual se procesa mas rapido que el texto, lo que explica la eficacia de Pinterest y los carruseles de Instagram"},
-    {"researcher": "Martin Seligman", "year": "2011", "finding": "Las emociones positivas generadas al recibir contenido de valor crean asociaciones favorables con la marca personal del creador"}
+    {
+      "researcher": "Robert Cialdini",
+      "year": "2006",
+      "finding": "La reciprocidad (dar valor) y la simpatia (ser cercano) son los principios de influencia mas eficaces para servicios basados en confianza"
+    },
+    {
+      "researcher": "Daniel Kahneman",
+      "year": "2011",
+      "finding": "El contenido visual se procesa mas rapido que el texto, lo que explica la eficacia de Pinterest y los carruseles de Instagram"
+    },
+    {
+      "researcher": "Martin Seligman",
+      "year": "2011",
+      "finding": "Las emociones positivas generadas al recibir contenido de valor crean asociaciones favorables con la marca personal del creador"
+    }
   ],
-  "bibliography": [{"author": "Cialdini, R.", "year": "2006", "title": "Influence", "type": "Libro"}, {"author": "Godin, S.", "year": "2018", "title": "This Is Marketing", "type": "Libro"}, {"author": "Kahneman, D.", "year": "2011", "title": "Thinking, Fast and Slow", "type": "Libro"}, {"author": "Vaynerchuk, G.", "year": "2013", "title": "Jab, Jab, Jab, Right Hook", "type": "Libro"}],
-  "homework": {"task": "Crea y publica tu primera semana de contenido: 3 posts de Instagram (1 carrusel, 1 reel, 1 texto) y 5 pins de Pinterest. Al final de la semana, analiza resultados y ajusta tu calendario del proximo mes.", "duration": "3-4 horas de creacion + 30 min analisis", "materials": "Canva (gratuito), cuenta de Instagram y Pinterest, calendario de contenido"},
-  "quiz_points": ["Pinterest funciona como buscador visual con vida util de meses, no como red social con contenido efimero", "La distribucion mensual optima es 10 posts de valor + 2 promocionales, basada en el principio de reciprocidad de Cialdini", "El batch creating (crear todo el contenido del mes en un dia) es la forma mas eficiente de mantener consistencia"]
+  "bibliography": [
+    {
+      "author": "Cialdini, R.",
+      "year": "2006",
+      "title": "Influence",
+      "type": "Libro"
+    },
+    {
+      "author": "Godin, S.",
+      "year": "2018",
+      "title": "This Is Marketing",
+      "type": "Libro"
+    },
+    {
+      "author": "Kahneman, D.",
+      "year": "2011",
+      "title": "Thinking, Fast and Slow",
+      "type": "Libro"
+    },
+    {
+      "author": "Vaynerchuk, G.",
+      "year": "2013",
+      "title": "Jab, Jab, Jab, Right Hook",
+      "type": "Libro"
+    }
+  ],
+  "homework": {
+    "task": "Crea y publica tu primera semana de contenido: 3 posts de Instagram (1 carrusel, 1 reel, 1 texto) y 5 pins de Pinterest. Al final de la semana, analiza resultados y ajusta tu calendario del proximo mes.",
+    "duration": "3-4 horas de creacion + 30 min analisis",
+    "materials": "Canva (gratuito), cuenta de Instagram y Pinterest, calendario de contenido"
+  },
+  "quiz_points": [
+    {
+      "question": "La metrica de contenido en Instagram mas relevante para atraer consultantes es:",
+      "options": [
+        "a) Numero de likes por publicacion: indica que el contenido gusta a la audiencia",
+        "b) Numero de guardados y mensajes directos: indica que el contenido es util y genera interes en trabajar contigo",
+        "c) Numero de seguidores: indica el alcance potencial de cada publicacion",
+        "d) Tasa de impresiones: indica cuantas personas han visto el contenido al menos una vez"
+      ],
+      "correct": 1,
+      "explanation": "Los likes son vanidad; los guardados son valor. Un post guardado significa que alguien quiere volver a el porque le resulta util. Los DMs indican interes comercial directo. Estas metricas predicen mejor la conversion a clientes que el numero de likes o seguidores."
+    },
+    {
+      "question": "Por que Pinterest es especialmente util para guias espirituales frente a Instagram?",
+      "options": [
+        "a) Porque tiene un publico mayor de personas interesadas en espiritualidad que Instagram",
+        "b) Porque funciona como motor de busqueda: un pin puede generar trafico durante anos, a diferencia de los posts de Instagram que desaparecen en 24-48 horas",
+        "c) Porque permite publicar textos mas largos que Instagram y explicar conceptos astrologicos en profundidad",
+        "d) Porque la publicidad en Pinterest es mas barata que en Instagram para el nicho espiritual"
+      ],
+      "correct": 1,
+      "explanation": "Pinterest indexa contenido como Google: alguien que busca 'que significa Saturn return en astrologia' puede encontrar tu pin publicado hace 18 meses. En Instagram, un post de hace una semana ya no existe para el algoritmo. Pinterest genera trafico evergreen que Instagram no puede."
+    },
+    {
+      "question": "Los cuatro pilares de contenido para una guia espiritual sirven para:",
+      "options": [
+        "a) Dividir el trabajo de creacion de contenido entre cuatro dias de la semana de forma equitativa",
+        "b) Alternar entre tipos de contenido que aportan valor diferente: ensenanza, reflexion, humanizacion y prueba social",
+        "c) Cubrir los cuatro arquetipos de consultante posibles: analitica, intuitiva, buscadora y transformadora",
+        "d) Cumplir con la recomendacion de los algoritmos de Instagram que penalizan la monotematicidad"
+      ],
+      "correct": 1,
+      "explanation": "Los pilares de contenido garantizan variedad y valor multimodal. El contenido de ensenanza posiciona expertise; la reflexion genera identificacion emocional; la humanizacion genera confianza en la persona; la prueba social genera credibilidad. Cada pilar cumple una funcion diferente en el camino hacia la decision de reservar."
+    },
+    {
+      "question": "Una publicacion de Instagram sin llamada a la accion (CTA) tiene como resultado mas probable:",
+      "options": [
+        "a) Mayor engagement organico porque el publico percibe que no hay agenda comercial detras",
+        "b) Que la persona disfruta el contenido pero no da el siguiente paso hacia trabajar contigo",
+        "c) Que Instagram le da mayor alcance porque el algoritmo premia el contenido no comercial",
+        "d) Que la publicacion se viraliza mas facilmente al no tener restricciones de plataforma por contenido comercial"
+      ],
+      "correct": 1,
+      "explanation": "El contenido sin CTA entretiene o informa pero no convierte. Si quieres que alguien reserve una sesion, pida informacion o se una a tu lista, necesitas decirlo explicitamente en cada publicacion. Las personas no adivinan el proximo paso: necesitas guiarlas."
+    },
+    {
+      "question": "La frecuencia de publicacion mas efectiva en redes sociales para una guia espiritual que empieza es:",
+      "options": [
+        "a) Diaria: el algoritmo penaliza la baja frecuencia y las cuentas que publican a diario tienen mayor alcance",
+        "b) Tres veces por semana de forma consistente: sostenible a largo plazo y suficiente para el algoritmo",
+        "c) Dos veces al mes: la calidad del contenido importa mas que la frecuencia para el nicho espiritual",
+        "d) Depende de la plataforma: Instagram requiere diario y Pinterest requiere 10-15 pins por dia"
+      ],
+      "correct": 1,
+      "explanation": "La consistencia supera a la frecuencia intensa seguida de silencio. Tres publicaciones semanales durante 6 meses construyen mas que 14 publicaciones semanales durante 6 semanas antes del agotamiento. El algoritmo aprende cuando vas a publicar y distribuye mejor el contenido de cuentas consistentes."
+    }
+  ]
 }

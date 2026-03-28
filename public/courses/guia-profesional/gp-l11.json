@@ -7,7 +7,7 @@
     {
       "type": "title",
       "title": "Preguntas poderosas",
-      "subtitle": "Modulo 4 · Leccion 11 — Master en Guia Espiritual Profesional"
+      "subtitle": "Modulo 4 Â· Leccion 11 â€” Master en Guia Espiritual Profesional"
     },
     {
       "type": "content",
@@ -27,7 +27,7 @@
     {
       "type": "quote",
       "text": "Las preguntas mas transformadoras son abiertas, genuinas y devuelven la agencia a la persona. La respuesta le pertenece a quien explora, no a quien pregunta.",
-      "source": "Basado en Rogers, 1961 — Enfoque centrado en la persona"
+      "source": "Basado en Rogers, 1961 â€” Enfoque centrado en la persona"
     },
     {
       "type": "content",
@@ -43,6 +43,28 @@
       "type": "content",
       "title": "Caso Carlos: la diferencia esta en las preguntas",
       "body": "Sin preguntas: la guia diagnostica Venus-Saturno.\nCon preguntas: Carlos llega a la comprension por si mismo.\nQue sientes? Donde en tu cuerpo? Que te diria ese peso?\nResultado: Carlos conecta con el patron paterno."
+    },
+    {
+      "type": "branching_scenario",
+      "scenario": "Tu consultante lleva 10 minutos describiendo su situacion laboral complicada. Hay mucho material. Necesitas dirigir la sesion hacia algo concreto. Como intervienes?",
+      "options": [
+        {
+          "choice": "Le interrumpes y empiezas a revisar su carta natal sin mas preguntas",
+          "consequence": "Pierde el hilo de su narrativa y puede sentirse no escuchada. La herramienta llega antes que el tema. Riesgo de usar la carta natal como escapatoria de la escucha activa."
+        },
+        {
+          "choice": "Preguntas: 'De todo lo que me has contado, que es lo mas importante para ti hoy?'",
+          "consequence": "Pregunta de focalizacion. Permite a la consultante identificar su prioridad real sin que tu la impongas. Es la pregunta de apertura clasica del Metodo Selene para clarificar el tema."
+        },
+        {
+          "choice": "Preguntas: '¿Y como te hace sentir todo eso?'",
+          "consequence": "Pregunta reflexiva valida pero difusa. Abre la dimension emocional pero no focaliza. Puede llevar a mas narrativa sin llegar a un tema concreto. Util en terapia pero puede alargar la fase de apertura."
+        },
+        {
+          "choice": "Dices: 'Creo que lo que subyace a todo esto es el miedo al cambio'",
+          "consequence": "Interpretacion prematura que impone tu marco antes de que la consultante haya llegado a su propio insight. Viola el principio de autonomia. Aunque sea correcto, el momento es incorrecto."
+        }
+      ]
     },
     {
       "type": "summary",
@@ -188,8 +210,60 @@
     "materials": "Cuaderno o documento de texto, notas del toolkit personalizado"
   },
   "quiz_points": [
-    "Las preguntas poderosas tienen tres cualidades: abiertas, genuinas y devuelven la agencia a la consultante",
-    "Seis tipos de preguntas: exploracion, resonancia, perspectiva, cuerpo, accion y significado",
-    "La secuencia de profundizacion (pregunta, reflejo, profundizacion, silencio, significado) lleva de respuestas superficiales a creencias profundas"
+    {
+      "question": "Una pregunta poderosa en el contexto del Metodo Selene es aquella que:",
+      "options": [
+        "a) Revela informacion que la guia necesita para completar la interpretacion astrologica",
+        "b) Abre posibilidades, invita a la reflexion y permite que la consultante construya su propio insight",
+        "c) Desafia las creencias de la consultante para producir cambio rapido",
+        "d) Confirma la interpretacion de la herramienta simbolica que la guia ya ha formulado"
+      ],
+      "correct": 1,
+      "explanation": "Una pregunta poderosa no busca informacion para la guia ni confirma sus hipotesis. Crea espacio para que la consultante explore terreno nuevo. La diferencia esta en donde apunta: a la agenda de la guia o al campo de la consultante."
+    },
+    {
+      "question": "La diferencia entre una pregunta abierta y una pregunta dirigida es:",
+      "options": [
+        "a) Las preguntas abiertas son mas largas que las preguntas dirigidas",
+        "b) Las preguntas dirigidas contienen la respuesta esperada; las abiertas permiten cualquier direccion",
+        "c) Las preguntas abiertas solo se usan en la fase de desarrollo, no en la apertura o el cierre",
+        "d) Las preguntas dirigidas son mas efectivas cuando la consultante no sabe que quiere"
+      ],
+      "correct": 1,
+      "explanation": "Una pregunta dirigida ('¿No crees que el problema es tu miedo al compromiso?') contiene la respuesta y presiona hacia ella. Una pregunta abierta ('¿Que crees que esta detras de este patron?') no presupone ni guia."
+    },
+    {
+      "question": "Una consultante responde a tu pregunta con 'no se'. La respuesta de facilitacion mas util es:",
+      "options": [
+        "a) Repetir la pregunta con otras palabras para que la comprenda mejor",
+        "b) Ofrecer espacio especulativo: 'Si no sabes, que aventurarias? Que dirias si tuvieras que adivinar?'",
+        "c) Aceptar el no-se y pasar a la siguiente pregunta para no bloquear el flujo",
+        "d) Interpretar el no-se como resistencia y explorar de donde viene esa resistencia"
+      ],
+      "correct": 1,
+      "explanation": "El 'no se' frecuentemente indica que la respuesta esta disponible pero no articulada aun. La pregunta especulativa baja la presion de tener que saber y permite acceder a un conocimiento intuitivo que ya esta presente."
+    },
+    {
+      "question": "Preguntar '¿Por que hiciste eso?' es generalmente menos efectivo que '¿Que te llevo a hacerlo?' porque:",
+      "options": [
+        "a) El por que es una pregunta cerrada y el que te llevo es una pregunta abierta",
+        "b) El por que activa defensividad y justificacion; el que te llevo invita a exploracion de motivaciones sin juicio",
+        "c) El por que asume que la persona tiene control sobre sus decisiones, lo cual no siempre es cierto",
+        "d) Las preguntas con por que son demasiado filosoficas para el contexto de una sesion de guia"
+      ],
+      "correct": 1,
+      "explanation": "El 'por que' en contexto emocional activa el sistema de defensa y produce justificaciones racionales. El 'que te llevo a' es mas curioso y menos acusatorio, invitando a explorar la motivacion desde dentro."
+    },
+    {
+      "question": "En la facilitacion, el silencio despues de una pregunta debe:",
+      "options": [
+        "a) Llenarse rapidamente con otra pregunta para mantener el flujo de la sesion",
+        "b) Sostenerse: la guia espera con presencia, permitiendo que la consultante procese antes de responder",
+        "c) Interpretarse como senal de que la pregunta no fue adecuada y reformularse",
+        "d) Usarse para revisar los datos de la carta natal o preparar la siguiente interpretacion"
+      ],
+      "correct": 1,
+      "explanation": "El procesamiento interno requiere tiempo. Llenar el silencio interrumpe el trabajo. La guia que aprende a esperar con presencia permite que emerja lo que realmente esta ahi, no la primera respuesta que la persona construye para llenar el vacio."
+    }
   ]
 }

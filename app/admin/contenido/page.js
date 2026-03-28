@@ -264,7 +264,7 @@ function LessonView({ courseId, lessonId, onClose }) {
           <ul className="space-y-1">
             {data.quiz_points.map((p, i) => (
               <li key={i} className="text-[12px] text-selene-white-dim flex gap-2">
-                <span className="text-selene-gold shrink-0">✓</span><span>{p}</span>
+                <span className="text-selene-gold shrink-0">✓</span><span>{typeof p === 'string' ? p : p.question}</span>
               </li>
             ))}
           </ul>

@@ -7,7 +7,7 @@
     {
       "type": "title",
       "title": "Tu toolkit personalizado",
-      "subtitle": "Modulo 2 · Leccion 6 — Master en Guia Espiritual Profesional"
+      "subtitle": "Modulo 2 Â· Leccion 6 â€” Master en Guia Espiritual Profesional"
     },
     {
       "type": "content",
@@ -27,7 +27,7 @@
     {
       "type": "quote",
       "text": "La sobrecarga de informacion produce paralisis decisional. Cuanta mas informacion recibe una persona, mas dificil le resulta tomar decisiones claras.",
-      "source": "Kahneman, 2011 — Thinking, Fast and Slow"
+      "source": "Kahneman, 2011 â€” Thinking, Fast and Slow"
     },
     {
       "type": "content",
@@ -43,6 +43,28 @@
       "type": "content",
       "title": "Caso Elena: de la confusion al enfoque",
       "body": "Antes: 1 servicio de 90 min a 60 EUR, agotadora.\nDespues: 4 servicios diferenciados.\nElimino suenos (competencia baja).\nDiferencial: astrologia + quirologia. Premium: 95 EUR."
+    },
+    {
+      "type": "branching_scenario",
+      "scenario": "Tu consultante Sofia llega con: 'Quiero entender por que siempre elijo relaciones con personas emocionalmente no disponibles.' Tiene carta natal de otra guia. Tienes 60 minutos. Que herramienta o combinacion usas?",
+      "options": [
+        {
+          "choice": "Solo carta natal: analizo Venus, Luna y Casa 7 en profundidad",
+          "consequence": "Apropiado si tienes formacion solida en astrologia psicologica. Riesgo: quedarte en el analisis estructural sin explorar la experiencia vivida. Puedes anadir 2-3 preguntas de tarot al final para la dimension temporal."
+        },
+        {
+          "choice": "Carta natal + tarot (protocolo de dos fases, 45 min total)",
+          "consequence": "Optimo para 60 minutos. Fase 1 (20 min): identificas el tema en la carta natal. Fase 2 (25 min): tirada tematica de 4 cartas. Fase 3 (15 min): integracion participativa. Coherente con la mayoria de formaciones."
+        },
+        {
+          "choice": "Las tres herramientas (carta natal + suenos + constelacion individual)",
+          "consequence": "Excede el tiempo disponible. En 60 min no puedes hacer justicia a las tres fases. Riesgo de superficialidad en cada herramienta. Solo viable si tienes 75-90 minutos y la consultante muestra dimension familiar evidente."
+        },
+        {
+          "choice": "Solo tarot: tirada de 6 cartas sobre el patron relacional",
+          "consequence": "Valido si es tu herramienta mas solida y la consultante ya conoce su carta. Sin el contexto astrologico pierdes la dimension estructural pero ganas en inmediatez y experiencia subjetiva actual."
+        }
+      ]
     },
     {
       "type": "summary",
@@ -119,13 +141,43 @@
     },
     {
       "type": "comparison",
-      "headers": ["Tipo de consulta", "Duracion", "Herramientas", "Precio orientativo"],
+      "headers": [
+        "Tipo de consulta",
+        "Duracion",
+        "Herramientas",
+        "Precio orientativo"
+      ],
       "rows": [
-        ["Puntual", "30-45 min", "Transitos o tarot", "40-50 EUR"],
-        ["Autoconocimiento", "45-60 min", "Carta natal completa", "60-75 EUR"],
-        ["Relacional", "60 min", "Sinastria + tarot", "70-85 EUR"],
-        ["Patron repetitivo", "75-90 min", "Integracion triple", "90-110 EUR"],
-        ["Crisis", "30-45 min", "Contencion + derivacion", "40-50 EUR"]
+        [
+          "Puntual",
+          "30-45 min",
+          "Transitos o tarot",
+          "40-50 EUR"
+        ],
+        [
+          "Autoconocimiento",
+          "45-60 min",
+          "Carta natal completa",
+          "60-75 EUR"
+        ],
+        [
+          "Relacional",
+          "60 min",
+          "Sinastria + tarot",
+          "70-85 EUR"
+        ],
+        [
+          "Patron repetitivo",
+          "75-90 min",
+          "Integracion triple",
+          "90-110 EUR"
+        ],
+        [
+          "Crisis",
+          "30-45 min",
+          "Contencion + derivacion",
+          "40-50 EUR"
+        ]
       ]
     },
     {
@@ -187,8 +239,60 @@
     "materials": "Resultado del ejercicio de fortalezas (leccion 2), procesador de texto"
   },
   "quiz_points": [
-    "El principio de parsimonia profesional indica usar la herramienta mas simple que resuelva la necesidad de la consultante",
-    "El toolkit incluye solo herramientas con puntuacion de competencia de 7 o superior sobre 10",
-    "Un menu de servicios diferenciado (3-5 opciones con nombre, herramientas, duracion y precio) es mas profesional y rentable que un servicio unico"
+    {
+      "question": "En la decision de que herramientas usar para una consultante, el primer criterio del Metodo Selene es:",
+      "options": [
+        "a) Usar siempre las tres herramientas para ofrecer el mayor valor posible",
+        "b) Considerar tu nivel de dominio real en cada herramienta, el tiempo disponible y la pregunta de la consultante",
+        "c) Priorizar las herramientas que generan mayor impacto visual en la consultante",
+        "d) Usar la herramienta con la que la consultante este mas familiarizada"
+      ],
+      "correct": 1,
+      "explanation": "El toolkit personalizado parte de tres factores: dominio real (zona de genio vs. zona de competencia), tiempo disponible, y la naturaleza de la pregunta. Usar herramientas que no dominas bien es un riesgo etico."
+    },
+    {
+      "question": "Cuando una herramienta no es tu zona de genio pero la situacion la requiere, la accion correcta es:",
+      "options": [
+        "a) Usarla de todas formas porque es mejor que no tener respuesta",
+        "b) Ser transparente sobre tu nivel y, si corresponde, derivar a una colega que la domine mejor",
+        "c) Estudiar la herramienta durante la sesion mientras la consultante espera",
+        "d) Combinarla con otra herramienta para diluir el riesgo de error"
+      ],
+      "correct": 1,
+      "explanation": "El principio de limites de competencia incluye las herramientas que usas. Ser honesta sobre tu nivel y derivar cuando corresponde es practica etica y protege la calidad del servicio."
+    },
+    {
+      "question": "Para una consultante que pregunta sobre una decision laboral urgente a tomar esta semana, el formato mas adecuado es:",
+      "options": [
+        "a) Sesion triple de 90 minutos explorando el origen transgeracional del patron laboral",
+        "b) Tirada de tarot enfocada o revision de transitos actuales en 45 minutos",
+        "c) Carta natal completa para entender la estructura de su relacion con el trabajo",
+        "d) Constelacion individual para identificar mandatos familiares sobre el exito profesional"
+      ],
+      "correct": 1,
+      "explanation": "Una pregunta concreta y urgente requiere una herramienta de impacto inmediato. Una sesion triple o la carta natal completa abordan profundidad estructural, no urgencia practica."
+    },
+    {
+      "question": "Una consultante te pide usar la quirologia aunque no es tu especialidad. Segun el Codigo Selene, deberias:",
+      "options": [
+        "a) Intentarlo porque la experiencia es la mejor forma de aprender",
+        "b) Usar otra herramienta de tu zona de genio y explicar transparentemente que la quirologia no es tu especialidad",
+        "c) Buscar en internet informacion basica sobre quirologia antes de la sesion",
+        "d) Cobrar menos por esa sesion para compensar la menor calidad"
+      ],
+      "correct": 1,
+      "explanation": "Trabajar fuera de tu zona de competencia sin informar es una violacion del principio de fidelidad. La transparencia no debilita tu autoridad profesional: la refuerza."
+    },
+    {
+      "question": "El concepto de toolkit personalizado implica principalmente que:",
+      "options": [
+        "a) Cada guia debe certificarse en al menos cinco herramientas diferentes",
+        "b) Tu combinacion de herramientas debe reflejar tu zona de genio, no el estandar del mercado",
+        "c) Debes cambiar de herramientas segun la moda del mercado espiritual",
+        "d) Las herramientas que aprendiste primero son siempre las mas adecuadas para tu practica"
+      ],
+      "correct": 1,
+      "explanation": "El toolkit personalizado es la combinacion de herramientas donde operas desde tu zona de genio. No hay una combinacion universal correcta: la mejor toolkit integra lo que dominas excepcionalmente con lo que la consultante necesita."
+    }
   ]
 }

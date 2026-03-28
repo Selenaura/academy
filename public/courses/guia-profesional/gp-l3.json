@@ -7,7 +7,7 @@
     {
       "type": "title",
       "title": "Etica profesional: codigo de conducta",
-      "subtitle": "Modulo 1 · Leccion 3 — Master en Guia Espiritual Profesional"
+      "subtitle": "Modulo 1 Â· Leccion 3 â€” Master en Guia Espiritual Profesional"
     },
     {
       "type": "content",
@@ -22,7 +22,7 @@
     {
       "type": "quote",
       "text": "La inteligencia emocional es una competencia profesional, no un rasgo fijo de personalidad. Se puede desarrollar y se debe exigir en cualquier relacion de ayuda.",
-      "source": "Daniel Goleman, 1995 — Emotional Intelligence"
+      "source": "Daniel Goleman, 1995 â€” Emotional Intelligence"
     },
     {
       "type": "content",
@@ -43,6 +43,37 @@
       "type": "content",
       "title": "Caso practico: Carmen y Roberto",
       "body": "Tres banderas rojas: insomnio, perdida de peso, ideacion suicida.\nCarmen detiene la sesion con respeto.\nDeriva a profesional de salud mental.\nOfrece retomar el trabajo como complemento despues."
+    },
+    {
+      "type": "process_diagram",
+      "title": "Protocolo de derivacion responsable",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Deteccion de senales",
+          "description": "Identifica banderas rojas: ideacion suicida, violencia domestica, trauma agudo, perdida de peso no intencional, insomnio severo, sintomas psicoticos"
+        },
+        {
+          "step": 2,
+          "title": "Pausa de la sesion",
+          "description": "Detente suavemente: 'Lo que me cuentas merece atencion especializada'. No continuas con el tema astrologico o de tarot"
+        },
+        {
+          "step": 3,
+          "title": "Comunicacion sin rechazo",
+          "description": "Usa la formula: 'Creo que te beneficiaria apoyo complementario especializado. Puedo sugerirte a alguien?' La derivacion no es el fin del trabajo conjunto"
+        },
+        {
+          "step": 4,
+          "title": "Ofrece contacto concreto",
+          "description": "Ten preparada tu Red de Derivacion: minimo 3 profesionales de salud mental con datos de contacto y especialidades"
+        },
+        {
+          "step": 5,
+          "title": "Seguimiento etico",
+          "description": "Deja claro que cuando tenga apoyo terapeutico podeis retomar el trabajo complementario. Registra la situacion en tus notas confidenciales"
+        }
+      ]
     },
     {
       "type": "summary",
@@ -206,8 +237,60 @@
     "materials": "Acceso a internet para buscar profesionales, procesador de texto para el consentimiento informado"
   },
   "quiz_points": [
-    "La asimetria de poder en la relacion de guia espiritual exige un marco etico profesional explicito, no opcional",
-    "El consentimiento informado incluye enfoque, herramientas, limites, confidencialidad y derecho a interrumpir la sesion",
-    "Las senales de alarma para derivacion incluyen ideacion suicida, violencia domestica, trauma agudo y trastorno mental severo"
+    {
+      "question": "Carmen detecta en sesion que Roberto ha perdido peso sin querer, no puede dormir y menciona que estaria mejor muerto. Cual es la accion etica correcta?",
+      "options": [
+        "a) Continuar la sesion astrologica y abordar los transitos de Saturno que pueden explicar el malestar",
+        "b) Detener la sesion suavemente y derivar a un profesional de salud mental con una formula que no comunique rechazo",
+        "c) Sugerir a Roberto que vuelva cuando se sienta mejor y cancelar la sesion",
+        "d) Interpretar los simbolos astrologicos del sufrimiento como parte del trabajo espiritual normal"
+      ],
+      "correct": 1,
+      "explanation": "Las tres banderas rojas requieren derivacion inmediata. Continuar como si nada violaria el principio de no maleficencia. La formula de derivacion evita que la persona se sienta rechazada."
+    },
+    {
+      "question": "El consentimiento informado del Codigo Selene debe incluir obligatoriamente:",
+      "options": [
+        "a) Solo el precio y la duracion de la sesion para que sea legalmente valido",
+        "b) Descripcion del enfoque, que ofreces, que NO ofreces, confidencialidad y sus limites, y derecho a interrumpir",
+        "c) Una lista completa de las herramientas astrologicas que usaras en cada sesion",
+        "d) Los titulos academicos y certificaciones de la guia como prueba de competencia"
+      ],
+      "correct": 1,
+      "explanation": "El consentimiento informado delimita el marco profesional: que es la sesion, que no es (diagnostico clinico, predicciones garantizadas), confidencialidad y limites, y derechos de la consultante. Establece expectativas y protege a ambas partes."
+    },
+    {
+      "question": "El principio de No dependencia del Codigo Selene implica que:",
+      "options": [
+        "a) La guia debe limitar el numero de sesiones a un maximo de tres por persona",
+        "b) Si una persona viene cada semana para que le digas que hacer, el enfoque esta fallando en promover autonomia",
+        "c) No se debe hacer seguimiento con consultantes habituales para evitar la transferencia emocional",
+        "d) Las sesiones de seguimiento mensual son un signo de dependencia que debes evitar"
+      ],
+      "correct": 1,
+      "explanation": "El objetivo del trabajo es que la consultante desarrolle autonomia, no que dependa de la guia para cada decision. Las sesiones de seguimiento son utiles; la dependencia para tomar decisiones cotidianas senala un problema en el enfoque."
+    },
+    {
+      "question": "La asimetria de poder en la relacion de guia-consultante existe porque:",
+      "options": [
+        "a) La guia cobra por su tiempo y la consultante es la que paga",
+        "b) La guia tiene herramientas, un marco interpretativo e informacion privilegiada mientras la consultante esta en posicion de receptividad",
+        "c) La carta natal revela informacion que la consultante no puede conocer por si misma",
+        "d) La guia tiene mas experiencia de vida que la mayoria de sus consultantes"
+      ],
+      "correct": 1,
+      "explanation": "La asimetria no es personal sino estructural: la guia tiene herramientas y marcos mientras la consultante se abre en posicion vulnerable. Esta estructura exige responsabilidad etica independientemente de las intenciones de la guia."
+    },
+    {
+      "question": "Segun el principio de Limites de competencia, una guia espiritual debe derivar cuando:",
+      "options": [
+        "a) La consultante hace preguntas sobre astrologia que van mas alla de la carta natal basica",
+        "b) Detecta sintomas de trastorno mental severo, trauma agudo o riesgo para la vida de la persona",
+        "c) La sesion dura mas de 90 minutos sin llegar a una conclusion clara",
+        "d) La consultante no tiene experiencia previa con herramientas simbolicas"
+      ],
+      "correct": 1,
+      "explanation": "Los limites de competencia definen que una guia espiritual no diagnostica ni trata condiciones clinicas. Cuando aparecen indicadores de crisis o trastorno, derivar es un acto de responsabilidad, no de fracaso."
+    }
   ]
 }

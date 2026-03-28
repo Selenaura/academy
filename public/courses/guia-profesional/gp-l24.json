@@ -1,29 +1,262 @@
 {
-  "lesson_number": 24, "module": 8, "title": "Referidos y boca a boca: la estrategia mas rentable",
+  "lesson_number": 24,
+  "module": 8,
+  "title": "Referidos y boca a boca: la estrategia mas rentable",
   "text_content": "La publicidad cuesta dinero. Las redes sociales cuestan tiempo. Pero los referidos cuestan exactamente cero y son la fuente de clientes mas eficaz que existe. Un estudio de Nielsen (2021) mostro que el 92% de las personas confian mas en recomendaciones de conocidos que en cualquier forma de publicidad.\n\nEn esta leccion vas a disenar un sistema de referidos que convierta a cada consultante satisfecha en una embajadora de tu trabajo.\n\nPOR QUE EL BOCA A BOCA ES TAN PODEROSO\n\nCialdini (2006) lo explica con dos principios: prueba social (si mi amiga confie en ella, yo tambien puedo confiar) y simpatia (vengo recomendada por alguien que me importa). Cuando alguien llega referida, ya viene con un nivel base de confianza que normalmente tardarias semanas en construir.\n\nAdemas, Kahneman (2011) demostro que las experiencias emocionalmente intensas se recuerdan y comparten mas. Si tu sesion genera un momento de revelacion profunda, la consultante no puede evitar contarselo a alguien. No porque tu se lo pidas, sino porque la experiencia fue lo suficientemente significativa como para compartirla.\n\nEL SISTEMA DE REFERIDOS EN TRES NIVELES\n\nNivel 1: Excelencia en el servicio. El mejor sistema de referidos es una sesion excepcional. Si la persona sale transformada, habla de ti. No hay truco de marketing que sustituya esto.\n\nNivel 2: Facilitar la recomendacion. Muchas consultantes querrian recomendarte pero no saben como. Facilita: al final de la sesion o en el email de seguimiento, incluye una frase como: si conoces a alguien que pueda beneficiarse de este tipo de trabajo, puedes compartirle mi web. Tu recomendacion significa mucho para mi.\n\nNivel 3: Programa de referidos. Un incentivo tangible: si alguien viene de tu parte, esa persona recibe un 10% de descuento en su primera sesion, y tu recibes un credito de 15 EUR para tu proxima sesion. Es un ganar-ganar-ganar: la nueva consultante tiene incentivo, la referidora tiene recompensa, tu tienes un nuevo cliente.\n\nRED DE COLABORACION PROFESIONAL\n\nLos referidos no vienen solo de consultantes. Vienen de otros profesionales. Construye una red de derivacion mutua con: psicologas que respetan enfoques complementarios (tu les derivas, ellas te derivan), coaches de vida y de carrera, profesoras de yoga y meditacion, nutricionistas holisticas, otras guias con especialidades complementarias (tu haces astrologia, ella hace quirologia).\n\nPropuesta para profesionales: invita a un cafe (presencial o virtual), explica tu enfoque, ofrece una sesion gratuita para que lo experimenten, y propone derivacion mutua. Es networking genuino, no transaccional.\n\nPALABRAS QUE FACILITAN REFERIDOS\n\nEnsenar a tus consultantes a hablar de ti es parte de tu estrategia. Cuando alguien le pregunte que haces, tu consultante no deberia decir me lee la carta natal. Deberia poder decir algo como: me ayuda a entender mis patrones y a tomar mejores decisiones. Es como terapia pero con astrologia.\n\nPara que esto ocurra, tu misma debes usar un lenguaje claro y accesible que la persona pueda repetir. Si tu posicionamiento es claro, tu consultante puede transmitirlo.\n\nCASO PRACTICO: EL EFECTO DOMINO DE JULIA\n\nJulia atendio a Carla en una sesion de transitos. Carla quedo tan impactada que se lo conto a tres amigas. Una de ellas, Lucia, reservo sesion. Lucia se lo conto a su companera de trabajo, que reservo. La companera se lo conto a su hermana. En tres meses, Julia tuvo 7 nuevas consultantes que venian de una unica sesion con Carla. Coste de adquisicion de esas 7 consultantes: 0 EUR.\n\nLa clave: Julia no le pidio a Carla que la recomendara. La experiencia fue tan buena que Carla no pudo evitarlo. Pero Julia si facilito el proceso: envio a Carla un enlace directo a su pagina de reservas que Carla pudo compartir facilmente.\n\nEJERCICIO GUIADO: DISENA TU SISTEMA DE REFERIDOS\n\nPaso 1: redacta la frase que incluiras en tu email de seguimiento invitando a referir. Paso 2: disena tu programa de incentivos (descuento para nueva + credito para referidora). Paso 3: lista 5 profesionales con quienes podrias establecer derivacion mutua.\n\nTAREA PARA CASA\n\nContacta a al menos 2 profesionales (psicologa, coach, profesora de yoga) y propon un cafe virtual para conocer sus servicios y explorar colaboracion. Prepara una explicacion de 2 minutos de lo que haces (usando tu posicionamiento) y una sesion de cortesia si les interesa experimentar tu trabajo.",
   "slides": [
-    {"type": "title", "title": "Referidos y boca a boca", "subtitle": "Modulo 8 · Leccion 24 — Master en Guia Espiritual Profesional"},
-    {"type": "content", "title": "Por que es la estrategia mas rentable", "body": "92% confian mas en recomendaciones de conocidos (Nielsen).\nCialdini: prueba social + simpatia = confianza previa.\nKahneman: experiencias intensas se recuerdan y comparten.\nCoste de adquisicion: 0 EUR."},
-    {"type": "content", "title": "Tres niveles de referidos", "body": "Nivel 1: Excelencia en el servicio (lo basico).\nNivel 2: Facilitar la recomendacion (enlace + frase).\nNivel 3: Programa de incentivos (descuento + credito)."},
-    {"type": "content", "title": "Red de colaboracion profesional", "body": "Psicologas, coaches, profesoras de yoga.\nNutricionistas holisticas, otras guias complementarias.\nCafe virtual + explicacion + sesion de cortesia.\nDerivacion mutua genuina, no transaccional."},
-    {"type": "quote", "text": "El 92% de las personas confian mas en recomendaciones de conocidos que en cualquier forma de publicidad.", "source": "Nielsen, 2021 — Global Trust in Advertising Report"},
-    {"type": "content", "title": "Caso Julia: 7 clientes de 1 sesion", "body": "Carla quedo impactada y lo conto a 3 amigas.\nUna reservo, y el efecto domino genero 7 clientes.\n3 meses. 0 EUR de inversion.\nClave: sesion excelente + enlace facil de compartir."},
-    {"type": "summary", "points": ["Los referidos son la fuente mas eficaz y mas economica de nuevos clientes", "Tres niveles: excelencia + facilitacion + incentivos", "La red profesional de derivacion mutua amplifica el boca a boca"]},
-    {"type": "next", "text": "En el Modulo 9 entraremos en la legalidad: alta como autonomo, facturacion e impuestos, y RGPD."}
+    {
+      "type": "title",
+      "title": "Referidos y boca a boca",
+      "subtitle": "Modulo 8 Â· Leccion 24 â€” Master en Guia Espiritual Profesional"
+    },
+    {
+      "type": "content",
+      "title": "Por que es la estrategia mas rentable",
+      "body": "92% confian mas en recomendaciones de conocidos (Nielsen).\nCialdini: prueba social + simpatia = confianza previa.\nKahneman: experiencias intensas se recuerdan y comparten.\nCoste de adquisicion: 0 EUR."
+    },
+    {
+      "type": "content",
+      "title": "Tres niveles de referidos",
+      "body": "Nivel 1: Excelencia en el servicio (lo basico).\nNivel 2: Facilitar la recomendacion (enlace + frase).\nNivel 3: Programa de incentivos (descuento + credito)."
+    },
+    {
+      "type": "content",
+      "title": "Red de colaboracion profesional",
+      "body": "Psicologas, coaches, profesoras de yoga.\nNutricionistas holisticas, otras guias complementarias.\nCafe virtual + explicacion + sesion de cortesia.\nDerivacion mutua genuina, no transaccional."
+    },
+    {
+      "type": "quote",
+      "text": "El 92% de las personas confian mas en recomendaciones de conocidos que en cualquier forma de publicidad.",
+      "source": "Nielsen, 2021 â€” Global Trust in Advertising Report"
+    },
+    {
+      "type": "content",
+      "title": "Caso Julia: 7 clientes de 1 sesion",
+      "body": "Carla quedo impactada y lo conto a 3 amigas.\nUna reservo, y el efecto domino genero 7 clientes.\n3 meses. 0 EUR de inversion.\nClave: sesion excelente + enlace facil de compartir."
+    },
+    {
+      "type": "process_diagram",
+      "title": "Sistema de referidos: convertir consultantes en fuente de clientes",
+      "steps": [
+        {
+          "step": 1,
+          "title": "La referencia ocurre de forma natural cuando hay transformacion real",
+          "description": "Nadie recomienda una sesion que fue 'interesante'. Las recomendaciones ocurren cuando la consultante experimenta un cambio real y visible. El primer requisito del sistema de referidos es hacer un trabajo excelente, no pedir referencias"
+        },
+        {
+          "step": 2,
+          "title": "El momento optimo para pedir referidos",
+          "description": "Justo despues de un insight significativo o al final de un proceso de varias sesiones, pregunta: '¿Conoces a alguien que podria beneficiarse de este tipo de trabajo?' No pides que te recomienden: preguntas si conocen a alguien con una necesidad similar"
+        },
+        {
+          "step": 3,
+          "title": "Facilita la recomendacion con recursos",
+          "description": "Da a tu consultante algo concreto para compartir: un enlace a tu web, una tarjeta con tu contacto, un mensaje de texto que ella puede reenviar. Cuanto mas facil sea recomendar, mas probable es que lo haga"
+        },
+        {
+          "step": 4,
+          "title": "Programa de referidos formal (opcional)",
+          "description": "Ofrece algo de valor a quien te refiere un cliente que compra: una sesion complementaria de 30 min, un acceso a un contenido exclusivo, un descuento en su proximo paquete. No dinero en efectivo: puede crear incentivos erroneos"
+        },
+        {
+          "step": 5,
+          "title": "Colaboraciones con profesionales complementarios",
+          "description": "Psicologos, coaches, medicos integrales, doulas, nutricionistas holisticos: todos trabajan con el mismo publico que tu pero con herramientas diferentes. Una red de derivacion mutua puede ser tu fuente de clientes mas estable y de mayor calidad"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "points": [
+        "Los referidos son la fuente mas eficaz y mas economica de nuevos clientes",
+        "Tres niveles: excelencia + facilitacion + incentivos",
+        "La red profesional de derivacion mutua amplifica el boca a boca"
+      ]
+    },
+    {
+      "type": "next",
+      "text": "En el Modulo 9 entraremos en la legalidad: alta como autonomo, facturacion e impuestos, y RGPD."
+    }
   ],
   "interactive": [
-    {"type": "sort", "title": "Tres niveles de referidos", "instruction": "Ordena los tres niveles del sistema de referidos.", "correct_order": ["Nivel 1: Excelencia en el servicio — la sesion excepcional genera boca a boca natural", "Nivel 2: Facilitar la recomendacion — enlace directo + frase en email de seguimiento", "Nivel 3: Programa de incentivos — descuento para nueva consultante + credito para referidora"]},
-    {"type": "match", "title": "Principio de Cialdini y aplicacion a referidos", "pairs": [{"left": "Prueba social", "right": "Si mi amiga confio en ella, yo tambien puedo"}, {"left": "Simpatia", "right": "Vengo recomendada por alguien que me importa"}, {"left": "Reciprocidad", "right": "Tu sesion me cambio la vida, quiero devolver recomendandote"}, {"left": "Compromiso", "right": "Si ya reserve, es coherente que lo recomiende si me gusto"}]},
-    {"type": "flip_cards", "title": "Red de colaboracion profesional", "cards": [{"front": "Psicologas", "back": "Derivacion mutua: tu les derivas consultantes con necesidades clinicas, ellas te derivan personas que buscan autoconocimiento complementario."}, {"front": "Coaches de vida", "back": "Complementarias naturales: el coach trabaja objetivos y accion, tu trabajas comprension profunda y significado."}, {"front": "Profesoras de yoga/meditacion", "back": "Comparten audiencia: personas que buscan bienestar integral y autoconocimiento."}, {"front": "Otras guias con distinta especialidad", "back": "Derivacion por nicho: si tu haces astrologia de carrera y ella hace tarot relacional, os complementais."}]},
-    {"type": "process_diagram", "title": "El efecto domino de los referidos", "steps": ["Sesion excelente genera experiencia transformadora", "Consultante comparte naturalmente con su entorno", "Facilitas con enlace directo y frase en email de seguimiento", "Nueva consultante llega con confianza previa", "Si su experiencia tambien es buena, el ciclo se repite"]},
-    {"type": "lesson_summary", "points": ["El 92% confian mas en recomendaciones que en publicidad: los referidos son la estrategia mas rentable", "Tres niveles: excelencia en servicio, facilitacion activa e incentivos tangibles", "La red profesional de derivacion mutua amplifica exponencialmente el boca a boca", "El enlace directo a reservas facilitado en el email de seguimiento convierte recomendaciones en reservas"]}
+    {
+      "type": "sort",
+      "title": "Tres niveles de referidos",
+      "instruction": "Ordena los tres niveles del sistema de referidos.",
+      "correct_order": [
+        "Nivel 1: Excelencia en el servicio â€” la sesion excepcional genera boca a boca natural",
+        "Nivel 2: Facilitar la recomendacion â€” enlace directo + frase en email de seguimiento",
+        "Nivel 3: Programa de incentivos â€” descuento para nueva consultante + credito para referidora"
+      ]
+    },
+    {
+      "type": "match",
+      "title": "Principio de Cialdini y aplicacion a referidos",
+      "pairs": [
+        {
+          "left": "Prueba social",
+          "right": "Si mi amiga confio en ella, yo tambien puedo"
+        },
+        {
+          "left": "Simpatia",
+          "right": "Vengo recomendada por alguien que me importa"
+        },
+        {
+          "left": "Reciprocidad",
+          "right": "Tu sesion me cambio la vida, quiero devolver recomendandote"
+        },
+        {
+          "left": "Compromiso",
+          "right": "Si ya reserve, es coherente que lo recomiende si me gusto"
+        }
+      ]
+    },
+    {
+      "type": "flip_cards",
+      "title": "Red de colaboracion profesional",
+      "cards": [
+        {
+          "front": "Psicologas",
+          "back": "Derivacion mutua: tu les derivas consultantes con necesidades clinicas, ellas te derivan personas que buscan autoconocimiento complementario."
+        },
+        {
+          "front": "Coaches de vida",
+          "back": "Complementarias naturales: el coach trabaja objetivos y accion, tu trabajas comprension profunda y significado."
+        },
+        {
+          "front": "Profesoras de yoga/meditacion",
+          "back": "Comparten audiencia: personas que buscan bienestar integral y autoconocimiento."
+        },
+        {
+          "front": "Otras guias con distinta especialidad",
+          "back": "Derivacion por nicho: si tu haces astrologia de carrera y ella hace tarot relacional, os complementais."
+        }
+      ]
+    },
+    {
+      "type": "process_diagram",
+      "title": "El efecto domino de los referidos",
+      "steps": [
+        "Sesion excelente genera experiencia transformadora",
+        "Consultante comparte naturalmente con su entorno",
+        "Facilitas con enlace directo y frase en email de seguimiento",
+        "Nueva consultante llega con confianza previa",
+        "Si su experiencia tambien es buena, el ciclo se repite"
+      ]
+    },
+    {
+      "type": "lesson_summary",
+      "points": [
+        "El 92% confian mas en recomendaciones que en publicidad: los referidos son la estrategia mas rentable",
+        "Tres niveles: excelencia en servicio, facilitacion activa e incentivos tangibles",
+        "La red profesional de derivacion mutua amplifica exponencialmente el boca a boca",
+        "El enlace directo a reservas facilitado en el email de seguimiento convierte recomendaciones en reservas"
+      ]
+    }
   ],
   "citation": [
-    {"researcher": "Robert Cialdini", "year": "2006", "finding": "La prueba social y la simpatia son los principios de influencia que explican la eficacia del boca a boca en servicios de confianza"},
-    {"researcher": "Daniel Kahneman", "year": "2011", "finding": "Las experiencias emocionalmente intensas se codifican con mayor fuerza en la memoria y generan mayor probabilidad de ser compartidas"},
-    {"researcher": "Nielsen", "year": "2021", "finding": "El 92% de los consumidores confian en recomendaciones de conocidos por encima de cualquier forma de publicidad"}
+    {
+      "researcher": "Robert Cialdini",
+      "year": "2006",
+      "finding": "La prueba social y la simpatia son los principios de influencia que explican la eficacia del boca a boca en servicios de confianza"
+    },
+    {
+      "researcher": "Daniel Kahneman",
+      "year": "2011",
+      "finding": "Las experiencias emocionalmente intensas se codifican con mayor fuerza en la memoria y generan mayor probabilidad de ser compartidas"
+    },
+    {
+      "researcher": "Nielsen",
+      "year": "2021",
+      "finding": "El 92% de los consumidores confian en recomendaciones de conocidos por encima de cualquier forma de publicidad"
+    }
   ],
-  "bibliography": [{"author": "Cialdini, R.", "year": "2006", "title": "Influence", "type": "Libro"}, {"author": "Nielsen", "year": "2021", "title": "Global Trust in Advertising Report", "type": "Informe"}, {"author": "Kahneman, D.", "year": "2011", "title": "Thinking, Fast and Slow", "type": "Libro"}, {"author": "Godin, S.", "year": "2018", "title": "This Is Marketing", "type": "Libro"}],
-  "homework": {"task": "Contacta al menos 2 profesionales (psicologa, coach, profesora de yoga) y propon un cafe virtual para explorar colaboracion. Prepara explicacion de 2 minutos de tu trabajo y ofrece sesion de cortesia. Ademas, redacta tu frase de referidos para el email de seguimiento y disena tu programa de incentivos.", "duration": "45-60 min preparacion + cafes virtuales", "materials": "Posicionamiento escrito, enlace a tu pagina de reservas"},
-  "quiz_points": ["El 92% de las personas confian mas en recomendaciones personales que en publicidad, segun Nielsen 2021", "Los tres niveles del sistema de referidos son: excelencia en el servicio, facilitacion activa de la recomendacion e incentivos tangibles", "La red profesional de derivacion mutua con psicologas, coaches y otras guias amplifica exponencialmente el boca a boca"]
+  "bibliography": [
+    {
+      "author": "Cialdini, R.",
+      "year": "2006",
+      "title": "Influence",
+      "type": "Libro"
+    },
+    {
+      "author": "Nielsen",
+      "year": "2021",
+      "title": "Global Trust in Advertising Report",
+      "type": "Informe"
+    },
+    {
+      "author": "Kahneman, D.",
+      "year": "2011",
+      "title": "Thinking, Fast and Slow",
+      "type": "Libro"
+    },
+    {
+      "author": "Godin, S.",
+      "year": "2018",
+      "title": "This Is Marketing",
+      "type": "Libro"
+    }
+  ],
+  "homework": {
+    "task": "Contacta al menos 2 profesionales (psicologa, coach, profesora de yoga) y propon un cafe virtual para explorar colaboracion. Prepara explicacion de 2 minutos de tu trabajo y ofrece sesion de cortesia. Ademas, redacta tu frase de referidos para el email de seguimiento y disena tu programa de incentivos.",
+    "duration": "45-60 min preparacion + cafes virtuales",
+    "materials": "Posicionamiento escrito, enlace a tu pagina de reservas"
+  },
+  "quiz_points": [
+    {
+      "question": "La estrategia de marketing mas rentable para una guia espiritual establecida suele ser:",
+      "options": [
+        "a) La publicidad de pago en Instagram y Facebook con segmentacion por intereses espirituales",
+        "b) Los referidos y el boca a boca de consultantes satisfechas que recomiendan a personas con necesidades similares",
+        "c) El SEO (posicionamiento en buscadores) de un blog con contenido astrologico o de tarot",
+        "d) La colaboracion con influencers del nicho espiritual que tienen audiencias grandes"
+      ],
+      "correct": 1,
+      "explanation": "Los referidos son la estrategia mas rentable por varias razones: costo cero de adquisicion, cliente que llega con confianza previa (ya confian en quien te recomendo), y mayor probabilidad de conversion. Un cliente referido convierte 3-5 veces mejor que uno que llega de publicidad fria."
+    },
+    {
+      "question": "El momento optimo para pedir una referencia o recomendacion a una consultante es:",
+      "options": [
+        "a) Al principio de la primera sesion cuando la consultante esta mas emocionada con el nuevo proceso",
+        "b) Justo despues de un insight significativo o al terminar un proceso de varias sesiones cuando el valor es mas visible",
+        "c) En un email de seguimiento una semana despues de la ultima sesion cuando ha habido tiempo de reflexion",
+        "d) Nunca: pedir referencias es inapropiado en el contexto de un trabajo de acompanamiento espiritual"
+      ],
+      "correct": 1,
+      "explanation": "La referencia se pide en el momento de mayor valor percibido: cuando la consultante acaba de experimentar un cambio o insight significativo. En ese momento, la recomendacion es espontanea y sincera. Pedirla en un email frio una semana despues es mucho menos efectivo."
+    },
+    {
+      "question": "Una red de colaboracion con psicologos, coaches y otros profesionales complementarios es valiosa porque:",
+      "options": [
+        "a) Permite compartir el costo de marketing y publicidad entre varios profesionales del bienestar",
+        "b) Genera derivaciones mutuas de calidad: cada profesional refiere lo que excede su ambito al colega adecuado",
+        "c) Crea una marca conjunta que tiene mas visibilidad que cada profesional por separado",
+        "d) Permite ofrecer servicios multidisciplinares que ninguno de los miembros podria ofrecer individualmente"
+      ],
+      "correct": 1,
+      "explanation": "Una red de derivacion mutua funciona porque cada profesional trabaja con el mismo publico objetivo desde distintas herramientas. Un psicologo puede derivar a una guia espiritual para trabajo complementario; la guia deriva al psicologo cuando detecta condicion clinica. Ambas ganan credibilidad y clientes de calidad."
+    },
+    {
+      "question": "Ofrecer una comision en efectivo a quien te refiere un cliente tiene como riesgo principal:",
+      "options": [
+        "a) Crear incentivos erroneos: la persona recomienda por el incentivo economico, no porque realmente valore el trabajo",
+        "b) Generar obligaciones fiscales adicionales que complican la contabilidad de la guia autonoma",
+        "c) Contradecir los principios eticos del acompanamiento espiritual que no debe tener base comercial",
+        "d) Reducir el margen de beneficio de la guia hasta hacer el negocio economicamente inviable"
+      ],
+      "correct": 0,
+      "explanation": "Las comisiones en efectivo crean incentivos que pueden distorsionar las recomendaciones. Quien recomienda por dinero puede recomendar a cualquier persona aunque no sea el perfil adecuado. Los incentivos de valor (una sesion complementaria, acceso exclusivo) recompensan sin crear ese sesgo."
+    },
+    {
+      "question": "Para que el boca a boca funcione como estrategia de captacion, el requisito previo fundamental es:",
+      "options": [
+        "a) Tener una gran audiencia en redes sociales que amplifique las recomendaciones de tus consultantes",
+        "b) Hacer un trabajo de calidad que produzca transformaciones reales y visibles en las consultantes",
+        "c) Establecer un sistema formal de referidos con incentivos claros y comunicarlos a todas las consultantes",
+        "d) Especializarse en un nicho muy especifico donde hay pocos competidores y las referencias circulan facilmente"
+      ],
+      "correct": 1,
+      "explanation": "Nadie recomienda una experiencia mediocre. El prerequisito del boca a boca es la excelencia en el trabajo. Sin transformacion real, no hay historia que contar ni persona que recomendar. Los sistemas de referidos amplifican el boca a boca natural pero no lo crean si el trabajo no lo justifica."
+    }
+  ]
 }

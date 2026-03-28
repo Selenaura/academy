@@ -7,7 +7,7 @@
     {
       "type": "title",
       "title": "Tu perfil como guia",
-      "subtitle": "Modulo 1 · Leccion 2 — Master en Guia Espiritual Profesional"
+      "subtitle": "Modulo 1 Â· Leccion 2 â€” Master en Guia Espiritual Profesional"
     },
     {
       "type": "content",
@@ -27,7 +27,7 @@
     {
       "type": "quote",
       "text": "El rendimiento optimo se alcanza cuando las personas utilizan sus fortalezas caracteristicas en su actividad profesional principal.",
-      "source": "Seligman & Peterson, 2004 — Character Strengths and Virtues"
+      "source": "Seligman & Peterson, 2004 â€” Character Strengths and Virtues"
     },
     {
       "type": "content",
@@ -43,6 +43,50 @@
       "type": "content",
       "title": "Formula de especializacion",
       "body": "Soy guia especializada en [herramienta/tema]\npara [tipo de persona]\nque busca [resultado].\nNo tiene que ser definitiva. Es un punto de partida."
+    },
+    {
+      "type": "comparison_table",
+      "title": "Los cuatro arquetipos de guia espiritual",
+      "columns": [
+        "Arquetipo",
+        "Fortaleza principal",
+        "Riesgo principal",
+        "Tipo de sesion"
+      ],
+      "rows": [
+        {
+          "label": "Analitica",
+          "values": [
+            "Precision tecnica y datos",
+            "Perderse en lo tecnico, olvidar la emocion",
+            "Estructurada, rica en informacion"
+          ]
+        },
+        {
+          "label": "Intuitiva",
+          "values": [
+            "Conexion empatica profunda",
+            "Falta de estructura, dificultad para fundamentar",
+            "Fluida, organica, no predecible"
+          ]
+        },
+        {
+          "label": "Pedagogica",
+          "values": [
+            "Ensenanza y empoderamiento",
+            "Convertir la sesion en una clase",
+            "Formativa, con marcos conceptuales"
+          ]
+        },
+        {
+          "label": "Terapeutica",
+          "values": [
+            "Contencion y espacio seguro",
+            "Asumir rol clinico sin formacion",
+            "Profunda, orientada a emociones dificiles"
+          ]
+        }
+      ]
     },
     {
       "type": "summary",
@@ -103,12 +147,32 @@
     },
     {
       "type": "comparison",
-      "headers": ["Arquetipo", "Fortaleza principal", "Riesgo principal"],
+      "headers": [
+        "Arquetipo",
+        "Fortaleza principal",
+        "Riesgo principal"
+      ],
       "rows": [
-        ["Analitica", "Precision tecnica y datos", "Olvidar la dimension emocional"],
-        ["Intuitiva", "Conexion empatica", "Falta de estructura"],
-        ["Pedagogica", "Capacidad de ensenar", "Convertir sesion en clase"],
-        ["Terapeutica", "Contencion emocional", "Asumir rol clinico"]
+        [
+          "Analitica",
+          "Precision tecnica y datos",
+          "Olvidar la dimension emocional"
+        ],
+        [
+          "Intuitiva",
+          "Conexion empatica",
+          "Falta de estructura"
+        ],
+        [
+          "Pedagogica",
+          "Capacidad de ensenar",
+          "Convertir sesion en clase"
+        ],
+        [
+          "Terapeutica",
+          "Contencion emocional",
+          "Asumir rol clinico"
+        ]
       ]
     },
     {
@@ -170,8 +234,60 @@
     "materials": "Acceso a internet para el test VIA, documento de Declaracion de Metodo"
   },
   "quiz_points": [
-    "La clasificacion VIA de Seligman y Peterson identifica 24 fortalezas universales cuyo uso profesional correlaciona con mayor satisfaccion y rendimiento",
-    "La zona de genio de Hendricks es donde confluyen alta competencia tecnica y alto disfrute natural, y debe ser el centro de la practica profesional",
-    "La especializacion no limita la practica: mejora la calidad del servicio, facilita el posicionamiento y permite acumular practica deliberada en un dominio concreto"
+    {
+      "question": "Laura descubrio que sus sesiones de 90 minutos la agotaban. Al analizar su perfil, identifico que su zona de genio era:",
+      "options": [
+        "a) La carta natal completa con todos los aspectos y transitos",
+        "b) La interpretacion de transitos actuales en sesiones de 45 minutos",
+        "c) Las tiradas de tarot combinadas con suenos",
+        "d) Las constelaciones familiares individuales"
+      ],
+      "correct": 1,
+      "explanation": "Laura identifico su zona de genio (Hendricks) como la interpretacion de transitos actuales, no la carta natal completa. Operar desde la zona de genio convierte el trabajo en energizante en lugar de agotador."
+    },
+    {
+      "question": "Segun Hendricks, cual es la diferencia entre la zona de excelencia y la zona de genio?",
+      "options": [
+        "a) La excelencia requiere mas anos de experiencia que el genio",
+        "b) En la excelencia haces las cosas muy bien; en el genio las haces de forma excepcional con fluidez natural",
+        "c) La excelencia se aplica a herramientas tecnicas y el genio a habilidades interpersonales",
+        "d) No hay diferencia practica: ambas producen los mismos resultados"
+      ],
+      "correct": 1,
+      "explanation": "Hendricks distingue cuatro zonas. La excelencia es hacer algo muy bien (pero puede ser agotador). El genio es lo que haces de forma excepcional con fluidez natural, sin esfuerzo consciente."
+    },
+    {
+      "question": "Una guia con arquetipo Terapeutico trabaja principalmente su riesgo cuando:",
+      "options": [
+        "a) Evita explorar emociones profundas con sus consultantes",
+        "b) Solo acepta consultantes que ya han pasado por terapia psicologica",
+        "c) Mantiene limites claros para no asumir un rol clinico que excede su formacion",
+        "d) Convierte cada sesion en una clase magistral sobre psicologia"
+      ],
+      "correct": 2,
+      "explanation": "El riesgo del arquetipo Terapeutico es asumir un rol clinico sin la formacion necesaria. Trabajar este riesgo significa mantener limites claros, conocer los indicadores de derivacion y no reemplazar la psicoterapia."
+    },
+    {
+      "question": "Para identificar tu especializacion provisional, la formula del Metodo Selene propone completar:",
+      "options": [
+        "a) Soy guia con X anos de experiencia y Y certificaciones",
+        "b) Soy guia especializada en [herramienta] para [tipo de persona] que busca [resultado]",
+        "c) Ofrezco sesiones de [duracion] sobre [tema] a precio de [tarifa]",
+        "d) Mi metodo combina [herramienta A] con [herramienta B] y [herramienta C]"
+      ],
+      "correct": 1,
+      "explanation": "La formula de especializacion incluye herramienta, tipo de persona y resultado buscado. Esta estructura comunica valor especifico, no solo descripcion de herramientas o credenciales."
+    },
+    {
+      "question": "Kahneman argumenta que los expertos superan a los generalistas en entornos con retroalimentacion clara. Que implica esto para la especializacion?",
+      "options": [
+        "a) Que debes obtener mas certificaciones para competir con guias generalistas",
+        "b) Que especializarse en un area acumula practica deliberada y mejora el patron de reconocimiento en ese dominio",
+        "c) Que solo puedes atender a consultantes dentro de tu especializacion y debes rechazar todos los demas",
+        "d) Que el enfoque analitico es siempre superior al intuitivo en la practica profesional"
+      ],
+      "correct": 1,
+      "explanation": "La especializacion permite acumular horas de practica deliberada en un dominio especifico, desarrollando reconocimiento de patrones mas fino y mayor calidad de servicio que cubrir todo superficialmente."
+    }
   ]
 }
