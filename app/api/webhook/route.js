@@ -57,12 +57,8 @@ export async function POST(request) {
     const session = event.data.object;
     const { user_id, course_id } = session.metadata || {};
 
+    // Only handle 'payment' mode here — subscriptions are handled in invoice.paid
     if (user_id && course_id && session.mode === 'payment') {
-      await enrollUser(user_id, course_id, session.id, session.amount_total);
-    }
-
-    // Subscription (installment plan): enroll on first payment
-    if (user_id && course_id && session.mode === 'subscription') {
       await enrollUser(user_id, course_id, session.id, session.amount_total);
     }
   }
@@ -74,7 +70,7 @@ export async function POST(request) {
     if (!subscriptionId) return NextResponse.json({ received: true });
 
     const subscription = await stripe.subscriptions.retrieve(subscriptionId);
-    const { user_id, course_id, installments, max_cycles } = subscription.metadata || {};
+    const { user_id, course_id, max_cycles } = subscription.metadata || {};
     if (!user_id || !course_id || !max_cycles) return NextResponse.json({ received: true });
 
     const maxCycles = parseInt(max_cycles, 10);
@@ -87,7 +83,12 @@ export async function POST(request) {
       metadata: { ...subscription.metadata, paid_cycles: String(paidCount) },
     });
 
-    // Record payment
+    // First installment: enroll the user
+    if (paidCount === 1) {
+      await enrollUser(user_id, course_id, subscriptionId, invoice.amount_paid);
+    }
+
+    // Record this installment payment
     await supabase.from('payments').insert({
       user_id,
       course_id,
@@ -97,7 +98,7 @@ export async function POST(request) {
       status: 'completed',
       installment_number: paidCount,
       installments_total: maxCycles,
-    }).catch(() => {});
+    });
 
     // Cancel subscription when all installments paid
     if (paidCount >= maxCycles) {
