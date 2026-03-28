@@ -4,6 +4,8 @@ import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { COURSES } from '@/lib/constants';
+import { createClient } from '@/lib/supabase-browser';
+import { recordLessonComplete } from '@/lib/gamification';
 import { Card, ProgressBar, Badge, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
 import { FlipCards, MatchExercise, HotspotImage, FillBlanks, SortExercise, KeyConcept, ProgressCheck, MultipleChoice, Timeline, ComparisonTable, Scenario, RevealSections } from '@/components/InteractiveElements';
 import { ProcessDiagram, ConceptMap, LessonSummary, SpacedReview, AnnotatedImage, BranchingScenario } from '@/components/LearningElements';
@@ -568,9 +570,7 @@ export default function CoursePage({ params }) {
               )}
 
               {/* Complete lesson button */}
-              <button className="w-full bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition mb-4">
-                Completar leccion
-              </button>
+              <CompleteButton courseId={course.id} lessonId={activeLesson.id} onComplete={() => navigate(1)} />
 
               {/* Prev / Next navigation */}
               <div className="flex gap-3 mb-8">
@@ -744,5 +744,45 @@ export default function CoursePage({ params }) {
         )}
       </div>
     </div>
+  );
+}
+
+// ── Complete Lesson Button with XP/Badge feedback ──
+function CompleteButton({ courseId, lessonId, onComplete }) {
+  const supabase = createClient();
+  const [state, setState] = useState('idle');
+  const [result, setResult] = useState(null);
+
+  const handleComplete = async () => {
+    setState('loading');
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) { setState('idle'); return; }
+      const res = await recordLessonComplete(supabase, user.id, courseId, lessonId);
+      setResult(res);
+      setState('done');
+      setTimeout(() => { if (onComplete) onComplete(); }, 1500);
+    } catch (e) {
+      console.error('Error completing lesson:', e);
+      setState('done');
+      if (onComplete) onComplete();
+    }
+  };
+
+  if (state === 'done') {
+    return (
+      <div className="w-full bg-green-500/10 border border-green-500/30 text-green-400 font-semibold py-3.5 rounded-xl text-center mb-4 animate-fade-in">
+        <span className="mr-2">✓</span> Completada
+        {result?.xp && <span className="ml-2 text-selene-gold">+{result.xp} XP</span>}
+        {result?.newBadges?.length > 0 && <span className="ml-2">🏅 Nueva insignia</span>}
+      </div>
+    );
+  }
+
+  return (
+    <button onClick={handleComplete} disabled={state === 'loading'}
+      className="w-full bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition mb-4 disabled:opacity-50">
+      {state === 'loading' ? 'Registrando...' : 'Completar lección'}
+    </button>
   );
 }

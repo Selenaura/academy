@@ -16,11 +16,7 @@ export default function DashboardPage() {
   const [stats, setStats] = useState(null);
   const [showAllBadges, setShowAllBadges] = useState(false);
 
-  // Mock enrollment data (will come from Supabase in production)
-  const [enrollments] = useState({
-    'brujula-interior': { enrolled: true, progress: 0.35 },
-    'magnetismo-consciente': { enrolled: true, progress: 0.12 },
-  });
+  const [enrollments, setEnrollments] = useState({});
 
   useEffect(() => {
     async function init() {
@@ -31,13 +27,25 @@ export default function DashboardPage() {
       }
       setUser(user);
 
+      // Load enrollments from Supabase
+      const { data: enrollData } = await supabase
+        .from('enrollments')
+        .select('course_id, status, progress')
+        .eq('user_id', user.id);
+      const enrollMap = {};
+      // Always include free course
+      enrollMap['brujula-interior'] = { enrolled: true, progress: 0 };
+      (enrollData || []).forEach(e => {
+        enrollMap[e.course_id] = { enrolled: true, progress: e.progress || 0 };
+      });
+      setEnrollments(enrollMap);
+
       // Load gamification stats
       try {
         const userStats = await getUserStats(supabase, user.id);
         setStats(userStats);
       } catch (e) {
         console.error('Error loading stats:', e);
-        // Fallback stats when tables don't exist yet
         setStats(null);
       }
 
