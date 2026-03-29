@@ -9,6 +9,7 @@ import { recordLessonComplete } from '@/lib/gamification';
 import { Card, ProgressBar, Badge, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
 import { FlipCards, MatchExercise, HotspotImage, FillBlanks, SortExercise, KeyConcept, ProgressCheck, MultipleChoice, Timeline, ComparisonTable, Scenario, RevealSections } from '@/components/InteractiveElements';
 import { ProcessDiagram, ConceptMap, LessonSummary, SpacedReview, AnnotatedImage, BranchingScenario } from '@/components/LearningElements';
+import TextContentRenderer from '@/components/TextContentRenderer';
 
 // ── Chevron Icons for slide navigation ──
 function ChevronLeftIcon({ size = 20, className = '' }) {
@@ -93,6 +94,32 @@ function SlideViewer({ slides }) {
             <div className="text-2xl mb-3">--{'>'}</div>
             <p className="text-xs font-semibold text-selene-white-dim tracking-wide uppercase mb-3">Siguiente leccion</p>
             <p className="text-[14px] text-selene-white leading-relaxed max-w-[520px]">{s.text}</p>
+          </div>
+        );
+
+      case 'comparison_table':
+        return (
+          <div className="flex flex-col justify-center min-h-[260px] px-6 py-5">
+            {s.title && <h4 className="font-display text-lg text-selene-gold mb-4">{s.title}</h4>}
+            <div className="rounded-lg border border-selene-border overflow-hidden">
+              {s.columns && (
+                <div className="flex">
+                  {s.columns.map((col, ci) => (
+                    <div key={ci} className="flex-1 px-3 py-2.5 bg-selene-elevated text-[11px] font-semibold text-selene-gold uppercase tracking-wider text-center border-b border-selene-border">
+                      {col}
+                    </div>
+                  ))}
+                </div>
+              )}
+              {(s.rows || []).map((row, ri) => (
+                <div key={ri} className={`flex ${ri < (s.rows || []).length - 1 ? 'border-b border-selene-border' : ''}`}>
+                  {row.label && <div className="flex-1 px-3 py-2.5 text-[12px] text-selene-white font-medium bg-selene-card">{row.label}</div>}
+                  {(row.values || []).map((val, vi) => (
+                    <div key={vi} className="flex-1 px-3 py-2.5 text-[12px] text-selene-white-dim text-center bg-selene-card">{val}</div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         );
 
@@ -425,82 +452,7 @@ export default function CoursePage({ params }) {
 
               {/* Text content */}
               <Card className="p-6 md:p-8 mb-6">
-                <div className="prose-selene">
-                  {(lessonData.text_content || '').split('\n\n').map((paragraph, i) => {
-                    // Detect section headers with **bold** markdown
-                    if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
-                      return (
-                        <h3 key={i} className="text-[16px] font-display font-semibold text-selene-gold mt-8 mb-3 first:mt-0">
-                          {paragraph.replace(/\*\*/g, '')}
-                        </h3>
-                      );
-                    }
-                    // Detect special sections
-                    const isCasoPractico = paragraph.startsWith('**Caso práctico');
-                    const isEjercicio = paragraph.startsWith('**Ejercicio guiado');
-                    const isTarea = paragraph.startsWith('**Tarea para casa');
-
-                    if (isCasoPractico) {
-                      return (
-                        <div key={i} className="my-6 p-5 bg-selene-purple/5 border-l-[3px] border-selene-purple rounded-r-xl">
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="text-lg">📋</span>
-                            <span className="text-sm font-semibold text-selene-purple">Caso práctico</span>
-                          </div>
-                          <p className="text-[14px] text-selene-white-dim leading-[1.8]" style={{ textAlign: 'justify' }}>
-                            {paragraph.replace(/\*\*Caso práctico[^*]*\*\*\s*/, '')}
-                          </p>
-                        </div>
-                      );
-                    }
-                    if (isEjercicio) {
-                      return (
-                        <div key={i} className="my-6 p-5 bg-selene-gold/5 border-l-[3px] border-selene-gold rounded-r-xl">
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="text-lg">🎯</span>
-                            <span className="text-sm font-semibold text-selene-gold">Ejercicio guiado</span>
-                          </div>
-                          <p className="text-[14px] text-selene-white-dim leading-[1.8]" style={{ textAlign: 'justify' }}>
-                            {paragraph.replace(/\*\*Ejercicio guiado[^*]*\*\*\s*/, '')}
-                          </p>
-                        </div>
-                      );
-                    }
-                    if (isTarea) {
-                      return (
-                        <div key={i} className="my-6 p-5 bg-selene-success/5 border-l-[3px] border-selene-success rounded-r-xl">
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="text-lg">📝</span>
-                            <span className="text-sm font-semibold text-selene-success">Tarea para casa</span>
-                          </div>
-                          <p className="text-[14px] text-selene-white-dim leading-[1.8]" style={{ textAlign: 'justify' }}>
-                            {paragraph.replace(/\*\*Tarea para casa[^*]*\*\*\s*/, '')}
-                          </p>
-                        </div>
-                      );
-                    }
-                    // Detect inline **bold** within paragraphs
-                    const hasBold = paragraph.includes('**');
-                    if (hasBold) {
-                      const parts = paragraph.split(/(\*\*[^*]+\*\*)/g);
-                      return (
-                        <p key={i} className="text-[14px] md:text-[15px] text-selene-white-dim leading-[1.8] mb-5 last:mb-0" style={{ textAlign: 'justify' }}>
-                          {parts.map((part, j) =>
-                            part.startsWith('**') && part.endsWith('**')
-                              ? <strong key={j} className="text-selene-white font-semibold">{part.replace(/\*\*/g, '')}</strong>
-                              : <span key={j}>{part}</span>
-                          )}
-                        </p>
-                      );
-                    }
-                    // Regular paragraph — justified
-                    return (
-                      <p key={i} className="text-[14px] md:text-[15px] text-selene-white-dim leading-[1.8] mb-5 last:mb-0" style={{ textAlign: 'justify' }}>
-                        {paragraph}
-                      </p>
-                    );
-                  })}
-                </div>
+                <TextContentRenderer text={lessonData.text_content} />
               </Card>
 
               {/* Interactive elements */}
@@ -514,8 +466,17 @@ export default function CoursePage({ params }) {
                       case 'flip_cards': return <FlipCards key={i} cards={el.cards} />;
                       case 'match': return <MatchExercise key={i} title={el.title} pairs={el.pairs} instruction={el.instruction} />;
                       case 'hotspot': return <HotspotImage key={i} imageUrl={el.imageUrl} altText={el.altText} hotspots={el.hotspots} title={el.title} />;
-                      case 'fill_blanks': return <FillBlanks key={i} text={el.text} blanks={el.blanks} title={el.title} />;
-                      case 'sort': return <SortExercise key={i} title={el.title} items={el.items} instruction={el.instruction} />;
+                      case 'fill_blanks': {
+                        // Support both formats: {text, blanks} and {template, answers}
+                        const fbText = el.text || el.template;
+                        const fbBlanks = el.blanks || (el.answers ? el.answers.map(a => ({ answer: a, hint: '...' })) : []);
+                        return <FillBlanks key={i} text={fbText} blanks={fbBlanks} title={el.title} />;
+                      }
+                      case 'sort': {
+                        // Support both formats: {items} and {correct_order}
+                        const sortItems = el.items || el.correct_order;
+                        return <SortExercise key={i} title={el.title} items={sortItems} instruction={el.instruction} />;
+                      }
                       case 'key_concept': return <KeyConcept key={i} term={el.term} definition={el.definition} icon={el.icon} source={el.source} />;
                       case 'progress_check': return <ProgressCheck key={i} questions={el.questions} />;
                       case 'multiple_choice': return <MultipleChoice key={i} question={el.question} options={el.options} correctIndex={el.correct ?? el.correctIndex} explanation={el.explanation} multiSelect={el.multiSelect} />;

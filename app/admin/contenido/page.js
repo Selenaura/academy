@@ -6,6 +6,7 @@ import { COURSES } from '@/lib/constants';
 import { Card, BackIcon } from '@/components/ui';
 import { FlipCards, MatchExercise, HotspotImage, FillBlanks, SortExercise, KeyConcept, ProgressCheck, MultipleChoice, Timeline, ComparisonTable, Scenario, RevealSections } from '@/components/InteractiveElements';
 import { ProcessDiagram, ConceptMap, LessonSummary, SpacedReview, AnnotatedImage, BranchingScenario } from '@/components/LearningElements';
+import TextContentRenderer from '@/components/TextContentRenderer';
 
 // Slide viewer component
 function SlideViewer({ slides }) {
@@ -58,6 +59,34 @@ function SlideViewer({ slides }) {
             <p className="text-[13px] text-selene-white">{s.text}</p>
           </div>
         )}
+        {s.type === 'comparison_table' && (
+          <div>
+            {s.title && <h4 className="text-sm font-semibold text-selene-gold mb-3">{s.title}</h4>}
+            <div className="rounded-lg border border-selene-border overflow-hidden">
+              {s.columns && (
+                <div className="flex">
+                  {s.columns.map((col, ci) => (
+                    <div key={ci} className="flex-1 px-3 py-2 bg-selene-elevated text-[11px] font-semibold text-selene-gold uppercase tracking-wider text-center border-b border-selene-border">{col}</div>
+                  ))}
+                </div>
+              )}
+              {(s.rows || []).map((row, ri) => (
+                <div key={ri} className={`flex ${ri < (s.rows || []).length - 1 ? 'border-b border-selene-border' : ''}`}>
+                  {row.label && <div className="flex-1 px-3 py-2 text-[12px] text-selene-white font-medium bg-selene-card">{row.label}</div>}
+                  {(row.values || []).map((val, vi) => (
+                    <div key={vi} className="flex-1 px-3 py-2 text-[12px] text-selene-white-dim text-center bg-selene-card">{val}</div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {!['title','content','quote','reflection','summary','next','comparison_table'].includes(s.type) && (
+          <div className="text-center">
+            <p className="text-[11px] text-selene-white-dim">Slide tipo: {s.type}</p>
+            {s.title && <p className="text-[13px] text-selene-white mt-1">{s.title}</p>}
+          </div>
+        )}
       </div>
       <div className="flex items-center justify-between px-3 py-2 border-t border-selene-border bg-selene-elevated/50">
         <button onClick={() => idx > 0 && setIdx(idx - 1)} disabled={idx === 0} className="text-xs text-selene-white-dim disabled:opacity-20">← Ant</button>
@@ -92,7 +121,17 @@ function LessonView({ courseId, lessonId, onClose }) {
       <button onClick={onClose} className="text-sm text-selene-gold mb-4 hover:underline">← Volver al curso</button>
 
       <h2 className="font-display text-2xl text-selene-white mb-1">{data.title}</h2>
-      <p className="text-xs text-selene-white-dim mb-6">Módulo {data.module} · Lección {data.lesson_number}</p>
+      <div className="flex items-center gap-3 mb-6">
+        <span className="text-xs text-selene-white-dim">Módulo {data.module} · Lección {data.lesson_number}</span>
+        {data.text_content && (() => {
+          const wc = data.text_content.split(/\s+/).filter(Boolean).length;
+          const color = wc >= 3500 ? 'text-selene-success' : wc >= 2000 ? 'text-selene-gold' : 'text-red-400';
+          return <span className={`text-[11px] font-semibold px-2 py-0.5 rounded ${color} ${wc >= 3500 ? 'bg-selene-success/10' : wc >= 2000 ? 'bg-selene-gold/10' : 'bg-red-500/10'}`}>{wc.toLocaleString()} palabras</span>;
+        })()}
+        {data.slides && <span className="text-[11px] text-selene-white-dim">{data.slides.length} slides</span>}
+        {data.interactive && <span className="text-[11px] text-selene-white-dim">{data.interactive.length} interactivos</span>}
+        {data.citation && <span className="text-[11px] text-selene-white-dim">{Array.isArray(data.citation) ? data.citation.length : 1} citas</span>}
+      </div>
 
       {/* Video if available */}
       {lesson?.videoUrl && (
@@ -105,73 +144,7 @@ function LessonView({ courseId, lessonId, onClose }) {
 
       {/* Text content */}
       <Card className="p-6 mb-6">
-        <div className="text-[14px] text-selene-white-dim leading-[1.8]">
-          {(data.text_content || '').split('\n\n').map((paragraph, i) => {
-            if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
-              return (
-                <h3 key={i} className="text-[16px] font-display font-semibold text-selene-gold mt-8 mb-3 first:mt-0">
-                  {paragraph.replace(/\*\*/g, '')}
-                </h3>
-              );
-            }
-            const isCaso = paragraph.startsWith('**Caso práctico');
-            const isEjercicio = paragraph.startsWith('**Ejercicio guiado');
-            const isTarea = paragraph.startsWith('**Tarea para casa');
-            if (isCaso) {
-              return (
-                <div key={i} className="my-6 p-5 bg-selene-purple/5 border-l-[3px] border-selene-purple rounded-r-xl">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-lg">📋</span>
-                    <span className="text-sm font-semibold text-selene-purple">Caso práctico</span>
-                  </div>
-                  <p className="text-[14px] text-selene-white-dim leading-[1.8]" style={{ textAlign: 'justify' }}>
-                    {paragraph.replace(/\*\*Caso práctico[^*]*\*\*\s*/, '')}
-                  </p>
-                </div>
-              );
-            }
-            if (isEjercicio) {
-              return (
-                <div key={i} className="my-6 p-5 bg-selene-gold/5 border-l-[3px] border-selene-gold rounded-r-xl">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-lg">🎯</span>
-                    <span className="text-sm font-semibold text-selene-gold">Ejercicio guiado</span>
-                  </div>
-                  <p className="text-[14px] text-selene-white-dim leading-[1.8]" style={{ textAlign: 'justify' }}>
-                    {paragraph.replace(/\*\*Ejercicio guiado[^*]*\*\*\s*/, '')}
-                  </p>
-                </div>
-              );
-            }
-            if (isTarea) {
-              return (
-                <div key={i} className="my-6 p-5 bg-selene-success/5 border-l-[3px] border-selene-success rounded-r-xl">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-lg">📝</span>
-                    <span className="text-sm font-semibold text-selene-success">Tarea para casa</span>
-                  </div>
-                  <p className="text-[14px] text-selene-white-dim leading-[1.8]" style={{ textAlign: 'justify' }}>
-                    {paragraph.replace(/\*\*Tarea para casa[^*]*\*\*\s*/, '')}
-                  </p>
-                </div>
-              );
-            }
-            const hasBold = paragraph.includes('**');
-            if (hasBold) {
-              const parts = paragraph.split(/(\*\*[^*]+\*\*)/g);
-              return (
-                <p key={i} className="mb-4 last:mb-0" style={{ textAlign: 'justify' }}>
-                  {parts.map((part, j) =>
-                    part.startsWith('**') && part.endsWith('**')
-                      ? <strong key={j} className="text-selene-white font-semibold">{part.replace(/\*\*/g, '')}</strong>
-                      : <span key={j}>{part}</span>
-                  )}
-                </p>
-              );
-            }
-            return <p key={i} className="mb-4 last:mb-0" style={{ textAlign: 'justify' }}>{paragraph}</p>;
-          })}
-        </div>
+        <TextContentRenderer text={data.text_content} />
       </Card>
 
       {/* Slides */}
@@ -191,8 +164,15 @@ function LessonView({ courseId, lessonId, onClose }) {
               case 'flip_cards': return <FlipCards key={i} cards={el.cards} />;
               case 'match': return <MatchExercise key={i} title={el.title} pairs={el.pairs} instruction={el.instruction} />;
               case 'hotspot': return <HotspotImage key={i} imageUrl={el.imageUrl} altText={el.altText} hotspots={el.hotspots} title={el.title} />;
-              case 'fill_blanks': return <FillBlanks key={i} text={el.text} blanks={el.blanks} title={el.title} />;
-              case 'sort': return <SortExercise key={i} title={el.title} items={el.items} instruction={el.instruction} />;
+              case 'fill_blanks': {
+                const fbText = el.text || el.template;
+                const fbBlanks = el.blanks || (el.answers ? el.answers.map(a => ({ answer: a, hint: '...' })) : []);
+                return <FillBlanks key={i} text={fbText} blanks={fbBlanks} title={el.title} />;
+              }
+              case 'sort': {
+                const sortItems = el.items || el.correct_order;
+                return <SortExercise key={i} title={el.title} items={sortItems} instruction={el.instruction} />;
+              }
               case 'key_concept': return <KeyConcept key={i} term={el.term} definition={el.definition} icon={el.icon} source={el.source} />;
               case 'progress_check': return <ProgressCheck key={i} questions={el.questions} />;
               case 'multiple_choice': return <MultipleChoice key={i} question={el.question} options={el.options} correctIndex={el.correct ?? el.correctIndex} explanation={el.explanation} multiSelect={el.multiSelect} />;
