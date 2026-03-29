@@ -123,14 +123,6 @@ function LessonView({ courseId, lessonId, onClose }) {
       <h2 className="font-display text-2xl text-selene-white mb-1">{data.title}</h2>
       <div className="flex items-center gap-3 mb-6">
         <span className="text-xs text-selene-white-dim">Módulo {data.module} · Lección {data.lesson_number}</span>
-        {data.text_content && (() => {
-          const wc = data.text_content.split(/\s+/).filter(Boolean).length;
-          const color = wc >= 3500 ? 'text-selene-success' : wc >= 2000 ? 'text-selene-gold' : 'text-red-400';
-          return <span className={`text-[11px] font-semibold px-2 py-0.5 rounded ${color} ${wc >= 3500 ? 'bg-selene-success/10' : wc >= 2000 ? 'bg-selene-gold/10' : 'bg-red-500/10'}`}>{wc.toLocaleString()} palabras</span>;
-        })()}
-        {data.slides && <span className="text-[11px] text-selene-white-dim">{data.slides.length} slides</span>}
-        {data.interactive && <span className="text-[11px] text-selene-white-dim">{data.interactive.length} interactivos</span>}
-        {data.citation && <span className="text-[11px] text-selene-white-dim">{Array.isArray(data.citation) ? data.citation.length : 1} citas</span>}
       </div>
 
       {/* Video if available */}

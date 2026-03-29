@@ -122,8 +122,10 @@ export function LessonSummary({ title, points, citation, nextLesson }) {
               {i + 1}
             </div>
             <div>
-              <span className="text-[13px] text-selene-white font-medium">{point.title}</span>
-              {point.detail && (
+              <span className="text-[13px] text-selene-white font-medium">
+                {typeof point === 'string' ? point : point.title}
+              </span>
+              {typeof point === 'object' && point.detail && (
                 <p className="text-[12px] text-selene-white-dim mt-0.5">{point.detail}</p>
               )}
             </div>
