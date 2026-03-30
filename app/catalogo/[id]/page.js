@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { COURSES } from '@/lib/constants';
 import { Navbar, Footer, GoldDivider, Card } from '@/components/ui';
 import { notFound } from 'next/navigation';
+import PixelViewContent from './PixelViewContent';
 
 export async function generateStaticParams() {
   return COURSES.map(c => ({ id: c.id }));
@@ -36,6 +37,7 @@ export default async function CursoDetallePage({ params }) {
 
   return (
     <div className="min-h-screen bg-selene-bg">
+      <PixelViewContent courseId={course.id} title={course.title} price={course.price} />
       <Navbar />
 
       {/* Hero */}

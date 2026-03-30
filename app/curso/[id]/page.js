@@ -190,6 +190,23 @@ export default function CoursePage({ params }) {
   const [completedLessons, setCompletedLessons] = useState(new Set());
   const [enrollLoading, setEnrollLoading] = useState(true);
 
+  // Meta Pixel: Purchase event when returning from Stripe checkout
+  useEffect(() => {
+    if (!course) return;
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('enrolled') === 'true' && typeof fbq === 'function') {
+      fbq('track', 'Purchase', {
+        content_name: course.title,
+        content_ids: [course.id],
+        content_type: 'product',
+        value: course.price / 100,
+        currency: 'EUR',
+      });
+      // Clean URL to prevent duplicate tracking on refresh
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  }, [course]);
+
   // Check real enrollment from Supabase
   useEffect(() => {
     if (!course) return;
@@ -253,6 +270,16 @@ export default function CoursePage({ params }) {
   async function handleEnroll(installments = null) {
     if (enrolling) return;
     setEnrolling(true);
+    // Meta Pixel: InitiateCheckout
+    if (typeof fbq === 'function') {
+      fbq('track', 'InitiateCheckout', {
+        content_name: course.title,
+        content_ids: [course.id],
+        content_type: 'product',
+        value: course.price / 100,
+        currency: 'EUR',
+      });
+    }
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',
@@ -263,6 +290,16 @@ export default function CoursePage({ params }) {
       if (data.url) {
         window.location.href = data.url;
       } else if (data.enrolled) {
+        // Meta Pixel: free enrollment = Purchase with value 0
+        if (typeof fbq === 'function') {
+          fbq('track', 'Purchase', {
+            content_name: course.title,
+            content_ids: [course.id],
+            content_type: 'product',
+            value: 0,
+            currency: 'EUR',
+          });
+        }
         router.refresh();
       } else {
         alert(data.error || 'Error al procesar. Intentalo de nuevo.');
