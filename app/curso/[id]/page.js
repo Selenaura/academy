@@ -270,6 +270,21 @@ export default function CoursePage({ params }) {
   async function handleEnroll(installments = null) {
     if (enrolling) return;
     setEnrolling(true);
+    // Check if user is logged in first
+    try {
+      const supabase = createClient();
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        // Not logged in — redirect to auth with return URL
+        setEnrolling(false);
+        router.push(`/auth?redirect=/curso/${course.id}`);
+        return;
+      }
+    } catch {
+      setEnrolling(false);
+      router.push(`/auth?redirect=/curso/${course.id}`);
+      return;
+    }
     // Meta Pixel: InitiateCheckout
     if (typeof fbq === 'function') {
       fbq('track', 'InitiateCheckout', {
