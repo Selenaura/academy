@@ -361,30 +361,74 @@ export default function CoursePage({ params }) {
 
           {!quizSubmitted ? (
             <button
-              onClick={() => Object.keys(quizAnswers).length === quizQuestions.length && setQuizSubmitted(true)}
+              onClick={async () => {
+                if (Object.keys(quizAnswers).length !== quizQuestions.length) return;
+                setQuizSubmitted(true);
+                // Save exam result to database
+                try {
+                  const correctCount = quizQuestions.filter((q, i) => quizAnswers[i] === q.correct).length;
+                  const score = correctCount / quizQuestions.length;
+                  const passed = score >= 0.7;
+                  const supabase = (await import('@/lib/supabase-browser')).createClient();
+                  const { data: { user } } = await supabase.auth.getUser();
+                  if (user) {
+                    await supabase.from('quiz_attempts').insert({
+                      user_id: user.id,
+                      course_id: course.id,
+                      lesson_id: activeLesson.id,
+                      score,
+                      answers: quizAnswers,
+                      passed,
+                    });
+                  }
+                } catch (e) {
+                  console.error('Error saving quiz attempt:', e);
+                }
+              }}
               disabled={Object.keys(quizAnswers).length !== quizQuestions.length}
               className="w-full mt-2 bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-40"
             >
               Enviar respuestas
             </button>
-          ) : (
-            <div className="text-center mt-6">
-              <Card className="p-6 border-selene-gold/25 bg-gradient-to-b from-selene-card to-selene-gold/5">
-                <div className="text-4xl mb-3">🎓</div>
-                <h3 className="font-display text-xl text-selene-gold mb-2">¡Evaluación completada!</h3>
-                <p className="text-sm text-selene-white-dim mb-1">
-                  Resultado: {quizQuestions.filter((q, i) => quizAnswers[i] === q.correct).length}/{quizQuestions.length} correctas
-                </p>
-                <p className="text-[13px] text-selene-success">Has desbloqueado el certificado</p>
-                <button
-                  onClick={() => router.push(`/curso/${course.id}/certificado`)}
-                  className="mt-4 bg-selene-gold text-selene-bg font-semibold px-8 py-3 rounded-xl hover:brightness-110 transition"
-                >
-                  Ver mi certificado
-                </button>
-              </Card>
-            </div>
-          )}
+          ) : (() => {
+            const correctCount = quizQuestions.filter((q, i) => quizAnswers[i] === q.correct).length;
+            const score = correctCount / quizQuestions.length;
+            const passed = score >= 0.7;
+            return (
+              <div className="text-center mt-6">
+                <Card className={`p-6 ${passed ? 'border-selene-gold/25 bg-gradient-to-b from-selene-card to-selene-gold/5' : 'border-selene-rose/25 bg-gradient-to-b from-selene-card to-selene-rose/5'}`}>
+                  <div className="text-4xl mb-3">{passed ? '🎓' : '📝'}</div>
+                  <h3 className={`font-display text-xl mb-2 ${passed ? 'text-selene-gold' : 'text-selene-rose'}`}>
+                    {passed ? '¡Evaluación superada!' : 'No aprobado'}
+                  </h3>
+                  <p className="text-sm text-selene-white-dim mb-1">
+                    Resultado: {correctCount}/{quizQuestions.length} correctas ({Math.round(score * 100)}%)
+                  </p>
+                  {passed ? (
+                    <>
+                      <p className="text-[13px] text-selene-success mb-4">Has desbloqueado el certificado</p>
+                      <button
+                        onClick={() => router.push(`/curso/${course.id}/certificado`)}
+                        className="bg-selene-gold text-selene-bg font-semibold px-8 py-3 rounded-xl hover:brightness-110 transition"
+                      >
+                        Ver mi certificado
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-[13px] text-selene-rose mb-4">Necesitas un 70% para aprobar. Revisa el contenido e inténtalo de nuevo.</p>
+                      <button
+                        onClick={() => { setQuizSubmitted(false); setQuizAnswers({}); }}
+                        className="bg-selene-elevated text-selene-white font-semibold px-8 py-3 rounded-xl border border-selene-border hover:border-selene-gold/30 transition"
+                      >
+                        Reintentar examen
+                      </button>
+                    </>
+                  )}
+                </Card>
+              </div>
+            );
+          })()}
         </div>
       </div>
     );

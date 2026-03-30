@@ -3,32 +3,56 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Navbar, Footer, GoldDivider, Card } from '@/components/ui';
+import { COURSES } from '@/lib/constants';
+import { createClient } from '@/lib/supabase-browser';
 
 export default function VerificarPage() {
   const [code, setCode] = useState('');
-  const [result, setResult] = useState(null); // null | 'loading' | { found: true, ... } | { found: false }
+  const [result, setResult] = useState(null);
 
-  function handleVerify(e) {
+  async function handleVerify(e) {
     e.preventDefault();
-    const trimmed = code.trim();
+    const trimmed = code.trim().toUpperCase();
     if (!trimmed) return;
 
     setResult('loading');
 
-    // Mock verification — will connect to Supabase later
-    setTimeout(() => {
-      if (trimmed.toUpperCase().startsWith('SEL-')) {
-        setResult({
-          found: true,
-          studentName: '***a M. E.',
-          courseTitle: 'Astrología Natal Profunda',
-          issueDate: '15 de marzo de 2026',
-          code: trimmed.toUpperCase(),
-        });
-      } else {
+    try {
+      const supabase = createClient();
+      const { data, error } = await supabase
+        .from('certificates')
+        .select('certificate_code, course_id, issued_at, profiles(name, surname)')
+        .eq('certificate_code', trimmed)
+        .single();
+
+      if (error || !data) {
         setResult({ found: false });
+        return;
       }
-    }, 800);
+
+      const course = COURSES.find(c => c.id === data.course_id);
+      const name = data.profiles
+        ? [data.profiles.name, data.profiles.surname].filter(Boolean).join(' ')
+        : 'Estudiante';
+
+      // Mask name for privacy: show first name + last initial
+      const parts = name.split(' ');
+      const maskedName = parts.length > 1
+        ? `${parts[0]} ${parts.slice(1).map(p => p[0] + '.').join(' ')}`
+        : name;
+
+      setResult({
+        found: true,
+        studentName: maskedName,
+        courseTitle: course?.title || data.course_id,
+        courseHours: course?.hours || '',
+        courseModules: course?.modules || '',
+        issueDate: new Date(data.issued_at).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }),
+        code: data.certificate_code,
+      });
+    } catch {
+      setResult({ found: false });
+    }
   }
 
   function handleReset() {
@@ -41,7 +65,6 @@ export default function VerificarPage() {
       <Navbar />
 
       <section className="px-6 pt-20 pb-24 max-w-[560px] mx-auto">
-        {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-block text-[11px] text-selene-gold font-semibold px-4 py-1.5 rounded-full border border-selene-gold/20 bg-selene-gold/5 mb-6 tracking-[0.1em] uppercase">
             Verificador de certificados
@@ -58,7 +81,6 @@ export default function VerificarPage() {
           <GoldDivider />
         </div>
 
-        {/* Verification form */}
         {!result || result === 'loading' ? (
           <Card className="p-8">
             <form onSubmit={handleVerify}>
@@ -96,7 +118,6 @@ export default function VerificarPage() {
             </p>
           </Card>
         ) : result.found ? (
-          /* ── Success state ── */
           <Card className="p-8">
             <div className="text-center mb-6">
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-selene-success/10 border border-selene-success/20 mb-4">
@@ -122,6 +143,9 @@ export default function VerificarPage() {
               <div>
                 <div className="text-[11px] text-selene-white-dim uppercase tracking-wider mb-1">Curso completado</div>
                 <div className="text-[14px] text-selene-white">{result.courseTitle}</div>
+                {result.courseHours && (
+                  <div className="text-[12px] text-selene-white-dim mt-0.5">{result.courseHours} · {result.courseModules} módulos</div>
+                )}
               </div>
               <div className="h-px bg-selene-border" />
               <div>
@@ -142,7 +166,6 @@ export default function VerificarPage() {
             </button>
           </Card>
         ) : (
-          /* ── Not found state ── */
           <Card className="p-8">
             <div className="text-center mb-6">
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-selene-rose/10 border border-selene-rose/20 mb-4">
@@ -166,12 +189,8 @@ export default function VerificarPage() {
           </Card>
         )}
 
-        {/* Back link */}
         <div className="text-center mt-8">
-          <Link
-            href="/"
-            className="text-sm text-selene-white-dim hover:text-selene-white transition no-underline"
-          >
+          <Link href="/" className="text-sm text-selene-white-dim hover:text-selene-white transition no-underline">
             ← Volver a la página principal
           </Link>
         </div>

@@ -85,7 +85,7 @@ const FAQ_SECTIONS = [
       },
       {
         q: '¿Cuál es la política de devolución?',
-        a: 'Ofrecemos 14 días de garantía de devolución sin preguntas en todos los cursos y en el Máster. Si no estás satisfecha, contacta a hola@selenaura.com y te reembolsamos íntegramente.',
+        a: 'Ofrecemos 14 días de garantía de devolución sin preguntas en todos los cursos y en el Máster. Si no estás satisfecha, contacta a info@selenaura.com y te reembolsamos íntegramente.',
       },
     ],
   },
@@ -103,7 +103,7 @@ const FAQ_SECTIONS = [
       },
       {
         q: '¿Cómo contacto con soporte?',
-        a: 'Puedes usar el botón de Selene (la luna dorada en la esquina inferior derecha) para consultas rápidas, o escribirnos a hola@selenaura.com para temas que requieran atención personalizada.',
+        a: 'Puedes usar el botón de Selene (la luna dorada en la esquina inferior derecha) para consultas rápidas, o escribirnos a info@selenaura.com para temas que requieran atención personalizada.',
       },
     ],
   },
@@ -192,8 +192,8 @@ export default function AyudaPage() {
             Habla directamente con Selene usando el botón dorado de la esquina inferior derecha,
             o escríbenos a:
           </p>
-          <a href="mailto:hola@selenaura.com" className="text-selene-gold hover:underline text-sm font-medium">
-            hola@selenaura.com
+          <a href="mailto:info@selenaura.com" className="text-selene-gold hover:underline text-sm font-medium">
+            info@selenaura.com
           </a>
         </div>
       </div>
