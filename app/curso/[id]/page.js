@@ -706,8 +706,15 @@ export default function CoursePage({ params }) {
   }
 
   // ── Course Overview ──
+  const isMaster = course.id === 'guia-profesional';
   return (
-    <div className="min-h-screen bg-selene-bg">
+    <div className="min-h-screen bg-selene-bg relative">
+      {isMaster && (
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f2e]/30 via-selene-bg to-selene-bg" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[800px] rounded-full bg-gradient-radial from-selene-gold/[0.03] via-purple-900/[0.02] to-transparent blur-3xl" />
+        </div>
+      )}
       <nav className="sticky top-0 z-50 px-6 py-3.5 flex items-center gap-3 border-b border-selene-border bg-selene-bg/90 backdrop-blur-xl">
         <button onClick={() => router.push('/dashboard')} className="text-selene-white-dim hover:text-selene-white">
           <BackIcon />
@@ -715,14 +722,16 @@ export default function CoursePage({ params }) {
         <span className="text-sm font-medium text-selene-white">Detalle del curso</span>
       </nav>
 
-      <div className="max-w-[680px] mx-auto px-5 py-6">
+      <div className="max-w-[680px] mx-auto px-5 py-6 relative z-10">
         {/* Header */}
         <Card className="p-7 mb-6 relative overflow-hidden" style={{ background: `linear-gradient(135deg, #12121A, ${course.color}08)`, borderColor: `${course.color}30` }}>
           <div className="absolute -top-5 -right-5 text-[80px] opacity-[0.06]">{course.icon}</div>
-          <Badge color={course.color} className="relative z-10">{course.tag}</Badge>
-          <h1 className="font-display text-[26px] font-normal mt-4 mb-1.5 relative z-10">{course.title}</h1>
-          <p className="text-sm text-selene-white-dim leading-relaxed mb-4 relative z-10">{course.subtitle}</p>
-          <div className="flex gap-4 text-xs text-selene-white-dim flex-wrap relative z-10">
+          <div className="text-center relative z-10">
+            <Badge color={course.color}>{course.tag}</Badge>
+            <h1 className="font-display text-[26px] font-normal mt-4 mb-1.5">{course.title}</h1>
+            <p className="text-sm text-selene-white-dim leading-relaxed mb-4">{course.subtitle}</p>
+          </div>
+          <div className="flex gap-4 text-xs text-selene-white-dim flex-wrap justify-center relative z-10">
             <span>{course.level}</span><span>·</span>
             <span>{course.hours}</span><span>·</span>
             <span>{course.modules} módulos</span><span>·</span>
@@ -741,24 +750,32 @@ export default function CoursePage({ params }) {
 
         {/* Description */}
         <Card className="p-5 mb-4">
-          <h3 className="text-sm font-semibold text-selene-white mb-2">Descripción</h3>
+          <div className="inline-block px-3 py-1 rounded-lg bg-selene-white/5 border border-selene-border mb-3">
+            <h3 className="text-xs font-semibold text-selene-gold tracking-wide uppercase">Descripción</h3>
+          </div>
           <p className="text-[13px] text-selene-white-dim leading-relaxed">{course.description}</p>
         </Card>
 
         {/* Science basis */}
         <div className="bg-selene-blue/5 rounded-2xl p-[18px] border border-selene-blue/10 mb-4">
-          <div className="text-xs font-semibold text-selene-blue-light mb-1.5">Base científica</div>
+          <div className="inline-block px-3 py-1 rounded-lg bg-selene-blue/10 border border-selene-blue/20 mb-2">
+            <span className="text-xs font-semibold text-selene-blue-light tracking-wide uppercase">Base científica</span>
+          </div>
           <div className="text-[13px] text-selene-white-dim leading-relaxed">{course.science}</div>
         </div>
 
         {/* For whom & outcome */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
           <Card className="p-4">
-            <div className="text-xs font-semibold text-selene-gold mb-1.5">¿Para quién?</div>
+            <div className="inline-block px-3 py-1 rounded-lg bg-selene-gold/10 border border-selene-gold/20 mb-2">
+              <span className="text-xs font-semibold text-selene-gold tracking-wide uppercase">¿Para quién?</span>
+            </div>
             <div className="text-[13px] text-selene-white-dim leading-relaxed">{course.for_whom}</div>
           </Card>
           <Card className="p-4">
-            <div className="text-xs font-semibold text-selene-success mb-1.5">Resultado</div>
+            <div className="inline-block px-3 py-1 rounded-lg bg-selene-success/10 border border-selene-success/20 mb-2">
+              <span className="text-xs font-semibold text-selene-success tracking-wide uppercase">Resultado</span>
+            </div>
             <div className="text-[13px] text-selene-white-dim leading-relaxed">{course.outcome}</div>
           </Card>
         </div>
@@ -803,7 +820,9 @@ export default function CoursePage({ params }) {
         {/* Lessons */}
         {course.lessons.length > 0 && (
           <div>
-            <h3 className="font-display text-lg font-medium mb-4">Contenido del curso</h3>
+            <div className="inline-block px-4 py-1.5 rounded-lg bg-selene-white/5 border border-selene-border mb-5">
+              <h3 className="text-xs font-semibold text-selene-gold tracking-wide uppercase">Contenido del curso</h3>
+            </div>
             {course.lessons.map((lesson, i) => (
               <button
                 key={lesson.id}
