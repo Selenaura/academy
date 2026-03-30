@@ -509,7 +509,6 @@ export default async function ProgramaPage({ params }) {
                   <div>
                     <p className="text-xs text-selene-white-dim/60 mb-1">Pago único</p>
                     <p className="text-3xl font-display text-selene-gold">{course.price_label}</p>
-                    <p className="text-xs text-selene-white-dim/50 mt-1">€1,25/día durante 4 meses</p>
                   </div>
                   <div className="hidden sm:block w-px h-16 bg-selene-border" />
                   <div>
@@ -518,6 +517,7 @@ export default async function ProgramaPage({ params }) {
                     <p className="text-xs text-selene-white-dim/50 mt-1">Sin intereses</p>
                   </div>
                 </div>
+                <p className="text-[11px] text-selene-white-dim/40 mt-3">$164 USD · $2.899 MXN · £129 GBP · $179 AUD</p>
               </div>
             ) : (
               <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-6">
@@ -533,7 +533,8 @@ export default async function ProgramaPage({ params }) {
               {course.certification && <li className="flex gap-2"><span className="text-selene-gold">✓</span> Certificado verificable</li>}
               <li className="flex gap-2"><span className="text-selene-gold">✓</span> Acceso de por vida + actualizaciones</li>
               {isMaster && <li className="flex gap-2"><span className="text-selene-gold">✓</span> 3 casos prácticos supervisados</li>}
-              {isMaster && <li className="flex gap-2"><span className="text-selene-gold">✓</span> Guía legal y fiscal completa</li>}
+              {isMaster && <li className="flex gap-2"><span className="text-selene-gold">✓</span> Guía legal y fiscal (España + Latam)</li>}
+              {isMaster && <li className="flex gap-2"><span className="text-selene-gold">✓</span> Certificación válida internacionalmente</li>}
               {isMaster && <li className="flex gap-2"><span className="text-selene-gold">✓</span> Perfil en el directorio profesional Selene</li>}
             </ul>
 

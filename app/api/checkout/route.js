@@ -28,11 +28,24 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Curso no encontrado' }, { status: 404 });
     }
 
+    // Check if user is already enrolled
+    const { data: existing } = await supabase
+      .from('enrollments')
+      .select('id')
+      .eq('user_id', user.id)
+      .eq('course_id', courseId)
+      .single();
+
+    if (existing) {
+      // Already enrolled — just redirect to course
+      return NextResponse.json({ enrolled: true });
+    }
+
     if (course.price === 0) {
       // Free course — enroll directly
       const { error } = await supabase
         .from('enrollments')
-        .upsert({
+        .insert({
           user_id: user.id,
           course_id: courseId,
           status: 'active',

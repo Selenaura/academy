@@ -13,18 +13,30 @@ const supabase = createClient(
 );
 
 async function enrollUser(user_id, course_id, stripe_session_id, amount) {
-  const { error: enrollError } = await supabase
+  // Check if already enrolled (prevent duplicate key errors)
+  const { data: existing } = await supabase
     .from('enrollments')
-    .upsert({
-      user_id,
-      course_id,
-      status: 'active',
-      enrolled_at: new Date().toISOString(),
-      stripe_session_id,
-      amount_paid: amount,
-    });
+    .select('id')
+    .eq('user_id', user_id)
+    .eq('course_id', course_id)
+    .single();
 
-  if (enrollError) console.error('Enrollment error:', enrollError);
+  if (!existing) {
+    const { error: enrollError } = await supabase
+      .from('enrollments')
+      .insert({
+        user_id,
+        course_id,
+        status: 'active',
+        enrolled_at: new Date().toISOString(),
+        stripe_session_id,
+        amount_paid: amount,
+      });
+
+    if (enrollError) console.error('Enrollment error:', enrollError);
+  } else {
+    console.log(`User ${user_id} already enrolled in ${course_id}, skipping`);
+  }
 
   const { error: paymentError } = await supabase
     .from('payments')
