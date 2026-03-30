@@ -398,11 +398,11 @@ export default function CertificatePage({ params }) {
                 {/* Left: Signature */}
                 <div className="flex-1 text-center">
                   <div className="font-display text-selene-gold/80 italic text-[16px] mb-1" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
-                    Irene Lloret Trillo
+                    Selene Academia
                   </div>
                   <div className="w-24 h-px bg-selene-gold/30 mx-auto mb-1" />
                   <div className="text-[9px] text-selene-white-dim/60 tracking-[0.1em] uppercase">
-                    Directora · Selene Academia
+                    Direccion Academica
                   </div>
                 </div>
 

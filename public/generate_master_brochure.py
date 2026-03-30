@@ -522,7 +522,7 @@ def page_outcomes(c):
     c.line(W / 2 - 60, y - 95, W / 2 + 60, y - 95)
     c.setFillColor(WHITE_DIM)
     c.setFont('Helvetica', 7)
-    c.drawCentredString(W / 2, y - 105, 'Irene Lloret Trillo  --  Directora, Selene Academia')
+    c.drawCentredString(W / 2, y - 105, 'Direccion Academica  --  Selene Academia')
 
 
 # ═══════════════════════════════════════════════
