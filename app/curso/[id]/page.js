@@ -285,24 +285,8 @@ export default function CoursePage({ params }) {
     );
   }
 
-  // Quiz questions for review
-  const quizQuestions = [
-    {
-      q: '¿Qué estructura cerebral se modifica con la práctica meditativa según los estudios de neuroplasticidad?',
-      options: ['El hipocampo', 'La corteza prefrontal', 'La amígdala', 'Todas las anteriores'],
-      correct: 3,
-    },
-    {
-      q: '¿Qué protocolo tiene la mayor base de evidencia peer-reviewed para meditación?',
-      options: ['Visualización creativa', 'MBSR (Mindfulness-Based Stress Reduction)', 'Meditación trascendental', 'Yoga nidra'],
-      correct: 1,
-    },
-    {
-      q: 'La cronobiología estudia:',
-      options: ['Los horóscopos diarios', 'Los ritmos biológicos y su sincronización', 'La astrología natal', 'Las fases lunares exclusivamente'],
-      correct: 1,
-    },
-  ];
+  // Quiz questions — loaded from each lesson's questions field in constants.js
+  const quizQuestions = (activeLesson && activeLesson.questions) ? activeLesson.questions : [];
 
   // Helper: find lesson index
   const activeLessonIdx = activeLesson ? course.lessons.findIndex(l => l.id === activeLesson.id) : -1;

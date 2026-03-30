@@ -246,6 +246,62 @@ function LessonView({ courseId, lessonId, onClose }) {
   );
 }
 
+// Quiz/Exam preview for admin
+function QuizPreview({ lesson, onClose }) {
+  const questions = lesson.questions || [];
+  return (
+    <div>
+      <button onClick={onClose} className="text-sm text-selene-gold mb-4 hover:underline">← Volver al curso</button>
+
+      <div className="flex items-center gap-3 mb-6">
+        <span className="text-3xl">{lesson.type === 'exam' ? '🎓' : '📝'}</span>
+        <div>
+          <h2 className="font-display text-2xl text-selene-white">{lesson.title}</h2>
+          <p className="text-xs text-selene-white-dim">Módulo {lesson.module} · {questions.length} preguntas · {lesson.duration} · Mínimo 70% para aprobar</p>
+        </div>
+      </div>
+
+      {questions.length === 0 ? (
+        <Card className="p-6 text-center">
+          <p className="text-selene-white-dim">Este {lesson.type === 'exam' ? 'examen' : 'quiz'} no tiene preguntas definidas.</p>
+        </Card>
+      ) : (
+        <div className="space-y-4">
+          {questions.map((q, qi) => (
+            <Card key={qi} className="p-5">
+              <div className="text-sm font-medium text-selene-white mb-3 leading-relaxed">
+                <span className="text-selene-gold mr-2 font-semibold">{qi + 1}.</span>{q.q}
+              </div>
+              <div className="flex flex-col gap-2">
+                {q.options.map((opt, oi) => (
+                  <div
+                    key={oi}
+                    className={`p-3 rounded-xl text-[13px] border ${
+                      oi === q.correct
+                        ? 'bg-selene-success/10 border-selene-success/30 text-selene-success'
+                        : 'bg-selene-elevated border-selene-border text-selene-white-dim'
+                    }`}
+                  >
+                    <span className="mr-2 font-mono text-[11px] opacity-50">{['A','B','C','D'][oi]}</span>
+                    {opt}
+                    {oi === q.correct && <span className="ml-2 text-[10px] font-semibold">✓ CORRECTA</span>}
+                  </div>
+                ))}
+              </div>
+            </Card>
+          ))}
+        </div>
+      )}
+
+      <div className="mt-6 p-4 bg-selene-elevated/50 rounded-xl border border-selene-border">
+        <div className="text-[11px] text-selene-white-dim">
+          <span className="text-selene-gold font-semibold">Resumen:</span> {questions.length} preguntas · Umbral: {Math.ceil(questions.length * 0.7)}/{questions.length} correctas para aprobar (70%)
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Master improvements changelog
 const MASTER_NOVEDADES = [
   {
@@ -412,6 +468,8 @@ export default function AdminContenidoPage() {
 
   // Lesson view
   if (selectedLesson) {
+    const isQuizOrExam = selectedLesson.type === 'quiz' || selectedLesson.type === 'exam';
+
     return (
       <div className="min-h-screen bg-selene-bg">
         <nav className="sticky top-0 z-50 px-6 py-3.5 flex items-center gap-3 border-b border-selene-border bg-selene-bg/90 backdrop-blur-xl">
@@ -422,7 +480,11 @@ export default function AdminContenidoPage() {
           </div>
         </nav>
         <div className="max-w-[720px] mx-auto px-5 py-6">
-          <LessonView courseId={selectedCourse.id} lessonId={selectedLesson.id} onClose={() => setSelectedLesson(null)} />
+          {isQuizOrExam ? (
+            <QuizPreview lesson={selectedLesson} onClose={() => setSelectedLesson(null)} />
+          ) : (
+            <LessonView courseId={selectedCourse.id} lessonId={selectedLesson.id} onClose={() => setSelectedLesson(null)} />
+          )}
         </div>
       </div>
     );
@@ -463,12 +525,8 @@ export default function AdminContenidoPage() {
               {lessons.map((lesson, i) => (
                 <button
                   key={lesson.id}
-                  onClick={() => lesson.type === 'lesson' && setSelectedLesson(lesson)}
-                  className={`w-full text-left flex items-center gap-3 p-3.5 rounded-xl border transition ${
-                    lesson.type === 'lesson'
-                      ? 'bg-selene-card border-selene-border hover:border-selene-gold/30 cursor-pointer'
-                      : 'bg-selene-elevated/50 border-selene-border/50 cursor-default'
-                  }`}
+                  onClick={() => setSelectedLesson(lesson)}
+                  className="w-full text-left flex items-center gap-3 p-3.5 rounded-xl border transition bg-selene-card border-selene-border hover:border-selene-gold/30 cursor-pointer"
                 >
                   <div className="w-8 h-8 rounded-lg shrink-0 flex items-center justify-center bg-selene-elevated border border-selene-border">
                     {lesson.type === 'quiz' ? <span className="text-xs">📝</span> :
@@ -478,10 +536,10 @@ export default function AdminContenidoPage() {
                   <div className="flex-1 min-w-0">
                     <div className="text-[13px] text-selene-white truncate">{lesson.title}</div>
                     <div className="text-[11px] text-selene-white-dim">
-                      {lesson.type === 'quiz' ? 'Quiz' : lesson.type === 'exam' ? 'Examen' : 'Lección'} · {lesson.duration}
+                      {lesson.type === 'quiz' ? `Quiz · ${lesson.questions?.length || 0} preguntas` : lesson.type === 'exam' ? `Examen · ${lesson.questions?.length || 0} preguntas` : 'Lección'} · {lesson.duration}
                     </div>
                   </div>
-                  {lesson.type === 'lesson' && <span className="text-selene-gold text-xs">Ver →</span>}
+                  <span className="text-selene-gold text-xs">Ver →</span>
                 </button>
               ))}
             </div>

@@ -16,7 +16,9 @@
     "@supabase/ssr": "^0.5.0",
     "stripe": "^16.0.0",
     "@anthropic-ai/sdk": "^0.39.0",
-    "html2canvas": "^1.4.1"
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.2",
+    "qrcode": "^1.5.4"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.0",
