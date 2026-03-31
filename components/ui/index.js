@@ -168,10 +168,11 @@ export function Footer() {
         <span className="font-display text-selene-gold-dim tracking-wider">SELENE ACADEMIA</span>
       </div>
       <p>Ciencia y consciencia de lo invisible · selenaura.com</p>
-      <div className="mt-2 opacity-50 flex gap-4 justify-center">
+      <div className="mt-2 opacity-50 flex gap-4 justify-center flex-wrap">
         <Link href="/legal" className="hover:text-selene-white no-underline text-selene-white-dim">Aviso Legal</Link>
         <Link href="/privacidad" className="hover:text-selene-white no-underline text-selene-white-dim">Privacidad</Link>
         <Link href="/cookies" className="hover:text-selene-white no-underline text-selene-white-dim">Cookies</Link>
+        <Link href="/condiciones" className="hover:text-selene-white no-underline text-selene-white-dim">Condiciones</Link>
       </div>
     </footer>
   );
