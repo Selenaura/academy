@@ -279,6 +279,42 @@ export default function ArgentinaPage() {
         </div>
       </section>
 
+      {/* ── Másters Profesionales ── */}
+      <section className="px-6 py-16 max-w-[900px] mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="font-display text-[28px] font-normal text-selene-white mb-3">
+            👑 Másters con Certificación Profesional
+          </h2>
+          <p className="text-sm text-selene-white-dim max-w-md mx-auto">
+            Convertí tu don en una profesión real. Formación completa con certificado verificable.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <Link href="/programa/guia-profesional" className="no-underline">
+            <Card hover className="p-6 border-selene-gold/30 hover:border-selene-gold/60 transition-all">
+              <div className="text-[11px] uppercase tracking-wider text-selene-gold mb-3">👑 Máster · 80 horas · 12 módulos</div>
+              <h3 className="text-lg font-display text-selene-white mb-2">Máster en Guía Espiritual Profesional</h3>
+              <p className="text-xs text-selene-white-dim mb-4 leading-relaxed">Neuroteología, counselling transpersonal, ética, marco legal y plan de negocio. Todo para ejercer profesionalmente.</p>
+              <div className="flex justify-between items-center">
+                <span className="text-selene-gold font-bold">USD 159</span>
+                <span className="text-[10px] text-selene-white-dim">o 3 cuotas de USD 53</span>
+              </div>
+            </Card>
+          </Link>
+          <Link href="/programa/quirologia-master" className="no-underline">
+            <Card hover className="p-6 border-selene-gold/30 hover:border-selene-gold/60 transition-all">
+              <div className="text-[11px] uppercase tracking-wider text-selene-gold mb-3">👑 Máster · 45 horas · 8 módulos</div>
+              <h3 className="text-lg font-display text-selene-white mb-2">Máster en Quirología Profesional</h3>
+              <p className="text-xs text-selene-white-dim mb-4 leading-relaxed">Dermatoglifia avanzada, quirología médica y psicológica, investigación científica. Nivel experto.</p>
+              <div className="flex justify-between items-center">
+                <span className="text-selene-gold font-bold">USD 110</span>
+                <span className="text-[10px] text-selene-white-dim">o 3 cuotas de USD 37</span>
+              </div>
+            </Card>
+          </Link>
+        </div>
+      </section>
+
       {/* ── Métodos de pago Argentina ── */}
       <section className="px-6 py-16 max-w-[800px] mx-auto">
         <div className="text-center mb-12">
