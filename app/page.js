@@ -85,7 +85,7 @@ export default function LandingPage() {
               Empieza gratis — Curso introductorio
             </Link>
             <Link
-              href="/auth?mode=login"
+              href="/catalogo"
               className="inline-flex items-center text-[15px] font-semibold text-selene-gold px-10 py-4 rounded-xl border border-selene-gold/30 hover:bg-selene-gold/5 transition no-underline"
             >
               Ver catálogo
