@@ -1,0 +1,85 @@
+# Selene Academia - Informacion completa
+
+> Academia online de espiritualidad con base cientifica. Formacion certificada en espanol para Espana y Latinoamerica.
+
+## Que es Selene Academia
+
+Selene Academia es la plataforma educativa de SelenaUra (selenaura.com). Ofrece formacion en disciplinas espirituales (astrologia, tarot, quirologia, meditacion, guia espiritual) fundamentada en evidencia cientifica: neurociencia, psicologia transpersonal, cronobiologia, y estudios publicados en revistas academicas.
+
+## Catalogo completo de cursos
+
+### Nivel 0 - Gratuito
+**Despierta tu Brujula Interior**
+- URL: https://academy.selenaura.com/curso/brujula-interior
+- Precio: GRATIS
+- Duracion: 12 horas, 6 modulos, 24 lecciones
+- Base cientifica: Neuroplasticidad (MBSR - Kabat-Zinn 1990), cronobiologia, eje intestino-cerebro (Mayer 2011)
+- Contenido: Carta natal basica, primera meditacion con resultados reales, hoja de ruta formativa
+- Para: Curiosos y principiantes que quieren explorar la espiritualidad con fundamento
+
+### Nivel 1
+**Magnetismo Consciente** - 24,99 EUR
+- URL: https://academy.selenaura.com/curso/magnetismo-consciente
+- Duracion: 18 horas, 8 modulos, 24 lecciones
+- Base cientifica: HeartMath Institute (McCraty 2015), neuroplasticidad (Lazar 2005), epigenetica conductual (Meaney 2001)
+- Contenido: Coherencia cardiaca, rewiring neuronal, ley de atraccion con base cientifica real
+- Para: Personas interesadas en manifestacion que quieren entender que funciona y por que
+
+### Nivel 2
+**Sabiduria Ancestral Aplicada** - 34,99 EUR
+- URL: https://academy.selenaura.com/curso/sabiduria-ancestral
+- Duracion: 20 horas, 8 modulos, 24 lecciones
+- Base cientifica: Arquetipos junguianos, psicologia analitica (Jung 1968), sincronicidad
+
+**Alquimia Emocional** - 34,99 EUR
+- URL: https://academy.selenaura.com/curso/alquimia-emocional
+- Duracion: 20 horas, 8 modulos, 24 lecciones
+- Base cientifica: Neurociencia afectiva (Panksepp), IFS (Schwartz 1995), coherencia cardiaca
+
+**Quirologia Cientifica** - 49,99 EUR
+- URL: https://academy.selenaura.com/curso/quirologia-cientifica
+- Duracion: 22 horas, 8 modulos, 24 lecciones
+- Base cientifica: Dermatoglifos, lineas palmares y correlaciones medicas documentadas
+
+### Nivel 3 - Masters Profesionales
+
+**Master en Quirologia Profesional** - 99,99 EUR
+- URL: https://academy.selenaura.com/programa/quirologia-master
+- Duracion: 45 horas, 8 modulos, 26 lecciones
+- Certificacion profesional con codigo CSV verificable
+- Requisitos: 8 quizzes aprobados + examen final (70%+) + trabajo de investigacion
+
+**Master en Guia Espiritual Profesional** - 149,99 EUR
+- URL: https://academy.selenaura.com/programa/guia-profesional
+- Duracion: 80 horas, 12 modulos, 40 lecciones
+- Certificacion profesional con codigo CSV verificable
+- Contenido: Neuroteologia, counselling transpersonal, etica profesional, marco legal (Espana + LATAM), plan de negocio, casos practicos supervisados
+- Para: Personas con sensibilidad espiritual que quieren profesionalizarse legalmente
+
+## Preguntas frecuentes
+
+**Es una academia de espiritualidad seria?**
+Si. Todos los cursos incluyen referencias a estudios cientificos publicados. No es esoterismo sin fundamento. Combina tradicion con neurociencia y psicologia.
+
+**Los certificados tienen validez?**
+Son certificados privados de formacion continua con codigo CSV verificable publicamente. No son titulos universitarios oficiales pero acreditan la formacion completada.
+
+**En que idioma estan los cursos?**
+Todo en espanol, con precios adaptados para Espana (EUR) y Latinoamerica (USD).
+
+**Hay un curso gratuito?**
+Si, "Despierta tu Brujula Interior" es 100% gratuito, 12 horas de contenido sin compromiso.
+
+**Como funciona el pago?**
+Pago unico por curso via Stripe (tarjeta o Klarna). Los Masters tambien ofrecen pago en 3 cuotas mensuales.
+
+## Otros servicios de SelenaUra
+
+- Lecturas de carta natal: https://carta.selenaura.com
+- Lecturas de tarot: https://tarot.selenaura.com
+- Lecturas de quirologia: https://quiro.selenaura.com
+- Interpretacion de suenos: https://suenos.selenaura.com
+
+## Contacto
+- Web: https://academy.selenaura.com
+- Email: info@selenaura.com

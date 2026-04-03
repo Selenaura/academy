@@ -28,6 +28,11 @@ const MODULE_NAMES = {
     1: 'Fundamentos de quirología', 2: 'Las manos y los dedos', 3: 'Las líneas principales',
     4: 'Marcas y formaciones', 5: 'Dermatoglifos', 6: 'Práctica profesional',
   },
+  'quirologia-master': {
+    1: 'Dermatoglifia avanzada y ciencia', 2: 'Propósito vital por huellas', 3: 'Quirología médica',
+    4: 'Quirología psicológica', 5: 'Técnicas avanzadas de lectura', 6: 'Quirología infantil y del desarrollo',
+    7: 'Práctica profesional de alto nivel', 8: 'Investigación y trabajo final',
+  },
   'raices-invisibles': {
     1: 'Sistemas familiares', 2: 'Roles transgeneracionales', 3: 'Astrología familiar',
     4: 'Epigenética emocional', 5: 'Terapia sistémica', 6: 'Integración y rituales',

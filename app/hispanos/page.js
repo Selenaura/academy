@@ -36,6 +36,7 @@ const coursePricesUS = {
   'brujula-interior': { usd: 0, label: 'FREE' },
   'tarot-intuitivo': { usd: 32, label: 'USD 32' },
   'quirologia-certificacion': { usd: 37, label: 'USD 37' },
+  'quirologia-master': { usd: 110, label: 'USD 110' },
   'raices-invisibles': { usd: 32, label: 'USD 32' },
   'suenos-certificacion': { usd: 32, label: 'USD 32' },
   'magnetismo-consciente': { usd: 32, label: 'USD 32' },
