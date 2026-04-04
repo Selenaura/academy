@@ -56,6 +56,25 @@ export default function LandingPage() {
     <div className="min-h-screen bg-selene-bg">
       <Navbar />
 
+      {/* ── Founding Cohort Banner ── */}
+      <section className="relative px-6 py-3 bg-gradient-to-r from-selene-gold/20 via-selene-gold/10 to-selene-gold/20 border-b border-selene-gold/20">
+        <div className="max-w-4xl mx-auto flex items-center justify-center gap-3 flex-wrap text-center">
+          <span className="text-sm text-selene-gold font-medium">
+            Cohort Fundador — Master en Guia Espiritual Profesional
+          </span>
+          <span className="text-xs text-selene-white-dim hidden sm:inline">|</span>
+          <span className="text-xs text-selene-white-dim">
+            <span className="line-through">149,99</span> &rarr; <span className="text-selene-gold font-semibold">99,99</span> &mdash; Solo 20 plazas
+          </span>
+          <Link
+            href="/master"
+            className="text-xs font-semibold bg-selene-gold text-selene-bg px-4 py-1.5 rounded-full hover:brightness-110 transition no-underline ml-2"
+          >
+            Reservar plaza
+          </Link>
+        </div>
+      </section>
+
       {/* ── Hero ── */}
       <section className="relative px-6 pt-24 pb-20 text-center overflow-hidden">
         {/* Decorative glow */}
