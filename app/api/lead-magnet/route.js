@@ -53,14 +53,19 @@ export async function POST(request) {
     // Send the email
     const emailResult = await sendLeadMagnetEmail({ email: normalizedEmail });
 
-    // Store the lead
-    await supabase.from('leads').insert({
+    // Store the lead (include Brevo messageId if available)
+    const leadData = {
       email: normalizedEmail,
       source,
       lead_magnet: '5-errores-guia-espiritual',
       email_sent: emailResult.success,
       created_at: new Date().toISOString(),
-    });
+    };
+    if (emailResult.messageId) {
+      leadData.brevo_message_id = emailResult.messageId;
+    }
+
+    await supabase.from('leads').insert(leadData);
 
     console.log(`🎯 Lead magnet sent to ${normalizedEmail} (source: ${source})`);
 

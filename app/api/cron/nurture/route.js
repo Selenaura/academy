@@ -71,13 +71,18 @@ export async function GET(request) {
       const result = await sendNurtureEmail({ email: lead.email, step });
 
       if (result.success) {
-        // Update lead: increment step, update last sent
+        // Update lead: increment step, update last sent, save Brevo messageId
+        const updateData = {
+          nurture_step: step + 1,
+          nurture_last_sent: now.toISOString(),
+        };
+        if (result.messageId) {
+          updateData.brevo_message_id = result.messageId;
+        }
+
         await supabase
           .from('leads')
-          .update({
-            nurture_step: step + 1,
-            nurture_last_sent: now.toISOString(),
-          })
+          .update(updateData)
           .eq('id', lead.id);
 
         totalSent++;
