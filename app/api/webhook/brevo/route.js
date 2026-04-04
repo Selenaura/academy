@@ -23,6 +23,13 @@ const supabase = createClient(
  */
 export async function POST(request) {
   try {
+    // Verify Brevo webhook token
+    const token = request.headers.get('x-brevo-token');
+    if (token !== process.env.BREVO_WEBHOOK_TOKEN) {
+      console.error('❌ Brevo webhook: invalid token');
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const body = await request.json();
     const { event, email, ts_event } = body;
     const messageId = body['message-id'];
