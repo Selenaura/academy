@@ -1,5 +1,8 @@
 import './globals.css';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import ChatWidget from '../components/ChatWidget';
 
 export const metadata = {
@@ -34,6 +37,10 @@ export default function RootLayout({ children }) {
       <body className="bg-selene-bg text-selene-white antialiased">
         {children}
         <ChatWidget />
+        {/* Vercel Analytics — pageviews and visitor tracking */}
+        <Analytics />
+        {/* Vercel Speed Insights — Web Vitals performance monitoring */}
+        <SpeedInsights />
         {/* Meta Pixel — set NEXT_PUBLIC_META_PIXEL_ID in Vercel env vars */}
         {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
           <>
@@ -57,6 +64,10 @@ export default function RootLayout({ children }) {
           </>
         )}
       </body>
+      {/* Google Analytics 4 — traffic sources, behavior, conversions */}
+      {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+      )}
     </html>
   );
 }

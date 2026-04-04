@@ -18,7 +18,10 @@
     "@anthropic-ai/sdk": "^0.39.0",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.2",
-    "qrcode": "^1.5.4"
+    "qrcode": "^1.5.4",
+    "@vercel/analytics": "^1.4.0",
+    "@vercel/speed-insights": "^1.1.0",
+    "@next/third-parties": "^15.1.0"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.0",
