@@ -5,6 +5,7 @@
 // ═══════════════════════════════════════════════
 
 import Link from 'next/link';
+import CookieSettingsButton from '../CookieSettings';
 
 // ── Icons ──
 export function MoonIcon({ size = 20, className = 'text-selene-gold' }) {
@@ -173,6 +174,7 @@ export function Footer() {
         <Link href="/privacidad" className="hover:text-selene-white no-underline text-selene-white-dim">Privacidad</Link>
         <Link href="/cookies" className="hover:text-selene-white no-underline text-selene-white-dim">Cookies</Link>
         <Link href="/condiciones" className="hover:text-selene-white no-underline text-selene-white-dim">Condiciones</Link>
+        <CookieSettingsButton />
       </div>
     </footer>
   );

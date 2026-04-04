@@ -1,9 +1,9 @@
 import './globals.css';
-import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { GoogleAnalytics } from '@next/third-parties/google';
 import ChatWidget from '../components/ChatWidget';
+import CookieConsent from '../components/CookieConsent';
+import AnalyticsLoader from '../components/AnalyticsLoader';
 
 export const metadata = {
   title: 'Selene Academia — Tu escuela de consciencia cósmica',
@@ -37,37 +37,15 @@ export default function RootLayout({ children }) {
       <body className="bg-selene-bg text-selene-white antialiased">
         {children}
         <ChatWidget />
-        {/* Vercel Analytics — pageviews and visitor tracking */}
+        {/* Vercel Analytics — first-party, no PII, no consent needed */}
         <Analytics />
-        {/* Vercel Speed Insights — Web Vitals performance monitoring */}
+        {/* Vercel Speed Insights — first-party, no PII, no consent needed */}
         <SpeedInsights />
-        {/* Meta Pixel — set NEXT_PUBLIC_META_PIXEL_ID in Vercel env vars */}
-        {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
-          <>
-            <Script id="meta-pixel" strategy="afterInteractive">{`
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '${process.env.NEXT_PUBLIC_META_PIXEL_ID}');
-              fbq('track', 'PageView');
-            `}</Script>
-            <noscript>
-              <img height="1" width="1" style={{display:'none'}}
-                src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_META_PIXEL_ID}&ev=PageView&noscript=1`}
-                alt="" />
-            </noscript>
-          </>
-        )}
+        {/* GA4 + Meta Pixel load conditionally via consent */}
+        <AnalyticsLoader />
+        {/* AEPD-compliant cookie consent banner */}
+        <CookieConsent />
       </body>
-      {/* Google Analytics 4 — traffic sources, behavior, conversions */}
-      {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
-      )}
     </html>
   );
 }
