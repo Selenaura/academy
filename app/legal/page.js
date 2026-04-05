@@ -58,7 +58,27 @@ export default function AvisoLegalPage() {
         </section>
 
         <section className="mb-10">
-          <h2 className="font-display text-xl text-selene-gold mb-3">5. Limitacion de responsabilidad</h2>
+          <h2 className="font-display text-xl text-selene-gold mb-3">5. Naturaleza de los certificados</h2>
+          <p className="text-selene-white-dim leading-relaxed mb-3">
+            Al finalizar determinados programas formativos, Selene Academia emite <strong className="text-selene-white">certificados privados de aprovechamiento</strong> que
+            acreditan la superacion satisfactoria del programa. Estos certificados son verificables mediante un codigo CSV
+            unico a traves de nuestra plataforma.
+          </p>
+          <p className="text-selene-white-dim leading-relaxed mb-3">
+            <strong className="text-selene-white">Aviso importante:</strong> Los certificados emitidos por Selene Academia son
+            certificados privados expedidos por SelenaUra. <strong className="text-selene-white">No constituyen titulos oficiales,
+            academicos ni universitarios</strong> reconocidos por el sistema educativo espanol ni por ninguna administracion publica.
+            No habilitan para el ejercicio de profesiones reguladas.
+          </p>
+          <p className="text-selene-white-dim leading-relaxed">
+            Las disciplinas impartidas (astrologia, tarot, quiromancia, interpretacion de suenos, numerologia, meditacion) constituyen
+            formacion especializada privada en el ambito del desarrollo personal y el autoconocimiento. Los roles profesionales
+            derivados (facilitador/a, guia, acompanante) no son profesiones reguladas en Espana y no requieren titulacion oficial.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">6. Limitacion de responsabilidad</h2>
           <p className="text-selene-white-dim leading-relaxed mb-3">
             SelenaUra no se hace responsable de:
           </p>
@@ -76,7 +96,7 @@ export default function AvisoLegalPage() {
         </section>
 
         <section className="mb-10">
-          <h2 className="font-display text-xl text-selene-gold mb-3">6. Enlaces a terceros</h2>
+          <h2 className="font-display text-xl text-selene-gold mb-3">7. Enlaces a terceros</h2>
           <p className="text-selene-white-dim leading-relaxed">
             El sitio web puede contener enlaces a paginas de terceros. SelenaUra no asume responsabilidad por
             los contenidos, politicas de privacidad o practicas de dichos sitios externos.
@@ -84,7 +104,7 @@ export default function AvisoLegalPage() {
         </section>
 
         <section className="mb-10">
-          <h2 className="font-display text-xl text-selene-gold mb-3">7. Legislacion aplicable y jurisdiccion</h2>
+          <h2 className="font-display text-xl text-selene-gold mb-3">8. Legislacion aplicable y jurisdiccion</h2>
           <p className="text-selene-white-dim leading-relaxed">
             Las presentes condiciones se rigen por la legislacion espanola. Para la resolucion de cualquier
             controversia derivada del uso de este sitio web, las partes se someten expresamente a los Juzgados
@@ -94,7 +114,7 @@ export default function AvisoLegalPage() {
         </section>
 
         <section className="mb-10">
-          <h2 className="font-display text-xl text-selene-gold mb-3">8. Contacto</h2>
+          <h2 className="font-display text-xl text-selene-gold mb-3">9. Contacto</h2>
           <p className="text-selene-white-dim leading-relaxed">
             Para cualquier consulta relacionada con este aviso legal, puede contactar con nosotros
             en <a href="mailto:info@selenaura.com" className="text-selene-gold hover:underline">info@selenaura.com</a>.

@@ -91,11 +91,16 @@ export default function CondicionesPage() {
 
         <section className="mb-10">
           <h2 className="font-display text-xl text-selene-gold mb-3">7. Certificados</h2>
+          <p className="text-selene-white-dim leading-relaxed mb-3">
+            Al completar un curso, podras obtener un <strong className="text-selene-white">certificado privado de
+            aprovechamiento</strong> emitido por SelenaUra. Estos certificados son verificables mediante un codigo CSV
+            unico a traves de nuestra plataforma.
+          </p>
           <p className="text-selene-white-dim leading-relaxed">
-            Al completar un curso, podras obtener un certificado de participacion o aprovechamiento emitido por
-            SelenaUra. Estos certificados son verificables mediante un codigo CSV unico a traves de nuestra
-            plataforma. Los certificados tienen caracter privado y no constituyen titulacion oficial ni academica
-            reconocida por el sistema educativo espanol.
+            Los certificados tienen caracter privado y <strong className="text-selene-white">no constituyen titulacion oficial,
+            academica ni universitaria</strong> reconocida por el sistema educativo espanol. No habilitan para el ejercicio
+            de profesiones reguladas. Las disciplinas impartidas constituyen formacion especializada privada en el ambito
+            del desarrollo personal y el autoconocimiento.
           </p>
         </section>
 

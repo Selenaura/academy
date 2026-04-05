@@ -173,8 +173,13 @@ export default function ExitIntentPopup() {
                   Error al enviar. Int&#233;ntalo de nuevo.
                 </p>
               )}
-              <p className="text-[10px] text-selene-white-dim/40 text-center">
-                Sin spam. Solo la gu&#237;a + 5 emails formativos. Te puedes dar de baja en cualquier momento.
+              <p className="text-[10px] text-selene-white-dim/40 text-center leading-relaxed">
+                Responsable: SelenaUra. Finalidad: envio de la guia y comunicaciones formativas.
+                Base legal: consentimiento (art. 6.1.a RGPD). Puedes ejercer tus derechos o darte de baja
+                en cualquier momento escribiendo a info@selenaura.com.{' '}
+                <a href="/privacidad" className="underline hover:text-selene-white-dim" target="_blank" rel="noopener noreferrer">
+                  Politica de privacidad
+                </a>.
               </p>
             </form>
           </>

@@ -98,8 +98,11 @@ export default function LeadCaptureForm({
               Error al enviar. Inténtalo de nuevo.
             </p>
           )}
-          <p className="text-[10px] text-selene-white-dim/40 mt-2">
-            Sin spam. Solo la guía + 5 emails formativos. Te puedes dar de baja en cualquier momento.
+          <p className="text-[10px] text-selene-white-dim/40 mt-2 leading-relaxed">
+            Responsable: SelenaUra. Finalidad: envio de la guia y comunicaciones formativas.
+            Base legal: consentimiento (art. 6.1.a RGPD). Derechos: acceso, rectificacion, supresion
+            escribiendo a info@selenaura.com.{' '}
+            <a href="/privacidad" className="underline hover:text-selene-white-dim">Privacidad</a>.
           </p>
         </form>
       </div>
