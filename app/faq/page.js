@@ -61,11 +61,19 @@ const faqs = [
   },
   {
     q: '¿Sois una universidad acreditada?',
-    a: 'No, Selene Academia no es una universidad ni un centro de formacion reglada. Somos una escuela online independiente especializada en autoconocimiento con base cientifica. Nuestros certificados son profesionales, no titulos universitarios oficiales.',
+    a: 'No, Selene Academia no es una universidad ni un centro de formacion reglada. Somos una escuela online independiente especializada en autoconocimiento con base cientifica. Nuestros certificados son certificados privados de aprovechamiento, no titulos oficiales ni academicos. Las disciplinas que impartimos (astrologia, tarot, meditacion) constituyen formacion especializada privada.',
   },
   {
     q: '¿Ofreceis factura?',
     a: 'Si, emitimos factura por todas las compras. Si necesitas factura con datos fiscales especificos (por ejemplo, para deduccion como formacion profesional), contactanos y te la preparamos.',
+  },
+  {
+    q: '¿Puedo acceder desde Latinoamerica?',
+    a: 'Si, nuestros cursos estan disponibles para todo el mundo hispanohablante. Los precios se muestran en euros y aceptamos tarjetas internacionales (Visa, Mastercard, American Express) a traves de Stripe. El contenido esta optimizado para cualquier zona horaria.',
+  },
+  {
+    q: '¿Que diferencia a Selene de otras escuelas de astrologia o tarot?',
+    a: 'Tres cosas: base cientifica (cada leccion cita estudios peer-reviewed), certificados verificables con codigo unico, y personalizacion por carta natal. No pedimos fe ciega: ofrecemos evidencia que puedes verificar por ti misma.',
   },
 ];
 
