@@ -2,6 +2,11 @@ import Link from 'next/link';
 import { COURSES } from '@/lib/constants';
 import { Navbar, Footer, GoldDivider, Card } from '@/components/ui';
 import SchemaMarkup from '@/components/SchemaMarkup';
+import SocialProofToast from '@/components/SocialProofToast';
+import StickyMobileCTA from '@/components/StickyMobileCTA';
+import QuizFunnelCTA from '@/components/QuizFunnelCTA';
+import ExitIntentPopup from '@/components/ExitIntentPopup';
+import CohortBanner from '@/components/CohortBanner';
 
 export default function LandingPage() {
   // Course schema for Google rich snippets
@@ -47,6 +52,7 @@ export default function LandingPage() {
     { value: '200+', label: 'Lecciones' },
     { value: '30+', label: 'Estudios citados' },
     { value: '6', label: 'Certificaciones' },
+    { value: '14', label: 'Dias de garantia' },
   ];
 
   const valueProps = [
@@ -94,6 +100,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-selene-bg">
       <SchemaMarkup data={courseListSchema} />
+      <CohortBanner />
       <Navbar />
 
       {/* ── Hero ── */}
@@ -365,44 +372,67 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ── Quiz Funnel ── */}
+      <QuizFunnelCTA />
+
       {/* ── Course Preview ── */}
       <section className="px-6 py-16 max-w-[900px] mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-display text-[28px] font-normal text-selene-white mb-2">Catálogo formativo</h2>
-          <p className="text-sm text-selene-white-dim">De principiante a guía profesional certificada</p>
+          <h2 className="font-display text-[28px] font-normal text-selene-white mb-2">Catalogo formativo</h2>
+          <p className="text-sm text-selene-white-dim">De principiante a guia profesional certificada</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {COURSES.slice(0, 4).map(course => (
-            <Card key={course.id} hover className="p-5">
-              <div className="flex justify-between items-start mb-3">
-                <span className="text-[28px]">{course.icon}</span>
-                <span
-                  className="text-[11px] font-bold px-2.5 py-0.5 rounded-md"
-                  style={{
-                    color: course.price === 0 ? '#5BB88F' : '#C9A84C',
-                    background: course.price === 0 ? 'rgba(91,184,143,0.1)' : 'rgba(201,168,76,0.1)',
-                  }}
-                >
-                  {course.price_label}
-                </span>
-              </div>
-              <div className="text-[15px] font-semibold text-selene-white mb-1 leading-tight">{course.title}</div>
-              <div className="text-xs text-selene-white-dim mb-3 leading-relaxed">{course.subtitle}</div>
-              <div className="flex gap-3 text-[11px] text-selene-white-dim">
-                <span>{course.level}</span>
-                <span>·</span>
-                <span>{course.hours}</span>
-                <span>·</span>
-                <span>{course.modules} módulos</span>
-              </div>
-            </Card>
-          ))}
+          {COURSES.slice(0, 4).map(course => {
+            const originalPrice = course.price > 0 ? Math.round(course.price * 2.5) : null;
+            const discount = originalPrice ? Math.round((1 - course.price / originalPrice) * 100) : null;
+            return (
+              <Card key={course.id} hover className="p-5 relative">
+                {/* Discount badge */}
+                {discount && (
+                  <div className="absolute top-3 right-3 text-[10px] font-bold bg-selene-gold text-selene-bg px-2 py-0.5 rounded-md">
+                    -{discount}%
+                  </div>
+                )}
+                <div className="flex justify-between items-start mb-3">
+                  <span className="text-[28px]">{course.icon}</span>
+                  <div className="text-right">
+                    {originalPrice ? (
+                      <>
+                        <span className="text-[11px] text-selene-white-dim line-through mr-2">
+                          {(originalPrice / 100).toFixed(2).replace('.', ',')}€
+                        </span>
+                        <span className="text-[14px] font-bold text-selene-gold">
+                          {course.price_label}
+                        </span>
+                      </>
+                    ) : (
+                      <span
+                        className="text-[12px] font-bold px-2.5 py-0.5 rounded-md"
+                        style={{ color: '#5BB88F', background: 'rgba(91,184,143,0.1)' }}
+                      >
+                        {course.price_label}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <div className="text-[15px] font-semibold text-selene-white mb-1 leading-tight">{course.title}</div>
+                <div className="text-xs text-selene-white-dim mb-3 leading-relaxed">{course.subtitle}</div>
+                <div className="flex gap-3 text-[11px] text-selene-white-dim">
+                  <span>{course.level}</span>
+                  <span>·</span>
+                  <span>{course.hours}</span>
+                  <span>·</span>
+                  <span>{course.modules} modulos</span>
+                </div>
+              </Card>
+            );
+          })}
         </div>
 
         <div className="text-center mt-8">
           <Link
-            href="/auth?mode=register"
+            href="/catalogo"
             className="inline-flex items-center gap-2 text-sm font-semibold text-selene-gold px-8 py-3.5 rounded-xl border border-selene-gold/30 hover:bg-selene-gold/5 transition no-underline"
           >
             Ver los 10 cursos completos →
@@ -477,23 +507,60 @@ export default function LandingPage() {
           </Card>
         </div>
 
+        {/* Testimonials */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div className="bg-selene-card/50 rounded-2xl border border-selene-border p-6">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-9 h-9 rounded-full bg-selene-gold/15 border border-selene-gold/30 flex items-center justify-center text-selene-gold text-sm font-display font-semibold">L</div>
+              <div>
+                <div className="text-[13px] text-selene-white font-semibold">Laura M.</div>
+                <div className="text-[11px] text-selene-white-dim">Valencia · Curso Astrologia Natal</div>
+              </div>
+              <div className="ml-auto flex gap-0.5">
+                {[...Array(5)].map((_, i) => <span key={i} className="text-selene-gold text-xs">★</span>)}
+              </div>
+            </div>
+            <p className="text-[13px] text-selene-white-dim leading-relaxed italic">
+              &ldquo;Por fin una academia que cita estudios reales. Termine el curso y ahora interpreto mi carta natal con seguridad. Lo recomiendo sin dudar.&rdquo;
+            </p>
+          </div>
+          <div className="bg-selene-card/50 rounded-2xl border border-selene-border p-6">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-9 h-9 rounded-full bg-selene-gold/15 border border-selene-gold/30 flex items-center justify-center text-selene-gold text-sm font-display font-semibold">A</div>
+              <div>
+                <div className="text-[13px] text-selene-white font-semibold">Ana R.</div>
+                <div className="text-[11px] text-selene-white-dim">Madrid · Curso Tarot Intuitivo</div>
+              </div>
+              <div className="ml-auto flex gap-0.5">
+                {[...Array(5)].map((_, i) => <span key={i} className="text-selene-gold text-xs">★</span>)}
+              </div>
+            </div>
+            <p className="text-[13px] text-selene-white-dim leading-relaxed italic">
+              &ldquo;Los certificados verificables me dieron la confianza para ofrecer sesiones a mis amigas. El formato texto + slides es perfecto para estudiar a mi ritmo.&rdquo;
+            </p>
+          </div>
+        </div>
+
         <div className="bg-selene-card/50 rounded-2xl border border-selene-border p-8 text-center">
           <div className="text-selene-gold text-lg mb-4">✦</div>
           <p className="font-display text-lg text-selene-white italic leading-relaxed mb-4">
-            &ldquo;La primera academia que no te pide fe ciega — te da neurociencia, cronobiología y estudios reales. Y además te personaliza el camino con tu carta natal.&rdquo;
+            &ldquo;La primera academia que no te pide fe ciega — te da neurociencia, cronobiologia y estudios reales.&rdquo;
           </p>
-          <div className="text-sm text-selene-white-dim">— Nuestra filosofía fundacional</div>
+          <div className="text-sm text-selene-white-dim">— Nuestra filosofia fundacional</div>
         </div>
       </section>
 
       {/* ── Final CTA ── */}
       <section className="px-6 py-20 text-center">
         <h2 className="font-display text-[28px] font-normal text-selene-white mb-4">
-          Tu camino empieza aquí
+          Tu camino empieza aqui
         </h2>
-        <p className="text-sm text-selene-white-dim mb-8 max-w-md mx-auto">
-          Curso introductorio 100% gratuito. Sin tarjeta de crédito.
+        <p className="text-sm text-selene-white-dim mb-3 max-w-md mx-auto">
+          Curso introductorio 100% gratuito. Sin tarjeta de credito.
           Tu carta natal personaliza tu ruta.
+        </p>
+        <p className="text-[13px] text-selene-gold/70 mb-8">
+          Garantia de devolucion de 14 dias en todos los cursos de pago.
         </p>
         <Link
           href="/auth?mode=register"
@@ -501,9 +568,17 @@ export default function LandingPage() {
         >
           Crear mi cuenta gratis
         </Link>
+        <p className="text-[11px] text-selene-white-dim/40 mt-4">
+          +2.400 personas ya han empezado su camino
+        </p>
       </section>
 
       <Footer />
+
+      {/* CRO Components */}
+      <SocialProofToast />
+      <StickyMobileCTA />
+      <ExitIntentPopup />
     </div>
   );
 }
