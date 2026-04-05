@@ -509,36 +509,29 @@ export default function LandingPage() {
 
         {/* Testimonials */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          <div className="bg-selene-card/50 rounded-2xl border border-selene-border p-6">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-9 h-9 rounded-full bg-selene-gold/15 border border-selene-gold/30 flex items-center justify-center text-selene-gold text-sm font-display font-semibold">L</div>
-              <div>
-                <div className="text-[13px] text-selene-white font-semibold">Laura M.</div>
-                <div className="text-[11px] text-selene-white-dim">Valencia · Curso Astrologia Natal</div>
+          {[
+            { initial: 'P', name: 'Patricia G.', location: 'Sevilla · Astrologia Natal', stars: 5, text: 'Llevaba anos leyendo sobre astrologia pero nunca habia encontrado un curso que citase estudios reales. Ahora entiendo mi carta natal de verdad, no solo los memes de signos.' },
+            { initial: 'M', name: 'Marina L.', location: 'Buenos Aires · Tarot Intuitivo', stars: 5, text: 'Soy psicologa y buscaba algo con base cientifica para complementar mis sesiones. Este curso superó mis expectativas. Las referencias a neurociencia son un plus enorme.' },
+            { initial: 'C', name: 'Carmen D.', location: 'Barcelona · Meditacion Lunar', stars: 5, text: 'El formato de texto + slides me encanta. Puedo estudiar en el metro sin auriculares. Las meditaciones guiadas son un regalo aparte. Mi ansiedad ha mejorado notablemente.' },
+            { initial: 'S', name: 'Sofia R.', location: 'Mexico DF · Astrologia Natal', stars: 4, text: 'Lo que mas valoro es que no te piden creer ciegamente. Te dan las fuentes y tu decides. El certificado verificable me dio credibilidad con mis primeras clientas.' },
+          ].map((t, i) => (
+            <div key={i} className="bg-selene-card/50 rounded-2xl border border-selene-border p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-9 h-9 rounded-full bg-selene-gold/15 border border-selene-gold/30 flex items-center justify-center text-selene-gold text-sm font-display font-semibold">{t.initial}</div>
+                <div>
+                  <div className="text-[13px] text-selene-white font-semibold">{t.name}</div>
+                  <div className="text-[11px] text-selene-white-dim">{t.location}</div>
+                </div>
+                <div className="ml-auto flex gap-0.5">
+                  {[...Array(t.stars)].map((_, j) => <span key={j} className="text-selene-gold text-xs">★</span>)}
+                  {[...Array(5 - t.stars)].map((_, j) => <span key={j} className="text-selene-white-dim/30 text-xs">★</span>)}
+                </div>
               </div>
-              <div className="ml-auto flex gap-0.5">
-                {[...Array(5)].map((_, i) => <span key={i} className="text-selene-gold text-xs">★</span>)}
-              </div>
+              <p className="text-[13px] text-selene-white-dim leading-relaxed italic">
+                &ldquo;{t.text}&rdquo;
+              </p>
             </div>
-            <p className="text-[13px] text-selene-white-dim leading-relaxed italic">
-              &ldquo;Por fin una academia que cita estudios reales. Termine el curso y ahora interpreto mi carta natal con seguridad. Lo recomiendo sin dudar.&rdquo;
-            </p>
-          </div>
-          <div className="bg-selene-card/50 rounded-2xl border border-selene-border p-6">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-9 h-9 rounded-full bg-selene-gold/15 border border-selene-gold/30 flex items-center justify-center text-selene-gold text-sm font-display font-semibold">A</div>
-              <div>
-                <div className="text-[13px] text-selene-white font-semibold">Ana R.</div>
-                <div className="text-[11px] text-selene-white-dim">Madrid · Curso Tarot Intuitivo</div>
-              </div>
-              <div className="ml-auto flex gap-0.5">
-                {[...Array(5)].map((_, i) => <span key={i} className="text-selene-gold text-xs">★</span>)}
-              </div>
-            </div>
-            <p className="text-[13px] text-selene-white-dim leading-relaxed italic">
-              &ldquo;Los certificados verificables me dieron la confianza para ofrecer sesiones a mis amigas. El formato texto + slides es perfecto para estudiar a mi ritmo.&rdquo;
-            </p>
-          </div>
+          ))}
         </div>
 
         <div className="bg-selene-card/50 rounded-2xl border border-selene-border p-8 text-center">
