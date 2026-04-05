@@ -36,8 +36,7 @@ export const metadata = {
     },
   },
   verification: {
-    // Reemplaza con tu código real de Google Search Console
-    // google: 'tu-codigo-de-verificacion',
+    google: 'vDNw7wez4SCnT41XvCEkyoJAz5-zFff4THJB7nLk9_4',
   },
 };
 
