@@ -1,5 +1,9 @@
 import { COURSES } from '@/lib/constants';
 
+export async function generateStaticParams() {
+  return COURSES.map((c) => ({ id: c.id }));
+}
+
 export async function generateMetadata({ params }) {
   const course = COURSES.find((c) => c.id === params.id);
   if (!course) {
