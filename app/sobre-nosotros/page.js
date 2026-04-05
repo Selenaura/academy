@@ -15,11 +15,11 @@ export default function SobreNosotros() {
         '@type': 'AboutPage',
         name: 'Sobre Nosotros — Selene Academia',
         description: 'Nuestra mision: hacer accesible el autoconocimiento profundo, respaldado por ciencia.',
-        url: 'https://academia.selenaura.com/sobre-nosotros',
+        url: 'https://academy.selenaura.com/sobre-nosotros',
         mainEntity: {
           '@type': 'Organization',
           name: 'Selene Academia',
-          url: 'https://academia.selenaura.com',
+          url: 'https://academy.selenaura.com',
         },
       }} />
 

@@ -18,7 +18,7 @@ export default function LandingPage() {
         provider: {
           '@type': 'Organization',
           name: 'Selene Academia',
-          sameAs: 'https://academia.selenaura.com',
+          sameAs: 'https://academy.selenaura.com',
         },
         educationalLevel: course.level,
         numberOfCredits: course.modules,
@@ -31,7 +31,7 @@ export default function LandingPage() {
             price: (course.price / 100).toFixed(2),
             priceCurrency: 'EUR',
             availability: 'https://schema.org/InStock',
-            url: `https://academia.selenaura.com/auth?mode=register`,
+            url: `https://academy.selenaura.com/auth?mode=register`,
           },
         }),
         hasCourseInstance: {

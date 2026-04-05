@@ -15,7 +15,7 @@ export default function CondicionesPage() {
 
         <p className="text-selene-white-dim leading-relaxed mb-10">
           Las presentes condiciones regulan la compra y el uso de los servicios ofrecidos a traves de
-          Selene Academia (academia.selenaura.com), propiedad de SelenaUra. Al realizar una compra o
+          Selene Academia (academy.selenaura.com), propiedad de SelenaUra. Al realizar una compra o
           utilizar la plataforma, aceptas integramente estas condiciones.
         </p>
 

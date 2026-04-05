@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     q: '¿Como verifico mi certificado?',
-    a: 'Cada certificado tiene un codigo unico. Cualquier persona puede ir a academia.selenaura.com/verificar, introducir el codigo y confirmar la autenticidad del certificado, incluyendo el nombre del curso y la fecha de emision.',
+    a: 'Cada certificado tiene un codigo unico. Cualquier persona puede ir a academy.selenaura.com/verificar, introducir el codigo y confirmar la autenticidad del certificado, incluyendo el nombre del curso y la fecha de emision.',
   },
   {
     q: '¿Que metodos de pago aceptais?',

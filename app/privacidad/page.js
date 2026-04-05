@@ -24,7 +24,7 @@ export default function PrivacidadPage() {
           <ul className="text-selene-white-dim leading-relaxed list-disc pl-6 space-y-1">
             <li><strong className="text-selene-white">Identidad:</strong> SelenaUra</li>
             <li><strong className="text-selene-white">Correo electronico:</strong> info@selenaura.com</li>
-            <li><strong className="text-selene-white">Sitio web:</strong> academia.selenaura.com</li>
+            <li><strong className="text-selene-white">Sitio web:</strong> academy.selenaura.com</li>
           </ul>
         </section>
 

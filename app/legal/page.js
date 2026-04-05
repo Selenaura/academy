@@ -21,7 +21,7 @@ export default function AvisoLegalPage() {
           </p>
           <ul className="text-selene-white-dim leading-relaxed list-disc pl-6 space-y-1">
             <li><strong className="text-selene-white">Nombre comercial:</strong> SelenaUra</li>
-            <li><strong className="text-selene-white">Dominio:</strong> academia.selenaura.com</li>
+            <li><strong className="text-selene-white">Dominio:</strong> academy.selenaura.com</li>
             <li><strong className="text-selene-white">Correo electronico:</strong> info@selenaura.com</li>
             <li><strong className="text-selene-white">Pais:</strong> Espana</li>
           </ul>

@@ -7,6 +7,6 @@ export default function robots() {
         disallow: ['/api/', '/dashboard/', '/perfil/', '/onboarding/', '/admin/', '/analytics/', '/unsubscribe/'],
       },
     ],
-    sitemap: 'https://academia.selenaura.com/sitemap.xml',
+    sitemap: 'https://academy.selenaura.com/sitemap.xml',
   };
 }

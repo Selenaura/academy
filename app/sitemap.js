@@ -1,7 +1,7 @@
 import { COURSES } from '@/lib/constants';
 
 export default function sitemap() {
-  const baseUrl = 'https://academia.selenaura.com';
+  const baseUrl = 'https://academy.selenaura.com';
   const now = new Date();
 
   // Static public pages

@@ -41,7 +41,7 @@ export default function CourseLayout({ children, params }) {
         provider: {
           '@type': 'Organization',
           name: 'Selene Academia',
-          url: 'https://academia.selenaura.com',
+          url: 'https://academy.selenaura.com',
         },
         educationalLevel: course.level,
         numberOfCredits: course.modules,
@@ -59,7 +59,7 @@ export default function CourseLayout({ children, params }) {
             price: (course.price / 100).toFixed(2),
             priceCurrency: 'EUR',
             availability: 'https://schema.org/InStock',
-            url: `https://academia.selenaura.com/curso/${course.id}`,
+            url: `https://academy.selenaura.com/curso/${course.id}`,
           },
         }),
       }

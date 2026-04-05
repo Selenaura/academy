@@ -8,7 +8,7 @@ export const metadata = {
     template: '%s — Selene Academia',
   },
   description: 'Cursos de astrología, tarot, meditación y autoconocimiento respaldados por estudios peer-reviewed. Neurociencia + tradición milenaria. Certificados verificables.',
-  metadataBase: new URL('https://academia.selenaura.com'),
+  metadataBase: new URL('https://academy.selenaura.com'),
   alternates: {
     canonical: '/',
     languages: { 'es': '/' },
@@ -59,8 +59,8 @@ export default function RootLayout({ children }) {
           '@context': 'https://schema.org',
           '@type': 'Organization',
           name: 'Selene Academia',
-          url: 'https://academia.selenaura.com',
-          logo: 'https://academia.selenaura.com/icon.svg',
+          url: 'https://academy.selenaura.com',
+          logo: 'https://academy.selenaura.com/icon.svg',
           description: 'Cursos de astrologia, tarot y autoconocimiento con base cientifica.',
           contactPoint: {
             '@type': 'ContactPoint',
@@ -74,10 +74,10 @@ export default function RootLayout({ children }) {
           '@context': 'https://schema.org',
           '@type': 'WebSite',
           name: 'Selene Academia',
-          url: 'https://academia.selenaura.com',
+          url: 'https://academy.selenaura.com',
           potentialAction: {
             '@type': 'SearchAction',
-            target: 'https://academia.selenaura.com/?q={search_term_string}',
+            target: 'https://academy.selenaura.com/?q={search_term_string}',
             'query-input': 'required name=search_term_string'
           }
         }) }} />
