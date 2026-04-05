@@ -4,12 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { COURSES } from '@/lib/constants';
-import { createClient } from '@/lib/supabase-browser';
-import { recordLessonComplete } from '@/lib/gamification';
 import { Card, ProgressBar, Badge, BackIcon, PlayIcon, CheckIcon, LockIcon, ArrowIcon } from '@/components/ui';
-import { FlipCards, MatchExercise, HotspotImage, FillBlanks, SortExercise, KeyConcept, ProgressCheck, MultipleChoice, Timeline, ComparisonTable, Scenario, RevealSections } from '@/components/InteractiveElements';
-import { ProcessDiagram, ConceptMap, LessonSummary, SpacedReview, AnnotatedImage, BranchingScenario } from '@/components/LearningElements';
-import TextContentRenderer from '@/components/TextContentRenderer';
 
 // ── Chevron Icons for slide navigation ──
 function ChevronLeftIcon({ size = 20, className = '' }) {
@@ -56,7 +51,7 @@ function SlideViewer({ slides }) {
       case 'quote':
         return (
           <div className="flex flex-col items-center justify-center text-center min-h-[260px] px-8 py-5">
-            <div className="text-3xl text-selene-gold/40 mb-3">&ldquo;</div>
+            <div className="text-3xl text-selene-gold/40 mb-3">"</div>
             <p className="text-[15px] text-selene-white italic leading-relaxed mb-4 max-w-[520px]">{s.text}</p>
             {s.source && <p className="text-[11px] text-selene-white-dim">{s.source}</p>}
           </div>
@@ -94,32 +89,6 @@ function SlideViewer({ slides }) {
             <div className="text-2xl mb-3">--{'>'}</div>
             <p className="text-xs font-semibold text-selene-white-dim tracking-wide uppercase mb-3">Siguiente leccion</p>
             <p className="text-[14px] text-selene-white leading-relaxed max-w-[520px]">{s.text}</p>
-          </div>
-        );
-
-      case 'comparison_table':
-        return (
-          <div className="flex flex-col justify-center min-h-[260px] px-6 py-5">
-            {s.title && <h4 className="font-display text-lg text-selene-gold mb-4">{s.title}</h4>}
-            <div className="rounded-lg border border-selene-border overflow-hidden">
-              {s.columns && (
-                <div className="flex">
-                  {s.columns.map((col, ci) => (
-                    <div key={ci} className="flex-1 px-3 py-2.5 bg-selene-elevated text-[11px] font-semibold text-selene-gold uppercase tracking-wider text-center border-b border-selene-border">
-                      {col}
-                    </div>
-                  ))}
-                </div>
-              )}
-              {(s.rows || []).map((row, ri) => (
-                <div key={ri} className={`flex ${ri < (s.rows || []).length - 1 ? 'border-b border-selene-border' : ''}`}>
-                  {row.label && <div className="flex-1 px-3 py-2.5 text-[12px] text-selene-white font-medium bg-selene-card">{row.label}</div>}
-                  {(row.values || []).map((val, vi) => (
-                    <div key={vi} className="flex-1 px-3 py-2.5 text-[12px] text-selene-white-dim text-center bg-selene-card">{val}</div>
-                  ))}
-                </div>
-              ))}
-            </div>
           </div>
         );
 
@@ -185,54 +154,6 @@ export default function CoursePage({ params }) {
   const [quizAnswers, setQuizAnswers] = useState({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [enrolling, setEnrolling] = useState(false);
-  const [isEnrolled, setIsEnrolled] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [completedLessons, setCompletedLessons] = useState(new Set());
-  const [enrollLoading, setEnrollLoading] = useState(true);
-
-  // Meta Pixel: Purchase event when returning from Stripe checkout
-  useEffect(() => {
-    if (!course) return;
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('enrolled') === 'true' && typeof fbq === 'function') {
-      fbq('track', 'Purchase', {
-        content_name: course.title,
-        content_ids: [course.id],
-        content_type: 'product',
-        value: course.price / 100,
-        currency: 'EUR',
-      });
-      // Clean URL to prevent duplicate tracking on refresh
-      window.history.replaceState({}, '', window.location.pathname);
-    }
-  }, [course]);
-
-  // Check real enrollment from Supabase
-  useEffect(() => {
-    if (!course) return;
-    const supabase = createClient();
-    async function checkEnrollment() {
-      try {
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!user) { setEnrollLoading(false); return; }
-        const { data: enrollment } = await supabase
-          .from('enrollments')
-          .select('progress, completed_lessons')
-          .eq('user_id', user.id)
-          .eq('course_id', course.id)
-          .single();
-        if (enrollment) {
-          setIsEnrolled(true);
-          setProgress(enrollment.progress || 0);
-          setCompletedLessons(new Set(enrollment.completed_lessons || []));
-        }
-      } catch (e) {
-        // Not enrolled or table doesn't exist yet
-      }
-      setEnrollLoading(false);
-    }
-    checkEnrollment();
-  }, [course]);
 
   // Fetch lesson JSON when a lesson is selected
   useEffect(() => {
@@ -267,54 +188,20 @@ export default function CoursePage({ params }) {
     }
   }, [course, activeLesson]);
 
-  async function handleEnroll(installments = null) {
+  async function handleEnroll() {
     if (enrolling) return;
     setEnrolling(true);
-    // Check if user is logged in first
-    try {
-      const supabase = createClient();
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) {
-        // Not logged in — redirect to auth with return URL
-        setEnrolling(false);
-        router.push(`/auth?redirect=/curso/${course.id}`);
-        return;
-      }
-    } catch {
-      setEnrolling(false);
-      router.push(`/auth?redirect=/curso/${course.id}`);
-      return;
-    }
-    // Meta Pixel: InitiateCheckout
-    if (typeof fbq === 'function') {
-      fbq('track', 'InitiateCheckout', {
-        content_name: course.title,
-        content_ids: [course.id],
-        content_type: 'product',
-        value: course.price / 100,
-        currency: 'EUR',
-      });
-    }
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ courseId: course.id, installments }),
+        body: JSON.stringify({ courseId: course.id }),
       });
       const data = await res.json();
       if (data.url) {
         window.location.href = data.url;
       } else if (data.enrolled) {
-        // Meta Pixel: free enrollment = Purchase with value 0
-        if (typeof fbq === 'function') {
-          fbq('track', 'Purchase', {
-            content_name: course.title,
-            content_ids: [course.id],
-            content_type: 'product',
-            value: 0,
-            currency: 'EUR',
-          });
-        }
+        setIsEnrolled(true);
         router.refresh();
       } else {
         alert(data.error || 'Error al procesar. Intentalo de nuevo.');
@@ -337,8 +224,49 @@ export default function CoursePage({ params }) {
     );
   }
 
-  // Quiz questions — loaded from each lesson's questions field in constants.js
-  const quizQuestions = (activeLesson && activeLesson.questions) ? activeLesson.questions : [];
+  // Check enrollment from Supabase (fallback to not enrolled)
+  const [isEnrolled, setIsEnrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    async function checkEnrollment() {
+      try {
+        const res = await fetch(`/api/enrollment?courseId=${course.id}`);
+        if (res.ok) {
+          const data = await res.json();
+          setIsEnrolled(data.enrolled);
+          setProgress(data.progress || 0);
+        }
+      } catch (err) {
+        // Not enrolled by default
+      }
+    }
+    checkEnrollment();
+  }, [course.id]);
+
+  // Mock completed lessons
+  const completedLessons = course.lessons.length > 0
+    ? new Set(course.lessons.slice(0, Math.floor(course.lessons.length * progress)).map(l => l.id))
+    : new Set();
+
+  // Mock quiz questions
+  const quizQuestions = [
+    {
+      q: '¿Qué estructura cerebral se modifica con la práctica meditativa según los estudios de neuroplasticidad?',
+      options: ['El hipocampo', 'La corteza prefrontal', 'La amígdala', 'Todas las anteriores'],
+      correct: 3,
+    },
+    {
+      q: '¿Qué protocolo tiene la mayor base de evidencia peer-reviewed para meditación?',
+      options: ['Visualización creativa', 'MBSR (Mindfulness-Based Stress Reduction)', 'Meditación trascendental', 'Yoga nidra'],
+      correct: 1,
+    },
+    {
+      q: 'La cronobiología estudia:',
+      options: ['Los horóscopos diarios', 'Los ritmos biológicos y su sincronización', 'La astrología natal', 'Las fases lunares exclusivamente'],
+      correct: 1,
+    },
+  ];
 
   // Helper: find lesson index
   const activeLessonIdx = activeLesson ? course.lessons.findIndex(l => l.id === activeLesson.id) : -1;
@@ -397,74 +325,30 @@ export default function CoursePage({ params }) {
 
           {!quizSubmitted ? (
             <button
-              onClick={async () => {
-                if (Object.keys(quizAnswers).length !== quizQuestions.length) return;
-                setQuizSubmitted(true);
-                // Save exam result to database
-                try {
-                  const correctCount = quizQuestions.filter((q, i) => quizAnswers[i] === q.correct).length;
-                  const score = correctCount / quizQuestions.length;
-                  const passed = score >= 0.7;
-                  const supabase = (await import('@/lib/supabase-browser')).createClient();
-                  const { data: { user } } = await supabase.auth.getUser();
-                  if (user) {
-                    await supabase.from('quiz_attempts').insert({
-                      user_id: user.id,
-                      course_id: course.id,
-                      lesson_id: activeLesson.id,
-                      score,
-                      answers: quizAnswers,
-                      passed,
-                    });
-                  }
-                } catch (e) {
-                  console.error('Error saving quiz attempt:', e);
-                }
-              }}
+              onClick={() => Object.keys(quizAnswers).length === quizQuestions.length && setQuizSubmitted(true)}
               disabled={Object.keys(quizAnswers).length !== quizQuestions.length}
               className="w-full mt-2 bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-40"
             >
               Enviar respuestas
             </button>
-          ) : (() => {
-            const correctCount = quizQuestions.filter((q, i) => quizAnswers[i] === q.correct).length;
-            const score = correctCount / quizQuestions.length;
-            const passed = score >= 0.7;
-            return (
-              <div className="text-center mt-6">
-                <Card className={`p-6 ${passed ? 'border-selene-gold/25 bg-gradient-to-b from-selene-card to-selene-gold/5' : 'border-selene-rose/25 bg-gradient-to-b from-selene-card to-selene-rose/5'}`}>
-                  <div className="text-4xl mb-3">{passed ? '🎓' : '📝'}</div>
-                  <h3 className={`font-display text-xl mb-2 ${passed ? 'text-selene-gold' : 'text-selene-rose'}`}>
-                    {passed ? '¡Evaluación superada!' : 'No aprobado'}
-                  </h3>
-                  <p className="text-sm text-selene-white-dim mb-1">
-                    Resultado: {correctCount}/{quizQuestions.length} correctas ({Math.round(score * 100)}%)
-                  </p>
-                  {passed ? (
-                    <>
-                      <p className="text-[13px] text-selene-success mb-4">Has desbloqueado el certificado</p>
-                      <button
-                        onClick={() => router.push(`/curso/${course.id}/certificado`)}
-                        className="bg-selene-gold text-selene-bg font-semibold px-8 py-3 rounded-xl hover:brightness-110 transition"
-                      >
-                        Ver mi certificado
-                      </button>
-                    </>
-                  ) : (
-                    <>
-                      <p className="text-[13px] text-selene-rose mb-4">Necesitas un 70% para aprobar. Revisa el contenido e inténtalo de nuevo.</p>
-                      <button
-                        onClick={() => { setQuizSubmitted(false); setQuizAnswers({}); }}
-                        className="bg-selene-elevated text-selene-white font-semibold px-8 py-3 rounded-xl border border-selene-border hover:border-selene-gold/30 transition"
-                      >
-                        Reintentar examen
-                      </button>
-                    </>
-                  )}
-                </Card>
-              </div>
-            );
-          })()}
+          ) : (
+            <div className="text-center mt-6">
+              <Card className="p-6 border-selene-gold/25 bg-gradient-to-b from-selene-card to-selene-gold/5">
+                <div className="text-4xl mb-3">🎓</div>
+                <h3 className="font-display text-xl text-selene-gold mb-2">¡Evaluación completada!</h3>
+                <p className="text-sm text-selene-white-dim mb-1">
+                  Resultado: {quizQuestions.filter((q, i) => quizAnswers[i] === q.correct).length}/{quizQuestions.length} correctas
+                </p>
+                <p className="text-[13px] text-selene-success">Has desbloqueado el certificado</p>
+                <button
+                  onClick={() => router.push(`/curso/${course.id}/certificado`)}
+                  className="mt-4 bg-selene-gold text-selene-bg font-semibold px-8 py-3 rounded-xl hover:brightness-110 transition"
+                >
+                  Ver mi certificado
+                </button>
+              </Card>
+            </div>
+          )}
         </div>
       </div>
     );
@@ -491,21 +375,6 @@ export default function CoursePage({ params }) {
         </nav>
 
         <div className="max-w-[720px] mx-auto px-5 py-6">
-          {/* Video player */}
-          {activeLesson.videoUrl && (
-            <div className="aspect-video bg-black rounded-xl overflow-hidden mb-6">
-              <video
-                controls
-                controlsList="nodownload"
-                className="w-full h-full"
-                preload="metadata"
-              >
-                <source src={activeLesson.videoUrl} type="video/mp4" />
-                Tu navegador no soporta el reproductor de vídeo.
-              </video>
-            </div>
-          )}
-
           {/* Loading state */}
           {lessonLoading && (
             <div className="flex flex-col items-center justify-center py-20">
@@ -532,49 +401,14 @@ export default function CoursePage({ params }) {
 
               {/* Text content */}
               <Card className="p-6 md:p-8 mb-6">
-                <TextContentRenderer text={lessonData.text_content} />
-              </Card>
-
-              {/* Interactive elements */}
-              {lessonData.interactive && lessonData.interactive.length > 0 && (
-                <div className="mb-6 space-y-2">
-                  <h3 className="text-sm font-semibold text-selene-white-dim mb-3 flex items-center gap-2">
-                    <span>Ejercicios interactivos</span>
-                  </h3>
-                  {lessonData.interactive.map((el, i) => {
-                    switch (el.type) {
-                      case 'flip_cards': return <FlipCards key={i} cards={el.cards} />;
-                      case 'match': return <MatchExercise key={i} title={el.title} pairs={el.pairs} instruction={el.instruction} />;
-                      case 'hotspot': return <HotspotImage key={i} imageUrl={el.imageUrl} altText={el.altText} hotspots={el.hotspots} title={el.title} />;
-                      case 'fill_blanks': {
-                        // Support both formats: {text, blanks} and {template, answers}
-                        const fbText = el.text || el.template;
-                        const fbBlanks = el.blanks || (el.answers ? el.answers.map(a => ({ answer: a, hint: '...' })) : []);
-                        return <FillBlanks key={i} text={fbText} blanks={fbBlanks} title={el.title} />;
-                      }
-                      case 'sort': {
-                        // Support both formats: {items} and {correct_order}
-                        const sortItems = el.items || el.correct_order;
-                        return <SortExercise key={i} title={el.title} items={sortItems} instruction={el.instruction} />;
-                      }
-                      case 'key_concept': return <KeyConcept key={i} term={el.term} definition={el.definition} icon={el.icon} source={el.source} />;
-                      case 'progress_check': return <ProgressCheck key={i} questions={el.questions} />;
-                      case 'multiple_choice': return <MultipleChoice key={i} question={el.question} options={el.options} correctIndex={el.correct ?? el.correctIndex} explanation={el.explanation} multiSelect={el.multiSelect} />;
-                      case 'timeline': return <Timeline key={i} title={el.title} events={el.events} />;
-                      case 'comparison': return <ComparisonTable key={i} title={el.title} headers={el.headers} rows={el.rows} />;
-                      case 'scenario': return <Scenario key={i} title={el.title} description={el.description} question={el.question} options={el.options} />;
-                      case 'reveal': return <RevealSections key={i} title={el.title} sections={el.sections} />;
-                      case 'process_diagram': return <ProcessDiagram key={i} title={el.title} steps={el.steps} direction={el.direction} />;
-                      case 'concept_map': return <ConceptMap key={i} title={el.title} centerNode={el.centerNode} nodes={el.nodes} />;
-                      case 'lesson_summary': return <LessonSummary key={i} title={el.title} points={el.points} citation={el.citation} nextLesson={el.nextLesson} />;
-                      case 'spaced_review': return <SpacedReview key={i} questions={el.questions} />;
-                      case 'annotated_image': return <AnnotatedImage key={i} title={el.title} imageUrl={el.imageUrl} altText={el.altText} annotations={el.annotations} />;
-                      case 'branching_scenario': return <BranchingScenario key={i} title={el.title} scenario={el.scenario} />;
-                      default: return null;
-                    }
-                  })}
+                <div className="prose-selene">
+                  {lessonData.text_content.split('\n\n').map((paragraph, i) => (
+                    <p key={i} className="text-[14px] md:text-[15px] text-selene-white-dim leading-[1.8] mb-5 last:mb-0">
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
-              )}
+              </Card>
 
               {/* Slides */}
               {lessonData.slides && lessonData.slides.length > 0 && (
@@ -587,53 +421,41 @@ export default function CoursePage({ params }) {
                 </div>
               )}
 
-              {/* Citations */}
+              {/* Citation */}
               {lessonData.citation && (
-                <div className="bg-selene-blue/5 rounded-xl p-4 border border-selene-blue/10 mb-4">
-                  <div className="text-xs font-semibold text-selene-blue-light mb-2">🔬 Referencias científicas</div>
-                  {Array.isArray(lessonData.citation) ? lessonData.citation.map((c, ci) => (
-                    <div key={ci} className="text-[13px] text-selene-white-dim leading-relaxed mb-2 last:mb-0">
-                      <span className="text-selene-white font-medium">{c.researcher} ({c.year})</span>
-                      {' — '}{c.finding}
-                    </div>
-                  )) : (
-                    <div className="text-[13px] text-selene-white-dim leading-relaxed">
-                      <span className="text-selene-white font-medium">{lessonData.citation.researcher} ({lessonData.citation.year})</span>
-                      {' — '}{lessonData.citation.finding}
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Bibliography */}
-              {lessonData.bibliography?.length > 0 && (
-                <div className="bg-selene-elevated/50 rounded-xl p-4 border border-selene-border mb-4">
-                  <div className="text-xs font-semibold text-selene-white-dim mb-2">📚 Bibliografía</div>
-                  {lessonData.bibliography.map((b, bi) => (
-                    <div key={bi} className="text-[12px] text-selene-white-dim mb-1 last:mb-0">
-                      {typeof b === 'string'
-                        ? <><span>{b.includes('ournal') || b.includes('Cureus') ? '📄' : '📖'}</span> {b}</>
-                        : <><span>{b.type === 'paper' ? '📄' : '📖'}</span> {b.author} ({b.year}). <em className="text-selene-white/70">{b.title}</em></>
-                      }
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {/* Homework */}
-              {lessonData.homework && (
-                <div className="bg-selene-gold/5 rounded-xl p-4 border border-selene-gold/20 mb-6">
-                  <div className="text-xs font-semibold text-selene-gold mb-2">📋 Tarea para casa</div>
-                  <p className="text-[13px] text-selene-white-dim leading-relaxed mb-2" style={{ textAlign: 'justify' }}>{lessonData.homework.task}</p>
-                  <div className="flex gap-4 text-[11px] text-selene-white-dim">
-                    {lessonData.homework.duration && <span>⏱ {lessonData.homework.duration}</span>}
-                    {lessonData.homework.materials && <span>📦 {lessonData.homework.materials}</span>}
+                <div className="bg-selene-blue/5 rounded-xl p-4 border border-selene-blue/10 mb-6">
+                  <div className="text-xs font-semibold text-selene-blue-light mb-1.5">Referencia cientifica</div>
+                  <div className="text-[13px] text-selene-white-dim leading-relaxed">
+                    <span className="text-selene-white font-medium">{lessonData.citation.researcher} ({lessonData.citation.year})</span>
+                    {' — '}
+                    {lessonData.citation.finding}
                   </div>
                 </div>
               )}
 
               {/* Complete lesson button */}
-              <CompleteButton courseId={course.id} lessonId={activeLesson.id} onComplete={() => navigate(1)} />
+              <button
+                onClick={async () => {
+                  try {
+                    const res = await fetch('/api/progress', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ courseId: course.id, lessonId: activeLesson.id }),
+                    });
+                    if (res.ok) {
+                      if (hasNext) navigateLesson(1);
+                      else setActiveLesson(null);
+                    }
+                  } catch (err) {
+                    // Silently continue
+                    if (hasNext) navigateLesson(1);
+                    else setActiveLesson(null);
+                  }
+                }}
+                className="w-full bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition mb-4"
+              >
+                {hasNext ? 'Completar y continuar' : 'Completar leccion'}
+              </button>
 
               {/* Prev / Next navigation */}
               <div className="flex gap-3 mb-8">
@@ -706,15 +528,8 @@ export default function CoursePage({ params }) {
   }
 
   // ── Course Overview ──
-  const isMaster = course.id === 'guia-profesional';
   return (
-    <div className="min-h-screen bg-selene-bg relative">
-      {isMaster && (
-        <div className="fixed inset-0 z-0 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f2e]/30 via-selene-bg to-selene-bg" />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[800px] rounded-full bg-gradient-radial from-selene-gold/[0.03] via-purple-900/[0.02] to-transparent blur-3xl" />
-        </div>
-      )}
+    <div className="min-h-screen bg-selene-bg">
       <nav className="sticky top-0 z-50 px-6 py-3.5 flex items-center gap-3 border-b border-selene-border bg-selene-bg/90 backdrop-blur-xl">
         <button onClick={() => router.push('/dashboard')} className="text-selene-white-dim hover:text-selene-white">
           <BackIcon />
@@ -722,16 +537,14 @@ export default function CoursePage({ params }) {
         <span className="text-sm font-medium text-selene-white">Detalle del curso</span>
       </nav>
 
-      <div className="max-w-[680px] mx-auto px-5 py-6 relative z-10">
+      <div className="max-w-[680px] mx-auto px-5 py-6">
         {/* Header */}
         <Card className="p-7 mb-6 relative overflow-hidden" style={{ background: `linear-gradient(135deg, #12121A, ${course.color}08)`, borderColor: `${course.color}30` }}>
           <div className="absolute -top-5 -right-5 text-[80px] opacity-[0.06]">{course.icon}</div>
-          <div className="text-center relative z-10">
-            <Badge color={course.color}>{course.tag}</Badge>
-            <h1 className="font-display text-[26px] font-normal mt-4 mb-1.5">{course.title}</h1>
-            <p className="text-sm text-selene-white-dim leading-relaxed mb-4">{course.subtitle}</p>
-          </div>
-          <div className="flex gap-4 text-xs text-selene-white-dim flex-wrap justify-center relative z-10">
+          <Badge color={course.color} className="relative z-10">{course.tag}</Badge>
+          <h1 className="font-display text-[26px] font-normal mt-4 mb-1.5 relative z-10">{course.title}</h1>
+          <p className="text-sm text-selene-white-dim leading-relaxed mb-4 relative z-10">{course.subtitle}</p>
+          <div className="flex gap-4 text-xs text-selene-white-dim flex-wrap relative z-10">
             <span>{course.level}</span><span>·</span>
             <span>{course.hours}</span><span>·</span>
             <span>{course.modules} módulos</span><span>·</span>
@@ -750,81 +563,45 @@ export default function CoursePage({ params }) {
 
         {/* Description */}
         <Card className="p-5 mb-4">
-          <div className="inline-block px-3 py-1 rounded-lg bg-selene-white/5 border border-selene-border mb-3">
-            <h3 className="text-xs font-semibold text-selene-gold tracking-wide uppercase">Descripción</h3>
-          </div>
+          <h3 className="text-sm font-semibold text-selene-white mb-2">Descripción</h3>
           <p className="text-[13px] text-selene-white-dim leading-relaxed">{course.description}</p>
         </Card>
 
         {/* Science basis */}
         <div className="bg-selene-blue/5 rounded-2xl p-[18px] border border-selene-blue/10 mb-4">
-          <div className="inline-block px-3 py-1 rounded-lg bg-selene-blue/10 border border-selene-blue/20 mb-2">
-            <span className="text-xs font-semibold text-selene-blue-light tracking-wide uppercase">Base científica</span>
-          </div>
+          <div className="text-xs font-semibold text-selene-blue-light mb-1.5">Base científica</div>
           <div className="text-[13px] text-selene-white-dim leading-relaxed">{course.science}</div>
         </div>
 
         {/* For whom & outcome */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
           <Card className="p-4">
-            <div className="inline-block px-3 py-1 rounded-lg bg-selene-gold/10 border border-selene-gold/20 mb-2">
-              <span className="text-xs font-semibold text-selene-gold tracking-wide uppercase">¿Para quién?</span>
-            </div>
+            <div className="text-xs font-semibold text-selene-gold mb-1.5">¿Para quién?</div>
             <div className="text-[13px] text-selene-white-dim leading-relaxed">{course.for_whom}</div>
           </Card>
           <Card className="p-4">
-            <div className="inline-block px-3 py-1 rounded-lg bg-selene-success/10 border border-selene-success/20 mb-2">
-              <span className="text-xs font-semibold text-selene-success tracking-wide uppercase">Resultado</span>
-            </div>
+            <div className="text-xs font-semibold text-selene-success mb-1.5">Resultado</div>
             <div className="text-[13px] text-selene-white-dim leading-relaxed">{course.outcome}</div>
           </Card>
         </div>
 
-        {/* Enrollment CTA — always visible when not enrolled */}
-        {!isEnrolled && !enrollLoading && (
+        {/* Enrollment CTA */}
+        {!isEnrolled && (
           <div className="text-center py-8 mb-6">
-            {course.price === 0 ? (
-              <button
-                onClick={() => handleEnroll()}
-                disabled={enrolling}
-                className="bg-selene-gold text-selene-bg font-semibold px-8 py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-60"
-              >
-                {enrolling ? 'Procesando...' : 'Inscribirse gratis'}
-              </button>
-            ) : (
-              <div className="space-y-3 max-w-sm mx-auto">
-                <button
-                  onClick={() => handleEnroll()}
-                  disabled={enrolling}
-                  className="w-full bg-selene-gold text-selene-bg font-semibold px-8 py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-60"
-                >
-                  {enrolling ? 'Procesando...' : `Pago único · ${course.price_label}`}
-                </button>
-                {course.price >= 2000 && (
-                  <button
-                    onClick={() => handleEnroll(course.installments || 3)}
-                    disabled={enrolling}
-                    className="w-full bg-transparent border border-selene-gold/40 text-selene-gold font-medium px-8 py-3 rounded-xl hover:border-selene-gold/80 transition disabled:opacity-60 text-sm"
-                  >
-                    {enrolling ? 'Procesando...' : course.installment_label
-                      ? `${course.installments} cuotas de ${course.installment_label}`
-                      : `3 cuotas de ${(course.price / 3 / 100).toFixed(2).replace('.', ',')}€`}
-                  </button>
-                )}
-                <p className="text-[11px] text-selene-white-dim">
-                  Pago seguro · Klarna disponible para compra única · Acceso inmediato
-                </p>
-              </div>
-            )}
+            <button
+              onClick={handleEnroll}
+              disabled={enrolling}
+              className="bg-selene-gold text-selene-bg font-semibold px-8 py-3.5 rounded-xl hover:brightness-110 transition disabled:opacity-60"
+            >
+              {enrolling ? 'Procesando...' : course.price === 0 ? 'Inscribirse gratis' : `Comprar por ${course.price_label}`}
+            </button>
           </div>
         )}
 
         {/* Lessons */}
         {course.lessons.length > 0 && (
           <div>
-            <div className="inline-block px-4 py-1.5 rounded-lg bg-selene-white/5 border border-selene-border mb-5">
-              <h3 className="text-xs font-semibold text-selene-gold tracking-wide uppercase">Contenido del curso</h3>
-            </div>
+            <h3 className="font-display text-lg font-medium mb-4">Contenido del curso</h3>
             {course.lessons.map((lesson, i) => (
               <button
                 key={lesson.id}
@@ -836,7 +613,6 @@ export default function CoursePage({ params }) {
                   completedLessons.has(lesson.id) ? 'bg-selene-success/10 border-selene-success/20' : 'bg-selene-elevated border-selene-border'
                 }`}>
                   {completedLessons.has(lesson.id) ? <CheckIcon size={16} /> :
-                   !isEnrolled ? <LockIcon size={14} className="text-selene-white-dim" /> :
                    lesson.type === 'quiz' ? <span className="text-sm">📝</span> :
                    lesson.type === 'exam' ? <span className="text-sm">🎓</span> :
                    <BookOpenIcon size={14} className="text-selene-white-dim" />}
@@ -847,52 +623,13 @@ export default function CoursePage({ params }) {
                     {lesson.type === 'quiz' ? 'Quiz' : lesson.type === 'exam' ? 'Evaluación' : 'Lección'} · {lesson.duration}
                   </div>
                 </div>
-                {isEnrolled ? <ArrowIcon size={14} className="text-selene-white-dim shrink-0" /> : <LockIcon size={12} className="text-selene-white-dim/40 shrink-0" />}
+                {!isEnrolled && <LockIcon size={14} className="text-selene-white-dim shrink-0" />}
+                {isEnrolled && <ArrowIcon size={14} className="text-selene-white-dim shrink-0" />}
               </button>
             ))}
           </div>
         )}
       </div>
     </div>
-  );
-}
-
-// ── Complete Lesson Button with XP/Badge feedback ──
-function CompleteButton({ courseId, lessonId, onComplete }) {
-  const supabase = createClient();
-  const [state, setState] = useState('idle');
-  const [result, setResult] = useState(null);
-
-  const handleComplete = async () => {
-    setState('loading');
-    try {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) { setState('idle'); return; }
-      const res = await recordLessonComplete(supabase, user.id, courseId, lessonId);
-      setResult(res);
-      setState('done');
-      setTimeout(() => { if (onComplete) onComplete(); }, 1500);
-    } catch (e) {
-      console.error('Error completing lesson:', e);
-      setState('done');
-      if (onComplete) onComplete();
-    }
-  };
-
-  if (state === 'done') {
-    return (
-      <div className="w-full bg-green-500/10 border border-green-500/30 text-green-400 font-semibold py-3.5 rounded-xl text-center mb-4 animate-fade-in">
-        <span className="mr-2">✓</span> Completada
-        {result?.xp && <span className="ml-2 text-selene-gold">+{result.xp} XP</span>}
-        {result?.newBadges?.length > 0 && <span className="ml-2">🏅 Nueva insignia</span>}
-      </div>
-    );
-  }
-
-  return (
-    <button onClick={handleComplete} disabled={state === 'loading'}
-      className="w-full bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition mb-4 disabled:opacity-50">
-      {state === 'loading' ? 'Registrando...' : 'Completar lección'}
-    </button>
   );
 }
