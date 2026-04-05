@@ -579,6 +579,11 @@ export default function CoursePage({ params }) {
             >
               {enrolling ? 'Procesando...' : course.price === 0 ? 'Inscribirse gratis' : `Comprar por ${course.price_label}`}
             </button>
+            {course.price > 0 && (
+              <p className="text-[10px] text-selene-white-dim/60 mt-4 max-w-md mx-auto leading-relaxed">
+                Al completar la compra, aceptas que el contenido digital se ponga a tu disposicion de forma inmediata y renuncias expresamente al derecho de desistimiento de 14 dias (art. 103.m del RDL 1/2007).
+              </p>
+            )}
           </div>
         )}
 

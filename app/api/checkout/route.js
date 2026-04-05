@@ -106,6 +106,7 @@ export async function POST(request) {
           user_id: user.id,
           course_id: courseId,
           installments: String(installments),
+          consent_withdrawal_waiver: 'true',
         },
         subscription_data: {
           metadata: {
@@ -133,6 +134,7 @@ export async function POST(request) {
       metadata: {
         user_id: user.id,
         course_id: courseId,
+        consent_withdrawal_waiver: 'true',
       },
       payment_method_types: ['card', 'klarna'],
       payment_method_options: {

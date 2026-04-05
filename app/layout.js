@@ -1,5 +1,4 @@
 import './globals.css';
-import { WhatsAppButton } from '@/components/ui';
 import InstallPWA from '@/components/InstallPWA';
 
 export const metadata = {
@@ -84,7 +83,6 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-selene-bg text-selene-white antialiased">
         {children}
-        <WhatsAppButton />
         <InstallPWA />
       </body>
     </html>
