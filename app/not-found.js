@@ -1,22 +1,40 @@
 import Link from 'next/link';
+import { Navbar, Footer } from '@/components/ui';
+
+export const metadata = {
+  title: 'Pagina no encontrada',
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-selene-bg flex items-center justify-center px-6">
-      <div className="text-center max-w-md">
-        <div className="text-[72px] mb-4 opacity-60">🌑</div>
-        <h1 className="font-display text-3xl text-selene-gold mb-3">Página no encontrada</h1>
-        <p className="text-sm text-selene-white-dim mb-8 leading-relaxed">
-          Esta página se ha perdido entre las estrellas. Vuelve al inicio para
-          continuar tu camino.
+    <>
+      <Navbar />
+      <main className="min-h-[70vh] flex flex-col items-center justify-center px-6 py-20">
+        <div className="text-[72px] mb-6">🌙</div>
+        <h1 className="font-display text-4xl text-selene-white mb-4 text-center">
+          Pagina no encontrada
+        </h1>
+        <p className="text-selene-white-dim text-center max-w-md mb-10 leading-relaxed">
+          Las estrellas no nos han guiado hasta aqui. Quiza el curso que buscas
+          ha cambiado de nombre o ya no esta disponible.
         </p>
-        <Link
-          href="/"
-          className="inline-block bg-selene-gold text-selene-bg font-semibold px-8 py-3.5 rounded-xl btn-gold-hover no-underline"
-        >
-          Volver al inicio
-        </Link>
-      </div>
-    </div>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link
+            href="/catalogo"
+            className="bg-selene-gold text-selene-bg font-semibold text-sm px-6 py-3 rounded-xl hover:brightness-110 text-center no-underline"
+          >
+            Ver catalogo de cursos
+          </Link>
+          <Link
+            href="/"
+            className="border border-selene-gold/30 text-selene-gold font-semibold text-sm px-6 py-3 rounded-xl hover:bg-selene-gold/10 text-center no-underline"
+          >
+            Volver al inicio
+          </Link>
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }
