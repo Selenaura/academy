@@ -51,7 +51,7 @@ function SlideViewer({ slides }) {
       case 'quote':
         return (
           <div className="flex flex-col items-center justify-center text-center min-h-[260px] px-8 py-5">
-            <div className="text-3xl text-selene-gold/40 mb-3">"</div>
+            <div className="text-3xl text-selene-gold/40 mb-3">&ldquo;</div>
             <p className="text-[15px] text-selene-white italic leading-relaxed mb-4 max-w-[520px]">{s.text}</p>
             {s.source && <p className="text-[11px] text-selene-white-dim">{s.source}</p>}
           </div>
@@ -154,6 +154,26 @@ export default function CoursePage({ params }) {
   const [quizAnswers, setQuizAnswers] = useState({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [enrolling, setEnrolling] = useState(false);
+  const [isEnrolled, setIsEnrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  // Check enrollment from Supabase
+  useEffect(() => {
+    if (!course) return;
+    async function checkEnrollment() {
+      try {
+        const res = await fetch(`/api/enrollment?courseId=${course.id}`);
+        if (res.ok) {
+          const data = await res.json();
+          setIsEnrolled(data.enrolled);
+          setProgress(data.progress || 0);
+        }
+      } catch (err) {
+        // Not enrolled by default
+      }
+    }
+    checkEnrollment();
+  }, [course]);
 
   // Fetch lesson JSON when a lesson is selected
   useEffect(() => {
@@ -224,49 +244,13 @@ export default function CoursePage({ params }) {
     );
   }
 
-  // Check enrollment from Supabase (fallback to not enrolled)
-  const [isEnrolled, setIsEnrolled] = useState(false);
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    async function checkEnrollment() {
-      try {
-        const res = await fetch(`/api/enrollment?courseId=${course.id}`);
-        if (res.ok) {
-          const data = await res.json();
-          setIsEnrolled(data.enrolled);
-          setProgress(data.progress || 0);
-        }
-      } catch (err) {
-        // Not enrolled by default
-      }
-    }
-    checkEnrollment();
-  }, [course.id]);
-
   // Mock completed lessons
   const completedLessons = course.lessons.length > 0
     ? new Set(course.lessons.slice(0, Math.floor(course.lessons.length * progress)).map(l => l.id))
     : new Set();
 
-  // Mock quiz questions
-  const quizQuestions = [
-    {
-      q: '¿Qué estructura cerebral se modifica con la práctica meditativa según los estudios de neuroplasticidad?',
-      options: ['El hipocampo', 'La corteza prefrontal', 'La amígdala', 'Todas las anteriores'],
-      correct: 3,
-    },
-    {
-      q: '¿Qué protocolo tiene la mayor base de evidencia peer-reviewed para meditación?',
-      options: ['Visualización creativa', 'MBSR (Mindfulness-Based Stress Reduction)', 'Meditación trascendental', 'Yoga nidra'],
-      correct: 1,
-    },
-    {
-      q: 'La cronobiología estudia:',
-      options: ['Los horóscopos diarios', 'Los ritmos biológicos y su sincronización', 'La astrología natal', 'Las fases lunares exclusivamente'],
-      correct: 1,
-    },
-  ];
+  // Use questions from the lesson object, or fall back to empty array
+  const quizQuestions = (activeLesson && activeLesson.questions) ? activeLesson.questions : [];
 
   // Helper: find lesson index
   const activeLessonIdx = activeLesson ? course.lessons.findIndex(l => l.id === activeLesson.id) : -1;
