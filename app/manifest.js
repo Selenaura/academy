@@ -9,9 +9,8 @@ export default function manifest() {
     theme_color: '#C9A84C',
     orientation: 'portrait',
     icons: [
-      { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },
-      { src: '/icon-512.png', sizes: '512x512', type: 'image/png' },
-      { src: '/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+      { src: '/icon.svg', sizes: 'any', type: 'image/svg+xml' },
+      { src: '/icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'maskable' },
     ],
     categories: ['education', 'lifestyle'],
     lang: 'es',
