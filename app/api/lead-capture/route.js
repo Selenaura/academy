@@ -7,10 +7,33 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
+const ALLOWED_ORIGINS = [
+  'https://selenaura.com',
+  'https://www.selenaura.com',
+  'https://academy.selenaura.com',
+  'https://carta.selenaura.com',
+  'https://tarot.selenaura.com',
+];
+
+function corsHeaders(request) {
+  const origin = request.headers.get('origin') || '';
+  const allowed = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
+  return {
+    'Access-Control-Allow-Origin': allowed,
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+  };
+}
+
+/** Preflight */
+export async function OPTIONS(request) {
+  return NextResponse.json({}, { headers: corsHeaders(request) });
+}
+
 /**
  * POST /api/lead-capture
  * Public endpoint for web forms (no API key required).
- * Basic rate-limiting via simple checks.
+ * Accepts cross-origin requests from SelenaUra domains.
  *
  * Body: { email: string, source?: string }
  */
@@ -20,7 +43,7 @@ export async function POST(request) {
     const { email, source = 'web_form' } = body;
 
     if (!email || !email.includes('@') || email.length < 5 || email.length > 200) {
-      return NextResponse.json({ error: 'Email válido requerido' }, { status: 400 });
+      return NextResponse.json({ error: 'Email válido requerido' }, { status: 400, headers: corsHeaders(request) });
     }
 
     const normalizedEmail = email.toLowerCase().trim();
@@ -35,7 +58,7 @@ export async function POST(request) {
 
     if (existing) {
       // Still show success to user (don't reveal if email exists)
-      return NextResponse.json({ success: true });
+      return NextResponse.json({ success: true }, { headers: corsHeaders(request) });
     }
 
     // Send the lead magnet email
@@ -57,9 +80,9 @@ export async function POST(request) {
 
     console.log(`🎯 Web lead captured: ${normalizedEmail} (source: ${source})`);
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true }, { headers: corsHeaders(request) });
   } catch (err) {
     console.error('Lead capture error:', err);
-    return NextResponse.json({ error: 'Error interno' }, { status: 500 });
+    return NextResponse.json({ error: 'Error interno' }, { status: 500, headers: corsHeaders(request) });
   }
 }

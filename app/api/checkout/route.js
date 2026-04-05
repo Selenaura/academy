@@ -60,20 +60,41 @@ export async function POST(request) {
 
     if (installments && installments > 1) {
       // Installment plan: create a subscription with N payments then cancel
-      // We use Stripe's recurring price + subscription, cancelled automatically after N cycles
-      const amountPerInstallment = installmentAmount(course.price, installments);
+      // Use fixed installment price from course config if available, otherwise divide evenly
+      const amountPerInstallment = course.installment_price || installmentAmount(course.price, installments);
 
-      const product = await stripe.products.create({
-        name: `${course.title} — ${installments} cuotas`,
-        metadata: { course_id: courseId },
-      });
-
-      const price = await stripe.prices.create({
-        product: product.id,
-        unit_amount: amountPerInstallment,
-        currency: 'eur',
-        recurring: { interval: 'month', interval_count: 1 },
-      });
+      // Reuse existing product/price if course has fixed installment config, otherwise create on-the-fly
+      let priceId;
+      if (course.installment_price && course.installments === installments) {
+        // Use the pre-configured recurring price for this course
+        const existingPrice = await stripe.prices.list({
+          product: course.stripe_price_id ? undefined : undefined,
+          active: true,
+          type: 'recurring',
+          limit: 10,
+        });
+        // Create a recurring price for the installment amount
+        const price = await stripe.prices.create({
+          product: 'prod_UEU1iWoYfaIrTD',
+          unit_amount: amountPerInstallment,
+          currency: 'eur',
+          recurring: { interval: 'month', interval_count: 1 },
+          lookup_key: `${courseId}_installment_${installments}`,
+        });
+        priceId = price.id;
+      } else {
+        const product = await stripe.products.create({
+          name: `${course.title} — ${installments} cuotas`,
+          metadata: { course_id: courseId },
+        });
+        const price = await stripe.prices.create({
+          product: product.id,
+          unit_amount: amountPerInstallment,
+          currency: 'eur',
+          recurring: { interval: 'month', interval_count: 1 },
+        });
+        priceId = price.id;
+      }
 
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],

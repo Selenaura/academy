@@ -4,6 +4,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ChatWidget from '../components/ChatWidget';
 import CookieConsent from '../components/CookieConsent';
 import AnalyticsLoader from '../components/AnalyticsLoader';
+import ExitIntentPopup from '../components/ExitIntentPopup';
 
 export const metadata = {
   title: 'Selene Academia — Tu escuela de consciencia cósmica',
@@ -45,6 +46,8 @@ export default function RootLayout({ children }) {
         <AnalyticsLoader />
         {/* AEPD-compliant cookie consent banner */}
         <CookieConsent />
+        {/* Exit-intent lead capture popup */}
+        <ExitIntentPopup />
       </body>
     </html>
   );

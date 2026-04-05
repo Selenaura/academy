@@ -802,11 +802,13 @@ export default function CoursePage({ params }) {
                 </button>
                 {course.price >= 2000 && (
                   <button
-                    onClick={() => handleEnroll(3)}
+                    onClick={() => handleEnroll(course.installments || 3)}
                     disabled={enrolling}
                     className="w-full bg-transparent border border-selene-gold/40 text-selene-gold font-medium px-8 py-3 rounded-xl hover:border-selene-gold/80 transition disabled:opacity-60 text-sm"
                   >
-                    {enrolling ? 'Procesando...' : `3 cuotas de ${(course.price / 3 / 100).toFixed(2).replace('.', ',')}€`}
+                    {enrolling ? 'Procesando...' : course.installment_label
+                      ? `${course.installments} cuotas de ${course.installment_label}`
+                      : `3 cuotas de ${(course.price / 3 / 100).toFixed(2).replace('.', ',')}€`}
                   </button>
                 )}
                 <p className="text-[11px] text-selene-white-dim">

@@ -169,7 +169,7 @@ export default async function ProgramaPage({ params }) {
                 href={`/auth?redirect=/curso/${id}`}
                 className="px-8 py-3.5 rounded-full border border-selene-gold/30 text-selene-gold font-medium text-base hover:bg-selene-gold/5 transition-all"
               >
-                3 cuotas de €50/mes
+                3 cuotas de €54,99/mes
               </Link>
             )}
           </div>
@@ -518,8 +518,8 @@ export default async function ProgramaPage({ params }) {
                   <div className="hidden sm:block w-px h-16 bg-selene-border" />
                   <div>
                     <p className="text-xs text-selene-white-dim/60 mb-1">3 cuotas mensuales</p>
-                    <p className="text-3xl font-display text-selene-white">€50<span className="text-lg text-selene-white-dim">/mes</span></p>
-                    <p className="text-xs text-selene-white-dim/50 mt-1">Sin intereses</p>
+                    <p className="text-3xl font-display text-selene-white">€54,99<span className="text-lg text-selene-white-dim">/mes</span></p>
+                    <p className="text-xs text-selene-white-dim/50 mt-1">Total: €164,97</p>
                   </div>
                 </div>
                 <p className="text-[11px] text-selene-white-dim/40 mt-3">$164 USD · $2.899 MXN · £129 GBP · $179 AUD</p>
@@ -605,7 +605,7 @@ export default async function ProgramaPage({ params }) {
                 },
                 {
                   q: '¿Puedo pagar en cuotas?',
-                  a: 'Sí — 3 cuotas mensuales de €50, sin intereses. También aceptamos Klarna y todas las tarjetas.',
+                  a: 'Sí — 3 cuotas mensuales de €54,99. También aceptamos Klarna y todas las tarjetas.',
                 },
               ].map((faq, i) => (
                 <details key={i} className="group bg-selene-elevated/50 rounded-xl border border-selene-border overflow-hidden">
