@@ -1,160 +1,178 @@
-import Link from 'next/link';
+import { Navbar, Footer } from '@/components/ui';
 
 export const metadata = {
-  title: 'Politica de Privacidad — Selene Academia',
-  description: 'Politica de privacidad y proteccion de datos de Selene Academia.',
+  title: 'Politica de Privacidad | Selene Academia',
+  description: 'Politica de privacidad de Selene Academia por SelenaUra. RGPD y LOPD-GDD.',
 };
 
 export default function PrivacidadPage() {
   return (
-    <main className="min-h-screen bg-selene-bg text-selene-white">
-      <div className="max-w-3xl mx-auto px-6 py-16">
-        <Link href="/" className="text-selene-gold-dim text-sm hover:text-selene-gold no-underline">
-          ← Volver al inicio
-        </Link>
+    <div className="min-h-screen bg-selene-bg text-selene-white">
+      <Navbar />
+      <main className="max-w-3xl mx-auto px-6 py-16">
+        <h1 className="font-display text-3xl md:text-4xl text-selene-gold mb-2">Politica de Privacidad</h1>
+        <p className="text-selene-white-dim text-sm mb-10">Ultima actualizacion: 5 de abril de 2026</p>
 
-        <h1 className="font-display text-3xl text-selene-gold mt-8 mb-2">Politica de Privacidad</h1>
-        <p className="text-selene-white-dim text-sm mb-10">Ultima actualizacion: 30 de marzo de 2026</p>
+        <p className="text-selene-white-dim leading-relaxed mb-10">
+          En SelenaUra nos comprometemos a proteger tu privacidad. Esta politica explica como recogemos, usamos
+          y protegemos tus datos personales de acuerdo con el Reglamento General de Proteccion de Datos (RGPD)
+          y la Ley Organica 3/2018 de Proteccion de Datos Personales y garantia de los derechos digitales (LOPD-GDD).
+        </p>
 
-        <div className="space-y-8 text-selene-white-dim leading-relaxed text-[15px]">
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">1. Responsable del tratamiento</h2>
+          <ul className="text-selene-white-dim leading-relaxed list-disc pl-6 space-y-1">
+            <li><strong className="text-selene-white">Identidad:</strong> SelenaUra</li>
+            <li><strong className="text-selene-white">Correo electronico:</strong> info@selenaura.com</li>
+            <li><strong className="text-selene-white">Sitio web:</strong> academia.selenaura.com</li>
+          </ul>
+        </section>
 
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">1. Responsable del tratamiento</h2>
-            <ul className="list-none mt-3 space-y-2 pl-4 border-l-2 border-selene-border">
-              <li><strong className="text-selene-white">Responsable:</strong> Selene Academia</li>
-              <li><strong className="text-selene-white">Contacto:</strong> info@selenaura.com</li>
-              <li><strong className="text-selene-white">Finalidad:</strong> Gestion de la relacion con alumnos, prestacion de servicios formativos y comunicaciones relacionadas</li>
-            </ul>
-          </section>
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">2. Datos personales que recogemos</h2>
+          <p className="text-selene-white-dim leading-relaxed mb-3">Segun el servicio utilizado, podemos recoger:</p>
+          <ul className="text-selene-white-dim leading-relaxed list-disc pl-6 space-y-1">
+            <li><strong className="text-selene-white">Datos de cuenta:</strong> nombre, direccion de correo electronico.</li>
+            <li><strong className="text-selene-white">Datos de personalizacion:</strong> fecha de nacimiento, hora de nacimiento, ciudad de nacimiento (para generar tu carta natal y personalizar la experiencia formativa).</li>
+            <li><strong className="text-selene-white">Datos de navegacion:</strong> direccion IP, tipo de navegador, paginas visitadas, tiempo de permanencia.</li>
+            <li><strong className="text-selene-white">Datos de pago:</strong> procesados integramente por Stripe. SelenaUra no almacena datos de tarjeta de credito ni informacion financiera sensible.</li>
+          </ul>
+        </section>
 
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">2. Datos que recopilamos</h2>
-            <p>Recopilamos unicamente los datos necesarios para la prestacion del servicio:</p>
-            <div className="mt-4 space-y-4">
-              <div className="bg-selene-card rounded-lg p-4 border border-selene-border">
-                <h3 className="text-selene-white font-medium mb-2">Datos de registro</h3>
-                <p>Nombre, direccion de correo electronico. Proporcionados voluntariamente al crear una cuenta o al registrarse con Google.</p>
-              </div>
-              <div className="bg-selene-card rounded-lg p-4 border border-selene-border">
-                <h3 className="text-selene-white font-medium mb-2">Datos de pago</h3>
-                <p>Los datos de pago (tarjeta, datos bancarios) son gestionados directamente por Stripe Inc., nuestro proveedor de pagos. Selene Academia no almacena ni tiene acceso a los datos completos de tu tarjeta.</p>
-              </div>
-              <div className="bg-selene-card rounded-lg p-4 border border-selene-border">
-                <h3 className="text-selene-white font-medium mb-2">Datos de uso</h3>
-                <p>Progreso en los cursos, lecciones completadas y certificados obtenidos, con el fin de ofrecerte una experiencia formativa personalizada.</p>
-              </div>
-              <div className="bg-selene-card rounded-lg p-4 border border-selene-border">
-                <h3 className="text-selene-white font-medium mb-2">Datos de navegacion</h3>
-                <p>Datos anonimos recopilados mediante cookies tecnicas y de analisis (ver <Link href="/cookies" className="text-selene-gold-dim hover:text-selene-gold no-underline">Politica de Cookies</Link>).</p>
-              </div>
-            </div>
-          </section>
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">3. Finalidad del tratamiento</h2>
+          <ul className="text-selene-white-dim leading-relaxed list-disc pl-6 space-y-1">
+            <li>Gestion de tu cuenta de usuario y acceso a la plataforma.</li>
+            <li>Personalizacion de tu experiencia formativa mediante tu carta natal.</li>
+            <li>Procesamiento de compras y gestion de pagos.</li>
+            <li>Envio de comunicaciones comerciales y newsletters (solo con tu consentimiento previo).</li>
+            <li>Mejora del servicio y analisis de uso de la plataforma.</li>
+            <li>Cumplimiento de obligaciones legales y fiscales.</li>
+          </ul>
+        </section>
 
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">3. Base legal del tratamiento</h2>
-            <ul className="list-disc pl-6 space-y-2 mt-3">
-              <li><strong className="text-selene-white">Ejecucion de contrato:</strong> tratamos tus datos para gestionar tu matriculacion, darte acceso a los cursos y emitir certificados (art. 6.1.b RGPD).</li>
-              <li><strong className="text-selene-white">Consentimiento:</strong> para el envio de comunicaciones comerciales y newsletters (art. 6.1.a RGPD). Puedes retirar el consentimiento en cualquier momento.</li>
-              <li><strong className="text-selene-white">Obligacion legal:</strong> para el cumplimiento de obligaciones fiscales y tributarias (art. 6.1.c RGPD).</li>
-              <li><strong className="text-selene-white">Interes legitimo:</strong> para la mejora del servicio y la prevencion del fraude (art. 6.1.f RGPD).</li>
-            </ul>
-          </section>
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">4. Base legal del tratamiento</h2>
+          <ul className="text-selene-white-dim leading-relaxed list-disc pl-6 space-y-1">
+            <li><strong className="text-selene-white">Consentimiento (art. 6.1.a RGPD):</strong> para el envio de comunicaciones comerciales y el uso de cookies no esenciales.</li>
+            <li><strong className="text-selene-white">Ejecucion contractual (art. 6.1.b RGPD):</strong> para la gestion de la cuenta, acceso a cursos y procesamiento de pagos.</li>
+            <li><strong className="text-selene-white">Interes legitimo (art. 6.1.f RGPD):</strong> para la mejora del servicio, prevencion de fraude y seguridad de la plataforma.</li>
+            <li><strong className="text-selene-white">Obligacion legal (art. 6.1.c RGPD):</strong> para el cumplimiento de obligaciones fiscales y contables.</li>
+          </ul>
+        </section>
 
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">4. Destinatarios de los datos</h2>
-            <p>Tus datos podran ser comunicados a los siguientes terceros, unicamente en la medida necesaria para la prestacion del servicio:</p>
-            <ul className="list-disc pl-6 space-y-2 mt-3">
-              <li><strong className="text-selene-white">Supabase Inc.</strong> — Alojamiento de la base de datos y autenticacion (servidores en la UE).</li>
-              <li><strong className="text-selene-white">Stripe Inc.</strong> — Procesamiento de pagos. Cumple con PCI-DSS nivel 1.</li>
-              <li><strong className="text-selene-white">Vercel Inc.</strong> — Alojamiento del sitio web.</li>
-              <li><strong className="text-selene-white">Brevo (Sendinblue)</strong> — Envio de correos electronicos transaccionales y comerciales.</li>
-              <li><strong className="text-selene-white">Google LLC</strong> — Autenticacion OAuth (si eliges registrarte con Google).</li>
-            </ul>
-            <p className="mt-3">
-              No vendemos, alquilamos ni compartimos tus datos personales con terceros
-              para fines publicitarios ajenos a Selene Academia.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">5. Transferencias internacionales</h2>
-            <p>
-              Algunos de nuestros proveedores tienen sede en Estados Unidos (Stripe, Vercel).
-              Estas transferencias se realizan al amparo de las Clausulas Contractuales Tipo
-              de la Comision Europea y/o del Marco de Privacidad de Datos UE-EE.UU. (EU-US Data Privacy Framework).
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">6. Conservacion de datos</h2>
-            <ul className="list-disc pl-6 space-y-2 mt-3">
-              <li><strong className="text-selene-white">Datos de cuenta:</strong> mientras mantengas tu cuenta activa. Puedes solicitar su eliminacion en cualquier momento.</li>
-              <li><strong className="text-selene-white">Datos de facturacion:</strong> conservados durante el plazo legal exigido por la normativa fiscal espanola (4 anos).</li>
-              <li><strong className="text-selene-white">Datos de progreso:</strong> mientras mantengas tu cuenta activa.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">7. Tus derechos</h2>
-            <p>De conformidad con el RGPD y la LOPDGDD, puedes ejercer los siguientes derechos:</p>
-            <div className="grid grid-cols-2 gap-3 mt-4">
-              {[
-                { right: 'Acceso', desc: 'Conocer que datos tratamos sobre ti' },
-                { right: 'Rectificacion', desc: 'Corregir datos inexactos' },
-                { right: 'Supresion', desc: 'Solicitar la eliminacion de tus datos' },
-                { right: 'Oposicion', desc: 'Oponerte a determinados tratamientos' },
-                { right: 'Limitacion', desc: 'Solicitar la limitacion del tratamiento' },
-                { right: 'Portabilidad', desc: 'Recibir tus datos en formato estructurado' },
-              ].map(({ right, desc }) => (
-                <div key={right} className="bg-selene-card rounded-lg p-3 border border-selene-border">
-                  <p className="text-selene-white font-medium text-sm">{right}</p>
-                  <p className="text-xs mt-1">{desc}</p>
-                </div>
-              ))}
-            </div>
-            <p className="mt-4">
-              Para ejercer cualquiera de estos derechos, escribe a <strong className="text-selene-gold-dim">info@selenaura.com</strong> indicando
-              el derecho que deseas ejercer y adjuntando copia de tu documento de identidad.
-              Responderemos en un plazo maximo de 30 dias.
-            </p>
-            <p className="mt-3">
-              Si consideras que tus derechos no han sido atendidos correctamente, puedes
-              presentar una reclamacion ante la <strong className="text-selene-white">Agencia Espanola de Proteccion
-              de Datos (AEPD)</strong> en <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer" className="text-selene-gold-dim hover:text-selene-gold no-underline">www.aepd.es</a>.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">8. Seguridad</h2>
-            <p>
-              Adoptamos medidas tecnicas y organizativas adecuadas para proteger tus datos
-              personales: cifrado en transito (HTTPS/TLS), autenticacion segura, acceso
-              restringido a datos personales y proveedores que cumplen con estandares
-              de seguridad reconocidos (SOC 2, PCI-DSS).
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">9. Menores de edad</h2>
-            <p>
-              Los servicios de Selene Academia estan dirigidos a personas mayores de 16 anos.
-              No recopilamos conscientemente datos de menores de 16 anos. Si eres padre, madre
-              o tutor legal y crees que un menor ha proporcionado datos personales, contacta
-              con nosotros en info@selenaura.com para que procedamos a su eliminacion.
-            </p>
-          </section>
-
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-selene-border text-sm text-selene-white-dim/50">
-          <p>Otras paginas legales:</p>
-          <div className="flex gap-4 mt-2">
-            <Link href="/legal" className="text-selene-gold-dim hover:text-selene-gold no-underline">Aviso Legal</Link>
-            <Link href="/cookies" className="text-selene-gold-dim hover:text-selene-gold no-underline">Cookies</Link>
-            <Link href="/condiciones" className="text-selene-gold-dim hover:text-selene-gold no-underline">Condiciones de venta</Link>
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">5. Destinatarios de los datos</h2>
+          <p className="text-selene-white-dim leading-relaxed mb-3">
+            Tus datos pueden ser comunicados a los siguientes prestadores de servicios, que actuan como
+            encargados del tratamiento:
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm text-selene-white-dim border border-selene-border">
+              <thead>
+                <tr className="bg-selene-elevated">
+                  <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Proveedor</th>
+                  <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Funcion</th>
+                  <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Pais</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-selene-border">
+                  <td className="px-4 py-2">Supabase</td>
+                  <td className="px-4 py-2">Autenticacion e infraestructura de base de datos</td>
+                  <td className="px-4 py-2">EE.UU.</td>
+                </tr>
+                <tr className="border-b border-selene-border">
+                  <td className="px-4 py-2">Stripe</td>
+                  <td className="px-4 py-2">Procesamiento de pagos</td>
+                  <td className="px-4 py-2">EE.UU.</td>
+                </tr>
+                <tr className="border-b border-selene-border">
+                  <td className="px-4 py-2">Brevo (Sendinblue)</td>
+                  <td className="px-4 py-2">Email marketing y comunicaciones</td>
+                  <td className="px-4 py-2">Francia / UE</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">Vercel</td>
+                  <td className="px-4 py-2">Alojamiento web</td>
+                  <td className="px-4 py-2">EE.UU.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
-      </div>
-    </main>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">6. Transferencias internacionales</h2>
+          <p className="text-selene-white-dim leading-relaxed">
+            Algunos de nuestros proveedores tienen sede en Estados Unidos. Estas transferencias internacionales
+            se realizan al amparo de clausulas contractuales tipo aprobadas por la Comision Europea (art. 46.2.c RGPD)
+            y, en su caso, del Marco de Privacidad de Datos UE-EE.UU. (EU-US Data Privacy Framework). Puedes
+            solicitar copia de las garantias adecuadas escribiendo a info@selenaura.com.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">7. Plazos de conservacion</h2>
+          <ul className="text-selene-white-dim leading-relaxed list-disc pl-6 space-y-1">
+            <li><strong className="text-selene-white">Datos de cuenta:</strong> mientras se mantenga la relacion contractual y durante el plazo necesario para atender posibles responsabilidades legales.</li>
+            <li><strong className="text-selene-white">Datos fiscales y de facturacion:</strong> 5 anos (art. 70 Ley General Tributaria).</li>
+            <li><strong className="text-selene-white">Datos de navegacion y cookies:</strong> segun lo indicado en nuestra Politica de Cookies.</li>
+            <li><strong className="text-selene-white">Comunicaciones comerciales:</strong> hasta que revoques tu consentimiento.</li>
+          </ul>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">8. Tus derechos</h2>
+          <p className="text-selene-white-dim leading-relaxed mb-3">
+            De acuerdo con el RGPD y la LOPD-GDD, tienes derecho a:
+          </p>
+          <ul className="text-selene-white-dim leading-relaxed list-disc pl-6 space-y-1">
+            <li><strong className="text-selene-white">Acceso:</strong> conocer que datos personales tratamos sobre ti.</li>
+            <li><strong className="text-selene-white">Rectificacion:</strong> solicitar la correccion de datos inexactos o incompletos.</li>
+            <li><strong className="text-selene-white">Supresion:</strong> solicitar la eliminacion de tus datos cuando ya no sean necesarios.</li>
+            <li><strong className="text-selene-white">Limitacion:</strong> solicitar que limitemos el tratamiento en determinadas circunstancias.</li>
+            <li><strong className="text-selene-white">Portabilidad:</strong> recibir tus datos en un formato estructurado y de uso comun.</li>
+            <li><strong className="text-selene-white">Oposicion:</strong> oponerte al tratamiento de tus datos, incluida la elaboracion de perfiles.</li>
+          </ul>
+          <p className="text-selene-white-dim leading-relaxed mt-3">
+            Para ejercer estos derechos, escribe a{' '}
+            <a href="mailto:info@selenaura.com" className="text-selene-gold hover:underline">info@selenaura.com</a>{' '}
+            indicando tu nombre, correo electronico asociado a la cuenta y el derecho que deseas ejercer.
+            Responderemos en un plazo maximo de 30 dias.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">9. Delegado de Proteccion de Datos</h2>
+          <p className="text-selene-white-dim leading-relaxed">
+            Puedes contactar con el responsable de proteccion de datos en{' '}
+            <a href="mailto:info@selenaura.com" className="text-selene-gold hover:underline">info@selenaura.com</a>.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">10. Derecho a reclamar</h2>
+          <p className="text-selene-white-dim leading-relaxed">
+            Si consideras que el tratamiento de tus datos personales vulnera tus derechos, puedes presentar
+            una reclamacion ante la Agencia Espanola de Proteccion de Datos (AEPD) a traves de su sede
+            electronica:{' '}
+            <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer" className="text-selene-gold hover:underline">
+              www.aepd.es
+            </a>.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">11. Modificaciones</h2>
+          <p className="text-selene-white-dim leading-relaxed">
+            SelenaUra se reserva el derecho de modificar esta politica de privacidad para adaptarla a novedades
+            legislativas o jurisprudenciales. Cualquier cambio sera publicado en esta pagina con la fecha de
+            actualizacion correspondiente.
+          </p>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }

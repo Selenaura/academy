@@ -1,8 +1,47 @@
 import Link from 'next/link';
 import { COURSES } from '@/lib/constants';
 import { Navbar, Footer, GoldDivider, Card } from '@/components/ui';
+import SchemaMarkup from '@/components/SchemaMarkup';
 
 export default function LandingPage() {
+  // Course schema for Google rich snippets
+  const courseListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: COURSES.map((course, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Course',
+        name: course.title,
+        description: course.description || course.subtitle,
+        provider: {
+          '@type': 'Organization',
+          name: 'Selene Academia',
+          sameAs: 'https://academia.selenaura.com',
+        },
+        educationalLevel: course.level,
+        numberOfCredits: course.modules,
+        timeRequired: `PT${parseInt(course.hours)}H`,
+        inLanguage: 'es',
+        isAccessibleForFree: course.price === 0,
+        ...(course.price > 0 && {
+          offers: {
+            '@type': 'Offer',
+            price: (course.price / 100).toFixed(2),
+            priceCurrency: 'EUR',
+            availability: 'https://schema.org/InStock',
+            url: `https://academia.selenaura.com/auth?mode=register`,
+          },
+        }),
+        hasCourseInstance: {
+          '@type': 'CourseInstance',
+          courseMode: 'online',
+          courseWorkload: course.hours,
+        },
+      },
+    })),
+  };
   const stats = [
     { value: '10', label: 'Cursos' },
     { value: '200+', label: 'Lecciones' },
@@ -54,6 +93,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-selene-bg">
+      <SchemaMarkup data={courseListSchema} />
       <Navbar />
 
       {/* ── Founding Cohort Banner ── */}
@@ -346,14 +386,48 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ── Trust Badges ── */}
+      <section className="px-6 py-12 max-w-[800px] mx-auto">
+        <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex items-center gap-2 bg-selene-card/50 rounded-xl border border-selene-border px-5 py-3">
+            <span className="text-selene-success text-lg">🔒</span>
+            <div>
+              <div className="text-xs font-semibold text-selene-white">Pago 100% seguro</div>
+              <div className="text-[10px] text-selene-white-dim">Stripe · cifrado SSL</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-2 bg-selene-card/50 rounded-xl border border-selene-border px-5 py-3">
+            <span className="text-selene-success text-lg">✓</span>
+            <div>
+              <div className="text-xs font-semibold text-selene-white">Garantía 14 días</div>
+              <div className="text-[10px] text-selene-white-dim">Devolución sin preguntas</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-2 bg-selene-card/50 rounded-xl border border-selene-border px-5 py-3">
+            <span className="text-selene-gold text-lg">🎓</span>
+            <div>
+              <div className="text-xs font-semibold text-selene-white">Certificado verificable</div>
+              <div className="text-[10px] text-selene-white-dim">Código CSV único</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-2 bg-selene-card/50 rounded-xl border border-selene-border px-5 py-3">
+            <span className="text-selene-blue-light text-lg">♾️</span>
+            <div>
+              <div className="text-xs font-semibold text-selene-white">Acceso ilimitado</div>
+              <div className="text-[10px] text-selene-white-dim">De por vida, sin caducidad</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Social Proof ── */}
       <section className="px-6 py-16 max-w-[700px] mx-auto text-center">
         <div className="bg-selene-card/50 rounded-2xl border border-selene-border p-8">
           <div className="text-selene-gold text-lg mb-4">✦</div>
           <p className="font-display text-lg text-selene-white italic leading-relaxed mb-4">
-            &ldquo;No es otra escuela de astrología. Es la primera que te explica POR QUÉ funciona lo que funciona, con papers de verdad.&rdquo;
+            &ldquo;La primera academia que no te pide fe ciega — te da neurociencia, cronobiología y estudios reales. Y además te personaliza el camino con tu carta natal.&rdquo;
           </p>
-          <div className="text-sm text-selene-white-dim">— Lo que queremos que digan nuestros alumnos</div>
+          <div className="text-sm text-selene-white-dim">— Nuestra filosofía</div>
         </div>
       </section>
 

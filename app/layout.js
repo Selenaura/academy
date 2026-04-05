@@ -1,15 +1,11 @@
 import './globals.css';
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import ChatWidget from '../components/ChatWidget';
-import CookieConsent from '../components/CookieConsent';
-import AnalyticsLoader from '../components/AnalyticsLoader';
-import ExitIntentPopup from '../components/ExitIntentPopup';
+import { WhatsAppButton } from '@/components/ui';
+import InstallPWA from '@/components/InstallPWA';
 
 export const metadata = {
   title: 'Selene Academia — Tu escuela de consciencia cósmica',
   description: 'Cursos de astrología, tarot, meditación y autoconocimiento respaldados por estudios peer-reviewed. Neurociencia + tradición milenaria.',
-  metadataBase: new URL('https://academy.selenaura.com'),
+  metadataBase: new URL('https://academia.selenaura.com'),
   openGraph: {
     title: 'Selene Academia — Ciencia y consciencia de lo invisible',
     description: 'Cursos de astrología, tarot y autoconocimiento con base científica. Tu carta natal guía tu camino.',
@@ -34,20 +30,44 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="theme-color" content="#0A0A0F" />
+        <script dangerouslySetInnerHTML={{ __html: `
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/sw.js');
+            });
+          }
+        `}} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'Selene Academia',
+          url: 'https://academia.selenaura.com',
+          logo: 'https://academia.selenaura.com/icon.svg',
+          description: 'Cursos de astrologia, tarot y autoconocimiento con base cientifica.',
+          contactPoint: {
+            '@type': 'ContactPoint',
+            email: 'info@selenaura.com',
+            contactType: 'customer service',
+            availableLanguage: 'Spanish'
+          },
+          sameAs: []
+        }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Selene Academia',
+          url: 'https://academia.selenaura.com',
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: 'https://academia.selenaura.com/?q={search_term_string}',
+            'query-input': 'required name=search_term_string'
+          }
+        }) }} />
       </head>
       <body className="bg-selene-bg text-selene-white antialiased">
         {children}
-        <ChatWidget />
-        {/* Vercel Analytics — first-party, no PII, no consent needed */}
-        <Analytics />
-        {/* Vercel Speed Insights — first-party, no PII, no consent needed */}
-        <SpeedInsights />
-        {/* GA4 + Meta Pixel load conditionally via consent */}
-        <AnalyticsLoader />
-        {/* AEPD-compliant cookie consent banner */}
-        <CookieConsent />
-        {/* Exit-intent lead capture popup */}
-        <ExitIntentPopup />
+        <WhatsAppButton />
+        <InstallPWA />
       </body>
     </html>
   );

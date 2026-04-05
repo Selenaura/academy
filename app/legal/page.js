@@ -1,137 +1,107 @@
-import Link from 'next/link';
+import { Navbar, Footer } from '@/components/ui';
 
 export const metadata = {
-  title: 'Aviso Legal — Selene Academia',
-  description: 'Aviso legal y condiciones de uso de Selene Academia (academy.selenaura.com).',
+  title: 'Aviso Legal | Selene Academia',
+  description: 'Aviso legal y condiciones de uso de Selene Academia por SelenaUra.',
 };
 
 export default function AvisoLegalPage() {
   return (
-    <main className="min-h-screen bg-selene-bg text-selene-white">
-      <div className="max-w-3xl mx-auto px-6 py-16">
-        <Link href="/" className="text-selene-gold-dim text-sm hover:text-selene-gold no-underline">
-          ← Volver al inicio
-        </Link>
+    <div className="min-h-screen bg-selene-bg text-selene-white">
+      <Navbar />
+      <main className="max-w-3xl mx-auto px-6 py-16">
+        <h1 className="font-display text-3xl md:text-4xl text-selene-gold mb-2">Aviso Legal</h1>
+        <p className="text-selene-white-dim text-sm mb-10">Ultima actualizacion: 5 de abril de 2026</p>
 
-        <h1 className="font-display text-3xl text-selene-gold mt-8 mb-2">Aviso Legal</h1>
-        <p className="text-selene-white-dim text-sm mb-10">Ultima actualizacion: 30 de marzo de 2026</p>
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">1. Datos identificativos del titular</h2>
+          <p className="text-selene-white-dim leading-relaxed mb-2">
+            En cumplimiento del articulo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la
+            Informacion y de Comercio Electronico (LSSI-CE), se informa al usuario de los siguientes datos:
+          </p>
+          <ul className="text-selene-white-dim leading-relaxed list-disc pl-6 space-y-1">
+            <li><strong className="text-selene-white">Nombre comercial:</strong> SelenaUra</li>
+            <li><strong className="text-selene-white">Dominio:</strong> academia.selenaura.com</li>
+            <li><strong className="text-selene-white">Correo electronico:</strong> info@selenaura.com</li>
+            <li><strong className="text-selene-white">Pais:</strong> Espana</li>
+          </ul>
+        </section>
 
-        <div className="space-y-8 text-selene-white-dim leading-relaxed text-[15px]">
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">2. Actividad</h2>
+          <p className="text-selene-white-dim leading-relaxed">
+            SelenaUra opera la plataforma Selene Academia, dedicada a la formacion online en desarrollo personal
+            y consciencia. Ofrecemos cursos, lecturas y recursos formativos en disciplinas como tarot, astrologia,
+            quiromancia, interpretacion de suenos y numerologia, siempre desde un enfoque que integra base
+            cientifica y tradicion simbolica.
+          </p>
+        </section>
 
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">1. Datos identificativos</h2>
-            <p>
-              En cumplimiento del articulo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la
-              Sociedad de la Informacion y de Comercio Electronico (LSSI-CE), se informa al usuario
-              de los datos del titular de este sitio web:
-            </p>
-            <ul className="list-none mt-4 space-y-2 pl-4 border-l-2 border-selene-border">
-              <li><strong className="text-selene-white">Denominacion comercial:</strong> Selene Academia</li>
-              <li><strong className="text-selene-white">Sitio web:</strong> academy.selenaura.com</li>
-              <li><strong className="text-selene-white">Email de contacto:</strong> info@selenaura.com</li>
-              <li><strong className="text-selene-white">Actividad:</strong> Formacion online no reglada en desarrollo personal y bienestar</li>
-            </ul>
-          </section>
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">3. Propiedad intelectual e industrial</h2>
+          <p className="text-selene-white-dim leading-relaxed">
+            Todos los contenidos del sitio web, incluyendo a titulo enunciativo pero no limitativo textos, imagenes,
+            graficos, logotipos, iconos, software, materiales audiovisuales y diseno grafico, son propiedad de
+            SelenaUra o de sus licenciantes, y estan protegidos por las leyes espanolas e internacionales de
+            propiedad intelectual e industrial. Queda prohibida su reproduccion, distribucion, comunicacion publica
+            o transformacion sin autorizacion expresa y por escrito de SelenaUra.
+          </p>
+        </section>
 
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">2. Naturaleza de la formacion</h2>
-            <p>
-              Las ensenanzas impartidas por Selene Academia constituyen <strong className="text-selene-white">formacion
-              no reglada</strong>. Los diplomas y certificados expedidos por este centro
-              no conducen a la obtencion de un titulo con validez oficial reconocido por
-              el Ministerio de Educacion y Formacion Profesional de Espana.
-            </p>
-            <p className="mt-3">
-              Los certificados acreditan la realizacion y aprovechamiento de la formacion
-              recibida, con indicacion de las horas lectivas y competencias adquiridas,
-              y tienen valor curricular y profesional en el ambito privado.
-            </p>
-          </section>
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">4. Condiciones de uso</h2>
+          <p className="text-selene-white-dim leading-relaxed">
+            El usuario se compromete a utilizar el sitio web y sus servicios de conformidad con la ley, la moral,
+            el orden publico y las presentes condiciones. Se compromete a no utilizar los contenidos con fines
+            ilicitos, lesivos de derechos de terceros o que puedan danar, inutilizar o deteriorar el sitio web.
+          </p>
+        </section>
 
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">3. Objeto y ambito de aplicacion</h2>
-            <p>
-              El presente aviso legal regula el uso del sitio web academy.selenaura.com
-              y de los subdominios asociados a SelenaUra. El acceso y uso de este sitio
-              web atribuye la condicion de usuario e implica la aceptacion plena de todas
-              las condiciones aqui publicadas.
-            </p>
-          </section>
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">5. Limitacion de responsabilidad</h2>
+          <p className="text-selene-white-dim leading-relaxed mb-3">
+            SelenaUra no se hace responsable de:
+          </p>
+          <ul className="text-selene-white-dim leading-relaxed list-disc pl-6 space-y-1">
+            <li>Errores u omisiones en los contenidos del sitio web.</li>
+            <li>Danos derivados del uso o imposibilidad de uso del sitio.</li>
+            <li>Interrupciones del servicio por causas tecnicas, de fuerza mayor o ajenas a su control.</li>
+            <li>Contenidos de sitios web de terceros a los que se pueda acceder desde enlaces en esta pagina.</li>
+            <li>Los resultados individuales que cada usuario obtenga de la aplicacion de los conocimientos adquiridos.</li>
+          </ul>
+          <p className="text-selene-white-dim leading-relaxed mt-3">
+            Los contenidos formativos de Selene Academia tienen caracter educativo y de desarrollo personal.
+            No sustituyen el asesoramiento profesional en salud, psicologia u otros ambitos regulados.
+          </p>
+        </section>
 
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">4. Propiedad intelectual e industrial</h2>
-            <p>
-              Todos los contenidos del sitio web — incluyendo textos, imagenes, disenos,
-              graficos, logotipos, iconos, software, material formativo y audiovisual —
-              estan protegidos por la legislacion espanola e internacional de propiedad
-              intelectual e industrial.
-            </p>
-            <p className="mt-3">
-              Queda prohibida la reproduccion, distribucion, comunicacion publica,
-              transformacion o cualquier otra forma de explotacion de los contenidos
-              sin autorizacion expresa y por escrito de Selene Academia.
-            </p>
-            <p className="mt-3">
-              Los alumnos matriculados obtienen una licencia personal, intransferible
-              y no exclusiva para acceder al material de los cursos adquiridos. Esta
-              licencia no autoriza la redistribucion, reventa ni uso comercial del material.
-            </p>
-          </section>
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">6. Enlaces a terceros</h2>
+          <p className="text-selene-white-dim leading-relaxed">
+            El sitio web puede contener enlaces a paginas de terceros. SelenaUra no asume responsabilidad por
+            los contenidos, politicas de privacidad o practicas de dichos sitios externos.
+          </p>
+        </section>
 
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">5. Responsabilidad</h2>
-            <p>
-              Selene Academia no garantiza la disponibilidad continua e ininterrumpida
-              del sitio web, pudiendo producirse interrupciones por mantenimiento,
-              actualizaciones o causas ajenas a nuestro control.
-            </p>
-            <p className="mt-3">
-              La informacion proporcionada en los cursos tiene caracter educativo
-              y orientativo. No sustituye en ningun caso el asesoramiento profesional
-              medico, psicologico, legal o financiero. El usuario es responsable del
-              uso que haga de los conocimientos adquiridos.
-            </p>
-          </section>
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">7. Legislacion aplicable y jurisdiccion</h2>
+          <p className="text-selene-white-dim leading-relaxed">
+            Las presentes condiciones se rigen por la legislacion espanola. Para la resolucion de cualquier
+            controversia derivada del uso de este sitio web, las partes se someten expresamente a los Juzgados
+            y Tribunales de Castellon de la Plana (Espana), con renuncia a cualquier otro fuero que pudiera
+            corresponderles, salvo que la normativa aplicable imponga un fuero distinto.
+          </p>
+        </section>
 
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">6. Enlaces externos</h2>
-            <p>
-              Este sitio web puede contener enlaces a paginas de terceros. Selene Academia
-              no se responsabiliza del contenido, politicas de privacidad ni practicas de
-              dichos sitios externos.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">7. Legislacion aplicable y jurisdiccion</h2>
-            <p>
-              Las presentes condiciones se rigen por la legislacion espanola. Para la
-              resolucion de cualquier controversia derivada del uso de este sitio web,
-              las partes se someten a los juzgados y tribunales del domicilio del usuario,
-              de conformidad con la legislacion vigente en materia de consumidores y usuarios.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">8. Modificaciones</h2>
-            <p>
-              Selene Academia se reserva el derecho de modificar el presente aviso legal
-              en cualquier momento. Las modificaciones entraran en vigor desde su publicacion
-              en este sitio web. Se recomienda revisar esta pagina periodicamente.
-            </p>
-          </section>
-
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-selene-border text-sm text-selene-white-dim/50">
-          <p>Otras paginas legales:</p>
-          <div className="flex gap-4 mt-2">
-            <Link href="/privacidad" className="text-selene-gold-dim hover:text-selene-gold no-underline">Privacidad</Link>
-            <Link href="/cookies" className="text-selene-gold-dim hover:text-selene-gold no-underline">Cookies</Link>
-            <Link href="/condiciones" className="text-selene-gold-dim hover:text-selene-gold no-underline">Condiciones de venta</Link>
-          </div>
-        </div>
-      </div>
-    </main>
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">8. Contacto</h2>
+          <p className="text-selene-white-dim leading-relaxed">
+            Para cualquier consulta relacionada con este aviso legal, puede contactar con nosotros
+            en <a href="mailto:info@selenaura.com" className="text-selene-gold hover:underline">info@selenaura.com</a>.
+          </p>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }

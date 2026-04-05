@@ -1,177 +1,191 @@
-import Link from 'next/link';
+import { Navbar, Footer } from '@/components/ui';
 
 export const metadata = {
-  title: 'Politica de Cookies — Selene Academia',
-  description: 'Politica de cookies de Selene Academia (academy.selenaura.com).',
+  title: 'Politica de Cookies | Selene Academia',
+  description: 'Politica de cookies de Selene Academia por SelenaUra.',
 };
 
 export default function CookiesPage() {
   return (
-    <main className="min-h-screen bg-selene-bg text-selene-white">
-      <div className="max-w-3xl mx-auto px-6 py-16">
-        <Link href="/" className="text-selene-gold-dim text-sm hover:text-selene-gold no-underline">
-          ← Volver al inicio
-        </Link>
+    <div className="min-h-screen bg-selene-bg text-selene-white">
+      <Navbar />
+      <main className="max-w-3xl mx-auto px-6 py-16">
+        <h1 className="font-display text-3xl md:text-4xl text-selene-gold mb-2">Politica de Cookies</h1>
+        <p className="text-selene-white-dim text-sm mb-10">Ultima actualizacion: 5 de abril de 2026</p>
 
-        <h1 className="font-display text-3xl text-selene-gold mt-8 mb-2">Politica de Cookies</h1>
-        <p className="text-selene-white-dim text-sm mb-10">Ultima actualizacion: 30 de marzo de 2026</p>
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">1. Que son las cookies</h2>
+          <p className="text-selene-white-dim leading-relaxed">
+            Las cookies son pequenos archivos de texto que se almacenan en tu dispositivo cuando visitas un
+            sitio web. Permiten que el sitio recuerde tus preferencias, mantenga tu sesion iniciada y recopile
+            informacion sobre como utilizas la pagina para mejorar tu experiencia.
+          </p>
+        </section>
 
-        <div className="space-y-8 text-selene-white-dim leading-relaxed text-[15px]">
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">2. Base legal</h2>
+          <p className="text-selene-white-dim leading-relaxed">
+            El uso de cookies se rige por el articulo 22.2 de la Ley 34/2002 de Servicios de la Sociedad de la
+            Informacion y de Comercio Electronico (LSSI-CE) y por el Reglamento General de Proteccion de Datos (RGPD).
+            Las cookies esenciales se instalan en base al interes legitimo para el correcto funcionamiento del sitio.
+            Las cookies analiticas y de marketing requieren tu consentimiento previo.
+          </p>
+        </section>
 
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">1. Que son las cookies</h2>
-            <p>
-              Las cookies son pequenos archivos de texto que los sitios web almacenan en tu
-              navegador. Permiten recordar tus preferencias, mantener tu sesion iniciada
-              y analizar el uso del sitio para mejorar la experiencia.
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">3. Tipos de cookies que utilizamos</h2>
+
+          <div className="mb-6">
+            <h3 className="font-display text-lg text-selene-white mb-2">Cookies esenciales (sin consentimiento)</h3>
+            <p className="text-selene-white-dim leading-relaxed mb-3">
+              Son necesarias para el funcionamiento basico del sitio. No se pueden desactivar.
             </p>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">2. Cookies que utilizamos</h2>
-
-            <div className="space-y-4 mt-4">
-              <div className="bg-selene-card rounded-lg p-4 border border-selene-border">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-green-400 text-lg">●</span>
-                  <h3 className="text-selene-white font-medium">Cookies estrictamente necesarias</h3>
-                </div>
-                <p className="text-sm">Imprescindibles para el funcionamiento del sitio. No se pueden desactivar.</p>
-                <div className="mt-3 overflow-x-auto">
-                  <table className="w-full text-xs">
-                    <thead>
-                      <tr className="text-selene-white-dim/60 border-b border-selene-border">
-                        <th className="text-left py-2 pr-4">Cookie</th>
-                        <th className="text-left py-2 pr-4">Proveedor</th>
-                        <th className="text-left py-2 pr-4">Finalidad</th>
-                        <th className="text-left py-2">Duracion</th>
-                      </tr>
-                    </thead>
-                    <tbody className="text-selene-white-dim/80">
-                      <tr className="border-b border-selene-border/30">
-                        <td className="py-2 pr-4 font-mono">sb-*</td>
-                        <td className="py-2 pr-4">Supabase</td>
-                        <td className="py-2 pr-4">Sesion de usuario y autenticacion</td>
-                        <td className="py-2">Sesion / 1 ano</td>
-                      </tr>
-                      <tr className="border-b border-selene-border/30">
-                        <td className="py-2 pr-4 font-mono">__stripe_mid</td>
-                        <td className="py-2 pr-4">Stripe</td>
-                        <td className="py-2 pr-4">Prevencion de fraude en pagos</td>
-                        <td className="py-2">1 ano</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 pr-4 font-mono">__stripe_sid</td>
-                        <td className="py-2 pr-4">Stripe</td>
-                        <td className="py-2 pr-4">Sesion de pago</td>
-                        <td className="py-2">30 min</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <div className="bg-selene-card rounded-lg p-4 border border-selene-border">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-yellow-400 text-lg">●</span>
-                  <h3 className="text-selene-white font-medium">Cookies de analisis</h3>
-                </div>
-                <p className="text-sm">Nos ayudan a entender como se usa el sitio para mejorarlo.</p>
-                <div className="mt-3 overflow-x-auto">
-                  <table className="w-full text-xs">
-                    <thead>
-                      <tr className="text-selene-white-dim/60 border-b border-selene-border">
-                        <th className="text-left py-2 pr-4">Cookie</th>
-                        <th className="text-left py-2 pr-4">Proveedor</th>
-                        <th className="text-left py-2 pr-4">Finalidad</th>
-                        <th className="text-left py-2">Duracion</th>
-                      </tr>
-                    </thead>
-                    <tbody className="text-selene-white-dim/80">
-                      <tr className="border-b border-selene-border/30">
-                        <td className="py-2 pr-4 font-mono">_fbp</td>
-                        <td className="py-2 pr-4">Meta Pixel</td>
-                        <td className="py-2 pr-4">Seguimiento de conversiones y rendimiento publicitario</td>
-                        <td className="py-2">90 dias</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 pr-4 font-mono">_fbc</td>
-                        <td className="py-2 pr-4">Meta Pixel</td>
-                        <td className="py-2 pr-4">Atribucion de clics desde anuncios</td>
-                        <td className="py-2">90 dias</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-selene-white-dim border border-selene-border">
+                <thead>
+                  <tr className="bg-selene-elevated">
+                    <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Cookie</th>
+                    <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Proveedor</th>
+                    <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Finalidad</th>
+                    <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Duracion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-selene-border">
+                    <td className="px-4 py-2">sb-access-token</td>
+                    <td className="px-4 py-2">Supabase</td>
+                    <td className="px-4 py-2">Token de acceso para autenticacion</td>
+                    <td className="px-4 py-2">Sesion</td>
+                  </tr>
+                  <tr className="border-b border-selene-border">
+                    <td className="px-4 py-2">sb-refresh-token</td>
+                    <td className="px-4 py-2">Supabase</td>
+                    <td className="px-4 py-2">Token de renovacion de sesion</td>
+                    <td className="px-4 py-2">Sesion</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-2">cookie_consent</td>
+                    <td className="px-4 py-2">SelenaUra</td>
+                    <td className="px-4 py-2">Almacena tu eleccion sobre cookies</td>
+                    <td className="px-4 py-2">12 meses</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">3. Cookies de terceros</h2>
-            <p>
-              Los siguientes servicios pueden establecer sus propias cookies cuando interactuas
-              con sus funcionalidades integradas en nuestro sitio:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 mt-3">
-              <li><strong className="text-selene-white">Stripe</strong> — procesamiento seguro de pagos (<a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" className="text-selene-gold-dim hover:text-selene-gold no-underline">politica de privacidad</a>)</li>
-              <li><strong className="text-selene-white">Supabase</strong> — autenticacion y base de datos (<a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer" className="text-selene-gold-dim hover:text-selene-gold no-underline">politica de privacidad</a>)</li>
-              <li><strong className="text-selene-white">Meta (Facebook/Instagram)</strong> — pixel de seguimiento (<a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener noreferrer" className="text-selene-gold-dim hover:text-selene-gold no-underline">politica de privacidad</a>)</li>
-              <li><strong className="text-selene-white">Google</strong> — autenticacion OAuth (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-selene-gold-dim hover:text-selene-gold no-underline">politica de privacidad</a>)</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">4. Como gestionar las cookies</h2>
-            <p>
-              Puedes configurar tu navegador para bloquear o eliminar cookies. Ten en cuenta
-              que desactivar las cookies estrictamente necesarias puede afectar al funcionamiento
-              del sitio (por ejemplo, no podras iniciar sesion ni realizar pagos).
-            </p>
-            <div className="mt-4 bg-selene-card rounded-lg p-4 border border-selene-border">
-              <p className="text-sm font-medium text-selene-white mb-2">Instrucciones por navegador:</p>
-              <ul className="list-disc pl-6 space-y-1 text-sm">
-                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" className="text-selene-gold-dim hover:text-selene-gold no-underline">Google Chrome</a></li>
-                <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener noreferrer" className="text-selene-gold-dim hover:text-selene-gold no-underline">Mozilla Firefox</a></li>
-                <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-selene-gold-dim hover:text-selene-gold no-underline">Safari</a></li>
-                <li><a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" className="text-selene-gold-dim hover:text-selene-gold no-underline">Microsoft Edge</a></li>
-              </ul>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">5. Base legal</h2>
-            <p>
-              El uso de cookies se ampara en las siguientes normas:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 mt-3">
-              <li>Reglamento (UE) 2016/679 (RGPD)</li>
-              <li>Ley Organica 3/2018 (LOPDGDD)</li>
-              <li>Ley 34/2002 (LSSI-CE), articulo 22.2</li>
-              <li>Directrices de la AEPD sobre cookies (2023)</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="font-display text-xl text-selene-white mb-3">6. Actualizaciones</h2>
-            <p>
-              Esta politica de cookies puede actualizarse para reflejar cambios en los
-              servicios utilizados o en la normativa aplicable. La fecha de la ultima
-              actualizacion figura al inicio de esta pagina.
-            </p>
-          </section>
-
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-selene-border text-sm text-selene-white-dim/50">
-          <p>Otras paginas legales:</p>
-          <div className="flex gap-4 mt-2">
-            <Link href="/legal" className="text-selene-gold-dim hover:text-selene-gold no-underline">Aviso Legal</Link>
-            <Link href="/privacidad" className="text-selene-gold-dim hover:text-selene-gold no-underline">Privacidad</Link>
-            <Link href="/condiciones" className="text-selene-gold-dim hover:text-selene-gold no-underline">Condiciones de venta</Link>
           </div>
-        </div>
-      </div>
-    </main>
+
+          <div className="mb-6">
+            <h3 className="font-display text-lg text-selene-white mb-2">Cookies analiticas (con consentimiento)</h3>
+            <p className="text-selene-white-dim leading-relaxed mb-3">
+              Nos ayudan a entender como los usuarios interactuan con la plataforma para mejorar el servicio.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-selene-white-dim border border-selene-border">
+                <thead>
+                  <tr className="bg-selene-elevated">
+                    <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Cookie</th>
+                    <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Proveedor</th>
+                    <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Finalidad</th>
+                    <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Duracion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-selene-border">
+                    <td className="px-4 py-2">_vercel_insights</td>
+                    <td className="px-4 py-2">Vercel Analytics</td>
+                    <td className="px-4 py-2">Analisis de rendimiento y uso del sitio</td>
+                    <td className="px-4 py-2">Sesion</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-2">_ga, _ga_*</td>
+                    <td className="px-4 py-2">Google Analytics (GA4)</td>
+                    <td className="px-4 py-2">Analisis de trafico y comportamiento de usuarios</td>
+                    <td className="px-4 py-2">2 anos</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-display text-lg text-selene-white mb-2">Cookies de marketing (con consentimiento)</h3>
+            <p className="text-selene-white-dim leading-relaxed mb-3">
+              Permiten medir la eficacia de nuestras campanas publicitarias y mostrar contenido relevante.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-selene-white-dim border border-selene-border">
+                <thead>
+                  <tr className="bg-selene-elevated">
+                    <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Cookie</th>
+                    <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Proveedor</th>
+                    <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Finalidad</th>
+                    <th className="px-4 py-2 text-left text-selene-white border-b border-selene-border">Duracion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="px-4 py-2">_fbp, _fbc</td>
+                    <td className="px-4 py-2">Meta Pixel (Facebook)</td>
+                    <td className="px-4 py-2">Seguimiento de conversiones publicitarias</td>
+                    <td className="px-4 py-2">90 dias</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">4. Como gestionar las cookies</h2>
+          <p className="text-selene-white-dim leading-relaxed mb-4">
+            Puedes configurar tu navegador para rechazar o eliminar cookies. A continuacion te indicamos como
+            hacerlo en los navegadores mas comunes:
+          </p>
+          <ul className="text-selene-white-dim leading-relaxed list-disc pl-6 space-y-2">
+            <li>
+              <strong className="text-selene-white">Google Chrome:</strong> Configuracion &rarr; Privacidad y seguridad &rarr;
+              Cookies y otros datos de sitios. Mas informacion en{' '}
+              <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" className="text-selene-gold hover:underline">
+                support.google.com
+              </a>.
+            </li>
+            <li>
+              <strong className="text-selene-white">Mozilla Firefox:</strong> Opciones &rarr; Privacidad y seguridad &rarr;
+              Cookies y datos del sitio. Mas informacion en{' '}
+              <a href="https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-" target="_blank" rel="noopener noreferrer" className="text-selene-gold hover:underline">
+                support.mozilla.org
+              </a>.
+            </li>
+            <li>
+              <strong className="text-selene-white">Safari:</strong> Preferencias &rarr; Privacidad &rarr; Gestionar datos de sitios web.
+              Mas informacion en{' '}
+              <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-selene-gold hover:underline">
+                support.apple.com
+              </a>.
+            </li>
+            <li>
+              <strong className="text-selene-white">Microsoft Edge:</strong> Configuracion &rarr; Privacidad, busqueda y servicios &rarr;
+              Cookies y permisos del sitio. Mas informacion en{' '}
+              <a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" className="text-selene-gold hover:underline">
+                support.microsoft.com
+              </a>.
+            </li>
+          </ul>
+          <p className="text-selene-white-dim leading-relaxed mt-4">
+            Ten en cuenta que deshabilitar las cookies esenciales puede afectar al funcionamiento de la plataforma,
+            incluyendo la imposibilidad de iniciar sesion.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="font-display text-xl text-selene-gold mb-3">5. Contacto</h2>
+          <p className="text-selene-white-dim leading-relaxed">
+            Si tienes cualquier duda sobre nuestra politica de cookies, puedes escribirnos a{' '}
+            <a href="mailto:info@selenaura.com" className="text-selene-gold hover:underline">info@selenaura.com</a>.
+          </p>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }
