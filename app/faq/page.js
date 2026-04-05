@@ -1,4 +1,4 @@
-import { Navbar, Footer, MoonIcon, GoldDivider } from '@/components/ui';
+import { Navbar, Footer, GoldDivider } from '@/components/ui';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import Link from 'next/link';
 

@@ -63,17 +63,10 @@ export async function POST(request) {
       // Use fixed installment price from course config if available, otherwise divide evenly
       const amountPerInstallment = course.installment_price || installmentAmount(course.price, installments);
 
-      // Reuse existing product/price if course has fixed installment config, otherwise create on-the-fly
+      // Create a recurring price for the installment plan
       let priceId;
       if (course.installment_price && course.installments === installments) {
-        // Use the pre-configured recurring price for this course
-        const existingPrice = await stripe.prices.list({
-          product: course.stripe_price_id ? undefined : undefined,
-          active: true,
-          type: 'recurring',
-          limit: 10,
-        });
-        // Create a recurring price for the installment amount
+        // Use the known product for this course's installment plan
         const price = await stripe.prices.create({
           product: 'prod_UEU1iWoYfaIrTD',
           unit_amount: amountPerInstallment,
@@ -116,7 +109,7 @@ export async function POST(request) {
             max_cycles: String(installments),
           },
         },
-        line_items: [{ price: price.id, quantity: 1 }],
+        line_items: [{ price: priceId, quantity: 1 }],
         success_url: `${baseUrl}/curso/${courseId}?enrolled=true`,
         cancel_url: `${baseUrl}/curso/${courseId}`,
       });

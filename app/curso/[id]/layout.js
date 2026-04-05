@@ -44,7 +44,7 @@ export default function CourseLayout({ children, params }) {
           url: 'https://academy.selenaura.com',
         },
         educationalLevel: course.level,
-        numberOfCredits: course.modules,
+        teaches: course.subtitle,
         timeRequired: `PT${parseInt(course.hours) || 2}H`,
         inLanguage: 'es',
         isAccessibleForFree: course.price === 0,
@@ -68,14 +68,7 @@ export default function CourseLayout({ children, params }) {
             validFrom: '2026-01-01',
           },
         }),
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.8',
-          bestRating: '5',
-          ratingCount: '47',
-          reviewCount: '23',
-        },
-        totalHistoricalEnrollment: 347,
+        // aggregateRating omitted — will be added when real reviews are collected
       }
     : null;
 
