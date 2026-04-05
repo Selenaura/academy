@@ -1,4 +1,5 @@
 import { COURSES } from '@/lib/constants';
+import { BLOG_POSTS } from '@/lib/blog-posts';
 
 export default function sitemap() {
   const baseUrl = 'https://academy.selenaura.com';
@@ -50,7 +51,17 @@ export default function sitemap() {
       priority: 0.85,
     }));
 
-  return [...staticPages, ...coursePages, ...catalogPages, ...programPages].map((page) => ({
+  // Blog pages
+  const blogIndex = [
+    { url: `${baseUrl}/blog`, changeFrequency: 'weekly', priority: 0.8 },
+  ];
+  const blogPages = BLOG_POSTS.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...coursePages, ...catalogPages, ...programPages, ...blogIndex, ...blogPages].map((page) => ({
     ...page,
     lastModified: now,
   }));

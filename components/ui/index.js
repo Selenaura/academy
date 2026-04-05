@@ -165,6 +165,7 @@ export function Footer() {
         <Link href="/sobre-nosotros" className="hover:text-selene-white no-underline text-selene-white-dim">Sobre nosotros</Link>
         <Link href="/faq" className="hover:text-selene-white no-underline text-selene-white-dim">FAQ</Link>
         <Link href="/blog" className="hover:text-selene-white no-underline text-selene-white-dim">Blog</Link>
+        <Link href="/blog" className="hover:text-selene-white no-underline text-selene-white-dim">Blog</Link>
         <Link href="/condiciones" className="hover:text-selene-white no-underline text-selene-white-dim">Condiciones</Link>
       </div>
       <div className="mt-2 opacity-50 flex gap-4 justify-center flex-wrap">
