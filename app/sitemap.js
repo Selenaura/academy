@@ -1,18 +1,31 @@
 import { COURSES } from '@/lib/constants';
 
-const BASE_URL = 'https://academy.selenaura.com';
-
 export default function sitemap() {
-  const courseUrls = COURSES.map((course) => ({
-    url: `${BASE_URL}/curso/${course.id}`,
-    lastModified: new Date(),
+  const baseUrl = 'https://academia.selenaura.com';
+  const now = new Date();
+
+  // Static pages
+  const staticPages = [
+    { url: baseUrl, changeFrequency: 'weekly', priority: 1 },
+    { url: `${baseUrl}/auth`, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/sobre-nosotros`, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/faq`, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/legal`, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/privacidad`, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/cookies`, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/condiciones`, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/verificar`, changeFrequency: 'monthly', priority: 0.4 },
+  ];
+
+  // Dynamic course pages
+  const coursePages = COURSES.map((course) => ({
+    url: `${baseUrl}/curso/${course.id}`,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
 
-  return [
-    { url: BASE_URL, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${BASE_URL}/auth`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
-    ...courseUrls,
-  ];
+  return [...staticPages, ...coursePages].map((page) => ({
+    ...page,
+    lastModified: now,
+  }));
 }

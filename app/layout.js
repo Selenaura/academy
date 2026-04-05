@@ -3,9 +3,16 @@ import { WhatsAppButton } from '@/components/ui';
 import InstallPWA from '@/components/InstallPWA';
 
 export const metadata = {
-  title: 'Selene Academia — Tu escuela de consciencia cósmica',
-  description: 'Cursos de astrología, tarot, meditación y autoconocimiento respaldados por estudios peer-reviewed. Neurociencia + tradición milenaria.',
+  title: {
+    default: 'Selene Academia — Tu escuela de consciencia cósmica',
+    template: '%s — Selene Academia',
+  },
+  description: 'Cursos de astrología, tarot, meditación y autoconocimiento respaldados por estudios peer-reviewed. Neurociencia + tradición milenaria. Certificados verificables.',
   metadataBase: new URL('https://academia.selenaura.com'),
+  alternates: {
+    canonical: '/',
+    languages: { 'es': '/' },
+  },
   openGraph: {
     title: 'Selene Academia — Ciencia y consciencia de lo invisible',
     description: 'Cursos de astrología, tarot y autoconocimiento con base científica. Tu carta natal guía tu camino.',
@@ -21,6 +28,10 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  verification: {
+    // Reemplaza con tu código real de Google Search Console
+    // google: 'tu-codigo-de-verificacion',
   },
 };
 

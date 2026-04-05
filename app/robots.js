@@ -4,9 +4,9 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/dashboard/', '/perfil/', '/onboarding/', '/api/'],
+        disallow: ['/api/', '/dashboard/', '/perfil/', '/onboarding/'],
       },
     ],
-    sitemap: 'https://academy.selenaura.com/sitemap.xml',
+    sitemap: 'https://academia.selenaura.com/sitemap.xml',
   };
 }

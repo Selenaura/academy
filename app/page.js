@@ -96,25 +96,6 @@ export default function LandingPage() {
       <SchemaMarkup data={courseListSchema} />
       <Navbar />
 
-      {/* ── Founding Cohort Banner ── */}
-      <section className="relative px-6 py-3 bg-gradient-to-r from-selene-gold/20 via-selene-gold/10 to-selene-gold/20 border-b border-selene-gold/20">
-        <div className="max-w-4xl mx-auto flex items-center justify-center gap-3 flex-wrap text-center">
-          <span className="text-sm text-selene-gold font-medium">
-            Cohort Fundador — Master en Guia Espiritual Profesional
-          </span>
-          <span className="text-xs text-selene-white-dim hidden sm:inline">|</span>
-          <span className="text-xs text-selene-white-dim">
-            <span className="line-through">149,99</span> &rarr; <span className="text-selene-gold font-semibold">99,99</span> &mdash; Solo 20 plazas
-          </span>
-          <Link
-            href="/master"
-            className="text-xs font-semibold bg-selene-gold text-selene-bg px-4 py-1.5 rounded-full hover:brightness-110 transition no-underline ml-2"
-          >
-            Reservar plaza
-          </Link>
-        </div>
-      </section>
-
       {/* ── Hero ── */}
       <section className="relative px-6 pt-24 pb-20 text-center overflow-hidden">
         {/* Decorative glow */}
@@ -144,7 +125,7 @@ export default function LandingPage() {
               Empieza gratis — Curso introductorio
             </Link>
             <Link
-              href="/catalogo"
+              href="/auth?mode=login"
               className="inline-flex items-center text-[15px] font-semibold text-selene-gold px-10 py-4 rounded-xl border border-selene-gold/30 hover:bg-selene-gold/5 transition no-underline"
             >
               Ver catálogo
@@ -160,6 +141,49 @@ export default function LandingPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── How It Works — 3 Steps ── */}
+      <section className="px-6 py-16 max-w-[900px] mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="font-display text-[28px] font-normal text-selene-white mb-3">
+            Empieza en 3 minutos
+          </h2>
+          <p className="text-sm text-selene-white-dim max-w-md mx-auto mb-4">
+            Sin complicaciones. Sin tarjeta de crédito. Solo curiosidad.
+          </p>
+          <GoldDivider />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              step: '1',
+              icon: '✦',
+              title: 'Crea tu cuenta gratis',
+              desc: 'Solo necesitas un email. En 30 segundos tienes acceso al curso introductorio completo.',
+            },
+            {
+              step: '2',
+              icon: '☽',
+              title: 'Introduce tus datos de nacimiento',
+              desc: 'Con tu fecha, hora y lugar calculamos tu carta natal. Tu ruta formativa se personaliza automáticamente.',
+            },
+            {
+              step: '3',
+              icon: '🎓',
+              title: 'Aprende a tu ritmo',
+              desc: 'Lecciones de 5 minutos, quizzes interactivos y certificado al completar. Sin presión, sin caducidad.',
+            },
+          ].map((s) => (
+            <Card key={s.step} className="p-6 text-center relative overflow-hidden">
+              <div className="absolute top-3 right-4 font-display text-[48px] font-bold text-selene-gold/5">{s.step}</div>
+              <div className="text-selene-gold text-2xl mb-3">{s.icon}</div>
+              <div className="text-[15px] font-semibold text-selene-white mb-2 font-display">{s.title}</div>
+              <div className="text-[13px] text-selene-white-dim leading-relaxed">{s.desc}</div>
+            </Card>
+          ))}
         </div>
       </section>
 
@@ -420,14 +444,45 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── Social Proof ── */}
-      <section className="px-6 py-16 max-w-[700px] mx-auto text-center">
-        <div className="bg-selene-card/50 rounded-2xl border border-selene-border p-8">
+      {/* ── Social Proof & Guarantees ── */}
+      <section className="px-6 py-16 max-w-[900px] mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="font-display text-[28px] font-normal text-selene-white mb-3">
+            Nuestra promesa
+          </h2>
+          <GoldDivider />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <Card className="p-6 text-center">
+            <div className="text-3xl mb-3">🔬</div>
+            <div className="text-[15px] font-semibold text-selene-white mb-2 font-display">30+ estudios citados</div>
+            <div className="text-[13px] text-selene-white-dim leading-relaxed">
+              Cada afirmación está respaldada por investigaciones publicadas en revistas peer-reviewed. Incluimos las referencias para que las verifiques.
+            </div>
+          </Card>
+          <Card className="p-6 text-center">
+            <div className="text-3xl mb-3">🛡️</div>
+            <div className="text-[15px] font-semibold text-selene-white mb-2 font-display">14 días de garantía</div>
+            <div className="text-[13px] text-selene-white-dim leading-relaxed">
+              Si el curso no cumple tus expectativas, te devolvemos el 100% de tu dinero. Sin preguntas, sin letra pequeña, sin complicaciones.
+            </div>
+          </Card>
+          <Card className="p-6 text-center">
+            <div className="text-3xl mb-3">🔒</div>
+            <div className="text-[15px] font-semibold text-selene-white mb-2 font-display">Pagos seguros con Stripe</div>
+            <div className="text-[13px] text-selene-white-dim leading-relaxed">
+              Tus datos financieros nunca pasan por nuestros servidores. Stripe procesa millones de transacciones al día con cifrado de nivel bancario.
+            </div>
+          </Card>
+        </div>
+
+        <div className="bg-selene-card/50 rounded-2xl border border-selene-border p-8 text-center">
           <div className="text-selene-gold text-lg mb-4">✦</div>
           <p className="font-display text-lg text-selene-white italic leading-relaxed mb-4">
             &ldquo;La primera academia que no te pide fe ciega — te da neurociencia, cronobiología y estudios reales. Y además te personaliza el camino con tu carta natal.&rdquo;
           </p>
-          <div className="text-sm text-selene-white-dim">— Nuestra filosofía</div>
+          <div className="text-sm text-selene-white-dim">— Nuestra filosofía fundacional</div>
         </div>
       </section>
 
