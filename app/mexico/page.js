@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { COURSES } from '@/lib/constants';
 import { Navbar, Footer, GoldDivider, Card } from '@/components/ui';
+import LeadCaptureForm from '@/components/LeadCaptureForm';
 
 export const metadata = {
   title: 'Certificación Tarotista y Astrología Profesional en México — Selene Academia',
@@ -169,6 +170,16 @@ export default function MexicoPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* ── Lead Capture ── */}
+      <section className="px-6 pb-8 max-w-[800px] mx-auto">
+        <LeadCaptureForm
+          source="web_mexico"
+          headline="Descarga gratis: 5 errores que comete toda guía espiritual sin formación"
+          subtext="Guía con datos reales (APA, neurociencia) sobre los riesgos de guiar sin método. Incluye el marco legal que necesitas conocer si ejerces en México."
+          country="mx"
+        />
       </section>
 
       {/* ── Por qué Selene Academia ── */}
@@ -391,6 +402,16 @@ export default function MexicoPage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* ── Lead Capture 2 ── */}
+      <section className="px-6 py-8 max-w-[800px] mx-auto">
+        <LeadCaptureForm
+          source="web_mexico_bottom"
+          headline="¿Aún no te decides? Empieza por la guía gratuita"
+          subtext="Descubre los 5 errores más comunes antes de invertir en tu formación. Es gratis y te ayudará a tomar una decisión informada."
+          country="mx"
+        />
       </section>
 
       {/* ── CTA final ── */}
