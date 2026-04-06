@@ -24,3 +24,17 @@ Read these BEFORE working on related areas:
 - `agent_docs/architecture.md` — file map, routing, data flow
 - `agent_docs/design.md` — Quantum Ethereal design system, colors, fonts, Tailwind classes
 - `agent_docs/database.md` — Supabase schema, RLS policies, relations
+
+## Planes de sesion
+Si el usuario pide ejecutar una sesion del plan, lee el archivo correspondiente en:
+`C:\Users\irene\Desktop\SELENE\docs\sesiones\sesion-XX-nombre.md`
+
+Archivos disponibles:
+- sesion-03-skill-blog-post.md — Skill /blog-post + 5 articulos (academy)
+- sesion-04-segmentacion-signos.md — Segmentacion email por signo (academy + selenaura-main)
+
+## Documentacion interna
+- Manual de operaciones: `C:\Users\irene\Desktop\SELENE\docs\manual_operaciones_selenaura.html`
+- Plan ejecutivo: `C:\Users\irene\Desktop\SELENE\docs\plan_ejecutivo_selenaura.md`
+- Brevo listas: ID 3 (Lead Magnet), ID 4 (Waitlist Master)
+- Brevo atributos: FUENTE, FECHA_REGISTRO, SIGNO
