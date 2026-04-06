@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { addBrevoContact } from '@/lib/email';
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
@@ -161,6 +162,9 @@ export async function POST(request) {
     }
 
     await supabase.from('leads').insert(leadData);
+
+    // Add to Brevo waitlist contact list (non-blocking)
+    addBrevoContact({ email: normalizedEmail, source: 'waitlist_master', listType: 'waitlist_master' }).catch(() => {});
 
     console.log(`Waitlist: ${normalizedEmail} added for master founding cohort`);
 

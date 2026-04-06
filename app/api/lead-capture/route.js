@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { sendLeadMagnetEmail } from '@/lib/email';
+import { sendLeadMagnetEmail, addBrevoContact } from '@/lib/email';
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
@@ -77,6 +77,9 @@ export async function POST(request) {
     }
 
     await supabase.from('leads').insert(leadData);
+
+    // Add to Brevo contact list (non-blocking — don't fail if this errors)
+    addBrevoContact({ email: normalizedEmail, source, listType: 'lead_magnet' }).catch(() => {});
 
     console.log(`🎯 Web lead captured: ${normalizedEmail} (source: ${source})`);
 
