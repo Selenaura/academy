@@ -10,7 +10,6 @@ export default function sitemap() {
     { url: baseUrl, changeFrequency: 'weekly', priority: 1 },
     { url: `${baseUrl}/catalogo`, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/master`, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/auth`, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/sobre-nosotros`, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/faq`, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/ayuda`, changeFrequency: 'monthly', priority: 0.5 },
