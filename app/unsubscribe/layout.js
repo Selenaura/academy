@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Cancelar suscripcion',
+  title: 'Cancelar suscripción — Selene Academia',
   robots: { index: false, follow: false },
 };
 
