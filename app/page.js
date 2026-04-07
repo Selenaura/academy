@@ -151,6 +151,63 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ── Campaign Highlights / Novedades ── */}
+      <section className="px-6 py-10 max-w-[900px] mx-auto">
+        <div className="bg-gradient-to-br from-[#0f0f1a] via-selene-card to-[#0f0f1a] rounded-2xl border border-selene-gold/15 p-6 sm:p-8 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-40 h-40 bg-selene-gold/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="relative">
+            <p className="text-[11px] text-selene-gold font-semibold tracking-[0.15em] uppercase mb-3">
+              Novedades
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {/* Premium card */}
+              <div className="bg-selene-bg/50 rounded-xl border border-selene-gold/10 p-5">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-selene-gold/15 text-selene-gold tracking-wide">Nuevo</span>
+                  <span className="text-[11px] text-selene-white-dim">Premium</span>
+                </div>
+                <h3 className="text-[16px] font-semibold text-selene-white mb-1.5">
+                  Suscripcion Premium
+                </h3>
+                <p className="text-[13px] text-selene-white-dim leading-relaxed mb-3">
+                  Acceso ilimitado a todas las lecturas, horoscopo personalizado diario y contenido exclusivo por 9,99 EUR/mes.
+                </p>
+                <a
+                  href="https://selenaura.com/premium"
+                  className="inline-flex items-center text-[12px] font-semibold text-selene-gold hover:text-selene-gold-light no-underline transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Descubre Premium &rarr;
+                </a>
+              </div>
+
+              {/* Weekly theme card */}
+              <div className="bg-selene-bg/50 rounded-xl border border-selene-gold/10 p-5">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-[#A855F7]/15 text-[#A855F7] tracking-wide">Cosmos</span>
+                  <span className="text-[11px] text-selene-white-dim">Esta semana</span>
+                </div>
+                <h3 className="text-[16px] font-semibold text-selene-white mb-1.5">
+                  Luna menguante en Sagitario
+                </h3>
+                <p className="text-[13px] text-selene-white-dim leading-relaxed mb-3">
+                  Tiempo de soltar creencias que ya no sirven y prepararte para nuevos comienzos. Consulta tu horoscopo personalizado.
+                </p>
+                <a
+                  href="https://selenaura.com/horoscopo-diario"
+                  className="inline-flex items-center text-[12px] font-semibold text-selene-gold hover:text-selene-gold-light no-underline transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Tu horoscopo de hoy &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── How It Works — 3 Steps ── */}
       <section className="px-6 py-16 max-w-[900px] mx-auto">
         <div className="text-center mb-12">
