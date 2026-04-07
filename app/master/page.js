@@ -74,9 +74,39 @@ const FAQS = [
   },
 ];
 
+const masterSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  name: 'Master en Guia Espiritual Profesional',
+  description: '12 modulos, certificacion profesional, 6 disciplinas. Formacion completa para ejercer como guia espiritual certificado.',
+  provider: {
+    '@type': 'Organization',
+    name: 'Selene Academia',
+    url: 'https://academy.selenaura.com',
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '99.99',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+    url: 'https://academy.selenaura.com/master',
+    validFrom: '2026-01-01',
+  },
+  hasCourseInstance: {
+    '@type': 'CourseInstance',
+    courseMode: 'online',
+    courseWorkload: '12 modulos',
+  },
+  educationalLevel: 'Advanced',
+  inLanguage: 'es',
+  numberOfCredits: 12,
+  occupationalCredentialAwarded: 'Certificado Profesional de Guia Espiritual',
+};
+
 export default function MasterFoundingPage() {
   return (
     <main className="min-h-screen bg-selene-bg text-selene-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(masterSchema) }} />
       <Navbar />
 
       {/* ── Hero ── */}

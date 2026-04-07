@@ -7,6 +7,20 @@ export const metadata = {
   description: 'Explora todos los cursos de astrología, meditación y autoconocimiento con base científica. Desde principiante hasta guía profesional certificada.',
 };
 
+const catalogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Catalogo de cursos — Selene Academia',
+  description: 'Todos los cursos de astrologia, meditacion y autoconocimiento con base cientifica.',
+  numberOfItems: COURSES.length,
+  itemListElement: COURSES.map((course, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    url: `https://academy.selenaura.com/catalogo/${course.id}`,
+    name: course.title,
+  })),
+};
+
 export default function CatalogoPage() {
   // Group courses by level
   const levels = [
@@ -18,6 +32,7 @@ export default function CatalogoPage() {
 
   return (
     <div className="min-h-screen bg-selene-bg">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(catalogSchema) }} />
       <Navbar />
 
       <section className="px-6 pt-20 pb-8 text-center">
