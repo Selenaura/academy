@@ -25,6 +25,32 @@ function corsHeaders(request) {
   };
 }
 
+// ── Calcular signo solar a partir de fecha de nacimiento ─────────────────────
+function getSunSignSlug(dateString) {
+  if (!dateString) return null;
+  try {
+    const date = new Date(dateString + 'T12:00:00');
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+
+    if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) return 'aries';
+    if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) return 'tauro';
+    if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) return 'geminis';
+    if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) return 'cancer';
+    if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) return 'leo';
+    if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) return 'virgo';
+    if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) return 'libra';
+    if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) return 'escorpio';
+    if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) return 'sagitario';
+    if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) return 'capricornio';
+    if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) return 'acuario';
+    if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) return 'piscis';
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 /** Preflight */
 export async function OPTIONS(request) {
   return NextResponse.json({}, { headers: corsHeaders(request) });
@@ -35,12 +61,12 @@ export async function OPTIONS(request) {
  * Public endpoint for web forms (no API key required).
  * Accepts cross-origin requests from SelenaUra domains.
  *
- * Body: { email: string, source?: string }
+ * Body: { email: string, source?: string, date_of_birth?: string (YYYY-MM-DD) }
  */
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { email, source = 'web_form' } = body;
+    const { email, source = 'web_form', date_of_birth } = body;
 
     if (!email || !email.includes('@') || email.length < 5 || email.length > 200) {
       return NextResponse.json({ error: 'Email válido requerido' }, { status: 400, headers: corsHeaders(request) });
@@ -48,16 +74,32 @@ export async function POST(request) {
 
     const normalizedEmail = email.toLowerCase().trim();
 
+    // Calcular signo solar si viene fecha de nacimiento
+    const signo = getSunSignSlug(date_of_birth) || null;
+
     // Check if we already sent to this email (avoid duplicates)
     const { data: existing } = await supabase
       .from('leads')
-      .select('id')
+      .select('id, signo')
       .eq('email', normalizedEmail)
       .eq('lead_magnet', '5-errores-guia-espiritual')
       .single();
 
     if (existing) {
-      // Still show success to user (don't reveal if email exists)
+      // Si ya existe pero ahora tenemos el signo y antes no, actualizarlo
+      if (signo && !existing.signo) {
+        await supabase
+          .from('leads')
+          .update({ signo, fecha_nacimiento: date_of_birth || null })
+          .eq('id', existing.id);
+        // Sincronizar signo en Brevo
+        addBrevoContact({
+          email: normalizedEmail,
+          source,
+          listType: 'lead_magnet',
+          signo,
+        }).catch(() => {});
+      }
       return NextResponse.json({ success: true }, { headers: corsHeaders(request) });
     }
 
@@ -75,13 +117,24 @@ export async function POST(request) {
     if (emailResult.messageId) {
       leadData.brevo_message_id = emailResult.messageId;
     }
+    if (signo) {
+      leadData.signo = signo;
+    }
+    if (date_of_birth) {
+      leadData.fecha_nacimiento = date_of_birth;
+    }
 
     await supabase.from('leads').insert(leadData);
 
-    // Add to Brevo contact list (non-blocking — don't fail if this errors)
-    addBrevoContact({ email: normalizedEmail, source, listType: 'lead_magnet' }).catch(() => {});
+    // Add to Brevo contact list with signo attribute
+    addBrevoContact({
+      email: normalizedEmail,
+      source,
+      listType: 'lead_magnet',
+      signo: signo || undefined,
+    }).catch(() => {});
 
-    console.log(`🎯 Web lead captured: ${normalizedEmail} (source: ${source})`);
+    console.log(`🎯 Web lead captured: ${normalizedEmail} (source: ${source}${signo ? `, signo: ${signo}` : ''})`);
 
     return NextResponse.json({ success: true }, { headers: corsHeaders(request) });
   } catch (err) {
