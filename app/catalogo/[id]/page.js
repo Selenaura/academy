@@ -53,8 +53,8 @@ export default async function CursoDetallePage({ params }) {
               <span
                 className="text-[11px] font-bold px-2.5 py-0.5 rounded-md"
                 style={{
-                  color: course.price === 0 ? '#5BB88F' : '#C9A84C',
-                  background: course.price === 0 ? 'rgba(91,184,143,0.1)' : 'rgba(201,168,76,0.1)',
+                  color: course.price === 0 ? '#5BB88F' : '#D4A843',
+                  background: course.price === 0 ? 'rgba(91,184,143,0.1)' : 'rgba(212,168,67,0.1)',
                 }}
               >
                 {course.price_label}

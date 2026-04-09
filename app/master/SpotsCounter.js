@@ -33,7 +33,7 @@ export default function SpotsCounter() {
               ? '#FF6B6B'
               : remaining <= 10
                 ? '#FF9F43'
-                : '#C9A84C',
+                : '#D4A843',
           }}
         />
       </div>

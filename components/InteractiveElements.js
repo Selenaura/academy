@@ -157,7 +157,7 @@ export function HotspotImage({ imageUrl, altText, hotspots, title }) {
             onClick={() => setActiveSpot(activeSpot === i ? null : i)}
             className={`absolute w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-bold transition-all ${
               activeSpot === i
-                ? 'bg-selene-gold text-selene-bg scale-125 shadow-[0_0_15px_rgba(201,168,76,0.5)]'
+                ? 'bg-selene-gold text-selene-bg scale-125 shadow-[0_0_15px_rgba(155,142,196,0.5)]'
                 : 'bg-selene-gold/70 text-selene-bg hover:scale-110 animate-pulse'
             }`}
             style={{ top: `${spot.y}%`, left: `${spot.x}%`, transform: 'translate(-50%, -50%)' }}

@@ -6,14 +6,14 @@ export default function OfflinePage() {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      background: '#0A0A0F',
+      background: '#0C0E1A',
       color: '#F0EDE4',
       fontFamily: 'Georgia, serif',
       padding: '2rem',
       textAlign: 'center'
     }}>
       <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>☽</div>
-      <h1 style={{ color: '#C9A84C', fontSize: '1.5rem', marginBottom: '0.5rem' }}>
+      <h1 style={{ color: '#D4A843', fontSize: '1.5rem', marginBottom: '0.5rem' }}>
         Sin conexión
       </h1>
       <p style={{ color: '#A8A4A0', maxWidth: '300px' }}>

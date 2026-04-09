@@ -8,7 +8,7 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    background: #0A0A0F;
+    background: #0C0E1A;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,10 +29,10 @@
     width: 100%;
     aspect-ratio: 1.414 / 1;
     text-align: center;
-    border: 2px solid rgba(201,168,76,0.25);
+    border: 2px solid rgba(155,142,196,0.25);
     border-radius: 20px;
-    background: linear-gradient(145deg, #0F0F18 0%, #12121E 40%, #151520 70%, rgba(201,168,76,0.03) 100%);
-    box-shadow: 0 0 80px rgba(201,168,76,0.06), inset 0 0 120px rgba(0,0,0,0.3);
+    background: linear-gradient(145deg, #0F0F18 0%, #12121E 40%, #151520 70%, rgba(155,142,196,0.03) 100%);
+    box-shadow: 0 0 80px rgba(155,142,196,0.06), inset 0 0 120px rgba(0,0,0,0.3);
     overflow: hidden;
     padding: clamp(32px, 5vw, 56px);
     display: flex;
@@ -42,17 +42,17 @@
 
   /* Corner ornaments */
   .corner { position: absolute; width: 40px; height: 40px; }
-  .corner-tl { top: 20px; left: 20px; border-top: 2px solid rgba(201,168,76,0.3); border-left: 2px solid rgba(201,168,76,0.3); }
-  .corner-tr { top: 20px; right: 20px; border-top: 2px solid rgba(201,168,76,0.3); border-right: 2px solid rgba(201,168,76,0.3); }
-  .corner-bl { bottom: 20px; left: 20px; border-bottom: 2px solid rgba(201,168,76,0.3); border-left: 2px solid rgba(201,168,76,0.3); }
-  .corner-br { bottom: 20px; right: 20px; border-bottom: 2px solid rgba(201,168,76,0.3); border-right: 2px solid rgba(201,168,76,0.3); }
+  .corner-tl { top: 20px; left: 20px; border-top: 2px solid rgba(155,142,196,0.3); border-left: 2px solid rgba(155,142,196,0.3); }
+  .corner-tr { top: 20px; right: 20px; border-top: 2px solid rgba(155,142,196,0.3); border-right: 2px solid rgba(155,142,196,0.3); }
+  .corner-bl { bottom: 20px; left: 20px; border-bottom: 2px solid rgba(155,142,196,0.3); border-left: 2px solid rgba(155,142,196,0.3); }
+  .corner-br { bottom: 20px; right: 20px; border-bottom: 2px solid rgba(155,142,196,0.3); border-right: 2px solid rgba(155,142,196,0.3); }
 
   /* Star pattern overlay */
   .cert-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(rgba(201,168,76,0.6) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(155,142,196,0.6) 1px, transparent 1px);
     background-size: 30px 30px;
     opacity: 0.04;
     pointer-events: none;
@@ -63,7 +63,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 60% 50% at 50% 45%, rgba(201,168,76,0.04) 0%, transparent 70%);
+    background: radial-gradient(ellipse 60% 50% at 50% 45%, rgba(155,142,196,0.04) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -71,16 +71,16 @@
 
   /* ── Top: Brand ── */
   .brand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 8px; }
-  .moon-icon { color: #C9A84C; }
-  .brand-text { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; color: #C9A84C; letter-spacing: 0.12em; font-weight: 500; }
-  .cert-type { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 10px; color: rgba(201,168,76,0.5); letter-spacing: 0.35em; text-transform: uppercase; }
+  .moon-icon { color: #9B8EC4; }
+  .brand-text { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; color: #9B8EC4; letter-spacing: 0.12em; font-weight: 500; }
+  .cert-type { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 10px; color: rgba(155,142,196,0.5); letter-spacing: 0.35em; text-transform: uppercase; }
 
   /* ── Middle ── */
   .middle { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px 0; }
 
   .divider-ornament { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-  .divider-line { width: 48px; height: 1px; background: rgba(201,168,76,0.2); }
-  .divider-star { color: rgba(201,168,76,0.4); font-size: 10px; }
+  .divider-line { width: 48px; height: 1px; background: rgba(155,142,196,0.2); }
+  .divider-star { color: rgba(155,142,196,0.4); font-size: 10px; }
 
   .certifies-text { font-size: 11px; color: rgba(168,164,160,0.7); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px; }
 
@@ -98,7 +98,7 @@
   .course-title {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: clamp(18px, 3vw, 26px);
-    color: #C9A84C;
+    color: #D4A843;
     font-weight: 500;
     margin-bottom: 8px;
   }
@@ -114,26 +114,26 @@
 
   .signature-name {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    color: rgba(201,168,76,0.8);
+    color: rgba(155,142,196,0.8);
     font-style: italic;
     font-size: 16px;
     margin-bottom: 4px;
   }
-  .signature-line { width: 96px; height: 1px; background: rgba(201,168,76,0.3); margin: 0 auto 4px; }
+  .signature-line { width: 96px; height: 1px; background: rgba(155,142,196,0.3); margin: 0 auto 4px; }
   .signature-title { font-size: 9px; color: rgba(168,164,160,0.6); letter-spacing: 0.1em; text-transform: uppercase; }
 
   .date-text { font-size: 11px; color: rgba(168,164,160,0.8); margin-bottom: 4px; }
-  .code-text { font-size: 10px; color: rgba(201,168,76,0.6); font-family: 'Courier New', monospace; letter-spacing: 1px; }
+  .code-text { font-size: 10px; color: rgba(155,142,196,0.6); font-family: 'Courier New', monospace; letter-spacing: 1px; }
 
   .qr-placeholder {
     width: 72px; height: 72px;
     margin: 0 auto 4px;
-    border: 1px solid rgba(201,168,76,0.25);
+    border: 1px solid rgba(155,142,196,0.25);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(201,168,76,0.03);
+    background: rgba(155,142,196,0.03);
   }
   .qr-placeholder svg { opacity: 0.5; }
   .qr-hint { font-size: 8px; color: rgba(168,164,160,0.5); }
@@ -142,25 +142,25 @@
   .actions { display: flex; gap: 12px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
   .btn-primary {
     display: flex; align-items: center; gap: 8px;
-    background: #C9A84C; color: #0A0A0F; font-weight: 600;
+    background: #D4A843; color: #0C0E1A; font-weight: 600;
     padding: 14px 32px; border-radius: 12px; border: none;
     font-size: 14px; cursor: pointer; font-family: 'Outfit', sans-serif;
   }
   .btn-secondary {
     display: flex; align-items: center; gap: 8px;
-    color: #C9A84C; font-weight: 600;
+    color: #9B8EC4; font-weight: 600;
     padding: 14px 32px; border-radius: 12px;
-    border: 1px solid rgba(201,168,76,0.3);
+    border: 1px solid rgba(155,142,196,0.3);
     background: transparent; font-size: 14px; cursor: pointer;
     font-family: 'Outfit', sans-serif;
   }
   .btn-primary:hover { filter: brightness(1.1); }
-  .btn-secondary:hover { background: rgba(201,168,76,0.05); }
+  .btn-secondary:hover { background: rgba(155,142,196,0.05); }
 
   .hint { font-size: 11px; color: rgba(168,164,160,0.4); text-align: center; margin-top: 16px; }
 
   /* Star SVG for dividers */
-  .star-svg { width: 8px; height: 8px; fill: rgba(201,168,76,0.4); }
+  .star-svg { width: 8px; height: 8px; fill: rgba(155,142,196,0.4); }
 </style>
 </head>
 <body>
@@ -225,16 +225,16 @@
         <div class="qr-block">
           <div class="qr-placeholder">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <rect x="4" y="4" width="12" height="12" rx="2" stroke="#C9A84C" stroke-width="1.5"/>
-              <rect x="7" y="7" width="6" height="6" rx="1" fill="#C9A84C" opacity="0.3"/>
-              <rect x="24" y="4" width="12" height="12" rx="2" stroke="#C9A84C" stroke-width="1.5"/>
-              <rect x="27" y="7" width="6" height="6" rx="1" fill="#C9A84C" opacity="0.3"/>
-              <rect x="4" y="24" width="12" height="12" rx="2" stroke="#C9A84C" stroke-width="1.5"/>
-              <rect x="7" y="27" width="6" height="6" rx="1" fill="#C9A84C" opacity="0.3"/>
-              <rect x="20" y="20" width="4" height="4" fill="#C9A84C" opacity="0.2"/>
-              <rect x="26" y="26" width="4" height="4" fill="#C9A84C" opacity="0.2"/>
-              <rect x="32" y="26" width="4" height="4" fill="#C9A84C" opacity="0.2"/>
-              <rect x="26" y="32" width="10" height="4" fill="#C9A84C" opacity="0.2"/>
+              <rect x="4" y="4" width="12" height="12" rx="2" stroke="#9B8EC4" stroke-width="1.5"/>
+              <rect x="7" y="7" width="6" height="6" rx="1" fill="#9B8EC4" opacity="0.3"/>
+              <rect x="24" y="4" width="12" height="12" rx="2" stroke="#9B8EC4" stroke-width="1.5"/>
+              <rect x="27" y="7" width="6" height="6" rx="1" fill="#9B8EC4" opacity="0.3"/>
+              <rect x="4" y="24" width="12" height="12" rx="2" stroke="#9B8EC4" stroke-width="1.5"/>
+              <rect x="7" y="27" width="6" height="6" rx="1" fill="#9B8EC4" opacity="0.3"/>
+              <rect x="20" y="20" width="4" height="4" fill="#9B8EC4" opacity="0.2"/>
+              <rect x="26" y="26" width="4" height="4" fill="#9B8EC4" opacity="0.2"/>
+              <rect x="32" y="26" width="4" height="4" fill="#9B8EC4" opacity="0.2"/>
+              <rect x="26" y="32" width="10" height="4" fill="#9B8EC4" opacity="0.2"/>
             </svg>
           </div>
           <div class="qr-hint">Escanea para verificar</div>

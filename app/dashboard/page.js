@@ -55,7 +55,7 @@ function XpRing({ progress, level, xp, nextLevel }) {
         />
         <defs>
           <linearGradient id="xpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#C9A84C" />
+            <stop offset="0%" stopColor="#9B8EC4" />
             <stop offset="100%" stopColor="#e8c96a" />
           </linearGradient>
         </defs>
@@ -78,7 +78,7 @@ function StreakDots({ streak }) {
           key={i}
           className={`w-3 h-3 rounded-full transition-all ${
             i < Math.min(streak, 7)
-              ? 'bg-selene-gold shadow-[0_0_6px_rgba(201,168,76,0.6)]'
+              ? 'bg-selene-gold shadow-[0_0_6px_rgba(212,168,67,0.6)]'
               : 'bg-[#1e1e2a] border border-[#2a2a3a]'
           }`}
         />
@@ -455,7 +455,7 @@ export default function DashboardPage() {
                   key={badgeId}
                   className={`relative rounded-2xl p-3 text-center transition-all ${
                     isEarned
-                      ? 'bg-gradient-to-b from-[#1a1610] to-[#0f0f18] border border-selene-gold/25 shadow-[0_0_20px_rgba(201,168,76,0.06)]'
+                      ? 'bg-gradient-to-b from-[#1a1610] to-[#0f0f18] border border-selene-gold/25 shadow-[0_0_20px_rgba(155,142,196,0.06)]'
                       : 'bg-[#0c0c15] border border-selene-border/50 opacity-40'
                   }`}
                 >

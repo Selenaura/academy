@@ -170,7 +170,7 @@ export async function GET(request) {
         puedes retomar justo donde lo dejaste:
       </p>
       <div style="text-align: center; margin: 32px 0;">
-        <a href="${courseUrl}" style="display: inline-block; background: linear-gradient(135deg, #C9A84C, #5B9E8F); color: white; text-decoration: none; padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 16px;">
+        <a href="${courseUrl}" style="display: inline-block; background: linear-gradient(135deg, #D4A843, #5BB8A6); color: white; text-decoration: none; padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 16px;">
           Completar inscripcion
         </a>
       </div>

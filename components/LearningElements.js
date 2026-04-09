@@ -61,7 +61,7 @@ export function ConceptMap({ title, centerNode, nodes }) {
 
       <div className="relative min-h-[250px] flex items-center justify-center">
         {/* Center node */}
-        <div className="absolute z-10 bg-selene-gold text-selene-bg px-4 py-2.5 rounded-xl text-sm font-semibold shadow-[0_0_20px_rgba(201,168,76,0.3)]">
+        <div className="absolute z-10 bg-selene-gold text-selene-bg px-4 py-2.5 rounded-xl text-sm font-semibold shadow-[0_0_20px_rgba(155,142,196,0.3)]">
           {centerNode}
         </div>
 
@@ -277,7 +277,7 @@ export function AnnotatedImage({ title, imageUrl, altText, annotations }) {
             onClick={() => setActive(active === i ? null : i)}
             className={`absolute w-6 h-6 rounded-full text-[10px] font-bold flex items-center justify-center transition-all ${
               active === i
-                ? 'bg-selene-gold text-selene-bg scale-125 shadow-[0_0_12px_rgba(201,168,76,0.5)] z-10'
+                ? 'bg-selene-gold text-selene-bg scale-125 shadow-[0_0_12px_rgba(155,142,196,0.5)] z-10'
                 : 'bg-selene-gold/70 text-selene-bg hover:scale-110'
             }`}
             style={{ top: `${ann.y}%`, left: `${ann.x}%`, transform: 'translate(-50%, -50%)' }}

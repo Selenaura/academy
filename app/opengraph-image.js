@@ -10,7 +10,7 @@ export default function Image() {
     (
       <div
         style={{
-          background: 'linear-gradient(135deg, #0A0A0F 0%, #1A1A25 50%, #12121A 100%)',
+          background: 'linear-gradient(135deg, #0C0E1A 0%, #242845 50%, #1C1F38 100%)',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -29,7 +29,7 @@ export default function Image() {
             left: 20,
             right: 20,
             bottom: 20,
-            border: '2px solid #C9A84C',
+            border: '2px solid #9B8EC4',
             borderRadius: 16,
             display: 'flex',
           }}
@@ -50,7 +50,7 @@ export default function Image() {
         <div
           style={{
             fontSize: 64,
-            color: '#C9A84C',
+            color: '#D4A843',
             marginBottom: 16,
             display: 'flex',
             letterSpacing: '0.02em',

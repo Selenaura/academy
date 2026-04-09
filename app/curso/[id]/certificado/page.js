@@ -171,7 +171,7 @@ export default function CertificatePage({ params }) {
       const url = await QRCode.toDataURL(verifyUrl, {
         width: 120,
         margin: 1,
-        color: { dark: '#C9A84C', light: '#00000000' },
+        color: { dark: '#D4A843', light: '#00000000' },
         errorCorrectionLevel: 'M',
       });
       setQrDataUrl(url);
@@ -318,8 +318,8 @@ export default function CertificatePage({ params }) {
           className="relative overflow-hidden rounded-[20px] text-center border-2 border-selene-gold/25"
           style={{
             aspectRatio: '1.414 / 1',
-            background: 'linear-gradient(145deg, #0F0F18 0%, #12121E 40%, #151520 70%, rgba(201,168,76,0.03) 100%)',
-            boxShadow: '0 0 80px rgba(201,168,76,0.06), inset 0 0 120px rgba(0,0,0,0.3)',
+            background: 'linear-gradient(145deg, #0F0F18 0%, #12121E 40%, #151520 70%, rgba(155,142,196,0.03) 100%)',
+            boxShadow: '0 0 80px rgba(155,142,196,0.06), inset 0 0 120px rgba(0,0,0,0.3)',
             padding: 'clamp(32px, 5vw, 56px)',
           }}
         >
@@ -334,7 +334,7 @@ export default function CertificatePage({ params }) {
 
           {/* Subtle radial glow behind center */}
           <div className="absolute inset-0 pointer-events-none" style={{
-            background: 'radial-gradient(ellipse 60% 50% at 50% 45%, rgba(201,168,76,0.04) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse 60% 50% at 50% 45%, rgba(155,142,196,0.04) 0%, transparent 70%)',
           }} />
 
           <div className="relative z-10 flex flex-col items-center justify-between h-full">

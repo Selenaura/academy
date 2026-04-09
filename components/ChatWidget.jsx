@@ -112,7 +112,7 @@ export default function ChatWidget() {
           isOpen ? 'scale-0 opacity-0 pointer-events-none' : 'scale-100 opacity-100'
         }`}
         style={{
-          background: 'linear-gradient(135deg, #C9A84C 0%, #E8D5A0 50%, #C9A84C 100%)',
+          background: 'linear-gradient(135deg, #D4A843 0%, #E8D5A0 50%, #D4A843 100%)',
         }}
         aria-label="Consulta con Selene"
       >
@@ -143,7 +143,7 @@ export default function ChatWidget() {
         <div
           className="flex items-center justify-between px-5 py-4 shrink-0"
           style={{
-            background: 'linear-gradient(135deg, rgba(201,168,76,0.12) 0%, rgba(201,168,76,0.04) 100%)',
+            background: 'linear-gradient(135deg, rgba(155,142,196,0.12) 0%, rgba(155,142,196,0.04) 100%)',
             borderBottom: '1px solid var(--border)',
           }}
         >
@@ -151,7 +151,7 @@ export default function ChatWidget() {
             <div
               className="w-9 h-9 rounded-full flex items-center justify-center"
               style={{
-                background: 'linear-gradient(135deg, #C9A84C 0%, #E8D5A0 100%)',
+                background: 'linear-gradient(135deg, #D4A843 0%, #E8D5A0 100%)',
               }}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A0A0F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -195,8 +195,8 @@ export default function ChatWidget() {
                 style={
                   msg.role === 'user'
                     ? {
-                        background: 'linear-gradient(135deg, rgba(201,168,76,0.2) 0%, rgba(201,168,76,0.08) 100%)',
-                        border: '1px solid rgba(201,168,76,0.25)',
+                        background: 'linear-gradient(135deg, rgba(155,142,196,0.2) 0%, rgba(155,142,196,0.08) 100%)',
+                        border: '1px solid rgba(155,142,196,0.25)',
                         color: 'var(--white)',
                       }
                     : {
@@ -257,7 +257,7 @@ export default function ChatWidget() {
               className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-200 disabled:opacity-30"
               style={{
                 background: input.trim() && !isLoading
-                  ? 'linear-gradient(135deg, #C9A84C 0%, #E8D5A0 100%)'
+                  ? 'linear-gradient(135deg, #D4A843 0%, #E8D5A0 100%)'
                   : 'var(--border)',
               }}
               aria-label="Enviar"

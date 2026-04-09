@@ -107,7 +107,7 @@ export default function LandingPage() {
       <section className="relative px-6 pt-24 pb-20 text-center overflow-hidden">
         {/* Decorative glow */}
         <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-radial-gold pointer-events-none" />
-        <div className="absolute top-10 right-[10%] w-1 h-1 rounded-full bg-selene-gold shadow-[0_0_20px_rgba(201,168,76,0.4)] animate-pulse-gold" />
+        <div className="absolute top-10 right-[10%] w-1 h-1 rounded-full bg-selene-gold shadow-[0_0_20px_rgba(155,142,196,0.4)] animate-pulse-gold" />
         <div className="absolute top-28 left-[15%] w-0.5 h-0.5 rounded-full bg-selene-blue-light shadow-[0_0_15px_rgba(107,143,197,0.4)] animate-pulse-gold" style={{ animationDelay: '1s' }} />
 
         <div className="relative z-10">

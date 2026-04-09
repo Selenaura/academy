@@ -5,8 +5,8 @@ export default function manifest() {
     description: 'Cursos de astrología, tarot y autoconocimiento con base científica.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#0A0A0F',
-    theme_color: '#C9A84C',
+    background_color: '#0C0E1A',
+    theme_color: '#D4A843',
     orientation: 'portrait',
     icons: [
       { src: '/icon.svg', sizes: 'any', type: 'image/svg+xml' },

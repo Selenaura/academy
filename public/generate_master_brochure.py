@@ -23,11 +23,11 @@ import os
 import random
 
 # ── Colors ──
-BG = HexColor('#0A0A0F')
+BG = HexColor('#0C0E1A')
 BG_LIGHT = HexColor('#0E0E18')
 BG_CARD = HexColor('#141420')
 BG_CARD2 = HexColor('#1A1A2E')
-GOLD = HexColor('#C9A84C')
+GOLD = HexColor('#D4A843')
 GOLD_DIM = HexColor('#8B7535')
 GOLD_LIGHT = HexColor('#D4B85C')
 TEAL = HexColor('#006B77')

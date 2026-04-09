@@ -91,7 +91,7 @@ export function Navbar({ showAuth = true, showDashboardNav = false }) {
 }
 
 // ── Progress Bar ──
-export function ProgressBar({ value = 0, color = '#C9A84C', height = 4, className = '' }) {
+export function ProgressBar({ value = 0, color = '#9B8EC4', height = 4, className = '' }) {
   return (
     <div className={`w-full bg-selene-elevated rounded-full overflow-hidden ${className}`} style={{ height }}>
       <div
@@ -103,11 +103,11 @@ export function ProgressBar({ value = 0, color = '#C9A84C', height = 4, classNam
 }
 
 // ── Badge ──
-export function Badge({ children, color = '#C9A84C', className = '' }) {
+export function Badge({ children, color = '#9B8EC4', className = '' }) {
   return (
     <span
       className={`text-[10px] font-bold px-2.5 py-0.5 rounded tracking-wide ${className}`}
-      style={{ color: '#0A0A0F', background: color }}
+      style={{ color: '#0C0E1A', background: color }}
     >
       {children}
     </span>

@@ -12,12 +12,12 @@ export default function Icon() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: '#0A0A0F',
+        background: '#0C0E1A',
         borderRadius: '25%',
       }}>
         <div style={{
           fontSize: 280,
-          color: '#C9A84C',
+          color: '#D4A843',
           fontFamily: 'serif',
         }}>
           ☽
