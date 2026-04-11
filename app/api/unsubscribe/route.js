@@ -1,10 +1,12 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
-);
+function getSupabase() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY
+  );
+}
 
 /**
  * POST /api/unsubscribe
@@ -14,6 +16,7 @@ const supabase = createClient(
  * Body: { email: string }
  */
 export async function POST(request) {
+  const supabase = getSupabase();
   try {
     const { email } = await request.json();
 

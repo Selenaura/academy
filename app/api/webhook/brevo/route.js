@@ -2,10 +2,12 @@ import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
 // Use service role for webhook (no user context)
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
-);
+function getSupabase() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY
+  );
+}
 
 /**
  * POST /api/webhook/brevo
@@ -22,6 +24,7 @@ const supabase = createClient(
  * }
  */
 export async function POST(request) {
+  const supabase = getSupabase();
   try {
     // Verify Brevo webhook token
     const token = request.headers.get('x-brevo-token');

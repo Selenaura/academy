@@ -1,10 +1,12 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
-);
+function getSupabase() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY
+  );
+}
 
 const BREVO_API_URL = 'https://api.brevo.com/v3/smtp/email';
 
@@ -21,6 +23,7 @@ const FROM = {
  * Protected by CRON_SECRET to prevent unauthorized access.
  */
 export async function GET(request) {
+  const supabase = getSupabase();
   // Verify cron secret (Vercel sends this automatically)
   const authHeader = request.headers.get('authorization');
   const cronSecret = process.env.CRON_SECRET;

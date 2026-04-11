@@ -2,10 +2,12 @@ import { NextResponse } from 'next/server';
 import { sendLeadMagnetEmail, addBrevoContact } from '@/lib/email';
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
-);
+function getSupabase() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY
+  );
+}
 
 // ── Calcular signo solar a partir de fecha de nacimiento ─────────────────────
 function getSunSignSlug(dateString) {
@@ -38,7 +40,7 @@ function getSunSignSlug(dateString) {
  * Receives a lead email (from Meta Lead Ads via Zapier/Make, or manual)
  * Sends the lead magnet email and stores the lead in Supabase
  *
- * Body: { email: string, source?: string, date_of_birth?: string (YYYY-MM-DD) }
+ * Body: { email: string, source?: string, date_of_birth?: string (YYYY-MM-DD), name?: string, country?: string }
  * Headers: x-api-key must match LEAD_WEBHOOK_SECRET env var
  */
 export async function POST(request) {
@@ -52,13 +54,14 @@ export async function POST(request) {
     }
 
     const body = await request.json();
-    const { email, source = 'meta_lead_ad', date_of_birth } = body;
+    const { email, source = 'meta_lead_ad', date_of_birth, name, country } = body;
 
     if (!email || !email.includes('@')) {
       return NextResponse.json({ error: 'Valid email required' }, { status: 400 });
     }
 
     const normalizedEmail = email.toLowerCase().trim();
+    const supabase = getSupabase();
 
     // Calcular signo solar si viene fecha de nacimiento
     const signo = getSunSignSlug(date_of_birth) || null;
@@ -115,8 +118,54 @@ export async function POST(request) {
     if (date_of_birth) {
       leadData.fecha_nacimiento = date_of_birth;
     }
+    if (name) {
+      leadData.name = name.trim();
+    }
+    if (country) {
+      leadData.country = country.trim().toUpperCase();
+    }
 
     await supabase.from('leads').insert(leadData);
+
+    // ── Schedule nurture email sequence (steps 2-7) ──
+    // This was missing and caused 280+ leads to never receive nurture emails
+    const now = new Date();
+    const nurtureDays = [
+      { step: 2, delay_days: 1 },  // Día 1: 3 secretos del signo
+      { step: 3, delay_days: 2 },  // Día 2: horóscopo personalizado
+      { step: 4, delay_days: 3 },  // Día 3: tarot 0,99€ con PRIMERALUZ
+      { step: 5, delay_days: 5 },  // Día 5: Pack Astral 4,99€
+      { step: 6, delay_days: 8 },  // Día 8: última oportunidad
+      { step: 7, delay_days: 14 }, // Día 14: win-back → Premium
+    ];
+
+    const sequenceRows = nurtureDays.map(({ step, delay_days }) => ({
+      email: normalizedEmail,
+      signo_solar: signo || null,
+      step,
+      source,
+      sent: false,
+      next_send_at: new Date(now.getTime() + delay_days * 86400000).toISOString(),
+      created_at: now.toISOString(),
+    }));
+
+    supabase.from('email_sequence').insert(sequenceRows)
+      .then(({ error }) => { if (error) console.error('Email sequence insert error:', error.message); })
+      .catch(e => console.error('Email sequence error:', e.message));
+
+    // Also relay to selenaura lead-capture for Meta CAPI + PostHog tracking
+    const siteUrl = process.env.SELENAURA_URL || 'https://selenaura.com';
+    fetch(`${siteUrl}/api/lead-capture`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: normalizedEmail,
+        source,
+        signo_solar: signo,
+        name,
+        country,
+      }),
+    }).catch(() => {}); // Non-blocking, best-effort
 
     // Add to Brevo contact list with SIGNO attribute (non-blocking)
     addBrevoContact({

@@ -2,10 +2,12 @@ import { NextResponse } from 'next/server';
 import { sendLeadMagnetEmail, addBrevoContact } from '@/lib/email';
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
-);
+function getSupabase() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY
+  );
+}
 
 const ALLOWED_ORIGINS = [
   'https://selenaura.com',
@@ -61,12 +63,12 @@ export async function OPTIONS(request) {
  * Public endpoint for web forms (no API key required).
  * Accepts cross-origin requests from SelenaUra domains.
  *
- * Body: { email: string, source?: string, date_of_birth?: string (YYYY-MM-DD) }
+ * Body: { email: string, source?: string, date_of_birth?: string (YYYY-MM-DD), name?: string, country?: string }
  */
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { email, source = 'web_form', date_of_birth } = body;
+    const { email, source = 'web_form', date_of_birth, name, country } = body;
 
     if (!email || !email.includes('@') || email.length < 5 || email.length > 200) {
       return NextResponse.json({ error: 'Email válido requerido' }, { status: 400, headers: corsHeaders(request) });
@@ -78,6 +80,7 @@ export async function POST(request) {
     const signo = getSunSignSlug(date_of_birth) || null;
 
     // Check if we already sent to this email (avoid duplicates)
+    const supabase = getSupabase();
     const { data: existing } = await supabase
       .from('leads')
       .select('id, signo')
@@ -122,6 +125,12 @@ export async function POST(request) {
     }
     if (date_of_birth) {
       leadData.fecha_nacimiento = date_of_birth;
+    }
+    if (name) {
+      leadData.name = name.trim();
+    }
+    if (country) {
+      leadData.country = country.trim().toUpperCase();
     }
 
     await supabase.from('leads').insert(leadData);

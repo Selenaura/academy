@@ -2,10 +2,12 @@ import { NextResponse } from 'next/server';
 import { addBrevoContact } from '@/lib/email';
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
-);
+function getSupabase() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY
+  );
+}
 
 const BREVO_API_URL = 'https://api.brevo.com/v3/smtp/email';
 
@@ -120,6 +122,7 @@ async function sendWaitlistConfirmation({ email }) {
  * Body: { email: string }
  */
 export async function POST(request) {
+  const supabase = getSupabase();
   try {
     const body = await request.json();
     const { email } = body;

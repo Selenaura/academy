@@ -2,10 +2,12 @@ import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { createNotionPage, queryNotionDatabase, updateNotionPage } from '@/lib/notion';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
-);
+function getSupabase() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY
+  );
+}
 
 const METRICAS_DB = 'ec7c768f1a414dea8ac3f665ed0cd63a';
 const TAREAS_DB = '42f93db57f0140388966373b67132cf9';
@@ -128,6 +130,7 @@ export async function GET(request) {
 // ─────────────────────────────────────────────
 
 async function collectLeadsMetrics(startISO, endISO) {
+  const supabase = getSupabase();
   // New leads this week
   const { count: newLeads } = await supabase
     .from('leads')
@@ -189,6 +192,7 @@ async function collectLeadsMetrics(startISO, endISO) {
 }
 
 async function collectEnrollmentMetrics(startISO, endISO) {
+  const supabase = getSupabase();
   // New enrollments
   const { data: enrollments, count } = await supabase
     .from('enrollments')
