@@ -12,52 +12,52 @@ const faqs = [
     a: 'Todos nuestros cursos son 100% online. No hay clases presenciales ni horarios fijos. Accedes al contenido desde tu ordenador, tablet o móvil cuando quieras. Tienes acceso de por vida y puedes avanzar a tu ritmo desde cualquier país.',
   },
   {
-    q: '¿Los cursos tienen base cientifica?',
-    a: 'Si. Cada curso cita estudios academicos publicados en revistas peer-reviewed. No pedimos fe ciega: proporcionamos las fuentes para que puedas verificarlas por ti misma. Contamos con mas de 30 estudios citados a lo largo de nuestro catalogo.',
+    q: '¿Los cursos tienen base científica?',
+    a: 'Sí. Cada curso cita estudios académicos publicados en revistas peer-reviewed. No pedimos fe ciega: proporcionamos las fuentes para que puedas verificarlas por ti misma. Contamos con más de 30 estudios citados a lo largo de nuestro catálogo.',
   },
   {
     q: '¿El certificado es oficial?',
-    a: 'Nuestros certificados acreditan que has completado satisfactoriamente un programa formativo en Selene Academia. No son titulos universitarios oficiales, pero si certificaciones verificables con un codigo unico que cualquier persona o empresa puede comprobar en nuestra web.',
+    a: 'Nuestros certificados acreditan que has completado satisfactoriamente un programa formativo en Selene Academia. No son títulos universitarios oficiales, pero sí certificaciones verificables con un código único que cualquier persona o empresa puede comprobar en nuestra web.',
   },
   {
     q: '¿Puedo conseguir trabajo con este certificado?',
-    a: 'Nuestros certificados demuestran competencias especificas en areas de autoconocimiento y bienestar. Son utiles para profesionales del coaching, terapias alternativas, desarrollo personal y bienestar. Muchas de nuestras alumnas han incorporado estos conocimientos a su practica profesional.',
+    a: 'Nuestros certificados demuestran competencias específicas en áreas de autoconocimiento y bienestar. Son útiles para profesionales del coaching, terapias alternativas, desarrollo personal y bienestar. Muchas de nuestras alumnas han incorporado estos conocimientos a su práctica profesional.',
   },
   {
-    q: '¿Cuanto tiempo tengo acceso al curso?',
+    q: '¿Cuánto tiempo tengo acceso al curso?',
     a: 'Una vez comprado, tienes acceso de por vida al contenido del curso, incluyendo todas las actualizaciones futuras. Aprende a tu ritmo, sin prisas.',
   },
   {
-    q: '¿Que pasa si no me gusta?',
-    a: 'Ofrecemos una garantia de devolucion de 14 dias sin preguntas. Si el curso no cumple tus expectativas, te devolvemos el 100% de tu dinero. Sin letra pequena.',
+    q: '¿Qué pasa si no me gusta?',
+    a: 'Ofrecemos una garantía de devolución de 14 días sin preguntas. Si el curso no cumple tus expectativas, te devolvemos el 100% de tu dinero. Sin letra pequeña.',
   },
   {
     q: '¿Puedo pagar a plazos?',
-    a: 'Si, ofrecemos facilidades de pago en cursos seleccionados. Puedes dividir el pago en cuotas mensuales sin intereses. Consulta las opciones disponibles en la pagina de cada curso.',
+    a: 'Sí, ofrecemos facilidades de pago en cursos seleccionados. Puedes dividir el pago en cuotas mensuales sin intereses. Consulta las opciones disponibles en la página de cada curso.',
   },
   {
     q: '¿Necesito conocimientos previos?',
-    a: 'No. Nuestros cursos estan disenados para todos los niveles. Cada programa empieza desde los fundamentos y avanza progresivamente. Si ya tienes experiencia, podras profundizar en aspectos que quizas no conocias.',
+    a: 'No. Nuestros cursos están diseñados para todos los niveles. Cada programa empieza desde los fundamentos y avanza progresivamente. Si ya tienes experiencia, podrás profundizar en aspectos que quizás no conocías.',
   },
   {
-    q: '¿Como funciona la personalizacion por carta natal?',
-    a: 'Al registrarte, puedes introducir tus datos de nacimiento. Con ellos calculamos tu carta natal, que se usa para personalizar ejemplos, ejercicios y recomendaciones dentro de los cursos. Es como tener un tutor que habla directamente de tu configuracion energetica.',
+    q: '¿Cómo funciona la personalización por carta natal?',
+    a: 'Al registrarte, puedes introducir tus datos de nacimiento. Con ellos calculamos tu carta natal, que se usa para personalizar ejemplos, ejercicios y recomendaciones dentro de los cursos. Es como tener un tutor que habla directamente de tu configuración energética.',
   },
   {
     q: '¿Hay comunidad o soporte?',
-    a: 'Si. Contamos con soporte por email y WhatsApp para resolver dudas. Ademas, estamos construyendo espacios de comunidad para que las alumnas puedan compartir experiencias y aprendizajes.',
+    a: 'Sí. Contamos con soporte por email y WhatsApp para resolver dudas. Además, estamos construyendo espacios de comunidad para que las alumnas puedan compartir experiencias y aprendizajes.',
   },
   {
     q: '¿Puedo descargar el contenido?',
-    a: 'Los materiales complementarios (PDFs, guias, plantillas) son descargables. El contenido principal de las lecciones esta disponible online para garantizar que siempre accedas a la version mas actualizada.',
+    a: 'Los materiales complementarios (PDFs, guías, plantillas) son descargables. El contenido principal de las lecciones está disponible online para garantizar que siempre accedas a la versión más actualizada.',
   },
   {
-    q: '¿En que formato estan las lecciones?',
-    a: 'Las lecciones combinan texto explicativo, presentaciones visuales, PDFs descargables y ejercicios practicos. Creemos en el aprendizaje multiformato para que puedas estudiar como mejor te funcione. El audio se reserva exclusivamente para las meditaciones guiadas.',
+    q: '¿En qué formato están las lecciones?',
+    a: 'Las lecciones combinan texto explicativo, presentaciones visuales, PDFs descargables y ejercicios prácticos. Creemos en el aprendizaje multiformato para que puedas estudiar como mejor te funcione. El audio se reserva exclusivamente para las meditaciones guiadas.',
   },
   {
-    q: '¿Como verifico mi certificado?',
-    a: 'Cada certificado tiene un codigo unico. Cualquier persona puede ir a academy.selenaura.com/verificar, introducir el codigo y confirmar la autenticidad del certificado, incluyendo el nombre del curso y la fecha de emision.',
+    q: '¿Cómo verifico mi certificado?',
+    a: 'Cada certificado tiene un código único. Cualquier persona puede ir a academy.selenaura.com/verificar, introducir el código y confirmar la autenticidad del certificado, incluyendo el nombre del curso y la fecha de emisión.',
   },
   {
     q: '¿Qué métodos de pago aceptáis?',
@@ -65,25 +65,25 @@ const faqs = [
   },
   {
     q: '¿Sois una universidad acreditada?',
-    a: 'No, Selene Academia no es una universidad ni un centro de formacion reglada. Somos una escuela online independiente especializada en autoconocimiento con base cientifica. Nuestros certificados son certificados privados de aprovechamiento, no titulos oficiales ni academicos. Las disciplinas que impartimos (astrologia, tarot, meditacion) constituyen formacion especializada privada.',
+    a: 'No, Selene Academia no es una universidad ni un centro de formación reglada. Somos una escuela online independiente especializada en autoconocimiento con base científica. Nuestros certificados son certificados privados de aprovechamiento, no títulos oficiales ni académicos. Las disciplinas que impartimos (astrología, tarot, meditación) constituyen formación especializada privada.',
   },
   {
-    q: '¿Ofreceis factura?',
-    a: 'Si, emitimos factura por todas las compras. Si necesitas factura con datos fiscales especificos (por ejemplo, para deduccion como formacion profesional), contactanos y te la preparamos.',
+    q: '¿Ofrecéis factura?',
+    a: 'Sí, emitimos factura por todas las compras. Si necesitas factura con datos fiscales específicos (por ejemplo, para deducción como formación profesional), contáctanos y te la preparamos.',
   },
   {
-    q: '¿Puedo acceder desde Latinoamerica?',
-    a: 'Si, nuestros cursos estan disponibles para todo el mundo hispanohablante. Los precios se muestran en euros y aceptamos tarjetas internacionales (Visa, Mastercard, American Express) a traves de Stripe. El contenido esta optimizado para cualquier zona horaria.',
+    q: '¿Puedo acceder desde Latinoamérica?',
+    a: 'Sí, nuestros cursos están disponibles para todo el mundo hispanohablante. Los precios se muestran en euros y aceptamos tarjetas internacionales (Visa, Mastercard, American Express) a través de Stripe. El contenido está optimizado para cualquier zona horaria.',
   },
   {
-    q: '¿Que diferencia a Selene de otras escuelas de astrologia o tarot?',
-    a: 'Tres cosas: base cientifica (cada leccion cita estudios peer-reviewed), certificados verificables con codigo unico, y personalizacion por carta natal. No pedimos fe ciega: ofrecemos evidencia que puedes verificar por ti misma.',
+    q: '¿Qué diferencia a Selene de otras escuelas de astrología o tarot?',
+    a: 'Tres cosas: base científica (cada lección cita estudios peer-reviewed), certificados verificables con código único, y personalización por carta natal. No pedimos fe ciega: ofrecemos evidencia que puedes verificar por ti misma.',
   },
 ];
 
 export const metadata = {
   title: 'Preguntas frecuentes — Selene Academia',
-  description: 'Resolvemos tus dudas sobre cursos, certificados, metodos de pago, garantia de devolucion y mas.',
+  description: 'Resolvemos tus dudas sobre cursos, certificados, métodos de pago, garantía de devolución y más.',
 };
 
 export default function FAQ() {
@@ -114,7 +114,7 @@ export default function FAQ() {
           </h1>
           <p className="text-selene-white-dim max-w-xl mx-auto">
             Todo lo que necesitas saber sobre Selene Academia. Si no encuentras tu respuesta,
-            escribenos por WhatsApp o email.
+            escríbenos por WhatsApp o email.
           </p>
           <GoldDivider className="mt-8" />
         </section>
@@ -151,10 +151,10 @@ export default function FAQ() {
         {/* CTA */}
         <section className="px-6 py-16 text-center bg-selene-card/30">
           <h2 className="font-display text-xl font-medium text-selene-white mb-3">
-            ¿Aun tienes dudas?
+            ¿Aún tienes dudas?
           </h2>
           <p className="text-selene-white-dim mb-6 text-sm">
-            Escribenos y te respondemos en menos de 24 horas.
+            Escríbenos y te respondemos en menos de 24 horas.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a

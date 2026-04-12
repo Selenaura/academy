@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Navbar, Footer } from '@/components/ui';
 
 export const metadata = {
-  title: 'Pagina no encontrada',
+  title: 'Página no encontrada',
   robots: { index: false, follow: true },
 };
 
@@ -13,18 +13,18 @@ export default function NotFound() {
       <main className="min-h-[70vh] flex flex-col items-center justify-center px-6 py-20">
         <div className="text-[72px] mb-6">🌙</div>
         <h1 className="font-display text-4xl text-selene-white mb-4 text-center">
-          Pagina no encontrada
+          Página no encontrada
         </h1>
         <p className="text-selene-white-dim text-center max-w-md mb-10 leading-relaxed">
-          Las estrellas no nos han guiado hasta aqui. Quiza el curso que buscas
-          ha cambiado de nombre o ya no esta disponible.
+          Las estrellas no nos han guiado hasta aquí. Quizá el curso que buscas
+          ha cambiado de nombre o ya no está disponible.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
             href="/catalogo"
             className="bg-selene-gold text-selene-bg font-semibold text-sm px-6 py-3 rounded-xl hover:brightness-110 text-center no-underline"
           >
-            Ver catalogo de cursos
+            Ver catálogo de cursos
           </Link>
           <Link
             href="/"

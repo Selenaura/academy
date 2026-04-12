@@ -5,7 +5,9 @@ import { createClient } from '@/lib/supabase-server';
 import { NextResponse } from 'next/server';
 import { COURSES } from '@/lib/constants';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+function getStripe() {
+  return new Stripe(process.env.STRIPE_SECRET_KEY);
+}
 
 // Installment price per installment count (price in cents, returns cents per installment)
 function installmentAmount(totalCents, count) {
@@ -67,7 +69,7 @@ export async function POST(request) {
       let priceId;
       if (course.installment_price && course.installments === installments) {
         // Use the known product for this course's installment plan
-        const price = await stripe.prices.create({
+        const price = await getStripe().prices.create({
           product: 'prod_UEU1iWoYfaIrTD',
           unit_amount: amountPerInstallment,
           currency: 'eur',
@@ -76,11 +78,11 @@ export async function POST(request) {
         });
         priceId = price.id;
       } else {
-        const product = await stripe.products.create({
+        const product = await getStripe().products.create({
           name: `${course.title} — ${installments} cuotas`,
           metadata: { course_id: courseId },
         });
-        const price = await stripe.prices.create({
+        const price = await getStripe().prices.create({
           product: product.id,
           unit_amount: amountPerInstallment,
           currency: 'eur',
@@ -89,7 +91,7 @@ export async function POST(request) {
         priceId = price.id;
       }
 
-      const session = await stripe.checkout.sessions.create({
+      const session = await getStripe().checkout.sessions.create({
         payment_method_types: ['card'],
         mode: 'subscription',
         customer_email: user.email,
@@ -119,7 +121,7 @@ export async function POST(request) {
 
     // Single payment — card + PayPal + Link (Apple Pay / Google Pay) + Klarna
     // Note: PayPal must be enabled in Stripe Dashboard → Settings → Payment methods
-    const session = await stripe.checkout.sessions.create({
+    const session = await getStripe().checkout.sessions.create({
       mode: 'payment',
       customer_email: user.email,
       automatic_tax: { enabled: true },

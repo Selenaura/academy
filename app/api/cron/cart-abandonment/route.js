@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
@@ -164,23 +166,23 @@ export async function GET(request) {
         Hola,
       </p>
       <p style="color: #555; font-size: 16px; line-height: 1.6;">
-        Hemos visto que empezaste el proceso de inscripcion en
+        Hemos visto que empezaste el proceso de inscripción en
         <strong>${intent.course_name || 'uno de nuestros cursos'}</strong>
         ${priceFormatted ? `(${priceFormatted})` : ''} pero no lo completaste.
       </p>
       <p style="color: #555; font-size: 16px; line-height: 1.6;">
-        A veces la vida interrumpe, y lo entendemos. Si todavia te interesa,
+        A veces la vida interrumpe, y lo entendemos. Si todavía te interesa,
         puedes retomar justo donde lo dejaste:
       </p>
       <div style="text-align: center; margin: 32px 0;">
         <a href="${courseUrl}" style="display: inline-block; background: linear-gradient(135deg, #D4A843, #5BB8A6); color: white; text-decoration: none; padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 16px;">
-          Completar inscripcion
+          Completar inscripción
         </a>
       </div>
       <div style="background: #f0f9f6; border-left: 4px solid #5B9E8F; padding: 16px; border-radius: 4px; margin: 24px 0;">
         <p style="color: #3d6b5e; font-size: 14px; margin: 0; line-height: 1.5;">
-          <strong>Garantia de 14 dias:</strong> Si despues de empezar el curso
-          sientes que no es para ti, te devolvemos el 100% de tu inversion.
+          <strong>Garantía de 14 dias:</strong> Si después de empezar el curso
+          sientes que no es para ti, te devolvemos el 100% de tu inversión.
           Sin preguntas.
         </p>
       </div>
@@ -189,7 +191,7 @@ export async function GET(request) {
       </p>
     </div>
     <p style="text-align: center; color: #bbb; font-size: 12px; margin-top: 24px;">
-      Selene Academia &mdash; Tu viaje de transformacion
+      Selene Academia &mdash; Tu viaje de transformación
     </p>
   </div>
 </body>
@@ -199,11 +201,11 @@ export async function GET(request) {
 
 Hola,
 
-Hemos visto que empezaste el proceso de inscripcion en "${intent.course_name || 'uno de nuestros cursos'}" pero no lo completaste.
+Hemos visto que empezaste el proceso de inscripción en "${intent.course_name || 'uno de nuestros cursos'}" pero no lo completaste.
 
-Si todavia te interesa, puedes retomar aqui: ${courseUrl}
+Si todavía te interesa, puedes retomar aqui: ${courseUrl}
 
-Garantia de 14 dias: Si despues de empezar el curso sientes que no es para ti, te devolvemos el 100%. Sin preguntas.
+Garantía de 14 dias: Si después de empezar el curso sientes que no es para ti, te devolvemos el 100%. Sin preguntas.
 
 Si ya completaste tu compra o decidiste no continuar, puedes ignorar este mensaje.
 

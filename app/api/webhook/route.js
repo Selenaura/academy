@@ -4,7 +4,9 @@ import { NextResponse } from 'next/server';
 import { COURSES } from '@/lib/constants';
 import { sendWelcomeEmail, sendInstallmentEmail } from '@/lib/email';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+function getStripe() {
+  return new Stripe(process.env.STRIPE_SECRET_KEY);
+}
 
 // Use service role for webhook (no user context)
 function getSupabase() {
@@ -14,7 +16,7 @@ function getSupabase() {
   );
 }
 
-async function enrollUser(user_id, course_id, stripe_session_id, amount) {
+async function enrollUser(user_id, course_id, stripe_session_id, amount, email) {
   const supabase = getSupabase();
   // Check if already enrolled (prevent duplicate key errors)
   const { data: existing } = await supabase
@@ -45,7 +47,9 @@ async function enrollUser(user_id, course_id, stripe_session_id, amount) {
     .from('payments')
     .insert({
       user_id,
-      course_id,
+      email: email || null,
+      product_type: 'course',
+      product_id: course_id,
       stripe_session_id,
       amount,
       currency: 'eur',
@@ -64,7 +68,7 @@ export async function POST(request) {
 
   let event;
   try {
-    event = stripe.webhooks.constructEvent(body, sig, process.env.STRIPE_WEBHOOK_SECRET);
+    event = getStripe().webhooks.constructEvent(body, sig, process.env.STRIPE_WEBHOOK_SECRET);
   } catch (err) {
     console.error('Webhook signature verification failed:', err.message);
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 });
@@ -77,7 +81,7 @@ export async function POST(request) {
 
     // Only handle 'payment' mode here — subscriptions are handled in invoice.paid
     if (user_id && course_id && session.mode === 'payment') {
-      await enrollUser(user_id, course_id, session.id, session.amount_total);
+      await enrollUser(user_id, course_id, session.id, session.amount_total, session.customer_email || session.customer_details?.email);
 
       // Send welcome email
       const course = COURSES.find(c => c.id === course_id);
@@ -98,7 +102,7 @@ export async function POST(request) {
     const subscriptionId = invoice.subscription;
     if (!subscriptionId) return NextResponse.json({ received: true });
 
-    const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+    const subscription = await getStripe().subscriptions.retrieve(subscriptionId);
     const { user_id, course_id, max_cycles } = subscription.metadata || {};
     if (!user_id || !course_id || !max_cycles) return NextResponse.json({ received: true });
 
@@ -108,13 +112,13 @@ export async function POST(request) {
       : 1;
 
     // Update paid_cycles counter
-    await stripe.subscriptions.update(subscriptionId, {
+    await getStripe().subscriptions.update(subscriptionId, {
       metadata: { ...subscription.metadata, paid_cycles: String(paidCount) },
     });
 
     // First installment: enroll the user + send welcome email
     if (paidCount === 1) {
-      await enrollUser(user_id, course_id, subscriptionId, invoice.amount_paid);
+      await enrollUser(user_id, course_id, subscriptionId, invoice.amount_paid, invoice.customer_email);
 
       const course = COURSES.find(c => c.id === course_id);
       const customerEmail = invoice.customer_email;
@@ -145,18 +149,18 @@ export async function POST(request) {
     // Record this installment payment
     await supabase.from('payments').insert({
       user_id,
-      course_id,
+      email: invoice.customer_email || null,
+      product_type: 'course',
+      product_id: course_id,
       stripe_session_id: subscriptionId,
       amount: invoice.amount_paid,
       currency: invoice.currency,
       status: 'completed',
-      installment_number: paidCount,
-      installments_total: maxCycles,
     });
 
     // Cancel subscription when all installments paid
     if (paidCount >= maxCycles) {
-      await stripe.subscriptions.cancel(subscriptionId);
+      await getStripe().subscriptions.cancel(subscriptionId);
       console.log(`✅ Installment plan complete for ${user_id} / ${course_id} (${maxCycles} payments)`);
     }
   }

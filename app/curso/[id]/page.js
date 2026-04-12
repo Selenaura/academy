@@ -87,7 +87,7 @@ function SlideViewer({ slides }) {
         return (
           <div className="flex flex-col items-center justify-center text-center min-h-[260px] px-8 py-5">
             <div className="text-2xl mb-3">--{'>'}</div>
-            <p className="text-xs font-semibold text-selene-white-dim tracking-wide uppercase mb-3">Siguiente leccion</p>
+            <p className="text-xs font-semibold text-selene-white-dim tracking-wide uppercase mb-3">Siguiente lección</p>
             <p className="text-[14px] text-selene-white leading-relaxed max-w-[520px]">{s.text}</p>
           </div>
         );
@@ -363,7 +363,7 @@ export default function CoursePage({ params }) {
           {lessonLoading && (
             <div className="flex flex-col items-center justify-center py-20">
               <div className="w-10 h-10 border-2 border-selene-border border-t-selene-gold rounded-full animate-spin" />
-              <p className="text-sm text-selene-white-dim mt-4">Cargando leccion...</p>
+              <p className="text-sm text-selene-white-dim mt-4">Cargando lección...</p>
             </div>
           )}
 
@@ -375,7 +375,7 @@ export default function CoursePage({ params }) {
                 <div className="flex items-center gap-2 mb-3">
                   <BookOpenIcon size={14} className="text-selene-gold" />
                   <span className="text-[11px] text-selene-gold font-semibold tracking-wide uppercase">
-                    Leccion {lessonData.lesson_number}
+                    Lección {lessonData.lesson_number}
                   </span>
                 </div>
                 <h1 className="font-display text-[24px] md:text-[28px] font-normal text-selene-white leading-tight">
@@ -438,7 +438,7 @@ export default function CoursePage({ params }) {
                 }}
                 className="w-full bg-selene-gold text-selene-bg font-semibold py-3.5 rounded-xl hover:brightness-110 transition mb-4"
               >
-                {hasNext ? 'Completar y continuar' : 'Completar leccion'}
+                {hasNext ? 'Completar y continuar' : 'Completar lección'}
               </button>
 
               {/* Prev / Next navigation */}
@@ -484,7 +484,7 @@ export default function CoursePage({ params }) {
                       <div className="flex-1 min-w-0">
                         <div className={`text-[13px] truncate ${lesson.id === activeLesson.id ? 'text-selene-gold' : 'text-selene-white'}`}>{lesson.title}</div>
                         <div className="text-[11px] text-selene-white-dim">
-                          {lesson.type === 'quiz' ? 'Quiz' : lesson.type === 'exam' ? 'Evaluacion' : 'Leccion'} · {lesson.duration}
+                          {lesson.type === 'quiz' ? 'Quiz' : lesson.type === 'exam' ? 'Evaluación' : 'Lección'} · {lesson.duration}
                         </div>
                       </div>
                     </button>
@@ -497,7 +497,7 @@ export default function CoursePage({ params }) {
           {/* Error / no data */}
           {!lessonLoading && !lessonData && (
             <div className="flex flex-col items-center justify-center py-20">
-              <p className="text-sm text-selene-white-dim mb-4">No se pudo cargar el contenido de esta leccion.</p>
+              <p className="text-sm text-selene-white-dim mb-4">No se pudo cargar el contenido de esta lección.</p>
               <button
                 onClick={() => setActiveLesson(null)}
                 className="text-sm text-selene-gold hover:underline"

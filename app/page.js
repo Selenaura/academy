@@ -52,7 +52,7 @@ export default function LandingPage() {
     { value: '200+', label: 'Lecciones' },
     { value: '30+', label: 'Estudios citados' },
     { value: '6', label: 'Certificaciones' },
-    { value: '14', label: 'Dias de garantia' },
+    { value: '14', label: 'Días de garantía' },
   ];
 
   const valueProps = [
@@ -615,7 +615,7 @@ export default function LandingPage() {
           Tu carta natal personaliza tu ruta.
         </p>
         <p className="text-[13px] text-selene-gold/70 mb-8">
-          Garantia de devolucion de 14 dias en todos los cursos de pago.
+          Garantía de devolución de 14 días en todos los cursos de pago.
         </p>
         <Link
           href="/auth?mode=register"

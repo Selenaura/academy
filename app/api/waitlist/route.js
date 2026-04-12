@@ -56,10 +56,10 @@ async function sendWaitlistConfirmation({ email }) {
                   <td style="padding:24px;">
                     <p style="color:#b8b8c8;font-size:14px;line-height:1.8;margin:0;">
                       Solo hay <strong style="color:#d4a853;">20 plazas</strong> a precio fundador (99,99 euros en lugar de 149,99 euros).
-                      Te avisaremos cuando se abra la inscripcion con todos los detalles.
+                      Te avisaremos cuando se abra la inscripción con todos los detalles.
                     </p>
                     <p style="color:#b8b8c8;font-size:14px;line-height:1.8;margin:16px 0 0;">
-                      El Master incluye: 12 modulos, 80 horas, 6 disciplinas integradas, casos supervisados, guia legal y certificacion profesional.
+                      El Máster incluye: 12 módulos, 80 horas, 6 disciplinas integradas, casos supervisados, guía legal y certificación profesional.
                     </p>
                   </td>
                 </tr>
@@ -70,7 +70,7 @@ async function sendWaitlistConfirmation({ email }) {
             <td style="padding:20px 40px;text-align:center;">
               <a href="https://academy.selenaura.com/master?utm_source=brevo&utm_medium=email&utm_campaign=waitlist_master"
                  style="display:inline-block;background-color:#d4a853;color:#0a0a0f;text-decoration:none;padding:14px 36px;border-radius:25px;font-size:15px;font-weight:bold;">
-                Ver pagina del Master
+                Ver página del Máster
               </a>
             </td>
           </tr>

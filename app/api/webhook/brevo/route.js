@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
@@ -48,13 +50,7 @@ export async function POST(request) {
 
     switch (event) {
       case 'opened': {
-        const { error } = await supabase.rpc('increment_field', {
-          row_email: normalizedEmail,
-          field_name: 'opens_count',
-        }).catch(() => ({ error: 'rpc not available' }));
-
-        // Fallback: direct update if RPC doesn't exist
-        // First get current count, then update
+        // Direct update: get current count, then increment
         const { data: lead } = await supabase
           .from('leads')
           .select('opens_count')

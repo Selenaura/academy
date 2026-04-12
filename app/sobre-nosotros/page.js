@@ -58,8 +58,8 @@ export default function SobreNosotros() {
               es la base de una vida plena y consciente.
             </p>
             <p>
-              Cada curso que creamos pasa por un proceso de investigacion donde cruzamos
-              fuentes academicas con tradicion milenaria, para que cada leccion tenga tanto
+              Cada curso que creamos pasa por un proceso de investigación donde cruzamos
+              fuentes académicas con tradición milenaria, para que cada lección tenga tanto
               rigor como alma.
             </p>
           </div>
@@ -75,23 +75,23 @@ export default function SobreNosotros() {
               {[
                 {
                   icon: <BookIcon size={28} className="text-selene-gold" />,
-                  title: 'Base cientifica',
+                  title: 'Base científica',
                   desc: 'Cada curso cita estudios peer-reviewed. No pedimos fe ciega: ofrecemos evidencia que puedes verificar.',
                 },
                 {
                   icon: <StarIcon size={28} className="text-selene-gold" />,
                   title: 'Aprendizaje multiformato',
-                  desc: 'Texto, presentaciones, PDFs descargables y ejercicios practicos. Aprendes como mejor te funcione.',
+                  desc: 'Texto, presentaciones, PDFs descargables y ejercicios prácticos. Aprendes como mejor te funcione.',
                 },
                 {
                   icon: <MoonIcon size={28} className="text-selene-gold" />,
-                  title: 'Personalizacion por carta natal',
-                  desc: 'Tu carta natal guia tu experiencia de aprendizaje, haciendo cada leccion relevante para ti.',
+                  title: 'Personalización por carta natal',
+                  desc: 'Tu carta natal guía tu experiencia de aprendizaje, haciendo cada lección relevante para ti.',
                 },
                 {
                   icon: <CertIcon size={28} className="text-selene-gold" />,
                   title: 'Certificados verificables',
-                  desc: 'Al completar un curso, recibes un certificado con codigo unico que cualquier persona puede verificar online.',
+                  desc: 'Al completar un curso, recibes un certificado con código único que cualquier persona puede verificar online.',
                 },
               ].map((item, i) => (
                 <div key={i} className="bg-selene-card border border-selene-border rounded-2xl p-6">
