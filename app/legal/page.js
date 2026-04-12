@@ -11,40 +11,40 @@ export default function AvisoLegalPage() {
       <Navbar />
       <main className="max-w-3xl mx-auto px-6 py-16">
         <h1 className="font-display text-3xl md:text-4xl text-selene-gold mb-2">Aviso Legal</h1>
-        <p className="text-selene-white-dim text-sm mb-10">Ultima actualizacion: 5 de abril de 2026</p>
+        <p className="text-selene-white-dim text-sm mb-10">Última actualización: 5 de abril de 2026</p>
 
         <section className="mb-10">
           <h2 className="font-display text-xl text-selene-gold mb-3">1. Datos identificativos del titular</h2>
           <p className="text-selene-white-dim leading-relaxed mb-2">
-            En cumplimiento del articulo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la
-            Informacion y de Comercio Electronico (LSSI-CE), se informa al usuario de los siguientes datos:
+            En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la
+            Información y de Comercio Electrónico (LSSI-CE), se informa al usuario de los siguientes datos:
           </p>
           <ul className="text-selene-white-dim leading-relaxed list-disc pl-6 space-y-1">
             <li><strong className="text-selene-white">Nombre comercial:</strong> SelenaUra</li>
             <li><strong className="text-selene-white">Dominio:</strong> academy.selenaura.com</li>
-            <li><strong className="text-selene-white">Correo electronico:</strong> info@selenaura.com</li>
-            <li><strong className="text-selene-white">Pais:</strong> Espana</li>
+            <li><strong className="text-selene-white">Correo electrónico:</strong> info@selenaura.com</li>
+            <li><strong className="text-selene-white">País:</strong> España</li>
           </ul>
         </section>
 
         <section className="mb-10">
           <h2 className="font-display text-xl text-selene-gold mb-3">2. Actividad</h2>
           <p className="text-selene-white-dim leading-relaxed">
-            SelenaUra opera la plataforma Selene Academia, dedicada a la formacion online en desarrollo personal
-            y consciencia. Ofrecemos cursos, lecturas y recursos formativos en disciplinas como tarot, astrologia,
-            quiromancia, interpretacion de suenos y numerologia, siempre desde un enfoque que integra base
-            cientifica y tradicion simbolica.
+            SelenaUra opera la plataforma Selene Academia, dedicada a la formación online en desarrollo personal
+            y consciencia. Ofrecemos cursos, lecturas y recursos formativos en disciplinas como tarot, astrología,
+            quiromancia, interpretación de sueños y numerología, siempre desde un enfoque que integra base
+            científica y tradición simbólica.
           </p>
         </section>
 
         <section className="mb-10">
           <h2 className="font-display text-xl text-selene-gold mb-3">3. Propiedad intelectual e industrial</h2>
           <p className="text-selene-white-dim leading-relaxed">
-            Todos los contenidos del sitio web, incluyendo a titulo enunciativo pero no limitativo textos, imagenes,
-            graficos, logotipos, iconos, software, materiales audiovisuales y diseno grafico, son propiedad de
-            SelenaUra o de sus licenciantes, y estan protegidos por las leyes espanolas e internacionales de
-            propiedad intelectual e industrial. Queda prohibida su reproduccion, distribucion, comunicacion publica
-            o transformacion sin autorizacion expresa y por escrito de SelenaUra.
+            Todos los contenidos del sitio web, incluyendo a título enunciativo pero no limitativo textos, imágenes,
+            gráficos, logotipos, iconos, software, materiales audiovisuales y diseño gráfico, son propiedad de
+            SelenaUra o de sus licenciantes, y están protegidos por las leyes españolas e internacionales de
+            propiedad intelectual e industrial. Queda prohibida su reproducción, distribución, comunicación pública
+            o transformación sin autorización expresa y por escrito de SelenaUra.
           </p>
         </section>
 
@@ -52,8 +52,8 @@ export default function AvisoLegalPage() {
           <h2 className="font-display text-xl text-selene-gold mb-3">4. Condiciones de uso</h2>
           <p className="text-selene-white-dim leading-relaxed">
             El usuario se compromete a utilizar el sitio web y sus servicios de conformidad con la ley, la moral,
-            el orden publico y las presentes condiciones. Se compromete a no utilizar los contenidos con fines
-            ilicitos, lesivos de derechos de terceros o que puedan danar, inutilizar o deteriorar el sitio web.
+            el orden público y las presentes condiciones. Se compromete a no utilizar los contenidos con fines
+            ilícitos, lesivos de derechos de terceros o que puedan dañar, inutilizar o deteriorar el sitio web.
           </p>
         </section>
 
@@ -61,54 +61,54 @@ export default function AvisoLegalPage() {
           <h2 className="font-display text-xl text-selene-gold mb-3">5. Naturaleza de los certificados</h2>
           <p className="text-selene-white-dim leading-relaxed mb-3">
             Al finalizar determinados programas formativos, Selene Academia emite <strong className="text-selene-white">certificados privados de aprovechamiento</strong> que
-            acreditan la superacion satisfactoria del programa. Estos certificados son verificables mediante un codigo CSV
-            unico a traves de nuestra plataforma.
+            acreditan la superación satisfactoria del programa. Estos certificados son verificables mediante un código CSV
+            único a través de nuestra plataforma.
           </p>
           <p className="text-selene-white-dim leading-relaxed mb-3">
             <strong className="text-selene-white">Aviso importante:</strong> Los certificados emitidos por Selene Academia son
-            certificados privados expedidos por SelenaUra. <strong className="text-selene-white">No constituyen titulos oficiales,
-            academicos ni universitarios</strong> reconocidos por el sistema educativo espanol ni por ninguna administracion publica.
+            certificados privados expedidos por SelenaUra. <strong className="text-selene-white">No constituyen títulos oficiales,
+            académicos ni universitarios</strong> reconocidos por el sistema educativo español ni por ninguna administración pública.
             No habilitan para el ejercicio de profesiones reguladas.
           </p>
           <p className="text-selene-white-dim leading-relaxed">
-            Las disciplinas impartidas (astrologia, tarot, quiromancia, interpretacion de suenos, numerologia, meditacion) constituyen
-            formacion especializada privada en el ambito del desarrollo personal y el autoconocimiento. Los roles profesionales
-            derivados (facilitador/a, guia, acompanante) no son profesiones reguladas en Espana y no requieren titulacion oficial.
+            Las disciplinas impartidas (astrología, tarot, quiromancia, interpretación de sueños, numerología, meditación) constituyen
+            formación especializada privada en el ámbito del desarrollo personal y el autoconocimiento. Los roles profesionales
+            derivados (facilitador/a, guía, acompañante) no son profesiones reguladas en España y no requieren titulación oficial.
           </p>
         </section>
 
         <section className="mb-10">
-          <h2 className="font-display text-xl text-selene-gold mb-3">6. Limitacion de responsabilidad</h2>
+          <h2 className="font-display text-xl text-selene-gold mb-3">6. Limitación de responsabilidad</h2>
           <p className="text-selene-white-dim leading-relaxed mb-3">
             SelenaUra no se hace responsable de:
           </p>
           <ul className="text-selene-white-dim leading-relaxed list-disc pl-6 space-y-1">
             <li>Errores u omisiones en los contenidos del sitio web.</li>
-            <li>Danos derivados del uso o imposibilidad de uso del sitio.</li>
-            <li>Interrupciones del servicio por causas tecnicas, de fuerza mayor o ajenas a su control.</li>
-            <li>Contenidos de sitios web de terceros a los que se pueda acceder desde enlaces en esta pagina.</li>
-            <li>Los resultados individuales que cada usuario obtenga de la aplicacion de los conocimientos adquiridos.</li>
+            <li>Daños derivados del uso o imposibilidad de uso del sitio.</li>
+            <li>Interrupciones del servicio por causas técnicas, de fuerza mayor o ajenas a su control.</li>
+            <li>Contenidos de sitios web de terceros a los que se pueda acceder desde enlaces en esta página.</li>
+            <li>Los resultados individuales que cada usuario obtenga de la aplicación de los conocimientos adquiridos.</li>
           </ul>
           <p className="text-selene-white-dim leading-relaxed mt-3">
-            Los contenidos formativos de Selene Academia tienen caracter educativo y de desarrollo personal.
-            No sustituyen el asesoramiento profesional en salud, psicologia u otros ambitos regulados.
+            Los contenidos formativos de Selene Academia tienen carácter educativo y de desarrollo personal.
+            No sustituyen el asesoramiento profesional en salud, psicología u otros ámbitos regulados.
           </p>
         </section>
 
         <section className="mb-10">
           <h2 className="font-display text-xl text-selene-gold mb-3">7. Enlaces a terceros</h2>
           <p className="text-selene-white-dim leading-relaxed">
-            El sitio web puede contener enlaces a paginas de terceros. SelenaUra no asume responsabilidad por
-            los contenidos, politicas de privacidad o practicas de dichos sitios externos.
+            El sitio web puede contener enlaces a páginas de terceros. SelenaUra no asume responsabilidad por
+            los contenidos, políticas de privacidad o prácticas de dichos sitios externos.
           </p>
         </section>
 
         <section className="mb-10">
-          <h2 className="font-display text-xl text-selene-gold mb-3">8. Legislacion aplicable y jurisdiccion</h2>
+          <h2 className="font-display text-xl text-selene-gold mb-3">8. Legislación aplicable y jurisdicción</h2>
           <p className="text-selene-white-dim leading-relaxed">
-            Las presentes condiciones se rigen por la legislacion espanola. Para la resolucion de cualquier
+            Las presentes condiciones se rigen por la legislación española. Para la resolución de cualquier
             controversia derivada del uso de este sitio web, las partes se someten expresamente a los Juzgados
-            y Tribunales de Castellon de la Plana (Espana), con renuncia a cualquier otro fuero que pudiera
+            y Tribunales de Castellón de la Plana (España), con renuncia a cualquier otro fuero que pudiera
             corresponderles, salvo que la normativa aplicable imponga un fuero distinto.
           </p>
         </section>
