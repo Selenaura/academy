@@ -7,23 +7,33 @@ import Link from 'next/link';
 const REFRESH_INTERVAL = 60_000; // 60 seconds
 
 const SOURCE_LABELS = {
-  meta_lead_ad_spain: 'Meta Ads (Spain)',
-  meta_lead_ad_mexico: 'Meta Ads (Mexico)',
-  meta_lead_ad: 'Meta Ads',
-  lectura_express: 'Lectura Express',
-  organic: 'Organic',
-  waitlist_master: 'Waitlist Master',
-  waitlist_master_founding: 'Waitlist Founding',
-  unknown: 'Unknown',
+  'lead-magnet': 'Lead Magnet',
+  'meta-ads-guia': 'Meta Ads (Guía Espiritual)',
+  'meta-ads-compatibilidad': 'Meta Ads (Compatibilidad LATAM)',
+  'meta-ads': 'Meta Ads (Webhook)',
+  'lectura-express': 'Lectura Express',
+  'lectura_express': 'Lectura Express',
+  'compatibilidad_tool': 'Compatibilidad (Tool)',
+  'compatibilidad': 'Compatibilidad',
+  'instagram_comment': 'Instagram',
+  'exit_intent_landing': 'Exit Intent (Landing)',
+  'exit_intent': 'Exit Intent',
+  'carta_natal_gratis': 'Carta Natal Gratis',
+  'organic': 'Orgánico',
+  'waitlist_master': 'Waitlist Master',
+  'unknown': 'Desconocido',
 };
 
 const STEP_LABELS = {
-  0: 'Nuevo (Step 0)',
-  1: 'Email 1 enviado',
-  2: 'Email 2 enviado',
-  3: 'Email 3 enviado',
-  4: 'Email 4 enviado',
-  5: 'Secuencia completa',
+  0: 'Nuevo (sin nurture)',
+  1: 'Welcome enviado',
+  2: '3 Secretos (día 1)',
+  3: 'Horóscopo (día 2)',
+  4: 'Oferta Tarot (día 3)',
+  5: 'Pack Astral (día 5)',
+  6: 'Última oportunidad (día 8)',
+  7: 'Win-back (día 14)',
+  8: 'Reminder Tarot (día 4)',
   999: 'Desuscrito',
 };
 
