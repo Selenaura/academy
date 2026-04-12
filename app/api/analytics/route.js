@@ -5,17 +5,20 @@ import { withAdmin } from '@/lib/admin';
 
 export async function GET() {
   return withAdmin(async (admin) => {
-    // Fetch all leads and enrollments in parallel
-    const [leadsRes, enrollmentsRes] = await Promise.all([
+    // Fetch all leads, enrollments, and payments in parallel
+    const [leadsRes, enrollmentsRes, paymentsRes] = await Promise.all([
       admin.from('leads').select('id, email, source, nurture_step, opens_count, clicks_count, created_at'),
       admin.from('enrollments').select('id, user_id, course_id, status, amount_paid, enrolled_at'),
+      admin.from('payments').select('id, email, product_type, product_id, amount, currency, status, created_at'),
     ]);
 
     if (leadsRes.error) return NextResponse.json({ error: leadsRes.error.message }, { status: 500 });
     if (enrollmentsRes.error) return NextResponse.json({ error: enrollmentsRes.error.message }, { status: 500 });
+    if (paymentsRes.error) return NextResponse.json({ error: paymentsRes.error.message }, { status: 500 });
 
     const leads = leadsRes.data || [];
     const enrollments = enrollmentsRes.data || [];
+    const payments = (paymentsRes.data || []).filter(p => p.status === 'completed');
 
     const now = new Date();
     const todayStr = now.toISOString().slice(0, 10);
@@ -25,9 +28,17 @@ export async function GET() {
     const totalLeads = leads.length;
     const leadsThisWeek = leads.filter(l => l.created_at >= weekAgo).length;
     const leadsToday = leads.filter(l => l.created_at?.slice(0, 10) === todayStr).length;
-    const totalSales = enrollments.length;
-    const totalRevenue = enrollments.reduce((sum, e) => sum + (e.amount_paid || 0), 0);
+    const paidEnrollments = enrollments.filter(e => e.amount_paid > 0);
+    // Revenue from payments table (cents → euros)
+    const totalPaymentsRevenue = payments.reduce((sum, p) => sum + (p.amount || 0), 0) / 100;
+    // Revenue from enrollments (in case payments table doesn't capture all)
+    const totalEnrollmentsRevenue = enrollments.reduce((sum, e) => sum + (e.amount_paid || 0), 0) / 100;
+    const totalRevenue = Math.max(totalPaymentsRevenue, totalEnrollmentsRevenue);
+    const totalSales = payments.length || paidEnrollments.length;
+    const salesThisWeek = payments.filter(p => p.created_at >= weekAgo).length;
+    const salesToday = payments.filter(p => p.created_at?.slice(0, 10) === todayStr).length;
     const conversionRate = totalLeads > 0 ? ((totalSales / totalLeads) * 100).toFixed(1) : '0.0';
+    const avgOrderValue = totalSales > 0 ? (totalRevenue / totalSales).toFixed(2) : '0.00';
 
     // ── Section 2: Leads por Fuente ──
     const sourceMap = {};
@@ -96,13 +107,54 @@ export async function GET() {
       leadsPerDay.push({ date: dayStr, count: dayMap[dayStr] || 0 });
     }
 
+    // ── Section 7: Ventas por Producto ──
+    const productMap = {};
+    payments.forEach(p => {
+      const key = p.product_id || 'unknown';
+      if (!productMap[key]) productMap[key] = { type: p.product_type, count: 0, revenue: 0 };
+      productMap[key].count += 1;
+      productMap[key].revenue += (p.amount || 0) / 100;
+    });
+    const salesByProduct = Object.entries(productMap)
+      .map(([product, data]) => ({ product, type: data.type, count: data.count, revenue: data.revenue }))
+      .sort((a, b) => b.revenue - a.revenue);
+
+    // ── Section 8: Revenue por Día (últimos 30 días) ──
+    const revDayMap = {};
+    payments.forEach(p => {
+      const day = p.created_at?.slice(0, 10);
+      if (day) revDayMap[day] = (revDayMap[day] || 0) + (p.amount || 0) / 100;
+    });
+    const revenuePerDay = [];
+    for (let i = 29; i >= 0; i--) {
+      const d = new Date(now.getTime() - i * 86400000);
+      const dayStr = d.toISOString().slice(0, 10);
+      revenuePerDay.push({ date: dayStr, revenue: revDayMap[dayStr] || 0 });
+    }
+
+    // ── Section 9: Últimas Ventas ──
+    const recentSales = [...payments]
+      .sort((a, b) => (b.created_at || '').localeCompare(a.created_at || ''))
+      .slice(0, 15)
+      .map(p => ({
+        email: maskEmail(p.email),
+        product: p.product_id || 'unknown',
+        type: p.product_type || 'unknown',
+        amount: (p.amount || 0) / 100,
+        currency: p.currency || 'eur',
+        created_at: p.created_at,
+      }));
+
     return NextResponse.json({
-      summary: { totalLeads, leadsThisWeek, leadsToday, totalSales, totalRevenue, conversionRate },
+      summary: { totalLeads, leadsThisWeek, leadsToday, totalSales, salesThisWeek, salesToday, totalRevenue, conversionRate, avgOrderValue },
       leadsBySource,
       nurtureFunnel,
       engagement: { avgOpens, avgClicks, neverOpened, engaged, topEngaged },
       recentLeads,
       leadsPerDay,
+      salesByProduct,
+      revenuePerDay,
+      recentSales,
     });
   });
 }

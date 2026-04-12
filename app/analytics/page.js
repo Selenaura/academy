@@ -24,6 +24,26 @@ const SOURCE_LABELS = {
   'unknown': 'Desconocido',
 };
 
+const PRODUCT_LABELS = {
+  'tarot-profunda': 'Tarot — Lectura Profunda',
+  'tarot-express': 'Tarot — Lectura Express',
+  'compatibilidad-detallada': 'Compatibilidad Detallada',
+  'pack-astral': 'Pack Astral Completo',
+  'carta-completa': 'Carta Natal Completa',
+  'carta-premium': 'Carta Natal Premium',
+  'quirologia': 'Quirología',
+  'suenos': 'Interpretación de Sueños',
+  'brujula-interior': 'Curso: Brújula Interior',
+  'tarot-intuitivo': 'Curso: Tarot Intuitivo',
+  'astrologia-natal': 'Curso: Astrología Natal',
+  'guia-profesional': 'Curso: Guía Profesional',
+  'cronobiologia': 'Curso: Cronobiología',
+  'quirologia-certificacion': 'Curso: Quirología Cert.',
+  'suenos-certificacion': 'Curso: Sueños Cert.',
+  'raices-invisibles': 'Curso: Raíces Invisibles',
+  'magnetismo-consciente': 'Curso: Magnetismo Consciente',
+};
+
 const STEP_LABELS = {
   0: 'Nuevo (sin nurture)',
   1: 'Welcome enviado',
@@ -106,12 +126,14 @@ export default function AnalyticsPage() {
     );
   }
 
-  const { summary, leadsBySource, nurtureFunnel, engagement, recentLeads, leadsPerDay } = data;
+  const { summary, leadsBySource, nurtureFunnel, engagement, recentLeads, leadsPerDay, salesByProduct, revenuePerDay, recentSales } = data;
   const maxLeadsPerDay = Math.max(...leadsPerDay.map(d => d.count), 1);
   const maxSourceCount = Math.max(...leadsBySource.map(s => s.count), 1);
   const activeFunnel = nurtureFunnel.filter(f => f.step !== 999);
   const maxFunnelCount = Math.max(...activeFunnel.map(f => f.count), 1);
   const unsubscribed = nurtureFunnel.find(f => f.step === 999);
+  const maxRevenuePerDay = Math.max(...(revenuePerDay || []).map(d => d.revenue), 0.01);
+  const maxProductRevenue = Math.max(...(salesByProduct || []).map(s => s.revenue), 0.01);
 
   return (
     <div className="min-h-screen bg-selene-bg text-selene-white font-body">
@@ -148,13 +170,18 @@ export default function AnalyticsPage() {
         {/* ═══ Section 1: Resumen en Tiempo Real ═══ */}
         <section>
           <SectionTitle>Resumen en Tiempo Real</SectionTitle>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
             <KpiCard label="Total Leads" value={summary.totalLeads} />
             <KpiCard label="Leads esta semana" value={summary.leadsThisWeek} accent="teal" />
             <KpiCard label="Leads hoy" value={summary.leadsToday} accent="blue" />
+            <KpiCard label="Tasa Conversión" value={`${summary.conversionRate}%`} accent="rose" />
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             <KpiCard label="Total Ventas" value={summary.totalSales} accent="purple" />
-            <KpiCard label="Ingresos Totales" value={`${summary.totalRevenue.toFixed(0)}\u00A0\u20AC`} accent="success" />
-            <KpiCard label="Tasa Conversion" value={`${summary.conversionRate}%`} accent="rose" />
+            <KpiCard label="Ventas esta semana" value={summary.salesThisWeek || 0} accent="purple" />
+            <KpiCard label="Ventas hoy" value={summary.salesToday || 0} accent="purple" />
+            <KpiCard label="Ingresos Totales" value={`${(summary.totalRevenue || 0).toFixed(2)}\u00A0€`} accent="success" />
+            <KpiCard label="Ticket Medio" value={`${summary.avgOrderValue || '0.00'}\u00A0€`} accent="success" />
           </div>
         </section>
 
@@ -336,6 +363,110 @@ export default function AnalyticsPage() {
             </div>
           </div>
         </section>
+
+        {/* ═══ Section 7: Ventas por Producto ═══ */}
+        {salesByProduct && salesByProduct.length > 0 && (
+          <section>
+            <SectionTitle>Ventas por Producto</SectionTitle>
+            <div className="bg-selene-card border border-selene-border rounded-xl p-5">
+              <div className="space-y-3">
+                {salesByProduct.map(({ product, type, count, revenue }) => (
+                  <div key={product} className="flex items-center gap-3">
+                    <span className="text-sm text-selene-white-dim w-44 sm:w-52 truncate flex-shrink-0">
+                      <span className={`inline-block w-2 h-2 rounded-full mr-2 ${type === 'reading' ? 'bg-selene-purple' : 'bg-selene-gold'}`} />
+                      {PRODUCT_LABELS[product] || product}
+                    </span>
+                    <div className="flex-1 bg-selene-bg rounded-full h-7 overflow-hidden">
+                      <div
+                        className={`h-full ${type === 'reading' ? 'bg-gradient-to-r from-selene-purple/70 to-selene-purple' : 'bg-gradient-to-r from-selene-success/70 to-selene-success'} rounded-full flex items-center justify-end pr-2 transition-all duration-500`}
+                        style={{ width: `${Math.max((revenue / maxProductRevenue) * 100, 12)}%` }}
+                      >
+                        <span className="text-xs font-semibold text-white drop-shadow">{revenue.toFixed(2)}€</span>
+                      </div>
+                    </div>
+                    <span className="text-xs text-selene-white-dim w-12 text-right flex-shrink-0">{count} uds</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ═══ Section 8: Revenue por Día ═══ */}
+        {revenuePerDay && revenuePerDay.some(d => d.revenue > 0) && (
+          <section>
+            <SectionTitle>Revenue por Día (últimos 30 días)</SectionTitle>
+            <div className="bg-selene-card border border-selene-border rounded-xl p-5">
+              <div className="flex items-end gap-1 h-40 sm:h-48">
+                {revenuePerDay.map(({ date, revenue }) => {
+                  const height = maxRevenuePerDay > 0 ? (revenue / maxRevenuePerDay) * 100 : 0;
+                  const dayLabel = date.slice(8, 10);
+                  const isToday = date === new Date().toISOString().slice(0, 10);
+                  return (
+                    <div key={date} className="flex-1 flex flex-col items-center justify-end h-full group relative">
+                      <div className="absolute -top-8 hidden group-hover:block bg-selene-elevated border border-selene-border rounded px-2 py-1 text-xs text-selene-white whitespace-nowrap z-10">
+                        {date}: {revenue.toFixed(2)}€
+                      </div>
+                      {revenue > 0 && (
+                        <span className="text-[10px] text-selene-success mb-1 hidden sm:block">{revenue.toFixed(0)}€</span>
+                      )}
+                      <div
+                        className={`w-full rounded-t transition-all duration-300 ${isToday ? 'bg-selene-success' : 'bg-selene-success/50 group-hover:bg-selene-success/80'}`}
+                        style={{ height: `${Math.max(height, revenue > 0 ? 4 : 1)}%` }}
+                      />
+                      <span className={`text-[9px] mt-1 ${isToday ? 'text-selene-success font-bold' : 'text-selene-white-dim/50'} ${parseInt(dayLabel) % 5 === 0 || isToday ? 'block' : 'hidden sm:block'}`}>
+                        {dayLabel}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ═══ Section 9: Últimas Ventas ═══ */}
+        {recentSales && recentSales.length > 0 && (
+          <section>
+            <SectionTitle>Últimas Ventas</SectionTitle>
+            <div className="bg-selene-card border border-selene-border rounded-xl overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="text-selene-white-dim bg-selene-elevated/50 border-b border-selene-border">
+                      <th className="text-left py-3 px-4 font-medium">Email</th>
+                      <th className="text-left py-3 px-3 font-medium">Producto</th>
+                      <th className="text-center py-3 px-3 font-medium">Tipo</th>
+                      <th className="text-right py-3 px-3 font-medium">Importe</th>
+                      <th className="text-right py-3 px-4 font-medium">Fecha</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {recentSales.map((sale, i) => (
+                      <tr key={i} className="border-b border-selene-border/30 hover:bg-selene-elevated/30 transition">
+                        <td className="py-2.5 px-4 font-mono text-xs text-selene-white">{sale.email}</td>
+                        <td className="py-2.5 px-3 text-selene-white-dim text-xs">{PRODUCT_LABELS[sale.product] || sale.product}</td>
+                        <td className="py-2.5 px-3 text-center">
+                          <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-medium ${
+                            sale.type === 'reading'
+                              ? 'bg-selene-purple/20 text-selene-purple'
+                              : 'bg-selene-gold/20 text-selene-gold'
+                          }`}>
+                            {sale.type === 'reading' ? 'Lectura' : 'Curso'}
+                          </span>
+                        </td>
+                        <td className="py-2.5 px-3 text-right text-selene-success font-semibold">{sale.amount.toFixed(2)}€</td>
+                        <td className="py-2.5 px-4 text-right text-selene-white-dim text-xs">
+                          {sale.created_at ? new Date(sale.created_at).toLocaleDateString('es-ES', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '-'}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Footer */}
         <div className="text-center py-6">
