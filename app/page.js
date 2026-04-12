@@ -111,8 +111,13 @@ export default function LandingPage() {
         <div className="absolute top-28 left-[15%] w-0.5 h-0.5 rounded-full bg-selene-blue-light shadow-[0_0_15px_rgba(107,143,197,0.4)] animate-pulse-gold" style={{ animationDelay: '1s' }} />
 
         <div className="relative z-10">
-          <div className="inline-block text-[11px] text-selene-gold font-semibold px-4 py-1.5 rounded-full border border-selene-gold/20 bg-selene-gold/5 mb-8 tracking-[0.1em] uppercase">
-            ✦ Ciencia y consciencia de lo invisible ✦
+          <div className="flex items-center justify-center gap-3 mb-8 flex-wrap">
+            <div className="inline-block text-[11px] text-selene-gold font-semibold px-4 py-1.5 rounded-full border border-selene-gold/20 bg-selene-gold/5 tracking-[0.1em] uppercase">
+              ✦ Ciencia y consciencia de lo invisible ✦
+            </div>
+            <div className="inline-block text-[11px] font-semibold px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 tracking-[0.1em] uppercase">
+              100% Online — A tu ritmo
+            </div>
           </div>
 
           <h1 className="font-display text-[clamp(36px,6vw,64px)] font-normal leading-[1.15] text-gradient-gold max-w-[700px] mx-auto mb-6">

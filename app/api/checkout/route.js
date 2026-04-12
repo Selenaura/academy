@@ -117,7 +117,8 @@ export async function POST(request) {
       return NextResponse.json({ url: session.url });
     }
 
-    // Single payment — card + Klarna (Klarna offers pay-in-3 natively in Spain/Europe)
+    // Single payment — card + PayPal + Link (Apple Pay / Google Pay) + Klarna
+    // Note: PayPal must be enabled in Stripe Dashboard → Settings → Payment methods
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       customer_email: user.email,
@@ -129,7 +130,7 @@ export async function POST(request) {
         course_id: courseId,
         consent_withdrawal_waiver: 'true',
       },
-      payment_method_types: ['card', 'klarna'],
+      payment_method_types: ['card', 'paypal', 'link', 'klarna'],
       payment_method_options: {
         klarna: {
           // Klarna auto-shows "Pay in 3" option when available in the customer's region

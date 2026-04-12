@@ -49,8 +49,8 @@ const DISCIPLINES = [
 
 const FAQS = [
   {
-    q: 'Es 100% online?',
-    a: 'Si. Todo el contenido es online, a tu ritmo. Las sesiones supervisadas se hacen por videollamada en horarios flexibles.',
+    q: '¿Es presencial u online?',
+    a: 'Es 100% online. Todo el contenido es digital y accesible desde cualquier dispositivo, en cualquier país, a tu ritmo. Las sesiones supervisadas se hacen por videollamada en horarios flexibles. No hay clases presenciales.',
   },
   {
     q: 'Cuanto dura el Master?',
@@ -115,8 +115,14 @@ export default function MasterFoundingPage() {
         <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-radial-gold pointer-events-none" />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-selene-gold/10 border border-selene-gold/20 text-selene-gold text-xs font-medium mb-6 animate-pulse-gold">
-            COHORT FUNDADOR — PLAZAS LIMITADAS
+          <div className="flex items-center justify-center gap-3 mb-6 flex-wrap">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-selene-gold/10 border border-selene-gold/20 text-selene-gold text-xs font-medium animate-pulse-gold">
+              COHORT FUNDADOR — PLAZAS LIMITADAS
+            </div>
+            <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-medium">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              100% ONLINE
+            </div>
           </div>
 
           <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-normal text-selene-white leading-tight mb-6">

@@ -528,7 +528,11 @@ export default function CoursePage({ params }) {
           <Badge color={course.color} className="relative z-10">{course.tag}</Badge>
           <h1 className="font-display text-[26px] font-normal mt-4 mb-1.5 relative z-10">{course.title}</h1>
           <p className="text-sm text-selene-white-dim leading-relaxed mb-4 relative z-10">{course.subtitle}</p>
-          <div className="flex gap-4 text-xs text-selene-white-dim flex-wrap relative z-10">
+          <div className="flex gap-4 text-xs text-selene-white-dim flex-wrap items-center relative z-10">
+            <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              100% Online
+            </span><span>·</span>
             <span>{course.level}</span><span>·</span>
             <span>{course.hours}</span><span>·</span>
             <span>{course.modules} módulos</span><span>·</span>

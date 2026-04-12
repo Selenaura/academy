@@ -4,8 +4,12 @@ import Link from 'next/link';
 
 const faqs = [
   {
-    q: '¿Que es Selene Academia?',
-    a: 'Selene Academia es una escuela online de autoconocimiento que combina tradiciones milenarias (astrologia, tarot, meditacion) con neurociencia moderna y estudios peer-reviewed. Ofrecemos cursos estructurados, ejercicios practicos y certificaciones verificables.',
+    q: '¿Qué es Selene Academia?',
+    a: 'Selene Academia es una escuela 100% online de autoconocimiento que combina tradiciones milenarias (astrología, tarot, meditación) con neurociencia moderna y estudios peer-reviewed. Ofrecemos cursos estructurados, ejercicios prácticos y certificaciones verificables. Todo el contenido es digital: accedes desde cualquier dispositivo, en cualquier lugar del mundo, a tu ritmo.',
+  },
+  {
+    q: '¿Los cursos son presenciales u online?',
+    a: 'Todos nuestros cursos son 100% online. No hay clases presenciales ni horarios fijos. Accedes al contenido desde tu ordenador, tablet o móvil cuando quieras. Tienes acceso de por vida y puedes avanzar a tu ritmo desde cualquier país.',
   },
   {
     q: '¿Los cursos tienen base cientifica?',
@@ -56,8 +60,8 @@ const faqs = [
     a: 'Cada certificado tiene un codigo unico. Cualquier persona puede ir a academy.selenaura.com/verificar, introducir el codigo y confirmar la autenticidad del certificado, incluyendo el nombre del curso y la fecha de emision.',
   },
   {
-    q: '¿Que metodos de pago aceptais?',
-    a: 'Aceptamos tarjetas de credito y debito (Visa, Mastercard, American Express) a traves de Stripe, una de las plataformas de pago mas seguras del mundo. Tus datos financieros nunca pasan por nuestros servidores.',
+    q: '¿Qué métodos de pago aceptáis?',
+    a: 'Aceptamos tarjetas de crédito y débito (Visa, Mastercard, American Express), PayPal, Apple Pay, Google Pay y Klarna (pago aplazado) a través de Stripe, una de las plataformas de pago más seguras del mundo. Tus datos financieros nunca pasan por nuestros servidores.',
   },
   {
     q: '¿Sois una universidad acreditada?',
