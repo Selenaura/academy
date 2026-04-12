@@ -549,6 +549,14 @@ export default function CoursePage({ params }) {
           )}
         </Card>
 
+        {/* Sample course notice */}
+        {course.is_sample && course.sample_notice && (
+          <div className="bg-amber-500/5 rounded-2xl p-[18px] border border-amber-500/20 mb-4">
+            <div className="text-xs font-semibold text-amber-400 mb-1.5">ℹ️ Curso de muestra</div>
+            <div className="text-[13px] text-selene-white-dim leading-relaxed">{course.sample_notice}</div>
+          </div>
+        )}
+
         {/* Description */}
         <Card className="p-5 mb-4">
           <h3 className="text-sm font-semibold text-selene-white mb-2">Descripción</h3>

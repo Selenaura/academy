@@ -99,6 +99,14 @@ export default async function CursoDetallePage({ params }) {
           )}
         </div>
 
+        {/* Sample course notice */}
+        {course.is_sample && course.sample_notice && (
+          <div className="bg-amber-500/5 rounded-xl p-4 border border-amber-500/20 mb-6">
+            <div className="text-xs font-semibold text-amber-400 mb-1">ℹ️ Curso de muestra</div>
+            <div className="text-[13px] text-selene-white-dim leading-relaxed">{course.sample_notice}</div>
+          </div>
+        )}
+
         {/* Science badge */}
         {course.science && (
           <div className="bg-selene-blue/5 rounded-xl p-4 border border-selene-blue/10 mb-6">
