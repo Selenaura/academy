@@ -70,13 +70,27 @@ export async function GET(request) {
 
     const alreadyEnrolled = new Set((existingEnrollments || []).map(e => e.user_id));
 
-    // Get user profiles for email and name
+    // Get user emails from auth.users (email not in profiles table)
+    // and names from profiles table
+    const { data: { users: authUsers }, error: authErr } = await supabase.auth.admin.listUsers();
+    if (authErr) {
+      console.error('Course upsell: auth listUsers error', authErr);
+      return NextResponse.json({ error: 'Auth error' }, { status: 500 });
+    }
+    const authMap = new Map(authUsers.map(u => [u.id, u.email]));
+
     const { data: profiles } = await supabase
       .from('profiles')
-      .select('id, email, full_name')
+      .select('id, name')
       .in('id', userIds);
 
-    const profileMap = new Map((profiles || []).map(p => [p.id, p]));
+    const nameMap = new Map((profiles || []).map(p => [p.id, p.name]));
+
+    // Build combined profile map
+    const profileMap = new Map(userIds.map(uid => [uid, {
+      email: authMap.get(uid),
+      name: nameMap.get(uid),
+    }]));
 
     for (const candidate of candidates) {
       // Skip if enrolled less than 2 days ago
@@ -109,7 +123,7 @@ export async function GET(request) {
       console.log(`📧 Upsell → ${profile.email} (progress: ${Math.round(candidate.progress * 100)}%)`);
       const result = await sendCourseUpsellEmail({
         email: profile.email,
-        userName: profile.full_name?.split(' ')[0] || null,
+        userName: profile.name?.split(' ')[0] || null,
         completedCourseTitle: 'Despierta tu Brújula Interior',
         nextCourseTitle: 'Magnetismo Consciente',
         nextCourseId: 'magnetismo-consciente',
