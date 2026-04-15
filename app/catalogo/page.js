@@ -10,8 +10,8 @@ export const metadata = {
 const catalogSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Catalogo de cursos — Selene Academia',
-  description: 'Todos los cursos de astrologia, meditacion y autoconocimiento con base cientifica.',
+  name: 'Catálogo de cursos — Selene Academia',
+  description: 'Todos los cursos de astrología, meditación y autoconocimiento con base científica.',
   numberOfItems: COURSES.length,
   itemListElement: COURSES.map((course, index) => ({
     '@type': 'ListItem',

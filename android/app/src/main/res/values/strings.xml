@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Selene Academia</string>
+    <string name="title_activity_main">Selene Academia</string>
+    <string name="package_name">com.selenaura.academia</string>
+    <string name="custom_url_scheme">com.selenaura.academia</string>
+</resources>

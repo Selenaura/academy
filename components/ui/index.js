@@ -78,7 +78,10 @@ export function Navbar({ showAuth = true, showDashboardNav = false }) {
 
       {showAuth && !showDashboardNav && (
         <div className="flex gap-3 items-center">
-          <Link href="/auth?mode=login" className="text-sm text-selene-white-dim hover:text-selene-white px-4 py-2 no-underline">
+          <Link href="/catalogo" className="text-sm text-selene-white-dim hover:text-selene-white px-3 py-2 no-underline hidden sm:block">
+            Catálogo
+          </Link>
+          <Link href="/auth?mode=login" className="text-sm text-selene-white-dim hover:text-selene-white px-3 py-2 no-underline">
             Iniciar sesión
           </Link>
           <Link href="/auth?mode=register" className="text-sm font-semibold bg-selene-gold text-selene-bg px-5 py-2.5 rounded-lg hover:brightness-110 no-underline">

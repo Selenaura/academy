@@ -137,7 +137,7 @@ export default function LandingPage() {
               Empieza gratis — Curso introductorio
             </Link>
             <Link
-              href="/auth?mode=login"
+              href="/catalogo"
               className="inline-flex items-center text-[15px] font-semibold text-selene-gold px-10 py-4 rounded-xl border border-selene-gold/30 hover:bg-selene-gold/5 transition no-underline"
             >
               Ver catálogo
@@ -172,10 +172,10 @@ export default function LandingPage() {
                   <span className="text-[11px] text-selene-white-dim">Premium</span>
                 </div>
                 <h3 className="text-[16px] font-semibold text-selene-white mb-1.5">
-                  Suscripcion Premium
+                  Suscripción Premium
                 </h3>
                 <p className="text-[13px] text-selene-white-dim leading-relaxed mb-3">
-                  Acceso ilimitado a todas las lecturas, horoscopo personalizado diario y contenido exclusivo por 9,99 EUR/mes.
+                  Acceso ilimitado a todas las lecturas, horóscopo personalizado diario y contenido exclusivo por 9,99 EUR/mes.
                 </p>
                 <a
                   href="https://selenaura.com/premium"
@@ -197,15 +197,15 @@ export default function LandingPage() {
                   Luna menguante en Sagitario
                 </h3>
                 <p className="text-[13px] text-selene-white-dim leading-relaxed mb-3">
-                  Tiempo de soltar creencias que ya no sirven y prepararte para nuevos comienzos. Consulta tu horoscopo personalizado.
+                  Tiempo de soltar creencias que ya no sirven y prepararte para nuevos comienzos. Consulta tu horóscopo personalizado.
                 </p>
                 <a
-                  href="https://selenaura.com/horoscopo-diario"
+                  href="https://selenaura.com/horóscopo-diario"
                   className="inline-flex items-center text-[12px] font-semibold text-selene-gold hover:text-selene-gold-light no-underline transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Tu horoscopo de hoy &rarr;
+                  Tu horóscopo de hoy &rarr;
                 </a>
               </div>
             </div>
@@ -440,8 +440,8 @@ export default function LandingPage() {
       {/* ── Course Preview ── */}
       <section className="px-6 py-16 max-w-[900px] mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-display text-[28px] font-normal text-selene-white mb-2">Catalogo formativo</h2>
-          <p className="text-sm text-selene-white-dim">De principiante a guia profesional certificada</p>
+          <h2 className="font-display text-[28px] font-normal text-selene-white mb-2">Catálogo formativo</h2>
+          <p className="text-sm text-selene-white-dim">De principiante a guía profesional certificada</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -449,7 +449,8 @@ export default function LandingPage() {
             const originalPrice = course.price > 0 ? Math.round(course.price * 2.5) : null;
             const discount = originalPrice ? Math.round((1 - course.price / originalPrice) * 100) : null;
             return (
-              <Card key={course.id} hover className="p-5 relative">
+              <Link key={course.id} href={`/catalogo/${course.id}`} className="no-underline">
+              <Card hover className="p-5 relative h-full">
                 {/* Discount badge */}
                 {discount && (
                   <div className="absolute top-3 right-3 text-[10px] font-bold bg-selene-gold text-selene-bg px-2 py-0.5 rounded-md">
@@ -485,9 +486,10 @@ export default function LandingPage() {
                   <span>·</span>
                   <span>{course.hours}</span>
                   <span>·</span>
-                  <span>{course.modules} modulos</span>
+                  <span>{course.modules} módulos</span>
                 </div>
               </Card>
+              </Link>
             );
           })}
         </div>

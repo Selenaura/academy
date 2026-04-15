@@ -15,6 +15,13 @@ export async function generateMetadata({ params }) {
   return {
     title: `${course.title} — Selene Academia`,
     description: `${course.subtitle}. ${course.description?.slice(0, 120) || ''} ${course.level} · ${course.hours} · ${course.modules} módulos.`,
+    robots: {
+      index: false,
+      follow: false,
+    },
+    alternates: {
+      canonical: `https://academy.selenaura.com/catalogo/${course.id}`,
+    },
     openGraph: {
       title: `${course.title} — ${price}`,
       description: course.subtitle,

@@ -4,7 +4,7 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/dashboard/', '/perfil/', '/onboarding/', '/admin/', '/analytics/', '/unsubscribe/'],
+        disallow: ['/api/', '/curso/', '/dashboard/', '/perfil/', '/onboarding/', '/admin/', '/analytics/', '/unsubscribe/'],
       },
     ],
     sitemap: 'https://academy.selenaura.com/sitemap.xml',

@@ -32,3 +32,13 @@ yarn-error.log*
 *.swo
 .DS_Store
 Thumbs.db
+
+# Capacitor / Android build outputs
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/capacitor-cordova-android-plugins/
+android/app/release/
+*.keystore
+*.jks

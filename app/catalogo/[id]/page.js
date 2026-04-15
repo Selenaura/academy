@@ -12,9 +12,22 @@ export async function generateMetadata({ params }) {
   const { id } = await params;
   const course = COURSES.find(c => c.id === id);
   if (!course) return {};
+
+  const priceText = course.price === 0 ? 'Gratis' : course.price_label;
+  const description = `${course.description || course.subtitle} ${course.hours} de contenido · ${course.modules} módulos · ${priceText}. Base científica: ${course.science || ''}`.slice(0, 300);
+
   return {
-    title: `${course.title} — Selene Academia`,
-    description: course.subtitle,
+    title: `${course.title} — Curso ${priceText} — Selene Academia`,
+    description,
+    openGraph: {
+      title: `${course.title} — Curso ${priceText}`,
+      description: course.subtitle,
+      url: `https://academy.selenaura.com/catalogo/${course.id}`,
+      type: 'website',
+    },
+    alternates: {
+      canonical: `https://academy.selenaura.com/catalogo/${course.id}`,
+    },
   };
 }
 
@@ -35,8 +48,50 @@ export default async function CursoDetallePage({ params }) {
   const totalQuizzes = course.lessons.filter(l => l.type === 'quiz').length;
   const hasExam = course.lessons.some(l => l.type === 'exam');
 
+  // Schema.org Course structured data for Google rich results
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: course.title,
+    description: course.description || course.subtitle,
+    provider: {
+      '@type': 'Organization',
+      name: 'Selene Academia',
+      url: 'https://academy.selenaura.com',
+    },
+    ...(course.price === 0 && {
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        category: 'Free',
+      },
+    }),
+    ...(course.price > 0 && {
+      offers: {
+        '@type': 'Offer',
+        price: (course.price / 100).toFixed(2),
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+      },
+    }),
+    educationalLevel: course.level,
+    inLanguage: 'es',
+    numberOfCredits: course.modules,
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'Online',
+      courseWorkload: course.hours,
+    },
+  };
+
   return (
     <div className="min-h-screen bg-selene-bg">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
       <PixelViewContent courseId={course.id} title={course.title} price={course.price} />
       <Navbar />
 
@@ -149,7 +204,7 @@ export default async function CursoDetallePage({ params }) {
         {Object.entries(modules).map(([moduleNum, lessons]) => (
           <div key={moduleNum} className="mb-6">
             <div className="text-xs font-semibold text-selene-gold mb-3 uppercase tracking-wider">
-              Módulo {moduleNum}
+              {course.module_names?.[moduleNum] || `Módulo ${moduleNum}`}
             </div>
             <Card className="divide-y divide-selene-border">
               {lessons.map((lesson) => (

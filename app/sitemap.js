@@ -27,19 +27,15 @@ export default function sitemap() {
     { url: `${baseUrl}/condiciones`, changeFrequency: 'yearly', priority: 0.3 },
   ];
 
-  // Dynamic course detail pages
-  const coursePages = COURSES.map((course) => ({
-    url: `${baseUrl}/curso/${course.id}`,
+  // Public catalog detail pages (indexable by Google)
+  const catalogPages = COURSES.map((course) => ({
+    url: `${baseUrl}/catalogo/${course.id}`,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
 
-  // Public catalog detail pages (same courses, public view)
-  const catalogPages = COURSES.map((course) => ({
-    url: `${baseUrl}/catalogo/${course.id}`,
-    changeFrequency: 'monthly',
-    priority: 0.7,
-  }));
+  // NOTE: /curso/{id} pages require authentication — excluded from sitemap
+  // Google cannot index them and they show as "Discovered - not indexed"
 
   // Program landing pages
   const programPages = COURSES
@@ -60,7 +56,7 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...coursePages, ...catalogPages, ...programPages, ...blogIndex, ...blogPages].map((page) => ({
+  return [...staticPages, ...catalogPages, ...programPages, ...blogIndex, ...blogPages].map((page) => ({
     ...page,
     lastModified: now,
   }));

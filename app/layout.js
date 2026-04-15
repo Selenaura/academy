@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
           name: 'Selene Academia',
           url: 'https://academy.selenaura.com',
           logo: 'https://academy.selenaura.com/icon.svg',
-          description: 'Cursos de astrologia, tarot y autoconocimiento con base cientifica.',
+          description: 'Cursos de astrología, tarot y autoconocimiento con base científica.',
           contactPoint: {
             '@type': 'ContactPoint',
             email: 'info@selenaura.com',
@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
           url: 'https://academy.selenaura.com',
           potentialAction: {
             '@type': 'SearchAction',
-            target: 'https://academy.selenaura.com/?q={search_term_string}',
+            target: 'https://academy.selenaura.com/catalogo?q={search_term_string}',
             'query-input': 'required name=search_term_string'
           }
         }) }} />

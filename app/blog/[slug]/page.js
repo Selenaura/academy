@@ -15,6 +15,9 @@ export function generateMetadata({ params }) {
   return {
     title: post.title,
     description: post.description,
+    alternates: {
+      canonical: `https://selenaura.com/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
@@ -47,7 +50,7 @@ export default function BlogPost({ params }) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://academy.selenaura.com/blog/${post.slug}`,
+      '@id': `https://selenaura.com/blog/${post.slug}`,
     },
   };
 

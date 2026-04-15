@@ -5,6 +5,9 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Blog — Selene Academia',
   description: 'Articulos sobre astrologia, tarot, meditacion, numerologia y autoconocimiento con base cientifica. Aprende gratis con Selene Academia.',
+  alternates: {
+    canonical: 'https://selenaura.com/blog',
+  },
   openGraph: {
     title: 'Blog — Selene Academia',
     description: 'Articulos sobre astrologia, tarot, meditacion y autoconocimiento con base cientifica.',

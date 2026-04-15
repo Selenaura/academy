@@ -3,6 +3,6 @@
   "target": {
     "namespace": "android_app",
     "package_name": "com.selenaura.academia",
-    "sha256_cert_fingerprints": ["__REPLACE_WITH_SIGNING_KEY_FINGERPRINT__"]
+    "sha256_cert_fingerprints": ["13:A5:DB:2C:DC:05:1A:F7:7E:AA:46:F5:D9:FF:DC:A4:B9:41:8F:C1:2E:F1:89:01:77:30:F2:A2:96:F9:1D:B9"]
   }
 }]
