@@ -34,12 +34,17 @@ export async function GET(request) {
     let totalSent = 0;
     let errors = 0;
 
-    // Get all leads that haven't finished the nurture sequence (step < 5)
+    // Only nurture leads that belong to the Master funnel.
+    // Other sources (quiz_compatibilidad, lectura-express, exit_intent_landing, etc.)
+    // come from selenaura-main and must NOT receive academy master emails.
+    const MASTER_LEAD_MAGNETS = ['5-errores-guia-espiritual', 'master_founding'];
+
     const { data: leads, error } = await supabase
       .from('leads')
       .select('*')
       .lt('nurture_step', NURTURE_EMAILS.length)
-      .eq('email_sent', true) // only nurture leads who received the lead magnet
+      .eq('email_sent', true)
+      .in('lead_magnet', MASTER_LEAD_MAGNETS)
       .order('created_at', { ascending: true });
 
     if (error) {
@@ -52,10 +57,17 @@ export async function GET(request) {
       return NextResponse.json({ processed: 0, sent: 0 });
     }
 
+    // Track emails sent within this invocation to stop the same email from
+    // being processed twice if there happen to be multiple leads with the
+    // same address across different master funnels.
+    const sentThisRun = new Set();
+
     for (const lead of leads) {
       const step = lead.nurture_step || 0;
       const nextEmail = NURTURE_EMAILS[step];
       if (!nextEmail) continue;
+
+      if (sentThisRun.has(lead.email)) continue;
 
       // Calculate days since lead was created
       const createdAt = new Date(lead.created_at);
@@ -64,35 +76,60 @@ export async function GET(request) {
       // Only send if enough days have passed
       if (daysSinceCreation < nextEmail.day) continue;
 
-      // Prevent sending twice in the same day
-      if (lead.nurture_last_sent) {
-        const lastSent = new Date(lead.nurture_last_sent);
-        const hoursSinceLastSent = (now - lastSent) / (1000 * 60 * 60);
-        if (hoursSinceLastSent < 20) continue; // min 20h between emails
+      // Prevent sending twice within 20h — check ANY row for this email,
+      // not just the current one (guards against duplicate rows + concurrent runs).
+      const twentyHoursAgo = new Date(now.getTime() - 20 * 60 * 60 * 1000).toISOString();
+      const { count: recentSends } = await supabase
+        .from('leads')
+        .select('id', { count: 'exact', head: true })
+        .eq('email', lead.email)
+        .gte('nurture_last_sent', twentyHoursAgo);
+
+      if (recentSends && recentSends > 0) continue;
+
+      // CLAIM the lead BEFORE sending — conditional update on the expected
+      // step. If another concurrent invocation already incremented the step,
+      // this update will affect 0 rows and we skip the send. This is the
+      // optimistic-lock pattern that prevents duplicate sends.
+      const { data: claimed, error: claimErr } = await supabase
+        .from('leads')
+        .update({
+          nurture_step: step + 1,
+          nurture_last_sent: now.toISOString(),
+        })
+        .eq('id', lead.id)
+        .eq('nurture_step', step) // only claim if step hasn't changed
+        .select('id');
+
+      if (claimErr || !claimed || claimed.length === 0) {
+        // Another invocation already claimed this lead. Skip.
+        continue;
       }
 
-      // Send the email
+      // Now send — we have exclusive ownership of this step for this email.
       console.log(`📧 Nurture step ${step + 1}/5 → ${lead.email} (day ${daysSinceCreation})`);
       const result = await sendNurtureEmail({ email: lead.email, step });
 
       if (result.success) {
-        // Update lead: increment step, update last sent, save Brevo messageId
-        const updateData = {
-          nurture_step: step + 1,
-          nurture_last_sent: now.toISOString(),
-        };
+        sentThisRun.add(lead.email);
         if (result.messageId) {
-          updateData.brevo_message_id = result.messageId;
+          await supabase
+            .from('leads')
+            .update({ brevo_message_id: result.messageId })
+            .eq('id', lead.id);
         }
-
-        await supabase
-          .from('leads')
-          .update(updateData)
-          .eq('id', lead.id);
-
         totalSent++;
       } else {
+        // Send failed after claiming: roll back step so the email is retried
+        // on the next cron run.
         console.error(`❌ Failed nurture to ${lead.email}:`, result.reason);
+        await supabase
+          .from('leads')
+          .update({
+            nurture_step: step,
+            nurture_last_sent: lead.nurture_last_sent,
+          })
+          .eq('id', lead.id);
         errors++;
       }
 
