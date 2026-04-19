@@ -104,9 +104,17 @@ export default function LandingPage() {
             className="mb-8 mx-auto"
           />
 
-          {/* Headline dual — upright "Cursos de" + italic rose "consciencia" */}
+          {/* Headline dual — upright "Cursos de" + italic rose
+             "consciencia". hyphens: none es crítico: el globals.css
+             tiene hyphens: auto global para párrafos justificados,
+             pero en un display headline partir "cons-ciencia" es un
+             error. Forzamos no-break aquí. */}
           <h1 className="mx-auto mb-7"
-              style={{ maxWidth: '20ch' }}>
+              style={{
+                maxWidth: '36ch',
+                hyphens: 'none',
+                WebkitHyphens: 'none',
+              }}>
             <span className="font-display block"
                   style={{
                     fontSize: 'var(--step-4)',
@@ -116,6 +124,8 @@ export default function LandingPage() {
                     fontVariationSettings: "'opsz' 96, 'SOFT' 100",
                     fontFeatureSettings: "'liga' 0, 'dlig' 0, 'kern' 1, 'calt' 0",
                     letterSpacing: '-0.015em',
+                    hyphens: 'none',
+                    WebkitHyphens: 'none',
                   }}>
               Cursos de
             </span>
@@ -128,6 +138,9 @@ export default function LandingPage() {
                     fontVariationSettings: "'opsz' 144, 'SOFT' 60",
                     fontFeatureSettings: "'liga' 0, 'dlig' 0, 'kern' 1, 'calt' 0",
                     letterSpacing: '-0.018em',
+                    hyphens: 'none',
+                    WebkitHyphens: 'none',
+                    whiteSpace: 'nowrap',
                   }}>
               consciencia
             </span>
@@ -231,7 +244,7 @@ export default function LandingPage() {
           {[
             'Estudios peer-reviewed',
             'Certificados verificables',
-            'Pago seguro · Stripe',
+            'Pago seguro · Stripe y PayPal',
             'Garantía 14 días',
           ].map((t, i, arr) => (
             <span key={t} className="inline-flex items-center gap-x-8">
