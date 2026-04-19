@@ -1,5 +1,27 @@
 import './globals.css';
+import { Fraunces, Lora } from 'next/font/google';
 import InstallPWA from '@/components/InstallPWA';
+
+// Fraunces variable — same display font as selenaura-main. Loads with
+// the three optical-feature axes (opsz / SOFT / WONK) so we can drive
+// the editorial typography system from CSS variables.
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  axes: ['opsz', 'SOFT', 'WONK'],
+  variable: '--font-display',
+  display: 'swap',
+});
+
+// Lora — refined serif body, pairs with Fraunces. Replaces the old
+// sans Outfit which read as SaaS rather than editorial.
+const lora = Lora({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-body',
+  display: 'swap',
+});
 
 export const metadata = {
   title: {
@@ -42,10 +64,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
+    <html lang="es" className={`${fraunces.variable} ${lora.variable}`}>
       <head>
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <meta name="theme-color" content="#0A0A0F" />
+        <meta name="theme-color" content="#FBF6EE" />
         <script dangerouslySetInnerHTML={{ __html: `
           if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -80,7 +102,13 @@ export default function RootLayout({ children }) {
           }
         }) }} />
       </head>
-      <body className="bg-selene-bg text-selene-white antialiased">
+      <body
+        className="antialiased"
+        style={{
+          backgroundColor: 'var(--bg)',
+          color: 'var(--ink)',
+        }}
+      >
         {children}
         <InstallPWA />
       </body>
