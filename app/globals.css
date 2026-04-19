@@ -5,68 +5,257 @@
 /* Fonts loaded via next/font/google in layout.js */
 
 /* ── Base — Rococo-Botanical ──
-   Migrated to the cream palette + Fraunces variable axes used in
-   selenaura.com. Replaces the old "Quantum Ethereal" dark theme.
-   See selenaura-main/CLAUDE.md and docs/redesign-overnight-plan.md
-   for the full system reference. */
+ * Token system follows the Klim/Linear pattern: REFs are raw hex
+ * (the palette material), aliases are SEMANTIC roles. Any component
+ * uses var(--color-text), var(--color-surface)… so modes (day / night /
+ * print) are switched by re-aliasing the SAME refs in [data-theme].
+ * Never hard-code a hex in components. */
 :root {
-  /* Colour palette — same tokens as selenaura-main */
-  --gold: #B8975A;
-  --gold-light: #D4BC8A;
-  --gold-deep: #8F7340;
-  --rose: #C4768C;
-  --rose-light: #E0A0B4;
-  --rose-deep: #9E5570;
-  --bg: #FBF6EE;
-  --card: #FFF9F2;
-  --elevated: #F5EBE0;
-  --border: #E2D1BD;
-  --ink: #2D1F14;
-  --ink-dim: #6B5D52;
-  --ink-lighter: #8E7F72;
+  /* ── Layer 1: REFs (raw palette, not for direct use) ── */
+  --ref-cream:        #FBF6EE;
+  --ref-cream-deep:   #F5EBE0;
+  --ref-parchment:    #FFF9F2;
+  --ref-ink:          #2D1F14;
+  --ref-ink-soft:     #6B5D52;
+  --ref-ink-faint:    #8E7F72;
+  --ref-gold:         #B8975A;
+  --ref-gold-light:   #D4BC8A;
+  --ref-gold-deep:    #8F7340;
+  --ref-rose:         #C4768C;
+  --ref-rose-light:   #E0A0B4;
+  --ref-rose-deep:    #9E5570;
+  --ref-border:       #E2D1BD;
+  /* Night-mode refs — only used when [data-theme="night"]. Indigo deep
+     (the colour of an antique celestial-atlas plate at midnight) +
+     warm cream as ink — a literal photographic negative of the
+     daytime palette but with gold and rose preserved. */
+  --ref-night:        #14102A;
+  --ref-night-soft:   #1F1845;
+  --ref-night-veil:   #251D55;
 
-  /* Legacy academy tokens — REMAPPED to cream tokens so any leftover
-     class that still references them stops looking dark on cream.
-     This buys time while we migrate the dark-theme pages one by one. */
-  --lavender: #9E5570;        /* mapped to rose-deep */
-  --silver: #8E7F72;          /* mapped to ink-lighter */
-  --white: #2D1F14;           /* mapped to ink (text) */
-  --white-dim: #6B5D52;       /* mapped to ink-dim */
+  /* ── Layer 2: Semantic aliases (USE THESE in components) ── */
+  --color-surface:           var(--ref-cream);
+  --color-surface-raised:    var(--ref-parchment);
+  --color-surface-sunk:      var(--ref-cream-deep);
+  --color-text:              var(--ref-ink);
+  --color-text-muted:        var(--ref-ink-soft);
+  --color-text-faint:        var(--ref-ink-faint);
+  --color-text-ornament:     var(--ref-gold);
+  --color-text-accent:       var(--ref-rose-deep);
+  --color-rule:              color-mix(in oklab, var(--ref-ink) 18%, transparent);
+  --color-rule-strong:       color-mix(in oklab, var(--ref-ink) 35%, transparent);
+  --color-rule-ornament:     color-mix(in oklab, var(--ref-gold) 45%, transparent);
+  --color-link-decoration:   color-mix(in oklab, var(--ref-gold) 55%, transparent);
+  --color-link-hover:        var(--ref-rose-deep);
 
-  /* Fluid type scale — clamp interpolation 320→1280px viewport */
-  --step--2: clamp(0.72rem, 0.69rem + 0.15vw, 0.78rem);
-  --step--1: clamp(0.86rem, 0.81rem + 0.22vw, 0.94rem);
-  --step-0:  clamp(1rem,    0.94rem + 0.30vw, 1.13rem);
-  --step-1:  clamp(1.33rem, 1.25rem + 0.40vw, 1.50rem);
-  --step-2:  clamp(1.78rem, 1.66rem + 0.58vw, 2.00rem);
-  --step-3:  clamp(2.37rem, 2.21rem + 0.81vw, 2.66rem);
-  --step-4:  clamp(3.16rem, 2.94rem + 1.11vw, 3.55rem);
-  --step-5:  clamp(4.21rem, 3.91rem + 1.50vw, 4.73rem);
+  /* ── Legacy aliases (kept for backwards compat with existing
+     components that already say var(--ink), var(--gold), var(--bg)…
+     These now POINT TO the semantic layer, so a single mode switch
+     cascades everywhere. DO NOT add new vars to this section. ── */
+  --gold: var(--color-text-ornament);
+  --gold-light: var(--ref-gold-light);
+  --gold-deep: var(--ref-gold-deep);           /* for borders and restrained marks */
+  --rose: var(--ref-rose);
+  --rose-light: var(--ref-rose-light);
+  --rose-deep: var(--color-text-accent);            /* hover states, accents */
+  --bg: var(--color-surface);
+  --card: var(--color-surface-raised);
+  --elevated: var(--color-surface-sunk);
+  --border: var(--ref-border);
+  --ink: var(--color-text);
+  --ink-dim: var(--color-text-muted);
+  --ink-lighter: var(--color-text-faint);          /* captions, meta, sidenotes */
 
-  /* Fraunces variation tunings */
-  --fraunces-display: 'opsz' 144, 'SOFT' 20, 'WONK' 0;
-  --fraunces-heading: 'opsz' 36,  'SOFT' 20, 'WONK' 0;
-  --fraunces-italic:  'opsz' 72,  'SOFT' 30, 'WONK' 1;
-  --fraunces-body:    'opsz' 14,  'SOFT' 20, 'WONK' 0;
+  /* Typography — fluid modular scale (1.333 perfect fourth).
+     clamp(min, fluid, max) interpolates across viewports without media
+     queries. The 320-1280 px viewport range gives a controlled grow
+     that hits editorial proportions on desktop without blowing up mobile.
+     Ratio 1.333 gives genuine hierarchy between steps (vs. 1.2 which
+     feels cramped or 1.618 which feels circus-like). */
+  --step--2: clamp(0.72rem, 0.69rem + 0.15vw, 0.78rem);   /* 11-12 px */
+  --step--1: clamp(0.86rem, 0.81rem + 0.22vw, 0.94rem);   /* 13-15 px */
+  --step-0:  clamp(1rem,    0.94rem + 0.30vw, 1.13rem);   /* 16-18 px body */
+  --step-1:  clamp(1.33rem, 1.25rem + 0.40vw, 1.50rem);   /* 21-24 px lead */
+  --step-2:  clamp(1.78rem, 1.66rem + 0.58vw, 2.00rem);   /* 28-32 px h3 */
+  --step-3:  clamp(2.37rem, 2.21rem + 0.81vw, 2.66rem);   /* 38-42 px h2 */
+  --step-4:  clamp(3.16rem, 2.94rem + 1.11vw, 3.55rem);   /* 51-57 px h1 */
+  --step-5:  clamp(4.21rem, 3.91rem + 1.50vw, 4.73rem);   /* 67-76 px display */
+
+  /* Fraunces variation tunings — apply via font-variation-settings.
+     Pre-tuned for three roles so the whole site sounds from the same
+     palette of voices.
+
+     WONK was *removed* from display after 18/04 iteration: at headline
+     size (~55-75 px) WONK=1 activates the expressive 'f' alternate
+     which connects to adjacent letters in an unexpected way ("fe" in
+     "fecha" rendered with a weird horizontal stroke). Keep WONK for
+     italic-only contexts where the swashes are intentional.
+     SOFT 20 (not 30) reads cleaner on serif caps — the rounded
+     terminals were competing with the opsz=144 high contrast. */
+  /* SOFT axis tuning — April 2026 pass.
+     Previous values (15-30) produced angular finials on F/E/T that
+     read as broken at display size. Raised across the board to 60-100
+     for rounded humanist finials. Body text keeps SOFT 50 because at
+     14pt the hint tables blur any axis difference anyway. */
+  --fraunces-display: 'opsz' 144, 'SOFT' 100, 'WONK' 0;
+  --fraunces-heading: 'opsz' 36,  'SOFT' 60,  'WONK' 0;
+  --fraunces-italic:  'opsz' 72,  'SOFT' 60,  'WONK' 0;
+  --fraunces-body:    'opsz' 14,  'SOFT' 50,  'WONK' 0;
+
+  /* Feature settings — only STANDARD ligatures on headings. The
+     discretionary ligatures (dlig) in Fraunces include decorative
+     "fe", "sp" etc. which, at large sizes, register as "deformed".
+     Keep liga (fi, fl) which is needed for text integrity, drop dlig.
+     Opt in to dlig via the .dlig utility class when you truly want
+     ornamental ligatures in a small, controlled spot. */
   --fraunces-features: 'liga' 1, 'kern' 1;
 }
 
+/* Apply Fraunces variable + features to .font-display consistently. */
 .font-display {
   font-variation-settings: var(--fraunces-heading);
   font-feature-settings: var(--fraunces-features);
 }
-
-/* OpenType utilities */
-.smcp {
-  font-feature-settings: 'smcp' 1, 'c2sc' 1;
-  letter-spacing: 0.08em;
-  text-transform: none;
-}
-.tnum {
-  font-feature-settings: 'tnum' 1, 'lnum' 1;
-  font-variant-numeric: tabular-nums;
+.font-display.display-xl,
+h1.font-display {
+  font-variation-settings: var(--fraunces-display);
 }
 
+/* ══════════════════════════════════════════════════════════════════
+   THREE EDITORIAL VOICES (Atavist / Pitchfork pattern)
+   ══════════════════════════════════════════════════════════════════
+   Adapted for selenaura: instead of using "italic" generically, we
+   define three NAMED roles. Anything in the site should choose one
+   of these three. The mistake of "no se integra" was using `font-serif`
+   generically — the eye registered no pattern.
+
+   1) .voice-display   — the atlas voice. Hero h1, plate titles.
+                         Fraunces 144 opsz, weight 320, soft 100.
+                         Tightened tracking. Heavy presence, low frequency.
+
+   2) .voice-ritual    — the epigraph voice. Italic Lora at lead size.
+                         Narrative, intimate, used for kickers, leads,
+                         epigraphs, callouts, italic insertions in body.
+                         Different FAMILY from display so the contrast
+                         is intrinsic, not just stylistic toggle.
+
+   3) .voice-body      — the body voice. Lora roman 17px, 1.65 leading.
+                         For all multi-paragraph reading. The "Pitchfork
+                         features" body proportions exactly: that
+                         quietly-luxurious 17/28 pairing.
+
+   Apply directly: <h1 className="voice-display">. Or via <article>
+   defaults below.
+   ══════════════════════════════════════════════════════════════════ */
+.voice-display {
+  font-family: var(--font-display), 'Fraunces', Georgia, serif;
+  font-style: normal;
+  font-weight: 320;
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 0;
+  font-feature-settings: 'liga' 0, 'dlig' 0, 'kern' 1, 'calt' 0;
+  font-variant-ligatures: no-common-ligatures no-discretionary-ligatures;
+  letter-spacing: -0.02em;
+  line-height: 1.04;
+  color: var(--color-text);
+}
+.voice-display em,
+.voice-display .italic {
+  /* Italic spans inside a display headline drop to ritual voice */
+  font-family: var(--font-body), 'Lora', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-text-accent);
+  font-variation-settings: normal;
+}
+
+.voice-ritual {
+  font-family: var(--font-body), 'Lora', Georgia, serif;
+  font-style: italic;
+  font-weight: 420;
+  font-size: var(--step-1);
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+  color: var(--color-text-muted);
+}
+
+.voice-body {
+  font-family: var(--font-body), 'Lora', Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--step-0);
+  line-height: 1.647;     /* same proportion as Pitchfork features */
+  color: var(--color-text);
+  letter-spacing: 0.001em;
+}
+.voice-body em,
+.voice-body i {
+  font-style: italic;
+  color: var(--color-text);
+}
+.voice-body strong,
+.voice-body b {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* ── Article default voices ──
+   When you wrap content in <article className="prose-atlas">, child
+   elements inherit the right voice automatically. Saves typing the
+   class on every paragraph. */
+.prose-atlas {
+  /* default body voice */
+  font-family: var(--font-body), 'Lora', Georgia, serif;
+  font-size: var(--step-0);
+  line-height: 1.647;
+  color: var(--color-text);
+}
+.prose-atlas h1, .prose-atlas h2, .prose-atlas h3 {
+  font-family: var(--font-display), 'Fraunces', Georgia, serif;
+  font-weight: 320;
+  font-feature-settings: 'liga' 0, 'dlig' 0, 'kern' 1, 'calt' 0;
+  letter-spacing: -0.018em;
+  color: var(--color-text);
+}
+.prose-atlas h1 { font-variation-settings: 'opsz' 144, 'SOFT' 100; font-size: var(--step-4); line-height: 1.05; margin: 1.6em 0 0.6em; }
+.prose-atlas h2 { font-variation-settings: 'opsz' 96,  'SOFT' 90;  font-size: var(--step-3); line-height: 1.1;  margin: 1.4em 0 0.5em; }
+.prose-atlas h3 { font-variation-settings: 'opsz' 60,  'SOFT' 80;  font-size: var(--step-2); line-height: 1.15; margin: 1.2em 0 0.4em; }
+.prose-atlas .lead,
+.prose-atlas > p:first-of-type {
+  /* First paragraph after a h-element gets ritual voice */
+  font-family: var(--font-body), 'Lora', Georgia, serif;
+  font-style: italic;
+  font-weight: 420;
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+.prose-atlas p { margin: 0 0 1em; }
+.prose-atlas a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--color-link-decoration);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms;
+}
+.prose-atlas a:hover {
+  text-decoration-color: var(--color-link-hover);
+  color: var(--color-link-hover);
+}
+
+/* Italic Fraunces gets WONK=1 intentionally — swashes on g/e/f are
+   the reason you pick italic Fraunces over italic Lora. They belong
+   in italic contexts, not in upright display. */
+.font-display.italic,
+em.font-display,
+em[style*="italic"] {
+  font-variation-settings: var(--fraunces-italic);
+}
+
+/* Utility classes for the modular scale. Use sparingly — they're an
+   escape hatch when Tailwind's scale doesn't line up with the ratio. */
 .text-step--2 { font-size: var(--step--2); }
 .text-step--1 { font-size: var(--step--1); }
 .text-step-0  { font-size: var(--step-0); }
@@ -75,6 +264,109 @@
 .text-step-3  { font-size: var(--step-3); }
 .text-step-4  { font-size: var(--step-4); }
 .text-step-5  { font-size: var(--step-5); }
+
+/* ── Real OpenType utilities — not CSS fakes ───────────────────────
+   Tailwind's `uppercase` + `tracking-wide` is what every template uses.
+   These classes engage the font's real glyph features instead. The
+   difference between `.smcp` and `uppercase` is the same as the
+   difference between a typeset book and a Word document. Most readers
+   won't know why, but they'll feel the difference.
+*/
+.smcp {
+  /* Real small caps — Fraunces has hand-drawn smcp glyphs that are ~76%
+     of cap height, optically adjusted weight, and proper side-bearing.
+     uppercase+font-size-smaller is ~30% of that quality. */
+  font-feature-settings: 'smcp' 1, 'c2sc' 1;
+  letter-spacing: 0.08em;
+  text-transform: none; /* guard against Tailwind's uppercase */
+}
+.dlig {
+  /* Discretionary ligatures — ct, st, sp with decorative connectors.
+     Fraunces leans into them. Use on display-size headings only;
+     overkill in body copy. */
+  font-feature-settings: 'dlig' 1, 'liga' 1, 'calt' 1;
+}
+.tnum {
+  /* Tabular figures — critical for price tables, stats, countdown
+     clocks. Without this, a "3" and a "5" have different widths and
+     prices jitter. */
+  font-feature-settings: 'tnum' 1, 'lnum' 1;
+  font-variant-numeric: tabular-nums;
+}
+.onum {
+  /* Old-style figures — lowercase-descending numerals that sit on the
+     baseline like text. Use in running prose, NOT in UI. */
+  font-feature-settings: 'onum' 1, 'pnum' 1;
+  font-variant-numeric: oldstyle-nums;
+}
+.ss01 { font-feature-settings: 'ss01' 1; }
+.ss02 { font-feature-settings: 'ss02' 1; }
+.ss04 { font-feature-settings: 'ss04' 1; }  /* g alternate (single-storey) */
+
+/* Combine helper for big display headings. NOTE: dlig removed — the
+   "fe", "st", "ct" decorative ligatures were reading as glyph defects
+   on common Spanish headlines (eg. "fecha"). Keep only standard liga
+   and the display variation axis. Opt into dlig per-element with .dlig
+   where you *want* swash ligatures (short decorative phrases only). */
+.font-display-fancy {
+  font-feature-settings: 'liga' 1, 'kern' 1;
+  font-variation-settings: var(--fraunces-display);
+}
+
+/* ── Editorial typography — kicker / dek / meta ──
+   These patterns come from magazine layout: kickers sit above the
+   headline in smaller caps to categorise, deks are the intro paragraph
+   between headline and body, meta is footer-style attribution. */
+.kicker {
+  display: inline-block;
+  font-family: var(--font-body), 'Lora', Georgia, serif;
+  font-size: var(--step--1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid rgba(184, 151, 90, 0.3);
+}
+
+.dek {
+  font-family: var(--font-display), Fraunces, Georgia, serif;
+  /* Italic context: use the italic-tuned variation (WONK 1 looks good
+     on italic 'e', 'g', 'f'). Keep standard liga only — dlig with
+     "fe"/"st" is what produced the deformed-f issue. */
+  font-variation-settings: var(--fraunces-italic);
+  font-feature-settings: 'liga' 1, 'kern' 1;
+  font-size: var(--step-1);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink-dim);
+  max-width: 42ch;
+  /* Justify + hyphens for proper editorial flow. */
+  text-align: justify;
+  hyphens: auto;
+}
+
+.meta {
+  font-family: var(--font-body), 'Lora', Georgia, serif;
+  font-size: var(--step--1);
+  color: var(--ink-lighter);
+  letter-spacing: 0.02em;
+}
+
+/* Drop cap — for editorial body paragraphs. Apply to the first letter
+   of a paragraph with class .has-dropcap, following the article hero. */
+.has-dropcap::first-letter {
+  font-family: var(--font-display), Fraunces, Georgia, serif;
+  font-variation-settings: var(--fraunces-display);
+  font-weight: 600;
+  color: var(--gold);
+  float: left;
+  font-size: 4.2em;
+  line-height: 0.85;
+  padding: 0.08em 0.14em 0 0;
+  margin: 0.05em 0 0 0;
+}
 
 html {
   scroll-behavior: smooth;
@@ -86,13 +378,27 @@ body {
   font-family: var(--font-body), 'Lora', Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Hyphenation enabled site-wide. The HTML <html lang="es"> attribute
+     is already in place, so Chromium 88+/Safari 17+/Firefox will split
+     long Spanish words on syllable boundaries. Critical when we
+     justify paragraphs — without it, "cronobiología" single words
+     create giant rivers of whitespace. */
   hyphens: auto;
   -webkit-hyphens: auto;
   position: relative;
 }
 
-/* Paper substrate — global SVG noise data-URI for grain. The single
-   most impactful change to tie the whole site to "printed on paper". */
+/* PAPER SUBSTRATE LAYER (research technique #4 — Aesop / Penguin Classics)
+   The single biggest reason ornament PNGs feel "pegadas" is that the
+   page background (#FBF6EE) is a flat solid colour. Real paper has
+   GRAIN. Without grain, any rendered illustration becomes more "real"
+   than its substrate — the eye reads it as floating.
+   Solution: an SVG fractal-noise filter rendered as a data-URI tile
+   under EVERY element. The noise is stamped chocolate ink (~6% opacity
+   per cell) so the page now has a substrate that ornaments can blend
+   INTO via multiply.
+   This is global. One CSS rule fixes 40% of the integration problem
+   for every page on the site without touching any component. */
 body::before {
   content: '';
   position: fixed;
@@ -106,6 +412,11 @@ body::before {
   pointer-events: none;
   z-index: -1;
 }
+
+/* Page-level vignette (Penguin hardback reproduction). Cream darkens
+   subtly toward the corners, focusing the eye on centred composition.
+   ~12% darken at extreme corners — invisible until you A/B it but the
+   page feels "bound" instead of "flat". Stays behind every layer. */
 body::after {
   content: '';
   position: fixed;
@@ -116,111 +427,391 @@ body::after {
   mix-blend-mode: multiply;
 }
 
+/* Selection colour — gold tenue, no rose.
+ * El rosa al 25% que tenía antes (rgba(196,118,140,0.25)) producía un
+ * efecto "todo el blog está pintado en rosa" si el usuario seleccionaba
+ * mucho texto (Ctrl+A o arrastre largo). Cambiado a oro 18% que se
+ * lee como "papel iluminado donde he subrayado", no como "etiqueta
+ * de marketing rosa". El text-color queda en var(--color-text) para
+ * heredar correctamente en modo noche. */
 ::selection {
-  background: rgba(196, 118, 140, 0.25);
-  color: #2D1F14;
+  background: rgba(184, 151, 90, 0.18);
+  color: var(--color-text);
+}
+::-moz-selection {
+  background: rgba(184, 151, 90, 0.18);
+  color: var(--color-text);
 }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
 
+/* ── Focus states ── */
 input:focus,
 button:focus-visible {
-  outline: 2px solid rgba(184, 151, 90, 0.55);
+  outline: 2px solid rgba(184, 151, 90, 0.4);
   outline-offset: 2px;
 }
 
+/* ── Transitions ── */
 a, button {
   transition: all 0.2s ease;
 }
 
+/* ── Utilities ── */
 @layer utilities {
   .text-gradient-gold {
-    background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
+    background: linear-gradient(135deg, #B8975A, #D4BC8A, #B8975A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  .text-gradient-lavender {
-    background: linear-gradient(135deg, var(--rose-deep), var(--rose), var(--rose-deep));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .border-gold-subtle  { border-color: rgba(184, 151, 90, 0.3); }
-  .border-lavender-subtle { border-color: rgba(168, 86, 116, 0.3); }
-  .bg-gold-glow { box-shadow: 0 0 32px rgba(184,151,90,0.08); }
 
-  /* Star-pattern remapped — gold ink dots on cream */
+  .text-gradient-rose {
+    background: linear-gradient(135deg, #C4768C, #E0A0B4, #C4768C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Legacy alias */
+  .text-gradient-lavender {
+    background: linear-gradient(135deg, #8E7EB8, #A09890, #8E7EB8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gold-subtle {
+    border-color: rgba(184, 151, 90, 0.2);
+  }
+
+  .border-rose-subtle {
+    border-color: rgba(196, 118, 140, 0.2);
+  }
+
+  /* Legacy alias */
+  .border-lavender-subtle {
+    border-color: rgba(142, 126, 184, 0.15);
+  }
+
+  .bg-gold-glow {
+    box-shadow: 0 0 60px rgba(184, 151, 90, 0.08);
+  }
+
+  /* Subtle parchment texture pattern */
   .star-pattern {
-    background-image: radial-gradient(rgba(184, 151, 90, 0.5) 1px, transparent 1px);
-    background-size: 30px 30px;
+    background-image: radial-gradient(rgba(184, 151, 90, 0.3) 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
     opacity: 0.06;
   }
 }
 
-/* Glow — soft gold over cream */
+/* ── Warm glow effects — gold + rose ── */
 .glow-gold {
-  box-shadow: 0 2px 16px rgba(184,151,90,0.08), 0 0 36px rgba(184,151,90,0.06);
+  box-shadow: 0 4px 24px rgba(184, 151, 90, 0.1), 0 1px 4px rgba(0, 0, 0, 0.04);
 }
+
 .glow-gold-hover:hover {
-  box-shadow: 0 4px 24px rgba(184,151,90,0.14), 0 0 48px rgba(184,151,90,0.10);
+  box-shadow: 0 8px 40px rgba(184, 151, 90, 0.15), 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-/* glass-card REMAPPED to cream parchment card.
-   Existing pages that use .glass-card now render as cream cards
-   instead of dark glassmorphic panels. */
-.glass-card {
-  background: rgba(255, 249, 242, 0.8);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border: 1px solid rgba(184, 151, 90, 0.3);
-  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.glass-card:hover {
-  background: rgba(255, 249, 242, 0.95);
-  border-color: rgba(184, 151, 90, 0.5);
-  box-shadow: 0 8px 28px rgba(45,31,20,0.06), 0 2px 12px rgba(184,151,90,0.06);
-  transform: translateY(-2px);
+/* ── Ornamental border — gold gradient ── */
+.border-gradient {
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box;
 }
 
-.card-hover-glow {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-.card-hover-glow:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 30px rgba(45,31,20,0.06), 0 0 20px rgba(184,151,90,0.08);
-  border-color: rgba(184, 151, 90, 0.45);
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(184,151,90,0.3), rgba(196,118,140,0.15), rgba(184,151,90,0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
-.btn-hover {
-  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-}
-.btn-hover:hover { transform: scale(1.03); filter: brightness(1.05); }
-.btn-hover:active { transform: scale(0.98); }
-
+/* ── Shimmer animation — warm gold ── */
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
+
 .shimmer {
   background: linear-gradient(90deg, transparent, rgba(184,151,90,0.08), transparent);
   background-size: 200% 100%;
   animation: shimmer 3s ease-in-out infinite;
 }
 
-@keyframes reveal-up {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* ── Botanical dot pattern ── */
+.constellation-bg {
+  background-image: radial-gradient(circle, rgba(184,151,90,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
+
+/* ── Pulsing glow — warm ── */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 4px 20px rgba(184,151,90,0.08); }
+  50% { box-shadow: 0 6px 30px rgba(184,151,90,0.15); }
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* ── Section separator — ornamental ── */
+.divider-stars {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.divider-stars::before,
+.divider-stars::after {
+  content: '';
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184,151,90,0.3), transparent);
+}
+
+/* ── Smooth number counter ── */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.count-up {
+  animation: count-up 0.8s ease-out forwards;
+}
+
+/* ── Card hover lift — warm shadow ── */
+.card-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(45,31,20,0.08), 0 4px 16px rgba(184,151,90,0.08);
+}
+
+/* ── Zodiac wheel subtle rotation ── */
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotate-slow {
+  animation: rotate-slow 120s linear infinite;
+}
+
+/* ── Parchment card (replaces glassmorphism) ── */
+.glass-card {
+  background: rgba(255, 249, 242, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 209, 189, 0.6);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 249, 242, 0.95);
+  border-color: rgba(184, 151, 90, 0.3);
+  box-shadow: 0 8px 32px rgba(45,31,20,0.06), 0 2px 12px rgba(184,151,90,0.06);
+  transform: translateY(-2px);
+}
+
+/* ── Botanical background (replaces starfield) ── */
+.starfield {
+  position: relative;
+  overflow: hidden;
+}
+
+.starfield::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 15% 25%, rgba(184,151,90,0.15) 0%, transparent 100%),
+    radial-gradient(0.8px 0.8px at 55% 20%, rgba(196,118,140,0.12) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 50%, rgba(184,151,90,0.1) 0%, transparent 100%),
+    radial-gradient(0.5px 0.5px at 85% 75%, rgba(142,126,184,0.1) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+/* ── Staggered entry animation for hero / page-load drama ── */
+/*
+  Usage: add `hero-rise` to any element. It fades-in + translates upward.
+  Chain multiple siblings via `hero-rise-1`, `hero-rise-2`, ... to get an
+  editorial reveal where title, paragraph, badge, CTA appear in cascade.
+  Pure CSS — no JS library needed.
+*/
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(14px); filter: blur(2px); }
+  to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+}
+.hero-rise,
+.hero-rise-1, .hero-rise-2, .hero-rise-3, .hero-rise-4, .hero-rise-5 {
+  animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.hero-rise-1 { animation-delay: 0ms;   }
+.hero-rise-2 { animation-delay: 120ms; }
+.hero-rise-3 { animation-delay: 240ms; }
+.hero-rise-4 { animation-delay: 360ms; }
+.hero-rise-5 { animation-delay: 480ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rise, .hero-rise-1, .hero-rise-2, .hero-rise-3, .hero-rise-4, .hero-rise-5 {
+    animation: none !important;
+  }
+}
+
+/* ── Micro-animations ── */
+
+/* Card hover: subtle scale + warm glow */
+.card-hover-glow {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-hover-glow:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(45,31,20,0.06), 0 2px 12px rgba(184,151,90,0.08);
+  border-color: rgba(184, 151, 90, 0.25);
+}
+
+/* Revelation transition for reading results */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .reveal-up {
   animation: reveal-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* ── Dropcap (rose-deep, 4 lines) — for editorial article paragraphs */
-.dropcap::first-letter {
+/* Staggered reveal for child elements */
+.reveal-stagger > * {
+  opacity: 0;
+  animation: reveal-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.reveal-stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.reveal-stagger > *:nth-child(2) { animation-delay: 0.1s; }
+.reveal-stagger > *:nth-child(3) { animation-delay: 0.15s; }
+.reveal-stagger > *:nth-child(4) { animation-delay: 0.2s; }
+.reveal-stagger > *:nth-child(5) { animation-delay: 0.25s; }
+.reveal-stagger > *:nth-child(6) { animation-delay: 0.3s; }
+
+/* Button hover: scale + smooth color shift */
+.btn-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-hover:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+.btn-hover:active {
+  transform: scale(0.98);
+}
+
+/* Section entrance animation */
+@keyframes section-enter {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-enter {
+  animation: section-enter 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Delayed section entrances for stagger effect */
+.section-enter-d1 { animation-delay: 0.1s; opacity: 0; }
+.section-enter-d2 { animation-delay: 0.2s; opacity: 0; }
+.section-enter-d3 { animation-delay: 0.3s; opacity: 0; }
+
+/* XP Toast slide-up animation */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out forwards;
+}
+
+/* glass-card-enhanced → alias to glass-card */
+.glass-card-enhanced {
+  background: rgba(255, 249, 242, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 209, 189, 0.6);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glass-card-enhanced:hover {
+  background: rgba(255, 249, 242, 0.95);
+  border-color: rgba(184, 151, 90, 0.3);
+  box-shadow: 0 8px 32px rgba(45,31,20,0.06), 0 2px 12px rgba(184,151,90,0.06);
+  transform: translateY(-2px);
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   ADVANCED INTEGRATION TECHNIQUES (research batch 1, applied 2026-04-19)
+   Sources: Pitchfork features, Klim Type Foundry, NYT T Magazine, NYT
+   Magazine 2025 long-form, Atavist, Cabinet Magazine.
+   ──────────────────────────────────────────────────────────────────*/
+
+/* Tech #1 — Drop-cap bound to body text (Pitchfork pattern).
+   Already had .has-dropcap above; this is the *enhanced* version with
+   the rose-deep colour anchor that ties drop-caps to the rose accent
+   palette. Use on the FIRST paragraph of any editorial section. */
+.dropcap::first-letter,
+.has-dropcap-rose::first-letter {
   font-family: var(--font-display), Fraunces, Georgia, serif;
   font-variation-settings: 'opsz' 144, 'SOFT' 30, 'WONK' 0;
   font-weight: 600;
@@ -230,12 +821,308 @@ a, button {
   margin: 0.08em 0.12em -0.1em 0;
   padding-right: 0.05em;
   color: var(--rose-deep);
+  /* Sit the drop-cap on the same baseline grain as body text. */
   -webkit-initial-letter: 4 2;
   initial-letter: 4 2;
 }
 
-/* ── Marginalia / running-head / plate-label / colophon — same as
-   selenaura-main, copy-pasted for the editorial system. */
+/* Tech #2 — Real ornamental glyphs from Fraunces (no PNG required).
+   .editorial-body activates discretionary ligatures, contextual
+   alternates, old-style numerals, swashes (ss01). Use this on prose
+   blocks where you want the type to do the ornamental work. */
+.editorial-body {
+  font-family: var(--font-display), Fraunces, Georgia, serif;
+  font-feature-settings: 'dlig' 1, 'liga' 1, 'calt' 1, 'onum' 1, 'ss01' 1;
+  font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 14;
+  hyphens: auto;
+  line-height: 1.65;
+}
+.editorial-display {
+  font-family: var(--font-display), Fraunces, Georgia, serif;
+  font-feature-settings: 'dlig' 1, 'liga' 1, 'calt' 1, 'swsh' 1;
+  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 144;
+}
+
+/* Tech #8 — Scroll-driven ornament reveal (CSS animation-timeline).
+   Native in Chrome 115+, Safari fallback is a static appearance
+   (no animation, full opacity). Used by NYT Magazine 2025 long-form
+   to reveal botanical ornaments as the reader scrolls into them.
+   Apply to any ornament: <Image className="ornament-reveal" ... />. */
+@supports (animation-timeline: view()) {
+  .ornament-reveal {
+    animation: ornament-fade-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+  }
+  @keyframes ornament-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(24px) rotate(-1.5deg) scale(0.96);
+      filter: blur(4px) sepia(0.18) saturate(0.85);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) rotate(0deg) scale(1);
+      filter: blur(0) sepia(0.18) saturate(0.85);
+    }
+  }
+}
+
+/* Tech #7 — Cartouche container (Coralie Bickford-Smith / Penguin
+   Clothbound Classics). Wrap content in a slightly-warmer paper
+   substrate with a double inset border. Ornaments INSIDE this look
+   "bound" instead of floating on the page. */
+.cartouche {
+  position: relative;
+  isolation: isolate;
+  background-color: #F0E6D3;
+  border: 1px solid rgba(184, 151, 90, 0.4);
+  padding: 2.5rem 2rem 1.75rem;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 1px 0 rgba(45, 31, 20, 0.06);
+}
+.cartouche::before {
+  content: '';
+  position: absolute;
+  inset: 0.5rem;
+  border: 1px solid rgba(184, 151, 90, 0.25);
+  pointer-events: none;
+}
+
+/* Tech #9 — color-mix tinted ornaments via @property.
+   When the parent .group is hovered, the ornament tints toward
+   rose-deep instead of staying chocolate. Communicates that the
+   ornament is interactive and tied to the rose accent system. */
+@property --orn-tint {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #2D1F14;
+}
+.ornament-tinted {
+  --orn-tint: var(--ink);
+  filter:
+    sepia(1)
+    hue-rotate(-20deg)
+    saturate(0.4)
+    drop-shadow(0 0 0 var(--orn-tint));
+  transition: --orn-tint 600ms ease;
+}
+.group:hover .ornament-tinted,
+.group:focus-within .ornament-tinted {
+  --orn-tint: color-mix(in oklch, var(--rose-deep) 70%, var(--ink));
+}
+
+/* SHAPE-OUTSIDE wrapper helper — for ornaments that sit beside
+   prose with text flowing around the alpha edge. The container
+   floats; the inner image fills it. shape-image-threshold reads
+   the alpha channel to determine the wrap edge. */
+.shape-wrap-left {
+  float: left;
+  margin: 0.4rem 1.25rem 0.6rem 0;
+  shape-margin: 0.6em;
+}
+.shape-wrap-right {
+  float: right;
+  margin: 0.4rem 0 0.6rem 1.25rem;
+  shape-margin: 0.6em;
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   ROCOCO-FUTURISMO — interactive layer (research batch 2)
+   Sources: Co-Star, Klim, Locomotive, Codrops scroll-driven
+   filter animations, WebKit scroll-driven animation guide.
+   All techniques respect prefers-reduced-motion via @media.
+   ──────────────────────────────────────────────────────────────────*/
+
+/* Tech R2-1 — ornaments breathe (Co-Star pattern).
+   A 7-second scale + slow 40-second rotation. Reads as the page
+   itself "alive" without feeling animated. Apply to Medallions and
+   any standalone heraldic ornament. */
+.ornament-breathe {
+  animation: ornament-breathe 7s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+@keyframes ornament-breathe {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.025); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ornament-breathe { animation: none; }
+}
+
+/* Tech R2-1b — slow rotation (Co-Star planetary). Optional opt-in
+   for circular medallions only (otherwise the rectangular ornaments
+   look weird). */
+.ornament-rotate-slow {
+  animation: ornament-rotate-slow 90s linear infinite;
+  will-change: transform;
+}
+@keyframes ornament-rotate-slow {
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ornament-rotate-slow { animation: none; }
+}
+
+/* Tech R2-5 — animated paper grain (feTurbulence with <animate>).
+   Subtle vibration ~8s cycle so the substrate feels alive without
+   being noticeable. OPT-IN class — global body uses static noise,
+   add .paper-alive to <html> if you want the upgrade sitewide. */
+.paper-alive::before {
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'><animate attributeName='seed' values='1;5;1' dur='9s' repeatCount='indefinite'/></feTurbulence><feColorMatrix values='0 0 0 0 0.176  0 0 0 0 0.122  0 0 0 0 0.078  0 0 0 0.07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+@media (prefers-reduced-motion: reduce) {
+  .paper-alive::before {
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.176  0 0 0 0 0.122  0 0 0 0 0.078  0 0 0 0.07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+}
+
+/* Tech R2-2 — constellation lines drawn on scroll-into-view.
+   Use with <svg className="constellation-draw">…<path /></svg>.
+   The path's stroke-dasharray + dashoffset animate from invisible
+   to fully drawn as the user scrolls into the SVG. */
+@supports (animation-timeline: view()) {
+  .constellation-draw path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: draw-line linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 60%;
+  }
+  @keyframes draw-line {
+    to { stroke-dashoffset: 0; }
+  }
+}
+@supports not (animation-timeline: view()) {
+  .constellation-draw path { stroke-dashoffset: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .constellation-draw path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Tech R2-3 — tarot card flip in 3D.
+   Wrap with .tarot-flip-perspective on outer, .tarot-flip-card on
+   the rotating element, .tarot-face-front + .tarot-face-back on
+   the two faces. Hover or focus on .group flips. */
+.tarot-flip-perspective {
+  perspective: 1200px;
+}
+.tarot-flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.group:hover .tarot-flip-card,
+.group:focus-within .tarot-flip-card {
+  transform: rotateY(180deg);
+}
+.tarot-face-front,
+.tarot-face-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.tarot-face-back {
+  transform: rotateY(180deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .tarot-flip-card { transition: none; }
+  .group:hover .tarot-flip-card,
+  .group:focus-within .tarot-flip-card { transform: none; }
+}
+
+/* Tech R2-12 — orbital ornament (planet on dashed ring).
+   Pure CSS. Use as a small ornamental loader or as a colophon
+   element on signo / horoscopo pages. Wrap = relative box,
+   inner = the planet dot. */
+.orbit-wrap {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.orbit-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px dashed rgba(184, 151, 90, 0.35);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.orbit-planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin: -5px;
+  background: var(--rose-deep);
+  border-radius: 50%;
+  animation: orbit 22s linear infinite;
+  transform-origin: -94px 0;
+  box-shadow: 0 0 6px rgba(168, 86, 116, 0.45);
+}
+@keyframes orbit {
+  to { transform: rotate(360deg) translate(100px) rotate(-360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbit-planet { animation: none; transform: translate(100px); }
+}
+
+/* Tech R2-7 — title reveal on scroll-into-view (NYT Magazine
+   long-form). Used on h1 / h2 of editorial pages so the title
+   "settles" as the reader reaches it. */
+@supports (animation-timeline: view()) {
+  .title-reveal {
+    opacity: 0;
+    transform: translateY(18px) skewY(2deg);
+    animation: title-settle linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 80%;
+  }
+  @keyframes title-settle {
+    to { opacity: 1; transform: none; }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .title-reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   ASTROLABIO — rotation keyframe consumed by AstrolabeWheel.jsx
+   120 s linear is intentional: at ~3°/sec the rotation is below
+   conscious detection threshold but the page reads "alive". Mobile
+   batteries are not affected (transform on a static SVG is GPU-cheap).
+   ──────────────────────────────────────────────────────────────────*/
+@keyframes astrolabe-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  /* Stop the wheel for users who request reduced motion. The
+     instrument remains visible, just static. */
+  [style*="astrolabe-rotate"] { animation: none !important; }
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   MARGINALIA — small smcp annotations placed in the page gutter,
+   like a margin note in an antique scientific manuscript. Used in
+   the hero to add coordinates / equinox / catalog labels without
+   competing with the headline.
+   ──────────────────────────────────────────────────────────────────*/
 .marginalia {
   font-family: var(--font-display), Fraunces, Georgia, serif;
   font-style: italic;
@@ -252,6 +1139,174 @@ a, button {
   color: var(--gold);
 }
 
+/* DROP-CAP DISPLAY — for the hero dek paragraph. 4-line tall L-style
+   drop-cap in opsz 144, rose-deep, with proper -webkit-initial-letter
+   so the letter actually anchors to the line grid. Distinct from
+   .dropcap (used in body), this one is meant for hero subheads. */
+.dropcap-display::first-letter {
+  font-family: var(--font-display), Fraunces, Georgia, serif;
+  font-variation-settings: 'opsz' 144, 'SOFT' 30, 'WONK' 0;
+  font-weight: 600;
+  font-size: 5.6em;
+  line-height: 0.78;
+  float: left;
+  margin: 0.06em 0.16em -0.06em 0;
+  padding-right: 0.04em;
+  color: var(--rose-deep);
+  -webkit-initial-letter: 4 2;
+  initial-letter: 4 2;
+}
+
+/* COLOPHON — printed page closer. Imitates the imprint at the bottom
+   of an antique folio (year + publisher only — no place is published
+   to keep the brand owner anonymous). */
+.colophon {
+  font-family: var(--font-display), Fraunces, Georgia, serif;
+  font-style: italic;
+  /* WONK removed: at this small size (~12 px) the swashes were
+     producing the "ƒ" alternate that read as broken on common
+     latinate words. Plain italic. */
+  font-variation-settings: 'opsz' 14, 'SOFT' 50;
+  font-size: var(--step--2);
+  color: var(--ink-lighter);
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 1.6;
+}
+.colophon-divider {
+  display: block;
+  margin: 1.5rem auto 1rem;
+  width: 6rem;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(184, 151, 90, 0.5),
+    transparent
+  );
+}
+
+/* HERO STAGE — establishes a stacking context for the hero so the
+   astrolabe SVG, the gold-dust canvas, and the form layer compose
+   correctly. Without isolation, the body::before paper-noise can
+   bleed through the form card. */
+.hero-stage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* TRINE-DIAGRAM STEPS — the three "how it works" steps laid out as
+   the vertices of an equilateral triangle (a trine in astrology),
+   not a horizontal row. The triangle is rendered with a hairline
+   SVG behind the cells. On mobile the triangle collapses to a
+   vertical column. Used by Section IV in the home. */
+.trine-grid {
+  position: relative;
+  display: grid;
+  gap: 3rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .trine-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    /* Cell 1 sits at top-left, Cell 2 at center-right, Cell 3 at
+       bottom-left — forming an "open trine" reading left→right→left
+       that mirrors the natural reading direction. */
+  }
+  .trine-grid > :nth-child(1) { padding-top: 0; }
+  .trine-grid > :nth-child(2) { padding-top: 4rem; }
+  .trine-grid > :nth-child(3) { padding-top: 0; }
+}
+.trine-grid::before {
+  /* Hairline triangle drawn with SVG mask. Hidden on mobile
+     because the triangle layout collapses to vertical there. */
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: none;
+  display: none;
+}
+@media (min-width: 768px) {
+  .trine-grid::before {
+    display: block;
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><polygon points='12,18 88,32 18,82' stroke='rgba(184,151,90,0.35)' stroke-width='0.18' stroke-dasharray='1,1' fill='none' /></svg>");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+/* PRODUCT TIER LABEL — engraved-style heading for product tier
+   sections. Replaces the old uppercase pill with an editorial
+   running-head treatment: smcp gold + roman numeral + bracket. */
+.tier-label {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: var(--font-display), Fraunces, Georgia, serif;
+  margin-bottom: 1.25rem;
+}
+.tier-label .tier-bracket {
+  font-style: italic;
+  /* No WONK on brackets/romans — produces malformed glyphs at this
+     small size. Plain italic Fraunces is plenty. */
+  font-variation-settings: 'opsz' 24, 'SOFT' 30;
+  color: var(--gold);
+  font-size: var(--step-1);
+}
+.tier-label .tier-roman {
+  font-style: italic;
+  font-variation-settings: 'opsz' 24, 'SOFT' 30;
+  color: var(--gold);
+  font-size: var(--step-0);
+}
+.tier-label .tier-name {
+  font-feature-settings: 'smcp' 1, 'c2sc' 1;
+  letter-spacing: 0.18em;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: var(--step--1);
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   STARFIELD — twinkle keyframe consumed by StarField.jsx
+   Each star fades in/out on its own delay-staggered cycle. The
+   amplitude is intentionally small (60%↔100% opacity) — anything
+   more dramatic reads as a Christmas-light effect.
+   ──────────────────────────────────────────────────────────────────*/
+@keyframes starfield-twinkle {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.18); }
+}
+.starfield-twinkle {
+  animation: starfield-twinkle 4s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .starfield-twinkle { animation: none; opacity: 0.7; }
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   PAGE NUMBERS — small numerals in the top corners of the hero,
+   Penguin Clothbound style. Italic Fraunces with gold ink, pinned
+   to the corners of the editorial page-spread.
+   ──────────────────────────────────────────────────────────────────*/
+.page-number {
+  font-family: var(--font-display), Fraunces, serif;
+  font-style: italic;
+  font-size: var(--step--1);
+  font-variation-settings: 'opsz' 18, 'SOFT' 30;
+  color: rgba(184, 151, 90, 0.65);
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+/* RUNNING HEAD — the small caps line at the top edge of an editorial
+   page that names the publication and the section (e.g. "SELENAURA
+   · ATLAS CELESTE · I"). Sits centered above the chapter signature. */
 .running-head {
   font-feature-settings: 'smcp' 1, 'c2sc' 1;
   letter-spacing: 0.28em;
@@ -262,6 +1317,9 @@ a, button {
   opacity: 0.78;
 }
 
+/* PLATE LABEL — small gold label that lives under a chapter signature
+   to identify which engraved plate the section corresponds to. Mimics
+   the convention of antique illustrated books ("PLATE I · PLATE II"). */
 .plate-label {
   display: inline-flex;
   align-items: center;
@@ -283,61 +1341,269 @@ a, button {
   background: rgba(184, 151, 90, 0.4);
 }
 
-.colophon {
-  font-family: var(--font-display), Fraunces, Georgia, serif;
+/* IMPRIMATUR — the ecclesiastical/editorial mark at the bottom of an
+   antique book, signifying authorisation to print. Renders as a small
+   stamped seal in the footer area before the colophon. */
+.imprimatur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1rem 0;
+}
+.imprimatur-seal {
+  width: 84px;
+  height: 84px;
+  border: 1px solid rgba(184, 151, 90, 0.45);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  position: relative;
+  /* Inset second ring — double-rule of an official stamp */
+  box-shadow: inset 0 0 0 4px var(--bg), inset 0 0 0 5px rgba(184,151,90,0.2);
+  color: var(--gold);
+  font-feature-settings: 'smcp' 1, 'c2sc' 1;
+  letter-spacing: 0.12em;
+  font-size: 9px;
+  font-weight: 600;
+  opacity: 0.72;
+  background: transparent;
+}
+.imprimatur-seal-glyph {
+  font-size: 22px;
+  line-height: 1;
   font-style: italic;
-  font-variation-settings: 'opsz' 14, 'SOFT' 50;
+  color: var(--gold);
+  opacity: 0.85;
+}
+.imprimatur-text {
+  font-family: var(--font-display), serif;
+  font-style: italic;
   font-size: var(--step--2);
   color: var(--ink-lighter);
-  letter-spacing: 0.08em;
   text-align: center;
-  line-height: 1.6;
-}
-.colophon-divider {
-  display: block;
-  margin: 1.5rem auto 1rem;
-  width: 6rem;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(184, 151, 90, 0.5),
-    transparent
-  );
+  font-variation-settings: 'opsz' 14, 'SOFT' 50;
+  line-height: 1.55;
 }
 
-/* tier-label — running head editorial for product/course tiers */
-.tier-label {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  font-family: var(--font-display), Fraunces, Georgia, serif;
-  margin-bottom: 1.25rem;
-}
-.tier-label .tier-bracket {
-  font-style: italic;
-  font-variation-settings: 'opsz' 24, 'SOFT' 30;
-  color: var(--gold);
-  font-size: var(--step-1);
-}
-.tier-label .tier-name {
-  font-feature-settings: 'smcp' 1, 'c2sc' 1;
-  letter-spacing: 0.18em;
+/* APPENDIX TABLE — typeset like a real reference table in an
+   astronomical manual: head-rule, foot-rule, hairline column dividers,
+   tnum + onum for clean numerals, smcp for column headers. */
+.appendix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-display), serif;
+  font-feature-settings: 'tnum' 1, 'onum' 1, 'liga' 1, 'kern' 1;
+  font-variation-settings: 'opsz' 14, 'SOFT' 30;
   color: var(--ink);
-  font-weight: 600;
   font-size: var(--step--1);
 }
-
-/* Star-field twinkle — used by StarField component */
-@keyframes starfield-twinkle {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50%      { opacity: 1;   transform: scale(1.18); }
+.appendix-table thead th {
+  font-feature-settings: 'smcp' 1, 'c2sc' 1;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  color: var(--gold);
+  font-size: var(--step--2);
+  text-align: left;
+  padding: 0.85rem 0.85rem 0.5rem;
+  border-bottom: 1.5px solid rgba(184, 151, 90, 0.5);
 }
-.starfield-twinkle {
-  animation: starfield-twinkle 4s ease-in-out infinite;
-  will-change: opacity, transform;
+.appendix-table thead th:first-child { padding-left: 0; }
+.appendix-table thead th:last-child  { padding-right: 0; text-align: right; }
+.appendix-table tbody td {
+  padding: 0.7rem 0.85rem;
+  border-bottom: 1px solid rgba(184, 151, 90, 0.18);
+  vertical-align: baseline;
+}
+.appendix-table tbody td:first-child { padding-left: 0; }
+.appendix-table tbody td:last-child  { padding-right: 0; text-align: right; }
+.appendix-table tbody tr:last-child td {
+  border-bottom: 1.5px solid rgba(184, 151, 90, 0.5);
+}
+.appendix-table .glyph-cell {
+  font-size: var(--step-1);
+  color: var(--gold);
+  width: 2.4rem;
+}
+.appendix-table .name-cell {
+  font-style: italic;
+  font-variation-settings: 'opsz' 18, 'SOFT' 30;
+  color: var(--ink);
+  font-weight: 500;
+}
+.appendix-table .meta-cell {
+  color: var(--ink-dim);
+  font-style: italic;
+  font-variation-settings: 'opsz' 14, 'SOFT' 50;
+}
+
+/* NOTA: las reglas de Efémerides Móvil (background cream que cambia
+   con la fase lunar real, micro-tracking shift con Mercurio retro)
+   viven sólo en selenaura.com. Academy es un LMS, no una herramienta
+   astrológica en tiempo real — un fondo que "respira con la luna" en
+   la home de cursos sería decorativo sin significado. Aquí el cream
+   es cream constante. */
+
+/* ══════════════════════════════════════════════════════════════════
+   ATLAS PAPER — celestial map grid (Chani pattern adapted)
+   ══════════════════════════════════════════════════════════════════
+   Crea un papel verjurado de atlas celeste usando 4 repeating-linear-
+   gradients superpuestos (sin imágenes, escala perfecta en retina,
+   se re-tinta automáticamente con el theme). Origen: chani.com.
+
+   .atlas-paper          — la base, líneas a 56px (rejilla amplia)
+   .atlas-paper-fine     — variante más densa (24px) para fondos pequeños
+   .atlas-paper-meridian — solo líneas verticales (para gutters laterales)
+
+   La intensidad se controla con --atlas-grid-opacity (0.05 default)
+   y permite que componentes específicos suban/bajen la presencia.
+   ══════════════════════════════════════════════════════════════════ */
+:root {
+  --atlas-grid-spacing: 56px;
+  --atlas-grid-opacity: 0.05;
+  --atlas-grid-line: color-mix(in oklab,
+    var(--ref-gold) calc(var(--atlas-grid-opacity) * 100%),
+    transparent);
+}
+[data-theme="night"] {
+  /* En modo noche el grid se ve mejor con cream tenue, no oro */
+  --atlas-grid-line: color-mix(in oklab,
+    var(--ref-cream) calc(var(--atlas-grid-opacity) * 100%),
+    transparent);
+}
+
+.atlas-paper {
+  background-color: var(--color-surface);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      var(--atlas-grid-line) 0 1px,
+      transparent 1px var(--atlas-grid-spacing)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--atlas-grid-line) 0 1px,
+      transparent 1px var(--atlas-grid-spacing)
+    );
+}
+
+.atlas-paper-fine {
+  --atlas-grid-spacing: 24px;
+  --atlas-grid-opacity: 0.04;
+  background-color: var(--color-surface);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      var(--atlas-grid-line) 0 1px,
+      transparent 1px var(--atlas-grid-spacing)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--atlas-grid-line) 0 1px,
+      transparent 1px var(--atlas-grid-spacing)
+    );
+}
+
+/* Solo líneas horizontales — efecto "verjurado" como papel hecho a
+   mano. Las líneas son visibles a contraluz. Para fondos de cards o
+   secciones donde la rejilla completa sería demasiado. */
+.atlas-paper-laid {
+  background-color: var(--color-surface);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      var(--atlas-grid-line) 0 1px,
+      transparent 1px 8px
+    );
+}
+
+/* Solo líneas verticales — para gutters laterales del hero, simulando
+   los meridianos de un atlas dibujados en el margen */
+.atlas-paper-meridian {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      var(--atlas-grid-line) 0 1px,
+      transparent 1px var(--atlas-grid-spacing)
+    );
+}
+
+/* Grid + viñeta radial — combina la rejilla del atlas con un fade
+   en los bordes, dando la sensación de un foco de luz central como
+   en una mesa de cartografía. */
+.atlas-paper-vignette {
+  background-color: var(--color-surface);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      var(--atlas-grid-line) 0 1px,
+      transparent 1px var(--atlas-grid-spacing)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--atlas-grid-line) 0 1px,
+      transparent 1px var(--atlas-grid-spacing)
+    ),
+    radial-gradient(
+      ellipse at center,
+      transparent 0%,
+      transparent 50%,
+      color-mix(in oklab, var(--color-text) 6%, transparent) 100%
+    );
+  background-blend-mode: normal, normal, multiply;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   NIGHT MODE — atlas at midnight
+   The same celestial atlas, photographed through indigo. Cream
+   becomes deep night-blue, ink becomes warm parchment, gold and rose
+   keep their identity (an antique plate's ink that has not faded).
+   The trick of the token system: ONLY semantic aliases are reassigned.
+   Refs and component code stay identical.
+   ══════════════════════════════════════════════════════════════════ */
+[data-theme="night"] {
+  --color-surface:        var(--ref-night);
+  --color-surface-raised: var(--ref-night-soft);
+  --color-surface-sunk:   var(--ref-night-veil);
+  --color-text:           var(--ref-cream);
+  --color-text-muted:     color-mix(in oklab, var(--ref-cream) 70%, transparent);
+  --color-text-faint:     color-mix(in oklab, var(--ref-cream) 45%, transparent);
+  --color-text-ornament:  var(--ref-gold-light);
+  --color-text-accent:    var(--ref-rose-light);
+  --color-rule:           color-mix(in oklab, var(--ref-cream) 18%, transparent);
+  --color-rule-strong:    color-mix(in oklab, var(--ref-cream) 38%, transparent);
+  --color-rule-ornament:  color-mix(in oklab, var(--ref-gold-light) 50%, transparent);
+  --color-link-decoration:color-mix(in oklab, var(--ref-gold-light) 60%, transparent);
+  --color-link-hover:     var(--ref-rose-light);
+  /* Border ref also rebound (the only ref alias not in the semantic
+     layer) so old border:1px solid var(--border) statements look right
+     against the dark surface */
+  --border: color-mix(in oklab, var(--ref-cream) 22%, transparent);
+}
+
+/* Smooth transition between themes — applied to surfaces only. The
+   text colour swap is instant (no flash) but backgrounds breathe. */
+body, .glass-card, .editorial-card {
+  transition: background-color 360ms cubic-bezier(0.22, 1, 0.36, 1),
+              color 360ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 @media (prefers-reduced-motion: reduce) {
-  .starfield-twinkle { animation: none; opacity: 0.7; }
-  .reveal-up { animation: none; opacity: 1; transform: none; }
+  body, .glass-card, .editorial-card { transition: none; }
+}
+
+/* Print mode — the atlas literally printed on paper. Forces day mode
+   and removes any costly background images / animations. */
+@media print {
+  :root {
+    --color-surface:        white;
+    --color-text:           black;
+    --color-text-muted:     #444;
+    --color-text-faint:     #666;
+    --color-text-ornament:  #6B5230;
+    --color-rule:           #999;
+  }
+  .gold-dust-cursor, .astrolabe-wheel, .star-field { display: none !important; }
 }

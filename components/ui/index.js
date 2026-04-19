@@ -5,6 +5,7 @@
 // ═══════════════════════════════════════════════
 
 import Link from 'next/link';
+import ThemeToggle from '@/components/ThemeToggle';
 
 // ── Icons ──
 export function MoonIcon({ size = 20, className = 'text-selene-gold' }) {
@@ -56,35 +57,93 @@ export function StarIcon({ size = 16, className = 'text-selene-gold' }) {
 }
 
 // ── Navbar ──
+// Rediseñado 2026-04-19: editorial cream con wordmark editorial
+// (no emoji luna + mayúsculas espaciadas). Toggle día/noche visible
+// en desktop. La idea: la navbar es el "encabezado corrido" del
+// scriptorium — no un header SaaS.
 export function Navbar({ showAuth = true, showDashboardNav = false }) {
   return (
-    <nav className="sticky top-0 z-50 px-6 py-4 flex justify-between items-center bg-selene-bg/90 backdrop-blur-xl border-b border-selene-border">
-      <Link href="/" className="flex items-center gap-2.5 no-underline">
-        <MoonIcon size={24} />
-        <span className="font-display text-[22px] font-semibold text-selene-gold tracking-wider">
-          SELENE
+    <nav
+      className="sticky top-0 z-50 px-6 py-4 flex justify-between items-center backdrop-blur-[6px]"
+      style={{
+        backgroundColor: 'color-mix(in oklab, var(--color-surface) 88%, transparent)',
+        borderBottom: '1px solid var(--color-rule-ornament)',
+      }}
+    >
+      <Link href="/" className="flex items-baseline gap-2.5 no-underline">
+        <MoonIcon size={22} className="text-[var(--color-text-ornament)] self-center" />
+        <span
+          className="font-display"
+          style={{
+            fontSize: '20px',
+            fontWeight: 600,
+            color: 'var(--color-text)',
+            letterSpacing: '-0.01em',
+            fontVariationSettings: "'opsz' 36, 'SOFT' 100",
+            fontFeatureSettings: "'liga' 0, 'dlig' 0, 'kern' 1",
+          }}
+        >
+          Selene
         </span>
-        <span className="text-[11px] text-selene-white-dim bg-selene-gold/10 px-2 py-0.5 rounded ml-1">
-          ACADEMIA
+        <span
+          className="smcp"
+          style={{
+            fontSize: '10px',
+            letterSpacing: '0.24em',
+            color: 'var(--color-text-ornament)',
+            fontWeight: 600,
+          }}
+        >
+          Academia
         </span>
       </Link>
 
       {showDashboardNav && (
-        <div className="flex gap-5 items-center">
-          <Link href="/dashboard" className="text-selene-gold"><GridIcon size={20} className="text-selene-gold" /></Link>
-          <Link href="/perfil"><UserIcon size={20} /></Link>
+        <div className="flex gap-4 items-center">
+          <Link href="/dashboard" className="no-underline"><GridIcon size={20} className="text-[var(--color-text-ornament)]" /></Link>
+          <Link href="/perfil" className="no-underline"><UserIcon size={20} className="text-[var(--color-text-muted)]" /></Link>
+          <ThemeToggle />
         </div>
       )}
 
       {showAuth && !showDashboardNav && (
         <div className="flex gap-3 items-center">
-          <Link href="/catalogo" className="text-sm text-selene-white-dim hover:text-selene-white px-3 py-2 no-underline hidden sm:block">
+          <Link
+            href="/catalogo"
+            className="no-underline hidden sm:inline-block px-3 py-2"
+            style={{
+              fontSize: '14px',
+              color: 'var(--color-text-muted)',
+              fontFamily: 'var(--font-body), Lora, Georgia, serif',
+            }}
+          >
             Catálogo
           </Link>
-          <Link href="/auth?mode=login" className="text-sm text-selene-white-dim hover:text-selene-white px-3 py-2 no-underline">
+          <Link
+            href="/auth?mode=login"
+            className="no-underline px-3 py-2"
+            style={{
+              fontSize: '14px',
+              color: 'var(--color-text-muted)',
+              fontFamily: 'var(--font-body), Lora, Georgia, serif',
+            }}
+          >
             Iniciar sesión
           </Link>
-          <Link href="/auth?mode=register" className="text-sm font-semibold bg-selene-gold text-selene-bg px-5 py-2.5 rounded-lg hover:brightness-110 no-underline">
+          <ThemeToggle className="hidden md:inline-flex" />
+          <Link
+            href="/auth?mode=register"
+            className="no-underline px-5 py-2.5 rounded-xl"
+            style={{
+              fontSize: '13px',
+              fontWeight: 600,
+              fontFamily: 'var(--font-body), Lora, Georgia, serif',
+              backgroundColor: 'var(--color-text)',
+              color: 'var(--color-surface)',
+              letterSpacing: '0.02em',
+              boxShadow: 'inset 0 1px 0 rgba(251,246,238,0.15), 0 2px 10px rgba(45,31,20,0.12)',
+            }}
+          >
             Empezar gratis
           </Link>
         </div>

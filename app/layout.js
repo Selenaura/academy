@@ -1,6 +1,7 @@
 import './globals.css';
 import { Fraunces, Lora } from 'next/font/google';
 import InstallPWA from '@/components/InstallPWA';
+import { THEME_INIT_SCRIPT } from '@/components/ThemeToggle';
 
 // Fraunces variable — same display font as selenaura-main. Loads with
 // the three optical-feature axes (opsz / SOFT / WONK) so we can drive
@@ -64,10 +65,23 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={`${fraunces.variable} ${lora.variable}`}>
+    <html
+      lang="es"
+      className={`${fraunces.variable} ${lora.variable}`}
+      // Script inline en <head> aplica data-theme="night" desde
+      // localStorage ANTES del primer paint. Eso produce un mismatch
+      // legítimo entre el HTML servido (sin data-theme) y el HTML
+      // hidratado (con data-theme). suppressHydrationWarning silencia
+      // la advertencia SÓLO para atributos del <html>, no hijos.
+      suppressHydrationWarning
+    >
       <head>
+        {/* Theme init — anti-FOUC. Tiene que correr antes de React */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <meta name="theme-color" content="#FBF6EE" />
+        {/* theme-color dual — cream en día, indigo en noche */}
+        <meta name="theme-color" content="#FBF6EE" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#14102A" media="(prefers-color-scheme: dark)" />
         <script dangerouslySetInnerHTML={{ __html: `
           if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
