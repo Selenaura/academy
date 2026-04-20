@@ -48,7 +48,30 @@ export async function POST(request) {
 
     console.log(`📬 Brevo webhook: ${event} for ${normalizedEmail}`);
 
-    switch (event) {
+    // Defensive log: persist EVERY event to brevo_events_log for diagnosis.
+    // Vercel Hobby clears runtime logs hourly; this gives us a durable audit trail
+    // to detect unmatched events (e.g. Brevo sending `open` instead of `opened`).
+    const KNOWN_EVENTS = new Set([
+      'opened', 'open', 'click', 'clicks', 'hard_bounce', 'soft_bounce',
+      'spam', 'unsubscribed', 'delivered', 'request', 'proxy_open'
+    ]);
+    await supabase.from('brevo_events_log').insert({
+      event_type: event,
+      email: normalizedEmail,
+      message_id: messageId || null,
+      ts_event: eventTime,
+      payload: body,
+      matched: KNOWN_EVENTS.has(event),
+    });
+
+    // Normalize Brevo event naming variations (open/opened, click/clicks).
+    // Documented payload uses `opened` and `click`, but defensive handling
+    // protects against Brevo API version drift.
+    const normalizedEvent = (event === 'open') ? 'opened'
+                          : (event === 'clicks') ? 'click'
+                          : event;
+
+    switch (normalizedEvent) {
       case 'opened': {
         // Direct update: get current count, then increment
         const { data: lead } = await supabase
@@ -112,7 +135,7 @@ export async function POST(request) {
       }
 
       default:
-        console.log(`  ℹ️ Unhandled Brevo event: ${event}`);
+        console.log(`  ℹ️ Unhandled Brevo event: ${event} (logged in brevo_events_log)`);
     }
 
     return NextResponse.json({ received: true });
