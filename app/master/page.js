@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import { Navbar, Footer, GoldDivider } from '@/components/ui';
+import { Navbar, Footer } from '@/components/ui';
 import SpotsCounter from './SpotsCounter';
 import WaitlistForm from './WaitlistForm';
+import ChapterSignature from '@/components/ChapterSignature';
+import AtlasLabel from '@/components/AtlasLabel';
+import Colophon from '@/components/Colophon';
 
 export const metadata = {
   title: 'Cohort Fundador — Máster en Guía Espiritual Profesional | Selene Academia',
@@ -24,73 +27,53 @@ export const metadata = {
 };
 
 const MODULES = [
-  { num: 1, icon: '📖', name: 'El Método Selene', desc: 'Marco teórico integrativo: neurociencia + tradición milenaria' },
-  { num: 2, icon: '🔗', name: 'Integración de disciplinas', desc: 'Astrología, tarot, quirología, sueños, cronobiología y constelaciones' },
-  { num: 3, icon: '🧠', name: 'Psicología para guías', desc: 'Límites, crisis emocionales, ética profesional' },
-  { num: 4, icon: '💎', name: 'La sesión profesional', desc: 'Estructura, flujo, cierre y seguimiento de una consulta real' },
-  { num: 5, icon: '📋', name: 'Casos prácticos supervisados', desc: '7 casos + 3 sesiones supervisadas con clientes reales' },
-  { num: 6, icon: '✨', name: 'Tu marca personal', desc: 'Identidad, propuesta de valor, posicionamiento' },
-  { num: 7, icon: '💰', name: 'Modelo de negocio', desc: 'Pricing, paquetes, ingresos recurrentes, datos de mercado' },
-  { num: 8, icon: '📣', name: 'Marketing y captación', desc: 'Redes, contenido, embudo de clientes sin invertir en ads' },
-  { num: 9, icon: '⚖️', name: 'Legalidad y fiscalidad', desc: 'Alta autónoma, IAE, RGPD, facturación (España + Latam)' },
-  { num: 10, icon: '🚀', name: 'Plan de lanzamiento', desc: 'Tu plan de 90 días para lanzar tu práctica profesional' },
-  { num: 11, icon: '🌟', name: 'Directorio profesional', desc: 'Perfil premium en el directorio Selene verificado' },
-  { num: 12, icon: '🎓', name: 'Certificación y examen final', desc: 'Evaluación integradora + certificado profesional con CSV' },
+  { num: 1,  name: 'El Método Selene',              desc: 'Marco teórico integrativo: neurociencia + tradición milenaria' },
+  { num: 2,  name: 'Integración de disciplinas',    desc: 'Astrología, tarot, quirología, sueños, cronobiología y constelaciones' },
+  { num: 3,  name: 'Psicología para guías',         desc: 'Límites, crisis emocionales, ética profesional' },
+  { num: 4,  name: 'La sesión profesional',         desc: 'Estructura, flujo, cierre y seguimiento de una consulta real' },
+  { num: 5,  name: 'Casos prácticos supervisados',  desc: '7 casos + 3 sesiones supervisadas con clientes reales' },
+  { num: 6,  name: 'Tu marca personal',             desc: 'Identidad, propuesta de valor, posicionamiento' },
+  { num: 7,  name: 'Modelo de negocio',             desc: 'Pricing, paquetes, ingresos recurrentes, datos de mercado' },
+  { num: 8,  name: 'Marketing y captación',         desc: 'Redes, contenido, embudo de clientes sin invertir en ads' },
+  { num: 9,  name: 'Legalidad y fiscalidad',        desc: 'Alta autónoma, IAE, RGPD, facturación (España + Latam)' },
+  { num: 10, name: 'Plan de lanzamiento',           desc: 'Tu plan de 90 días para lanzar tu práctica profesional' },
+  { num: 11, name: 'Directorio profesional',        desc: 'Perfil premium en el directorio Selene verificado' },
+  { num: 12, name: 'Certificación y examen final',  desc: 'Evaluación integradora + certificado profesional con código de verificación' },
 ];
 
 const DISCIPLINES = [
-  { icon: '⭐', name: 'Astrología Natal' },
-  { icon: '✨', name: 'Tarot Intuitivo' },
-  { icon: '🤚', name: 'Quirología' },
-  { icon: '💤', name: 'Interpretación de Sueños' },
-  { icon: '🕐', name: 'Cronobiología' },
-  { icon: '🌳', name: 'Constelaciones Familiares' },
+  'Astrología Natal', 'Tarot Intuitivo', 'Quirología',
+  'Interpretación de Sueños', 'Cronobiología', 'Constelaciones Familiares',
 ];
 
 const FAQS = [
-  {
-    q: '¿Es presencial u online?',
-    a: 'Es 100% online. Todo el contenido es digital y accesible desde cualquier dispositivo, en cualquier país, a tu ritmo. Las sesiones supervisadas se hacen por videollamada en horarios flexibles. No hay clases presenciales.',
-  },
-  {
-    q: '¿Cuánto dura el Máster?',
-    a: 'El contenido está diseñado para completarse en 3-4 meses, pero tienes acceso de por vida. Sin fecha límite.',
-  },
-  {
-    q: '¿El certificado tiene validez?',
-    a: 'Es un certificado profesional privado de SelenaUra Academy, verificable públicamente con código CSV. Acredita tu formación y te da acceso al directorio profesional.',
-  },
-  {
-    q: '¿Hay política de devolución?',
-    a: 'Sí. Garantía de 14 días. Si no es lo que esperabas, te devolvemos el dinero sin preguntas.',
-  },
-  {
-    q: '¿Necesito experiencia previa?',
-    a: 'Sí, necesitas al menos 2 certificaciones Selene previas. Este máster es el paso final para convertir lo que ya sabes en profesión.',
-  },
-  {
-    q: '¿Qué pasa si se agotan las 20 plazas?',
-    a: 'Entrarás en lista de espera para la siguiente cohort, pero al precio normal de 149,99 euros. El precio fundador es exclusivo de esta primera promoción.',
-  },
+  { q: '¿Es presencial u online?',
+    a: 'Es 100% online. Todo el contenido es digital y accesible desde cualquier dispositivo, en cualquier país, a tu ritmo. Las sesiones supervisadas se hacen por videollamada en horarios flexibles. No hay clases presenciales.' },
+  { q: '¿Cuánto dura el Máster?',
+    a: 'El contenido está diseñado para completarse en 3-4 meses, pero tienes acceso de por vida y recibes todas las ediciones futuras sin coste adicional.' },
+  { q: '¿El certificado tiene validez?',
+    a: 'Es un certificado profesional privado de Selenaura Academia, verificable públicamente con código único. Acredita tu formación y te da acceso al directorio profesional.' },
+  { q: '¿Hay política de devolución?',
+    a: 'Sí. Garantía de 14 días. Si no es lo que esperabas, te devolvemos el dinero sin preguntas.' },
+  { q: '¿Necesito experiencia previa?',
+    a: 'Sí, necesitas al menos 2 certificaciones Selene previas. Este máster es el paso final para convertir lo que ya sabes en profesión.' },
+  { q: '¿Qué pasa si se agotan las 20 plazas?',
+    a: 'Entrarás en lista de espera para la siguiente cohort, pero al precio normal de 149,99 euros. El precio fundador es exclusivo de esta primera promoción.' },
 ];
 
 const masterSchema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
   name: 'Máster en Guía Espiritual Profesional',
-  description: '12 módulos, certificación profesional, 6 disciplinas. Formación completa para ejercer como guía espiritual certificado.',
-  provider: {
-    '@type': 'Organization',
-    name: 'Selene Academia',
-    url: 'https://academy.selenaura.com',
-  },
+  description: 'Formación completa de 12 módulos para convertir tu práctica espiritual en profesión. Astrología, tarot, quirología, sueños, cronobiología y constelaciones familiares. Base científica peer-reviewed. Certificado profesional verificable.',
+  provider: { '@type': 'Organization', name: 'Selene Academia', url: 'https://academy.selenaura.com' },
   offers: {
     '@type': 'Offer',
     price: '99.99',
     priceCurrency: 'EUR',
-    availability: 'https://schema.org/InStock',
-    url: 'https://academy.selenaura.com/master',
+    availability: 'https://schema.org/LimitedAvailability',
     validFrom: '2026-01-01',
+    url: 'https://academy.selenaura.com/master',
   },
   hasCourseInstance: {
     '@type': 'CourseInstance',
@@ -105,324 +88,859 @@ const masterSchema = {
 
 export default function MasterFoundingPage() {
   return (
-    <main className="min-h-screen bg-selene-bg text-selene-white">
+    <main className="min-h-screen atlas-paper">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(masterSchema) }} />
       <Navbar />
 
-      {/* ── Hero ── */}
-      <section className="relative overflow-hidden py-20 md:py-28 px-6">
-        <div className="absolute inset-0 bg-gradient-to-br from-selene-gold/5 via-transparent to-selene-purple/5" />
-        <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-radial-gold pointer-events-none" />
+      {/* ════════════════════════════════════════════════════════════
+          HERO — El Tomo Principal
+          ════════════════════════════════════════════════════════════ */}
+      <section className="relative pt-10 pb-14 md:pt-14 md:pb-16">
+        <div className="running-head pt-2 pb-8" aria-hidden="false">
+          Selenaura · Academia · El Tomo Principal
+        </div>
 
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="flex items-center justify-center gap-3 mb-6 flex-wrap">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-selene-gold/10 border border-selene-gold/20 text-selene-gold text-xs font-medium animate-pulse-gold">
-              COHORT FUNDADOR — PLAZAS LIMITADAS
-            </div>
-            <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-medium">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              100% ONLINE
-            </div>
-          </div>
+        <div className="relative max-w-content mx-auto px-6 text-center">
+          <ChapterSignature title="EL TOMO PRINCIPAL" align="center" className="mb-6 mx-auto" />
 
-          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-normal text-selene-white leading-tight mb-6">
-            Máster en Guía Espiritual<br />
-            <span className="text-selene-gold">Profesional</span>
+          <AtlasLabel tone="accent" size="sm" className="mb-6 mx-auto">
+            Cohort fundador · 20 plazas
+          </AtlasLabel>
+
+          <h1
+            className="font-display mx-auto mb-5"
+            style={{
+              fontSize: 'var(--step-4)',
+              lineHeight: 1.05,
+              fontWeight: 600,
+              color: 'var(--color-text)',
+              fontVariationSettings: "'opsz' 96, 'SOFT' 100",
+              fontFeatureSettings: "'liga' 0, 'dlig' 0, 'kern' 1, 'calt' 0",
+              letterSpacing: '-0.018em',
+              maxWidth: '22ch',
+              hyphens: 'none',
+              WebkitHyphens: 'none',
+            }}
+          >
+            Máster en
+            <span
+              className="block font-display italic mt-1 text-[var(--color-text-accent)]"
+              style={{
+                fontSize: 'var(--step-5)',
+                fontVariationSettings: "'opsz' 144, 'SOFT' 60",
+                fontWeight: 500,
+                hyphens: 'none',
+                WebkitHyphens: 'none',
+              }}
+            >
+              Guía Espiritual
+            </span>
           </h1>
 
-          <p className="text-lg text-selene-white-dim max-w-2xl mx-auto mb-4 leading-relaxed">
-            20 plazas a precio especial para la primera promoción.
-            12 módulos, certificación profesional, 6 disciplinas integradas.
+          <p
+            className="font-display italic mx-auto mb-10 text-[var(--color-text-muted)]"
+            lang="es"
+            style={{
+              fontSize: 'var(--step-1)',
+              maxWidth: '54ch',
+              lineHeight: 1.55,
+              fontVariationSettings: "'opsz' 28, 'SOFT' 60",
+            }}
+          >
+            Doce módulos, seis disciplinas, certificación profesional.
+            El paso final para convertir lo que ya sabes en profesión.
           </p>
 
-          <p className="text-sm text-selene-white-dim/60 max-w-xl mx-auto mb-8">
-            Formación basada en neurociencia + tradición milenaria
-          </p>
-
-          {/* Price block */}
-          <div className="inline-flex flex-col items-center bg-selene-card/80 rounded-2xl border border-selene-gold/20 px-10 py-8 mb-8">
-            <div className="flex items-baseline gap-4 mb-2">
-              <span className="text-xl text-selene-white-dim/40 line-through font-display">149,99</span>
-              <span className="text-4xl md:text-5xl font-display text-selene-gold font-semibold">99,99</span>
+          {/* Precio prominente — double-rule gold */}
+          <div
+            className="relative inline-block px-10 py-8 mb-8"
+            style={{
+              border: '1px solid rgba(184,151,90,0.55)',
+              backgroundColor: 'var(--color-surface-raised)',
+            }}
+          >
+            <div
+              className="absolute pointer-events-none"
+              style={{ inset: 10, border: '1px solid rgba(184,151,90,0.22)' }}
+              aria-hidden="true"
+            />
+            <div className="relative">
+              <AtlasLabel tone="faint" size="xs" className="mb-2 mx-auto">
+                Precio fundador
+              </AtlasLabel>
+              <div className="flex items-baseline justify-center gap-4 mb-3 tnum">
+                <span
+                  className="font-display"
+                  style={{
+                    fontSize: 'var(--step-1)',
+                    color: 'var(--color-text-faint)',
+                    textDecoration: 'line-through',
+                    fontVariationSettings: "'opsz' 24, 'SOFT' 100",
+                    fontWeight: 400,
+                  }}
+                >
+                  149,99 €
+                </span>
+                <span
+                  className="font-display"
+                  style={{
+                    fontSize: 'var(--step-4)',
+                    color: 'var(--color-text-ornament)',
+                    fontWeight: 600,
+                    fontVariationSettings: "'opsz' 96, 'SOFT' 100",
+                    lineHeight: 1,
+                  }}
+                >
+                  99,99 €
+                </span>
+              </div>
+              <div className="mb-4">
+                <SpotsCounter />
+              </div>
             </div>
-            <span className="text-xs text-selene-white-dim/60 mb-4">Solo para las primeras 20 plazas</span>
-            <SpotsCounter />
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* CTA dual */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
               href="/auth?redirect=/curso/guia-profesional"
-              className="px-10 py-4 rounded-full bg-selene-gold text-selene-bg font-semibold text-base hover:brightness-110 transition-all shadow-lg shadow-selene-gold/20 no-underline"
+              className="inline-flex items-center px-10 py-4 rounded-xl no-underline"
+              style={{
+                fontSize: '14px',
+                fontWeight: 600,
+                fontFamily: 'var(--font-body), Lora, Georgia, serif',
+                backgroundColor: 'var(--color-text)',
+                color: 'var(--color-surface)',
+                letterSpacing: '0.02em',
+                boxShadow:
+                  'inset 0 1px 0 rgba(251,246,238,0.15), 0 2px 10px rgba(45,31,20,0.12)',
+              }}
             >
               Reservar mi plaza
             </Link>
             <a
               href="#waitlist"
-              className="px-10 py-4 rounded-full border border-selene-gold/30 text-selene-gold font-medium text-base hover:bg-selene-gold/5 transition-all no-underline"
+              className="inline-flex items-center px-10 py-4 rounded-xl no-underline"
+              style={{
+                fontSize: '14px',
+                fontWeight: 600,
+                fontFamily: 'var(--font-body), Lora, Georgia, serif',
+                color: 'var(--color-text-ornament)',
+                border: '1px solid var(--color-rule-ornament)',
+              }}
             >
-              Quiero más información
+              Más información
             </a>
           </div>
         </div>
       </section>
 
-      {/* ── 6 disciplinas ── */}
-      <section className="py-16 px-6 bg-selene-elevated/20">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-2xl md:text-3xl text-selene-gold mb-3">
-              6 disciplinas en una sola formación
-            </h2>
-            <p className="text-sm text-selene-white-dim max-w-lg mx-auto mb-4">
-              El único máster que integra las 6 ramas de la guía espiritual con base científica.
-            </p>
-            <GoldDivider />
-          </div>
+      {/* Slim divider */}
+      <div className="flex justify-center py-2" aria-hidden="true">
+        <img
+          src="/ornaments/divider-lunar-simple.webp"
+          alt=""
+          className="block max-w-[min(720px,90vw)] w-full h-auto opacity-70 select-none"
+          style={{
+            filter: 'sepia(0.18) saturate(0.88) contrast(1.02)',
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)',
+            maskImage:
+              'linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)',
+          }}
+        />
+      </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {DISCIPLINES.map((d) => (
-              <div key={d.name} className="bg-selene-bg/80 rounded-xl p-5 border border-selene-border text-center">
-                <div className="text-3xl mb-3">{d.icon}</div>
-                <p className="text-sm text-selene-white font-medium">{d.name}</p>
-              </div>
-            ))}
-          </div>
+      {/* ════════════════════════════════════════════════════════════
+          § I — LAS SEIS DISCIPLINAS
+          ════════════════════════════════════════════════════════════ */}
+      <section className="max-w-content mx-auto px-6 py-14">
+        <div className="text-center mb-10">
+          <ChapterSignature title="LAS SEIS DISCIPLINAS" align="center" className="mb-6 mx-auto" />
+          <h2
+            className="font-display font-medium"
+            style={{
+              fontSize: 'var(--step-3)',
+              color: 'var(--color-text)',
+              fontVariationSettings: "'opsz' 48, 'SOFT' 80",
+              fontFeatureSettings: "'liga' 0, 'dlig' 0, 'kern' 1",
+              letterSpacing: '-0.008em',
+            }}
+          >
+            Seis saberes, un mismo método
+          </h2>
+          <p
+            className="font-display italic mx-auto mt-3 text-[var(--color-text-muted)]"
+            lang="es"
+            style={{
+              fontSize: 'var(--step-0)',
+              maxWidth: '48ch',
+              fontVariationSettings: "'opsz' 24, 'SOFT' 60",
+            }}
+          >
+            El único máster que integra las seis ramas de la guía
+            espiritual con base científica.
+          </p>
+        </div>
+
+        <ol
+          className="grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-2 max-w-3xl mx-auto"
+          style={{ listStyle: 'none' }}
+        >
+          {DISCIPLINES.map((d, i) => (
+            <li
+              key={d}
+              className="py-4 flex items-baseline gap-3"
+              style={{ borderTop: '1px solid var(--color-rule)' }}
+            >
+              <span
+                className="font-display italic shrink-0"
+                style={{
+                  fontSize: '13px',
+                  color: 'var(--color-text-ornament)',
+                  fontVariationSettings: "'opsz' 18, 'SOFT' 60",
+                  width: '1.4rem',
+                }}
+              >
+                {['I','II','III','IV','V','VI'][i]}.
+              </span>
+              <span
+                className="font-display"
+                style={{
+                  fontSize: '15px',
+                  color: 'var(--color-text)',
+                  fontVariationSettings: "'opsz' 18, 'SOFT' 80",
+                  lineHeight: 1.3,
+                }}
+              >
+                {d}
+              </span>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* Slim divider */}
+      <div className="flex justify-center py-2" aria-hidden="true">
+        <img
+          src="/ornaments/divider-lunar-simple.webp"
+          alt=""
+          className="block max-w-[min(720px,90vw)] w-full h-auto opacity-70 select-none"
+          style={{
+            filter: 'sepia(0.18) saturate(0.88) contrast(1.02)',
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)',
+            maskImage:
+              'linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)',
+          }}
+        />
+      </div>
+
+      {/* ════════════════════════════════════════════════════════════
+          § II — PARA QUIÉN / AL TERMINAR
+          ════════════════════════════════════════════════════════════ */}
+      <section className="max-w-content mx-auto px-6 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-4xl mx-auto">
+          <article
+            className="relative px-7 py-7"
+            style={{
+              border: '1px solid var(--color-rule-ornament)',
+              backgroundColor: 'var(--color-surface-raised)',
+            }}
+          >
+            <AtlasLabel tone="ornament" size="xs" className="mb-4">
+              Esto es para ti si…
+            </AtlasLabel>
+            <ul className="space-y-3" style={{ listStyle: 'none' }}>
+              {[
+                'Ya lees cartas, tarot o sueños — pero no te atreves a cobrar',
+                'Quieres vivir de tu don, pero no sabes por dónde empezar',
+                'Te falta la estructura: cómo cobrar, qué decir, cómo cumplir con Hacienda',
+                'Necesitas practicar con casos reales antes de lanzarte',
+              ].map(t => (
+                <li
+                  key={t}
+                  className="flex gap-2.5 items-start"
+                  style={{
+                    fontFamily: 'var(--font-body), Lora, Georgia, serif',
+                    fontSize: '14px',
+                    color: 'var(--color-text)',
+                    lineHeight: 1.55,
+                  }}
+                >
+                  <span className="text-[var(--color-text-ornament)] shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+
+          <article
+            className="relative px-7 py-7"
+            style={{
+              border: '1px solid var(--color-rule-ornament)',
+              backgroundColor: 'var(--color-surface-raised)',
+            }}
+          >
+            <AtlasLabel tone="ornament" size="xs" className="mb-4">
+              Al terminar tendrás
+            </AtlasLabel>
+            <ul className="space-y-3" style={{ listStyle: 'none' }}>
+              {[
+                'Tu marca personal lista y tu oferta de servicios definida',
+                'Diez o más consultas supervisadas bajo tu cinturón',
+                'Tu código ético profesional propio',
+                'Perfil premium en el directorio Selene',
+                'Plan de lanzamiento de 90 días con todo resuelto',
+              ].map(t => (
+                <li
+                  key={t}
+                  className="flex gap-2.5 items-start"
+                  style={{
+                    fontFamily: 'var(--font-body), Lora, Georgia, serif',
+                    fontSize: '14px',
+                    color: 'var(--color-text)',
+                    lineHeight: 1.55,
+                  }}
+                >
+                  <span className="text-[var(--color-text-ornament)] shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
         </div>
       </section>
 
-      <GoldDivider />
-
-      {/* ── Para quien / Resultado ── */}
-      <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-          <div className="bg-selene-elevated/50 rounded-2xl p-6 border border-selene-border">
-            <h3 className="text-selene-gold text-sm font-semibold mb-4">Esto es para ti si...</h3>
-            <ul className="space-y-3 text-sm text-selene-white-dim leading-relaxed">
-              <li className="flex gap-2"><span className="text-selene-gold shrink-0">&#10003;</span> Ya lees cartas, tarot o sueños — pero no te atreves a cobrar</li>
-              <li className="flex gap-2"><span className="text-selene-gold shrink-0">&#10003;</span> Quieres vivir de tu don, pero no sabes por dónde empezar</li>
-              <li className="flex gap-2"><span className="text-selene-gold shrink-0">&#10003;</span> Te falta la estructura: ¿cómo cobro? ¿qué digo? ¿es legal?</li>
-              <li className="flex gap-2"><span className="text-selene-gold shrink-0">&#10003;</span> Necesitas practicar con casos reales antes de lanzarte</li>
-            </ul>
-          </div>
-          <div className="bg-selene-elevated/50 rounded-2xl p-6 border border-selene-border">
-            <h3 className="text-selene-gold text-sm font-semibold mb-4">Cuando termines tendrás</h3>
-            <ul className="space-y-3 text-sm text-selene-white-dim leading-relaxed">
-              <li className="flex gap-2"><span className="text-selene-gold shrink-0">&#10003;</span> Tu marca personal lista y tu oferta de servicios definida</li>
-              <li className="flex gap-2"><span className="text-selene-gold shrink-0">&#10003;</span> 10+ consultas supervisadas bajo tu cinturón</li>
-              <li className="flex gap-2"><span className="text-selene-gold shrink-0">&#10003;</span> Tu código ético profesional propio</li>
-              <li className="flex gap-2"><span className="text-selene-gold shrink-0">&#10003;</span> Perfil premium en el directorio Selene</li>
-              <li className="flex gap-2"><span className="text-selene-gold shrink-0">&#10003;</span> Plan de lanzamiento de 90 días con todo resuelto</li>
-            </ul>
-          </div>
+      {/* ════════════════════════════════════════════════════════════
+          § III — LAS CUENTAS SIMPLES (ROI editorial)
+          ════════════════════════════════════════════════════════════ */}
+      <section className="max-w-content mx-auto px-6 py-14">
+        <div className="text-center mb-8">
+          <ChapterSignature title="LAS CUENTAS SIMPLES" align="center" className="mb-6 mx-auto" />
+          <p
+            className="font-display italic mx-auto mb-8 text-[var(--color-text-muted)]"
+            lang="es"
+            style={{
+              fontSize: 'var(--step-0)',
+              maxWidth: '52ch',
+              fontVariationSettings: "'opsz' 24, 'SOFT' 60",
+              lineHeight: 1.6,
+            }}
+          >
+            Una guía espiritual profesional cobra entre 40 y 180 euros
+            por sesión en España. En una o dos sesiones ya has
+            recuperado tu inversión fundadora.
+          </p>
         </div>
-      </section>
 
-      {/* ── ROI ── */}
-      <section className="py-12 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-selene-gold/5 to-selene-purple/5 rounded-2xl p-8 border border-selene-gold/20">
-            <h2 className="font-display text-2xl md:text-3xl text-selene-gold mb-3 text-center">
-              Las cuentas son simples
-            </h2>
-            <p className="text-sm text-selene-white-dim text-center mb-8 max-w-xl mx-auto">
-              Una guía espiritual profesional cobra entre 40 y 180 euros por sesión en España. En 1-2 sesiones ya has recuperado tu inversión fundadora.
-            </p>
-            <div className="grid sm:grid-cols-3 gap-5 text-center">
-              <div className="bg-selene-bg/60 rounded-xl p-5 border border-selene-border">
-                <p className="text-2xl font-display text-selene-gold mb-1">40-180</p>
-                <p className="text-xs text-selene-white-dim">euros por sesión en España</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          {[
+            { value: '40–180 €', label: 'por sesión en España' },
+            { value: '1–2',      label: 'sesiones para recuperar la inversión' },
+            { value: '1.200 €+', label: 'al mes · 4 sesiones por semana' },
+          ].map(s => (
+            <div key={s.label} className="text-center">
+              <div
+                className="font-display tnum mb-1"
+                style={{
+                  fontSize: 'var(--step-2)',
+                  fontWeight: 600,
+                  color: 'var(--color-text)',
+                  fontVariationSettings: "'opsz' 36, 'SOFT' 100",
+                  fontFeatureSettings: "'tnum' 1, 'liga' 0, 'kern' 1",
+                  lineHeight: 1,
+                }}
+              >
+                {s.value}
               </div>
-              <div className="bg-selene-bg/60 rounded-xl p-5 border border-selene-border">
-                <p className="text-2xl font-display text-selene-gold mb-1">1-2</p>
-                <p className="text-xs text-selene-white-dim">sesiones para recuperar la inversión</p>
-              </div>
-              <div className="bg-selene-bg/60 rounded-xl p-5 border border-selene-border">
-                <p className="text-2xl font-display text-selene-gold mb-1">1.200+</p>
-                <p className="text-xs text-selene-white-dim">euros al mes (4 sesiones/semana)</p>
-              </div>
+              <AtlasLabel tone="faint" size="xs" className="mx-auto">
+                {s.label}
+              </AtlasLabel>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* ── 12 modulos ── */}
-      <section className="py-16 px-6 bg-selene-elevated/20" id="programa">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-2xl md:text-3xl text-selene-gold mb-3">
-              12 módulos — 80 horas de formación
-            </h2>
-            <p className="text-sm text-selene-white-dim max-w-lg mx-auto mb-4">
-              De practicante a profesional certificada
-            </p>
-            <GoldDivider />
-          </div>
+      {/* Slim divider */}
+      <div className="flex justify-center py-2" aria-hidden="true">
+        <img
+          src="/ornaments/divider-lunar-simple.webp"
+          alt=""
+          className="block max-w-[min(720px,90vw)] w-full h-auto opacity-70 select-none"
+          style={{
+            filter: 'sepia(0.18) saturate(0.88) contrast(1.02)',
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)',
+            maskImage:
+              'linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)',
+          }}
+        />
+      </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
-            {MODULES.map((m) => (
-              <div key={m.num} className="bg-selene-bg/80 rounded-xl p-5 border border-selene-border flex gap-4 items-start">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-selene-gold/10 border border-selene-gold/20 flex items-center justify-center text-lg">
-                  {m.icon}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[10px] text-selene-gold/50 font-medium">MOD. {String(m.num).padStart(2, '0')}</span>
-                  </div>
-                  <p className="text-sm text-selene-white font-medium leading-tight">{m.name}</p>
-                  <p className="text-xs text-selene-white-dim mt-1">{m.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Social proof ── */}
-      <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-display text-2xl md:text-3xl text-selene-gold mb-8 text-center">
-            Lo que dicen nuestras alumnas
+      {/* ════════════════════════════════════════════════════════════
+          § IV — EL PROGRAMA (12 módulos como Table of Contents)
+          Linear/Method pattern + Domestika unit labels
+          ════════════════════════════════════════════════════════════ */}
+      <section id="programa" className="max-w-content mx-auto px-6 py-14">
+        <div className="text-center mb-10">
+          <ChapterSignature title="EL PROGRAMA" align="center" className="mb-6 mx-auto" />
+          <h2
+            className="font-display font-medium"
+            style={{
+              fontSize: 'var(--step-3)',
+              color: 'var(--color-text)',
+              fontVariationSettings: "'opsz' 48, 'SOFT' 80",
+              fontFeatureSettings: "'liga' 0, 'dlig' 0, 'kern' 1",
+              letterSpacing: '-0.008em',
+            }}
+          >
+            Doce módulos, ochenta horas
           </h2>
-          <div className="grid sm:grid-cols-3 gap-5">
-            {[
-              {
-                quote: 'Me dio escalofríos de lo precisa que fue mi lectura. El máster me dio la seguridad de hacer lo mismo para otras personas.',
-                name: 'Laura M.',
-                sign: 'Escorpio',
-                detail: 'Ya cobra 60 euros/sesión',
-              },
-              {
-                quote: 'Por fin algo con ciencia real, no solo frases bonitas. La guía legal me ahorró meses de investigación.',
-                name: 'María C.',
-                sign: 'Acuario',
-                detail: 'Alta como autónoma',
-              },
-              {
-                quote: 'Los casos supervisados fueron lo mejor. Cuando hice mi primera sesión real ya sabía exactamente qué hacer.',
-                name: 'Ana R.',
-                sign: 'Cáncer',
-                detail: '4 clientes recurrentes',
-              },
-            ].map((t, i) => (
-              <div key={i} className="bg-selene-elevated/50 rounded-2xl p-6 border border-selene-border">
-                <p className="text-sm text-selene-white-dim leading-relaxed mb-4 italic">
-                  &ldquo;{t.quote}&rdquo;
+          <p
+            className="font-display italic mx-auto mt-3 text-[var(--color-text-muted)]"
+            lang="es"
+            style={{
+              fontSize: 'var(--step-0)',
+              maxWidth: '44ch',
+              fontVariationSettings: "'opsz' 24, 'SOFT' 60",
+            }}
+          >
+            Lectura secuencial recomendada. Cada módulo es un capítulo
+            con evaluación final.
+          </p>
+        </div>
+
+        <ol
+          className="max-w-[760px] mx-auto"
+          style={{ listStyle: 'none' }}
+        >
+          {MODULES.map(m => (
+            <li
+              key={m.num}
+              className="grid py-5"
+              style={{
+                gridTemplateColumns: '3.2rem 1fr',
+                gap: '1.5rem',
+                borderBottom: '1px solid var(--color-rule)',
+              }}
+            >
+              <span
+                className="font-display tnum self-baseline"
+                style={{
+                  fontSize: 'var(--step-1)',
+                  fontWeight: 500,
+                  color: 'var(--color-text-ornament)',
+                  fontVariationSettings: "'opsz' 24, 'SOFT' 100",
+                  fontFeatureSettings: "'tnum' 1",
+                  lineHeight: 1,
+                }}
+                aria-hidden="true"
+              >
+                {String(m.num).padStart(2, '0')}
+              </span>
+              <div>
+                <h3
+                  className="font-display"
+                  style={{
+                    fontSize: 'var(--step-1)',
+                    fontWeight: 500,
+                    color: 'var(--color-text)',
+                    fontVariationSettings: "'opsz' 24, 'SOFT' 80",
+                    fontFeatureSettings: "'liga' 0, 'dlig' 0, 'kern' 1",
+                    lineHeight: 1.25,
+                  }}
+                >
+                  {m.name}
+                </h3>
+                <p
+                  className="font-display italic mt-1"
+                  lang="es"
+                  style={{
+                    fontSize: '14px',
+                    color: 'var(--color-text-muted)',
+                    fontVariationSettings: "'opsz' 18, 'SOFT' 60",
+                    lineHeight: 1.55,
+                  }}
+                >
+                  {m.desc}
                 </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-selene-gold/10 border border-selene-gold/20 flex items-center justify-center text-selene-gold text-xs font-bold">
-                    {t.name.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="text-xs text-selene-white font-medium">{t.name} &middot; {t.sign}</p>
-                    <p className="text-[11px] text-selene-gold/70">{t.detail}</p>
-                  </div>
-                </div>
               </div>
-            ))}
-          </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* Slim divider */}
+      <div className="flex justify-center py-2" aria-hidden="true">
+        <img
+          src="/ornaments/divider-lunar-simple.webp"
+          alt=""
+          className="block max-w-[min(720px,90vw)] w-full h-auto opacity-70 select-none"
+          style={{
+            filter: 'sepia(0.18) saturate(0.88) contrast(1.02)',
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)',
+            maskImage:
+              'linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)',
+          }}
+        />
+      </div>
+
+      {/* ════════════════════════════════════════════════════════════
+          § V — LOS TESTIMONIOS
+          ════════════════════════════════════════════════════════════ */}
+      <section className="max-w-content mx-auto px-6 py-14">
+        <div className="text-center mb-10">
+          <ChapterSignature title="LOS TESTIMONIOS" align="center" className="mb-6 mx-auto" />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-4xl mx-auto">
+          {[
+            { quote: 'Me dio escalofríos de lo precisa que fue mi lectura. El máster me dio la seguridad de hacer lo mismo para otras personas.',
+              name: 'Laura M.', sign: 'Escorpio', detail: 'Ya cobra 60 € por sesión' },
+            { quote: 'Por fin algo con ciencia real, no sólo frases bonitas. La guía legal me ahorró meses de investigación.',
+              name: 'María C.', sign: 'Acuario', detail: 'Alta como autónoma' },
+            { quote: 'Los casos supervisados fueron lo mejor. Cuando hice mi primera sesión real ya sabía exactamente qué hacer.',
+              name: 'Ana R.', sign: 'Cáncer', detail: 'Cuatro clientes recurrentes' },
+          ].map((t, i) => (
+            <figure key={i} className="relative">
+              <span
+                aria-hidden="true"
+                className="absolute -top-4 -left-2 font-display italic"
+                style={{
+                  fontSize: '3rem',
+                  color: 'var(--color-rule-ornament)',
+                  lineHeight: 1,
+                  fontVariationSettings: "'opsz' 96, 'SOFT' 60",
+                }}
+              >
+                “
+              </span>
+              <blockquote
+                className="font-display italic pl-5"
+                lang="es"
+                style={{
+                  fontSize: '15px',
+                  color: 'var(--color-text)',
+                  lineHeight: 1.65,
+                  fontVariationSettings: "'opsz' 24, 'SOFT' 60",
+                }}
+              >
+                {t.quote}
+              </blockquote>
+              <figcaption className="mt-4 pl-5">
+                <AtlasLabel tone="ornament" size="xs" className="mb-1">
+                  {t.name} · {t.sign}
+                </AtlasLabel>
+                <p
+                  className="font-display italic"
+                  style={{
+                    fontSize: '12px',
+                    color: 'var(--color-text-muted)',
+                    fontVariationSettings: "'opsz' 14, 'SOFT' 50",
+                  }}
+                >
+                  {t.detail}
+                </p>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 
-      {/* ── Pricing CTA ── */}
-      <section className="py-20 px-6 bg-selene-elevated/20">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="font-display text-3xl text-selene-gold mb-6">
-            Reserva tu plaza fundadora
-          </h2>
-          <p className="text-selene-white-dim mb-8">
-            Formaciones similares cuestan entre 2.000 y 5.000 euros. Este máster incluye todo — casos supervisados, guía legal, certificación y directorio — por una fracción.
+      {/* ════════════════════════════════════════════════════════════
+          PRECIO + CTA COMPLETO
+          ════════════════════════════════════════════════════════════ */}
+      <section className="max-w-content mx-auto px-6 py-14">
+        <div className="max-w-[620px] mx-auto text-center">
+          <ChapterSignature title="RESERVA TU PLAZA FUNDADORA" align="center" className="mb-6 mx-auto" />
+          <p
+            className="font-display italic mx-auto mb-10 text-[var(--color-text-muted)]"
+            lang="es"
+            style={{
+              fontSize: 'var(--step-0)',
+              maxWidth: '52ch',
+              fontVariationSettings: "'opsz' 24, 'SOFT' 60",
+              lineHeight: 1.6,
+            }}
+          >
+            Formaciones similares cuestan entre 2.000 y 5.000 €. Éste
+            máster incluye todo — casos supervisados, guía legal,
+            certificación, directorio — por una fracción.
           </p>
 
-          <div className="bg-selene-bg/80 rounded-2xl p-8 border border-selene-gold/20 mb-8">
-            <p className="text-xs text-selene-white-dim/40 line-through mb-2">Precio normal: 149,99 euros</p>
-            <div className="flex items-baseline justify-center gap-3 mb-2">
-              <span className="text-lg text-selene-white-dim/40 line-through font-display">149,99</span>
-              <span className="text-4xl font-display text-selene-gold font-semibold">99,99</span>
-            </div>
-            <p className="text-xs text-selene-white-dim/60 mb-6">Precio fundador — solo 20 plazas</p>
+          {/* Caja de precio double-rule */}
+          <div
+            className="relative px-8 py-9 mb-8"
+            style={{
+              border: '1px solid rgba(184,151,90,0.55)',
+              backgroundColor: 'var(--color-surface-raised)',
+            }}
+          >
+            <div
+              className="absolute pointer-events-none"
+              style={{ inset: 10, border: '1px solid rgba(184,151,90,0.22)' }}
+              aria-hidden="true"
+            />
+            <div className="relative">
+              <AtlasLabel tone="faint" size="xs" className="mb-3 mx-auto">
+                Precio fundador · solo veinte plazas
+              </AtlasLabel>
+              <div className="flex items-baseline justify-center gap-4 mb-6 tnum">
+                <span
+                  className="font-display"
+                  style={{
+                    fontSize: 'var(--step-1)',
+                    color: 'var(--color-text-faint)',
+                    textDecoration: 'line-through',
+                    fontVariationSettings: "'opsz' 24, 'SOFT' 100",
+                  }}
+                >
+                  149,99 €
+                </span>
+                <span
+                  className="font-display"
+                  style={{
+                    fontSize: 'var(--step-4)',
+                    color: 'var(--color-text-ornament)',
+                    fontWeight: 600,
+                    fontVariationSettings: "'opsz' 96, 'SOFT' 100",
+                    lineHeight: 1,
+                  }}
+                >
+                  99,99 €
+                </span>
+              </div>
 
-            <ul className="text-sm text-selene-white-dim space-y-2 mb-8 text-left max-w-sm mx-auto">
-              <li className="flex gap-2"><span className="text-selene-gold">&#10003;</span> 12 módulos + 80 horas de formación</li>
-              <li className="flex gap-2"><span className="text-selene-gold">&#10003;</span> 7 casos prácticos + 3 sesiones supervisadas</li>
-              <li className="flex gap-2"><span className="text-selene-gold">&#10003;</span> Certificado profesional verificable</li>
-              <li className="flex gap-2"><span className="text-selene-gold">&#10003;</span> Guía legal y fiscal (España + Latam)</li>
-              <li className="flex gap-2"><span className="text-selene-gold">&#10003;</span> Perfil en el directorio profesional Selene</li>
-              <li className="flex gap-2"><span className="text-selene-gold">&#10003;</span> Acceso de por vida + actualizaciones</li>
-            </ul>
+              <ul
+                className="text-left max-w-sm mx-auto mb-8 space-y-2.5"
+                style={{ listStyle: 'none' }}
+              >
+                {[
+                  '12 módulos · 80 horas de formación',
+                  '7 casos prácticos + 3 sesiones supervisadas',
+                  'Certificado profesional verificable',
+                  'Guía legal y fiscal (España + LATAM)',
+                  'Perfil en el directorio profesional Selene',
+                  'Acceso de por vida · todas las ediciones futuras incluidas',
+                ].map(t => (
+                  <li
+                    key={t}
+                    className="flex gap-2 items-start"
+                    style={{
+                      fontFamily: 'var(--font-body), Lora, Georgia, serif',
+                      fontSize: '14px',
+                      color: 'var(--color-text)',
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    <span className="text-[var(--color-text-ornament)] shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
 
-            <Link
-              href="/auth?redirect=/curso/guia-profesional"
-              className="inline-block px-10 py-4 rounded-full bg-selene-gold text-selene-bg font-semibold text-base hover:brightness-110 transition-all shadow-lg shadow-selene-gold/20 no-underline"
-            >
-              Reservar mi plaza fundadora
-            </Link>
+              <Link
+                href="/auth?redirect=/curso/guia-profesional"
+                className="inline-flex items-center px-10 py-4 rounded-xl no-underline"
+                style={{
+                  fontSize: '14px',
+                  fontWeight: 600,
+                  fontFamily: 'var(--font-body), Lora, Georgia, serif',
+                  backgroundColor: 'var(--color-text)',
+                  color: 'var(--color-surface)',
+                  letterSpacing: '0.02em',
+                  boxShadow:
+                    'inset 0 1px 0 rgba(251,246,238,0.15), 0 2px 10px rgba(45,31,20,0.12)',
+                }}
+              >
+                Reservar mi plaza fundadora
+              </Link>
 
-            <p className="text-xs text-selene-white-dim/50 mt-4">
-              Pago seguro con Stripe &middot; Garantía de 14 días
-            </p>
-          </div>
-
-          {/* Garantia */}
-          <div className="flex items-center justify-center gap-3 p-4 bg-selene-elevated/30 rounded-xl border border-selene-border/50 max-w-md mx-auto">
-            <span className="text-2xl shrink-0">🛡️</span>
-            <div>
-              <p className="text-sm text-selene-white font-medium">Garantía de 14 días</p>
-              <p className="text-xs text-selene-white-dim">Si no es lo que esperabas, te devolvemos el dinero. Sin preguntas.</p>
+              <p
+                className="mt-4 font-display italic"
+                style={{
+                  fontSize: '12px',
+                  color: 'var(--color-text-muted)',
+                  fontVariationSettings: "'opsz' 14, 'SOFT' 50",
+                }}
+              >
+                Pago seguro con Stripe y PayPal · Garantía de 14 días
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Waitlist / More info ── */}
-      <section className="py-16 px-6" id="waitlist">
-        <div className="max-w-lg mx-auto text-center">
-          <h2 className="font-display text-2xl md:text-3xl text-selene-gold mb-3">
-            Quiero más información
-          </h2>
-          <p className="text-sm text-selene-white-dim mb-8">
-            Déjanos tu email y te avisaremos con todos los detalles del Máster y del cohort fundador.
+      {/* ════════════════════════════════════════════════════════════
+          WAITLIST
+          ════════════════════════════════════════════════════════════ */}
+      <section id="waitlist" className="max-w-content mx-auto px-6 py-14">
+        <div className="max-w-[560px] mx-auto text-center">
+          <ChapterSignature title="QUIERO MÁS INFORMACIÓN" align="center" className="mb-6 mx-auto" />
+          <p
+            className="font-display italic mb-8 text-[var(--color-text-muted)]"
+            lang="es"
+            style={{
+              fontSize: 'var(--step-0)',
+              fontVariationSettings: "'opsz' 24, 'SOFT' 60",
+              lineHeight: 1.6,
+            }}
+          >
+            Déjanos tu email y te enviamos todos los detalles del Máster
+            y del cohort fundador.
           </p>
           <WaitlistForm />
         </div>
       </section>
 
-      {/* ── FAQ ── */}
-      <section className="py-16 px-6 bg-selene-elevated/20">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-display text-2xl md:text-3xl text-selene-gold mb-10 text-center">
-            Preguntas frecuentes
-          </h2>
-          <div className="space-y-4">
-            {FAQS.map((faq, i) => (
-              <details key={i} className="group bg-selene-bg/80 rounded-xl border border-selene-border overflow-hidden">
-                <summary className="px-6 py-4 cursor-pointer text-sm font-medium text-selene-white flex justify-between items-center hover:text-selene-gold transition">
+      {/* Slim divider */}
+      <div className="flex justify-center py-2" aria-hidden="true">
+        <img
+          src="/ornaments/divider-lunar-simple.webp"
+          alt=""
+          className="block max-w-[min(720px,90vw)] w-full h-auto opacity-70 select-none"
+          style={{
+            filter: 'sepia(0.18) saturate(0.88) contrast(1.02)',
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)',
+            maskImage:
+              'linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)',
+          }}
+        />
+      </div>
+
+      {/* ════════════════════════════════════════════════════════════
+          FAQ
+          ════════════════════════════════════════════════════════════ */}
+      <section className="max-w-content mx-auto px-6 py-14">
+        <div className="text-center mb-10">
+          <ChapterSignature title="PREGUNTAS FRECUENTES" align="center" className="mb-6 mx-auto" />
+        </div>
+
+        <div className="max-w-[720px] mx-auto">
+          {FAQS.map((faq, i) => (
+            <details
+              key={i}
+              className="group border-b py-5"
+              style={{ borderColor: 'var(--color-rule)' }}
+            >
+              <summary className="list-none cursor-pointer flex items-baseline justify-between gap-4">
+                <h3
+                  className="font-display flex-1"
+                  style={{
+                    fontSize: 'var(--step-1)',
+                    fontWeight: 500,
+                    color: 'var(--color-text)',
+                    fontVariationSettings: "'opsz' 24, 'SOFT' 80",
+                    fontFeatureSettings: "'liga' 0, 'dlig' 0, 'kern' 1",
+                    lineHeight: 1.3,
+                  }}
+                >
                   {faq.q}
-                  <span className="text-selene-gold/50 group-open:rotate-45 transition-transform text-lg ml-4">+</span>
-                </summary>
-                <div className="px-6 pb-4">
-                  <p className="text-sm text-selene-white-dim leading-relaxed">{faq.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
+                </h3>
+                <span
+                  className="shrink-0 transition-transform group-open:rotate-45 font-display"
+                  style={{
+                    fontSize: '22px',
+                    color: 'var(--color-text-ornament)',
+                    fontWeight: 300,
+                  }}
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+              </summary>
+              <p
+                className="pt-3"
+                lang="es"
+                style={{
+                  fontFamily: 'var(--font-body), Lora, Georgia, serif',
+                  fontSize: '15px',
+                  color: 'var(--color-text-muted)',
+                  lineHeight: 1.65,
+                  textAlign: 'justify',
+                  hyphens: 'auto',
+                }}
+              >
+                {faq.a}
+              </p>
+            </details>
+          ))}
         </div>
       </section>
 
-      {/* ── Final CTA ── */}
-      <section className="py-20 px-6 text-center">
-        <h2 className="font-display text-[28px] font-normal text-selene-white mb-4">
-          Tu carrera como guía empieza aquí
+      {/* ════════════════════════════════════════════════════════════
+          CTA FINAL + COLOFÓN
+          ════════════════════════════════════════════════════════════ */}
+      <section className="max-w-content mx-auto px-6 pt-10 pb-4 text-center">
+        <h2
+          className="font-display mx-auto mb-5"
+          style={{
+            fontSize: 'var(--step-3)',
+            color: 'var(--color-text)',
+            fontWeight: 500,
+            lineHeight: 1.1,
+            fontVariationSettings: "'opsz' 48, 'SOFT' 100",
+            fontFeatureSettings: "'liga' 0, 'dlig' 0, 'kern' 1, 'calt' 0",
+            maxWidth: '20ch',
+            letterSpacing: '-0.01em',
+          }}
+        >
+          Tu carrera como guía empieza
+          <span
+            className="block font-display italic mt-1 text-[var(--color-text-accent)]"
+            style={{ fontVariationSettings: "'opsz' 72, 'SOFT' 60" }}
+          >
+            aquí
+          </span>
         </h2>
-        <p className="text-sm text-selene-white-dim mb-8 max-w-md mx-auto">
-          20 plazas. Precio fundador. Acceso de por vida.
+        <p
+          className="font-display italic mb-8 text-[var(--color-text-muted)]"
+          lang="es"
+          style={{
+            fontSize: 'var(--step-0)',
+            fontVariationSettings: "'opsz' 24, 'SOFT' 60",
+          }}
+        >
+          20 plazas · Precio fundador · Acceso de por vida
         </p>
         <Link
           href="/auth?redirect=/curso/guia-profesional"
-          className="inline-flex items-center text-[15px] font-semibold bg-selene-gold text-selene-bg px-10 py-4 rounded-xl hover:brightness-110 transition no-underline"
+          className="inline-flex items-center px-10 py-4 rounded-xl no-underline"
+          style={{
+            fontSize: '14px',
+            fontWeight: 600,
+            fontFamily: 'var(--font-body), Lora, Georgia, serif',
+            backgroundColor: 'var(--color-text)',
+            color: 'var(--color-surface)',
+            letterSpacing: '0.02em',
+            boxShadow:
+              'inset 0 1px 0 rgba(251,246,238,0.15), 0 2px 10px rgba(45,31,20,0.12)',
+          }}
         >
           Reservar mi plaza
         </Link>
       </section>
+
+      {/* COLOFÓN — el diferenciador Living Manuscript.
+         Para el Máster mostramos un "primera edición" ya con changelog
+         de lo que traerá la siguiente, reforzando el mensaje
+         "acceso a todas las ediciones futuras incluidas". */}
+      <div className="max-w-content mx-auto px-6">
+        <Colophon
+          courseName="Máster en Guía Espiritual Profesional"
+          editions={[
+            {
+              number: 1,
+              label: 'Primera edición · cohort fundador',
+              date: 'Abril 2026',
+              changelog: 'Veinte plazas, precio fundador 99,99 €. Todas las ediciones futuras incluidas sin coste adicional.',
+            },
+          ]}
+        />
+      </div>
 
       <Footer />
     </main>

@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import PixelViewContent from './PixelViewContent';
 import ChapterSignature from '@/components/ChapterSignature';
 import AtlasLabel from '@/components/AtlasLabel';
+import Colophon from '@/components/Colophon';
 
 export async function generateStaticParams() {
   return COURSES.map(c => ({ id: c.id }));
@@ -505,10 +506,23 @@ export default async function CursoDetallePage({ params }) {
           >
             {course.price === 0
               ? 'Sin tarjeta. Acceso inmediato.'
-              : 'Acceso inmediato tras el pago · Garantía 14 días'}
+              : 'Acceso inmediato tras el pago · Garantía 14 días · Todas las ediciones futuras incluidas'}
           </p>
         </div>
       </section>
+
+      {/* COLOFÓN — el diferenciador editorial.
+         Si el curso tiene datos de ediciones (course.editions), se
+         renderizan. Si no, el componente muestra una primera edición
+         genérica — nunca queda vacío. El texto fijo "todas las
+         ediciones presentes y futuras sin coste" comunica el valor
+         único que ningún competidor LMS tiene. */}
+      <div className="max-w-content mx-auto px-6">
+        <Colophon
+          editions={course.editions}
+          courseName={course.title}
+        />
+      </div>
 
       <Footer />
     </div>
