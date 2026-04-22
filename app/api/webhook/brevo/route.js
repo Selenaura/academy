@@ -50,10 +50,17 @@ export async function POST(request) {
 
     // Defensive log: persist EVERY event to brevo_events_log for diagnosis.
     // Vercel Hobby clears runtime logs hourly; this gives us a durable audit trail
-    // to detect unmatched events (e.g. Brevo sending `open` instead of `opened`).
+    // to detect unmatched events (e.g. Brevo sending `unique_opened` instead of `opened`).
+    //
+    // Confirmed via live traffic 2026-04-21: Brevo actually sends events prefixed
+    // with `unique_` (unique_opened, unique_proxy_open) — not bare `opened`/`proxy_open`.
+    // The `unique_` prefix means "first event of this type per message per contact in 24h".
     const KNOWN_EVENTS = new Set([
-      'opened', 'open', 'click', 'clicks', 'hard_bounce', 'soft_bounce',
-      'spam', 'unsubscribed', 'delivered', 'request', 'proxy_open'
+      'opened', 'open', 'unique_opened',
+      'click', 'clicks',
+      'hard_bounce', 'soft_bounce',
+      'spam', 'unsubscribed', 'delivered', 'request',
+      'proxy_open', 'unique_proxy_open',
     ]);
     await supabase.from('brevo_events_log').insert({
       event_type: event,
@@ -64,12 +71,16 @@ export async function POST(request) {
       matched: KNOWN_EVENTS.has(event),
     });
 
-    // Normalize Brevo event naming variations (open/opened, click/clicks).
-    // Documented payload uses `opened` and `click`, but defensive handling
-    // protects against Brevo API version drift.
-    const normalizedEvent = (event === 'open') ? 'opened'
-                          : (event === 'clicks') ? 'click'
-                          : event;
+    // Normalize Brevo event naming variations.
+    // Brevo sends `unique_opened` / `unique_proxy_open` (deduplicated per message+contact+24h)
+    // and the rarer raw `opened` / `proxy_open`. Both map to an "open" for our purposes.
+    // Apple Mail Privacy Protection triggers `unique_proxy_open` — we count it as an
+    // open for engagement metrics, but production analytics may want to split them later.
+    const normalizedEvent =
+      (event === 'open' || event === 'unique_opened' ||
+       event === 'proxy_open' || event === 'unique_proxy_open') ? 'opened'
+      : (event === 'clicks') ? 'click'
+      : event;
 
     switch (normalizedEvent) {
       case 'opened': {
