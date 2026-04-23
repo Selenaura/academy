@@ -268,34 +268,34 @@ export default function DashboardPage() {
       {/* ── CONTENT ── */}
       <div className="max-w-[840px] mx-auto px-5 py-7 space-y-8">
 
-        {/* ── STATS ROW ── */}
+        {/* ── STATS ROW — Sober hairline cream cards ──
+           Antes: 4 cards con bg-blue-500/5, bg-selene-gold/5, bg-orange-500/5,
+           bg-purple-500/15 — arco iris decorativo sin función informativa real.
+           Ahora: 4 cards uniformes con hairline gold + fondo parchment. La
+           información (número grande) es lo que destaca, no el color. */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {[
             {
-              icon: <BookIcon size={18} className="text-blue-400" />,
-              bg: 'bg-blue-500/5 border-blue-500/15',
+              icon: <BookIcon size={18} className="text-selene-gold" />,
               label: 'Lecciones',
               value: completedCount,
               sub: 'completadas',
             },
             {
               icon: <ZapIcon size={18} className="text-selene-gold" />,
-              bg: 'bg-selene-gold/5 border-selene-gold/20',
               label: 'XP Total',
               value: totalXp.toLocaleString(),
               sub: gameLevelData.name,
             },
             {
-              icon: <FireIcon size={18} className="text-orange-400" />,
-              bg: streak > 0 ? 'bg-orange-500/5 border-orange-500/20' : 'bg-selene-card border-selene-border',
+              icon: <FireIcon size={18} className="text-selene-gold" />,
               label: 'Racha',
               value: streak,
               sub: streak === 1 ? 'día seguido' : streak === 0 ? 'días' : 'días seguidos',
               extra: streak > 0 ? <StreakDots streak={streak} /> : null,
             },
             {
-              icon: <TrophyIcon size={18} className="text-purple-400" />,
-              bg: earnedBadges.length > 0 ? 'bg-purple-500/5 border-purple-500/15' : 'bg-selene-card border-selene-border',
+              icon: <TrophyIcon size={18} className="text-selene-gold" />,
               label: 'Insignias',
               value: earnedBadges.length,
               sub: `de ${allBadgeKeys.length} disponibles`,
@@ -303,17 +303,29 @@ export default function DashboardPage() {
           ].map((s, i) => (
             <div
               key={i}
-              className={`${s.bg} border rounded-2xl p-4 transition-all`}
+              className="rounded-2xl p-4 transition-all border"
+              style={{
+                borderColor: 'rgba(184,151,90,0.22)',
+                backgroundColor: 'var(--color-surface-raised)',
+              }}
             >
               <div className="flex items-center justify-between mb-3">
-                <div className="w-8 h-8 rounded-xl bg-[#0a0a12] flex items-center justify-center">
+                <div
+                  className="w-8 h-8 rounded-xl flex items-center justify-center"
+                  style={{ backgroundColor: 'rgba(184,151,90,0.08)' }}
+                >
                   {s.icon}
                 </div>
               </div>
-              <div className="text-[22px] font-display font-semibold text-selene-white leading-none mb-0.5">{s.value}</div>
+              <div
+                className="text-[22px] font-display font-semibold leading-none mb-0.5 tabular-nums"
+                style={{ color: 'var(--color-text)', fontFeatureSettings: "'tnum' 1" }}
+              >
+                {s.value}
+              </div>
               <div className="text-[10px] text-selene-white-dim mb-2">{s.label}</div>
               {s.extra ? s.extra : (
-                <div className="text-[10px] text-selene-white-dim/50">{s.sub}</div>
+                <div className="text-[10px] text-selene-white-dim/60">{s.sub}</div>
               )}
             </div>
           ))}
@@ -433,57 +445,103 @@ export default function DashboardPage() {
           </section>
         )}
 
-        {/* ── INSIGNIAS ── */}
-        <section>
-          <div className="flex items-center justify-between mb-4">
-            <div>
-              <h2 className="font-display text-[18px] font-normal text-selene-white">Insignias</h2>
-              <p className="text-[11px] text-selene-white-dim mt-0.5">
-                {earnedBadges.length > 0
-                  ? `${earnedBadges.length} conseguidas · ${allBadgeKeys.length - earnedBadges.length} por desbloquear`
-                  : 'Completa lecciones para ganarlas'}
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2.5">
-            {displayBadges.map(badgeId => {
-              const badge = BADGES[badgeId];
-              const isEarned = earnedBadges.some(b => b.type === badgeId || b === badgeId);
-              return (
-                <div
-                  key={badgeId}
-                  className={`relative rounded-2xl p-3 text-center transition-all ${
-                    isEarned
-                      ? 'bg-gradient-to-b from-[#1a1610] to-[#0f0f18] border border-selene-gold/25 shadow-[0_0_20px_rgba(155,142,196,0.06)]'
-                      : 'bg-[#0c0c15] border border-selene-border/50 opacity-40'
-                  }`}
-                >
-                  {isEarned && (
-                    <div className="absolute top-1.5 right-1.5 w-3.5 h-3.5 rounded-full bg-selene-gold/90 flex items-center justify-center">
-                      <CheckIcon size={8} className="text-[#0a0a0f] stroke-2" />
-                    </div>
-                  )}
-                  <div className="text-[28px] mb-1.5 leading-none">
-                    {isEarned ? badge.icon : <LockIcon size={18} className="text-selene-white-dim mx-auto" />}
-                  </div>
-                  <div className={`text-[10px] font-semibold leading-tight ${isEarned ? 'text-selene-white' : 'text-selene-white-dim'}`}>
-                    {badge.name}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {allBadgeKeys.length > 9 && (
-            <button
-              onClick={() => setShowAllBadges(!showAllBadges)}
-              className="w-full text-center text-[11px] text-selene-gold hover:text-selene-gold/80 mt-3 py-2 transition"
+        {/* ── INSIGNIAS — Progressive disclosure ──
+           Antes mostraba 20 cajas con candados (grid 3x7) siempre.
+           Dato duro de DB: 0 badges ganados en TODA la plataforma
+           (54 profiles, 3 lesson_progress). Para la gran mayoría de
+           visitantes el grid era decoración pesada sin función real.
+           Ahora:
+           - Si tiene 0 badges → mensaje minimal "Tu primera insignia
+             llega con tu primera lección completada" (no grid).
+           - Si tiene ≥1 → grid sobrio con sólo las ganadas + 1
+             "próxima por desbloquear" como motivación.
+           Así la interfaz se vacía para usuarios nuevos y se llena
+           progresivamente a medida que realmente ganan cosas. */}
+        {earnedBadges.length === 0 ? (
+          <section
+            className="relative rounded-2xl p-6 border"
+            style={{
+              borderColor: 'rgba(184,151,90,0.25)',
+              backgroundColor: 'rgba(184,151,90,0.04)',
+            }}
+          >
+            <p
+              className="smcp mb-2"
+              style={{
+                fontSize: '10px',
+                letterSpacing: '0.22em',
+                color: 'var(--color-text-ornament)',
+                fontWeight: 600,
+              }}
             >
-              {showAllBadges ? 'Mostrar menos' : `Ver todas (${allBadgeKeys.length})`}
-            </button>
-          )}
-        </section>
+              ✦ Insignias
+            </p>
+            <p
+              className="font-display italic mb-1"
+              lang="es"
+              style={{
+                fontSize: '15px',
+                color: 'var(--color-text)',
+                fontVariationSettings: "'opsz' 22, 'SOFT' 60",
+                lineHeight: 1.5,
+              }}
+            >
+              Tu primera insignia llega con tu primera lección completada.
+            </p>
+            <p className="text-[12px] text-selene-white-dim">
+              No necesitas coleccionarlas — sólo aparecer cada día.
+            </p>
+          </section>
+        ) : (
+          <section>
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <h2 className="font-display text-[18px] font-normal text-selene-white">Insignias</h2>
+                <p className="text-[11px] text-selene-white-dim mt-0.5">
+                  {earnedBadges.length} conseguidas · {allBadgeKeys.length - earnedBadges.length} por desbloquear
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2.5">
+              {displayBadges.map(badgeId => {
+                const badge = BADGES[badgeId];
+                const isEarned = earnedBadges.some(b => b.type === badgeId || b === badgeId);
+                return (
+                  <div
+                    key={badgeId}
+                    className={`relative rounded-2xl p-3 text-center transition-all ${
+                      isEarned
+                        ? 'bg-selene-card border border-selene-gold/25'
+                        : 'bg-selene-bg border border-selene-border opacity-40'
+                    }`}
+                  >
+                    {isEarned && (
+                      <div className="absolute top-1.5 right-1.5 w-3.5 h-3.5 rounded-full bg-selene-gold flex items-center justify-center">
+                        <CheckIcon size={8} className="text-selene-bg stroke-2" />
+                      </div>
+                    )}
+                    <div className="text-[28px] mb-1.5 leading-none">
+                      {isEarned ? badge.icon : <LockIcon size={18} className="text-selene-white-dim mx-auto" />}
+                    </div>
+                    <div className={`text-[10px] font-semibold leading-tight ${isEarned ? 'text-selene-white' : 'text-selene-white-dim'}`}>
+                      {badge.name}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {allBadgeKeys.length > 9 && (
+              <button
+                onClick={() => setShowAllBadges(!showAllBadges)}
+                className="w-full text-center text-[11px] text-selene-gold hover:text-selene-gold/80 mt-3 py-2 transition"
+              >
+                {showAllBadges ? 'Mostrar menos' : `Ver todas (${allBadgeKeys.length})`}
+              </button>
+            )}
+          </section>
+        )}
 
         {/* ── EXPLORAR ── */}
         {explore.length > 0 && (
