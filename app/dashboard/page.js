@@ -229,7 +229,7 @@ export default function DashboardPage() {
             {primaryCourse && primaryNextLesson && (
               <Link
                 href={`/curso/${primaryCourse.id}`}
-                className="group flex-shrink-0 bg-[#16161f] border border-selene-border hover:border-selene-gold/30 rounded-2xl p-4 transition-all min-w-[200px] no-underline"
+                className="group flex-shrink-0 bg-selene-card border border-selene-border hover:border-selene-gold/30 rounded-2xl p-4 transition-all min-w-[200px] no-underline"
               >
                 <div className="flex items-center gap-2 mb-2">
                   <div
@@ -384,7 +384,7 @@ export default function DashboardPage() {
 
                 return (
                   <Link key={course.id} href={`/curso/${course.id}`} className="no-underline group block">
-                    <div className="relative overflow-hidden rounded-2xl border border-selene-border hover:border-selene-gold/25 bg-[#0f0f18] transition-all p-5">
+                    <div className="relative overflow-hidden rounded-2xl border border-selene-border hover:border-selene-gold/25 bg-selene-card transition-all p-5">
                       {/* progress fill bg */}
                       <div
                         className="absolute left-0 top-0 bottom-0 opacity-[0.04] transition-all pointer-events-none"
@@ -559,7 +559,7 @@ export default function DashboardPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {explore.slice(0, 6).map(course => (
                 <Link key={course.id} href={`/curso/${course.id}`} className="no-underline group">
-                  <div className="relative overflow-hidden rounded-2xl border border-selene-border hover:border-selene-gold/25 bg-[#0f0f18] transition-all p-4">
+                  <div className="relative overflow-hidden rounded-2xl border border-selene-border hover:border-selene-gold/25 bg-selene-card transition-all p-4">
                     {/* colored edge */}
                     <div className="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-2xl" style={{ background: course.color }} />
 
