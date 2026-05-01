@@ -18,6 +18,10 @@
     {
       "path": "/api/cron/course-upsell",
       "schedule": "0 10 * * *"
+    },
+    {
+      "path": "/api/cron/analytics-healthcheck",
+      "schedule": "30 6 * * *"
     }
   ],
   "headers": [

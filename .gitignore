@@ -42,3 +42,4 @@ android/capacitor-cordova-android-plugins/
 android/app/release/
 *.keystore
 *.jks
+.env*.local

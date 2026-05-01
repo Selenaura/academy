@@ -2,23 +2,25 @@ export const dynamic = 'force-dynamic';
 
 import { NextResponse } from 'next/server';
 import { withAdmin } from '@/lib/admin';
+import { fetchAllPaged } from '@/lib/supabase-paged';
+
+// Paginación: ver lib/supabase-paged.js — bug del 28/04/2026 documentado allí.
+// NUNCA usar `.from(t).select()` sin .range() para tablas que crecen >1000.
 
 export async function GET() {
   return withAdmin(async (admin) => {
-    // Fetch all leads, enrollments, and payments in parallel
-    const [leadsRes, enrollmentsRes, paymentsRes] = await Promise.all([
-      admin.from('leads').select('id, email, source, nurture_step, opens_count, clicks_count, created_at'),
-      admin.from('enrollments').select('id, user_id, course_id, status, amount_paid, enrolled_at'),
-      admin.from('payments').select('id, email, product_type, product_id, amount, currency, status, created_at'),
-    ]);
-
-    if (leadsRes.error) return NextResponse.json({ error: leadsRes.error.message }, { status: 500 });
-    if (enrollmentsRes.error) return NextResponse.json({ error: enrollmentsRes.error.message }, { status: 500 });
-    if (paymentsRes.error) return NextResponse.json({ error: paymentsRes.error.message }, { status: 500 });
-
-    const leads = leadsRes.data || [];
-    const enrollments = enrollmentsRes.data || [];
-    const payments = (paymentsRes.data || []).filter(p => p.status === 'completed');
+    // Fetch all leads, enrollments, and payments in parallel (paginated)
+    let leads, enrollments, payments;
+    try {
+      [leads, enrollments, payments] = await Promise.all([
+        fetchAllPaged(admin, 'leads', 'id, email, source, nurture_step, opens_count, clicks_count, created_at'),
+        fetchAllPaged(admin, 'enrollments', 'id, user_id, course_id, status, amount_paid, enrolled_at'),
+        fetchAllPaged(admin, 'payments', 'id, email, product_type, product_id, amount, currency, status, created_at'),
+      ]);
+    } catch (e) {
+      return NextResponse.json({ error: e.message }, { status: 500 });
+    }
+    payments = payments.filter(p => p.status === 'completed');
 
     const now = new Date();
     const todayStr = now.toISOString().slice(0, 10);
